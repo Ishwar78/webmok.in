@@ -1,0 +1,167 @@
+/* Admin Sidebar Styles */
+.wm-admin-sidebar {
+  width: 270px;
+  background: #071c36;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 18px;
+  min-height: 100vh;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.wm-admin-sidebar-brand {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.wm-admin-badge {
+  display: inline-block;
+  background: rgba(0, 168, 204, 0.2);
+  color: #00d2ff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.wm-admin-brand-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.wm-admin-brand-sub {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 4px 0 0 0;
+}
+
+.wm-admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.wm-admin-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  background: transparent;
+  color: #cbd5e1;
+  font-size: 14.5px;
+  font-weight: 600;
+  text-align: left;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.wm-admin-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.wm-admin-nav-btn.active {
+  background: linear-gradient(135deg, #0b4f8a, #00a8cc);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 168, 204, 0.3);
+}
+
+.wm-admin-btn-icon {
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.wm-admin-nav-group-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #64748b;
+  padding: 12px 14px 4px 14px;
+}
+
+.wm-nav-pill-badge {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 12px;
+}
+
+.wm-pill-blue {
+  background: rgba(0, 168, 204, 0.25);
+  color: #00e5ff;
+}
+
+.wm-pill-coral {
+  background: rgba(255, 94, 58, 0.25);
+  color: #ff8a65;
+}
+
+.wm-pill-purple {
+  background: rgba(168, 85, 247, 0.25);
+  color: #c084fc;
+}
+
+.wm-admin-sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.wm-admin-footer-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wm-admin-live-site {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+}
+
+.wm-admin-live-site:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.wm-admin-logout {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+}
+
+.wm-admin-logout:hover {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .wm-admin-sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+}

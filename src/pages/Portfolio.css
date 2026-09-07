@@ -1,0 +1,286 @@
+/* Portfolio Listing Dedicated Stylesheet */
+.wm-portpage-root {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.wm-portpage-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.wm-portpage-hero {
+  background: linear-gradient(135deg, #071c36 0%, #0b4f8a 100%);
+  color: #ffffff;
+  padding: 70px 0 80px 0;
+  text-align: center;
+}
+
+.wm-portpage-tag {
+  display: inline-block;
+  background: rgba(0, 168, 204, 0.2);
+  color: #00d2ff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.wm-portpage-title {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.wm-portpage-desc {
+  font-size: 16.5px;
+  color: #cbd5e1;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Filter bar */
+.wm-portpage-filter-sec {
+  background: #ffffff;
+  padding: 26px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.wm-portpage-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.wm-port-fbtn {
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wm-port-fbtn.active,
+.wm-port-fbtn:hover {
+  background: #0b4f8a;
+  color: #ffffff;
+  border-color: #0b4f8a;
+}
+
+/* Grid */
+.wm-portpage-grid-sec {
+  padding: 40px 0;
+  background: #f8fafc;
+}
+
+.wm-portpage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.wm-portpage-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wm-portpage-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(11, 79, 138, 0.12);
+  border-color: #00a8cc;
+}
+
+.wm-portpage-card:hover .wm-portpage-link {
+  color: #ff5e3a;
+}
+
+.wm-portpage-img-wrap {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+}
+
+.wm-portpage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.wm-portpage-card:hover .wm-portpage-img {
+  transform: scale(1.06);
+}
+
+.wm-portpage-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(7, 28, 54, 0.85);
+  color: #00d2ff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.wm-portpage-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.wm-portpage-client {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ff5e3a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.wm-portpage-card-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #0d2f57;
+  margin: 6px 0 10px 0;
+}
+
+.wm-portpage-card-desc {
+  font-size: 16px;
+  color: #0b0c0e;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.wm-portpage-stat {
+  background: #f1f5f9;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+}
+
+.wm-portpage-stat span {
+  color: #64748b;
+}
+
+.wm-portpage-stat strong {
+  color: #10b981;
+}
+
+.wm-portpage-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b4f8a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.wm-portpage-link:hover {
+  color: #ff5e3a;
+}
+
+/* CTA */
+.wm-portpage-cta {
+  background: #ffffff;
+  padding: 30px 0 40px 0;
+}
+
+.wm-portpage-cta-card {
+  background: linear-gradient(135deg, #071c36, #0b4f8a);
+  border-radius: 16px;
+  padding: 50px 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.wm-portpage-cta-card h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.wm-portpage-cta-card p {
+  font-size: 16px;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0 auto 28px auto;
+}
+
+.wm-portpage-cta-btn {
+  background: #ff5e3a;
+  color: #ffffff;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-size: 15.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wm-portpage-cta-btn:hover {
+  background: #e04a27;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .wm-portpage-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .wm-portpage-filter-sec {
+    padding: 16px 0;
+  }
+  .wm-portpage-filters {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 4px 16px 12px 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .wm-portpage-filters::-webkit-scrollbar {
+    display: none;
+  }
+  .wm-port-fbtn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wm-portpage-title { font-size: 32px; }
+  .wm-portpage-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,247 @@
+/* Footer Component Styles */
+.wm-footer-root {
+  background: #071c36;
+  color: #cbd5e1;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid #00a8cc;
+}
+
+.wm-footer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 60px 24px 40px 24px;
+}
+
+.wm-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  gap: 36px;
+}
+
+@media (max-width: 1024px) {
+  .wm-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wm-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.wm-footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.wm-footer-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.wm-footer-heading-line {
+  width: 38px;
+  height: 2.5px;
+  background: #00a8cc;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.wm-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wm-footer-links li a {
+  color: #eff2f6;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+.wm-footer-links li a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+  color: #00a8cc;
+}
+
+.wm-footer-admin-link {
+  color: #ff7a59 !important;
+  font-weight: 600;
+}
+
+/* Office Address Col */
+.wm-footer-contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.wm-fcontact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.wm-fcontact-icon {
+  color: #00a8cc;
+  font-size: 17px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.wm-fcontact-text {
+  color: #cbd5e1;
+  font-size: 16px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.wm-fcontact-text:hover {
+  color: #00a8cc;
+}
+
+.wm-footer-hours-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 14px 16px;
+  border-radius: 8px;
+}
+
+.wm-hours-title {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #00a8cc;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.wm-footer-hours-box p {
+  font-size: 15px;
+  color: #e5e9ee;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+/* Bottom Bar */
+.wm-footer-bottom {
+  background: #041224;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 18px 0;
+}
+
+.wm-bottom-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.wm-copyright-text {
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.wm-social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wm-social-links a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.wm-social-links a:hover {
+  background: #00a8cc;
+  transform: translateY(-2px);
+}
+
+/* Floating WhatsApp */
+.wm-floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+  z-index: 990;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  animation: pulseWhatsApp 2s infinite;
+}
+
+@keyframes pulseWhatsApp {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.wm-floating-whatsapp:hover {
+  background: #1eb954;
+  transform: scale(1.12);
+}
+
+/* Scroll to top */
+.wm-scroll-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #0b4f8a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 16px rgba(11, 79, 138, 0.35);
+  z-index: 990;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.wm-scroll-top-btn:hover {
+  background: #ff5e3a;
+  transform: translateY(-3px);
+}

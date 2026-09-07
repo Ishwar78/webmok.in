@@ -1,0 +1,228 @@
+/* Admin Login Dedicated Stylesheet */
+.wm-admin-login-root {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #0d2f57, #071c36);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.wm-alogin-card {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 440px;
+  padding: 44px 36px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.wm-alogin-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.wm-alogin-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0b4f8a, #00a8cc);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin: 0 auto 16px auto;
+  box-shadow: 0 10px 20px rgba(0, 168, 204, 0.3);
+}
+
+.wm-alogin-badge {
+  display: inline-block;
+  background: rgba(11, 79, 138, 0.1);
+  color: #0b4f8a;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+}
+
+.wm-alogin-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0d2f57;
+  margin: 0;
+}
+
+.wm-alogin-subtitle {
+  font-size: 13.5px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.wm-alogin-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  color: #dc2626;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.wm-alogin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.wm-afield {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wm-afield label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wm-afield-icon {
+  color: #0b4f8a;
+  font-size: 12px;
+}
+
+.wm-afield input {
+  padding: 12px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14.5px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.wm-afield input:focus {
+  border-color: #0b4f8a;
+  box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.12);
+}
+
+.wm-pw-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.wm-pw-input-wrapper input {
+  width: 100%;
+  padding-right: 42px;
+}
+
+.wm-pw-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.wm-pw-toggle-btn:hover {
+  color: #0b4f8a;
+}
+
+.wm-demo-creds-hint {
+  background: #f0fdf4;
+  border: 1px dashed #86efac;
+  padding: 12px 14px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #166534;
+  transition: all 0.2s ease;
+}
+
+.wm-demo-creds-hint:hover {
+  background: #dcfce7;
+  border-color: #22c55e;
+  transform: scale(1.01);
+}
+
+.wm-demo-hint-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wm-demo-click-tag {
+  font-size: 10.5px;
+  background: #22c55e;
+  color: #ffffff;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.wm-demo-creds-hint code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.wm-alogin-submit {
+  padding: 14px;
+  background: linear-gradient(135deg, #0b4f8a, #00a8cc);
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 15.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(11, 79, 138, 0.25);
+  transition: all 0.2s ease;
+}
+
+.wm-alogin-submit:hover {
+  background: linear-gradient(135deg, #071c36, #0b4f8a);
+  transform: translateY(-2px);
+}
+
+.wm-alogin-footer {
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.wm-alogin-back-home {
+  font-size: 13.5px;
+  color: #64748b;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wm-alogin-back-home:hover {
+  color: #0b4f8a;
+}

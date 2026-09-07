@@ -1,0 +1,270 @@
+/* Contact Us Dedicated Stylesheet */
+.wm-contactpage-root {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.wm-contactpage-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.wm-contactpage-hero {
+  background: linear-gradient(135deg, #071c36 0%, #0b4f8a 100%);
+  color: #ffffff;
+  padding: 70px 0 80px 0;
+  text-align: center;
+}
+
+.wm-contactpage-tag {
+  display: inline-block;
+  background: rgba(0, 168, 204, 0.2);
+  color: #00d2ff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.wm-contactpage-title {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.wm-contactpage-desc {
+  font-size: 16.5px;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Body */
+.wm-contactpage-body {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.wm-cpage-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.wm-cpage-subheading {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0d2f57;
+  margin-bottom: 12px;
+}
+
+.wm-cpage-infotext {
+  font-size: 16px;
+  color: #08090a;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.wm-cpage-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wm-cinfo-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.wm-cinfo-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(11, 79, 138, 0.1);
+  color: #0b4f8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.wm-cinfo-card h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0d2f57;
+  margin-bottom: 4px;
+}
+
+.wm-cinfo-link {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0b4f8a;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.wm-cinfo-link:hover {
+  color: #ff5e3a;
+}
+
+.wm-cinfo-callme-btn {
+  display: block;
+  margin-top: 6px;
+  background: #ff5e3a;
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.wm-cinfo-address {
+  font-size: 15px;
+  color: #09090a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.wm-cinfo-sub {
+  font-size: 15px;
+  color: #08090a;
+  margin: 0;
+}
+
+/* Form */
+.wm-cform-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 40px 34px;
+  box-shadow: 0 10px 30px rgba(11, 79, 138, 0.06);
+}
+
+.wm-cform-card h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0d2f57;
+  margin-bottom: 6px;
+}
+
+.wm-cform-card p {
+  font-size: 14.5px;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.wm-cpage-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wm-cfield-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.wm-cfield {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wm-cfield label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.wm-cfield input,
+.wm-cfield textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14.5px;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.wm-cfield input:focus,
+.wm-cfield textarea:focus {
+  border-color: #0b4f8a;
+  box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.12);
+}
+
+.wm-cform-submit {
+  margin-top: 8px;
+  padding: 14px;
+  background: linear-gradient(135deg, #0b4f8a, #00a8cc);
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 15.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(11, 79, 138, 0.25);
+  transition: all 0.3s ease;
+}
+
+.wm-cform-submit:hover {
+  background: linear-gradient(135deg, #071c36, #0b4f8a);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(11, 79, 138, 0.35);
+}
+
+.wm-cform-success {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.wm-csuccess-icon {
+  font-size: 56px;
+  color: #10b981;
+  margin-bottom: 16px;
+}
+
+.wm-cform-success h4 {
+  font-size: 22px;
+  color: #0d2f57;
+  margin-bottom: 8px;
+}
+
+.wm-cform-success p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .wm-cpage-grid { grid-template-columns: 1fr; }
+  .wm-cfield-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .wm-contactpage-title { font-size: 32px; }
+  .wm-cform-card { padding: 26px 20px; }
+}

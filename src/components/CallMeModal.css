@@ -1,0 +1,342 @@
+.callme-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(7, 28, 54, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: callmeFadeIn 0.3s ease;
+}
+
+@keyframes callmeFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.callme-modal {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  padding: 36px 30px;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(11, 79, 138, 0.15);
+  animation: callmeSlideUp 0.3s ease;
+}
+
+@keyframes callmeSlideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.callme-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: #f1f5f9;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.callme-close:hover {
+  background: #ff5e3a;
+  color: #ffffff;
+}
+
+.callme-icon-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0b4f8a, #00a8cc);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin: 0 auto 16px auto;
+  box-shadow: 0 10px 20px rgba(0, 168, 204, 0.3);
+}
+
+.callme-title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  color: #0d2f57;
+  margin-bottom: 8px;
+}
+
+.callme-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.callme-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.callme-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.callme-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.callme-field input,
+.callme-field select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.callme-field input:focus,
+.callme-field select:focus {
+  border-color: #0b4f8a;
+  box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.12);
+}
+
+.callme-phone-group {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.callme-phone-group:focus-within {
+  border-color: #0b4f8a;
+  box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.12);
+}
+
+.callme-prefix {
+  background-color: #f1f5f9;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  border-right: 1.5px solid #cbd5e1;
+}
+
+.callme-phone-group input {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.callme-submit-btn {
+  margin-top: 8px;
+  padding: 14px;
+  background: linear-gradient(135deg, #0b4f8a, #0d2f57);
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(11, 79, 138, 0.3);
+}
+
+.callme-submit-btn:hover {
+  background: linear-gradient(135deg, #071c36, #0b4f8a);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(11, 79, 138, 0.4);
+}
+
+/* Countdown Animation */
+.callme-countdown-box {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.callme-pulse-ring {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff5e3a, #ff7a59);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 0 rgba(255, 94, 58, 0.7);
+  animation: callmePulse 1.5s infinite;
+}
+
+@keyframes callmePulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 94, 58, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 20px rgba(255, 94, 58, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 94, 58, 0);
+  }
+}
+
+.callme-timer-number {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.callme-timer-unit {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.callme-connecting-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0d2f57;
+  margin-bottom: 6px;
+}
+
+.callme-connecting-sub {
+  font-size: 15px;
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+.callme-connecting-note {
+  font-size: 13px;
+  color: #64748b;
+  max-width: 340px;
+  margin: 0 auto 24px auto;
+}
+
+.callme-waves {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+  height: 36px;
+}
+
+.wave-bar {
+  width: 5px;
+  background: #0b4f8a;
+  border-radius: 4px;
+  animation: soundWave 1s ease-in-out infinite;
+}
+
+.wave-bar:nth-child(1) { height: 12px; animation-delay: 0.1s; }
+.wave-bar:nth-child(2) { height: 26px; animation-delay: 0.2s; }
+.wave-bar:nth-child(3) { height: 36px; animation-delay: 0.3s; }
+.wave-bar:nth-child(4) { height: 22px; animation-delay: 0.4s; }
+.wave-bar:nth-child(5) { height: 14px; animation-delay: 0.5s; }
+
+@keyframes soundWave {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+/* Success Box */
+.callme-success-box {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.callme-success-icon {
+  font-size: 56px;
+  color: #10b981;
+  margin-bottom: 14px;
+}
+
+.callme-success-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0d2f57;
+  margin-bottom: 6px;
+}
+
+.callme-success-box p {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.callme-agent-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.callme-agent-icon {
+  font-size: 30px;
+  color: #0b4f8a;
+}
+
+.callme-agent-card strong {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.callme-agent-card p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+.callme-done-btn {
+  width: 100%;
+  padding: 12px;
+  background: #0b4f8a;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.callme-done-btn:hover {
+  background: #071c36;
+}

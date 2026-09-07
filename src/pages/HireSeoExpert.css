@@ -1,0 +1,161 @@
+/* Hire SEO Expert Dedicated Stylesheet */
+.wm-hireseo-root {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.wm-hireseo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.wm-hireseo-hero {
+  background: linear-gradient(135deg, #071c36 0%, #0b4f8a 100%);
+  color: #ffffff;
+  padding: 70px 0 80px 0;
+  text-align: center;
+}
+
+.wm-hireseo-tag {
+  display: inline-block;
+  background: rgba(0, 168, 204, 0.2);
+  color: #00d2ff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.wm-hireseo-title {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.wm-hireseo-desc {
+  font-size: 16.5px;
+  color: #cbd5e1;
+  max-width: 720px;
+  margin: 0 auto 30px auto;
+  line-height: 1.7;
+}
+
+.wm-hireseo-hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.wm-hbtn-primary {
+  background: #ff5e3a;
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wm-hbtn-primary:hover {
+  background: #e04a27;
+}
+
+.wm-hbtn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.wm-hireseo-body {
+  padding: 70px 0 90px 0;
+  background: #f8fafc;
+}
+
+.wm-hireseo-grid-2 {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+}
+
+.wm-hireseo-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 38px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+.wm-hireseo-card h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0d2f57;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.wm-hireseo-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wm-hireseo-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.wm-hchk {
+  color: #10b981;
+  font-size: 17px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.wm-hmodel-box {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 16px;
+  border-left: 3px solid #00a8cc;
+}
+
+.wm-hmodel-box h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0d2f57;
+  margin-bottom: 6px;
+}
+
+.wm-hmodel-box p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .wm-hireseo-grid-2 { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,90 @@
+/* Refund Policy Dedicated Stylesheet */
+.wm-policy-root {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.wm-policy-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.wm-policy-hero {
+  background: linear-gradient(135deg, #071c36 0%, #0b4f8a 100%);
+  color: #ffffff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.wm-policy-tag {
+  display: inline-block;
+  background: rgba(0, 168, 204, 0.25);
+  color: #00d2ff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.wm-policy-title {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.wm-policy-sub {
+  font-size: 14.5px;
+  color: #cbd5e1;
+}
+
+.wm-policy-body {
+  padding: 60px 0 80px 0;
+  background: #f8fafc;
+}
+
+.wm-policy-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 44px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+.wm-policy-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0d2f57;
+  margin: 28px 0 12px 0;
+}
+
+.wm-policy-card h2:first-of-type {
+  margin-top: 0;
+}
+
+.wm-policy-card p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.wm-policy-bullet-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.wm-policy-bullet-list li {
+  font-size: 15.5px;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .wm-policy-title { font-size: 28px; }
+  .wm-policy-card { padding: 24px; }
+}

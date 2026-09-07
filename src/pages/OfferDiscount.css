@@ -1,0 +1,191 @@
+/* Offer & Discount Dedicated Stylesheet */
+.wm-offers-root {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.wm-offers-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.wm-offers-hero {
+  background: linear-gradient(135deg, #071c36 0%, #0b4f8a 100%);
+  color: #ffffff;
+  padding: 70px 0 80px 0;
+  text-align: center;
+}
+
+.wm-offers-tag {
+  display: inline-block;
+  background: rgba(0, 168, 204, 0.2);
+  color: #00d2ff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.wm-offers-title {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.wm-offers-desc {
+  font-size: 16.5px;
+  color: #cbd5e1;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.wm-offers-body {
+  padding: 70px 0 90px 0;
+  background: #f8fafc;
+}
+
+.wm-offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.wm-offer-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 38px 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.wm-offer-card:hover {
+  transform: translateY(-8px);
+}
+
+.wm-offer-card.popular {
+  border-color: #ff5e3a;
+  box-shadow: 0 16px 36px rgba(255, 94, 58, 0.15);
+}
+
+.wm-offer-badge {
+  position: absolute;
+  top: -12px;
+  right: 28px;
+  background: #ff5e3a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.wm-discount-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.wm-offer-head h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0d2f57;
+  margin-bottom: 4px;
+}
+
+.wm-validity {
+  font-size: 12.5px;
+  color: #64748b;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.wm-offer-pricing {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.wm-current-price {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0d2f57;
+}
+
+.wm-orig-price {
+  font-size: 18px;
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.wm-offer-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex-grow: 1;
+}
+
+.wm-offer-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14.5px;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.wm-ochk {
+  color: #10b981;
+  font-size: 15px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.wm-offer-btn {
+  width: 100%;
+  padding: 14px;
+  background: #0b4f8a;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wm-offer-card.popular .wm-offer-btn {
+  background: #ff5e3a;
+}
+
+.wm-offer-btn:hover {
+  background: #071c36;
+}
+
+@media (max-width: 1024px) {
+  .wm-offers-grid { grid-template-columns: 1fr; }
+}
