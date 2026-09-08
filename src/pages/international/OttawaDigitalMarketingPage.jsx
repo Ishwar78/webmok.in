@@ -13,7 +13,20 @@ import {
   FaGoogle,
   FaChevronRight,
   FaHeadset,
-  FaClock
+  FaClock,
+  FaSearch,
+  FaBullhorn,
+  FaShareAlt,
+  FaPenNib,
+  FaLaptopCode,
+  FaVideo,
+  FaChartLine,
+  FaBuilding,
+  FaUserMd,
+  FaShoppingCart,
+  FaUtensils,
+  FaBriefcase,
+  FaCompass
 } from 'react-icons/fa';
 import './OttawaDigitalMarketingPage.css';
 
@@ -28,92 +41,267 @@ const OttawaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   const pageData = {
     name: "Ottawa Digital Marketing Agency",
     city: "Ottawa",
-    region: "National Capital Region, Ontario, Canada",
+    region: "National Capital Region, Ontario/Quebec, Canada",
     tagline: "CAPITAL REGION GROWTH AGENCY · OTTAWA, CANADA",
-    heroHighlight: "Ottawa Digital Marketing & SEO Services",
-    leadDesc: "Scale your Ottawa business with high-precision SEO, Google Ads, and government/B2B-ready web architecture in Canada’s National Capital Region.",
-    bodyDesc: "Serving downtown Ottawa, Kanata tech corridor, Nepean, Orleans, and Gatineau—Webmok helps professional services, tech companies, and local businesses win high-intent Canadian searchers.",
+    heroHighlight: "Ottawa Digital Marketing & SEO Agency",
+    heroItalic: "Dominate the National Capital Region with",
+    leadDesc: "Scale your Ottawa business with high-precision B2B SEO, government contractor marketing, bilingual funnels, and high-conversion web development.",
+    bodyDesc: "From Kanata tech corridor innovators and Downtown corporate firms to Gatineau bilingual commerce and Barrhaven services—Webmok delivers compound digital growth.",
     stats: [
   {
-    "num": "370%",
+    "num": "380%",
     "label": "Average Ottawa Traffic Growth"
   },
   {
-    "num": "5.2x",
-    "label": "Average ROAS on Paid Ads"
+    "num": "5.4x",
+    "label": "Average ROAS on Paid Media"
   },
   {
-    "num": "45+",
-    "label": "Ottawa Clients Scaled"
+    "num": "50+",
+    "label": "Ottawa & Kanata Clients"
   },
   {
     "num": "100%",
-    "label": "Bilingual Strategy Ready"
+    "label": "Bilingual & Compliance Ready"
+  }
+],
+    services: [
+  {
+    "icon": "FaSearch",
+    "title": "Ottawa Local & Kanata Tech SEO",
+    "desc": "Dominating search results across Downtown Ottawa, Kanata North, Nepean, Orleans, and Gatineau with localized technical search strategies."
+  },
+  {
+    "icon": "FaBullhorn",
+    "title": "High-Intent Google Ads & PPC",
+    "desc": "Precision search ads, Performance Max funnels, and local service campaigns capturing high-intent government, corporate, and consumer buyers."
+  },
+  {
+    "icon": "FaShareAlt",
+    "title": "B2B LinkedIn & Social Advertising",
+    "desc": "Targeting government procurement directors, tech executives, and commercial decision-makers across the National Capital Region."
+  },
+  {
+    "icon": "FaPenNib",
+    "title": "Bilingual Content & Authority PR",
+    "desc": "English and French content hubs and media placements establishing thought leadership in Canada’s capital."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "title": "High-Converting Web Development",
+    "desc": "Bilingual, accessible (AODA/WCAG), speed-optimized web architectures built for maximum trust and seamless conversion."
+  },
+  {
+    "icon": "FaVideo",
+    "title": "Corporate Video & Media Production",
+    "desc": "High-caliber commercial video assets, corporate case studies, and brand animations designed for enterprise engagement."
+  }
+],
+    whyHireOutsideTitle: "Why Ottawa Brands Partner with Webmok",
+    whyHireOutsideSubtitle: "CAPITAL VALUE & PRECISION",
+    whyHireDesc1: "Ottawa agencies often focus heavily on slow government contracting, resulting in conservative marketing that lacks the agility and aggressiveness needed for commercial growth.",
+    whyHireDesc2: "Webmok delivers high-velocity growth marketing, technical search superiority, and transparent performance telemetry tailored for Ottawa’s tech and professional ecosystem.",
+    comparisonPoints: [
+  {
+    "feature": "Agile Sprint Velocity",
+    "local": "Slow Traditional Cycles",
+    "webmok": "48-Hour High-Velocity Growth Sprints"
+  },
+  {
+    "feature": "Bilingual Execution",
+    "local": "Extra Translation Add-Ons",
+    "webmok": "Full English/French Capability Included"
+  },
+  {
+    "feature": "Pricing Transparency",
+    "local": "C$7,500 – C$14,000 / month",
+    "webmok": "From C$1,080 – C$3,980 / month"
+  },
+  {
+    "feature": "Accessibility Compliance",
+    "local": "Basic AODA Disclaimers",
+    "webmok": "Full WCAG/AODA Accessibility Compliance"
+  },
+  {
+    "feature": "Contract Terms",
+    "local": "Rigid Annual Commitments",
+    "webmok": "Flexible Month-to-Month Agreements"
+  }
+],
+    resultsTitle: "Ottawa Performance Telemetry",
+    resultsSubtitle: "PROVEN CAPITAL OUTCOMES",
+    resultsStats: [
+  {
+    "metric": "50+",
+    "label": "Ottawa Brands Scaled Successfully"
+  },
+  {
+    "metric": "C$12M+",
+    "label": "Tracked Pipeline Value Generated"
+  },
+  {
+    "metric": "99.1%",
+    "label": "Capital Region Client Satisfaction"
+  },
+  {
+    "metric": "24/7",
+    "label": "EST Timezone Dedicated Support"
+  }
+],
+    marketInsightsTitle: "What We Know About Marketing in Ottawa",
+    marketInsightsSubtitle: "NATIONAL CAPITAL DYNAMICS",
+    marketInsights: [
+  {
+    "title": "Bilingual English/French Requirement",
+    "desc": "Serving the Ottawa-Gatineau region requires seamless bilingual navigation, search indexing, and customer communication."
+  },
+  {
+    "title": "Kanata Tech Corridor Innovation",
+    "desc": "Kanata is home to over 540 tech companies. B2B software and hardware marketing requires deep technical copy and ABM targeting."
+  },
+  {
+    "title": "High Average Household Income",
+    "desc": "Ottawa boasts one of Canada’s highest median incomes. Premium positioning and trust signals significantly improve conversion rates."
+  },
+  {
+    "title": "AODA/WCAG Accessibility Standards",
+    "desc": "Ontario businesses must adhere to strict web accessibility standards. We build clean, accessible markup that ranks higher on Google."
+  }
+],
+    processSteps: [
+  {
+    "num": "01",
+    "title": "Capital Market & SEO Audit",
+    "desc": "Evaluating bilingual search volumes, competitor gaps, and technical accessibility."
+  },
+  {
+    "num": "02",
+    "title": "Bilingual Funnel Architecture",
+    "desc": "Setting up dual-language landing pages, schema markup, and Google Business Profiles."
+  },
+  {
+    "num": "03",
+    "title": "Omni-Channel Execution",
+    "desc": "Deploying high-intent Google Search ads, B2B content hubs, and LinkedIn campaigns."
+  },
+  {
+    "num": "04",
+    "title": "CRO & Revenue Telemetry",
+    "desc": "Tracking conversion volume, optimizing lead quality, and scaling market share."
+  }
+],
+    industries: [
+  {
+    "icon": "FaLaptopCode",
+    "name": "Kanata Tech & SaaS Innovators",
+    "desc": "Driving B2B pipeline, product demos, and ARR growth for Ottawa tech firms."
+  },
+  {
+    "icon": "FaBriefcase",
+    "name": "Government Contractors & Consultants",
+    "desc": "Positioning defense, IT, and management consulting firms for major RFPs."
+  },
+  {
+    "icon": "FaBuilding",
+    "name": "Real Estate & Development",
+    "desc": "Capturing buyers across Ottawa, Kanata, Orleans, and the Outaouais region."
+  },
+  {
+    "icon": "FaUserMd",
+    "name": "Private Medical & Healthcare",
+    "desc": "Patient acquisition for dental, medical, and specialized healthcare practices."
+  },
+  {
+    "icon": "FaCompass",
+    "name": "Legal & Accounting Practices",
+    "desc": "Generating corporate clients and high-value advisory retainers."
+  },
+  {
+    "icon": "FaShoppingCart",
+    "name": "Local Commercial & Retail",
+    "desc": "Driving store foot traffic and e-commerce sales across the National Capital Region."
   }
 ],
     plans: [
   {
-    "name": "Ottawa Starter",
+    "name": "Ottawa Growth Core",
     "badge": "Local Focus",
-    "usdPrice": "749",
-    "inrPrice": "59,999",
-    "desc": "Ideal for local Ottawa service providers, clinics, and professional practices seeking local Google Maps dominance.",
+    "usdPrice": "799",
+    "inrPrice": "64,999",
+    "desc": "Ideal for local Ottawa service providers and professional practices looking to capture top Google visibility.",
     "features": [
       "Up to 20 High-Intent Ottawa Keywords",
       "Google Business Profile Geo-Optimization",
-      "Local Citations Across Ottawa Directories",
-      "On-Page Technical SEO & Schema Markup",
-      "Monthly Executive ROI Report"
+      "Local Citations & YellowPages Canada",
+      "On-Page SEO & Content Tuning (4 Pages/mo)",
+      "Monthly Executive ROI Report",
+      "Dedicated EST Account Director"
     ]
   },
   {
-    "name": "Ottawa Growth Accelerator",
+    "name": "Ottawa Accelerator",
     "badge": "Most Popular",
     "highlight": true,
-    "usdPrice": "1,399",
-    "inrPrice": "1,14,999",
-    "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and high-converting landing pages.",
+    "usdPrice": "1,499",
+    "inrPrice": "1,19,999",
+    "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and bilingual content marketing.",
     "features": [
-      "Up to 40 Ottawa & Regional Keywords",
-      "Google Search Ads (PPC) Management",
-      "Bilingual Content Hub Creation (6 Posts/mo)",
-      "Technical Speed & Mobile Optimization",
+      "Up to 45 Capital Region Keywords",
+      "Google Ads (PPC) Campaign Management",
+      "Bilingual English/French Landing Pages",
+      "High-Authority Content Marketing (6 Posts/mo)",
       "Competitor Backlink Interception",
-      "Bi-Weekly Strategy Sessions"
+      "Bi-Weekly Strategic Live Consultation"
     ]
   },
   {
-    "name": "Ottawa Enterprise Dominance",
-    "badge": "Market Leader",
-    "usdPrice": "2,799",
-    "inrPrice": "2,29,999",
-    "desc": "Full-scale market dominance for Kanata tech companies, regional corporate firms, and national organizations.",
+    "name": "Ottawa Enterprise Monopoly",
+    "badge": "Category Leader",
+    "usdPrice": "2,899",
+    "inrPrice": "2,39,999",
+    "desc": "Full-scale market dominance for tech enterprises, government suppliers, and regional networks.",
     "features": [
-      "Unlimited Target Keywords & National Footprint",
-      "Omni-Channel PPC (Google, LinkedIn, Meta)",
-      "Bespoke Web Design & Interactive Funnels",
-      "High-Tier Canadian Media Placements",
-      "Dedicated Account Squad & Daily Slack Access",
-      "Custom Multi-Touch Lead Attribution"
+      "Capital Region & Nationwide Keyword Domination",
+      "Omni-Channel PPC (Google, Meta, LinkedIn)",
+      "Custom High-Converting Web Redesign",
+      "Tier-1 Canadian Media PR & Backlinks",
+      "Dedicated Account Squad & Daily Slack Channel",
+      "Custom CRM Integration & Lead Attribution"
     ]
+  }
+],
+    testimonials: [
+  {
+    "quote": "Webmok built a bilingual search engine that positioned our IT consultancy at the top of Google for federal contractor keywords.",
+    "author": "Jean-Luc D.",
+    "role": "Managing Director",
+    "company": "Ottawa Enterprise IT Solutions",
+    "rating": 5
+  },
+  {
+    "quote": "Our Kanata SaaS platform saw a 310% increase in qualified demo requests within 4 months of launching our Google Ads and SEO sprints.",
+    "author": "Karen W.",
+    "role": "VP of Marketing",
+    "company": "Kanata Cloud Tech Platform",
+    "rating": 5
   }
 ],
     faqs: [
   {
-    "q": "Do you offer bilingual English and French digital marketing for the Ottawa-Gatineau region?",
-    "a": "Yes! We craft bilingual keyword strategies, ad copy, and landing pages to ensure full reach across both English and French speaking demographics in the National Capital Region."
+    "q": "Can Webmok build bilingual marketing campaigns for Ottawa and Gatineau?",
+    "a": "Yes! We craft complete dual-language funnels in English and French, ensuring compliance with federal standards and Quebec language regulations."
   },
   {
-    "q": "Can Webmok help Kanata B2B technology companies with lead generation?",
-    "a": "Yes, we have specialized experience in B2B SaaS and technology marketing, utilizing high-intent Google Ads and LinkedIn campaigns to drive qualified enterprise demo requests."
+    "q": "How do you target Kanata technology and B2B buyers?",
+    "a": "We use Account-Based Marketing (ABM) on LinkedIn and high-intent commercial Google Search ads to reach C-suite and technical decision-makers directly."
   },
   {
-    "q": "How do you report campaign performance?",
-    "a": "You get 24/7 access to our live telemetry dashboard tracking keyword rankings, organic traffic, ad spend efficiency, and inbound form/call leads."
+    "q": "Are your websites compliant with AODA and WCAG accessibility standards?",
+    "a": "Yes, 100%. We ensure all web assets meet Ontario AODA and WCAG 2.1 AA accessibility guidelines."
   },
   {
-    "q": "Is there a long-term contract requirement?",
-    "a": "No, all our Ottawa digital marketing services operate on flexible month-to-month agreements."
+    "q": "What is the contract term?",
+    "a": "All our Ottawa digital marketing packages operate on flexible month-to-month agreements with zero lock-in."
   }
 ]
   };
@@ -121,14 +309,14 @@ const OttawaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-intl-ottawa-page-root">
       {/* 1. HERO SECTION */}
-      <section className="wm-intl-ottawa-hero-section">
+      <section className="wm-intl-ottawa-hero-section" id="overview">
         <div className="wm-intl-ottawa-container">
           <div className="wm-intl-ottawa-hero-grid">
             <div className="wm-intl-ottawa-hero-left">
               <span className="wm-intl-ottawa-hero-est-tag">{pageData.tagline}</span>
 
               <h1 className="wm-intl-ottawa-hero-title-dual">
-                <span className="wm-intl-ottawa-hero-italic-gold">Accelerate Market Dominance with</span>
+                <span className="wm-intl-ottawa-hero-italic-gold">{pageData.heroItalic}</span>
                 <span className="wm-intl-ottawa-hero-bold-white">{pageData.heroHighlight}</span>
               </h1>
 
@@ -139,12 +327,12 @@ const OttawaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-intl-ottawa-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Audit`)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
                 >
-                  Get Free Strategy Audit <FaPaperPlane />
+                  Get Free Digital Proposal <FaPaperPlane />
                 </button>
                 <a href="#pricing-plans" className="wm-intl-ottawa-btn-outline">
-                  View {pageData.city} Packages <FaChevronRight />
+                  View {pageData.city} Rates <FaChevronRight />
                 </a>
               </div>
             </div>
@@ -162,7 +350,7 @@ const OttawaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-intl-ottawa-trust-card">
                 <div className="wm-intl-ottawa-tcard-info">
                   <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Agency</p>
+                  <p>Upwork Top 1% Verified Agency</p>
                 </div>
                 <div className="wm-intl-ottawa-tcard-badge wm-intl-ottawa-badge-upwork">up</div>
               </div>
@@ -196,7 +384,25 @@ const OttawaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
+      {/* 2. STICKY IN-PAGE SUB-NAV */}
+      <nav className="wm-intl-ottawa-inpage-nav">
+        <div className="wm-intl-ottawa-container">
+          <div className="wm-intl-ottawa-inpage-nav-inner">
+            <a href="#overview" className="wm-intl-ottawa-inpage-nav-link">Overview</a>
+            <a href="#services" className="wm-intl-ottawa-inpage-nav-link">Services</a>
+            <a href="#why-us" className="wm-intl-ottawa-inpage-nav-link">Why Choose Us</a>
+            <a href="#results" className="wm-intl-ottawa-inpage-nav-link">Live Telemetry</a>
+            <a href="#market-dynamics" className="wm-intl-ottawa-inpage-nav-link">Market Insights</a>
+            <a href="#process" className="wm-intl-ottawa-inpage-nav-link">Our Approach</a>
+            <a href="#industries" className="wm-intl-ottawa-inpage-nav-link">Industries</a>
+            <a href="#pricing-plans" className="wm-intl-ottawa-inpage-nav-link">Published Rates</a>
+            <a href="#testimonials" className="wm-intl-ottawa-inpage-nav-link">Client Reviews</a>
+            <a href="#faqs" className="wm-intl-ottawa-inpage-nav-link">FAQs</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* 3. STATS STRIP */}
       <section className="wm-intl-ottawa-stats-strip">
         <div className="wm-intl-ottawa-container">
           <div className="wm-intl-ottawa-stats-grid">
@@ -210,191 +416,192 @@ const OttawaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3. INTRO SECTION */}
-      <section className="wm-intl-ottawa-intro-section">
+      {/* 4. SERVICES SUITE */}
+      <section className="wm-intl-ottawa-services-section" id="services">
         <div className="wm-intl-ottawa-container">
-          <div className="wm-intl-ottawa-intro-grid">
-            <div className="wm-intl-ottawa-intro-left">
-              <span className="wm-intl-ottawa-intro-tag">NATIONAL CAPITAL SPECIALISTS</span>
-              <h2 className="wm-intl-ottawa-intro-title">
-                Strategic Digital Marketing in 
-                <span>Ottawa, ON</span>
-              </h2>
-            </div>
-            <div className="wm-intl-ottawa-intro-right">
-              <p>
-                <span>Webmok Technologies is a premier global digital partner</span> Ottawa presents a unique blend of government, tech innovation (Kanata North), and thriving local commerce. Webmok delivers tailored digital campaigns that establish commanding search presence and generate qualified inquiries.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. BACKED BY NUMBERS SECTION */}
-      <section className="wm-intl-ottawa-numbers-section">
-        <div className="wm-intl-ottawa-container">
-          <div className="wm-intl-ottawa-numbers-heading">
-            <span className="wm-intl-ottawa-numbers-subtitle">OTTAWA TELEMETRY</span>
-            <h2>
-              Proven Performance Across 
-              <span>the Capital Region</span>
+          <div className="wm-intl-ottawa-sec-heading-center">
+            <span className="wm-intl-ottawa-sec-badge">COMPREHENSIVE CAPABILITIES</span>
+            <h2 className="wm-intl-ottawa-sec-h2">
+              Our {pageData.city} <span>Digital Marketing Services</span>
             </h2>
+            <div className="wm-intl-ottawa-sec-bar-center"></div>
           </div>
 
-          <div className="wm-intl-ottawa-numstats-grid">
-            <div key="0" className="wm-intl-ottawa-numstat-item">
-              <div className="wm-intl-ottawa-numstat-number">{"45+"}</div>
-              <div className="wm-intl-ottawa-numstat-line"></div>
-              <p>{"Ottawa Brands Scaled"}</p>
-            </div>
-            <div key="1" className="wm-intl-ottawa-numstat-item">
-              <div className="wm-intl-ottawa-numstat-number">{"C$11M+"}</div>
-              <div className="wm-intl-ottawa-numstat-line"></div>
-              <p>{"Tracked Client Value"}</p>
-            </div>
-            <div key="2" className="wm-intl-ottawa-numstat-item">
-              <div className="wm-intl-ottawa-numstat-number">{"99.1%"}</div>
-              <div className="wm-intl-ottawa-numstat-line"></div>
-              <p>{"Client Satisfaction"}</p>
-            </div>
-            <div key="3" className="wm-intl-ottawa-numstat-item">
-              <div className="wm-intl-ottawa-numstat-number">{"24/7"}</div>
-              <div className="wm-intl-ottawa-numstat-line"></div>
-              <p>{"EST Timezone Support"}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INCLUSION / CAPABILITIES SECTION */}
-      <section className="wm-intl-ottawa-include-section">
-        <div className="wm-intl-ottawa-container">
-          <div className="wm-intl-ottawa-include-grid">
-            <div className="wm-intl-ottawa-include-content">
-              <span className="wm-intl-ottawa-include-tag">COMPREHENSIVE SUITE</span>
-              <h2 className="wm-intl-ottawa-include-title">
-                What Our Ottawa Digital 
-                <span>Marketing Packages Include</span>
-              </h2>
-              <p>We deliver local Ottawa & Kanata SEO, Google Search Ads, bilingual English/French optimization, conversion-optimized landing pages, and ongoing performance analytics.</p>
-              <p>You get a single reliable partner dedicated to scaling your inbound pipeline.</p>
-
-              <div className="wm-intl-ottawa-feature-list">
-                <div key="Ottawa & Kanata Geo-Targeted SEO and Google Maps 3-Pack" className="wm-intl-ottawa-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Ottawa & Kanata Geo-Targeted SEO and Google Maps 3-Pack"}</span>
+          <div className="wm-intl-ottawa-services-grid">
+            {pageData.services.map((svc, i) => (
+              <div key={i} className="wm-intl-ottawa-service-card">
+                <div className="wm-intl-ottawa-svc-icon">
+                  {svc.icon === 'FaSearch' && <FaSearch />}
+                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                  {svc.icon === 'FaPenNib' && <FaPenNib />}
+                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {svc.icon === 'FaVideo' && <FaVideo />}
+                  {svc.icon === 'FaChartLine' && <FaChartLine />}
+                  {svc.icon === 'FaCompass' && <FaCompass />}
                 </div>
-                <div key="High-Intent Google Search Ads & Remarketing Funnels" className="wm-intl-ottawa-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"High-Intent Google Search Ads & Remarketing Funnels"}</span>
-                </div>
-                <div key="Bilingual English & French Content Optimization" className="wm-intl-ottawa-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Bilingual English & French Content Optimization"}</span>
-                </div>
-                <div key="High-Speed Mobile-First Website Design & CRO" className="wm-intl-ottawa-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"High-Speed Mobile-First Website Design & CRO"}</span>
-                </div>
-                <div key="Local Ottawa Citations & Business Directory Submissions" className="wm-intl-ottawa-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Local Ottawa Citations & Business Directory Submissions"}</span>
-                </div>
-                <div key="Bi-Weekly Strategic KPI Reviews & Transparent Dashboard" className="wm-intl-ottawa-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Bi-Weekly Strategic KPI Reviews & Transparent Dashboard"}</span>
-                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. WHY HIRE OUTSIDE */}
+      <section className="wm-intl-ottawa-whyoutside-section" id="why-us">
+        <div className="wm-intl-ottawa-container">
+          <div className="wm-intl-ottawa-whyoutside-grid">
+            <div className="wm-intl-ottawa-whyoutside-text">
+              <span className="wm-intl-ottawa-sec-badge">{pageData.whyHireOutsideSubtitle}</span>
+              <h2>{pageData.whyHireOutsideTitle}</h2>
+              <p>{pageData.whyHireDesc1}</p>
+              <p>{pageData.whyHireDesc2}</p>
             </div>
 
-            <div className="wm-intl-ottawa-include-image">
-              <img src="/onpage1.avif" alt="Ottawa Digital Marketing Agency" />
+            <div className="wm-intl-ottawa-compare-table">
+              <div className="wm-intl-ottawa-compare-row wm-intl-ottawa-compare-hdr">
+                <div>Deliverable / Metric</div>
+                <div>Typical Local Agency</div>
+                <div>Webmok Advantage</div>
+              </div>
+              {pageData.comparisonPoints.map((cp, idx) => (
+                <div key={idx} className="wm-intl-ottawa-compare-row">
+                  <div className="wm-intl-ottawa-compare-feat">{cp.feature}</div>
+                  <div className="wm-intl-ottawa-compare-local">{cp.local}</div>
+                  <div className="wm-intl-ottawa-compare-wm">{cp.webmok}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. IMPORTANCE SECTION */}
-      <section className="wm-intl-ottawa-importance-section">
+      {/* 6. RESULTS TELEMETRY */}
+      <section className="wm-intl-ottawa-results-section" id="results">
         <div className="wm-intl-ottawa-container">
-          <div className="wm-intl-ottawa-importance-box">
-            <h2 className="wm-intl-ottawa-importance-title">
-              Why Digital Marketing Matters in 
-              <span>Ottawa</span>
+          <div className="wm-intl-ottawa-sec-heading-center">
+            <span className="wm-intl-ottawa-sec-badge">{pageData.resultsSubtitle}</span>
+            <h2 className="wm-intl-ottawa-sec-h2">{pageData.resultsTitle}</h2>
+            <div className="wm-intl-ottawa-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-ottawa-results-grid">
+            {pageData.resultsStats.map((rs, i) => (
+              <div key={i} className="wm-intl-ottawa-result-card">
+                <strong>{rs.metric}</strong>
+                <p>{rs.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. MARKET DYNAMICS */}
+      <section className="wm-intl-ottawa-market-section" id="market-dynamics">
+        <div className="wm-intl-ottawa-container">
+          <div className="wm-intl-ottawa-sec-heading-center">
+            <span className="wm-intl-ottawa-sec-badge">{pageData.marketInsightsSubtitle}</span>
+            <h2 className="wm-intl-ottawa-sec-h2">{pageData.marketInsightsTitle}</h2>
+            <div className="wm-intl-ottawa-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-ottawa-market-grid">
+            {pageData.marketInsights.map((mi, i) => (
+              <div key={i} className="wm-intl-ottawa-market-card">
+                <h4>{mi.title}</h4>
+                <p>{mi.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 4-STEP PROCESS */}
+      <section className="wm-intl-ottawa-process-section" id="process">
+        <div className="wm-intl-ottawa-container">
+          <div className="wm-intl-ottawa-sec-heading-center">
+            <span className="wm-intl-ottawa-sec-badge">OUR PROCESS & APPROACH</span>
+            <h2 className="wm-intl-ottawa-sec-h2">
+              Our 4-Step <span>Agile Growth Framework</span>
             </h2>
-
-            <div className="wm-intl-ottawa-importance-content">
-              <p>With high household incomes and intense competition in tech, legal, real estate, and healthcare, Ottawa buyers search online before making any commercial decision.</p>
-              <p>A dominant organic search ranking and targeted PPC ads guarantee you capture high-intent inquiries before competitors.</p>
-            </div>
+            <div className="wm-intl-ottawa-sec-bar-center"></div>
           </div>
-        </div>
-      </section>
 
-      {/* 7. WHY WEBMOK SECTION */}
-      <section className="wm-intl-ottawa-why-section">
-        <div className="wm-intl-ottawa-container">
-          <div className="wm-intl-ottawa-why-grid">
-            <div className="wm-intl-ottawa-why-content">
-              <span className="wm-intl-ottawa-why-tag">THE WEBMOK ADVANTAGE</span>
-              <h2 className="wm-intl-ottawa-why-title">
-                Precision Execution. 
-                <span className="s1"> Clean Strategy.</span>{' '}
-                <span className="s2">Proven Scalability.</span>
-              </h2>
-
-              <div className="wm-intl-ottawa-why-text">
-                <p>We combine rigorous keyword intelligence with localized content that resonates with Ottawa and Gatineau decision-makers.</p>
-                <p>Our transparent, month-to-month contracts keep us focused on delivering measurable pipeline results.</p>
+          <div className="wm-intl-ottawa-process-grid">
+            {pageData.processSteps.map((ps, i) => (
+              <div key={i} className="wm-intl-ottawa-process-card">
+                <span className="wm-intl-ottawa-proc-num">STEP {ps.num}</span>
+                <h4>{ps.title}</h4>
+                <p>{ps.desc}</p>
               </div>
-            </div>
-
-            <div className="wm-intl-ottawa-why-image">
-              <img src="/onpage2.avif" alt="Why Webmok" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. PRICING PLANS SECTION */}
+      {/* 9. INDUSTRIES */}
+      <section className="wm-intl-ottawa-industries-section" id="industries">
+        <div className="wm-intl-ottawa-container">
+          <div className="wm-intl-ottawa-sec-heading-center">
+            <span className="wm-intl-ottawa-sec-badge">WHO WE WORK WITH</span>
+            <h2 className="wm-intl-ottawa-sec-h2">
+              Specialized Industry <span>Growth Solutions</span>
+            </h2>
+            <div className="wm-intl-ottawa-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-ottawa-industries-grid">
+            {pageData.industries.map((ind, i) => (
+              <div key={i} className="wm-intl-ottawa-industry-card">
+                <div className="wm-intl-ottawa-ind-icon">
+                  {ind.icon === 'FaBuilding' && <FaBuilding />}
+                  {ind.icon === 'FaUserMd' && <FaUserMd />}
+                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                  {ind.icon === 'FaUtensils' && <FaUtensils />}
+                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {ind.icon === 'FaCompass' && <FaCompass />}
+                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                </div>
+                <h4>{ind.name}</h4>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. PRICING PLANS */}
       <section className="wm-intl-ottawa-pricing-section" id="pricing-plans">
         <div className="wm-intl-ottawa-container">
-          <div className="wm-intl-ottawa-sec-header">
-            <span className="wm-intl-ottawa-sec-subtitle">Transparent Monthly Plans</span>
-            <h2 className="wm-intl-ottawa-sec-title">Flexible Ottawa Growth Packages with Zero Lock-In</h2>
-            <div className="wm-intl-ottawa-sec-bar"></div>
+          <div className="wm-intl-ottawa-sec-heading-center">
+            <span className="wm-intl-ottawa-sec-badge">PUBLISHED RATES · ZERO LOCK-IN</span>
+            <h2 className="wm-intl-ottawa-sec-h2">
+              Transparent {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-ottawa-sec-bar-center"></div>
 
             {/* Currency Switcher */}
             <div className="wm-intl-ottawa-currency-toggle">
-              
-              <button
-                type="button"
-                className={`wm-intl-ottawa-curr-btn ${currency === 'CAD' ? 'active' : ''}`}
-                onClick={() => setCurrency('CAD')}
-              >
-                C$ CAD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-ottawa-curr-btn ${currency === 'USD' ? 'active' : ''}`}
-                onClick={() => setCurrency('USD')}
-              >
-                $ USD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-ottawa-curr-btn ${currency === 'INR' ? 'active' : ''}`}
-                onClick={() => setCurrency('INR')}
-              >
-                ₹ INR
-              </button>
+              {[{"code":"CAD","symbol":"C$","rate":1.36},{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  className={`wm-intl-ottawa-curr-btn ${currency === c.code ? 'active' : ''}`}
+                  onClick={() => setCurrency(c.code)}
+                >
+                  {c.symbol} {c.code}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Pricing Grid */}
           <div className="wm-intl-ottawa-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : `$${plan.usdPrice}`;
+              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
               return (
                 <div key={i} className={`wm-intl-ottawa-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (
@@ -442,93 +649,80 @@ const OttawaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 9. BENEFITS SECTION */}
-      <section className="wm-intl-ottawa-benefits-section">
+      {/* 11. TESTIMONIALS */}
+      <section className="wm-intl-ottawa-testimonials-section" id="testimonials">
         <div className="wm-intl-ottawa-container">
-          <div className="wm-intl-ottawa-benefits-grid">
-            <div className="wm-intl-ottawa-benefits-content">
-              <span className="wm-intl-ottawa-benefits-tag">PROVEN OUTCOMES</span>
-              <h2 className="wm-intl-ottawa-benefits-title">
-                Transforming Ottawa Businesses into 
-                <span>Market Leaders</span>
-              </h2>
+          <div className="wm-intl-ottawa-sec-heading-center">
+            <span className="wm-intl-ottawa-sec-badge">CLIENT SUCCESS STORIES</span>
+            <h2 className="wm-intl-ottawa-sec-h2">
+              What {pageData.city} <span>Leaders Say About Webmok</span>
+            </h2>
+            <div className="wm-intl-ottawa-sec-bar-center"></div>
+          </div>
 
-              <div className="wm-intl-ottawa-benefits-text">
-                <p>Our customized Ottawa digital marketing campaigns build enduring search visibility that lowers your customer acquisition costs over time.</p>
-                <p>We turn high-intent searches into paying clients and repeat business.</p>
-              </div>
-
-              <div className="wm-intl-ottawa-benefits-points">
-                <div key="Top Google 3-Pack Rankings in Ottawa & Kanata" className="wm-intl-ottawa-benefit-point">
-                  <span className="wm-intl-ottawa-benefit-icon">✓</span>
-                  <span>{"Top Google 3-Pack Rankings in Ottawa & Kanata"}</span>
+          <div className="wm-intl-ottawa-testimonials-grid">
+            {pageData.testimonials.map((t, idx) => (
+              <div key={idx} className="wm-intl-ottawa-testimonial-card">
+                <div className="wm-intl-ottawa-t-stars">
+                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
-                <div key="Consistent Inflow of High-Quality Inbound Leads" className="wm-intl-ottawa-benefit-point">
-                  <span className="wm-intl-ottawa-benefit-icon">✓</span>
-                  <span>{"Consistent Inflow of High-Quality Inbound Leads"}</span>
-                </div>
-                <div key="Predictable Cost Per Lead and Scalable Customer Acquisition" className="wm-intl-ottawa-benefit-point">
-                  <span className="wm-intl-ottawa-benefit-icon">✓</span>
-                  <span>{"Predictable Cost Per Lead and Scalable Customer Acquisition"}</span>
-                </div>
-                <div key="Full Pipeline Clarity with Real-Time Revenue Telemetry" className="wm-intl-ottawa-benefit-point">
-                  <span className="wm-intl-ottawa-benefit-icon">✓</span>
-                  <span>{"Full Pipeline Clarity with Real-Time Revenue Telemetry"}</span>
+                <p className="wm-intl-ottawa-t-quote">"{t.quote}"</p>
+                <div className="wm-intl-ottawa-t-author">
+                  <h5>{t.author}</h5>
+                  <p>{t.role} · {t.company}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="wm-intl-ottawa-benefits-image">
-              <img src="/onpagebenifts.jpg" alt="Ottawa Digital Marketing Agency" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. ADVANTAGE SECTION */}
+      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
       <section className="wm-intl-ottawa-advantage-section">
         <div className="wm-intl-ottawa-container">
-          <div className="wm-intl-ottawa-sec-header">
-            <span className="wm-intl-ottawa-sec-subtitle">Why Partner With Us</span>
-            <h2 className="wm-intl-ottawa-sec-title">The WebMok Advantage in Global Digital Execution</h2>
-            <div className="wm-intl-ottawa-sec-bar"></div>
+          <div className="wm-intl-ottawa-sec-heading-center">
+            <span className="wm-intl-ottawa-sec-badge">WHY CHOOSE WEBMOK</span>
+            <h2 className="wm-intl-ottawa-sec-h2">The Webmok Operational Guarantees</h2>
+            <div className="wm-intl-ottawa-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-ottawa-advantage-grid">
             <div className="wm-intl-ottawa-advantage-card">
               <div className="wm-intl-ottawa-aicon"><FaShieldAlt /></div>
-              <h4>100% Proven Method</h4>
-              <p>Strict white-hat execution that protects your brand equity and produces compounding organic growth.</p>
+              <h4>100% White-Hat Proven Methods</h4>
+              <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
             </div>
 
             <div className="wm-intl-ottawa-advantage-card">
               <div className="wm-intl-ottawa-aicon"><FaRocket /></div>
-              <h4>Full Telemetry Dashboards</h4>
+              <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
             </div>
 
             <div className="wm-intl-ottawa-advantage-card">
               <div className="wm-intl-ottawa-aicon"><FaHeadset /></div>
               <h4>Dedicated Senior Squad</h4>
-              <p>Work directly with dedicated senior strategists and technical engineers with direct phone & WhatsApp support.</p>
+              <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
             </div>
 
             <div className="wm-intl-ottawa-advantage-card">
               <div className="wm-intl-ottawa-aicon"><FaClock /></div>
               <h4>Zero Mandatory Lock-In</h4>
-              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable growth.</p>
+              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. FAQS ACCORDION */}
-      <section className="wm-intl-ottawa-faqs-section">
+      {/* 13. REGIONAL FAQS */}
+      <section className="wm-intl-ottawa-faqs-section" id="faqs">
         <div className="wm-intl-ottawa-container">
-          <div className="wm-intl-ottawa-sec-header">
-            <span className="wm-intl-ottawa-sec-subtitle">Frequently Asked Questions</span>
-            <h2 className="wm-intl-ottawa-sec-title">Common Queries About Our Ottawa Growth Packages</h2>
-            <div className="wm-intl-ottawa-sec-bar"></div>
+          <div className="wm-intl-ottawa-sec-heading-center">
+            <span className="wm-intl-ottawa-sec-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 className="wm-intl-ottawa-sec-h2">
+              Common Queries About Our {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-ottawa-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-ottawa-faqs-wrap">
@@ -553,12 +747,12 @@ const OttawaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. BOTTOM CONVERSION BANNER */}
+      {/* 14. BOTTOM CONVERSION BANNER */}
       <section className="wm-intl-ottawa-bottom-banner">
         <div className="wm-intl-ottawa-container">
           <div className="wm-intl-ottawa-banner-inner">
             <div className="wm-intl-ottawa-banner-text">
-              <h2>Ready to Accelerate Growth in Ottawa?</h2>
+              <h2>Ready to Accelerate Revenue in {pageData.city}?</h2>
               <p>Schedule a quick 1-on-1 strategy consultation with our senior digital directors today.</p>
             </div>
             <div className="wm-intl-ottawa-banner-btns">
@@ -574,7 +768,7 @@ const OttawaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 className="wm-intl-ottawa-bbtn-quote"
                 onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Bottom Banner Inquiry`)}
               >
-                Get Custom Quote <FaArrowRight />
+                Get Free Custom Proposal <FaArrowRight />
               </button>
             </div>
           </div>

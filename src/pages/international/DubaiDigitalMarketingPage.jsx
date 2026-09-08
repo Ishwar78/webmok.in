@@ -13,7 +13,20 @@ import {
   FaGoogle,
   FaChevronRight,
   FaHeadset,
-  FaClock
+  FaClock,
+  FaSearch,
+  FaBullhorn,
+  FaShareAlt,
+  FaPenNib,
+  FaLaptopCode,
+  FaVideo,
+  FaChartLine,
+  FaBuilding,
+  FaUserMd,
+  FaShoppingCart,
+  FaUtensils,
+  FaBriefcase,
+  FaCompass
 } from 'react-icons/fa';
 import './DubaiDigitalMarketingPage.css';
 
@@ -26,94 +39,269 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   };
 
   const pageData = {
-    name: "Dubai Digital Marketing Agency",
+    name: "Digital Marketing Agency in Dubai, UAE",
     city: "Dubai",
-    region: "United Arab Emirates (UAE & GCC)",
-    tagline: "PREMIER UAE & GCC GROWTH AGENCY · DUBAI, UAE",
-    heroHighlight: "Dubai Digital Marketing & SEO Agency",
-    leadDesc: "Scale your brand across Dubai and the UAE with luxury-grade web architecture, bilingual Arabic/English SEO, and high-ROAS performance marketing.",
-    bodyDesc: "From Downtown Dubai and DIFC financial powerhouses to Dubai Marina luxury brands, Business Bay commerce, and GCC-wide enterprises—Webmok engineers exponential digital growth.",
+    region: "Dubai & United Arab Emirates (UAE)",
+    tagline: "PREMIER DUBAI DIGITAL MARKETING AGENCY · UAE",
+    heroHighlight: "Dubai Digital Marketing Agency",
+    heroItalic: "Accelerate High-Yield UAE Growth with",
+    leadDesc: "Scale your UAE business with high-precision bilingual SEO, Google Ads, Meta/TikTok campaigns, and luxury conversion funnels built for Dubai’s dynamic commercial economy.",
+    bodyDesc: "From Downtown Dubai and DIFC financial hubs to Business Bay, Marina, and Free-Zone enterprises—Webmok engineers dominant digital growth across the Emirates.",
     stats: [
   {
-    "num": "520%",
-    "label": "Average Dubai Client Traffic Lift"
+    "num": "480%",
+    "label": "Average Dubai Traffic Surge"
   },
   {
     "num": "6.4x",
-    "label": "Average ROAS on UAE Paid Media"
+    "label": "Average ROAS on Paid Media"
   },
   {
-    "num": "85+",
-    "label": "Dubai & UAE Brands Scaled"
+    "num": "95+",
+    "label": "UAE Brands Scaled"
   },
   {
     "num": "100%",
-    "label": "Bilingual English & Arabic"
+    "label": "Bilingual Arabic & English"
+  }
+],
+    services: [
+  {
+    "icon": "FaSearch",
+    "title": "Bilingual Dubai SEO & Google Maps",
+    "desc": "Dominating organic search across English and Arabic queries in Dubai, Abu Dhabi, and Sharjah with localized entity SEO and Google 3-Pack rankings."
+  },
+  {
+    "icon": "FaBullhorn",
+    "title": "High-ROAS Google Ads & Performance Max",
+    "desc": "Precision search funnels, YouTube ads, and Performance Max campaigns optimized to capture high-net-worth UAE buyers and corporate decision-makers."
+  },
+  {
+    "icon": "FaShareAlt",
+    "title": "Social Media & TikTok / Meta Campaigns",
+    "desc": "High-impact visual creative, Arabic/English social ad scaling, and influencer integration built for the UAE’s ultra-high social engagement rates."
+  },
+  {
+    "icon": "FaPenNib",
+    "title": "Digital PR & Middle East Content Hubs",
+    "desc": "Authoritative content marketing and digital PR placements in leading Gulf publications (Gulf News, Khaleej Times, Arabian Business)."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "title": "High-Converting Luxury Web Design",
+    "desc": "Speed-optimized, mobile-first websites built for luxury aesthetic standards, multi-currency transactions, and frictionless lead conversion."
+  },
+  {
+    "icon": "FaVideo",
+    "title": "Commercial Video & 3D Visuals",
+    "desc": "Studio-grade video production, drone footage, and luxury lifestyle animations tailored for the UAE’s premium marketplace."
+  }
+],
+    whyHireOutsideTitle: "Why UAE Brands Partner with Webmok",
+    whyHireOutsideSubtitle: "DUBAI VELOCITY · AGILE PRICING",
+    whyHireDesc1: "Dubai agencies in Business Bay and Media City charge astronomical fees (AED 25,000–60,000/mo) driven by massive local overhead, while operating with slow turnaround times.",
+    whyHireDesc2: "Webmok delivers Fortune-500 technical execution, Gulf timezone alignment, native bilingual capability, and rapid sprint cycles at a transparent, high-ROI investment model.",
+    comparisonPoints: [
+  {
+    "feature": "Bilingual English/Arabic",
+    "local": "Often Extra Translation Cost",
+    "webmok": "Native Dual-Language Funnels Included"
+  },
+  {
+    "feature": "Monthly Retainer Cost",
+    "local": "AED 25,000 – AED 60,000 / month",
+    "webmok": "From AED 2,930 – AED 11,000 / month (3x-5x ROI)"
+  },
+  {
+    "feature": "Contract Terms",
+    "local": "Mandatory 1-Year Lock-In",
+    "webmok": "100% Flexible Month-to-Month"
+  },
+  {
+    "feature": "Sprint Speed",
+    "local": "Slow 2-3 Week Approvals",
+    "webmok": "48-72 Hour High-Velocity Sprints"
+  },
+  {
+    "feature": "Telemetry & Attribution",
+    "local": "Vanity Impressions & Reach",
+    "webmok": "Direct Revenue, Lead Quality & ROAS Attribution"
+  }
+],
+    resultsTitle: "Dubai & UAE Performance Telemetry",
+    resultsSubtitle: "VERIFIABLE UAE RESULTS",
+    resultsStats: [
+  {
+    "metric": "95+",
+    "label": "UAE Brands Scaled to Page 1"
+  },
+  {
+    "metric": "AED 38M+",
+    "label": "Tracked Client Revenue Generated"
+  },
+  {
+    "metric": "99.5%",
+    "label": "UAE Client Satisfaction Rate"
+  },
+  {
+    "metric": "24/7",
+    "label": "GST (Gulf Standard Time) Support"
+  }
+],
+    marketInsightsTitle: "What We Know About Marketing in the UAE",
+    marketInsightsSubtitle: "MIDDLE EAST DYNAMICS",
+    marketInsights: [
+  {
+    "title": "Search Happens in Two Languages, Unevenly",
+    "desc": "High-intent B2B and luxury real estate searches happen predominantly in English, while consumer, government, and regional commerce heavily utilize Arabic."
+  },
+  {
+    "title": "Free-Zone Business Setup Cycles",
+    "desc": "Over 40% of commercial inquiries in Dubai relate to free-zone company setup, corporate banking, and residency. We build specialized B2B funnels."
+  },
+  {
+    "title": "The Annual Calendar Moves the Market",
+    "desc": "Ramadan, Eid, Gitex, and the Dubai Shopping Festival dramatically shift consumer search behavior. We dynamically scale campaigns around seasonal peaks."
+  },
+  {
+    "title": "High Dependency on WhatsApp Conversions",
+    "desc": "Over 85% of Dubai leads prefer immediate communication via WhatsApp. We integrate direct WhatsApp conversion triggers into every landing page."
+  }
+],
+    processSteps: [
+  {
+    "num": "01",
+    "title": "Gulf Market & Keyword Audit",
+    "desc": "Analyzing English and Arabic search volume, competitor ad strategies, and free-zone commercial funnels."
+  },
+  {
+    "num": "02",
+    "title": "Bilingual Architecture Blueprint",
+    "desc": "Setting up dual-language landing pages, schema markup, and Google Business Profiles."
+  },
+  {
+    "num": "03",
+    "title": "Omni-Channel Execution Sprints",
+    "desc": "Deploying high-intent Google Search ads, Meta/TikTok social funnels, and digital PR outreach."
+  },
+  {
+    "num": "04",
+    "title": "CRO & Revenue Attribution",
+    "desc": "Optimizing WhatsApp lead flows, tracking ROAS, and scaling revenue across the Emirates."
+  }
+],
+    industries: [
+  {
+    "icon": "FaBuilding",
+    "name": "Real Estate & Luxury Property",
+    "desc": "Capturing international luxury property investors and off-plan buyers across Dubai."
+  },
+  {
+    "icon": "FaBriefcase",
+    "name": "Corporate Services & Free-Zone Setup",
+    "desc": "Generating high-value business setup leads, banking inquiries, and corporate retainers."
+  },
+  {
+    "icon": "FaUserMd",
+    "name": "Aesthetic Medicine & Wellness Clinics",
+    "desc": "Patient acquisition for cosmetic surgery, dental clinics, and wellness centers in Dubai."
+  },
+  {
+    "icon": "FaShoppingCart",
+    "name": "Luxury E-Commerce & Retail",
+    "desc": "Scaling Shopify and custom storefronts with profitable Google Shopping and TikTok ads."
+  },
+  {
+    "icon": "FaUtensils",
+    "name": "Hospitality, Dining & Nightlife",
+    "desc": "Driving reservations and viral buzz for premier Dubai dining and luxury venues."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "name": "FinTech, Web3 & Tech Startups",
+    "desc": "Accelerating user acquisition and venture growth in the DIFC innovation hub."
   }
 ],
     plans: [
   {
     "name": "Dubai Starter Scale",
-    "badge": "Local Growth",
-    "usdPrice": "899",
-    "inrPrice": "72,999",
-    "desc": "Perfect for local Dubai service providers, clinics, luxury practices, and boutique stores looking to rank #1 locally.",
+    "badge": "Local Traction",
+    "usdPrice": "799",
+    "inrPrice": "64,999",
+    "desc": "Ideal for local Dubai service providers, clinics, and boutique firms seeking dominant Google Maps and search visibility.",
     "features": [
       "Up to 20 High-Intent Dubai Keywords",
-      "Google Business Profile (Maps) Optimization",
-      "Local UAE Citation Building & Directory Consistency",
+      "Google Business Profile Dubai Optimization",
+      "Local UAE Citations & Directory Listings",
       "On-Page SEO & Content Tuning (4 Pages/mo)",
-      "Monthly Executive ROI Report"
+      "Monthly Executive ROI Report",
+      "Dedicated Gulf Timezone Account Lead"
     ]
   },
   {
     "name": "Dubai Accelerator",
     "badge": "Most Popular",
     "highlight": true,
-    "usdPrice": "1,699",
-    "inrPrice": "1,39,999",
-    "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and conversion rate optimization.",
+    "usdPrice": "1,499",
+    "inrPrice": "1,19,999",
+    "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and bilingual content marketing.",
     "features": [
-      "Up to 50 Keywords (Dubai, Abu Dhabi & UAE Wide)",
-      "Complete Technical & Mobile Speed Audit",
-      "Google Search & Social Ads Management",
-      "Bilingual Content Creation (Arabic & English, 8 Articles/mo)",
-      "Full Competitor Conquesting Strategy",
-      "Bi-Weekly Live Strategy Calls"
+      "Up to 50 UAE & Gulf Keywords",
+      "Google Ads & Meta Ads Management ($4k spend)",
+      "Bilingual English/Arabic Landing Pages",
+      "High-Authority Content Marketing (6 Posts/mo)",
+      "Competitor Backlink Interception",
+      "Bi-Weekly Live Strategic Consultation"
     ]
   },
   {
-    "name": "Dubai Enterprise Pro",
-    "badge": "GCC Domination",
-    "usdPrice": "3,299",
-    "inrPrice": "2,69,999",
-    "desc": "Full-scale omni-channel dominance for established UAE brands, luxury real estate developers, and GCC enterprises.",
+    "name": "Dubai Enterprise Monopoly",
+    "badge": "Category Leader",
+    "usdPrice": "2,999",
+    "inrPrice": "2,44,999",
+    "desc": "Full-scale market dominance for real estate developers, free-zone corporate networks, and enterprise brands.",
     "features": [
-      "Unlimited Target Keywords & GCC-Wide Expansion",
-      "Omni-Channel PPC (Google, Meta, Snapchat, TikTok, LinkedIn)",
-      "Custom High-Converting Web Design / Landing Pages",
-      "Authoritative Middle East PR Backlinks & Outreach",
-      "Dedicated Account Squad & WhatsApp/Slack Access",
-      "Custom Multi-Touch Attribution Modeling"
+      "UAE & GCC Regional Keyword Domination",
+      "Omni-Channel PPC (Google, Meta, TikTok, LinkedIn)",
+      "Custom High-Converting Web Redesign",
+      "Tier-1 Middle East Media PR & Backlinks",
+      "Dedicated Account Squad & Daily Slack Channel",
+      "Direct WhatsApp Conversion & CRM Integration"
     ]
+  }
+],
+    testimonials: [
+  {
+    "quote": "Webmok transformed our real estate lead generation in Dubai. We closed over AED 14M in luxury property sales within 5 months of launching our Google and Meta ad funnels.",
+    "author": "Tariq A.",
+    "role": "Managing Partner",
+    "company": "Dubai Luxury Real Estate Brokerage",
+    "rating": 5
+  },
+  {
+    "quote": "Their bilingual English and Arabic campaigns generated a 320% surge in business setup inquiries for our free-zone consultancy.",
+    "author": "Zaid K.",
+    "role": "CEO",
+    "company": "UAE Corporate Services Group",
+    "rating": 5
   }
 ],
     faqs: [
   {
-    "q": "Do you offer bilingual Arabic and English digital marketing campaigns for Dubai?",
-    "a": "Yes, absolutely! We craft tailored ad copy, localized keywords, and landing pages in both Arabic and English to maximize reach across both local and expatriate demographics in the UAE."
+    "q": "Why should a Dubai business choose Webmok over local agencies charging AED 40,000+/mo?",
+    "a": "Webmok delivers senior-level agency execution at an agile, value-driven investment without bloated local overhead. You work directly with dedicated Gulf-timezone directors focused on measurable revenue."
   },
   {
-    "q": "How fast can our Dubai business expect to see Google ranking improvements?",
-    "a": "Local Google Maps optimizations and high-intent PPC campaigns yield calls and WhatsApp leads within 14 to 30 days. Broad organic SEO keywords typically achieve major page #1 breakthroughs in 60 to 90 days."
+    "q": "Do you offer bilingual English and Arabic digital marketing campaigns?",
+    "a": "Yes! We craft complete dual-language campaigns with native Arabic and English copy, localized search keywords, and high-converting landing pages."
   },
   {
-    "q": "Do you specialize in real estate and luxury brand lead generation in Dubai?",
-    "a": "Yes, we have deep experience running high-ROAS lead generation campaigns for Dubai real estate brokers, developers, luxury automotive, healthcare, and hospitality businesses."
+    "q": "How do you integrate WhatsApp lead capture for Dubai campaigns?",
+    "a": "We configure click-to-WhatsApp automated triggers, direct ad extensions, and CRM webhooks so your sales team connects with prospects within seconds."
   },
   {
-    "q": "Are there any long-term contract lock-ins?",
-    "a": "Zero mandatory lock-in. All our Dubai digital marketing packages operate on flexible month-to-month terms."
+    "q": "What is the contract term?",
+    "a": "All our Dubai digital marketing packages operate on flexible month-to-month agreements with zero lock-in."
   }
 ]
   };
@@ -121,14 +309,14 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-intl-dubai-page-root">
       {/* 1. HERO SECTION */}
-      <section className="wm-intl-dubai-hero-section">
+      <section className="wm-intl-dubai-hero-section" id="overview">
         <div className="wm-intl-dubai-container">
           <div className="wm-intl-dubai-hero-grid">
             <div className="wm-intl-dubai-hero-left">
               <span className="wm-intl-dubai-hero-est-tag">{pageData.tagline}</span>
 
               <h1 className="wm-intl-dubai-hero-title-dual">
-                <span className="wm-intl-dubai-hero-italic-gold">Accelerate Market Dominance with</span>
+                <span className="wm-intl-dubai-hero-italic-gold">{pageData.heroItalic}</span>
                 <span className="wm-intl-dubai-hero-bold-white">{pageData.heroHighlight}</span>
               </h1>
 
@@ -139,12 +327,12 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-intl-dubai-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Audit`)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
                 >
-                  Get Free Strategy Audit <FaPaperPlane />
+                  Get Free Digital Proposal <FaPaperPlane />
                 </button>
                 <a href="#pricing-plans" className="wm-intl-dubai-btn-outline">
-                  View {pageData.city} Packages <FaChevronRight />
+                  View {pageData.city} Rates <FaChevronRight />
                 </a>
               </div>
             </div>
@@ -162,7 +350,7 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-intl-dubai-trust-card">
                 <div className="wm-intl-dubai-tcard-info">
                   <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Agency</p>
+                  <p>Upwork Top 1% Verified Agency</p>
                 </div>
                 <div className="wm-intl-dubai-tcard-badge wm-intl-dubai-badge-upwork">up</div>
               </div>
@@ -196,7 +384,25 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
+      {/* 2. STICKY IN-PAGE SUB-NAV */}
+      <nav className="wm-intl-dubai-inpage-nav">
+        <div className="wm-intl-dubai-container">
+          <div className="wm-intl-dubai-inpage-nav-inner">
+            <a href="#overview" className="wm-intl-dubai-inpage-nav-link">Overview</a>
+            <a href="#services" className="wm-intl-dubai-inpage-nav-link">Services</a>
+            <a href="#why-us" className="wm-intl-dubai-inpage-nav-link">Why Choose Us</a>
+            <a href="#results" className="wm-intl-dubai-inpage-nav-link">Live Telemetry</a>
+            <a href="#market-dynamics" className="wm-intl-dubai-inpage-nav-link">Market Insights</a>
+            <a href="#process" className="wm-intl-dubai-inpage-nav-link">Our Approach</a>
+            <a href="#industries" className="wm-intl-dubai-inpage-nav-link">Industries</a>
+            <a href="#pricing-plans" className="wm-intl-dubai-inpage-nav-link">Published Rates</a>
+            <a href="#testimonials" className="wm-intl-dubai-inpage-nav-link">Client Reviews</a>
+            <a href="#faqs" className="wm-intl-dubai-inpage-nav-link">FAQs</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* 3. STATS STRIP */}
       <section className="wm-intl-dubai-stats-strip">
         <div className="wm-intl-dubai-container">
           <div className="wm-intl-dubai-stats-grid">
@@ -210,191 +416,192 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3. INTRO SECTION */}
-      <section className="wm-intl-dubai-intro-section">
+      {/* 4. SERVICES SUITE */}
+      <section className="wm-intl-dubai-services-section" id="services">
         <div className="wm-intl-dubai-container">
-          <div className="wm-intl-dubai-intro-grid">
-            <div className="wm-intl-dubai-intro-left">
-              <span className="wm-intl-dubai-intro-tag">UAE & GCC GROWTH SPECIALISTS</span>
-              <h2 className="wm-intl-dubai-intro-title">
-                High-Impact Digital Growth for 
-                <span>Dubai Businesses</span>
-              </h2>
-            </div>
-            <div className="wm-intl-dubai-intro-right">
-              <p>
-                <span>Webmok Technologies is a premier global digital partner</span> Dubai is the luxury and commercial capital of the Middle East. Webmok combines deep bilingual market insights (Arabic and English), technical SEO, precision Google/Meta ads, and bespoke web architecture to deliver compound revenue growth.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. BACKED BY NUMBERS SECTION */}
-      <section className="wm-intl-dubai-numbers-section">
-        <div className="wm-intl-dubai-container">
-          <div className="wm-intl-dubai-numbers-heading">
-            <span className="wm-intl-dubai-numbers-subtitle">DUBAI MARKET TELEMETRY</span>
-            <h2>
-              Proven Track Record Across 
-              <span>Dubai & UAE</span>
+          <div className="wm-intl-dubai-sec-heading-center">
+            <span className="wm-intl-dubai-sec-badge">COMPREHENSIVE CAPABILITIES</span>
+            <h2 className="wm-intl-dubai-sec-h2">
+              Our {pageData.city} <span>Digital Marketing Services</span>
             </h2>
+            <div className="wm-intl-dubai-sec-bar-center"></div>
           </div>
 
-          <div className="wm-intl-dubai-numstats-grid">
-            <div key="0" className="wm-intl-dubai-numstat-item">
-              <div className="wm-intl-dubai-numstat-number">{"85+"}</div>
-              <div className="wm-intl-dubai-numstat-line"></div>
-              <p>{"Dubai Brands Scaled"}</p>
-            </div>
-            <div key="1" className="wm-intl-dubai-numstat-item">
-              <div className="wm-intl-dubai-numstat-number">{"AED 65M+"}</div>
-              <div className="wm-intl-dubai-numstat-line"></div>
-              <p>{"Client Revenue Generated"}</p>
-            </div>
-            <div key="2" className="wm-intl-dubai-numstat-item">
-              <div className="wm-intl-dubai-numstat-number">{"99.6%"}</div>
-              <div className="wm-intl-dubai-numstat-line"></div>
-              <p>{"Client Retention Rate"}</p>
-            </div>
-            <div key="3" className="wm-intl-dubai-numstat-item">
-              <div className="wm-intl-dubai-numstat-number">{"< 28s"}</div>
-              <div className="wm-intl-dubai-numstat-line"></div>
-              <p>{"Direct Response Time"}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INCLUSION / CAPABILITIES SECTION */}
-      <section className="wm-intl-dubai-include-section">
-        <div className="wm-intl-dubai-container">
-          <div className="wm-intl-dubai-include-grid">
-            <div className="wm-intl-dubai-include-content">
-              <span className="wm-intl-dubai-include-tag">FULL DUBAI SUITE</span>
-              <h2 className="wm-intl-dubai-include-title">
-                Comprehensive Digital Solutions in 
-                <span>Dubai, UAE</span>
-              </h2>
-              <p>Our Dubai digital marketing packages encompass hyper-local Google Maps ranking, Arabic/English bilingual campaigns, high-converting PPC funnels, and enterprise UX web development.</p>
-              <p>Whether you need real estate lead generation, luxury retail foot-traffic expansion, or B2B pipeline acceleration, our dedicated Dubai squad executes end-to-end campaigns with zero fluff.</p>
-
-              <div className="wm-intl-dubai-feature-list">
-                <div key="Bilingual Local SEO (Arabic & English Keyword Optimization)" className="wm-intl-dubai-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Bilingual Local SEO (Arabic & English Keyword Optimization)"}</span>
+          <div className="wm-intl-dubai-services-grid">
+            {pageData.services.map((svc, i) => (
+              <div key={i} className="wm-intl-dubai-service-card">
+                <div className="wm-intl-dubai-svc-icon">
+                  {svc.icon === 'FaSearch' && <FaSearch />}
+                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                  {svc.icon === 'FaPenNib' && <FaPenNib />}
+                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {svc.icon === 'FaVideo' && <FaVideo />}
+                  {svc.icon === 'FaChartLine' && <FaChartLine />}
+                  {svc.icon === 'FaCompass' && <FaCompass />}
                 </div>
-                <div key="Google Search & High-Intent Performance Max Ads" className="wm-intl-dubai-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Google Search & High-Intent Performance Max Ads"}</span>
-                </div>
-                <div key="Dubai & GCC Geo-Fenced Social Ads (Instagram, Snapchat & TikTok)" className="wm-intl-dubai-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Dubai & GCC Geo-Fenced Social Ads (Instagram, Snapchat & TikTok)"}</span>
-                </div>
-                <div key="Luxury Conversion-Optimized Landing Page Design" className="wm-intl-dubai-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Luxury Conversion-Optimized Landing Page Design"}</span>
-                </div>
-                <div key="Real-Time Telemetry Dashboard & Revenue Attribution" className="wm-intl-dubai-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Real-Time Telemetry Dashboard & Revenue Attribution"}</span>
-                </div>
-                <div key="Dedicated UAE (GST/UTC+4) Timezone Account Director" className="wm-intl-dubai-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Dedicated UAE (GST/UTC+4) Timezone Account Director"}</span>
-                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. WHY HIRE OUTSIDE */}
+      <section className="wm-intl-dubai-whyoutside-section" id="why-us">
+        <div className="wm-intl-dubai-container">
+          <div className="wm-intl-dubai-whyoutside-grid">
+            <div className="wm-intl-dubai-whyoutside-text">
+              <span className="wm-intl-dubai-sec-badge">{pageData.whyHireOutsideSubtitle}</span>
+              <h2>{pageData.whyHireOutsideTitle}</h2>
+              <p>{pageData.whyHireDesc1}</p>
+              <p>{pageData.whyHireDesc2}</p>
             </div>
 
-            <div className="wm-intl-dubai-include-image">
-              <img src="/onpage1.avif" alt="Dubai Digital Marketing Agency" />
+            <div className="wm-intl-dubai-compare-table">
+              <div className="wm-intl-dubai-compare-row wm-intl-dubai-compare-hdr">
+                <div>Deliverable / Metric</div>
+                <div>Typical Local Agency</div>
+                <div>Webmok Advantage</div>
+              </div>
+              {pageData.comparisonPoints.map((cp, idx) => (
+                <div key={idx} className="wm-intl-dubai-compare-row">
+                  <div className="wm-intl-dubai-compare-feat">{cp.feature}</div>
+                  <div className="wm-intl-dubai-compare-local">{cp.local}</div>
+                  <div className="wm-intl-dubai-compare-wm">{cp.webmok}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. IMPORTANCE SECTION */}
-      <section className="wm-intl-dubai-importance-section">
+      {/* 6. RESULTS TELEMETRY */}
+      <section className="wm-intl-dubai-results-section" id="results">
         <div className="wm-intl-dubai-container">
-          <div className="wm-intl-dubai-importance-box">
-            <h2 className="wm-intl-dubai-importance-title">
-              Why Digital Dominance Matters in 
-              <span>Dubai</span>
+          <div className="wm-intl-dubai-sec-heading-center">
+            <span className="wm-intl-dubai-sec-badge">{pageData.resultsSubtitle}</span>
+            <h2 className="wm-intl-dubai-sec-h2">{pageData.resultsTitle}</h2>
+            <div className="wm-intl-dubai-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-dubai-results-grid">
+            {pageData.resultsStats.map((rs, i) => (
+              <div key={i} className="wm-intl-dubai-result-card">
+                <strong>{rs.metric}</strong>
+                <p>{rs.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. MARKET DYNAMICS */}
+      <section className="wm-intl-dubai-market-section" id="market-dynamics">
+        <div className="wm-intl-dubai-container">
+          <div className="wm-intl-dubai-sec-heading-center">
+            <span className="wm-intl-dubai-sec-badge">{pageData.marketInsightsSubtitle}</span>
+            <h2 className="wm-intl-dubai-sec-h2">{pageData.marketInsightsTitle}</h2>
+            <div className="wm-intl-dubai-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-dubai-market-grid">
+            {pageData.marketInsights.map((mi, i) => (
+              <div key={i} className="wm-intl-dubai-market-card">
+                <h4>{mi.title}</h4>
+                <p>{mi.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 4-STEP PROCESS */}
+      <section className="wm-intl-dubai-process-section" id="process">
+        <div className="wm-intl-dubai-container">
+          <div className="wm-intl-dubai-sec-heading-center">
+            <span className="wm-intl-dubai-sec-badge">OUR PROCESS & APPROACH</span>
+            <h2 className="wm-intl-dubai-sec-h2">
+              Our 4-Step <span>Agile Growth Framework</span>
             </h2>
-
-            <div className="wm-intl-dubai-importance-content">
-              <p>Dubai is one of the fastest-growing global business and luxury destinations. With thousands of new companies launching annually, organic visibility on Google and surgical ad targeting are required to outpace competitors.</p>
-              <p>Without aggressive technical SEO and optimized customer acquisition funnels, local competitors will capture your high-value market share.</p>
-            </div>
+            <div className="wm-intl-dubai-sec-bar-center"></div>
           </div>
-        </div>
-      </section>
 
-      {/* 7. WHY WEBMOK SECTION */}
-      <section className="wm-intl-dubai-why-section">
-        <div className="wm-intl-dubai-container">
-          <div className="wm-intl-dubai-why-grid">
-            <div className="wm-intl-dubai-why-content">
-              <span className="wm-intl-dubai-why-tag">THE WEBMOK DIFFERENCE</span>
-              <h2 className="wm-intl-dubai-why-title">
-                Engineered for Dubai Market 
-                <span className="s1"> Supremacy</span>{' '}
-                <span className="s2">& Scalable ROI</span>
-              </h2>
-
-              <div className="wm-intl-dubai-why-text">
-                <p>We don’t believe in cookie-cutter strategies. Every Dubai campaign is custom engineered around your industry unit economics, competitor vulnerabilities, and high-converting search intent.</p>
-                <p>With transparent weekly reporting, zero long-term lock-in, and senior digital architects on call, you get elite execution at unmatched value.</p>
+          <div className="wm-intl-dubai-process-grid">
+            {pageData.processSteps.map((ps, i) => (
+              <div key={i} className="wm-intl-dubai-process-card">
+                <span className="wm-intl-dubai-proc-num">STEP {ps.num}</span>
+                <h4>{ps.title}</h4>
+                <p>{ps.desc}</p>
               </div>
-            </div>
-
-            <div className="wm-intl-dubai-why-image">
-              <img src="/onpage3.avif" alt="Why Webmok" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. PRICING PLANS SECTION */}
+      {/* 9. INDUSTRIES */}
+      <section className="wm-intl-dubai-industries-section" id="industries">
+        <div className="wm-intl-dubai-container">
+          <div className="wm-intl-dubai-sec-heading-center">
+            <span className="wm-intl-dubai-sec-badge">WHO WE WORK WITH</span>
+            <h2 className="wm-intl-dubai-sec-h2">
+              Specialized Industry <span>Growth Solutions</span>
+            </h2>
+            <div className="wm-intl-dubai-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-dubai-industries-grid">
+            {pageData.industries.map((ind, i) => (
+              <div key={i} className="wm-intl-dubai-industry-card">
+                <div className="wm-intl-dubai-ind-icon">
+                  {ind.icon === 'FaBuilding' && <FaBuilding />}
+                  {ind.icon === 'FaUserMd' && <FaUserMd />}
+                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                  {ind.icon === 'FaUtensils' && <FaUtensils />}
+                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {ind.icon === 'FaCompass' && <FaCompass />}
+                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                </div>
+                <h4>{ind.name}</h4>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. PRICING PLANS */}
       <section className="wm-intl-dubai-pricing-section" id="pricing-plans">
         <div className="wm-intl-dubai-container">
-          <div className="wm-intl-dubai-sec-header">
-            <span className="wm-intl-dubai-sec-subtitle">Transparent Monthly Plans</span>
-            <h2 className="wm-intl-dubai-sec-title">Flexible Dubai Growth Packages with Zero Lock-In</h2>
-            <div className="wm-intl-dubai-sec-bar"></div>
+          <div className="wm-intl-dubai-sec-heading-center">
+            <span className="wm-intl-dubai-sec-badge">PUBLISHED RATES · ZERO LOCK-IN</span>
+            <h2 className="wm-intl-dubai-sec-h2">
+              Transparent {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-dubai-sec-bar-center"></div>
 
             {/* Currency Switcher */}
             <div className="wm-intl-dubai-currency-toggle">
-              
-              <button
-                type="button"
-                className={`wm-intl-dubai-curr-btn ${currency === 'AED' ? 'active' : ''}`}
-                onClick={() => setCurrency('AED')}
-              >
-                AED AED
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-dubai-curr-btn ${currency === 'USD' ? 'active' : ''}`}
-                onClick={() => setCurrency('USD')}
-              >
-                $ USD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-dubai-curr-btn ${currency === 'INR' ? 'active' : ''}`}
-                onClick={() => setCurrency('INR')}
-              >
-                ₹ INR
-              </button>
+              {[{"code":"AED","symbol":"AED ","rate":3.67},{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  className={`wm-intl-dubai-curr-btn ${currency === c.code ? 'active' : ''}`}
+                  onClick={() => setCurrency(c.code)}
+                >
+                  {c.symbol} {c.code}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Pricing Grid */}
           <div className="wm-intl-dubai-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : `$${plan.usdPrice}`;
+              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
               return (
                 <div key={i} className={`wm-intl-dubai-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (
@@ -442,93 +649,80 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 9. BENEFITS SECTION */}
-      <section className="wm-intl-dubai-benefits-section">
+      {/* 11. TESTIMONIALS */}
+      <section className="wm-intl-dubai-testimonials-section" id="testimonials">
         <div className="wm-intl-dubai-container">
-          <div className="wm-intl-dubai-benefits-grid">
-            <div className="wm-intl-dubai-benefits-content">
-              <span className="wm-intl-dubai-benefits-tag">PROVEN OUTCOMES</span>
-              <h2 className="wm-intl-dubai-benefits-title">
-                Transforming Dubai Brands into 
-                <span>Market Leaders</span>
-              </h2>
+          <div className="wm-intl-dubai-sec-heading-center">
+            <span className="wm-intl-dubai-sec-badge">CLIENT SUCCESS STORIES</span>
+            <h2 className="wm-intl-dubai-sec-h2">
+              What {pageData.city} <span>Leaders Say About Webmok</span>
+            </h2>
+            <div className="wm-intl-dubai-sec-bar-center"></div>
+          </div>
 
-              <div className="wm-intl-dubai-benefits-text">
-                <p>Our tailored Dubai digital marketing campaigns produce sustainable, compounding organic rankings that lower your blended customer acquisition costs over time.</p>
-                <p>We build digital assets that continuously funnel qualified sales calls, WhatsApp inquiries, and transactions into your pipeline.</p>
-              </div>
-
-              <div className="wm-intl-dubai-benefits-points">
-                <div key="Top 3 Google Maps 3-Pack Rankings in Dubai & UAE" className="wm-intl-dubai-benefit-point">
-                  <span className="wm-intl-dubai-benefit-icon">✓</span>
-                  <span>{"Top 3 Google Maps 3-Pack Rankings in Dubai & UAE"}</span>
+          <div className="wm-intl-dubai-testimonials-grid">
+            {pageData.testimonials.map((t, idx) => (
+              <div key={idx} className="wm-intl-dubai-testimonial-card">
+                <div className="wm-intl-dubai-t-stars">
+                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
-                <div key="Average 40% Reduction in Cost Per Lead (CPL)" className="wm-intl-dubai-benefit-point">
-                  <span className="wm-intl-dubai-benefit-icon">✓</span>
-                  <span>{"Average 40% Reduction in Cost Per Lead (CPL)"}</span>
-                </div>
-                <div key="Substantial Organic Keyword Footprint Expansion in English & Arabic" className="wm-intl-dubai-benefit-point">
-                  <span className="wm-intl-dubai-benefit-icon">✓</span>
-                  <span>{"Substantial Organic Keyword Footprint Expansion in English & Arabic"}</span>
-                </div>
-                <div key="Transparent Telemetry with Real-Time Revenue Tracking" className="wm-intl-dubai-benefit-point">
-                  <span className="wm-intl-dubai-benefit-icon">✓</span>
-                  <span>{"Transparent Telemetry with Real-Time Revenue Tracking"}</span>
+                <p className="wm-intl-dubai-t-quote">"{t.quote}"</p>
+                <div className="wm-intl-dubai-t-author">
+                  <h5>{t.author}</h5>
+                  <p>{t.role} · {t.company}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="wm-intl-dubai-benefits-image">
-              <img src="/onpagebenifts.jpg" alt="Dubai Digital Marketing Agency" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. ADVANTAGE SECTION */}
+      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
       <section className="wm-intl-dubai-advantage-section">
         <div className="wm-intl-dubai-container">
-          <div className="wm-intl-dubai-sec-header">
-            <span className="wm-intl-dubai-sec-subtitle">Why Partner With Us</span>
-            <h2 className="wm-intl-dubai-sec-title">The WebMok Advantage in Global Digital Execution</h2>
-            <div className="wm-intl-dubai-sec-bar"></div>
+          <div className="wm-intl-dubai-sec-heading-center">
+            <span className="wm-intl-dubai-sec-badge">WHY CHOOSE WEBMOK</span>
+            <h2 className="wm-intl-dubai-sec-h2">The Webmok Operational Guarantees</h2>
+            <div className="wm-intl-dubai-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-dubai-advantage-grid">
             <div className="wm-intl-dubai-advantage-card">
               <div className="wm-intl-dubai-aicon"><FaShieldAlt /></div>
-              <h4>100% Proven Method</h4>
-              <p>Strict white-hat execution that protects your brand equity and produces compounding organic growth.</p>
+              <h4>100% White-Hat Proven Methods</h4>
+              <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
             </div>
 
             <div className="wm-intl-dubai-advantage-card">
               <div className="wm-intl-dubai-aicon"><FaRocket /></div>
-              <h4>Full Telemetry Dashboards</h4>
+              <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
             </div>
 
             <div className="wm-intl-dubai-advantage-card">
               <div className="wm-intl-dubai-aicon"><FaHeadset /></div>
               <h4>Dedicated Senior Squad</h4>
-              <p>Work directly with dedicated senior strategists and technical engineers with direct phone & WhatsApp support.</p>
+              <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
             </div>
 
             <div className="wm-intl-dubai-advantage-card">
               <div className="wm-intl-dubai-aicon"><FaClock /></div>
               <h4>Zero Mandatory Lock-In</h4>
-              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable growth.</p>
+              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. FAQS ACCORDION */}
-      <section className="wm-intl-dubai-faqs-section">
+      {/* 13. REGIONAL FAQS */}
+      <section className="wm-intl-dubai-faqs-section" id="faqs">
         <div className="wm-intl-dubai-container">
-          <div className="wm-intl-dubai-sec-header">
-            <span className="wm-intl-dubai-sec-subtitle">Frequently Asked Questions</span>
-            <h2 className="wm-intl-dubai-sec-title">Common Queries About Our Dubai Growth Packages</h2>
-            <div className="wm-intl-dubai-sec-bar"></div>
+          <div className="wm-intl-dubai-sec-heading-center">
+            <span className="wm-intl-dubai-sec-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 className="wm-intl-dubai-sec-h2">
+              Common Queries About Our {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-dubai-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-dubai-faqs-wrap">
@@ -553,12 +747,12 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. BOTTOM CONVERSION BANNER */}
+      {/* 14. BOTTOM CONVERSION BANNER */}
       <section className="wm-intl-dubai-bottom-banner">
         <div className="wm-intl-dubai-container">
           <div className="wm-intl-dubai-banner-inner">
             <div className="wm-intl-dubai-banner-text">
-              <h2>Ready to Accelerate Growth in Dubai?</h2>
+              <h2>Ready to Accelerate Revenue in {pageData.city}?</h2>
               <p>Schedule a quick 1-on-1 strategy consultation with our senior digital directors today.</p>
             </div>
             <div className="wm-intl-dubai-banner-btns">
@@ -574,7 +768,7 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 className="wm-intl-dubai-bbtn-quote"
                 onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Bottom Banner Inquiry`)}
               >
-                Get Custom Quote <FaArrowRight />
+                Get Free Custom Proposal <FaArrowRight />
               </button>
             </div>
           </div>

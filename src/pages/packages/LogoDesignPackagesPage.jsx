@@ -460,6 +460,254 @@ Technologies for
         </div>
       </section>
 
+
+
+{/* ================= LOGO COMPANY PROCESS SECTION ================= */}
+
+<section className="logo-process-section">
+
+  <div className="logo-process-container">
+
+    {/* Heading */}
+    <div className="logo-process-heading">
+      <span className="logo-process-tag">
+        LOGO FOR COMPANY
+      </span>
+
+      <h2>
+        How Do We Build the{" "}
+        <span>Best</span>
+        <br />
+        <em>Logo For Your Company</em>
+      </h2>
+    </div>
+
+
+    {/* Process Grid */}
+    <div className="logo-process-grid">
+
+      {/* Card 1 */}
+      <div className="logo-process-card">
+        <span className="process-number">/01</span>
+
+        <h3>Understand Your Brand</h3>
+
+        <p>
+          Before we start designing a logo, it's important to understand
+          your brand and what it represents. It helps us to create a logo
+          that accurately reflects your company's values, mission, and
+          personality.
+        </p>
+      </div>
+
+
+      {/* Card 2 */}
+      <div className="logo-process-card">
+        <span className="process-number">/02</span>
+
+        <h3>Choose The Right Colors</h3>
+
+        <p>
+          The colors we choose for your logo can have a significant impact
+          on how it's perceived by your audience. We select colors that
+          represent your brand and resonate with your target audience.
+        </p>
+      </div>
+
+
+      {/* Card 3 */}
+      <div className="logo-process-card">
+        <span className="process-number">/03</span>
+
+        <h3>Select An Appropriate Font</h3>
+
+        <p>
+          The font we choose should be easy to read and reflect the
+          personality of your brand. We avoid using too many fonts and
+          stick to one or two that complement each other.
+        </p>
+      </div>
+
+
+      {/* Card 4 */}
+      <div className="logo-process-card">
+        <span className="process-number">/04</span>
+
+        <h3>Keep It Simple</h3>
+
+        <p>
+          A simple logo is often more effective than a complex one. Avoid
+          using too many design elements or intricate graphics that may not
+          translate well across different mediums.
+        </p>
+      </div>
+
+
+      {/* Card 5 */}
+      <div className="logo-process-card">
+        <span className="process-number">/05</span>
+
+        <h3>Make It Scalable</h3>
+
+        <p>
+          Your logo will be used across a variety of mediums, so it's
+          important to create a design that can be scaled up or down
+          without losing its visual impact. We take care of it.
+        </p>
+      </div>
+
+
+      {/* Card 6 */}
+      <div className="logo-process-card">
+        <span className="process-number">/06</span>
+
+        <h3>Clear Message</h3>
+
+        <p>
+          We understand your business vision and mission and make it clear
+          in the logo for people so they can easily understand the business
+          and objective.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+{/* Logo Design Process Section */}
+<section className="logo-process-section">
+  <div className="logo-process-container">
+
+    <div className="logo-process-top">
+
+      <div className="logo-process-heading-area">
+        <span className="logo-process-label">PROCESS</span>
+
+        <h2>
+          Process Our Logo Design
+          <span>Company Follows</span>
+        </h2>
+      </div>
+
+      <div className="logo-process-intro">
+        <p>
+          Webmok Technologies- Best logo design company that specializes in
+          creating custom logos for businesses and organizations. We work with
+          clients to understand their brand identity, target audience, and
+          overall business goals in order to create a logo that accurately
+          represents their brand and appeals to their audience.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div className="logo-process-grid">
+
+      {/* 01 */}
+      <div className="logo-process-card">
+        <span className="process-number">/01</span>
+
+        <h3>Discovery</h3>
+
+        <p>
+          Our logo design company will start by getting to know the client's
+          business, including their brand values, target audience, and
+          competitors. We may also ask for input on design preferences or
+          existing visual assets that should be incorporated into the logo.
+        </p>
+
+        <div className="process-hover-line"></div>
+      </div>
+
+
+      {/* 02 */}
+      <div className="logo-process-card">
+        <span className="process-number">/02</span>
+
+        <h3>Research</h3>
+
+        <p>
+          Our logo design company will conduct research on the industry and
+          competition to understand the visual language and trends in the
+          market. This helps us to create a logo that stands out and resonates
+          with the target audience.
+        </p>
+
+        <div className="process-hover-line"></div>
+      </div>
+
+
+      {/* 03 */}
+      <div className="logo-process-card">
+        <span className="process-number">/03</span>
+
+        <h3>Design</h3>
+
+        <p>
+          Based on the information gathered in the discovery and research
+          stages, our logo design company will create several logo design
+          concepts for the client to review. These designs may include
+          different color schemes, fonts, and graphic elements.
+        </p>
+
+        <div className="process-hover-line"></div>
+      </div>
+
+
+      {/* 04 */}
+      <div className="logo-process-card">
+        <span className="process-number">/04</span>
+
+        <h3>Revisions</h3>
+
+        <p>
+          The client will review the design concepts and provide feedback on
+          what they like and dislike. Our logo design team will revise the
+          designs based on this feedback and present new concepts if necessary.
+        </p>
+
+        <div className="process-hover-line"></div>
+      </div>
+
+
+      {/* 05 */}
+      <div className="logo-process-card">
+        <span className="process-number">/05</span>
+
+        <h3>Finalization</h3>
+
+        <p>
+          Once the client is satisfied with the design, the logo design team
+          will finalize the logo and provide the client with all the necessary
+          files and formats for use across different mediums.
+        </p>
+
+        <div className="process-hover-line"></div>
+      </div>
+
+
+      {/* 06 */}
+      <div className="logo-process-card">
+        <span className="process-number">/06</span>
+
+        <h3>Delivery</h3>
+
+        <p>
+          After getting the final approval on the logo design, our logo design
+          team will deliver all the files and logo formats to clients.
+        </p>
+
+        <div className="process-hover-line"></div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
       {/* 9. BENEFITS SECTION */}
       <section className="opseo-benefits-section">
         <div className="opseo-container">

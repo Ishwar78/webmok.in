@@ -13,7 +13,20 @@ import {
   FaGoogle,
   FaChevronRight,
   FaHeadset,
-  FaClock
+  FaClock,
+  FaSearch,
+  FaBullhorn,
+  FaShareAlt,
+  FaPenNib,
+  FaLaptopCode,
+  FaVideo,
+  FaChartLine,
+  FaBuilding,
+  FaUserMd,
+  FaShoppingCart,
+  FaUtensils,
+  FaBriefcase,
+  FaCompass
 } from 'react-icons/fa';
 import './FloridaDigitalMarketingPage.css';
 
@@ -31,11 +44,12 @@ const FloridaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     region: "Florida Statewide, USA",
     tagline: "STATEWIDE DIGITAL GROWTH AGENCY · FLORIDA, USA",
     heroHighlight: "Florida Digital Marketing Services",
-    leadDesc: "Dominate the Sunshine State with statewide SEO, precision paid ads, and high-conversion web development tailored for Florida’s booming economy.",
-    bodyDesc: "Covering Orlando, Tampa, Jacksonville, Fort Lauderdale, Naples, and Palm Beach—Webmok helps Florida companies build dominant digital pipelines and scale revenue.",
+    heroItalic: "Dominate Statewide Markets with",
+    leadDesc: "Scale across Orlando, Tampa, Jacksonville, Fort Lauderdale, Naples, and Miami with high-velocity statewide SEO, precision paid ads, and high-conversion web development.",
+    bodyDesc: "We help Florida enterprises build dominant digital pipelines, rank #1 across multiple metro territories, and capture high-intent commercial buyers throughout the Sunshine State.",
     stats: [
   {
-    "num": "380%",
+    "num": "390%",
     "label": "Average Florida Traffic Growth"
   },
   {
@@ -51,19 +65,177 @@ const FloridaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     "label": "White-Hat SEO Execution"
   }
 ],
+    services: [
+  {
+    "icon": "FaSearch",
+    "title": "Multi-City Florida SEO",
+    "desc": "Scalable multi-location SEO architecture targeting Orlando, Tampa, Jacksonville, and South Florida with localized schema markup and city landing pages."
+  },
+  {
+    "icon": "FaBullhorn",
+    "title": "Precision Paid Acquisition",
+    "desc": "High-converting Google Search, Performance Max, and Local Services Ads optimized for Florida commercial and residential buying cycles."
+  },
+  {
+    "icon": "FaShareAlt",
+    "title": "Geo-Fenced Social Advertising",
+    "desc": "Surgical demographic and radius-targeted Meta, TikTok, and LinkedIn campaigns that engage Florida consumers and business decision-makers."
+  },
+  {
+    "icon": "FaPenNib",
+    "title": "Authority Content Marketing",
+    "desc": "Industry-leading blog hubs, Florida case studies, and editorial PR placements that build unbeatable organic domain equity."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "title": "High-Speed Web Architecture",
+    "desc": "Lightning-fast, mobile-optimized web portals designed to convert Florida traffic into phone calls, quote submissions, and revenue."
+  },
+  {
+    "icon": "FaVideo",
+    "title": "Visual Media & Creative Ads",
+    "desc": "High-impact video ads, brand creative, and animation assets tailored for Florida’s dynamic lifestyle and commercial sectors."
+  }
+],
+    whyHireOutsideTitle: "Why Florida Enterprises Partner with Webmok",
+    whyHireOutsideSubtitle: "ELITE EXECUTION · MEASURABLE REVENUE",
+    whyHireDesc1: "Florida’s booming economy has created intense competition in every major metro area. Traditional marketing tactics that rely on vanity metrics burn budgets with zero pipeline accountability.",
+    whyHireDesc2: "Webmok delivers a modern engineering approach to growth—combining technical search superiority with conversion-focused paid acquisition and transparent bi-weekly telemetry.",
+    comparisonPoints: [
+  {
+    "feature": "Multi-City Scalability",
+    "local": "Limited to Single Metro",
+    "webmok": "Turnkey Multi-City Florida Architecture"
+  },
+  {
+    "feature": "Pricing Transparency",
+    "local": "$10,000+ Bloated Retainers",
+    "webmok": "Value-Driven Month-to-Month Packages"
+  },
+  {
+    "feature": "Accountability & Data",
+    "local": "Monthly PDF Vanity Reports",
+    "webmok": "24/7 Live Telemetry & Direct CRM Sync"
+  },
+  {
+    "feature": "Engineering Speed",
+    "local": "3-4 Week Turnaround",
+    "webmok": "48-72 Hour Sprint Turnaround"
+  },
+  {
+    "feature": "Contract Lock-In",
+    "local": "12-Month Rigid Contracts",
+    "webmok": "100% Flexible Month-to-Month"
+  }
+],
+    resultsTitle: "Statewide Performance Telemetry",
+    resultsSubtitle: "PROVEN FLORIDA OUTCOMES",
+    resultsStats: [
+  {
+    "metric": "120+",
+    "label": "Florida Enterprise Clients Scaled"
+  },
+  {
+    "metric": "$24M+",
+    "label": "Tracked Pipeline Value Generated"
+  },
+  {
+    "metric": "99.1%",
+    "label": "Statewide Client Satisfaction Rate"
+  },
+  {
+    "metric": "24/7",
+    "label": "Real-Time Telemetry Dashboard Access"
+  }
+],
+    marketInsightsTitle: "What We Know About Marketing Across Florida",
+    marketInsightsSubtitle: "REGIONAL DYNAMICS",
+    marketInsights: [
+  {
+    "title": "Rapid Population Growth Drives Search Volume",
+    "desc": "Over 1,000 people move to Florida daily. Capturing new resident search volume requires active local citations and keyword conquesting."
+  },
+  {
+    "title": "Distinct Regional Sub-Markets",
+    "desc": "Orlando focuses heavily on hospitality and healthcare, Tampa on finance and tech, while South Florida demands bilingual commercial funnels."
+  },
+  {
+    "title": "Seasonal Demand Surges",
+    "desc": "Tourism and snowbird season create distinct winter peaks. We dynamically scale ad budgets and content schedules around annual buying patterns."
+  },
+  {
+    "title": "High Mobile Search Dependency",
+    "desc": "Over 82% of Florida consumer inquiries occur via smartphones. We build instant click-to-call mobile funnels with zero load latency."
+  }
+],
+    processSteps: [
+  {
+    "num": "01",
+    "title": "Statewide Market Audit",
+    "desc": "Mapping keyword volumes across all Florida metros and pinpointing competitor weaknesses."
+  },
+  {
+    "num": "02",
+    "title": "Multi-Location Blueprint",
+    "desc": "Structuring dedicated city landing pages, localized schema markup, and Google Business Profiles."
+  },
+  {
+    "num": "03",
+    "title": "Full-Funnel Campaign Launch",
+    "desc": "Deploying high-intent search ads, organic content hubs, and localized Meta retargeting."
+  },
+  {
+    "num": "04",
+    "title": "Telemetry Optimization & Scale",
+    "desc": "Continuous bid adjustments, landing page A/B tests, and monthly revenue scaling reviews."
+  }
+],
+    industries: [
+  {
+    "icon": "FaBuilding",
+    "name": "Real Estate & Development",
+    "desc": "High-intent residential and commercial lead funnels across Florida’s booming property markets."
+  },
+  {
+    "icon": "FaUserMd",
+    "name": "Healthcare & Specialized Clinics",
+    "desc": "Dominating patient acquisition for dental, orthopedic, plastic surgery, and medical centers."
+  },
+  {
+    "icon": "FaCompass",
+    "name": "Legal & Personal Injury",
+    "desc": "Capturing high-ticket legal inquiries with aggressive Google Ads and organic SEO supremacy."
+  },
+  {
+    "icon": "FaUtensils",
+    "name": "Tourism & Hospitality",
+    "desc": "Maximizing direct bookings and foot traffic across Florida resorts and attractions."
+  },
+  {
+    "icon": "FaBriefcase",
+    "name": "B2B Services & Logistics",
+    "desc": "Driving qualified RFP submissions and corporate sales for Florida enterprise suppliers."
+  },
+  {
+    "icon": "FaShoppingCart",
+    "name": "Retail & Multi-Location Brands",
+    "desc": "Omni-channel local store traffic and e-commerce customer acquisition across all 67 counties."
+  }
+],
     plans: [
   {
     "name": "Florida Growth Core",
-    "badge": "Local Footprint",
+    "badge": "Single Metro",
     "usdPrice": "849",
     "inrPrice": "69,999",
-    "desc": "Ideal for local businesses targeting a single Florida metro area with focused SEO and Google Maps optimization.",
+    "desc": "Ideal for local Florida businesses establishing dominant visibility in a single city metro area.",
     "features": [
       "Up to 25 Target Florida Keywords",
-      "Full Google Business Profile Geo-Optimization",
-      "Local Citations Across Florida Directories",
-      "Technical SEO Fixes & Core Web Vitals Tuning",
-      "Monthly Telemetry & Ranking Progress Report"
+      "Google Business Profile Geo-Optimization",
+      "Local Directory & Citation Building",
+      "Technical Core Web Vitals Optimization",
+      "Monthly Telemetry & Progress Report",
+      "Dedicated Florida Account Director"
     ]
   },
   {
@@ -72,48 +244,64 @@ const FloridaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     "highlight": true,
     "usdPrice": "1,599",
     "inrPrice": "1,29,999",
-    "desc": "Engineered for businesses expanding across 2-4 Florida cities with combined SEO and Google Ads management.",
+    "desc": "Engineered for brands expanding across 2-4 Florida cities with combined SEO and Google Ads management.",
     "features": [
       "Up to 50 Multi-City Florida Keywords",
-      "Google Ads (PPC) Campaign Setup & Bid Optimization",
+      "Google Ads (PPC) Setup & Bid Optimization",
       "Multi-Location Landing Page Architecture",
       "High-Authority Content Marketing (6 Posts/mo)",
       "Competitor Backlink Interception",
-      "Bi-Weekly Strategy Consultation"
+      "Bi-Weekly Strategic Consultation"
     ]
   },
   {
-    "name": "Florida Dominance",
+    "name": "Florida Statewide Dominance",
     "badge": "Statewide Leader",
     "usdPrice": "3,199",
     "inrPrice": "2,59,999",
-    "desc": "Statewide market takeover for enterprises, regional healthcare networks, law firms, and multi-location franchises.",
+    "desc": "Statewide market takeover for multi-location networks, healthcare groups, and enterprise brands.",
     "features": [
       "Statewide Keyword Takeover (100+ Keywords)",
       "Full-Funnel Omni-Channel Ads (Google, Meta, YouTube)",
-      "Bespoke High-Converting Web Portal / CMS Development",
+      "Custom High-Converting Web Portal Development",
       "Tier-1 Press Release & Media Placements",
-      "Dedicated Senior Account Director & Daily Slack Access",
-      "Custom CRM Integration & Lead Attribution"
+      "Dedicated Senior Account Squad & Slack Access",
+      "Custom CRM Integration & Multi-Touch Attribution"
     ]
+  }
+],
+    testimonials: [
+  {
+    "quote": "Webmok scaled our legal practice across Tampa and Orlando. We saw a 320% surge in qualified case inquiries within four months.",
+    "author": "Marcus B.",
+    "role": "Senior Partner",
+    "company": "Florida Statewide Legal Group",
+    "rating": 5
+  },
+  {
+    "quote": "The multi-location SEO architecture they built put our clinics on page 1 in 5 different Florida cities simultaneously.",
+    "author": "Dr. Sarah K.",
+    "role": "Chief Medical Officer",
+    "company": "Sunshine State Health Network",
+    "rating": 5
   }
 ],
     faqs: [
   {
-    "q": "Can Webmok help our business rank in multiple Florida cities (e.g. Miami, Orlando, Tampa)?",
-    "a": "Yes! We build scalable multi-location SEO architectures with dedicated city landing pages, localized schema markup, and regional Google Business Profiles to rank across multiple Florida territories."
+    "q": "Can Webmok help our brand rank in multiple Florida cities at the same time?",
+    "a": "Yes! We engineer scalable multi-location SEO architectures with dedicated city landing pages, localized schema markup, and regional Google Business Profiles to rank across multiple Florida markets."
   },
   {
-    "q": "What types of Florida businesses do you specialize in?",
-    "a": "We have proven track records in legal practices, healthcare clinics, home services, real estate development, hospitality, B2B SaaS, and e-commerce across Florida."
+    "q": "How do you structure Florida Google Ads campaigns to prevent wasted spend?",
+    "a": "We use hyper-granular radius targeting, negative keyword sculpting, automated bid rules, and day-parting to ensure your ad spend only captures high-intent Florida searchers."
   },
   {
-    "q": "How do you handle Florida Google Ads management?",
-    "a": "We conduct deep negative-keyword filtering, geo-fenced radius targeting, and day-parting optimizations to ensure your ad spend only captures ready-to-buy Florida consumers."
+    "q": "What industries do you specialize in across Florida?",
+    "a": "We have deep experience in real estate development, legal practices, healthcare clinics, tourism/hospitality, B2B logistics, and direct-to-consumer commerce."
   },
   {
-    "q": "What is the onboarding timeline?",
-    "a": "We can complete full onboarding, account audits, tracking setup, and campaign launch within 5 business days."
+    "q": "What is the onboarding timeline for new Florida campaigns?",
+    "a": "We complete comprehensive audits, tracking setup, competitor gap analysis, and campaign deployment within 5 business days."
   }
 ]
   };
@@ -121,14 +309,14 @@ const FloridaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-intl-florida-page-root">
       {/* 1. HERO SECTION */}
-      <section className="wm-intl-florida-hero-section">
+      <section className="wm-intl-florida-hero-section" id="overview">
         <div className="wm-intl-florida-container">
           <div className="wm-intl-florida-hero-grid">
             <div className="wm-intl-florida-hero-left">
               <span className="wm-intl-florida-hero-est-tag">{pageData.tagline}</span>
 
               <h1 className="wm-intl-florida-hero-title-dual">
-                <span className="wm-intl-florida-hero-italic-gold">Accelerate Market Dominance with</span>
+                <span className="wm-intl-florida-hero-italic-gold">{pageData.heroItalic}</span>
                 <span className="wm-intl-florida-hero-bold-white">{pageData.heroHighlight}</span>
               </h1>
 
@@ -139,12 +327,12 @@ const FloridaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-intl-florida-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Audit`)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
                 >
-                  Get Free Strategy Audit <FaPaperPlane />
+                  Get Free Digital Proposal <FaPaperPlane />
                 </button>
                 <a href="#pricing-plans" className="wm-intl-florida-btn-outline">
-                  View {pageData.city} Packages <FaChevronRight />
+                  View {pageData.city} Rates <FaChevronRight />
                 </a>
               </div>
             </div>
@@ -162,7 +350,7 @@ const FloridaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-intl-florida-trust-card">
                 <div className="wm-intl-florida-tcard-info">
                   <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Agency</p>
+                  <p>Upwork Top 1% Verified Agency</p>
                 </div>
                 <div className="wm-intl-florida-tcard-badge wm-intl-florida-badge-upwork">up</div>
               </div>
@@ -196,7 +384,25 @@ const FloridaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
+      {/* 2. STICKY IN-PAGE SUB-NAV */}
+      <nav className="wm-intl-florida-inpage-nav">
+        <div className="wm-intl-florida-container">
+          <div className="wm-intl-florida-inpage-nav-inner">
+            <a href="#overview" className="wm-intl-florida-inpage-nav-link">Overview</a>
+            <a href="#services" className="wm-intl-florida-inpage-nav-link">Services</a>
+            <a href="#why-us" className="wm-intl-florida-inpage-nav-link">Why Choose Us</a>
+            <a href="#results" className="wm-intl-florida-inpage-nav-link">Live Telemetry</a>
+            <a href="#market-dynamics" className="wm-intl-florida-inpage-nav-link">Market Insights</a>
+            <a href="#process" className="wm-intl-florida-inpage-nav-link">Our Approach</a>
+            <a href="#industries" className="wm-intl-florida-inpage-nav-link">Industries</a>
+            <a href="#pricing-plans" className="wm-intl-florida-inpage-nav-link">Published Rates</a>
+            <a href="#testimonials" className="wm-intl-florida-inpage-nav-link">Client Reviews</a>
+            <a href="#faqs" className="wm-intl-florida-inpage-nav-link">FAQs</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* 3. STATS STRIP */}
       <section className="wm-intl-florida-stats-strip">
         <div className="wm-intl-florida-container">
           <div className="wm-intl-florida-stats-grid">
@@ -210,184 +416,192 @@ const FloridaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3. INTRO SECTION */}
-      <section className="wm-intl-florida-intro-section">
+      {/* 4. SERVICES SUITE */}
+      <section className="wm-intl-florida-services-section" id="services">
         <div className="wm-intl-florida-container">
-          <div className="wm-intl-florida-intro-grid">
-            <div className="wm-intl-florida-intro-left">
-              <span className="wm-intl-florida-intro-tag">STATEWIDE PENETRATION</span>
-              <h2 className="wm-intl-florida-intro-title">
-                Digital Marketing Designed for 
-                <span>Florida Enterprise</span>
-              </h2>
-            </div>
-            <div className="wm-intl-florida-intro-right">
-              <p>
-                <span>Webmok Technologies is a premier global digital partner</span> From tourism and real estate to healthcare, legal, and financial services, Webmok provides Florida businesses with an unfair digital advantage through high-velocity SEO and precision customer acquisition funnels.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. BACKED BY NUMBERS SECTION */}
-      <section className="wm-intl-florida-numbers-section">
-        <div className="wm-intl-florida-container">
-          <div className="wm-intl-florida-numbers-heading">
-            <span className="wm-intl-florida-numbers-subtitle">STATEWIDE METRICS</span>
-            <h2>
-              Measurable Impact Across 
-              <span>Florida Markets</span>
+          <div className="wm-intl-florida-sec-heading-center">
+            <span className="wm-intl-florida-sec-badge">COMPREHENSIVE CAPABILITIES</span>
+            <h2 className="wm-intl-florida-sec-h2">
+              Our {pageData.city} <span>Digital Marketing Services</span>
             </h2>
+            <div className="wm-intl-florida-sec-bar-center"></div>
           </div>
 
-          <div className="wm-intl-florida-numstats-grid">
-            <div key="0" className="wm-intl-florida-numstat-item">
-              <div className="wm-intl-florida-numstat-number">{"120+"}</div>
-              <div className="wm-intl-florida-numstat-line"></div>
-              <p>{"Florida Clients Served"}</p>
-            </div>
-            <div key="1" className="wm-intl-florida-numstat-item">
-              <div className="wm-intl-florida-numstat-number">{"$24M+"}</div>
-              <div className="wm-intl-florida-numstat-line"></div>
-              <p>{"Tracked Pipeline Value"}</p>
-            </div>
-            <div key="2" className="wm-intl-florida-numstat-item">
-              <div className="wm-intl-florida-numstat-number">{"99.1%"}</div>
-              <div className="wm-intl-florida-numstat-line"></div>
-              <p>{"Client Satisfaction"}</p>
-            </div>
-            <div key="3" className="wm-intl-florida-numstat-item">
-              <div className="wm-intl-florida-numstat-number">{"24/7"}</div>
-              <div className="wm-intl-florida-numstat-line"></div>
-              <p>{"Real-Time Monitoring"}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INCLUSION / CAPABILITIES SECTION */}
-      <section className="wm-intl-florida-include-section">
-        <div className="wm-intl-florida-container">
-          <div className="wm-intl-florida-include-grid">
-            <div className="wm-intl-florida-include-content">
-              <span className="wm-intl-florida-include-tag">CAPABILITY MATRIX</span>
-              <h2 className="wm-intl-florida-include-title">
-                What Our Florida Digital Marketing 
-                <span>Packages Include</span>
-              </h2>
-              <p>We deliver comprehensive multi-city SEO targeting Orlando, Tampa, Jacksonville, and South Florida, alongside Google LSA ads, Facebook/Instagram campaigns, and speed-optimized websites.</p>
-              <p>You get a single accountable partner driving leads, calls, and sales across the entire state.</p>
-
-              <div className="wm-intl-florida-feature-list">
-                <div key="Multi-Location Florida SEO & Google Maps Architecture" className="wm-intl-florida-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Multi-Location Florida SEO & Google Maps Architecture"}</span>
+          <div className="wm-intl-florida-services-grid">
+            {pageData.services.map((svc, i) => (
+              <div key={i} className="wm-intl-florida-service-card">
+                <div className="wm-intl-florida-svc-icon">
+                  {svc.icon === 'FaSearch' && <FaSearch />}
+                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                  {svc.icon === 'FaPenNib' && <FaPenNib />}
+                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {svc.icon === 'FaVideo' && <FaVideo />}
+                  {svc.icon === 'FaChartLine' && <FaChartLine />}
+                  {svc.icon === 'FaCompass' && <FaCompass />}
                 </div>
-                <div key="Geo-Targeted Google Search, Display & Performance Max Ads" className="wm-intl-florida-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Geo-Targeted Google Search, Display & Performance Max Ads"}</span>
-                </div>
-                <div key="Florida Commercial & Residential Lead Generation Funnels" className="wm-intl-florida-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Florida Commercial & Residential Lead Generation Funnels"}</span>
-                </div>
-                <div key="High-Speed Mobile-First Website Design & CRO" className="wm-intl-florida-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"High-Speed Mobile-First Website Design & CRO"}</span>
-                </div>
-                <div key="Reputation Management & Review Generation Automation" className="wm-intl-florida-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Reputation Management & Review Generation Automation"}</span>
-                </div>
-                <div key="Bi-Weekly Strategic KPI Reviews & Transparent Dashboard" className="wm-intl-florida-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Bi-Weekly Strategic KPI Reviews & Transparent Dashboard"}</span>
-                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. WHY HIRE OUTSIDE */}
+      <section className="wm-intl-florida-whyoutside-section" id="why-us">
+        <div className="wm-intl-florida-container">
+          <div className="wm-intl-florida-whyoutside-grid">
+            <div className="wm-intl-florida-whyoutside-text">
+              <span className="wm-intl-florida-sec-badge">{pageData.whyHireOutsideSubtitle}</span>
+              <h2>{pageData.whyHireOutsideTitle}</h2>
+              <p>{pageData.whyHireDesc1}</p>
+              <p>{pageData.whyHireDesc2}</p>
             </div>
 
-            <div className="wm-intl-florida-include-image">
-              <img src="/onpage2.avif" alt="Florida Digital Marketing Agency" />
+            <div className="wm-intl-florida-compare-table">
+              <div className="wm-intl-florida-compare-row wm-intl-florida-compare-hdr">
+                <div>Deliverable / Metric</div>
+                <div>Typical Local Agency</div>
+                <div>Webmok Advantage</div>
+              </div>
+              {pageData.comparisonPoints.map((cp, idx) => (
+                <div key={idx} className="wm-intl-florida-compare-row">
+                  <div className="wm-intl-florida-compare-feat">{cp.feature}</div>
+                  <div className="wm-intl-florida-compare-local">{cp.local}</div>
+                  <div className="wm-intl-florida-compare-wm">{cp.webmok}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. IMPORTANCE SECTION */}
-      <section className="wm-intl-florida-importance-section">
+      {/* 6. RESULTS TELEMETRY */}
+      <section className="wm-intl-florida-results-section" id="results">
         <div className="wm-intl-florida-container">
-          <div className="wm-intl-florida-importance-box">
-            <h2 className="wm-intl-florida-importance-title">
-              The Strategic Imperative for 
-              <span>Florida Brands</span>
+          <div className="wm-intl-florida-sec-heading-center">
+            <span className="wm-intl-florida-sec-badge">{pageData.resultsSubtitle}</span>
+            <h2 className="wm-intl-florida-sec-h2">{pageData.resultsTitle}</h2>
+            <div className="wm-intl-florida-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-florida-results-grid">
+            {pageData.resultsStats.map((rs, i) => (
+              <div key={i} className="wm-intl-florida-result-card">
+                <strong>{rs.metric}</strong>
+                <p>{rs.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. MARKET DYNAMICS */}
+      <section className="wm-intl-florida-market-section" id="market-dynamics">
+        <div className="wm-intl-florida-container">
+          <div className="wm-intl-florida-sec-heading-center">
+            <span className="wm-intl-florida-sec-badge">{pageData.marketInsightsSubtitle}</span>
+            <h2 className="wm-intl-florida-sec-h2">{pageData.marketInsightsTitle}</h2>
+            <div className="wm-intl-florida-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-florida-market-grid">
+            {pageData.marketInsights.map((mi, i) => (
+              <div key={i} className="wm-intl-florida-market-card">
+                <h4>{mi.title}</h4>
+                <p>{mi.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 4-STEP PROCESS */}
+      <section className="wm-intl-florida-process-section" id="process">
+        <div className="wm-intl-florida-container">
+          <div className="wm-intl-florida-sec-heading-center">
+            <span className="wm-intl-florida-sec-badge">OUR PROCESS & APPROACH</span>
+            <h2 className="wm-intl-florida-sec-h2">
+              Our 4-Step <span>Agile Growth Framework</span>
             </h2>
-
-            <div className="wm-intl-florida-importance-content">
-              <p>Florida has become the epicenter of US population and business migration. With intense competition in every major metro, generic marketing yields zero return.</p>
-              <p>Winning in Florida requires surgical local search optimization, localized content that speaks to regional demographics, and rapid conversion optimization.</p>
-            </div>
+            <div className="wm-intl-florida-sec-bar-center"></div>
           </div>
-        </div>
-      </section>
 
-      {/* 7. WHY WEBMOK SECTION */}
-      <section className="wm-intl-florida-why-section">
-        <div className="wm-intl-florida-container">
-          <div className="wm-intl-florida-why-grid">
-            <div className="wm-intl-florida-why-content">
-              <span className="wm-intl-florida-why-tag">WHY WEBMOK</span>
-              <h2 className="wm-intl-florida-why-title">
-                Performance Driven. 
-                <span className="s1"> Zero Excuses.</span>{' '}
-                <span className="s2">Proven Scalability.</span>
-              </h2>
-
-              <div className="wm-intl-florida-why-text">
-                <p>We combine data science with creative storytelling to capture high-intent buyers exactly when they are searching for your services across Florida.</p>
-                <p>Our team monitors your ad bids, search positions, and conversion funnels daily to maximize every dollar invested.</p>
+          <div className="wm-intl-florida-process-grid">
+            {pageData.processSteps.map((ps, i) => (
+              <div key={i} className="wm-intl-florida-process-card">
+                <span className="wm-intl-florida-proc-num">STEP {ps.num}</span>
+                <h4>{ps.title}</h4>
+                <p>{ps.desc}</p>
               </div>
-            </div>
-
-            <div className="wm-intl-florida-why-image">
-              <img src="/onpage3.avif" alt="Why Webmok" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. PRICING PLANS SECTION */}
+      {/* 9. INDUSTRIES */}
+      <section className="wm-intl-florida-industries-section" id="industries">
+        <div className="wm-intl-florida-container">
+          <div className="wm-intl-florida-sec-heading-center">
+            <span className="wm-intl-florida-sec-badge">WHO WE WORK WITH</span>
+            <h2 className="wm-intl-florida-sec-h2">
+              Specialized Industry <span>Growth Solutions</span>
+            </h2>
+            <div className="wm-intl-florida-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-florida-industries-grid">
+            {pageData.industries.map((ind, i) => (
+              <div key={i} className="wm-intl-florida-industry-card">
+                <div className="wm-intl-florida-ind-icon">
+                  {ind.icon === 'FaBuilding' && <FaBuilding />}
+                  {ind.icon === 'FaUserMd' && <FaUserMd />}
+                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                  {ind.icon === 'FaUtensils' && <FaUtensils />}
+                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {ind.icon === 'FaCompass' && <FaCompass />}
+                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                </div>
+                <h4>{ind.name}</h4>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. PRICING PLANS */}
       <section className="wm-intl-florida-pricing-section" id="pricing-plans">
         <div className="wm-intl-florida-container">
-          <div className="wm-intl-florida-sec-header">
-            <span className="wm-intl-florida-sec-subtitle">Transparent Monthly Plans</span>
-            <h2 className="wm-intl-florida-sec-title">Flexible Florida Growth Packages with Zero Lock-In</h2>
-            <div className="wm-intl-florida-sec-bar"></div>
+          <div className="wm-intl-florida-sec-heading-center">
+            <span className="wm-intl-florida-sec-badge">PUBLISHED RATES · ZERO LOCK-IN</span>
+            <h2 className="wm-intl-florida-sec-h2">
+              Transparent {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-florida-sec-bar-center"></div>
 
             {/* Currency Switcher */}
             <div className="wm-intl-florida-currency-toggle">
-              
-              <button
-                type="button"
-                className={`wm-intl-florida-curr-btn ${currency === 'USD' ? 'active' : ''}`}
-                onClick={() => setCurrency('USD')}
-              >
-                $ USD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-florida-curr-btn ${currency === 'INR' ? 'active' : ''}`}
-                onClick={() => setCurrency('INR')}
-              >
-                ₹ INR
-              </button>
+              {[{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  className={`wm-intl-florida-curr-btn ${currency === c.code ? 'active' : ''}`}
+                  onClick={() => setCurrency(c.code)}
+                >
+                  {c.symbol} {c.code}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Pricing Grid */}
           <div className="wm-intl-florida-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : `$${plan.usdPrice}`;
+              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
               return (
                 <div key={i} className={`wm-intl-florida-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (
@@ -435,93 +649,80 @@ const FloridaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 9. BENEFITS SECTION */}
-      <section className="wm-intl-florida-benefits-section">
+      {/* 11. TESTIMONIALS */}
+      <section className="wm-intl-florida-testimonials-section" id="testimonials">
         <div className="wm-intl-florida-container">
-          <div className="wm-intl-florida-benefits-grid">
-            <div className="wm-intl-florida-benefits-content">
-              <span className="wm-intl-florida-benefits-tag">MEASURABLE ADVANTAGE</span>
-              <h2 className="wm-intl-florida-benefits-title">
-                Generating Consistent Revenue Across 
-                <span>Florida Metros</span>
-              </h2>
+          <div className="wm-intl-florida-sec-heading-center">
+            <span className="wm-intl-florida-sec-badge">CLIENT SUCCESS STORIES</span>
+            <h2 className="wm-intl-florida-sec-h2">
+              What {pageData.city} <span>Leaders Say About Webmok</span>
+            </h2>
+            <div className="wm-intl-florida-sec-bar-center"></div>
+          </div>
 
-              <div className="wm-intl-florida-benefits-text">
-                <p>Our Florida digital marketing campaigns turn your web presence into an automated customer acquisition engine that works 24/7.</p>
-                <p>We scale what converts and ruthlessly eliminate ad waste.</p>
-              </div>
-
-              <div className="wm-intl-florida-benefits-points">
-                <div key="Top Rankings in Multiple Florida Metro Searches" className="wm-intl-florida-benefit-point">
-                  <span className="wm-intl-florida-benefit-icon">✓</span>
-                  <span>{"Top Rankings in Multiple Florida Metro Searches"}</span>
+          <div className="wm-intl-florida-testimonials-grid">
+            {pageData.testimonials.map((t, idx) => (
+              <div key={idx} className="wm-intl-florida-testimonial-card">
+                <div className="wm-intl-florida-t-stars">
+                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
-                <div key="Higher Quality Inbound Phone Calls & Form Submissions" className="wm-intl-florida-benefit-point">
-                  <span className="wm-intl-florida-benefit-icon">✓</span>
-                  <span>{"Higher Quality Inbound Phone Calls & Form Submissions"}</span>
-                </div>
-                <div key="Predictable Cost Per Lead and Scalable Customer Acquisition" className="wm-intl-florida-benefit-point">
-                  <span className="wm-intl-florida-benefit-icon">✓</span>
-                  <span>{"Predictable Cost Per Lead and Scalable Customer Acquisition"}</span>
-                </div>
-                <div key="End-to-End Analytics with Full Revenue Clarity" className="wm-intl-florida-benefit-point">
-                  <span className="wm-intl-florida-benefit-icon">✓</span>
-                  <span>{"End-to-End Analytics with Full Revenue Clarity"}</span>
+                <p className="wm-intl-florida-t-quote">"{t.quote}"</p>
+                <div className="wm-intl-florida-t-author">
+                  <h5>{t.author}</h5>
+                  <p>{t.role} · {t.company}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="wm-intl-florida-benefits-image">
-              <img src="/onpagebenifts.jpg" alt="Florida Digital Marketing Agency" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. ADVANTAGE SECTION */}
+      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
       <section className="wm-intl-florida-advantage-section">
         <div className="wm-intl-florida-container">
-          <div className="wm-intl-florida-sec-header">
-            <span className="wm-intl-florida-sec-subtitle">Why Partner With Us</span>
-            <h2 className="wm-intl-florida-sec-title">The WebMok Advantage in Global Digital Execution</h2>
-            <div className="wm-intl-florida-sec-bar"></div>
+          <div className="wm-intl-florida-sec-heading-center">
+            <span className="wm-intl-florida-sec-badge">WHY CHOOSE WEBMOK</span>
+            <h2 className="wm-intl-florida-sec-h2">The Webmok Operational Guarantees</h2>
+            <div className="wm-intl-florida-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-florida-advantage-grid">
             <div className="wm-intl-florida-advantage-card">
               <div className="wm-intl-florida-aicon"><FaShieldAlt /></div>
-              <h4>100% Proven Method</h4>
-              <p>Strict white-hat execution that protects your brand equity and produces compounding organic growth.</p>
+              <h4>100% White-Hat Proven Methods</h4>
+              <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
             </div>
 
             <div className="wm-intl-florida-advantage-card">
               <div className="wm-intl-florida-aicon"><FaRocket /></div>
-              <h4>Full Telemetry Dashboards</h4>
+              <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
             </div>
 
             <div className="wm-intl-florida-advantage-card">
               <div className="wm-intl-florida-aicon"><FaHeadset /></div>
               <h4>Dedicated Senior Squad</h4>
-              <p>Work directly with dedicated senior strategists and technical engineers with direct phone & WhatsApp support.</p>
+              <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
             </div>
 
             <div className="wm-intl-florida-advantage-card">
               <div className="wm-intl-florida-aicon"><FaClock /></div>
               <h4>Zero Mandatory Lock-In</h4>
-              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable growth.</p>
+              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. FAQS ACCORDION */}
-      <section className="wm-intl-florida-faqs-section">
+      {/* 13. REGIONAL FAQS */}
+      <section className="wm-intl-florida-faqs-section" id="faqs">
         <div className="wm-intl-florida-container">
-          <div className="wm-intl-florida-sec-header">
-            <span className="wm-intl-florida-sec-subtitle">Frequently Asked Questions</span>
-            <h2 className="wm-intl-florida-sec-title">Common Queries About Our Florida Growth Packages</h2>
-            <div className="wm-intl-florida-sec-bar"></div>
+          <div className="wm-intl-florida-sec-heading-center">
+            <span className="wm-intl-florida-sec-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 className="wm-intl-florida-sec-h2">
+              Common Queries About Our {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-florida-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-florida-faqs-wrap">
@@ -546,12 +747,12 @@ const FloridaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. BOTTOM CONVERSION BANNER */}
+      {/* 14. BOTTOM CONVERSION BANNER */}
       <section className="wm-intl-florida-bottom-banner">
         <div className="wm-intl-florida-container">
           <div className="wm-intl-florida-banner-inner">
             <div className="wm-intl-florida-banner-text">
-              <h2>Ready to Accelerate Growth in Florida?</h2>
+              <h2>Ready to Accelerate Revenue in {pageData.city}?</h2>
               <p>Schedule a quick 1-on-1 strategy consultation with our senior digital directors today.</p>
             </div>
             <div className="wm-intl-florida-banner-btns">
@@ -567,7 +768,7 @@ const FloridaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 className="wm-intl-florida-bbtn-quote"
                 onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Bottom Banner Inquiry`)}
               >
-                Get Custom Quote <FaArrowRight />
+                Get Free Custom Proposal <FaArrowRight />
               </button>
             </div>
           </div>

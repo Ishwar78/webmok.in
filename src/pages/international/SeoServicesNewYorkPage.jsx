@@ -13,7 +13,20 @@ import {
   FaGoogle,
   FaChevronRight,
   FaHeadset,
-  FaClock
+  FaClock,
+  FaSearch,
+  FaBullhorn,
+  FaShareAlt,
+  FaPenNib,
+  FaLaptopCode,
+  FaVideo,
+  FaChartLine,
+  FaBuilding,
+  FaUserMd,
+  FaShoppingCart,
+  FaUtensils,
+  FaBriefcase,
+  FaCompass
 } from 'react-icons/fa';
 import './SeoServicesNewYorkPage.css';
 
@@ -31,12 +44,13 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     region: "New York City, NY, USA",
     tagline: "ELITE NEW YORK SEO AGENCY · NYC, USA",
     heroHighlight: "Top SEO Services in New York",
-    leadDesc: "Outrank Wall Street, Midtown, and Manhattan competitors with high-authority technical SEO, bespoke link acquisition, and data-backed search strategies.",
+    heroItalic: "Dominate Page #1 in Manhattan with",
+    leadDesc: "Outrank Wall Street, Midtown, and Manhattan competitors with high-authority technical SEO, bespoke link acquisition, and data-backed organic search strategies.",
     bodyDesc: "In the world’s most competitive business capital, second-page rankings don’t exist. Webmok builds bulletproof organic ranking engines that capture high-ticket NYC commercial intent.",
     stats: [
   {
     "num": "490%",
-    "label": "Average NYC Organic Traffic Surge"
+    "label": "Average NYC Organic Surge"
   },
   {
     "num": "#1 Rank",
@@ -44,25 +58,183 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   },
   {
     "num": "90+ DA",
-    "label": "Editorial Tier-1 Backlink Network"
+    "label": "Editorial Backlink Network"
   },
   {
     "num": "100%",
     "label": "Strict White-Hat Google Compliance"
   }
 ],
+    services: [
+  {
+    "icon": "FaSearch",
+    "title": "Enterprise & NYC Technical SEO",
+    "desc": "Advanced site architecture audits, server log file analysis, Core Web Vitals remediation, and JavaScript rendering optimization for complex enterprise domains."
+  },
+  {
+    "icon": "FaPenNib",
+    "title": "Topical Authority & Semantic Content",
+    "desc": "Entity-based content hubs that establish definitive topical supremacy across competitive financial, legal, medical, and technology keywords."
+  },
+  {
+    "icon": "FaBullhorn",
+    "title": "Tier-1 Digital PR & High-DA Backlinks",
+    "desc": "Manual outreach to major publications (Forbes, Bloomberg, Reuters, Industry Journals) acquiring authoritative editorial backlinks that drive unstoppable rankings."
+  },
+  {
+    "icon": "FaCompass",
+    "title": "Manhattan & Borough Local 3-Pack",
+    "desc": "Hyper-local optimization capturing high-intent searchers across Manhattan, Brooklyn, Queens, and the Tri-State area on Google Maps."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "title": "Conversion Rate Optimization (CRO)",
+    "desc": "Turning expensive NYC search traffic into high-value executive demo requests, phone consultations, and qualified pipeline."
+  },
+  {
+    "icon": "FaChartLine",
+    "title": "Executive Telemetry & Attribution",
+    "desc": "Real-time dashboards connecting organic keyword positions directly to pipeline revenue, customer lifetime value, and CAC reduction."
+  }
+],
+    whyHireOutsideTitle: "The New York SEO Advantage with Webmok",
+    whyHireOutsideSubtitle: "UNRIVALED TECHNICAL PRECISION",
+    whyHireDesc1: "Madison Avenue and Manhattan agencies routinely charge $12,000–$25,000/month for SEO retainers while outsourcing technical execution to automated tools.",
+    whyHireDesc2: "Webmok provides senior technical SEO architects, manual digital PR specialists, and direct Slack communication at an agile, value-driven price point.",
+    comparisonPoints: [
+  {
+    "feature": "Link Acquisition Method",
+    "local": "Generic Syndication / PBNs",
+    "webmok": "100% Editorial Tier-1 Digital PR (DA 60-90+)"
+  },
+  {
+    "feature": "Technical Depth",
+    "local": "Automated Audit Checklists",
+    "webmok": "Deep Server Log, Schema & Code Audits"
+  },
+  {
+    "feature": "Monthly Investment",
+    "local": "$12,000 – $25,000 / month",
+    "webmok": "From $999 – $3,499 / month"
+  },
+  {
+    "feature": "Algorithm Resilience",
+    "local": "Vulnerable to Core Updates",
+    "webmok": "Zero-Penalty White-Hat Authority Architecture"
+  },
+  {
+    "feature": "Executive Reporting",
+    "local": "Vague PDF Ranking Reports",
+    "webmok": "Live 24/7 Revenue Telemetry Dashboard"
+  }
+],
+    resultsTitle: "Unrivaled Organic Results in NYC",
+    resultsSubtitle: "MEASURABLE PIPELINE IMPACT",
+    resultsStats: [
+  {
+    "metric": "95+",
+    "label": "NYC Enterprise Brands Ranked #1"
+  },
+  {
+    "metric": "$32M+",
+    "label": "Organic Revenue Pipeline Generated"
+  },
+  {
+    "metric": "99.6%",
+    "label": "Keyword Position Retention Rate"
+  },
+  {
+    "metric": "Top 1%",
+    "label": "Technical SEO Performance Score"
+  }
+],
+    marketInsightsTitle: "Why Organic Dominance Matters in NYC",
+    marketInsightsSubtitle: "MANHATTAN SEARCH DYNAMICS",
+    marketInsights: [
+  {
+    "title": "Ultra-High Cost Per Click in Paid Search",
+    "desc": "NYC legal and financial search terms regularly exceed $150+ per click on Google Ads. Dominating organic search creates an enduring, cost-free customer acquisition moat."
+  },
+  {
+    "title": "High-Ticket Executive Buyer Behavior",
+    "desc": "C-Suite executives and luxury consumers conduct thorough organic research. Ranking #1 establishes category trust that cannot be bought with ads."
+  },
+  {
+    "title": "Hyper-Competitive Local Search Grid",
+    "desc": "Ranking on Google Maps in Midtown versus FiDi requires localized geo-signals, micro-citations, and borough-specific schema markup."
+  },
+  {
+    "title": "Google Algorithm Core Resilience",
+    "desc": "Google frequently tests new AI Overviews and algorithm updates in US Tier-1 markets. We build dense entity authority that thrives across every update."
+  }
+],
+    processSteps: [
+  {
+    "num": "01",
+    "title": "Exhaustive Reverse Engineering",
+    "desc": "Analyzing the top 3 ranking domains in your NYC niche to map exact content depth and backlink velocity requirements."
+  },
+  {
+    "num": "02",
+    "title": "Technical & Architecture Overhaul",
+    "desc": "Eliminating render-blocking assets, fixing crawl depth issues, and implementing advanced JSON-LD schema."
+  },
+  {
+    "num": "03",
+    "title": "Topical Authority & Digital PR Sprints",
+    "desc": "Publishing comprehensive topic clusters and executing manual outreach to high-DA editorial news outlets."
+  },
+  {
+    "num": "04",
+    "title": "Revenue Attribution & Expansion",
+    "desc": "Tracking conversion goals, ranking retention, and scaling keyword targets nationwide."
+  }
+],
+    industries: [
+  {
+    "icon": "FaBriefcase",
+    "name": "Corporate Law & Legal Practices",
+    "desc": "Dominating commercial litigation, M&A, and high-stakes personal injury search queries in NYC."
+  },
+  {
+    "icon": "FaBuilding",
+    "name": "Commercial Real Estate & Finance",
+    "desc": "Capturing institutional investors, property developers, and asset managers across Manhattan."
+  },
+  {
+    "icon": "FaUserMd",
+    "name": "Private Healthcare & Specialists",
+    "desc": "Ranking #1 for luxury medical practices, concierge doctors, and surgical centers."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "name": "FinTech, SaaS & Tech Ventures",
+    "desc": "Driving organic B2B product demo signups and ARR growth in Silicon Alley."
+  },
+  {
+    "icon": "FaShoppingCart",
+    "name": "Luxury Goods & Premium Retail",
+    "desc": "Capturing high-net-worth consumers searching for bespoke and luxury retail products."
+  },
+  {
+    "icon": "FaCompass",
+    "name": "Consulting & Executive Advisory",
+    "desc": "Establishing authority for management consulting, headhunting, and financial advisory firms."
+  }
+],
     plans: [
   {
     "name": "NYC Growth SEO",
-    "badge": "Market Contender",
+    "badge": "Local Contender",
     "usdPrice": "999",
     "inrPrice": "79,999",
-    "desc": "Built for NYC boutique firms, specialized practices, and startups looking to break into page 1 for key local terms.",
+    "desc": "Built for NYC boutique firms, specialized practices, and startups looking to break onto page 1 for competitive terms.",
     "features": [
       "Up to 25 Competitive NYC Keywords",
-      "Full Google Business Profile NYC Optimization",
+      "Google Business Profile NYC Optimization",
       "Comprehensive On-Page & Schema Markup",
       "4 High-Authority Outreach Backlinks/mo",
+      "Core Web Vitals & Speed Optimization",
       "Monthly Transparent ROI Dashboard"
     ]
   },
@@ -75,9 +247,9 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     "desc": "Aggressive organic conquesting for mid-market New York firms fighting for high-value transactional search volume.",
     "features": [
       "Up to 60 High-Difficulty NYC Keywords",
-      "Comprehensive Technical SEO & Core Web Vitals Fixes",
+      "Deep Technical SEO & Core Web Vitals Fixes",
       "10 Premium Tier-1 Editorial Backlinks/mo",
-      "Topical Authority Content Hub Creation (8 Posts/mo)",
+      "Topical Authority Content Hubs (8 Posts/mo)",
       "Competitor Backlink Interception & Gap Analysis",
       "Bi-Weekly Strategy Sessions with Senior Lead"
     ]
@@ -87,15 +259,31 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     "badge": "Unstoppable Authority",
     "usdPrice": "3,499",
     "inrPrice": "2,89,999",
-    "desc": "Uncompromising organic domination for established NYC enterprises, national brands, and venture-backed companies.",
+    "desc": "Uncompromising organic domination for established NYC enterprises, national brands, and venture-backed firms.",
     "features": [
-      "Unlimited High-Volume Keywords & National Expansion",
-      "Full-Scale Digital PR Campaigns & Major News Placements",
+      "Unlimited Keywords & National Expansion",
+      "Full-Scale Digital PR Campaigns & News Placements",
       "Custom Interactive Content & Conversion Assets",
       "Dedicated NYC Squad (SEO Lead, Tech Dev, PR Strategist)",
       "Direct Slack Channel Access & Weekly Telemetry",
       "Multi-Touch Attribution & Custom CRM Pipelines"
     ]
+  }
+],
+    testimonials: [
+  {
+    "quote": "Webmok took our Manhattan corporate law firm to #1 for our most valuable transactional keywords. Our inbound qualified lead volume tripled in 90 days.",
+    "author": "Jonathan D.",
+    "role": "Senior Partner",
+    "company": "NYC Commercial Litigation Firm",
+    "rating": 5
+  },
+  {
+    "quote": "Their digital PR team landed editorial placements in Tier-1 finance publications that established our domain as the definitive authority.",
+    "author": "Rachel W.",
+    "role": "Chief Marketing Officer",
+    "company": "Wall Street FinTech Platform",
+    "rating": 5
   }
 ],
     faqs: [
@@ -121,14 +309,14 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-intl-newyork-page-root">
       {/* 1. HERO SECTION */}
-      <section className="wm-intl-newyork-hero-section">
+      <section className="wm-intl-newyork-hero-section" id="overview">
         <div className="wm-intl-newyork-container">
           <div className="wm-intl-newyork-hero-grid">
             <div className="wm-intl-newyork-hero-left">
               <span className="wm-intl-newyork-hero-est-tag">{pageData.tagline}</span>
 
               <h1 className="wm-intl-newyork-hero-title-dual">
-                <span className="wm-intl-newyork-hero-italic-gold">Accelerate Market Dominance with</span>
+                <span className="wm-intl-newyork-hero-italic-gold">{pageData.heroItalic}</span>
                 <span className="wm-intl-newyork-hero-bold-white">{pageData.heroHighlight}</span>
               </h1>
 
@@ -139,12 +327,12 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-intl-newyork-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Audit`)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
                 >
-                  Get Free Strategy Audit <FaPaperPlane />
+                  Get Free Digital Proposal <FaPaperPlane />
                 </button>
                 <a href="#pricing-plans" className="wm-intl-newyork-btn-outline">
-                  View {pageData.city} Packages <FaChevronRight />
+                  View {pageData.city} Rates <FaChevronRight />
                 </a>
               </div>
             </div>
@@ -162,7 +350,7 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-intl-newyork-trust-card">
                 <div className="wm-intl-newyork-tcard-info">
                   <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Agency</p>
+                  <p>Upwork Top 1% Verified Agency</p>
                 </div>
                 <div className="wm-intl-newyork-tcard-badge wm-intl-newyork-badge-upwork">up</div>
               </div>
@@ -196,7 +384,25 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
+      {/* 2. STICKY IN-PAGE SUB-NAV */}
+      <nav className="wm-intl-newyork-inpage-nav">
+        <div className="wm-intl-newyork-container">
+          <div className="wm-intl-newyork-inpage-nav-inner">
+            <a href="#overview" className="wm-intl-newyork-inpage-nav-link">Overview</a>
+            <a href="#services" className="wm-intl-newyork-inpage-nav-link">Services</a>
+            <a href="#why-us" className="wm-intl-newyork-inpage-nav-link">Why Choose Us</a>
+            <a href="#results" className="wm-intl-newyork-inpage-nav-link">Live Telemetry</a>
+            <a href="#market-dynamics" className="wm-intl-newyork-inpage-nav-link">Market Insights</a>
+            <a href="#process" className="wm-intl-newyork-inpage-nav-link">Our Approach</a>
+            <a href="#industries" className="wm-intl-newyork-inpage-nav-link">Industries</a>
+            <a href="#pricing-plans" className="wm-intl-newyork-inpage-nav-link">Published Rates</a>
+            <a href="#testimonials" className="wm-intl-newyork-inpage-nav-link">Client Reviews</a>
+            <a href="#faqs" className="wm-intl-newyork-inpage-nav-link">FAQs</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* 3. STATS STRIP */}
       <section className="wm-intl-newyork-stats-strip">
         <div className="wm-intl-newyork-container">
           <div className="wm-intl-newyork-stats-grid">
@@ -210,184 +416,192 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3. INTRO SECTION */}
-      <section className="wm-intl-newyork-intro-section">
+      {/* 4. SERVICES SUITE */}
+      <section className="wm-intl-newyork-services-section" id="services">
         <div className="wm-intl-newyork-container">
-          <div className="wm-intl-newyork-intro-grid">
-            <div className="wm-intl-newyork-intro-left">
-              <span className="wm-intl-newyork-intro-tag">MANHATTAN & TRI-STATE SEO</span>
-              <h2 className="wm-intl-newyork-intro-title">
-                Enterprise-Grade SEO for 
-                <span>New York Powerhouses</span>
-              </h2>
-            </div>
-            <div className="wm-intl-newyork-intro-right">
-              <p>
-                <span>Webmok Technologies is a premier global digital partner</span> New York City demands an uncompromising standard of SEO execution. Webmok engineers custom organic search frameworks that navigate high competition, secure dominant market share, and drive multi-million dollar pipeline value.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. BACKED BY NUMBERS SECTION */}
-      <section className="wm-intl-newyork-numbers-section">
-        <div className="wm-intl-newyork-container">
-          <div className="wm-intl-newyork-numbers-heading">
-            <span className="wm-intl-newyork-numbers-subtitle">NYC MARKET DOMINANCE</span>
-            <h2>
-              Unrivaled Organic Results in 
-              <span>New York City</span>
+          <div className="wm-intl-newyork-sec-heading-center">
+            <span className="wm-intl-newyork-sec-badge">COMPREHENSIVE CAPABILITIES</span>
+            <h2 className="wm-intl-newyork-sec-h2">
+              Our {pageData.city} <span>Digital Marketing Services</span>
             </h2>
+            <div className="wm-intl-newyork-sec-bar-center"></div>
           </div>
 
-          <div className="wm-intl-newyork-numstats-grid">
-            <div key="0" className="wm-intl-newyork-numstat-item">
-              <div className="wm-intl-newyork-numstat-number">{"95+"}</div>
-              <div className="wm-intl-newyork-numstat-line"></div>
-              <p>{"NYC Enterprises Ranked"}</p>
-            </div>
-            <div key="1" className="wm-intl-newyork-numstat-item">
-              <div className="wm-intl-newyork-numstat-number">{"$32M+"}</div>
-              <div className="wm-intl-newyork-numstat-line"></div>
-              <p>{"Organic Revenue Pipeline"}</p>
-            </div>
-            <div key="2" className="wm-intl-newyork-numstat-item">
-              <div className="wm-intl-newyork-numstat-number">{"99.6%"}</div>
-              <div className="wm-intl-newyork-numstat-line"></div>
-              <p>{"Keyword Retention Rate"}</p>
-            </div>
-            <div key="3" className="wm-intl-newyork-numstat-item">
-              <div className="wm-intl-newyork-numstat-number">{"Top 1%"}</div>
-              <div className="wm-intl-newyork-numstat-line"></div>
-              <p>{"Technical SEO Performance"}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INCLUSION / CAPABILITIES SECTION */}
-      <section className="wm-intl-newyork-include-section">
-        <div className="wm-intl-newyork-container">
-          <div className="wm-intl-newyork-include-grid">
-            <div className="wm-intl-newyork-include-content">
-              <span className="wm-intl-newyork-include-tag">ELITE DELIVERABLES</span>
-              <h2 className="wm-intl-newyork-include-title">
-                What Our New York SEO 
-                <span>Campaigns Deliver</span>
-              </h2>
-              <p>Our NYC SEO strategy combines exhaustive entity-based keyword research, enterprise log analysis, deep Core Web Vitals remediation, and authoritative digital PR link building.</p>
-              <p>We turn your website into the definitive organic authority in Manhattan, Brooklyn, Queens, Long Island, and national markets.</p>
-
-              <div className="wm-intl-newyork-feature-list">
-                <div key="NYC High-Intent Commercial Keyword Conquesting" className="wm-intl-newyork-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"NYC High-Intent Commercial Keyword Conquesting"}</span>
+          <div className="wm-intl-newyork-services-grid">
+            {pageData.services.map((svc, i) => (
+              <div key={i} className="wm-intl-newyork-service-card">
+                <div className="wm-intl-newyork-svc-icon">
+                  {svc.icon === 'FaSearch' && <FaSearch />}
+                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                  {svc.icon === 'FaPenNib' && <FaPenNib />}
+                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {svc.icon === 'FaVideo' && <FaVideo />}
+                  {svc.icon === 'FaChartLine' && <FaChartLine />}
+                  {svc.icon === 'FaCompass' && <FaCompass />}
                 </div>
-                <div key="Advanced Technical SEO & Server Architecture Audits" className="wm-intl-newyork-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Advanced Technical SEO & Server Architecture Audits"}</span>
-                </div>
-                <div key="Tier-1 Digital PR & Authoritative Editorial Backlinks" className="wm-intl-newyork-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Tier-1 Digital PR & Authoritative Editorial Backlinks"}</span>
-                </div>
-                <div key="Semantic Search, Topical Authority & Entity Optimization" className="wm-intl-newyork-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Semantic Search, Topical Authority & Entity Optimization"}</span>
-                </div>
-                <div key="Local NYC 3-Pack Maps Dominance & Schema Markup" className="wm-intl-newyork-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Local NYC 3-Pack Maps Dominance & Schema Markup"}</span>
-                </div>
-                <div key="C-Suite Executive Dashboards & Conversion Attribution" className="wm-intl-newyork-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"C-Suite Executive Dashboards & Conversion Attribution"}</span>
-                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. WHY HIRE OUTSIDE */}
+      <section className="wm-intl-newyork-whyoutside-section" id="why-us">
+        <div className="wm-intl-newyork-container">
+          <div className="wm-intl-newyork-whyoutside-grid">
+            <div className="wm-intl-newyork-whyoutside-text">
+              <span className="wm-intl-newyork-sec-badge">{pageData.whyHireOutsideSubtitle}</span>
+              <h2>{pageData.whyHireOutsideTitle}</h2>
+              <p>{pageData.whyHireDesc1}</p>
+              <p>{pageData.whyHireDesc2}</p>
             </div>
 
-            <div className="wm-intl-newyork-include-image">
-              <img src="/onpage1.avif" alt="SEO Services in New York" />
+            <div className="wm-intl-newyork-compare-table">
+              <div className="wm-intl-newyork-compare-row wm-intl-newyork-compare-hdr">
+                <div>Deliverable / Metric</div>
+                <div>Typical Local Agency</div>
+                <div>Webmok Advantage</div>
+              </div>
+              {pageData.comparisonPoints.map((cp, idx) => (
+                <div key={idx} className="wm-intl-newyork-compare-row">
+                  <div className="wm-intl-newyork-compare-feat">{cp.feature}</div>
+                  <div className="wm-intl-newyork-compare-local">{cp.local}</div>
+                  <div className="wm-intl-newyork-compare-wm">{cp.webmok}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. IMPORTANCE SECTION */}
-      <section className="wm-intl-newyork-importance-section">
+      {/* 6. RESULTS TELEMETRY */}
+      <section className="wm-intl-newyork-results-section" id="results">
         <div className="wm-intl-newyork-container">
-          <div className="wm-intl-newyork-importance-box">
-            <h2 className="wm-intl-newyork-importance-title">
-              Why New York Businesses Require 
-              <span>World-Class SEO</span>
+          <div className="wm-intl-newyork-sec-heading-center">
+            <span className="wm-intl-newyork-sec-badge">{pageData.resultsSubtitle}</span>
+            <h2 className="wm-intl-newyork-sec-h2">{pageData.resultsTitle}</h2>
+            <div className="wm-intl-newyork-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-newyork-results-grid">
+            {pageData.resultsStats.map((rs, i) => (
+              <div key={i} className="wm-intl-newyork-result-card">
+                <strong>{rs.metric}</strong>
+                <p>{rs.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. MARKET DYNAMICS */}
+      <section className="wm-intl-newyork-market-section" id="market-dynamics">
+        <div className="wm-intl-newyork-container">
+          <div className="wm-intl-newyork-sec-heading-center">
+            <span className="wm-intl-newyork-sec-badge">{pageData.marketInsightsSubtitle}</span>
+            <h2 className="wm-intl-newyork-sec-h2">{pageData.marketInsightsTitle}</h2>
+            <div className="wm-intl-newyork-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-newyork-market-grid">
+            {pageData.marketInsights.map((mi, i) => (
+              <div key={i} className="wm-intl-newyork-market-card">
+                <h4>{mi.title}</h4>
+                <p>{mi.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 4-STEP PROCESS */}
+      <section className="wm-intl-newyork-process-section" id="process">
+        <div className="wm-intl-newyork-container">
+          <div className="wm-intl-newyork-sec-heading-center">
+            <span className="wm-intl-newyork-sec-badge">OUR PROCESS & APPROACH</span>
+            <h2 className="wm-intl-newyork-sec-h2">
+              Our 4-Step <span>Agile Growth Framework</span>
             </h2>
-
-            <div className="wm-intl-newyork-importance-content">
-              <p>A single high-intent search in NYC (e.g. corporate law, commercial real estate, luxury retail, B2B SaaS) can be worth tens of thousands of dollars in lifetime customer value.</p>
-              <p>Relying solely on expensive PPC in New York bleeds budgets. Organic dominance establishes compounding trust and gives you an enduring competitive moat.</p>
-            </div>
+            <div className="wm-intl-newyork-sec-bar-center"></div>
           </div>
-        </div>
-      </section>
 
-      {/* 7. WHY WEBMOK SECTION */}
-      <section className="wm-intl-newyork-why-section">
-        <div className="wm-intl-newyork-container">
-          <div className="wm-intl-newyork-why-grid">
-            <div className="wm-intl-newyork-why-content">
-              <span className="wm-intl-newyork-why-tag">THE WEBMOK ADVANTAGE</span>
-              <h2 className="wm-intl-newyork-why-title">
-                Aggressive Execution. 
-                <span className="s1"> Clean Code.</span>{' '}
-                <span className="s2">Unstoppable Rankings.</span>
-              </h2>
-
-              <div className="wm-intl-newyork-why-text">
-                <p>We don’t use generic automated tools. Our senior search strategists reverse-engineer the top 3 ranking competitors in your NYC niche and out-execute them across every ranking factor.</p>
-                <p>From Google algorithm resilience to conversion-focused content, we ensure your New York search traffic translates directly into bottom-line revenue.</p>
+          <div className="wm-intl-newyork-process-grid">
+            {pageData.processSteps.map((ps, i) => (
+              <div key={i} className="wm-intl-newyork-process-card">
+                <span className="wm-intl-newyork-proc-num">STEP {ps.num}</span>
+                <h4>{ps.title}</h4>
+                <p>{ps.desc}</p>
               </div>
-            </div>
-
-            <div className="wm-intl-newyork-why-image">
-              <img src="/onpage2.avif" alt="Why Webmok" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. PRICING PLANS SECTION */}
+      {/* 9. INDUSTRIES */}
+      <section className="wm-intl-newyork-industries-section" id="industries">
+        <div className="wm-intl-newyork-container">
+          <div className="wm-intl-newyork-sec-heading-center">
+            <span className="wm-intl-newyork-sec-badge">WHO WE WORK WITH</span>
+            <h2 className="wm-intl-newyork-sec-h2">
+              Specialized Industry <span>Growth Solutions</span>
+            </h2>
+            <div className="wm-intl-newyork-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-newyork-industries-grid">
+            {pageData.industries.map((ind, i) => (
+              <div key={i} className="wm-intl-newyork-industry-card">
+                <div className="wm-intl-newyork-ind-icon">
+                  {ind.icon === 'FaBuilding' && <FaBuilding />}
+                  {ind.icon === 'FaUserMd' && <FaUserMd />}
+                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                  {ind.icon === 'FaUtensils' && <FaUtensils />}
+                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {ind.icon === 'FaCompass' && <FaCompass />}
+                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                </div>
+                <h4>{ind.name}</h4>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. PRICING PLANS */}
       <section className="wm-intl-newyork-pricing-section" id="pricing-plans">
         <div className="wm-intl-newyork-container">
-          <div className="wm-intl-newyork-sec-header">
-            <span className="wm-intl-newyork-sec-subtitle">Transparent Monthly Plans</span>
-            <h2 className="wm-intl-newyork-sec-title">Flexible New York Growth Packages with Zero Lock-In</h2>
-            <div className="wm-intl-newyork-sec-bar"></div>
+          <div className="wm-intl-newyork-sec-heading-center">
+            <span className="wm-intl-newyork-sec-badge">PUBLISHED RATES · ZERO LOCK-IN</span>
+            <h2 className="wm-intl-newyork-sec-h2">
+              Transparent {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-newyork-sec-bar-center"></div>
 
             {/* Currency Switcher */}
             <div className="wm-intl-newyork-currency-toggle">
-              
-              <button
-                type="button"
-                className={`wm-intl-newyork-curr-btn ${currency === 'USD' ? 'active' : ''}`}
-                onClick={() => setCurrency('USD')}
-              >
-                $ USD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-newyork-curr-btn ${currency === 'INR' ? 'active' : ''}`}
-                onClick={() => setCurrency('INR')}
-              >
-                ₹ INR
-              </button>
+              {[{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  className={`wm-intl-newyork-curr-btn ${currency === c.code ? 'active' : ''}`}
+                  onClick={() => setCurrency(c.code)}
+                >
+                  {c.symbol} {c.code}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Pricing Grid */}
           <div className="wm-intl-newyork-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : `$${plan.usdPrice}`;
+              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
               return (
                 <div key={i} className={`wm-intl-newyork-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (
@@ -435,93 +649,80 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 9. BENEFITS SECTION */}
-      <section className="wm-intl-newyork-benefits-section">
+      {/* 11. TESTIMONIALS */}
+      <section className="wm-intl-newyork-testimonials-section" id="testimonials">
         <div className="wm-intl-newyork-container">
-          <div className="wm-intl-newyork-benefits-grid">
-            <div className="wm-intl-newyork-benefits-content">
-              <span className="wm-intl-newyork-benefits-tag">BOTTOM-LINE IMPACT</span>
-              <h2 className="wm-intl-newyork-benefits-title">
-                Organic Supremacy in the 
-                <span>Capital of Commerce</span>
-              </h2>
+          <div className="wm-intl-newyork-sec-heading-center">
+            <span className="wm-intl-newyork-sec-badge">CLIENT SUCCESS STORIES</span>
+            <h2 className="wm-intl-newyork-sec-h2">
+              What {pageData.city} <span>Leaders Say About Webmok</span>
+            </h2>
+            <div className="wm-intl-newyork-sec-bar-center"></div>
+          </div>
 
-              <div className="wm-intl-newyork-benefits-text">
-                <p>Ranking #1 in New York changes everything. Our clients experience exponential increases in qualified RFP requests, executive inquiries, and consumer sales.</p>
-                <p>We deliver organic dominance that withstands every Google core algorithm update.</p>
-              </div>
-
-              <div className="wm-intl-newyork-benefits-points">
-                <div key="Consistent Top 3 Rankings in Ultra-Competitive NYC Niches" className="wm-intl-newyork-benefit-point">
-                  <span className="wm-intl-newyork-benefit-icon">✓</span>
-                  <span>{"Consistent Top 3 Rankings in Ultra-Competitive NYC Niches"}</span>
+          <div className="wm-intl-newyork-testimonials-grid">
+            {pageData.testimonials.map((t, idx) => (
+              <div key={idx} className="wm-intl-newyork-testimonial-card">
+                <div className="wm-intl-newyork-t-stars">
+                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
-                <div key="Drastic Reduction in Paid Customer Acquisition Costs" className="wm-intl-newyork-benefit-point">
-                  <span className="wm-intl-newyork-benefit-icon">✓</span>
-                  <span>{"Drastic Reduction in Paid Customer Acquisition Costs"}</span>
-                </div>
-                <div key="High-Authority Domain Equity That Compounds Over Time" className="wm-intl-newyork-benefit-point">
-                  <span className="wm-intl-newyork-benefit-icon">✓</span>
-                  <span>{"High-Authority Domain Equity That Compounds Over Time"}</span>
-                </div>
-                <div key="Full Revenue & Lead Attribution with Zero Vanity Metrics" className="wm-intl-newyork-benefit-point">
-                  <span className="wm-intl-newyork-benefit-icon">✓</span>
-                  <span>{"Full Revenue & Lead Attribution with Zero Vanity Metrics"}</span>
+                <p className="wm-intl-newyork-t-quote">"{t.quote}"</p>
+                <div className="wm-intl-newyork-t-author">
+                  <h5>{t.author}</h5>
+                  <p>{t.role} · {t.company}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="wm-intl-newyork-benefits-image">
-              <img src="/onpagebenifts.jpg" alt="SEO Services in New York" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. ADVANTAGE SECTION */}
+      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
       <section className="wm-intl-newyork-advantage-section">
         <div className="wm-intl-newyork-container">
-          <div className="wm-intl-newyork-sec-header">
-            <span className="wm-intl-newyork-sec-subtitle">Why Partner With Us</span>
-            <h2 className="wm-intl-newyork-sec-title">The WebMok Advantage in Global Digital Execution</h2>
-            <div className="wm-intl-newyork-sec-bar"></div>
+          <div className="wm-intl-newyork-sec-heading-center">
+            <span className="wm-intl-newyork-sec-badge">WHY CHOOSE WEBMOK</span>
+            <h2 className="wm-intl-newyork-sec-h2">The Webmok Operational Guarantees</h2>
+            <div className="wm-intl-newyork-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-newyork-advantage-grid">
             <div className="wm-intl-newyork-advantage-card">
               <div className="wm-intl-newyork-aicon"><FaShieldAlt /></div>
-              <h4>100% Proven Method</h4>
-              <p>Strict white-hat execution that protects your brand equity and produces compounding organic growth.</p>
+              <h4>100% White-Hat Proven Methods</h4>
+              <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
             </div>
 
             <div className="wm-intl-newyork-advantage-card">
               <div className="wm-intl-newyork-aicon"><FaRocket /></div>
-              <h4>Full Telemetry Dashboards</h4>
+              <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
             </div>
 
             <div className="wm-intl-newyork-advantage-card">
               <div className="wm-intl-newyork-aicon"><FaHeadset /></div>
               <h4>Dedicated Senior Squad</h4>
-              <p>Work directly with dedicated senior strategists and technical engineers with direct phone & WhatsApp support.</p>
+              <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
             </div>
 
             <div className="wm-intl-newyork-advantage-card">
               <div className="wm-intl-newyork-aicon"><FaClock /></div>
               <h4>Zero Mandatory Lock-In</h4>
-              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable growth.</p>
+              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. FAQS ACCORDION */}
-      <section className="wm-intl-newyork-faqs-section">
+      {/* 13. REGIONAL FAQS */}
+      <section className="wm-intl-newyork-faqs-section" id="faqs">
         <div className="wm-intl-newyork-container">
-          <div className="wm-intl-newyork-sec-header">
-            <span className="wm-intl-newyork-sec-subtitle">Frequently Asked Questions</span>
-            <h2 className="wm-intl-newyork-sec-title">Common Queries About Our New York Growth Packages</h2>
-            <div className="wm-intl-newyork-sec-bar"></div>
+          <div className="wm-intl-newyork-sec-heading-center">
+            <span className="wm-intl-newyork-sec-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 className="wm-intl-newyork-sec-h2">
+              Common Queries About Our {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-newyork-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-newyork-faqs-wrap">
@@ -546,12 +747,12 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. BOTTOM CONVERSION BANNER */}
+      {/* 14. BOTTOM CONVERSION BANNER */}
       <section className="wm-intl-newyork-bottom-banner">
         <div className="wm-intl-newyork-container">
           <div className="wm-intl-newyork-banner-inner">
             <div className="wm-intl-newyork-banner-text">
-              <h2>Ready to Accelerate Growth in New York?</h2>
+              <h2>Ready to Accelerate Revenue in {pageData.city}?</h2>
               <p>Schedule a quick 1-on-1 strategy consultation with our senior digital directors today.</p>
             </div>
             <div className="wm-intl-newyork-banner-btns">
@@ -567,7 +768,7 @@ const SeoServicesNewYorkPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 className="wm-intl-newyork-bbtn-quote"
                 onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Bottom Banner Inquiry`)}
               >
-                Get Custom Quote <FaArrowRight />
+                Get Free Custom Proposal <FaArrowRight />
               </button>
             </div>
           </div>

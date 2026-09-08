@@ -1,52 +1,52 @@
 /* ==========================================================================
-   WEB MOK - WM-INTL-UNITEDKINGDOM DEDICATED STYLESHEET (PREMIUM DARK BLUE THEME)
+   WEB MOK - WM-INTL-UK DEDICATED STYLESHEET (14 COMPREHENSIVE SECTIONS)
    ========================================================================== */
 
-.wm-intl-unitedkingdom-page-root {
-  background-color: #071426;
-  color: #f1f5f9;
+.wm-intl-uk-page-root {
+  background-color: #ffffff;
+  color: #1e293b;
   font-family: inherit;
   overflow-x: hidden;
   padding-top: 80px;
 }
 
-.wm-intl-unitedkingdom-container {
+.wm-intl-uk-container {
   width: 100%;
   max-width: 1540px;
   margin: 0 auto;
   padding: 0 32px;
 }
 
-/* 1. HERO SECTION */
-.wm-intl-unitedkingdom-hero-section {
-  background: radial-gradient(circle at 20% 30%, #0d2847 0%, #071426 70%);
-  padding: 75px 0 65px;
+/* 1. HERO SECTION (CLEAN WHITE) */
+.wm-intl-uk-hero-section {
+  background: #ffffff;
+  padding: 65px 0 55px;
   position: relative;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid #f1f5f9;
 }
 
-.wm-intl-unitedkingdom-hero-grid {
+.wm-intl-uk-hero-grid {
   display: grid;
-  grid-template-columns: 1.22fr 0.78fr;
-  gap: 56px;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 50px;
   align-items: center;
 }
 
-.wm-intl-unitedkingdom-hero-est-tag {
+.wm-intl-uk-hero-est-tag {
   display: inline-block;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #ffd700;
-  background: rgba(255, 215, 0, 0.12);
-  border: 1px solid rgba(255, 215, 0, 0.35);
+  color: #0b4f8a;
+  background: rgba(11, 79, 138, 0.08);
+  border: 1px solid rgba(11, 79, 138, 0.2);
   padding: 6px 14px;
   border-radius: 4px;
   margin-bottom: 18px;
 }
 
-.wm-intl-unitedkingdom-hero-title-dual {
+.wm-intl-uk-hero-title-dual {
   font-size: 46px;
   line-height: 1.18;
   margin: 0 0 20px;
@@ -55,44 +55,44 @@
   gap: 6px;
 }
 
-.wm-intl-unitedkingdom-hero-italic-gold {
+.wm-intl-uk-hero-italic-gold {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
-  font-weight: 400;
-  color: #ff9f43;
-  font-size: 36px;
+  font-weight: 600;
+  color: #0b4f8a;
+  font-size: 38px;
 }
 
-.wm-intl-unitedkingdom-hero-bold-white {
+.wm-intl-uk-hero-bold-white {
   font-weight: 900;
-  color: #ffffff;
+  color: #0f172a;
   letter-spacing: -0.5px;
 }
 
-.wm-intl-unitedkingdom-hero-lead-desc {
+.wm-intl-uk-hero-lead-desc {
   font-size: 18px;
   line-height: 1.6;
-  color: #cbd5e1;
-  margin-bottom: 12px;
+  color: #334155;
+  margin-bottom: 14px;
   font-weight: 500;
 }
 
-.wm-intl-unitedkingdom-hero-body-desc {
-  font-size: 14.5px;
+.wm-intl-uk-hero-body-desc {
+  font-size: 15px;
   line-height: 1.65;
-  color: #94a3b8;
+  color: #64748b;
   margin-bottom: 28px;
 }
 
-.wm-intl-unitedkingdom-hero-btns-row {
+.wm-intl-uk-hero-btns-row {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   align-items: center;
 }
 
-.wm-intl-unitedkingdom-btn-primary {
-  background: linear-gradient(135deg, #ff7a00 0%, #ff5200 100%);
+.wm-intl-uk-btn-primary {
+  background: #071426;
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
@@ -104,23 +104,25 @@
   align-items: center;
   gap: 8px;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 18px rgba(255, 122, 0, 0.35);
+  box-shadow: 0 4px 16px rgba(7, 20, 38, 0.25);
   text-decoration: none;
 }
 
-.wm-intl-unitedkingdom-btn-primary:hover {
+.wm-intl-uk-btn-primary:hover {
+  background: #00a8cc;
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 122, 0, 0.45);
+  box-shadow: 0 6px 20px rgba(0, 168, 204, 0.35);
 }
 
-.wm-intl-unitedkingdom-btn-outline {
-  background: rgba(255, 255, 255, 0.05);
-  color: #e2e8f0;
+.wm-intl-uk-btn-outline {
+  background: transparent;
+  color: #071426;
   font-size: 14px;
   font-weight: 700;
   padding: 12px 24px;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid #071426;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -129,60 +131,60 @@
   text-decoration: none;
 }
 
-.wm-intl-unitedkingdom-btn-outline:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #00a8cc;
-  color: #00a8cc;
+.wm-intl-uk-btn-outline:hover {
+  background: #071426;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /* Trust Cards Stack */
-.wm-intl-unitedkingdom-hero-right-trust {
+.wm-intl-uk-hero-right-trust {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
-.wm-intl-unitedkingdom-trust-card {
-  background: rgba(13, 37, 69, 0.75);
-  border: 1px solid rgba(0, 168, 204, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
+.wm-intl-uk-trust-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
   padding: 14px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
   transition: all 0.25s ease;
 }
 
-.wm-intl-unitedkingdom-trust-card:hover {
+.wm-intl-uk-trust-card:hover {
   border-color: #00a8cc;
   transform: translateX(4px);
-  background: rgba(13, 37, 69, 0.95);
+  box-shadow: 0 8px 22px rgba(11, 79, 138, 0.08);
 }
 
-.wm-intl-unitedkingdom-tcard-info h4 {
+.wm-intl-uk-tcard-info h4 {
   font-size: 15px;
   font-weight: 800;
-  color: #ffffff;
+  color: #0f172a;
   margin: 0 0 2px;
 }
 
-.wm-intl-unitedkingdom-tcard-info p {
+.wm-intl-uk-tcard-info p {
   font-size: 12px;
-  color: #94a3b8;
+  color: #64748b;
   margin: 0;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.wm-intl-unitedkingdom-tcard-stars {
+.wm-intl-uk-tcard-stars {
   color: #fbbf24;
   display: inline-flex;
   gap: 2px;
 }
 
-.wm-intl-unitedkingdom-tcard-badge {
+.wm-intl-uk-tcard-badge {
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -193,387 +195,467 @@
   font-size: 15px;
 }
 
-.wm-intl-unitedkingdom-badge-clutch {
-  background: #ff5a43;
-  color: #ffffff;
+.wm-intl-uk-badge-clutch { background: #ff5a43; color: #ffffff; }
+.wm-intl-uk-badge-upwork { background: #14a800; color: #ffffff; font-size: 13px; }
+.wm-intl-uk-badge-google { background: #4285f4; color: #ffffff; }
+.wm-intl-uk-badge-partner { background: #f59e0b; color: #111827; }
+
+/* 2. STICKY IN-PAGE SUB-NAV */
+.wm-intl-uk-inpage-nav {
+  position: sticky;
+  top: 80px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 90;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
-.wm-intl-unitedkingdom-badge-upwork {
-  background: #14a800;
-  color: #ffffff;
+.wm-intl-uk-inpage-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scrollbar-width: none;
+}
+
+.wm-intl-uk-inpage-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.wm-intl-uk-inpage-nav-link {
   font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
 }
 
-.wm-intl-unitedkingdom-badge-google {
-  background: #4285f4;
+.wm-intl-uk-inpage-nav-link:hover {
+  background: #071426;
   color: #ffffff;
+  border-color: #071426;
 }
 
-.wm-intl-unitedkingdom-badge-partner {
-  background: #f59e0b;
-  color: #111827;
+/* 3. STATS STRIP (DARK NAVY ACCENT STRIP) */
+.wm-intl-uk-stats-strip {
+  background: #071426;
+  padding: 34px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* 2. STATS STRIP */
-.wm-intl-unitedkingdom-stats-strip {
-  background: #0b1f38;
-  padding: 30px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.wm-intl-unitedkingdom-stats-grid {
+.wm-intl-uk-stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
-.wm-intl-unitedkingdom-stat-card {
-  background: rgba(7, 20, 38, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.wm-intl-uk-stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  padding: 18px 20px;
+  padding: 20px 22px;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.wm-intl-unitedkingdom-stat-card strong {
-  font-size: 26px;
+.wm-intl-uk-stat-card strong {
+  font-size: 28px;
   font-weight: 900;
-  color: #00a8cc;
+  color: #00d4ff;
 }
 
-.wm-intl-unitedkingdom-stat-card span {
+.wm-intl-uk-stat-card span {
   font-size: 12.5px;
-  color: #94a3b8;
+  color: #cbd5e1;
   font-weight: 600;
 }
 
-/* 3. INTRO SECTION */
-.wm-intl-unitedkingdom-intro-section {
-  padding: 70px 0;
-  background: #071426;
+/* 4. SERVICES SUITE (CLEAN WHITE) */
+.wm-intl-uk-services-section {
+  padding: 80px 0;
+  background: #ffffff;
 }
 
-.wm-intl-unitedkingdom-intro-grid {
+.wm-intl-uk-sec-heading-center {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.wm-intl-uk-sec-badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #0b4f8a;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.wm-intl-uk-sec-h2 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0 0 14px;
+}
+
+.wm-intl-uk-sec-h2 span {
+  color: #00a8cc;
+}
+
+.wm-intl-uk-sec-bar-center {
+  width: 60px;
+  height: 4px;
+  background: #00a8cc;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.wm-intl-uk-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.wm-intl-uk-service-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.wm-intl-uk-service-card:hover {
+  transform: translateY(-4px);
+  border-color: #00a8cc;
+  box-shadow: 0 12px 30px rgba(11, 79, 138, 0.08);
+}
+
+.wm-intl-uk-svc-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(11, 79, 138, 0.08);
+  color: #0b4f8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.wm-intl-uk-service-card h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 12px;
+}
+
+.wm-intl-uk-service-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* 5. WHY HIRE OUTSIDE (SOFT GREY-BLUE) */
+.wm-intl-uk-whyoutside-section {
+  padding: 80px 0;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.wm-intl-uk-whyoutside-grid {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   gap: 50px;
   align-items: center;
 }
 
-.wm-intl-unitedkingdom-intro-tag {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #ffd700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.wm-intl-unitedkingdom-intro-title {
+.wm-intl-uk-whyoutside-text h2 {
   font-size: 32px;
   font-weight: 900;
+  color: #0f172a;
   line-height: 1.25;
+  margin: 0 0 16px;
+}
+
+.wm-intl-uk-whyoutside-text p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+.wm-intl-uk-compare-table {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.wm-intl-uk-compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 14px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13.5px;
+  align-items: center;
+}
+
+.wm-intl-uk-compare-row:last-child {
+  border-bottom: none;
+}
+
+.wm-intl-uk-compare-hdr {
+  background: #071426;
   color: #ffffff;
-  margin: 0;
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.wm-intl-unitedkingdom-intro-title span {
-  color: #ff9f43;
+.wm-intl-uk-compare-feat {
+  font-weight: 700;
+  color: #0f172a;
 }
 
-.wm-intl-unitedkingdom-intro-right p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #94a3b8;
-  margin: 0;
+.wm-intl-uk-compare-local {
+  color: #ef4444;
+  font-weight: 500;
 }
 
-.wm-intl-unitedkingdom-intro-right p span {
-  color: #ffffff;
+.wm-intl-uk-compare-wm {
+  color: #10b981;
   font-weight: 700;
 }
 
-/* 4. NUMBERS SECTION */
-.wm-intl-unitedkingdom-numbers-section {
-  background: radial-gradient(circle at 50% 50%, #0d2847 0%, #061120 100%);
-  padding: 60px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+/* 6. RESULTS TELEMETRY (CLEAN WHITE) */
+.wm-intl-uk-results-section {
+  padding: 80px 0;
+  background: #ffffff;
 }
 
-.wm-intl-unitedkingdom-numbers-heading {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.wm-intl-unitedkingdom-numbers-subtitle {
-  font-size: 11px;
-  font-weight: 800;
-  color: #ffd700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.wm-intl-unitedkingdom-numbers-heading h2 {
-  font-size: 30px;
-  font-weight: 900;
-  color: #ffffff;
-  margin: 0;
-}
-
-.wm-intl-unitedkingdom-numbers-heading h2 span {
-  color: #00a8cc;
-}
-
-.wm-intl-unitedkingdom-numstats-grid {
+.wm-intl-uk-results-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
-.wm-intl-unitedkingdom-numstat-item {
-  background: rgba(13, 37, 69, 0.6);
-  border: 1px solid rgba(0, 168, 204, 0.2);
-  border-radius: 10px;
-  padding: 24px 16px;
+.wm-intl-uk-result-card {
+  background: #032e58;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 30px 22px;
   text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
 }
 
-.wm-intl-unitedkingdom-numstat-number {
-  font-size: 32px;
+.wm-intl-uk-result-card:hover {
+  transform: translateY(-4px);
+  border-color: #00a8cc;
+  box-shadow: 0 10px 25px rgba(11, 79, 138, 0.08);
+}
+
+.wm-intl-uk-result-card strong {
+  font-size: 34px;
   font-weight: 900;
-  color: #ffffff;
+  color: #f3f4f6;
+  display: block;
   margin-bottom: 8px;
 }
 
-.wm-intl-unitedkingdom-numstat-line {
-  width: 40px;
-  height: 3px;
-  background: #ff7a00;
-  margin: 0 auto 12px;
-  border-radius: 2px;
-}
-
-.wm-intl-unitedkingdom-numstat-item p {
-  font-size: 13px;
-  color: #94a3b8;
+.wm-intl-uk-result-card p {
+  font-size: 15px;
+  color: #f7f8fa;
   margin: 0;
-  font-weight: 600;
+  line-height: 1.45;
 }
 
-/* 5. INCLUDE SECTION */
-.wm-intl-unitedkingdom-include-section {
+/* 7. MARKET INTELLIGENCE (SOFT GREY-BLUE) */
+.wm-intl-uk-market-section {
   padding: 80px 0;
-  background: #071426;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.wm-intl-unitedkingdom-include-grid {
+.wm-intl-uk-market-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 50px;
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
 }
 
-.wm-intl-unitedkingdom-include-tag {
-  font-size: 11px;
+.wm-intl-uk-market-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px 26px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.wm-intl-uk-market-card h4 {
+  font-size: 18px;
   font-weight: 800;
-  letter-spacing: 1px;
-  color: #ffd700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.wm-intl-unitedkingdom-include-title {
-  font-size: 30px;
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.25;
-  margin: 0 0 16px;
-}
-
-.wm-intl-unitedkingdom-include-title span {
-  color: #00a8cc;
-}
-
-.wm-intl-unitedkingdom-include-content p {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: #94a3b8;
-  margin-bottom: 14px;
-}
-
-.wm-intl-unitedkingdom-feature-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.wm-intl-unitedkingdom-feature-item {
-  background: rgba(13, 37, 69, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  padding: 10px 14px;
-  font-size: 13.5px;
-  color: #e2e8f0;
+  color: #0f172a;
+  margin: 0 0 10px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.wm-intl-unitedkingdom-feature-item span.chk {
-  color: #10b981;
-  font-weight: 900;
+.wm-intl-uk-market-card h4::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #00a8cc;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.wm-intl-unitedkingdom-include-image img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 168, 204, 0.3);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+.wm-intl-uk-market-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
 }
 
-/* 6. IMPORTANCE SECTION */
-.wm-intl-unitedkingdom-importance-section {
-  padding: 60px 0;
-  background: #0b1f38;
-}
-
-.wm-intl-unitedkingdom-importance-box {
-  background: radial-gradient(circle at 70% 30%, #11335c 0%, #07172b 100%);
-  border: 1px solid rgba(0, 168, 204, 0.3);
-  border-radius: 14px;
-  padding: 44px 40px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.wm-intl-unitedkingdom-importance-title {
-  font-size: 28px;
-  font-weight: 900;
-  color: #ffffff;
-  margin: 0 0 16px;
-}
-
-.wm-intl-unitedkingdom-importance-title span {
-  color: #ff9f43;
-}
-
-.wm-intl-unitedkingdom-importance-content p {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: #cbd5e1;
-  margin-bottom: 12px;
-}
-
-/* 7. WHY SECTION */
-.wm-intl-unitedkingdom-why-section {
+/* 8. 4-STEP PROCESS (CLEAN WHITE) */
+.wm-intl-uk-process-section {
   padding: 80px 0;
-  background: #071426;
+  background: #ffffff;
 }
 
-.wm-intl-unitedkingdom-why-grid {
+.wm-intl-uk-process-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
-.wm-intl-unitedkingdom-why-tag {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #ffd700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  display: block;
+.wm-intl-uk-process-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px 20px;
+  position: relative;
+  transition: all 0.25s ease;
 }
 
-.wm-intl-unitedkingdom-why-title {
-  font-size: 30px;
+.wm-intl-uk-process-card:hover {
+  transform: translateY(-4px);
+  border-color: #00a8cc;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(11, 79, 138, 0.08);
+}
+
+.wm-intl-uk-proc-num {
+  font-size: 13px;
   font-weight: 900;
-  color: #ffffff;
-  line-height: 1.25;
-  margin: 0 0 18px;
-}
-
-.wm-intl-unitedkingdom-why-title span.s1 {
   color: #00a8cc;
-}
-
-.wm-intl-unitedkingdom-why-title span.s2 {
-  color: #ff7a00;
-}
-
-.wm-intl-unitedkingdom-why-text p {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: #94a3b8;
+  background: rgba(0, 168, 204, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
   margin-bottom: 14px;
 }
 
-.wm-intl-unitedkingdom-why-image img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* 8. PRICING SECTION */
-.wm-intl-unitedkingdom-pricing-section {
-  padding: 80px 0;
-  background: #09192e;
-}
-
-.wm-intl-unitedkingdom-sec-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.wm-intl-unitedkingdom-sec-subtitle {
-  font-size: 12px;
+.wm-intl-uk-process-card h4 {
+  font-size: 17px;
   font-weight: 800;
-  color: #ffd700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 8px;
+  color: #0f172a;
+  margin: 0 0 10px;
 }
 
-.wm-intl-unitedkingdom-sec-title {
-  font-size: 32px;
-  font-weight: 900;
-  color: #ffffff;
-  margin: 0 0 16px;
+.wm-intl-uk-process-card p {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0;
 }
 
-.wm-intl-unitedkingdom-sec-bar {
-  width: 60px;
-  height: 4px;
-  background: #ff7a00;
-  margin: 0 auto 24px;
-  border-radius: 2px;
+/* 9. INDUSTRIES (SOFT GREY-BLUE) */
+.wm-intl-uk-industries-section {
+  padding: 80px 0;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-/* Currency Toggle */
-.wm-intl-unitedkingdom-currency-toggle {
+.wm-intl-uk-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.wm-intl-uk-industry-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 26px 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.wm-intl-uk-industry-card:hover {
+  transform: translateY(-3px);
+  border-color: #00a8cc;
+  box-shadow: 0 8px 20px rgba(11, 79, 138, 0.08);
+}
+
+.wm-intl-uk-ind-icon {
+  font-size: 22px;
+  color: #0b4f8a;
+  margin-bottom: 12px;
+}
+
+.wm-intl-uk-industry-card h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+
+.wm-intl-uk-industry-card p {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 10. PRICING PLANS (CLEAN WHITE) */
+.wm-intl-uk-pricing-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.wm-intl-uk-currency-toggle {
   display: inline-flex;
-  background: rgba(7, 20, 38, 0.9);
-  border: 1px solid rgba(0, 168, 204, 0.3);
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
   border-radius: 30px;
   padding: 4px;
   gap: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.wm-intl-unitedkingdom-curr-btn {
+.wm-intl-uk-curr-btn {
   background: transparent;
   border: none;
-  color: #94a3b8;
+  color: #64748b;
   font-size: 13px;
   font-weight: 700;
   padding: 8px 18px;
@@ -582,48 +664,48 @@
   transition: all 0.2s ease;
 }
 
-.wm-intl-unitedkingdom-curr-btn.active {
-  background: #00a8cc;
+.wm-intl-uk-curr-btn.active {
+  background: #071426;
   color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 168, 204, 0.4);
+  box-shadow: 0 2px 8px rgba(7, 20, 38, 0.3);
 }
 
-/* Pricing Grid */
-.wm-intl-unitedkingdom-cards-grid {
+.wm-intl-uk-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
   align-items: stretch;
 }
 
-.wm-intl-unitedkingdom-card {
-  background: #0b1f38;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.wm-intl-uk-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
   border-radius: 12px;
   padding: 32px 24px;
   display: flex;
   flex-direction: column;
   position: relative;
   transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
-.wm-intl-unitedkingdom-card:hover {
+.wm-intl-uk-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 168, 204, 0.4);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  border-color: #00a8cc;
+  box-shadow: 0 12px 30px rgba(11, 79, 138, 0.1);
 }
 
-.wm-intl-unitedkingdom-card.popular {
-  border: 2px solid #ff7a00;
-  background: radial-gradient(circle at 50% 0%, #13325c 0%, #0b1f38 100%);
+.wm-intl-uk-card.popular {
+  border: 2px solid #00a8cc;
+  box-shadow: 0 8px 30px rgba(0, 168, 204, 0.15);
 }
 
-.wm-intl-unitedkingdom-popular-tag {
+.wm-intl-uk-popular-tag {
   position: absolute;
   top: -13px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ff7a00;
+  background: #00a8cc;
   color: #ffffff;
   font-size: 11px;
   font-weight: 900;
@@ -632,76 +714,76 @@
   border-radius: 12px;
 }
 
-.wm-intl-unitedkingdom-card-top {
+.wm-intl-uk-card-top {
   margin-bottom: 20px;
 }
 
-.wm-intl-unitedkingdom-plan-badge {
+.wm-intl-uk-plan-badge {
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  color: #00a8cc;
-  background: rgba(0, 168, 204, 0.12);
+  color: #0b4f8a;
+  background: rgba(11, 79, 138, 0.08);
   padding: 3px 10px;
   border-radius: 4px;
   display: inline-block;
   margin-bottom: 10px;
 }
 
-.wm-intl-unitedkingdom-card-name {
+.wm-intl-uk-card-name {
   font-size: 20px;
   font-weight: 900;
-  color: #ffffff;
+  color: #0f172a;
   margin: 0 0 8px;
 }
 
-.wm-intl-unitedkingdom-card-desc {
+.wm-intl-uk-card-desc {
   font-size: 13px;
-  color: #94a3b8;
+  color: #64748b;
   line-height: 1.5;
   margin: 0;
   min-height: 40px;
 }
 
-.wm-intl-unitedkingdom-card-pricing {
+.wm-intl-uk-card-pricing {
   margin-bottom: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
   padding: 16px 0;
 }
 
-.wm-intl-unitedkingdom-price-row {
+.wm-intl-uk-price-row {
   display: flex;
   align-items: baseline;
   gap: 6px;
 }
 
-.wm-intl-unitedkingdom-price-val {
+.wm-intl-uk-price-val {
   font-size: 34px;
   font-weight: 900;
-  color: #ffffff;
+  color: #0f172a;
 }
 
-.wm-intl-unitedkingdom-price-period {
+.wm-intl-uk-price-period {
   font-size: 13px;
-  color: #94a3b8;
+  color: #64748b;
   font-weight: 600;
 }
 
-.wm-intl-unitedkingdom-card-features {
+.wm-intl-uk-card-features {
   flex-grow: 1;
   margin-bottom: 24px;
 }
 
-.wm-intl-unitedkingdom-card-features h4 {
+.wm-intl-uk-card-features h4 {
   font-size: 13px;
   font-weight: 800;
-  color: #cbd5e1;
+  color: #334155;
   text-transform: uppercase;
   margin: 0 0 12px;
 }
 
-.wm-intl-unitedkingdom-card-features ul {
+.wm-intl-uk-card-features ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -710,25 +792,25 @@
   gap: 10px;
 }
 
-.wm-intl-unitedkingdom-card-features li {
+.wm-intl-uk-card-features li {
   font-size: 13px;
-  color: #94a3b8;
+  color: #475569;
   display: flex;
   align-items: flex-start;
   gap: 8px;
   line-height: 1.4;
 }
 
-.wm-intl-unitedkingdom-feat-check {
+.wm-intl-uk-feat-check {
   color: #10b981;
   font-size: 13px;
   margin-top: 2px;
   flex-shrink: 0;
 }
 
-.wm-intl-unitedkingdom-select-btn {
+.wm-intl-uk-select-btn {
   width: 100%;
-  background: linear-gradient(135deg, #00a8cc 0%, #0b4f8a 100%);
+  background: #071426;
   color: #ffffff;
   font-size: 14px;
   font-weight: 800;
@@ -743,147 +825,134 @@
   transition: all 0.25s ease;
 }
 
-.wm-intl-unitedkingdom-card.popular .wm-intl-unitedkingdom-select-btn {
-  background: linear-gradient(135deg, #ff7a00 0%, #ff5200 100%);
-  box-shadow: 0 4px 16px rgba(255, 122, 0, 0.3);
+.wm-intl-uk-card.popular .wm-intl-uk-select-btn {
+  background: #0b2545;
+  box-shadow: 0 4px 16px rgba(11, 37, 69, 0.3);
 }
 
-.wm-intl-unitedkingdom-select-btn:hover {
-  opacity: 0.92;
+.wm-intl-uk-select-btn:hover {
+  background: #00a8cc;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
-/* 9. BENEFITS SECTION */
-.wm-intl-unitedkingdom-benefits-section {
+/* 11. TESTIMONIALS (SOFT GREY-BLUE) */
+.wm-intl-uk-testimonials-section {
   padding: 80px 0;
-  background: #071426;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.wm-intl-unitedkingdom-benefits-grid {
+.wm-intl-uk-testimonials-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 50px;
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
 }
 
-.wm-intl-unitedkingdom-benefits-tag {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #ffd700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  display: block;
+.wm-intl-uk-testimonial-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.wm-intl-unitedkingdom-benefits-title {
-  font-size: 30px;
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.25;
-  margin: 0 0 16px;
-}
-
-.wm-intl-unitedkingdom-benefits-title span {
-  color: #ff9f43;
-}
-
-.wm-intl-unitedkingdom-benefits-text p {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: #94a3b8;
+.wm-intl-uk-t-stars {
+  color: #f59e0b;
+  display: flex;
+  gap: 4px;
   margin-bottom: 14px;
 }
 
-.wm-intl-unitedkingdom-benefits-points {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 18px;
+.wm-intl-uk-t-quote {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #334155;
+  font-style: italic;
+  margin-bottom: 20px;
 }
 
-.wm-intl-unitedkingdom-benefit-point {
-  background: rgba(13, 37, 69, 0.6);
-  border: 1px solid rgba(0, 168, 204, 0.2);
-  border-radius: 6px;
-  padding: 12px 16px;
-  font-size: 14px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.wm-intl-uk-t-author h5 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 2px;
 }
 
-.wm-intl-unitedkingdom-benefit-icon {
-  color: #10b981;
-  font-weight: 900;
+.wm-intl-uk-t-author p {
+  font-size: 12.5px;
+  color: #64748b;
+  margin: 0;
 }
 
-.wm-intl-unitedkingdom-benefits-image img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* 10. ADVANTAGE SECTION */
-.wm-intl-unitedkingdom-advantage-section {
+/* 12. OPERATIONAL GUARANTEES / WHY US (CLEAN WHITE) */
+.wm-intl-uk-advantage-section {
   padding: 80px 0;
-  background: #0b1f38;
+  background: #ffffff;
 }
 
-.wm-intl-unitedkingdom-advantage-grid {
+.wm-intl-uk-advantage-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 22px;
 }
 
-.wm-intl-unitedkingdom-advantage-card {
-  background: rgba(7, 20, 38, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.wm-intl-uk-advantage-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 24px 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
   transition: all 0.25s ease;
 }
 
-.wm-intl-unitedkingdom-advantage-card:hover {
+.wm-intl-uk-advantage-card:hover {
   border-color: #00a8cc;
+  background: #ffffff;
   transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(11, 79, 138, 0.08);
 }
 
-.wm-intl-unitedkingdom-aicon {
+.wm-intl-uk-aicon {
   width: 44px;
   height: 44px;
-  background: rgba(0, 168, 204, 0.15);
+  background: rgba(11, 79, 138, 0.08);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: #00a8cc;
+  color: #0b4f8a;
   margin-bottom: 14px;
 }
 
-.wm-intl-unitedkingdom-advantage-card h4 {
+.wm-intl-uk-advantage-card h4 {
   font-size: 16px;
   font-weight: 800;
-  color: #ffffff;
+  color: #0f172a;
   margin: 0 0 8px;
 }
 
-.wm-intl-unitedkingdom-advantage-card p {
+.wm-intl-uk-advantage-card p {
   font-size: 13px;
-  color: #94a3b8;
+  color: #64748b;
   line-height: 1.55;
   margin: 0;
 }
 
-/* 11. FAQS SECTION */
-.wm-intl-unitedkingdom-faqs-section {
+/* 13. FAQS SECTION (SOFT GREY-BLUE) */
+.wm-intl-uk-faqs-section {
   padding: 80px 0;
-  background: #071426;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.wm-intl-unitedkingdom-faqs-wrap {
+.wm-intl-uk-faqs-wrap {
   max-width: 1080px;
   margin: 0 auto;
   display: flex;
@@ -891,19 +960,20 @@
   gap: 12px;
 }
 
-.wm-intl-unitedkingdom-faq-item {
-  background: #0b1f38;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.wm-intl-uk-faq-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.2s ease;
 }
 
-.wm-intl-unitedkingdom-faq-item.open {
-  border-color: rgba(0, 168, 204, 0.4);
+.wm-intl-uk-faq-item.open {
+  border-color: #00a8cc;
+  box-shadow: 0 4px 14px rgba(0, 168, 204, 0.08);
 }
 
-.wm-intl-unitedkingdom-faq-q {
+.wm-intl-uk-faq-q {
   width: 100%;
   background: transparent;
   border: none;
@@ -911,7 +981,7 @@
   text-align: left;
   font-size: 15px;
   font-weight: 700;
-  color: #ffffff;
+  color: #0f172a;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -919,56 +989,56 @@
   gap: 16px;
 }
 
-.wm-intl-unitedkingdom-faq-q:hover {
-  color: #00a8cc;
+.wm-intl-uk-faq-q:hover {
+  color: #0b4f8a;
 }
 
-.wm-intl-unitedkingdom-faq-a {
+.wm-intl-uk-faq-a {
   padding: 0 20px 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid #e2e8f0;
 }
 
-.wm-intl-unitedkingdom-faq-a p {
+.wm-intl-uk-faq-a p {
   font-size: 14px;
   line-height: 1.65;
-  color: #94a3b8;
+  color: #475569;
   margin: 12px 0 0;
 }
 
-/* 12. BOTTOM BANNER */
-.wm-intl-unitedkingdom-bottom-banner {
+/* 14. BOTTOM BANNER (DEEP NAVY LUXURY) */
+.wm-intl-uk-bottom-banner {
   padding: 60px 0;
-  background: radial-gradient(circle at 30% 50%, #113661 0%, #071426 100%);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, #071426 0%, #0b2545 100%);
+  border-top: 1px solid #e2e8f0;
 }
 
-.wm-intl-unitedkingdom-banner-inner {
+.wm-intl-uk-banner-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
 }
 
-.wm-intl-unitedkingdom-banner-text h2 {
+.wm-intl-uk-banner-text h2 {
   font-size: 28px;
   font-weight: 900;
   color: #ffffff;
   margin: 0 0 8px;
 }
 
-.wm-intl-unitedkingdom-banner-text p {
+.wm-intl-uk-banner-text p {
   font-size: 14.5px;
   color: #cbd5e1;
   margin: 0;
 }
 
-.wm-intl-unitedkingdom-banner-btns {
+.wm-intl-uk-banner-btns {
   display: flex;
   gap: 14px;
   flex-shrink: 0;
 }
 
-.wm-intl-unitedkingdom-bbtn-call {
+.wm-intl-uk-bbtn-call {
   background: #10b981;
   color: #ffffff;
   font-size: 14px;
@@ -983,18 +1053,19 @@
   transition: all 0.25s ease;
 }
 
-.wm-intl-unitedkingdom-bbtn-call:hover {
+.wm-intl-uk-bbtn-call:hover {
   background: #059669;
+  transform: translateY(-2px);
 }
 
-.wm-intl-unitedkingdom-bbtn-quote {
-  background: #ff7a00;
+.wm-intl-uk-bbtn-quote {
+  background: #071426;
+  border: 1.5px solid #00a8cc;
   color: #ffffff;
   font-size: 14px;
   font-weight: 800;
   padding: 13px 22px;
   border-radius: 6px;
-  border: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -1002,88 +1073,100 @@
   transition: all 0.25s ease;
 }
 
-.wm-intl-unitedkingdom-bbtn-quote:hover {
-  background: #ea580c;
+.wm-intl-uk-bbtn-quote:hover {
+  background: #00a8cc;
+  transform: translateY(-2px);
 }
 
 /* ==========================================================================
    RESPONSIVE DESIGN (MOBILE & TABLET)
    ========================================================================== */
 @media (max-width: 1024px) {
-  .wm-intl-unitedkingdom-hero-grid,
-  .wm-intl-unitedkingdom-intro-grid,
-  .wm-intl-unitedkingdom-include-grid,
-  .wm-intl-unitedkingdom-why-grid,
-  .wm-intl-unitedkingdom-benefits-grid,
-  .wm-intl-unitedkingdom-banner-inner {
+  .wm-intl-uk-hero-grid,
+  .wm-intl-uk-whyoutside-grid,
+  .wm-intl-uk-banner-inner {
     grid-template-columns: 1fr;
     gap: 36px;
   }
 
-  .wm-intl-unitedkingdom-stats-grid,
-  .wm-intl-unitedkingdom-numstats-grid,
-  .wm-intl-unitedkingdom-advantage-grid {
+  .wm-intl-uk-services-grid,
+  .wm-intl-uk-industries-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .wm-intl-unitedkingdom-cards-grid {
+  .wm-intl-uk-stats-grid,
+  .wm-intl-uk-results-grid,
+  .wm-intl-uk-process-grid,
+  .wm-intl-uk-advantage-grid,
+  .wm-intl-uk-market-grid,
+  .wm-intl-uk-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wm-intl-uk-cards-grid {
     grid-template-columns: 1fr;
     max-width: 480px;
     margin: 0 auto;
   }
 
-  .wm-intl-unitedkingdom-banner-inner {
+  .wm-intl-uk-banner-inner {
     flex-direction: column;
     text-align: center;
   }
 
-  .wm-intl-unitedkingdom-banner-btns {
+  .wm-intl-uk-banner-btns {
     justify-content: center;
     width: 100%;
   }
 }
 
 @media (max-width: 640px) {
-  .wm-intl-unitedkingdom-page-root {
+  .wm-intl-uk-page-root {
     padding-top: 70px;
   }
 
-  .wm-intl-unitedkingdom-hero-title-dual {
+  .wm-intl-uk-hero-title-dual {
     font-size: 28px;
   }
 
-  .wm-intl-unitedkingdom-hero-italic-gold {
+  .wm-intl-uk-hero-italic-gold {
     font-size: 24px;
   }
 
-  .wm-intl-unitedkingdom-hero-btns-row {
+  .wm-intl-uk-hero-btns-row {
     flex-direction: column;
     width: 100%;
   }
 
-  .wm-intl-unitedkingdom-btn-primary,
-  .wm-intl-unitedkingdom-btn-outline {
+  .wm-intl-uk-btn-primary,
+  .wm-intl-uk-btn-outline {
     width: 100%;
     justify-content: center;
   }
 
-  .wm-intl-unitedkingdom-stats-grid,
-  .wm-intl-unitedkingdom-numstats-grid,
-  .wm-intl-unitedkingdom-advantage-grid {
+  .wm-intl-uk-services-grid,
+  .wm-intl-uk-industries-grid,
+  .wm-intl-uk-stats-grid,
+  .wm-intl-uk-results-grid,
+  .wm-intl-uk-process-grid,
+  .wm-intl-uk-advantage-grid,
+  .wm-intl-uk-market-grid,
+  .wm-intl-uk-testimonials-grid {
     grid-template-columns: 1fr;
   }
 
-  .wm-intl-unitedkingdom-importance-box {
-    padding: 24px 20px;
-  }
-
-  .wm-intl-unitedkingdom-banner-btns {
+  .wm-intl-uk-banner-btns {
     flex-direction: column;
   }
 
-  .wm-intl-unitedkingdom-bbtn-call,
-  .wm-intl-unitedkingdom-bbtn-quote {
+  .wm-intl-uk-bbtn-call,
+  .wm-intl-uk-bbtn-quote {
     width: 100%;
     justify-content: center;
+  }
+
+  .wm-intl-uk-compare-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }

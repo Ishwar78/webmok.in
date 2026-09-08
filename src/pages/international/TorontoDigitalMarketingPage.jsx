@@ -13,7 +13,20 @@ import {
   FaGoogle,
   FaChevronRight,
   FaHeadset,
-  FaClock
+  FaClock,
+  FaSearch,
+  FaBullhorn,
+  FaShareAlt,
+  FaPenNib,
+  FaLaptopCode,
+  FaVideo,
+  FaChartLine,
+  FaBuilding,
+  FaUserMd,
+  FaShoppingCart,
+  FaUtensils,
+  FaBriefcase,
+  FaCompass
 } from 'react-icons/fa';
 import './TorontoDigitalMarketingPage.css';
 
@@ -31,7 +44,8 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     region: "Greater Toronto Area (GTA), Ontario, Canada",
     tagline: "PREMIER GTA GROWTH AGENCY · TORONTO, CANADA",
     heroHighlight: "Toronto Digital Marketing & SEO Agency",
-    leadDesc: "Dominate the Greater Toronto Area with high-velocity SEO, Google Ads, and conversion-focused web architecture built for Canada’s economic engine.",
+    heroItalic: "Accelerate GTA Market Dominance with",
+    leadDesc: "Dominate the Greater Toronto Area with high-velocity SEO, precision Google Ads, and conversion-focused web architecture built for Canada’s economic engine.",
     bodyDesc: "From Bay Street financial services and Downtown tech startups to Mississauga commerce, Vaughan retail, and Markham tech corridors—Webmok scales Toronto brands.",
     stats: [
   {
@@ -51,69 +65,243 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     "label": "White-Hat SEO Execution"
   }
 ],
+    services: [
+  {
+    "icon": "FaSearch",
+    "title": "Toronto & GTA Local SEO",
+    "desc": "Dominating Google Maps 3-Pack and organic rankings across Downtown Toronto, North York, Mississauga, Markham, and Vaughan."
+  },
+  {
+    "icon": "FaBullhorn",
+    "title": "High-Intent Google Ads (PPC)",
+    "desc": "Precision search funnels, Performance Max campaigns, and Local Services Ads designed to capture high-value Toronto commercial intent."
+  },
+  {
+    "icon": "FaShareAlt",
+    "title": "Targeted Paid Social (Meta & LinkedIn)",
+    "desc": "B2B LinkedIn campaigns targeting Bay Street decision-makers and high-converting Meta ads engaging GTA consumers."
+  },
+  {
+    "icon": "FaPenNib",
+    "title": "Topical Authority Content & PR",
+    "desc": "Authoritative content hubs, Toronto business citations, and editorial PR outreach establishing market leadership."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "title": "High-Converting Web Architecture",
+    "desc": "Speed-optimized React, Webflow, and WordPress websites built for sub-second load times and maximum lead conversion."
+  },
+  {
+    "icon": "FaVideo",
+    "title": "Commercial Video & Creative Production",
+    "desc": "Studio-grade commercial video ads, brand storytelling, and social reels tailored for the Greater Toronto market."
+  }
+],
+    whyHireOutsideTitle: "Why Toronto Brands Choose Webmok",
+    whyHireOutsideSubtitle: "THE GTA ADVANTAGE",
+    whyHireDesc1: "Toronto agencies on King West and Bay Street carry massive downtown overhead, charging C$8,000–C$18,000/month while treating mid-market accounts as secondary priorities.",
+    whyHireDesc2: "Webmok provides dedicated senior growth engineers, EST timezone alignment, and rapid sprint cycles at a high-ROI, value-driven investment.",
+    comparisonPoints: [
+  {
+    "feature": "Senior Account Attention",
+    "local": "Junior Account Managers",
+    "webmok": "Dedicated Senior Growth Directors"
+  },
+  {
+    "feature": "Monthly Retainer Cost",
+    "local": "C$8,000 – C$18,000 / month",
+    "webmok": "From C$1,080 – C$4,080 / month"
+  },
+  {
+    "feature": "Contract Commitment",
+    "local": "Mandatory 6-12 Months",
+    "webmok": "100% Flexible Month-to-Month"
+  },
+  {
+    "feature": "Turnaround Speed",
+    "local": "2-3 Weeks per Sprint",
+    "webmok": "48-72 Hours Agile Sprints"
+  },
+  {
+    "feature": "Reporting Telemetry",
+    "local": "Generic PDF Monthly Summaries",
+    "webmok": "Live 24/7 Real-Time Revenue Dashboards"
+  }
+],
+    resultsTitle: "GTA Performance Telemetry",
+    resultsSubtitle: "VERIFIABLE RESULTS",
+    resultsStats: [
+  {
+    "metric": "65+",
+    "label": "GTA Brands Scaled to Page 1"
+  },
+  {
+    "metric": "C$16M+",
+    "label": "Tracked Pipeline Revenue Generated"
+  },
+  {
+    "metric": "99.4%",
+    "label": "Toronto Client Satisfaction Rate"
+  },
+  {
+    "metric": "24/7",
+    "label": "EST Timezone Direct Support"
+  }
+],
+    marketInsightsTitle: "What We Know About Selling in the GTA",
+    marketInsightsSubtitle: "TORONTO DYNAMICS",
+    marketInsights: [
+  {
+    "title": "Intense Local Search Competition",
+    "desc": "Toronto is Canada’s most competitive digital landscape. Ranking on Google Maps requires precise micro-citations across GTA municipalities."
+  },
+  {
+    "title": "Diverse Demographic Micro-Markets",
+    "desc": "Marketing across York Region, Peel Region, and Downtown Toronto requires culturally aware, tailored messaging and segmentation."
+  },
+  {
+    "title": "B2B Procurement Cycles in the Financial District",
+    "desc": "Bay Street corporate buyers conduct extensive digital due diligence. Dense topical authority and case study proof are essential to close deals."
+  },
+  {
+    "title": "Mobile-First Inbound Call Conversion",
+    "desc": "Over 80% of local Toronto service searches happen on mobile devices. We build instant click-to-call mobile landing pages with zero friction."
+  }
+],
+    processSteps: [
+  {
+    "num": "01",
+    "title": "GTA Market & Competitor Audit",
+    "desc": "Analyzing search intent and competitor positioning across Toronto, Mississauga, and Markham."
+  },
+  {
+    "num": "02",
+    "title": "Hyper-Local Search Architecture",
+    "desc": "Building multi-municipality landing pages, localized schema markup, and Google Business Profiles."
+  },
+  {
+    "num": "03",
+    "title": "Omni-Channel Sprint Deployment",
+    "desc": "Launching high-intent Google Ads, local SEO optimizations, and targeted social campaigns."
+  },
+  {
+    "num": "04",
+    "title": "CRO & Revenue Attribution",
+    "desc": "Optimizing conversion funnels, tracking pipeline ROI, and scaling market share."
+  }
+],
+    industries: [
+  {
+    "icon": "FaBriefcase",
+    "name": "Financial & Corporate Services",
+    "desc": "Capturing corporate clients, wealth management leads, and B2B finance contracts."
+  },
+  {
+    "icon": "FaBuilding",
+    "name": "Real Estate & Condo Development",
+    "desc": "Dominating buyer acquisition for pre-construction condos and luxury homes in the GTA."
+  },
+  {
+    "icon": "FaUserMd",
+    "name": "Private Medical & Dental Clinics",
+    "desc": "Patient acquisition for cosmetic surgery, dental clinics, and wellness centers across Toronto."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "name": "Tech Startups & B2B SaaS",
+    "desc": "Driving ARR growth and user signups in the Toronto-Waterloo innovation corridor."
+  },
+  {
+    "icon": "FaCompass",
+    "name": "Legal & Professional Practices",
+    "desc": "Generating high-value litigation cases and corporate advisory retainers."
+  },
+  {
+    "icon": "FaShoppingCart",
+    "name": "Retail & Multi-Location Chains",
+    "desc": "Driving store foot traffic and e-commerce revenue across the Greater Toronto Area."
+  }
+],
     plans: [
   {
-    "name": "Toronto Starter",
-    "badge": "Local GTA",
-    "usdPrice": "849",
-    "inrPrice": "69,999",
-    "desc": "Perfect for local Toronto service providers, clinics, law firms, and boutique stores looking to rank #1 locally.",
+    "name": "Toronto Growth Core",
+    "badge": "Local Focus",
+    "usdPrice": "799",
+    "inrPrice": "64,999",
+    "desc": "Ideal for local Toronto and GTA businesses establishing dominant Google Maps and search visibility.",
     "features": [
       "Up to 20 High-Intent Toronto Keywords",
-      "Google Business Profile (Maps) Optimization",
-      "Local Citations & GTA Directory Submissions",
+      "Google Business Profile GTA Optimization",
+      "Local Citations & YellowPages Listings",
       "On-Page SEO & Content Tuning (4 Pages/mo)",
-      "Monthly Executive ROI Report"
+      "Monthly Executive ROI Report",
+      "Dedicated EST Account Director"
     ]
   },
   {
     "name": "Toronto Accelerator",
     "badge": "Most Popular",
     "highlight": true,
-    "usdPrice": "1,599",
-    "inrPrice": "1,29,999",
+    "usdPrice": "1,499",
+    "inrPrice": "1,19,999",
     "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and conversion rate optimization.",
     "features": [
-      "Up to 45 Keywords (GTA & Ontario Statewide)",
-      "Google Search Ads (PPC) Management",
-      "Multi-Location Landing Page Architecture",
-      "High-Authority Content Marketing (6 Articles/mo)",
+      "Up to 45 Multi-City GTA Keywords",
+      "Google Ads (PPC) Campaign Management",
+      "Multi-Municipality Landing Page Architecture",
+      "High-Authority Content Marketing (6 Posts/mo)",
       "Competitor Backlink Interception",
-      "Bi-Weekly Live Strategy Calls"
+      "Bi-Weekly Live Strategy Sessions"
     ]
   },
   {
-    "name": "Toronto Enterprise Pro",
-    "badge": "GTA Dominance",
-    "usdPrice": "3,199",
-    "inrPrice": "2,59,999",
-    "desc": "Full-scale market dominance for established Toronto enterprises, corporate firms, and fast-growing tech startups.",
+    "name": "Toronto Enterprise Monopoly",
+    "badge": "Category Leader",
+    "usdPrice": "2,999",
+    "inrPrice": "2,44,999",
+    "desc": "Full-scale market dominance for GTA enterprises, multi-location franchises, and high-growth brands.",
     "features": [
-      "Unlimited Keywords & Regional/National Footprint",
+      "GTA & Nationwide Keyword Domination",
       "Omni-Channel PPC (Google, Meta, LinkedIn)",
-      "Custom Web Redesign & High-Converting Funnels",
-      "Authoritative Canadian PR Backlinks & Outreach",
+      "Bespoke High-Converting Web Redesign",
+      "Tier-1 Canadian Media PR & Backlinks",
       "Dedicated Account Squad & Daily Slack Channel",
       "Custom Multi-Touch Attribution Modeling"
     ]
   }
 ],
+    testimonials: [
+  {
+    "quote": "Webmok put our commercial brokerage at the top of Google for competitive Toronto search terms. Our qualified deal pipeline grew by 240%.",
+    "author": "Alexander K.",
+    "role": "Principal Broker",
+    "company": "Toronto Commercial Realty Group",
+    "rating": 5
+  },
+  {
+    "quote": "Their PPC and SEO team reduced our cost per qualified demo by 40% while doubling our monthly inbound lead volume.",
+    "author": "Natalie S.",
+    "role": "VP of Marketing",
+    "company": "Toronto B2B FinTech Platform",
+    "rating": 5
+  }
+],
     faqs: [
   {
+    "q": "Why should a Toronto business choose Webmok over local downtown agencies?",
+    "a": "Webmok delivers senior-level agency execution at an agile, value-driven price point without bloated downtown overhead. You work directly with dedicated EST-timezone directors focused on measurable pipeline revenue."
+  },
+  {
     "q": "How fast can our Toronto business expect to rank on page 1 of Google?",
-    "a": "Google Maps optimizations and high-intent PPC campaigns generate calls within 14 to 30 days. Broad organic SEO keywords typically achieve major page #1 breakthroughs in 60 to 90 days."
+    "a": "Google Maps optimizations and high-intent PPC campaigns generate leads within 14 to 30 days. Broad organic SEO keywords achieve page #1 breakthroughs in 60 to 90 days as domain equity compounds."
   },
   {
-    "q": "Can you target specific GTA municipalities (e.g. Mississauga, Markham, Vaughan, Brampton)?",
-    "a": "Yes! We create dedicated multi-location SEO architectures tailored to each specific municipality and neighborhood across the GTA."
-  },
-  {
-    "q": "Do you manage Google Ads and social media advertising for Toronto companies?",
-    "a": "Yes, our team handles end-to-end paid search and paid social campaigns with daily bid optimization, negative keyword filtering, and A/B testing."
+    "q": "Can you target multiple GTA municipalities (e.g. Mississauga, Markham, Vaughan, Oakville)?",
+    "a": "Yes! We build dedicated multi-location SEO architectures tailored to each specific municipality and commercial district across the GTA."
   },
   {
     "q": "Are there any long-term contract lock-ins?",
-    "a": "Zero mandatory lock-in. All our Toronto digital marketing packages are month-to-month."
+    "a": "Zero mandatory lock-in. All our Toronto digital marketing packages are flexible month-to-month agreements."
   }
 ]
   };
@@ -121,14 +309,14 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-intl-toronto-page-root">
       {/* 1. HERO SECTION */}
-      <section className="wm-intl-toronto-hero-section">
+      <section className="wm-intl-toronto-hero-section" id="overview">
         <div className="wm-intl-toronto-container">
           <div className="wm-intl-toronto-hero-grid">
             <div className="wm-intl-toronto-hero-left">
               <span className="wm-intl-toronto-hero-est-tag">{pageData.tagline}</span>
 
               <h1 className="wm-intl-toronto-hero-title-dual">
-                <span className="wm-intl-toronto-hero-italic-gold">Accelerate Market Dominance with</span>
+                <span className="wm-intl-toronto-hero-italic-gold">{pageData.heroItalic}</span>
                 <span className="wm-intl-toronto-hero-bold-white">{pageData.heroHighlight}</span>
               </h1>
 
@@ -139,12 +327,12 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-intl-toronto-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Audit`)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
                 >
-                  Get Free Strategy Audit <FaPaperPlane />
+                  Get Free Digital Proposal <FaPaperPlane />
                 </button>
                 <a href="#pricing-plans" className="wm-intl-toronto-btn-outline">
-                  View {pageData.city} Packages <FaChevronRight />
+                  View {pageData.city} Rates <FaChevronRight />
                 </a>
               </div>
             </div>
@@ -162,7 +350,7 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-intl-toronto-trust-card">
                 <div className="wm-intl-toronto-tcard-info">
                   <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Agency</p>
+                  <p>Upwork Top 1% Verified Agency</p>
                 </div>
                 <div className="wm-intl-toronto-tcard-badge wm-intl-toronto-badge-upwork">up</div>
               </div>
@@ -196,7 +384,25 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
+      {/* 2. STICKY IN-PAGE SUB-NAV */}
+      <nav className="wm-intl-toronto-inpage-nav">
+        <div className="wm-intl-toronto-container">
+          <div className="wm-intl-toronto-inpage-nav-inner">
+            <a href="#overview" className="wm-intl-toronto-inpage-nav-link">Overview</a>
+            <a href="#services" className="wm-intl-toronto-inpage-nav-link">Services</a>
+            <a href="#why-us" className="wm-intl-toronto-inpage-nav-link">Why Choose Us</a>
+            <a href="#results" className="wm-intl-toronto-inpage-nav-link">Live Telemetry</a>
+            <a href="#market-dynamics" className="wm-intl-toronto-inpage-nav-link">Market Insights</a>
+            <a href="#process" className="wm-intl-toronto-inpage-nav-link">Our Approach</a>
+            <a href="#industries" className="wm-intl-toronto-inpage-nav-link">Industries</a>
+            <a href="#pricing-plans" className="wm-intl-toronto-inpage-nav-link">Published Rates</a>
+            <a href="#testimonials" className="wm-intl-toronto-inpage-nav-link">Client Reviews</a>
+            <a href="#faqs" className="wm-intl-toronto-inpage-nav-link">FAQs</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* 3. STATS STRIP */}
       <section className="wm-intl-toronto-stats-strip">
         <div className="wm-intl-toronto-container">
           <div className="wm-intl-toronto-stats-grid">
@@ -210,191 +416,192 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3. INTRO SECTION */}
-      <section className="wm-intl-toronto-intro-section">
+      {/* 4. SERVICES SUITE */}
+      <section className="wm-intl-toronto-services-section" id="services">
         <div className="wm-intl-toronto-container">
-          <div className="wm-intl-toronto-intro-grid">
-            <div className="wm-intl-toronto-intro-left">
-              <span className="wm-intl-toronto-intro-tag">GTA MARKET SPECIALISTS</span>
-              <h2 className="wm-intl-toronto-intro-title">
-                High-Impact Digital Growth for 
-                <span>Toronto Enterprises</span>
-              </h2>
-            </div>
-            <div className="wm-intl-toronto-intro-right">
-              <p>
-                <span>Webmok Technologies is a premier global digital partner</span> Toronto is Canada’s commercial epicenter. Webmok equips Toronto businesses with the technical SEO precision, Google Ads agility, and conversion-optimized web assets required to dominate the GTA marketplace.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. BACKED BY NUMBERS SECTION */}
-      <section className="wm-intl-toronto-numbers-section">
-        <div className="wm-intl-toronto-container">
-          <div className="wm-intl-toronto-numbers-heading">
-            <span className="wm-intl-toronto-numbers-subtitle">GTA TELEMETRY</span>
-            <h2>
-              Proven Track Record Across the 
-              <span>Greater Toronto Area</span>
+          <div className="wm-intl-toronto-sec-heading-center">
+            <span className="wm-intl-toronto-sec-badge">COMPREHENSIVE CAPABILITIES</span>
+            <h2 className="wm-intl-toronto-sec-h2">
+              Our {pageData.city} <span>Digital Marketing Services</span>
             </h2>
+            <div className="wm-intl-toronto-sec-bar-center"></div>
           </div>
 
-          <div className="wm-intl-toronto-numstats-grid">
-            <div key="0" className="wm-intl-toronto-numstat-item">
-              <div className="wm-intl-toronto-numstat-number">{"65+"}</div>
-              <div className="wm-intl-toronto-numstat-line"></div>
-              <p>{"Toronto Brands Scaled"}</p>
-            </div>
-            <div key="1" className="wm-intl-toronto-numstat-item">
-              <div className="wm-intl-toronto-numstat-number">{"C$16M+"}</div>
-              <div className="wm-intl-toronto-numstat-line"></div>
-              <p>{"Tracked Pipeline Revenue"}</p>
-            </div>
-            <div key="2" className="wm-intl-toronto-numstat-item">
-              <div className="wm-intl-toronto-numstat-number">{"99.4%"}</div>
-              <div className="wm-intl-toronto-numstat-line"></div>
-              <p>{"Client Retention Rate"}</p>
-            </div>
-            <div key="3" className="wm-intl-toronto-numstat-item">
-              <div className="wm-intl-toronto-numstat-number">{"< 28s"}</div>
-              <div className="wm-intl-toronto-numstat-line"></div>
-              <p>{"Direct Response Time"}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INCLUSION / CAPABILITIES SECTION */}
-      <section className="wm-intl-toronto-include-section">
-        <div className="wm-intl-toronto-container">
-          <div className="wm-intl-toronto-include-grid">
-            <div className="wm-intl-toronto-include-content">
-              <span className="wm-intl-toronto-include-tag">FULL GTA SUITE</span>
-              <h2 className="wm-intl-toronto-include-title">
-                What Our Toronto Digital 
-                <span>Marketing Packages Include</span>
-              </h2>
-              <p>We combine hyper-local GTA Google Maps ranking, high-intent Google Search and Meta Ads, technical SEO fixes, and high-speed web engineering.</p>
-              <p>You get a dedicated digital squad focused strictly on driving qualified inbound leads and revenue.</p>
-
-              <div className="wm-intl-toronto-feature-list">
-                <div key="Hyper-Local GTA & Multi-Borough SEO (Downtown, North York, Mississauga, etc.)" className="wm-intl-toronto-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Hyper-Local GTA & Multi-Borough SEO (Downtown, North York, Mississauga, etc.)"}</span>
+          <div className="wm-intl-toronto-services-grid">
+            {pageData.services.map((svc, i) => (
+              <div key={i} className="wm-intl-toronto-service-card">
+                <div className="wm-intl-toronto-svc-icon">
+                  {svc.icon === 'FaSearch' && <FaSearch />}
+                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                  {svc.icon === 'FaPenNib' && <FaPenNib />}
+                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {svc.icon === 'FaVideo' && <FaVideo />}
+                  {svc.icon === 'FaChartLine' && <FaChartLine />}
+                  {svc.icon === 'FaCompass' && <FaCompass />}
                 </div>
-                <div key="High-Intent Google Search & Local Services Ads (LSA)" className="wm-intl-toronto-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"High-Intent Google Search & Local Services Ads (LSA)"}</span>
-                </div>
-                <div key="Targeted Social Media Ad Campaigns (Meta, LinkedIn & TikTok)" className="wm-intl-toronto-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Targeted Social Media Ad Campaigns (Meta, LinkedIn & TikTok)"}</span>
-                </div>
-                <div key="High-Speed Conversion Landing Page Development" className="wm-intl-toronto-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"High-Speed Conversion Landing Page Development"}</span>
-                </div>
-                <div key="Real-Time Telemetry Dashboard & Revenue Attribution" className="wm-intl-toronto-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Real-Time Telemetry Dashboard & Revenue Attribution"}</span>
-                </div>
-                <div key="Dedicated EST Timezone Senior Account Director" className="wm-intl-toronto-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Dedicated EST Timezone Senior Account Director"}</span>
-                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. WHY HIRE OUTSIDE */}
+      <section className="wm-intl-toronto-whyoutside-section" id="why-us">
+        <div className="wm-intl-toronto-container">
+          <div className="wm-intl-toronto-whyoutside-grid">
+            <div className="wm-intl-toronto-whyoutside-text">
+              <span className="wm-intl-toronto-sec-badge">{pageData.whyHireOutsideSubtitle}</span>
+              <h2>{pageData.whyHireOutsideTitle}</h2>
+              <p>{pageData.whyHireDesc1}</p>
+              <p>{pageData.whyHireDesc2}</p>
             </div>
 
-            <div className="wm-intl-toronto-include-image">
-              <img src="/onpage2.avif" alt="Toronto Digital Marketing Agency" />
+            <div className="wm-intl-toronto-compare-table">
+              <div className="wm-intl-toronto-compare-row wm-intl-toronto-compare-hdr">
+                <div>Deliverable / Metric</div>
+                <div>Typical Local Agency</div>
+                <div>Webmok Advantage</div>
+              </div>
+              {pageData.comparisonPoints.map((cp, idx) => (
+                <div key={idx} className="wm-intl-toronto-compare-row">
+                  <div className="wm-intl-toronto-compare-feat">{cp.feature}</div>
+                  <div className="wm-intl-toronto-compare-local">{cp.local}</div>
+                  <div className="wm-intl-toronto-compare-wm">{cp.webmok}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. IMPORTANCE SECTION */}
-      <section className="wm-intl-toronto-importance-section">
+      {/* 6. RESULTS TELEMETRY */}
+      <section className="wm-intl-toronto-results-section" id="results">
         <div className="wm-intl-toronto-container">
-          <div className="wm-intl-toronto-importance-box">
-            <h2 className="wm-intl-toronto-importance-title">
-              Why Digital Dominance is Essential in 
-              <span>Toronto</span>
+          <div className="wm-intl-toronto-sec-heading-center">
+            <span className="wm-intl-toronto-sec-badge">{pageData.resultsSubtitle}</span>
+            <h2 className="wm-intl-toronto-sec-h2">{pageData.resultsTitle}</h2>
+            <div className="wm-intl-toronto-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-toronto-results-grid">
+            {pageData.resultsStats.map((rs, i) => (
+              <div key={i} className="wm-intl-toronto-result-card">
+                <strong>{rs.metric}</strong>
+                <p>{rs.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. MARKET DYNAMICS */}
+      <section className="wm-intl-toronto-market-section" id="market-dynamics">
+        <div className="wm-intl-toronto-container">
+          <div className="wm-intl-toronto-sec-heading-center">
+            <span className="wm-intl-toronto-sec-badge">{pageData.marketInsightsSubtitle}</span>
+            <h2 className="wm-intl-toronto-sec-h2">{pageData.marketInsightsTitle}</h2>
+            <div className="wm-intl-toronto-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-toronto-market-grid">
+            {pageData.marketInsights.map((mi, i) => (
+              <div key={i} className="wm-intl-toronto-market-card">
+                <h4>{mi.title}</h4>
+                <p>{mi.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 4-STEP PROCESS */}
+      <section className="wm-intl-toronto-process-section" id="process">
+        <div className="wm-intl-toronto-container">
+          <div className="wm-intl-toronto-sec-heading-center">
+            <span className="wm-intl-toronto-sec-badge">OUR PROCESS & APPROACH</span>
+            <h2 className="wm-intl-toronto-sec-h2">
+              Our 4-Step <span>Agile Growth Framework</span>
             </h2>
-
-            <div className="wm-intl-toronto-importance-content">
-              <p>The Greater Toronto Area is home to over 6 million consumers and thousands of competitive businesses. Capturing top Google rankings and high-intent paid traffic is the fastest path to market leadership.</p>
-              <p>Without aggressive search optimization, local GTA competitors will capture your highest-value customers.</p>
-            </div>
+            <div className="wm-intl-toronto-sec-bar-center"></div>
           </div>
-        </div>
-      </section>
 
-      {/* 7. WHY WEBMOK SECTION */}
-      <section className="wm-intl-toronto-why-section">
-        <div className="wm-intl-toronto-container">
-          <div className="wm-intl-toronto-why-grid">
-            <div className="wm-intl-toronto-why-content">
-              <span className="wm-intl-toronto-why-tag">THE WEBMOK DIFFERENCE</span>
-              <h2 className="wm-intl-toronto-why-title">
-                Engineered for Toronto. 
-                <span className="s1"> Proven Speed.</span>{' '}
-                <span className="s2">Compounding Revenue.</span>
-              </h2>
-
-              <div className="wm-intl-toronto-why-text">
-                <p>We don’t believe in generic marketing templates. Every Toronto campaign is engineered around your specific sector economics, competitor gaps, and localized search intent.</p>
-                <p>With transparent monthly reporting and zero mandatory lock-in, we keep our focus 100% on your bottom-line growth.</p>
+          <div className="wm-intl-toronto-process-grid">
+            {pageData.processSteps.map((ps, i) => (
+              <div key={i} className="wm-intl-toronto-process-card">
+                <span className="wm-intl-toronto-proc-num">STEP {ps.num}</span>
+                <h4>{ps.title}</h4>
+                <p>{ps.desc}</p>
               </div>
-            </div>
-
-            <div className="wm-intl-toronto-why-image">
-              <img src="/onpage3.avif" alt="Why Webmok" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. PRICING PLANS SECTION */}
+      {/* 9. INDUSTRIES */}
+      <section className="wm-intl-toronto-industries-section" id="industries">
+        <div className="wm-intl-toronto-container">
+          <div className="wm-intl-toronto-sec-heading-center">
+            <span className="wm-intl-toronto-sec-badge">WHO WE WORK WITH</span>
+            <h2 className="wm-intl-toronto-sec-h2">
+              Specialized Industry <span>Growth Solutions</span>
+            </h2>
+            <div className="wm-intl-toronto-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-toronto-industries-grid">
+            {pageData.industries.map((ind, i) => (
+              <div key={i} className="wm-intl-toronto-industry-card">
+                <div className="wm-intl-toronto-ind-icon">
+                  {ind.icon === 'FaBuilding' && <FaBuilding />}
+                  {ind.icon === 'FaUserMd' && <FaUserMd />}
+                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                  {ind.icon === 'FaUtensils' && <FaUtensils />}
+                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {ind.icon === 'FaCompass' && <FaCompass />}
+                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                </div>
+                <h4>{ind.name}</h4>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. PRICING PLANS */}
       <section className="wm-intl-toronto-pricing-section" id="pricing-plans">
         <div className="wm-intl-toronto-container">
-          <div className="wm-intl-toronto-sec-header">
-            <span className="wm-intl-toronto-sec-subtitle">Transparent Monthly Plans</span>
-            <h2 className="wm-intl-toronto-sec-title">Flexible Toronto Growth Packages with Zero Lock-In</h2>
-            <div className="wm-intl-toronto-sec-bar"></div>
+          <div className="wm-intl-toronto-sec-heading-center">
+            <span className="wm-intl-toronto-sec-badge">PUBLISHED RATES · ZERO LOCK-IN</span>
+            <h2 className="wm-intl-toronto-sec-h2">
+              Transparent {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-toronto-sec-bar-center"></div>
 
             {/* Currency Switcher */}
             <div className="wm-intl-toronto-currency-toggle">
-              
-              <button
-                type="button"
-                className={`wm-intl-toronto-curr-btn ${currency === 'CAD' ? 'active' : ''}`}
-                onClick={() => setCurrency('CAD')}
-              >
-                C$ CAD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-toronto-curr-btn ${currency === 'USD' ? 'active' : ''}`}
-                onClick={() => setCurrency('USD')}
-              >
-                $ USD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-toronto-curr-btn ${currency === 'INR' ? 'active' : ''}`}
-                onClick={() => setCurrency('INR')}
-              >
-                ₹ INR
-              </button>
+              {[{"code":"CAD","symbol":"C$","rate":1.36},{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  className={`wm-intl-toronto-curr-btn ${currency === c.code ? 'active' : ''}`}
+                  onClick={() => setCurrency(c.code)}
+                >
+                  {c.symbol} {c.code}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Pricing Grid */}
           <div className="wm-intl-toronto-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : `$${plan.usdPrice}`;
+              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
               return (
                 <div key={i} className={`wm-intl-toronto-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (
@@ -442,93 +649,80 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 9. BENEFITS SECTION */}
-      <section className="wm-intl-toronto-benefits-section">
+      {/* 11. TESTIMONIALS */}
+      <section className="wm-intl-toronto-testimonials-section" id="testimonials">
         <div className="wm-intl-toronto-container">
-          <div className="wm-intl-toronto-benefits-grid">
-            <div className="wm-intl-toronto-benefits-content">
-              <span className="wm-intl-toronto-benefits-tag">MEASURABLE OUTCOMES</span>
-              <h2 className="wm-intl-toronto-benefits-title">
-                Transforming Toronto Businesses into 
-                <span>Industry Leaders</span>
-              </h2>
+          <div className="wm-intl-toronto-sec-heading-center">
+            <span className="wm-intl-toronto-sec-badge">CLIENT SUCCESS STORIES</span>
+            <h2 className="wm-intl-toronto-sec-h2">
+              What {pageData.city} <span>Leaders Say About Webmok</span>
+            </h2>
+            <div className="wm-intl-toronto-sec-bar-center"></div>
+          </div>
 
-              <div className="wm-intl-toronto-benefits-text">
-                <p>Our tailored Toronto digital marketing campaigns produce compounding organic rankings that lower your customer acquisition costs over time.</p>
-                <p>We build digital assets that continuously funnel qualified sales calls and transactions into your pipeline.</p>
-              </div>
-
-              <div className="wm-intl-toronto-benefits-points">
-                <div key="Top 3 Google Maps Rankings Across the Greater Toronto Area" className="wm-intl-toronto-benefit-point">
-                  <span className="wm-intl-toronto-benefit-icon">✓</span>
-                  <span>{"Top 3 Google Maps Rankings Across the Greater Toronto Area"}</span>
+          <div className="wm-intl-toronto-testimonials-grid">
+            {pageData.testimonials.map((t, idx) => (
+              <div key={idx} className="wm-intl-toronto-testimonial-card">
+                <div className="wm-intl-toronto-t-stars">
+                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
-                <div key="Average 35%+ Reduction in Cost Per Inbound Lead" className="wm-intl-toronto-benefit-point">
-                  <span className="wm-intl-toronto-benefit-icon">✓</span>
-                  <span>{"Average 35%+ Reduction in Cost Per Inbound Lead"}</span>
-                </div>
-                <div key="Substantial Organic Keyword Footprint Expansion" className="wm-intl-toronto-benefit-point">
-                  <span className="wm-intl-toronto-benefit-icon">✓</span>
-                  <span>{"Substantial Organic Keyword Footprint Expansion"}</span>
-                </div>
-                <div key="Transparent Telemetry with Real-Time Revenue Tracking" className="wm-intl-toronto-benefit-point">
-                  <span className="wm-intl-toronto-benefit-icon">✓</span>
-                  <span>{"Transparent Telemetry with Real-Time Revenue Tracking"}</span>
+                <p className="wm-intl-toronto-t-quote">"{t.quote}"</p>
+                <div className="wm-intl-toronto-t-author">
+                  <h5>{t.author}</h5>
+                  <p>{t.role} · {t.company}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="wm-intl-toronto-benefits-image">
-              <img src="/onpagebenifts.jpg" alt="Toronto Digital Marketing Agency" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. ADVANTAGE SECTION */}
+      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
       <section className="wm-intl-toronto-advantage-section">
         <div className="wm-intl-toronto-container">
-          <div className="wm-intl-toronto-sec-header">
-            <span className="wm-intl-toronto-sec-subtitle">Why Partner With Us</span>
-            <h2 className="wm-intl-toronto-sec-title">The WebMok Advantage in Global Digital Execution</h2>
-            <div className="wm-intl-toronto-sec-bar"></div>
+          <div className="wm-intl-toronto-sec-heading-center">
+            <span className="wm-intl-toronto-sec-badge">WHY CHOOSE WEBMOK</span>
+            <h2 className="wm-intl-toronto-sec-h2">The Webmok Operational Guarantees</h2>
+            <div className="wm-intl-toronto-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-toronto-advantage-grid">
             <div className="wm-intl-toronto-advantage-card">
               <div className="wm-intl-toronto-aicon"><FaShieldAlt /></div>
-              <h4>100% Proven Method</h4>
-              <p>Strict white-hat execution that protects your brand equity and produces compounding organic growth.</p>
+              <h4>100% White-Hat Proven Methods</h4>
+              <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
             </div>
 
             <div className="wm-intl-toronto-advantage-card">
               <div className="wm-intl-toronto-aicon"><FaRocket /></div>
-              <h4>Full Telemetry Dashboards</h4>
+              <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
             </div>
 
             <div className="wm-intl-toronto-advantage-card">
               <div className="wm-intl-toronto-aicon"><FaHeadset /></div>
               <h4>Dedicated Senior Squad</h4>
-              <p>Work directly with dedicated senior strategists and technical engineers with direct phone & WhatsApp support.</p>
+              <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
             </div>
 
             <div className="wm-intl-toronto-advantage-card">
               <div className="wm-intl-toronto-aicon"><FaClock /></div>
               <h4>Zero Mandatory Lock-In</h4>
-              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable growth.</p>
+              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. FAQS ACCORDION */}
-      <section className="wm-intl-toronto-faqs-section">
+      {/* 13. REGIONAL FAQS */}
+      <section className="wm-intl-toronto-faqs-section" id="faqs">
         <div className="wm-intl-toronto-container">
-          <div className="wm-intl-toronto-sec-header">
-            <span className="wm-intl-toronto-sec-subtitle">Frequently Asked Questions</span>
-            <h2 className="wm-intl-toronto-sec-title">Common Queries About Our Toronto Growth Packages</h2>
-            <div className="wm-intl-toronto-sec-bar"></div>
+          <div className="wm-intl-toronto-sec-heading-center">
+            <span className="wm-intl-toronto-sec-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 className="wm-intl-toronto-sec-h2">
+              Common Queries About Our {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-toronto-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-toronto-faqs-wrap">
@@ -553,12 +747,12 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. BOTTOM CONVERSION BANNER */}
+      {/* 14. BOTTOM CONVERSION BANNER */}
       <section className="wm-intl-toronto-bottom-banner">
         <div className="wm-intl-toronto-container">
           <div className="wm-intl-toronto-banner-inner">
             <div className="wm-intl-toronto-banner-text">
-              <h2>Ready to Accelerate Growth in Toronto?</h2>
+              <h2>Ready to Accelerate Revenue in {pageData.city}?</h2>
               <p>Schedule a quick 1-on-1 strategy consultation with our senior digital directors today.</p>
             </div>
             <div className="wm-intl-toronto-banner-btns">
@@ -574,7 +768,7 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 className="wm-intl-toronto-bbtn-quote"
                 onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Bottom Banner Inquiry`)}
               >
-                Get Custom Quote <FaArrowRight />
+                Get Free Custom Proposal <FaArrowRight />
               </button>
             </div>
           </div>

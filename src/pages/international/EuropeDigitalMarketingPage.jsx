@@ -13,7 +13,20 @@ import {
   FaGoogle,
   FaChevronRight,
   FaHeadset,
-  FaClock
+  FaClock,
+  FaSearch,
+  FaBullhorn,
+  FaShareAlt,
+  FaPenNib,
+  FaLaptopCode,
+  FaVideo,
+  FaChartLine,
+  FaBuilding,
+  FaUserMd,
+  FaShoppingCart,
+  FaUtensils,
+  FaBriefcase,
+  FaCompass
 } from 'react-icons/fa';
 import './EuropeDigitalMarketingPage.css';
 
@@ -28,92 +41,267 @@ const EuropeDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   const pageData = {
     name: "Europe Digital Marketing Agency",
     city: "Europe",
-    region: "European Union & Pan-Europe",
-    tagline: "PAN-EUROPEAN DIGITAL GROWTH AGENCY · EUROPE & EU",
-    heroHighlight: "Europe Digital Marketing & SEO Agency",
-    leadDesc: "Expand across European markets with multilingual SEO, GDPR-compliant paid acquisition, and cross-border digital growth strategies.",
-    bodyDesc: "Serving Germany, France, Netherlands, Nordics, Spain, Italy, and across the EU—Webmok engineers scalable, cross-border digital campaigns that capture European market demand.",
+    region: "European Union & Continental Europe",
+    tagline: "CONTINENTAL EUROPEAN DIGITAL AGENCY · EU",
+    heroHighlight: "Europe Digital Marketing Agency",
+    heroItalic: "Accelerate Pan-European Market Expansion with",
+    leadDesc: "Scale across Germany, France, Netherlands, Nordics, and Spain with GDPR-compliant multi-lingual SEO, precision Google Ads, and high-conversion web development.",
+    bodyDesc: "We help European enterprises build dominant cross-border digital pipelines, rank on page 1 across multiple language markets, and scale revenue across the EU single market.",
     stats: [
   {
-    "num": "450%",
-    "label": "Average Pan-Europe Traffic Surge"
+    "num": "410%",
+    "label": "Average EU Client Traffic Growth"
   },
   {
-    "num": "5.8x",
-    "label": "Average ROAS on EU Paid Media"
+    "num": "5.6x",
+    "label": "Average ROAS on Paid Media"
+  },
+  {
+    "num": "85+",
+    "label": "Pan-European Brands Scaled"
   },
   {
     "num": "100%",
-    "label": "Strict GDPR & ePrivacy Compliance"
+    "label": "GDPR & ePrivacy Compliant"
+  }
+],
+    services: [
+  {
+    "icon": "FaSearch",
+    "title": "Multi-Lingual Pan-European SEO",
+    "desc": "Targeted keyword dominance across English, German, French, Dutch, and Spanish search engines with hreflang international SEO architecture."
   },
   {
-    "num": "12+",
-    "label": "European Languages Supported"
+    "icon": "FaBullhorn",
+    "title": "Precision Google Ads & Shopping",
+    "desc": "Cross-border PPC funnels, Performance Max campaigns, and localized shopping ads optimized for EU consumer purchasing behaviors."
+  },
+  {
+    "icon": "FaShareAlt",
+    "title": "Pan-European Social Ads (Meta & LinkedIn)",
+    "desc": "B2B LinkedIn ABM funnels and localized Meta/TikTok ad campaigns engaging buyers across major European business centers."
+  },
+  {
+    "icon": "FaPenNib",
+    "title": "Multi-Language Content & Digital PR",
+    "desc": "Native-speaker content hubs and authoritative digital PR outreach earning high-DA backlinks from leading European media outlets."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "title": "GDPR-Compliant Web Engineering",
+    "desc": "Lightning-fast, mobile-first web platforms built with server-side cookie consent, zero tracking leaks, and sub-second load speeds."
+  },
+  {
+    "icon": "FaVideo",
+    "title": "Visual Storytelling & Video Ads",
+    "desc": "Studio-grade video production and commercial creative assets crafted for Europe’s diverse cultural and aesthetic standards."
+  }
+],
+    whyHireOutsideTitle: "The Cross-Border European Advantage with Webmok",
+    whyHireOutsideSubtitle: "CONTINENTAL SCALE · STRICT COMPLIANCE",
+    whyHireDesc1: "European agencies in London, Berlin, or Paris charge €10,000–€25,000/month while struggling to deliver agile multi-lingual execution outside their domestic market.",
+    whyHireDesc2: "Webmok provides true pan-European multi-lingual capability, CET timezone alignment, and transparent month-to-month contracts at a high-ROI price point.",
+    comparisonPoints: [
+  {
+    "feature": "Multi-Language Capability",
+    "local": "Single Language Domestic Focus",
+    "webmok": "Turnkey Multi-Lingual EU Architecture (Hreflang)"
+  },
+  {
+    "feature": "GDPR & Privacy Architecture",
+    "local": "Basic Cookie Banners",
+    "webmok": "Full Server-Side Privacy & Cookie Compliance"
+  },
+  {
+    "feature": "Monthly Investment",
+    "local": "€10,000 – €25,000 / month",
+    "webmok": "From €740 – €2,760 / month (High ROI)"
+  },
+  {
+    "feature": "Sprint Turnaround",
+    "local": "Slow 3-4 Week Cycles",
+    "webmok": "48-72 Hour Agile Sprint Cycles"
+  },
+  {
+    "feature": "Contract Commitment",
+    "local": "12-Month Mandatory Lock-In",
+    "webmok": "100% Flexible Month-to-Month"
+  }
+],
+    resultsTitle: "European Performance Telemetry",
+    resultsSubtitle: "VERIFIABLE PAN-EUROPEAN RESULTS",
+    resultsStats: [
+  {
+    "metric": "85+",
+    "label": "Pan-European Brands Scaled"
+  },
+  {
+    "metric": "€19M+",
+    "label": "Tracked Client Revenue Generated"
+  },
+  {
+    "metric": "99.3%",
+    "label": "EU Client Retention Rate"
+  },
+  {
+    "metric": "24/7",
+    "label": "CET Timezone Strategic Support"
+  }
+],
+    marketInsightsTitle: "What We Know About Marketing in Europe",
+    marketInsightsSubtitle: "EU MARKET DYNAMICS",
+    marketInsights: [
+  {
+    "title": "Hreflang & Multi-Region Technical SEO",
+    "desc": "Ranking across Germany (.de), France (.fr), Netherlands (.nl), and Spain (.es) requires flawless hreflang XML tags and ccTLD structure."
+  },
+  {
+    "title": "Strict GDPR & Cookie Consent Enforcements",
+    "desc": "European privacy authorities enforce strict tracking consent. We build server-side GTM architectures that maintain accurate conversion attribution."
+  },
+  {
+    "title": "Localized Cultural Tone & Payment Gateways",
+    "desc": "German buyers prefer invoice payments and technical proof; Dutch buyers prefer iDEAL; French buyers demand native linguistic elegance."
+  },
+  {
+    "title": "Cross-Border B2B Procurement",
+    "desc": "European enterprise software and industrial sales require multi-currency pricing, VAT transparency, and comprehensive product comparison assets."
+  }
+],
+    processSteps: [
+  {
+    "num": "01",
+    "title": "Cross-Border Market Audit",
+    "desc": "Analyzing search volume and competitor penetration across Germany, UK, France, and Nordics."
+  },
+  {
+    "num": "02",
+    "title": "Multi-Lingual Architecture",
+    "desc": "Configuring hreflang tags, localized subdirectories, and GDPR-compliant tracking."
+  },
+  {
+    "num": "03",
+    "title": "Pan-European Sprints",
+    "desc": "Deploying multi-lingual Google Ads, local search optimization, and LinkedIn B2B funnels."
+  },
+  {
+    "num": "04",
+    "title": "Attribution & Country Scaling",
+    "desc": "Tracking conversion rates per country, optimizing ROAS, and expanding into new EU territories."
+  }
+],
+    industries: [
+  {
+    "icon": "FaLaptopCode",
+    "name": "B2B SaaS & Tech Startups",
+    "desc": "Accelerating pan-European software demo signups and cross-border enterprise ARR."
+  },
+  {
+    "icon": "FaBriefcase",
+    "name": "Industrial, Manufacturing & Engineering",
+    "desc": "Capturing high-value B2B procurement contracts and distributor inquiries across the EU."
+  },
+  {
+    "icon": "FaShoppingCart",
+    "name": "Cross-Border E-Commerce",
+    "desc": "Scaling Shopify and custom multilingual webshops with localized checkout flows."
+  },
+  {
+    "icon": "FaBuilding",
+    "name": "Real Estate & Luxury Tourism",
+    "desc": "Capturing international luxury property buyers and holiday resort bookings."
+  },
+  {
+    "icon": "FaUserMd",
+    "name": "HealthTech & Medical Devices",
+    "desc": "Navigating European regulatory compliance to drive clinical adoption."
+  },
+  {
+    "icon": "FaCompass",
+    "name": "Corporate Advisory & Finance",
+    "desc": "Establishing thought leadership for European M&A, legal, and financial consultancies."
   }
 ],
     plans: [
   {
-    "name": "Europe Single Market",
-    "badge": "Target Country",
-    "usdPrice": "899",
-    "inrPrice": "72,999",
-    "desc": "Ideal for businesses focusing on dominating a single European country (e.g. Germany, France, or Netherlands).",
+    "name": "Europe Starter Scale",
+    "badge": "Single Country Focus",
+    "usdPrice": "799",
+    "inrPrice": "64,999",
+    "desc": "Ideal for European businesses targeting a single domestic language market like Germany, France, or Netherlands.",
     "features": [
-      "Up to 25 Target Keywords in Local Language",
-      "Local Country Domain & Hreflang Setup",
-      "Full On-Page & Schema SEO Optimization",
-      "GDPR-Compliant Analytics & Consent Tuning",
-      "Monthly Executive Performance Report"
+      "Up to 25 Target Language Keywords",
+      "Google Business Profile Geo-Optimization",
+      "Local Citations & Directory Synchronization",
+      "Technical Core Web Vitals & GDPR Audit",
+      "Monthly Executive ROI & Revenue Report",
+      "Dedicated CET Timezone Account Lead"
     ]
   },
   {
-    "name": "Pan-Europe Accelerator",
+    "name": "Pan-European Accelerator",
     "badge": "Most Popular",
     "highlight": true,
-    "usdPrice": "1,799",
-    "inrPrice": "1,49,999",
-    "desc": "Multi-country expansion across 2-4 European territories with combined multilingual SEO and Google Ads management.",
+    "usdPrice": "1,599",
+    "inrPrice": "1,29,999",
+    "desc": "Comprehensive multi-country campaign combining multi-lingual SEO, Google Ads, and conversion rate optimization.",
     "features": [
-      "Up to 60 Keywords Across Multiple EU Markets",
-      "Google Ads (PPC) Management in Target Languages",
-      "Multi-Country Landing Page Architecture",
-      "High-Authority European Content Hubs (8 Posts/mo)",
-      "Competitor Backlink Interception across EU",
-      "Bi-Weekly Live Strategy Sessions"
+      "Up to 55 Multi-Country European Keywords",
+      "Multi-Lingual Google Ads (PPC) Management",
+      "Cross-Border Hreflang SEO Architecture",
+      "Native Content Marketing (6 Posts/mo)",
+      "Competitor Backlink Interception",
+      "Bi-Weekly Live Strategic Consultation"
     ]
   },
   {
     "name": "Europe Enterprise Monopoly",
-    "badge": "EU Dominance",
-    "usdPrice": "3,499",
-    "inrPrice": "2,89,999",
-    "desc": "Full-scale market dominance for European brands, multinational corporations, and cross-border e-commerce powerhouses.",
+    "badge": "Continental Leader",
+    "usdPrice": "2,999",
+    "inrPrice": "2,44,999",
+    "desc": "Full-scale pan-European market takeover for multi-national brands, tech platforms, and enterprise e-commerce.",
     "features": [
-      "Pan-European Keyword Domination (100+ Keywords)",
-      "Omni-Channel PPC (Google, Meta, LinkedIn across Europe)",
-      "Bespoke Multilingual Web Platform / Headless CMS",
-      "Tier-1 European Media & PR Backlink Placements",
-      "Dedicated Account Squad & Daily Slack Channel",
-      "Custom Multi-Country Revenue Attribution"
+      "Continental Keyword Takeover (100+ Keywords)",
+      "Full-Funnel Omni-Channel Ads (Google, Meta, LinkedIn)",
+      "Custom High-Converting Multi-Lingual Web App",
+      "Tier-1 European Media PR & Backlinks",
+      "Dedicated Senior Account Squad & Daily Slack Channel",
+      "Server-Side Multi-Touch Attribution Modeling"
     ]
+  }
+],
+    testimonials: [
+  {
+    "quote": "Webmok scaled our SaaS platform across Germany, France, and the UK simultaneously. Our monthly demo requests tripled within four months.",
+    "author": "Henrik V.",
+    "role": "Chief Commercial Officer",
+    "company": "European Cloud Security Platform",
+    "rating": 5
+  },
+  {
+    "quote": "Their multi-lingual SEO architecture and GDPR-compliant tracking gave us an unfair digital advantage across the EU market.",
+    "author": "Sophie B.",
+    "role": "VP of Marketing",
+    "company": "Amsterdam FinTech Group",
+    "rating": 5
   }
 ],
     faqs: [
   {
-    "q": "How do you handle multiple European languages in SEO?",
-    "a": "We implement accurate hreflang tag architectures, localized keyword mapping, and native translations for key markets (German, French, Spanish, Italian, Dutch, etc.)."
+    "q": "How does Webmok ensure 100% GDPR compliance for European campaigns?",
+    "a": "We build server-side tracking, cookie-less telemetry, and explicit consent banners that comply fully with GDPR, ePrivacy, and regional European data laws."
   },
   {
-    "q": "Are all your European marketing campaigns 100% GDPR compliant?",
-    "a": "Yes, absolutely. We configure compliant cookie consent managers (OneTrust, Cookiebot), cookieless analytics tracking, and strict data privacy protocols."
+    "q": "Can you handle multi-lingual SEO across German, French, Dutch, and Spanish?",
+    "a": "Yes! We configure proper hreflang tags, localized keyword clusters, and native-speaker content hubs to rank across multiple European language domains."
   },
   {
-    "q": "How do you coordinate with European clients in CET/GMT time zones?",
-    "a": "Our dedicated European team works directly within European business hours (GMT/CET) to provide live communication and strategy syncs."
+    "q": "How do you coordinate with European clients in the CET timezone?",
+    "a": "We operate with dedicated CET-aligned account directors. All strategy calls and daily communications are aligned with European business hours."
   },
   {
-    "q": "What are the contract terms?",
-    "a": "All our European digital marketing packages are month-to-month with zero lock-in."
+    "q": "What is the contract term?",
+    "a": "All our European digital marketing packages are flexible month-to-month agreements with zero mandatory lock-ins."
   }
 ]
   };
@@ -121,14 +309,14 @@ const EuropeDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-intl-europe-page-root">
       {/* 1. HERO SECTION */}
-      <section className="wm-intl-europe-hero-section">
+      <section className="wm-intl-europe-hero-section" id="overview">
         <div className="wm-intl-europe-container">
           <div className="wm-intl-europe-hero-grid">
             <div className="wm-intl-europe-hero-left">
               <span className="wm-intl-europe-hero-est-tag">{pageData.tagline}</span>
 
               <h1 className="wm-intl-europe-hero-title-dual">
-                <span className="wm-intl-europe-hero-italic-gold">Accelerate Market Dominance with</span>
+                <span className="wm-intl-europe-hero-italic-gold">{pageData.heroItalic}</span>
                 <span className="wm-intl-europe-hero-bold-white">{pageData.heroHighlight}</span>
               </h1>
 
@@ -139,12 +327,12 @@ const EuropeDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-intl-europe-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Audit`)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
                 >
-                  Get Free Strategy Audit <FaPaperPlane />
+                  Get Free Digital Proposal <FaPaperPlane />
                 </button>
                 <a href="#pricing-plans" className="wm-intl-europe-btn-outline">
-                  View {pageData.city} Packages <FaChevronRight />
+                  View {pageData.city} Rates <FaChevronRight />
                 </a>
               </div>
             </div>
@@ -162,7 +350,7 @@ const EuropeDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-intl-europe-trust-card">
                 <div className="wm-intl-europe-tcard-info">
                   <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Agency</p>
+                  <p>Upwork Top 1% Verified Agency</p>
                 </div>
                 <div className="wm-intl-europe-tcard-badge wm-intl-europe-badge-upwork">up</div>
               </div>
@@ -196,7 +384,25 @@ const EuropeDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
+      {/* 2. STICKY IN-PAGE SUB-NAV */}
+      <nav className="wm-intl-europe-inpage-nav">
+        <div className="wm-intl-europe-container">
+          <div className="wm-intl-europe-inpage-nav-inner">
+            <a href="#overview" className="wm-intl-europe-inpage-nav-link">Overview</a>
+            <a href="#services" className="wm-intl-europe-inpage-nav-link">Services</a>
+            <a href="#why-us" className="wm-intl-europe-inpage-nav-link">Why Choose Us</a>
+            <a href="#results" className="wm-intl-europe-inpage-nav-link">Live Telemetry</a>
+            <a href="#market-dynamics" className="wm-intl-europe-inpage-nav-link">Market Insights</a>
+            <a href="#process" className="wm-intl-europe-inpage-nav-link">Our Approach</a>
+            <a href="#industries" className="wm-intl-europe-inpage-nav-link">Industries</a>
+            <a href="#pricing-plans" className="wm-intl-europe-inpage-nav-link">Published Rates</a>
+            <a href="#testimonials" className="wm-intl-europe-inpage-nav-link">Client Reviews</a>
+            <a href="#faqs" className="wm-intl-europe-inpage-nav-link">FAQs</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* 3. STATS STRIP */}
       <section className="wm-intl-europe-stats-strip">
         <div className="wm-intl-europe-container">
           <div className="wm-intl-europe-stats-grid">
@@ -210,198 +416,192 @@ const EuropeDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3. INTRO SECTION */}
-      <section className="wm-intl-europe-intro-section">
+      {/* 4. SERVICES SUITE */}
+      <section className="wm-intl-europe-services-section" id="services">
         <div className="wm-intl-europe-container">
-          <div className="wm-intl-europe-intro-grid">
-            <div className="wm-intl-europe-intro-left">
-              <span className="wm-intl-europe-intro-tag">CROSS-BORDER EU EXPANSION</span>
-              <h2 className="wm-intl-europe-intro-title">
-                Multilingual Digital Marketing for 
-                <span>European Enterprise</span>
-              </h2>
-            </div>
-            <div className="wm-intl-europe-intro-right">
-              <p>
-                <span>Webmok Technologies is a premier global digital partner</span> Navigating Europe’s diverse languages, cultural nuances, and strict privacy laws requires specialized expertise. Webmok provides European businesses with high-performance multilingual SEO, precision paid media, and conversion-optimized digital frameworks.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. BACKED BY NUMBERS SECTION */}
-      <section className="wm-intl-europe-numbers-section">
-        <div className="wm-intl-europe-container">
-          <div className="wm-intl-europe-numbers-heading">
-            <span className="wm-intl-europe-numbers-subtitle">EUROPE MARKET TELEMETRY</span>
-            <h2>
-              Proven Outcomes Across 
-              <span>European Markets</span>
+          <div className="wm-intl-europe-sec-heading-center">
+            <span className="wm-intl-europe-sec-badge">COMPREHENSIVE CAPABILITIES</span>
+            <h2 className="wm-intl-europe-sec-h2">
+              Our {pageData.city} <span>Digital Marketing Services</span>
             </h2>
+            <div className="wm-intl-europe-sec-bar-center"></div>
           </div>
 
-          <div className="wm-intl-europe-numstats-grid">
-            <div key="0" className="wm-intl-europe-numstat-item">
-              <div className="wm-intl-europe-numstat-number">{"110+"}</div>
-              <div className="wm-intl-europe-numstat-line"></div>
-              <p>{"European Brands Scaled"}</p>
-            </div>
-            <div key="1" className="wm-intl-europe-numstat-item">
-              <div className="wm-intl-europe-numstat-number">{"€26M+"}</div>
-              <div className="wm-intl-europe-numstat-line"></div>
-              <p>{"Generated Client Revenue"}</p>
-            </div>
-            <div key="2" className="wm-intl-europe-numstat-item">
-              <div className="wm-intl-europe-numstat-number">{"99.5%"}</div>
-              <div className="wm-intl-europe-numstat-line"></div>
-              <p>{"Client Retention Rate"}</p>
-            </div>
-            <div key="3" className="wm-intl-europe-numstat-item">
-              <div className="wm-intl-europe-numstat-number">{"24/7"}</div>
-              <div className="wm-intl-europe-numstat-line"></div>
-              <p>{"CET/GMT Timezone Support"}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INCLUSION / CAPABILITIES SECTION */}
-      <section className="wm-intl-europe-include-section">
-        <div className="wm-intl-europe-container">
-          <div className="wm-intl-europe-include-grid">
-            <div className="wm-intl-europe-include-content">
-              <span className="wm-intl-europe-include-tag">PAN-EU CAPABILITIES</span>
-              <h2 className="wm-intl-europe-include-title">
-                What Our Europe Digital Marketing 
-                <span>Packages Include</span>
-              </h2>
-              <p>We deliver multilingual international SEO (hreflang architecture), localized Google Search & Meta Ads across key EU territories, GDPR-compliant tracking, and high-speed web engineering.</p>
-              <p>You get a single strategic partner driving cross-border customer acquisition throughout Europe.</p>
-
-              <div className="wm-intl-europe-feature-list">
-                <div key="Multilingual Pan-European SEO & Hreflang Configuration" className="wm-intl-europe-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Multilingual Pan-European SEO & Hreflang Configuration"}</span>
+          <div className="wm-intl-europe-services-grid">
+            {pageData.services.map((svc, i) => (
+              <div key={i} className="wm-intl-europe-service-card">
+                <div className="wm-intl-europe-svc-icon">
+                  {svc.icon === 'FaSearch' && <FaSearch />}
+                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                  {svc.icon === 'FaPenNib' && <FaPenNib />}
+                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {svc.icon === 'FaVideo' && <FaVideo />}
+                  {svc.icon === 'FaChartLine' && <FaChartLine />}
+                  {svc.icon === 'FaCompass' && <FaCompass />}
                 </div>
-                <div key="Geo-Targeted Google Search, Shopping & Meta Ads across EU" className="wm-intl-europe-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Geo-Targeted Google Search, Shopping & Meta Ads across EU"}</span>
-                </div>
-                <div key="Full GDPR, ePrivacy & Cookie Consent Architecture" className="wm-intl-europe-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Full GDPR, ePrivacy & Cookie Consent Architecture"}</span>
-                </div>
-                <div key="Localized Content Marketing & Native Translation Review" className="wm-intl-europe-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Localized Content Marketing & Native Translation Review"}</span>
-                </div>
-                <div key="Conversion Rate Optimization (CRO) for European Buyer Journeys" className="wm-intl-europe-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Conversion Rate Optimization (CRO) for European Buyer Journeys"}</span>
-                </div>
-                <div key="Real-Time Multi-Currency Revenue Telemetry Dashboard" className="wm-intl-europe-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Real-Time Multi-Currency Revenue Telemetry Dashboard"}</span>
-                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. WHY HIRE OUTSIDE */}
+      <section className="wm-intl-europe-whyoutside-section" id="why-us">
+        <div className="wm-intl-europe-container">
+          <div className="wm-intl-europe-whyoutside-grid">
+            <div className="wm-intl-europe-whyoutside-text">
+              <span className="wm-intl-europe-sec-badge">{pageData.whyHireOutsideSubtitle}</span>
+              <h2>{pageData.whyHireOutsideTitle}</h2>
+              <p>{pageData.whyHireDesc1}</p>
+              <p>{pageData.whyHireDesc2}</p>
             </div>
 
-            <div className="wm-intl-europe-include-image">
-              <img src="/onpage1.avif" alt="Europe Digital Marketing Agency" />
+            <div className="wm-intl-europe-compare-table">
+              <div className="wm-intl-europe-compare-row wm-intl-europe-compare-hdr">
+                <div>Deliverable / Metric</div>
+                <div>Typical Local Agency</div>
+                <div>Webmok Advantage</div>
+              </div>
+              {pageData.comparisonPoints.map((cp, idx) => (
+                <div key={idx} className="wm-intl-europe-compare-row">
+                  <div className="wm-intl-europe-compare-feat">{cp.feature}</div>
+                  <div className="wm-intl-europe-compare-local">{cp.local}</div>
+                  <div className="wm-intl-europe-compare-wm">{cp.webmok}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. IMPORTANCE SECTION */}
-      <section className="wm-intl-europe-importance-section">
+      {/* 6. RESULTS TELEMETRY */}
+      <section className="wm-intl-europe-results-section" id="results">
         <div className="wm-intl-europe-container">
-          <div className="wm-intl-europe-importance-box">
-            <h2 className="wm-intl-europe-importance-title">
-              Why Cross-Border Marketing in 
-              <span>Europe Demands Precision</span>
+          <div className="wm-intl-europe-sec-heading-center">
+            <span className="wm-intl-europe-sec-badge">{pageData.resultsSubtitle}</span>
+            <h2 className="wm-intl-europe-sec-h2">{pageData.resultsTitle}</h2>
+            <div className="wm-intl-europe-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-europe-results-grid">
+            {pageData.resultsStats.map((rs, i) => (
+              <div key={i} className="wm-intl-europe-result-card">
+                <strong>{rs.metric}</strong>
+                <p>{rs.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. MARKET DYNAMICS */}
+      <section className="wm-intl-europe-market-section" id="market-dynamics">
+        <div className="wm-intl-europe-container">
+          <div className="wm-intl-europe-sec-heading-center">
+            <span className="wm-intl-europe-sec-badge">{pageData.marketInsightsSubtitle}</span>
+            <h2 className="wm-intl-europe-sec-h2">{pageData.marketInsightsTitle}</h2>
+            <div className="wm-intl-europe-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-europe-market-grid">
+            {pageData.marketInsights.map((mi, i) => (
+              <div key={i} className="wm-intl-europe-market-card">
+                <h4>{mi.title}</h4>
+                <p>{mi.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 4-STEP PROCESS */}
+      <section className="wm-intl-europe-process-section" id="process">
+        <div className="wm-intl-europe-container">
+          <div className="wm-intl-europe-sec-heading-center">
+            <span className="wm-intl-europe-sec-badge">OUR PROCESS & APPROACH</span>
+            <h2 className="wm-intl-europe-sec-h2">
+              Our 4-Step <span>Agile Growth Framework</span>
             </h2>
-
-            <div className="wm-intl-europe-importance-content">
-              <p>Europe is a massive digital single market with over 450 million consumers, but every nation has distinct search habits, preferred payment methods, and language requirements.</p>
-              <p>Winning in Europe requires native localization, technical hreflang precision, and strict adherence to European data privacy laws.</p>
-            </div>
+            <div className="wm-intl-europe-sec-bar-center"></div>
           </div>
-        </div>
-      </section>
 
-      {/* 7. WHY WEBMOK SECTION */}
-      <section className="wm-intl-europe-why-section">
-        <div className="wm-intl-europe-container">
-          <div className="wm-intl-europe-why-grid">
-            <div className="wm-intl-europe-why-content">
-              <span className="wm-intl-europe-why-tag">THE WEBMOK ADVANTAGE</span>
-              <h2 className="wm-intl-europe-why-title">
-                Built for Europe. 
-                <span className="s1"> GDPR Compliant.</span>{' '}
-                <span className="s2">Scalable Growth.</span>
-              </h2>
-
-              <div className="wm-intl-europe-why-text">
-                <p>We engineer multi-territory digital funnels that respect local cultural nuances while maintaining centralized reporting and agile execution.</p>
-                <p>With transparent monthly reporting and zero long-term lock-in, we keep your customer acquisition costs efficient across all EU borders.</p>
+          <div className="wm-intl-europe-process-grid">
+            {pageData.processSteps.map((ps, i) => (
+              <div key={i} className="wm-intl-europe-process-card">
+                <span className="wm-intl-europe-proc-num">STEP {ps.num}</span>
+                <h4>{ps.title}</h4>
+                <p>{ps.desc}</p>
               </div>
-            </div>
-
-            <div className="wm-intl-europe-why-image">
-              <img src="/onpage2.avif" alt="Why Webmok" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. PRICING PLANS SECTION */}
+      {/* 9. INDUSTRIES */}
+      <section className="wm-intl-europe-industries-section" id="industries">
+        <div className="wm-intl-europe-container">
+          <div className="wm-intl-europe-sec-heading-center">
+            <span className="wm-intl-europe-sec-badge">WHO WE WORK WITH</span>
+            <h2 className="wm-intl-europe-sec-h2">
+              Specialized Industry <span>Growth Solutions</span>
+            </h2>
+            <div className="wm-intl-europe-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-europe-industries-grid">
+            {pageData.industries.map((ind, i) => (
+              <div key={i} className="wm-intl-europe-industry-card">
+                <div className="wm-intl-europe-ind-icon">
+                  {ind.icon === 'FaBuilding' && <FaBuilding />}
+                  {ind.icon === 'FaUserMd' && <FaUserMd />}
+                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                  {ind.icon === 'FaUtensils' && <FaUtensils />}
+                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {ind.icon === 'FaCompass' && <FaCompass />}
+                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                </div>
+                <h4>{ind.name}</h4>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. PRICING PLANS */}
       <section className="wm-intl-europe-pricing-section" id="pricing-plans">
         <div className="wm-intl-europe-container">
-          <div className="wm-intl-europe-sec-header">
-            <span className="wm-intl-europe-sec-subtitle">Transparent Monthly Plans</span>
-            <h2 className="wm-intl-europe-sec-title">Flexible Europe Growth Packages with Zero Lock-In</h2>
-            <div className="wm-intl-europe-sec-bar"></div>
+          <div className="wm-intl-europe-sec-heading-center">
+            <span className="wm-intl-europe-sec-badge">PUBLISHED RATES · ZERO LOCK-IN</span>
+            <h2 className="wm-intl-europe-sec-h2">
+              Transparent {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-europe-sec-bar-center"></div>
 
             {/* Currency Switcher */}
             <div className="wm-intl-europe-currency-toggle">
-              
-              <button
-                type="button"
-                className={`wm-intl-europe-curr-btn ${currency === 'EUR' ? 'active' : ''}`}
-                onClick={() => setCurrency('EUR')}
-              >
-                € EUR
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-europe-curr-btn ${currency === 'USD' ? 'active' : ''}`}
-                onClick={() => setCurrency('USD')}
-              >
-                $ USD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-europe-curr-btn ${currency === 'GBP' ? 'active' : ''}`}
-                onClick={() => setCurrency('GBP')}
-              >
-                £ GBP
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-europe-curr-btn ${currency === 'INR' ? 'active' : ''}`}
-                onClick={() => setCurrency('INR')}
-              >
-                ₹ INR
-              </button>
+              {[{"code":"EUR","symbol":"€","rate":0.92},{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  className={`wm-intl-europe-curr-btn ${currency === c.code ? 'active' : ''}`}
+                  onClick={() => setCurrency(c.code)}
+                >
+                  {c.symbol} {c.code}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Pricing Grid */}
           <div className="wm-intl-europe-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : `$${plan.usdPrice}`;
+              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
               return (
                 <div key={i} className={`wm-intl-europe-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (
@@ -449,93 +649,80 @@ const EuropeDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 9. BENEFITS SECTION */}
-      <section className="wm-intl-europe-benefits-section">
+      {/* 11. TESTIMONIALS */}
+      <section className="wm-intl-europe-testimonials-section" id="testimonials">
         <div className="wm-intl-europe-container">
-          <div className="wm-intl-europe-benefits-grid">
-            <div className="wm-intl-europe-benefits-content">
-              <span className="wm-intl-europe-benefits-tag">PROVEN VALUE</span>
-              <h2 className="wm-intl-europe-benefits-title">
-                Unlocking Cross-Border Growth Across 
-                <span>European Markets</span>
-              </h2>
+          <div className="wm-intl-europe-sec-heading-center">
+            <span className="wm-intl-europe-sec-badge">CLIENT SUCCESS STORIES</span>
+            <h2 className="wm-intl-europe-sec-h2">
+              What {pageData.city} <span>Leaders Say About Webmok</span>
+            </h2>
+            <div className="wm-intl-europe-sec-bar-center"></div>
+          </div>
 
-              <div className="wm-intl-europe-benefits-text">
-                <p>Our European digital marketing campaigns turn multi-country search traffic into predictable revenue streams.</p>
-                <p>We build durable digital assets that lower your blended customer acquisition costs across the European continent.</p>
-              </div>
-
-              <div className="wm-intl-europe-benefits-points">
-                <div key="Top Google Rankings in Major European Economies" className="wm-intl-europe-benefit-point">
-                  <span className="wm-intl-europe-benefit-icon">✓</span>
-                  <span>{"Top Google Rankings in Major European Economies"}</span>
+          <div className="wm-intl-europe-testimonials-grid">
+            {pageData.testimonials.map((t, idx) => (
+              <div key={idx} className="wm-intl-europe-testimonial-card">
+                <div className="wm-intl-europe-t-stars">
+                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
-                <div key="Full Compliance with GDPR and European Privacy Frameworks" className="wm-intl-europe-benefit-point">
-                  <span className="wm-intl-europe-benefit-icon">✓</span>
-                  <span>{"Full Compliance with GDPR and European Privacy Frameworks"}</span>
-                </div>
-                <div key="Consistent 4x to 7x Return on Cross-Border Ad Spend" className="wm-intl-europe-benefit-point">
-                  <span className="wm-intl-europe-benefit-icon">✓</span>
-                  <span>{"Consistent 4x to 7x Return on Cross-Border Ad Spend"}</span>
-                </div>
-                <div key="Centralized Multi-Currency Analytics Dashboard" className="wm-intl-europe-benefit-point">
-                  <span className="wm-intl-europe-benefit-icon">✓</span>
-                  <span>{"Centralized Multi-Currency Analytics Dashboard"}</span>
+                <p className="wm-intl-europe-t-quote">"{t.quote}"</p>
+                <div className="wm-intl-europe-t-author">
+                  <h5>{t.author}</h5>
+                  <p>{t.role} · {t.company}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="wm-intl-europe-benefits-image">
-              <img src="/onpagebenifts.jpg" alt="Europe Digital Marketing Agency" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. ADVANTAGE SECTION */}
+      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
       <section className="wm-intl-europe-advantage-section">
         <div className="wm-intl-europe-container">
-          <div className="wm-intl-europe-sec-header">
-            <span className="wm-intl-europe-sec-subtitle">Why Partner With Us</span>
-            <h2 className="wm-intl-europe-sec-title">The WebMok Advantage in Global Digital Execution</h2>
-            <div className="wm-intl-europe-sec-bar"></div>
+          <div className="wm-intl-europe-sec-heading-center">
+            <span className="wm-intl-europe-sec-badge">WHY CHOOSE WEBMOK</span>
+            <h2 className="wm-intl-europe-sec-h2">The Webmok Operational Guarantees</h2>
+            <div className="wm-intl-europe-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-europe-advantage-grid">
             <div className="wm-intl-europe-advantage-card">
               <div className="wm-intl-europe-aicon"><FaShieldAlt /></div>
-              <h4>100% Proven Method</h4>
-              <p>Strict white-hat execution that protects your brand equity and produces compounding organic growth.</p>
+              <h4>100% White-Hat Proven Methods</h4>
+              <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
             </div>
 
             <div className="wm-intl-europe-advantage-card">
               <div className="wm-intl-europe-aicon"><FaRocket /></div>
-              <h4>Full Telemetry Dashboards</h4>
+              <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
             </div>
 
             <div className="wm-intl-europe-advantage-card">
               <div className="wm-intl-europe-aicon"><FaHeadset /></div>
               <h4>Dedicated Senior Squad</h4>
-              <p>Work directly with dedicated senior strategists and technical engineers with direct phone & WhatsApp support.</p>
+              <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
             </div>
 
             <div className="wm-intl-europe-advantage-card">
               <div className="wm-intl-europe-aicon"><FaClock /></div>
               <h4>Zero Mandatory Lock-In</h4>
-              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable growth.</p>
+              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. FAQS ACCORDION */}
-      <section className="wm-intl-europe-faqs-section">
+      {/* 13. REGIONAL FAQS */}
+      <section className="wm-intl-europe-faqs-section" id="faqs">
         <div className="wm-intl-europe-container">
-          <div className="wm-intl-europe-sec-header">
-            <span className="wm-intl-europe-sec-subtitle">Frequently Asked Questions</span>
-            <h2 className="wm-intl-europe-sec-title">Common Queries About Our Europe Growth Packages</h2>
-            <div className="wm-intl-europe-sec-bar"></div>
+          <div className="wm-intl-europe-sec-heading-center">
+            <span className="wm-intl-europe-sec-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 className="wm-intl-europe-sec-h2">
+              Common Queries About Our {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-europe-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-europe-faqs-wrap">
@@ -560,12 +747,12 @@ const EuropeDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. BOTTOM CONVERSION BANNER */}
+      {/* 14. BOTTOM CONVERSION BANNER */}
       <section className="wm-intl-europe-bottom-banner">
         <div className="wm-intl-europe-container">
           <div className="wm-intl-europe-banner-inner">
             <div className="wm-intl-europe-banner-text">
-              <h2>Ready to Accelerate Growth in Europe?</h2>
+              <h2>Ready to Accelerate Revenue in {pageData.city}?</h2>
               <p>Schedule a quick 1-on-1 strategy consultation with our senior digital directors today.</p>
             </div>
             <div className="wm-intl-europe-banner-btns">
@@ -581,7 +768,7 @@ const EuropeDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 className="wm-intl-europe-bbtn-quote"
                 onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Bottom Banner Inquiry`)}
               >
-                Get Custom Quote <FaArrowRight />
+                Get Free Custom Proposal <FaArrowRight />
               </button>
             </div>
           </div>

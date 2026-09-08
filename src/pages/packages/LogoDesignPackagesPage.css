@@ -3135,3 +3135,637 @@
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   LOGO COMPANY PROCESS SECTION
+========================================= */
+
+.logo-process-section {
+  width: 100%;
+  padding: 70px 30px 80px;
+  background: #f8fafc;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.logo-process-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.logo-process-heading {
+  margin-bottom: 38px;
+}
+
+
+.logo-process-tag {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #f26b21;
+  margin-bottom: 28px;
+}
+
+
+.logo-process-heading h2 {
+  margin: 0;
+  color: #172b4d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+
+.logo-process-heading h2 span {
+  color: #060037;
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+.logo-process-heading h2 em {
+  color: #05024f;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.logo-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border: 1px solid #d9e0e8;
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.logo-process-card {
+  min-height: 285px;
+
+  padding: 38px 30px 35px;
+
+  background: #ffffff;
+
+  border-right: 1px solid #d9e0e8;
+  border-bottom: 1px solid #d9e0e8;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Remove right border */
+
+.logo-process-card:nth-child(3n) {
+  border-right: none;
+}
+
+
+/* Remove bottom border */
+
+.logo-process-card:nth-child(n + 4) {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.process-number {
+  display: block;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  letter-spacing: 1.5px;
+
+  color: #f26b21;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.logo-process-card h3 {
+  margin: 0 0 22px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 34px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  color: #172b4d;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.logo-process-card p {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  line-height: 1.75;
+
+  color: #526276;
+
+  max-width: 440px;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.logo-process-card:hover {
+  background: #f4f9ff;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(29, 111, 164, 0.1);
+
+  transform: translateY(-4px);
+}
+
+
+.logo-process-card:hover h3 {
+  color: #1672a8;
+}
+
+
+.logo-process-card:hover .process-number {
+  color: #0f7bb8;
+}
+
+
+/* =========================================
+   LARGE LAPTOP
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .logo-process-card {
+    padding: 30px 25px;
+    min-height: 300px;
+  }
+
+  .logo-process-card h3 {
+    font-size: 28px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+  .logo-process-section {
+    padding: 60px 20px;
+  }
+
+
+  .logo-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .logo-process-card {
+    border-right: 1px solid #d9e0e8;
+    border-bottom: 1px solid #d9e0e8;
+  }
+
+
+  .logo-process-card:nth-child(3n) {
+    border-right: 1px solid #d9e0e8;
+  }
+
+
+  .logo-process-card:nth-child(2n) {
+    border-right: none;
+  }
+
+
+  .logo-process-card:nth-child(n + 5) {
+    border-bottom: none;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .logo-process-section {
+    padding: 50px 15px;
+  }
+
+
+  .logo-process-heading {
+    margin-bottom: 30px;
+  }
+
+
+  .logo-process-tag {
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+
+
+  .logo-process-heading h2 {
+    font-size: 42px;
+    line-height: 1.12;
+  }
+
+
+  .logo-process-grid {
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+  }
+
+
+  .logo-process-card {
+    min-height: auto;
+
+    padding: 30px 22px;
+
+    border-right: none !important;
+
+    border-bottom: 1px solid #d9e0e8 !important;
+  }
+
+
+  .logo-process-card:last-child {
+    border-bottom: none !important;
+  }
+
+
+  .logo-process-card h3 {
+    font-size: 28px;
+  }
+
+
+  .logo-process-card p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+}
+
+
+
+
+
+
+/* =========================================
+   LOGO DESIGN PROCESS SECTION
+========================================= */
+
+.logo-process-section {
+  width: 100%;
+  padding: 80px 4%;
+  background: #f8fafc;
+}
+
+.logo-process-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* TOP SECTION */
+
+.logo-process-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 45px;
+}
+
+/* LABEL */
+
+.logo-process-label {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #0b2c52,
+    #155a8a,
+    #0fa3c8
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* HEADING */
+
+.logo-process-heading-area h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(42px, 4vw, 68px);
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  color: #172033;
+}
+
+.logo-process-heading-area h2 span {
+  display: block;
+
+  font-style: italic;
+
+  background: linear-gradient(
+    90deg,
+    #0b2c52,
+    #155a8a,
+    #0fa3c8
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* INTRO TEXT */
+
+.logo-process-intro {
+  padding-top: 5px;
+}
+
+.logo-process-intro p {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.9;
+
+  color: #3f4d60;
+}
+
+/* GRID */
+
+.logo-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border: 1px solid #d4dee8;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+/* CARD */
+
+.logo-process-card {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 38px 30px;
+
+  background: #ffffff;
+
+  border-right: 1px solid #d4dee8;
+  border-bottom: 1px solid #d4dee8;
+
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+/* REMOVE RIGHT BORDER */
+
+.logo-process-card:nth-child(3n) {
+  border-right: none;
+}
+
+/* REMOVE BOTTOM BORDER */
+
+.logo-process-card:nth-child(n + 4) {
+  border-bottom: none;
+}
+
+/* HOVER BACKGROUND */
+
+.logo-process-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  top: -150px;
+  right: -120px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(11, 44, 82, 0.08),
+    rgba(15, 163, 200, 0.12)
+  );
+
+  transition: 0.5s ease;
+}
+
+.logo-process-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 15px 40px rgba(11, 44, 82, 0.12);
+
+  z-index: 2;
+}
+
+.logo-process-card:hover::before {
+  transform: scale(1.5);
+}
+
+/* NUMBER */
+
+.process-number {
+  position: relative;
+
+  display: block;
+
+  margin-bottom: 28px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #0b2c52,
+    #17689d,
+    #12a8cc
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TITLE */
+
+.logo-process-card h3 {
+  position: relative;
+
+  margin: 0 0 20px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 36px;
+  font-weight: 500;
+
+  color: #172033;
+}
+
+/* DESCRIPTION */
+
+.logo-process-card p {
+  position: relative;
+
+  margin: 0;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  color: #536174;
+}
+
+/* BOTTOM HOVER LINE */
+
+.process-hover-line {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 0;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #0b2c52,
+    #17689d,
+    #12a8cc
+  );
+
+  transition: 0.4s ease;
+}
+
+.logo-process-card:hover .process-hover-line {
+  width: 100%;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .logo-process-top {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .logo-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-process-card:nth-child(3n) {
+    border-right: 1px solid #d4dee8;
+  }
+
+  .logo-process-card:nth-child(2n) {
+    border-right: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .logo-process-section {
+    padding: 60px 20px;
+  }
+
+  .logo-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-process-card {
+    min-height: auto;
+
+    border-right: none !important;
+    border-bottom: 1px solid #d4dee8 !important;
+  }
+
+  .logo-process-card:last-child {
+    border-bottom: none !important;
+  }
+
+  .logo-process-card h3 {
+    font-size: 30px;
+  }
+
+}

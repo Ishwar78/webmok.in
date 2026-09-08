@@ -1,10 +1,10 @@
 /* ==========================================================================
-   WEB MOK - WM-INTL-OTTAWA DEDICATED STYLESHEET (PREMIUM DARK BLUE THEME)
+   WEB MOK - WM-INTL-OTTAWA DEDICATED STYLESHEET (14 COMPREHENSIVE SECTIONS)
    ========================================================================== */
 
 .wm-intl-ottawa-page-root {
-  background-color: #071426;
-  color: #f1f5f9;
+  background-color: #ffffff;
+  color: #1e293b;
   font-family: inherit;
   overflow-x: hidden;
   padding-top: 80px;
@@ -17,18 +17,18 @@
   padding: 0 32px;
 }
 
-/* 1. HERO SECTION */
+/* 1. HERO SECTION (CLEAN WHITE) */
 .wm-intl-ottawa-hero-section {
-  background: radial-gradient(circle at 20% 30%, #0d2847 0%, #071426 70%);
-  padding: 75px 0 65px;
+  background: #ffffff;
+  padding: 65px 0 55px;
   position: relative;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid #f1f5f9;
 }
 
 .wm-intl-ottawa-hero-grid {
   display: grid;
-  grid-template-columns: 1.22fr 0.78fr;
-  gap: 56px;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 50px;
   align-items: center;
 }
 
@@ -36,11 +36,11 @@
   display: inline-block;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #ffd700;
-  background: rgba(255, 215, 0, 0.12);
-  border: 1px solid rgba(255, 215, 0, 0.35);
+  color: #0b4f8a;
+  background: rgba(11, 79, 138, 0.08);
+  border: 1px solid rgba(11, 79, 138, 0.2);
   padding: 6px 14px;
   border-radius: 4px;
   margin-bottom: 18px;
@@ -58,29 +58,29 @@
 .wm-intl-ottawa-hero-italic-gold {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
-  font-weight: 400;
-  color: #ff9f43;
-  font-size: 36px;
+  font-weight: 600;
+  color: #0b4f8a;
+  font-size: 38px;
 }
 
 .wm-intl-ottawa-hero-bold-white {
   font-weight: 900;
-  color: #ffffff;
+  color: #0f172a;
   letter-spacing: -0.5px;
 }
 
 .wm-intl-ottawa-hero-lead-desc {
   font-size: 18px;
   line-height: 1.6;
-  color: #cbd5e1;
-  margin-bottom: 12px;
+  color: #334155;
+  margin-bottom: 14px;
   font-weight: 500;
 }
 
 .wm-intl-ottawa-hero-body-desc {
-  font-size: 14.5px;
+  font-size: 15px;
   line-height: 1.65;
-  color: #94a3b8;
+  color: #64748b;
   margin-bottom: 28px;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .wm-intl-ottawa-btn-primary {
-  background: linear-gradient(135deg, #ff7a00 0%, #ff5200 100%);
+  background: #071426;
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
@@ -104,23 +104,25 @@
   align-items: center;
   gap: 8px;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 18px rgba(255, 122, 0, 0.35);
+  box-shadow: 0 4px 16px rgba(7, 20, 38, 0.25);
   text-decoration: none;
 }
 
 .wm-intl-ottawa-btn-primary:hover {
+  background: #00a8cc;
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 122, 0, 0.45);
+  box-shadow: 0 6px 20px rgba(0, 168, 204, 0.35);
 }
 
 .wm-intl-ottawa-btn-outline {
-  background: rgba(255, 255, 255, 0.05);
-  color: #e2e8f0;
+  background: transparent;
+  color: #071426;
   font-size: 14px;
   font-weight: 700;
   padding: 12px 24px;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid #071426;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -130,46 +132,46 @@
 }
 
 .wm-intl-ottawa-btn-outline:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #00a8cc;
-  color: #00a8cc;
+  background: #071426;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /* Trust Cards Stack */
 .wm-intl-ottawa-hero-right-trust {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .wm-intl-ottawa-trust-card {
-  background: rgba(13, 37, 69, 0.75);
-  border: 1px solid rgba(0, 168, 204, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
   padding: 14px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
   transition: all 0.25s ease;
 }
 
 .wm-intl-ottawa-trust-card:hover {
   border-color: #00a8cc;
   transform: translateX(4px);
-  background: rgba(13, 37, 69, 0.95);
+  box-shadow: 0 8px 22px rgba(11, 79, 138, 0.08);
 }
 
 .wm-intl-ottawa-tcard-info h4 {
   font-size: 15px;
   font-weight: 800;
-  color: #ffffff;
+  color: #0f172a;
   margin: 0 0 2px;
 }
 
 .wm-intl-ottawa-tcard-info p {
   font-size: 12px;
-  color: #94a3b8;
+  color: #64748b;
   margin: 0;
   display: flex;
   align-items: center;
@@ -193,45 +195,71 @@
   font-size: 15px;
 }
 
-.wm-intl-ottawa-badge-clutch {
-  background: #ff5a43;
-  color: #ffffff;
+.wm-intl-ottawa-badge-clutch { background: #ff5a43; color: #ffffff; }
+.wm-intl-ottawa-badge-upwork { background: #14a800; color: #ffffff; font-size: 13px; }
+.wm-intl-ottawa-badge-google { background: #4285f4; color: #ffffff; }
+.wm-intl-ottawa-badge-partner { background: #f59e0b; color: #111827; }
+
+/* 2. STICKY IN-PAGE SUB-NAV */
+.wm-intl-ottawa-inpage-nav {
+  position: sticky;
+  top: 80px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 90;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
-.wm-intl-ottawa-badge-upwork {
-  background: #14a800;
-  color: #ffffff;
+.wm-intl-ottawa-inpage-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scrollbar-width: none;
+}
+
+.wm-intl-ottawa-inpage-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.wm-intl-ottawa-inpage-nav-link {
   font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
 }
 
-.wm-intl-ottawa-badge-google {
-  background: #4285f4;
+.wm-intl-ottawa-inpage-nav-link:hover {
+  background: #071426;
   color: #ffffff;
+  border-color: #071426;
 }
 
-.wm-intl-ottawa-badge-partner {
-  background: #f59e0b;
-  color: #111827;
-}
-
-/* 2. STATS STRIP */
+/* 3. STATS STRIP (DARK NAVY ACCENT STRIP) */
 .wm-intl-ottawa-stats-strip {
-  background: #0b1f38;
-  padding: 30px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: #071426;
+  padding: 34px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .wm-intl-ottawa-stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 .wm-intl-ottawa-stat-card {
-  background: rgba(7, 20, 38, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  padding: 18px 20px;
+  padding: 20px 22px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -239,341 +267,395 @@
 }
 
 .wm-intl-ottawa-stat-card strong {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 900;
-  color: #00a8cc;
+  color: #00d4ff;
 }
 
 .wm-intl-ottawa-stat-card span {
   font-size: 12.5px;
-  color: #94a3b8;
+  color: #cbd5e1;
   font-weight: 600;
 }
 
-/* 3. INTRO SECTION */
-.wm-intl-ottawa-intro-section {
-  padding: 70px 0;
-  background: #071426;
+/* 4. SERVICES SUITE (CLEAN WHITE) */
+.wm-intl-ottawa-services-section {
+  padding: 80px 0;
+  background: #ffffff;
 }
 
-.wm-intl-ottawa-intro-grid {
+.wm-intl-ottawa-sec-heading-center {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.wm-intl-ottawa-sec-badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #0b4f8a;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.wm-intl-ottawa-sec-h2 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0 0 14px;
+}
+
+.wm-intl-ottawa-sec-h2 span {
+  color: #00a8cc;
+}
+
+.wm-intl-ottawa-sec-bar-center {
+  width: 60px;
+  height: 4px;
+  background: #00a8cc;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.wm-intl-ottawa-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.wm-intl-ottawa-service-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.wm-intl-ottawa-service-card:hover {
+  transform: translateY(-4px);
+  border-color: #00a8cc;
+  box-shadow: 0 12px 30px rgba(11, 79, 138, 0.08);
+}
+
+.wm-intl-ottawa-svc-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(11, 79, 138, 0.08);
+  color: #0b4f8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.wm-intl-ottawa-service-card h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 12px;
+}
+
+.wm-intl-ottawa-service-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* 5. WHY HIRE OUTSIDE (SOFT GREY-BLUE) */
+.wm-intl-ottawa-whyoutside-section {
+  padding: 80px 0;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.wm-intl-ottawa-whyoutside-grid {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   gap: 50px;
   align-items: center;
 }
 
-.wm-intl-ottawa-intro-tag {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #ffd700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.wm-intl-ottawa-intro-title {
+.wm-intl-ottawa-whyoutside-text h2 {
   font-size: 32px;
   font-weight: 900;
+  color: #0f172a;
   line-height: 1.25;
+  margin: 0 0 16px;
+}
+
+.wm-intl-ottawa-whyoutside-text p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+.wm-intl-ottawa-compare-table {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.wm-intl-ottawa-compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 14px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13.5px;
+  align-items: center;
+}
+
+.wm-intl-ottawa-compare-row:last-child {
+  border-bottom: none;
+}
+
+.wm-intl-ottawa-compare-hdr {
+  background: #071426;
   color: #ffffff;
-  margin: 0;
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.wm-intl-ottawa-intro-title span {
-  color: #ff9f43;
+.wm-intl-ottawa-compare-feat {
+  font-weight: 700;
+  color: #0f172a;
 }
 
-.wm-intl-ottawa-intro-right p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #94a3b8;
-  margin: 0;
+.wm-intl-ottawa-compare-local {
+  color: #ef4444;
+  font-weight: 500;
 }
 
-.wm-intl-ottawa-intro-right p span {
-  color: #ffffff;
+.wm-intl-ottawa-compare-wm {
+  color: #10b981;
   font-weight: 700;
 }
 
-/* 4. NUMBERS SECTION */
-.wm-intl-ottawa-numbers-section {
-  background: radial-gradient(circle at 50% 50%, #0d2847 0%, #061120 100%);
-  padding: 60px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+/* 6. RESULTS TELEMETRY (CLEAN WHITE) */
+.wm-intl-ottawa-results-section {
+  padding: 80px 0;
+  background: #ffffff;
 }
 
-.wm-intl-ottawa-numbers-heading {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.wm-intl-ottawa-numbers-subtitle {
-  font-size: 11px;
-  font-weight: 800;
-  color: #ffd700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.wm-intl-ottawa-numbers-heading h2 {
-  font-size: 30px;
-  font-weight: 900;
-  color: #ffffff;
-  margin: 0;
-}
-
-.wm-intl-ottawa-numbers-heading h2 span {
-  color: #00a8cc;
-}
-
-.wm-intl-ottawa-numstats-grid {
+.wm-intl-ottawa-results-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
-.wm-intl-ottawa-numstat-item {
-  background: rgba(13, 37, 69, 0.6);
-  border: 1px solid rgba(0, 168, 204, 0.2);
-  border-radius: 10px;
-  padding: 24px 16px;
+.wm-intl-ottawa-result-card {
+  background: #032e58;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 30px 22px;
   text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
 }
 
-.wm-intl-ottawa-numstat-number {
-  font-size: 32px;
+.wm-intl-ottawa-result-card:hover {
+  transform: translateY(-4px);
+  border-color: #00a8cc;
+  box-shadow: 0 10px 25px rgba(11, 79, 138, 0.08);
+}
+
+.wm-intl-ottawa-result-card strong {
+  font-size: 34px;
   font-weight: 900;
-  color: #ffffff;
+  color: #f3f4f6;
+  display: block;
   margin-bottom: 8px;
 }
 
-.wm-intl-ottawa-numstat-line {
-  width: 40px;
-  height: 3px;
-  background: #ff7a00;
-  margin: 0 auto 12px;
-  border-radius: 2px;
-}
-
-.wm-intl-ottawa-numstat-item p {
-  font-size: 13px;
-  color: #94a3b8;
+.wm-intl-ottawa-result-card p {
+  font-size: 15px;
+  color: #f7f8fa;
   margin: 0;
-  font-weight: 600;
+  line-height: 1.45;
 }
 
-/* 5. INCLUDE SECTION */
-.wm-intl-ottawa-include-section {
+/* 7. MARKET INTELLIGENCE (SOFT GREY-BLUE) */
+.wm-intl-ottawa-market-section {
   padding: 80px 0;
-  background: #071426;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.wm-intl-ottawa-include-grid {
+.wm-intl-ottawa-market-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 50px;
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
 }
 
-.wm-intl-ottawa-include-tag {
-  font-size: 11px;
+.wm-intl-ottawa-market-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px 26px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.wm-intl-ottawa-market-card h4 {
+  font-size: 18px;
   font-weight: 800;
-  letter-spacing: 1px;
-  color: #ffd700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.wm-intl-ottawa-include-title {
-  font-size: 30px;
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.25;
-  margin: 0 0 16px;
-}
-
-.wm-intl-ottawa-include-title span {
-  color: #00a8cc;
-}
-
-.wm-intl-ottawa-include-content p {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: #94a3b8;
-  margin-bottom: 14px;
-}
-
-.wm-intl-ottawa-feature-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.wm-intl-ottawa-feature-item {
-  background: rgba(13, 37, 69, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  padding: 10px 14px;
-  font-size: 13.5px;
-  color: #e2e8f0;
+  color: #0f172a;
+  margin: 0 0 10px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.wm-intl-ottawa-feature-item span.chk {
-  color: #10b981;
-  font-weight: 900;
+.wm-intl-ottawa-market-card h4::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #00a8cc;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.wm-intl-ottawa-include-image img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 168, 204, 0.3);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+.wm-intl-ottawa-market-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
 }
 
-/* 6. IMPORTANCE SECTION */
-.wm-intl-ottawa-importance-section {
-  padding: 60px 0;
-  background: #0b1f38;
-}
-
-.wm-intl-ottawa-importance-box {
-  background: radial-gradient(circle at 70% 30%, #11335c 0%, #07172b 100%);
-  border: 1px solid rgba(0, 168, 204, 0.3);
-  border-radius: 14px;
-  padding: 44px 40px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.wm-intl-ottawa-importance-title {
-  font-size: 28px;
-  font-weight: 900;
-  color: #ffffff;
-  margin: 0 0 16px;
-}
-
-.wm-intl-ottawa-importance-title span {
-  color: #ff9f43;
-}
-
-.wm-intl-ottawa-importance-content p {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: #cbd5e1;
-  margin-bottom: 12px;
-}
-
-/* 7. WHY SECTION */
-.wm-intl-ottawa-why-section {
+/* 8. 4-STEP PROCESS (CLEAN WHITE) */
+.wm-intl-ottawa-process-section {
   padding: 80px 0;
-  background: #071426;
+  background: #ffffff;
 }
 
-.wm-intl-ottawa-why-grid {
+.wm-intl-ottawa-process-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
-.wm-intl-ottawa-why-tag {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #ffd700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  display: block;
+.wm-intl-ottawa-process-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px 20px;
+  position: relative;
+  transition: all 0.25s ease;
 }
 
-.wm-intl-ottawa-why-title {
-  font-size: 30px;
+.wm-intl-ottawa-process-card:hover {
+  transform: translateY(-4px);
+  border-color: #00a8cc;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(11, 79, 138, 0.08);
+}
+
+.wm-intl-ottawa-proc-num {
+  font-size: 13px;
   font-weight: 900;
-  color: #ffffff;
-  line-height: 1.25;
-  margin: 0 0 18px;
-}
-
-.wm-intl-ottawa-why-title span.s1 {
   color: #00a8cc;
-}
-
-.wm-intl-ottawa-why-title span.s2 {
-  color: #ff7a00;
-}
-
-.wm-intl-ottawa-why-text p {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: #94a3b8;
+  background: rgba(0, 168, 204, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
   margin-bottom: 14px;
 }
 
-.wm-intl-ottawa-why-image img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.wm-intl-ottawa-process-card h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 10px;
 }
 
-/* 8. PRICING SECTION */
+.wm-intl-ottawa-process-card p {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* 9. INDUSTRIES (SOFT GREY-BLUE) */
+.wm-intl-ottawa-industries-section {
+  padding: 80px 0;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.wm-intl-ottawa-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.wm-intl-ottawa-industry-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 26px 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.wm-intl-ottawa-industry-card:hover {
+  transform: translateY(-3px);
+  border-color: #00a8cc;
+  box-shadow: 0 8px 20px rgba(11, 79, 138, 0.08);
+}
+
+.wm-intl-ottawa-ind-icon {
+  font-size: 22px;
+  color: #0b4f8a;
+  margin-bottom: 12px;
+}
+
+.wm-intl-ottawa-industry-card h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+
+.wm-intl-ottawa-industry-card p {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 10. PRICING PLANS (CLEAN WHITE) */
 .wm-intl-ottawa-pricing-section {
   padding: 80px 0;
-  background: #09192e;
+  background: #ffffff;
 }
 
-.wm-intl-ottawa-sec-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.wm-intl-ottawa-sec-subtitle {
-  font-size: 12px;
-  font-weight: 800;
-  color: #ffd700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.wm-intl-ottawa-sec-title {
-  font-size: 32px;
-  font-weight: 900;
-  color: #ffffff;
-  margin: 0 0 16px;
-}
-
-.wm-intl-ottawa-sec-bar {
-  width: 60px;
-  height: 4px;
-  background: #ff7a00;
-  margin: 0 auto 24px;
-  border-radius: 2px;
-}
-
-/* Currency Toggle */
 .wm-intl-ottawa-currency-toggle {
   display: inline-flex;
-  background: rgba(7, 20, 38, 0.9);
-  border: 1px solid rgba(0, 168, 204, 0.3);
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
   border-radius: 30px;
   padding: 4px;
   gap: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .wm-intl-ottawa-curr-btn {
   background: transparent;
   border: none;
-  color: #94a3b8;
+  color: #64748b;
   font-size: 13px;
   font-weight: 700;
   padding: 8px 18px;
@@ -583,39 +665,39 @@
 }
 
 .wm-intl-ottawa-curr-btn.active {
-  background: #00a8cc;
+  background: #071426;
   color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 168, 204, 0.4);
+  box-shadow: 0 2px 8px rgba(7, 20, 38, 0.3);
 }
 
-/* Pricing Grid */
 .wm-intl-ottawa-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
   align-items: stretch;
 }
 
 .wm-intl-ottawa-card {
-  background: #0b1f38;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
   border-radius: 12px;
   padding: 32px 24px;
   display: flex;
   flex-direction: column;
   position: relative;
   transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .wm-intl-ottawa-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 168, 204, 0.4);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  border-color: #00a8cc;
+  box-shadow: 0 12px 30px rgba(11, 79, 138, 0.1);
 }
 
 .wm-intl-ottawa-card.popular {
-  border: 2px solid #ff7a00;
-  background: radial-gradient(circle at 50% 0%, #13325c 0%, #0b1f38 100%);
+  border: 2px solid #00a8cc;
+  box-shadow: 0 8px 30px rgba(0, 168, 204, 0.15);
 }
 
 .wm-intl-ottawa-popular-tag {
@@ -623,7 +705,7 @@
   top: -13px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ff7a00;
+  background: #00a8cc;
   color: #ffffff;
   font-size: 11px;
   font-weight: 900;
@@ -640,8 +722,8 @@
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  color: #00a8cc;
-  background: rgba(0, 168, 204, 0.12);
+  color: #0b4f8a;
+  background: rgba(11, 79, 138, 0.08);
   padding: 3px 10px;
   border-radius: 4px;
   display: inline-block;
@@ -651,13 +733,13 @@
 .wm-intl-ottawa-card-name {
   font-size: 20px;
   font-weight: 900;
-  color: #ffffff;
+  color: #0f172a;
   margin: 0 0 8px;
 }
 
 .wm-intl-ottawa-card-desc {
   font-size: 13px;
-  color: #94a3b8;
+  color: #64748b;
   line-height: 1.5;
   margin: 0;
   min-height: 40px;
@@ -665,8 +747,8 @@
 
 .wm-intl-ottawa-card-pricing {
   margin-bottom: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
   padding: 16px 0;
 }
 
@@ -679,12 +761,12 @@
 .wm-intl-ottawa-price-val {
   font-size: 34px;
   font-weight: 900;
-  color: #ffffff;
+  color: #0f172a;
 }
 
 .wm-intl-ottawa-price-period {
   font-size: 13px;
-  color: #94a3b8;
+  color: #64748b;
   font-weight: 600;
 }
 
@@ -696,7 +778,7 @@
 .wm-intl-ottawa-card-features h4 {
   font-size: 13px;
   font-weight: 800;
-  color: #cbd5e1;
+  color: #334155;
   text-transform: uppercase;
   margin: 0 0 12px;
 }
@@ -712,7 +794,7 @@
 
 .wm-intl-ottawa-card-features li {
   font-size: 13px;
-  color: #94a3b8;
+  color: #475569;
   display: flex;
   align-items: flex-start;
   gap: 8px;
@@ -728,7 +810,7 @@
 
 .wm-intl-ottawa-select-btn {
   width: 100%;
-  background: linear-gradient(135deg, #00a8cc 0%, #0b4f8a 100%);
+  background: #071426;
   color: #ffffff;
   font-size: 14px;
   font-weight: 800;
@@ -744,143 +826,130 @@
 }
 
 .wm-intl-ottawa-card.popular .wm-intl-ottawa-select-btn {
-  background: linear-gradient(135deg, #ff7a00 0%, #ff5200 100%);
-  box-shadow: 0 4px 16px rgba(255, 122, 0, 0.3);
+  background: #0b2545;
+  box-shadow: 0 4px 16px rgba(11, 37, 69, 0.3);
 }
 
 .wm-intl-ottawa-select-btn:hover {
-  opacity: 0.92;
+  background: #00a8cc;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
-/* 9. BENEFITS SECTION */
-.wm-intl-ottawa-benefits-section {
+/* 11. TESTIMONIALS (SOFT GREY-BLUE) */
+.wm-intl-ottawa-testimonials-section {
   padding: 80px 0;
-  background: #071426;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.wm-intl-ottawa-benefits-grid {
+.wm-intl-ottawa-testimonials-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 50px;
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
 }
 
-.wm-intl-ottawa-benefits-tag {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #ffd700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  display: block;
+.wm-intl-ottawa-testimonial-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.wm-intl-ottawa-benefits-title {
-  font-size: 30px;
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.25;
-  margin: 0 0 16px;
-}
-
-.wm-intl-ottawa-benefits-title span {
-  color: #ff9f43;
-}
-
-.wm-intl-ottawa-benefits-text p {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: #94a3b8;
+.wm-intl-ottawa-t-stars {
+  color: #f59e0b;
+  display: flex;
+  gap: 4px;
   margin-bottom: 14px;
 }
 
-.wm-intl-ottawa-benefits-points {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 18px;
+.wm-intl-ottawa-t-quote {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #334155;
+  font-style: italic;
+  margin-bottom: 20px;
 }
 
-.wm-intl-ottawa-benefit-point {
-  background: rgba(13, 37, 69, 0.6);
-  border: 1px solid rgba(0, 168, 204, 0.2);
-  border-radius: 6px;
-  padding: 12px 16px;
-  font-size: 14px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.wm-intl-ottawa-t-author h5 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 2px;
 }
 
-.wm-intl-ottawa-benefit-icon {
-  color: #10b981;
-  font-weight: 900;
+.wm-intl-ottawa-t-author p {
+  font-size: 12.5px;
+  color: #64748b;
+  margin: 0;
 }
 
-.wm-intl-ottawa-benefits-image img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* 10. ADVANTAGE SECTION */
+/* 12. OPERATIONAL GUARANTEES / WHY US (CLEAN WHITE) */
 .wm-intl-ottawa-advantage-section {
   padding: 80px 0;
-  background: #0b1f38;
+  background: #ffffff;
 }
 
 .wm-intl-ottawa-advantage-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 22px;
 }
 
 .wm-intl-ottawa-advantage-card {
-  background: rgba(7, 20, 38, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 24px 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
   transition: all 0.25s ease;
 }
 
 .wm-intl-ottawa-advantage-card:hover {
   border-color: #00a8cc;
+  background: #ffffff;
   transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(11, 79, 138, 0.08);
 }
 
 .wm-intl-ottawa-aicon {
   width: 44px;
   height: 44px;
-  background: rgba(0, 168, 204, 0.15);
+  background: rgba(11, 79, 138, 0.08);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: #00a8cc;
+  color: #0b4f8a;
   margin-bottom: 14px;
 }
 
 .wm-intl-ottawa-advantage-card h4 {
   font-size: 16px;
   font-weight: 800;
-  color: #ffffff;
+  color: #0f172a;
   margin: 0 0 8px;
 }
 
 .wm-intl-ottawa-advantage-card p {
   font-size: 13px;
-  color: #94a3b8;
+  color: #64748b;
   line-height: 1.55;
   margin: 0;
 }
 
-/* 11. FAQS SECTION */
+/* 13. FAQS SECTION (SOFT GREY-BLUE) */
 .wm-intl-ottawa-faqs-section {
   padding: 80px 0;
-  background: #071426;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .wm-intl-ottawa-faqs-wrap {
@@ -892,15 +961,16 @@
 }
 
 .wm-intl-ottawa-faq-item {
-  background: #0b1f38;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.2s ease;
 }
 
 .wm-intl-ottawa-faq-item.open {
-  border-color: rgba(0, 168, 204, 0.4);
+  border-color: #00a8cc;
+  box-shadow: 0 4px 14px rgba(0, 168, 204, 0.08);
 }
 
 .wm-intl-ottawa-faq-q {
@@ -911,7 +981,7 @@
   text-align: left;
   font-size: 15px;
   font-weight: 700;
-  color: #ffffff;
+  color: #0f172a;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -920,26 +990,26 @@
 }
 
 .wm-intl-ottawa-faq-q:hover {
-  color: #00a8cc;
+  color: #0b4f8a;
 }
 
 .wm-intl-ottawa-faq-a {
   padding: 0 20px 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid #e2e8f0;
 }
 
 .wm-intl-ottawa-faq-a p {
   font-size: 14px;
   line-height: 1.65;
-  color: #94a3b8;
+  color: #475569;
   margin: 12px 0 0;
 }
 
-/* 12. BOTTOM BANNER */
+/* 14. BOTTOM BANNER (DEEP NAVY LUXURY) */
 .wm-intl-ottawa-bottom-banner {
   padding: 60px 0;
-  background: radial-gradient(circle at 30% 50%, #113661 0%, #071426 100%);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, #071426 0%, #0b2545 100%);
+  border-top: 1px solid #e2e8f0;
 }
 
 .wm-intl-ottawa-banner-inner {
@@ -985,16 +1055,17 @@
 
 .wm-intl-ottawa-bbtn-call:hover {
   background: #059669;
+  transform: translateY(-2px);
 }
 
 .wm-intl-ottawa-bbtn-quote {
-  background: #ff7a00;
+  background: #071426;
+  border: 1.5px solid #00a8cc;
   color: #ffffff;
   font-size: 14px;
   font-weight: 800;
   padding: 13px 22px;
   border-radius: 6px;
-  border: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -1003,7 +1074,8 @@
 }
 
 .wm-intl-ottawa-bbtn-quote:hover {
-  background: #ea580c;
+  background: #00a8cc;
+  transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -1011,18 +1083,23 @@
    ========================================================================== */
 @media (max-width: 1024px) {
   .wm-intl-ottawa-hero-grid,
-  .wm-intl-ottawa-intro-grid,
-  .wm-intl-ottawa-include-grid,
-  .wm-intl-ottawa-why-grid,
-  .wm-intl-ottawa-benefits-grid,
+  .wm-intl-ottawa-whyoutside-grid,
   .wm-intl-ottawa-banner-inner {
     grid-template-columns: 1fr;
     gap: 36px;
   }
 
+  .wm-intl-ottawa-services-grid,
+  .wm-intl-ottawa-industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .wm-intl-ottawa-stats-grid,
-  .wm-intl-ottawa-numstats-grid,
-  .wm-intl-ottawa-advantage-grid {
+  .wm-intl-ottawa-results-grid,
+  .wm-intl-ottawa-process-grid,
+  .wm-intl-ottawa-advantage-grid,
+  .wm-intl-ottawa-market-grid,
+  .wm-intl-ottawa-testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1067,14 +1144,15 @@
     justify-content: center;
   }
 
+  .wm-intl-ottawa-services-grid,
+  .wm-intl-ottawa-industries-grid,
   .wm-intl-ottawa-stats-grid,
-  .wm-intl-ottawa-numstats-grid,
-  .wm-intl-ottawa-advantage-grid {
+  .wm-intl-ottawa-results-grid,
+  .wm-intl-ottawa-process-grid,
+  .wm-intl-ottawa-advantage-grid,
+  .wm-intl-ottawa-market-grid,
+  .wm-intl-ottawa-testimonials-grid {
     grid-template-columns: 1fr;
-  }
-
-  .wm-intl-ottawa-importance-box {
-    padding: 24px 20px;
   }
 
   .wm-intl-ottawa-banner-btns {
@@ -1085,5 +1163,10 @@
   .wm-intl-ottawa-bbtn-quote {
     width: 100%;
     justify-content: center;
+  }
+
+  .wm-intl-ottawa-compare-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }

@@ -13,7 +13,20 @@ import {
   FaGoogle,
   FaChevronRight,
   FaHeadset,
-  FaClock
+  FaClock,
+  FaSearch,
+  FaBullhorn,
+  FaShareAlt,
+  FaPenNib,
+  FaLaptopCode,
+  FaVideo,
+  FaChartLine,
+  FaBuilding,
+  FaUserMd,
+  FaShoppingCart,
+  FaUtensils,
+  FaBriefcase,
+  FaCompass
 } from 'react-icons/fa';
 import './MiamiDigitalMarketingPage.css';
 
@@ -31,39 +44,198 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     region: "Florida, USA",
     tagline: "PREMIER MIAMI DIGITAL MARKETING & SEO · FLORIDA, USA",
     heroHighlight: "Miami Digital Marketing & SEO Agency",
-    leadDesc: "Scale your Miami business with performance-driven SEO, Google Ads, and custom conversion funnels designed to dominate South Florida’s hyper-competitive market.",
-    bodyDesc: "From Brickell finance firms and Wynwood creative studios to South Beach hospitality and Coral Gables commerce, Webmok delivers measurable growth, local search supremacy, and maximum ROAS.",
+    heroItalic: "Accelerate High-Yield Growth with",
+    leadDesc: "Scale your South Florida business with performance-driven SEO, hyper-local Google Ads, and custom conversion funnels engineered for Miami’s hyper-competitive bilingual market.",
+    bodyDesc: "From Brickell finance powerhouses and Wynwood creative agencies to Coral Gables commerce and South Beach hospitality—Webmok delivers compound revenue growth, top Google rankings, and high-converting customer acquisition.",
     stats: [
   {
-    "num": "420%",
-    "label": "Average Miami Client Traffic Lift"
+    "num": "430%",
+    "label": "Average Miami Traffic Surge"
   },
   {
     "num": "5.8x",
     "label": "Average Return on Ad Spend (ROAS)"
   },
   {
-    "num": "#1",
-    "label": "Google Maps & Organic Rank Speed"
+    "num": "#1 Rank",
+    "label": "In High-Intent Local Searches"
   },
   {
     "num": "24/7",
-    "label": "US Timezone Support & Strategy"
+    "label": "US East Coast Timezone Support"
+  }
+],
+    services: [
+  {
+    "icon": "FaSearch",
+    "title": "Miami Local & Enterprise SEO",
+    "desc": "Dominate Google Maps 3-Pack and organic search across Miami-Dade, Broward, and Palm Beach counties with technical SEO, bilingual keyword targeting, and authoritative digital PR."
+  },
+  {
+    "icon": "FaBullhorn",
+    "title": "High-ROAS Google Ads & PPC",
+    "desc": "Precision search, Google Local Services Ads (LSA), and Performance Max funnels designed to capture ready-to-buy South Florida buyers while strictly eliminating ad spend waste."
+  },
+  {
+    "icon": "FaShareAlt",
+    "title": "Bilingual Paid Social Media",
+    "desc": "Hyper-targeted Meta, TikTok, and Instagram ad campaigns optimized for Miami’s unique English and Spanish demographic landscape with high-impact visual storytelling."
+  },
+  {
+    "icon": "FaPenNib",
+    "title": "Topical Authority Content & PR",
+    "desc": "Establish undisputed industry leadership with high-value localized content hubs, white-hat link acquisition from regional Florida news, and high-converting editorial assets."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "title": "High-Converting Web Engineering",
+    "desc": "Fast, mobile-first React and WordPress web architectures built for speed, exceptional user experience, Core Web Vitals excellence, and maximum conversion rates."
+  },
+  {
+    "icon": "FaVideo",
+    "title": "Creative Video & Brand Production",
+    "desc": "Studio-grade video production, short-form reels, and commercial creative assets that capture attention in Miami’s vibrant, visually driven market."
+  }
+],
+    whyHireOutsideTitle: "Why Miami Brands Are Hiring Outside Miami",
+    whyHireOutsideSubtitle: "THE VALUE & PERFORMANCE DISRUPTION",
+    whyHireDesc1: "Miami has experienced a massive influx of tech and enterprise capital, causing local agencies to inflate retainer fees to $8,000–$15,000/month while delegating work to junior staff.",
+    whyHireDesc2: "Webmok provides Fortune-500 technical execution, dedicated US-timezone account directors, and agile engineering sprints at a transparent, high-ROI investment model.",
+    comparisonPoints: [
+  {
+    "feature": "Senior Growth Engineers on Call",
+    "local": "Junior Account Coordinators",
+    "webmok": "Senior Growth Directors & Lead Techs"
+  },
+  {
+    "feature": "Monthly Retainer Cost",
+    "local": "$8,000 – $15,000 / month",
+    "webmok": "From $799 – $2,999 / month (3x-5x ROI)"
+  },
+  {
+    "feature": "Contract Commitment",
+    "local": "Mandatory 6-12 Month Lock-In",
+    "webmok": "Month-to-Month (Performance Retained)"
+  },
+  {
+    "feature": "Bilingual Execution",
+    "local": "Basic Translation Tools",
+    "webmok": "Native English & Spanish Market Strategy"
+  },
+  {
+    "feature": "Reporting & Telemetry",
+    "local": "Vague Monthly Vanity Reports",
+    "webmok": "24/7 Live Telemetry & Revenue Attribution"
+  }
+],
+    resultsTitle: "Results We Show in Client Analytics",
+    resultsSubtitle: "VERIFIABLE PERFORMANCE TELEMETRY",
+    resultsStats: [
+  {
+    "metric": "+420%",
+    "label": "Average Organic Traffic Lift across Miami Clients"
+  },
+  {
+    "metric": "5.8x",
+    "label": "Average Blended ROAS across Meta & Google Ads"
+  },
+  {
+    "metric": "-38%",
+    "label": "Reduction in Cost Per Inbound Lead (CPL)"
+  },
+  {
+    "metric": "$18M+",
+    "label": "Tracked Client Revenue Pipeline Generated"
+  }
+],
+    marketInsightsTitle: "What We Know About Selling in Miami",
+    marketInsightsSubtitle: "LOCAL MARKET TELEMETRY",
+    marketInsights: [
+  {
+    "title": "Bilingual Search Intent is Mandatory",
+    "desc": "Over 68% of Miami-Dade searches exhibit bilingual Spanish-English query patterns. We build dual-language ranking engines that capture both markets seamlessly."
+  },
+  {
+    "title": "Hyper-Localized Micro-Territories",
+    "desc": "Commercial behavior in Brickell differs completely from Doral, Coral Gables, or Wynwood. We build geo-targeted landing funnels specific to each neighborhood."
+  },
+  {
+    "title": "Rapid Market Influx Demands Authority",
+    "desc": "With hundreds of new companies moving to South Florida monthly, organic search equity and Google Maps superiority are required to maintain category leadership."
+  },
+  {
+    "title": "Mobile-First Conversions Drive 78% of Leads",
+    "desc": "South Florida buyers overwhelmingly browse on mobile. We engineer sub-second page load speeds and friction-free click-to-call conversions."
+  }
+],
+    processSteps: [
+  {
+    "num": "01",
+    "title": "Deep Market & Competitor Audit",
+    "desc": "Exhaustive analysis of your Miami competitors, keyword vulnerabilities, and funnel conversion leaks."
+  },
+  {
+    "num": "02",
+    "title": "Bespoke Blueprint & Architecture",
+    "desc": "Engineering your multi-channel acquisition roadmap with target commercial search terms and high-intent PPC funnels."
+  },
+  {
+    "num": "03",
+    "title": "Omni-Channel Execution Sprints",
+    "desc": "Deploying high-velocity SEO optimizations, ad creatives, localized landing pages, and editorial PR placements."
+  },
+  {
+    "num": "04",
+    "title": "Continuous CRO & Compound Scale",
+    "desc": "Daily bid optimizations, heat-map user analysis, and real-time revenue telemetry to maximize customer lifetime value."
+  }
+],
+    industries: [
+  {
+    "icon": "FaBuilding",
+    "name": "Real Estate & Luxury Property",
+    "desc": "Capturing domestic and international luxury buyers in Brickell, Sunny Isles, and Palm Beach."
+  },
+  {
+    "icon": "FaUserMd",
+    "name": "Healthcare & Aesthetic Clinics",
+    "desc": "Dominating local Google Maps for cosmetic surgery, dental practices, and wellness centers."
+  },
+  {
+    "icon": "FaBriefcase",
+    "name": "B2B Tech & Financial Services",
+    "desc": "Accelerating enterprise pipeline for FinTech, venture funds, and corporate law firms."
+  },
+  {
+    "icon": "FaUtensils",
+    "name": "Hospitality & Luxury Dining",
+    "desc": "Driving high-ticket bookings and foot traffic across South Beach and Wynwood hotspots."
+  },
+  {
+    "icon": "FaShoppingCart",
+    "name": "E-Commerce & DTC Brands",
+    "desc": "Scaling Shopify and custom storefronts with profitable Google Shopping and TikTok ads."
+  },
+  {
+    "icon": "FaCompass",
+    "name": "Legal & Professional Services",
+    "desc": "Generating high-value litigation cases and corporate client retainers on page 1 of Google."
   }
 ],
     plans: [
   {
     "name": "Miami Starter Scale",
-    "badge": "Local Growth",
+    "badge": "Local Traction",
     "usdPrice": "799",
     "inrPrice": "64,999",
-    "desc": "Perfect for local Miami service providers, clinics, law practices, and boutique stores looking to rank #1 locally.",
+    "desc": "Ideal for local Miami businesses, clinics, and professional practices aiming to capture top Google Maps 3-Pack rankings.",
     "features": [
       "Up to 20 High-Intent Miami Keywords",
-      "Google Business Profile (Maps) Optimization",
-      "Local Citation Building & NAP Consistency",
-      "On-Page SEO & Content Tuning (4 Pages/mo)",
-      "Monthly Executive ROI Report"
+      "Google Business Profile (Maps) Domination",
+      "Local Citations & Directory Synchronization",
+      "On-Page Optimization & Core Web Vitals Fixes",
+      "Monthly Executive ROI & Revenue Dashboard",
+      "Dedicated US East Coast Account Manager"
     ]
   },
   {
@@ -72,48 +244,68 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     "highlight": true,
     "usdPrice": "1,499",
     "inrPrice": "1,19,999",
-    "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and conversion rate optimization.",
+    "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and bilingual content marketing.",
     "features": [
-      "Up to 45 Keywords (Local & Regional Florida)",
-      "Complete Technical & Mobile Speed Audit",
-      "Google Search Ads (PPC) Management ($3k spend)",
-      "Bi-Lingual Content Creation (8 Articles/mo)",
-      "Full Competitor Conquesting Strategy",
-      "Bi-Weekly Live Strategy Calls"
+      "Up to 50 Multi-City Florida Keywords",
+      "Google Search Ads (PPC) Management ($4k spend)",
+      "Bilingual Content Hubs (8 High-Impact Posts/mo)",
+      "Competitor Backlink Interception & PR Outreach",
+      "Conversion-Optimized Landing Page Design",
+      "Bi-Weekly Live Strategic Telemetry Review"
     ]
   },
   {
-    "name": "Miami Enterprise Pro",
-    "badge": "Enterprise Domination",
+    "name": "Miami Enterprise Monopoly",
+    "badge": "Category Leader",
     "usdPrice": "2,999",
     "inrPrice": "2,44,999",
-    "desc": "Full-scale omni-channel dominance for established brands, franchise networks, and rapid-growth SaaS startups.",
+    "desc": "Full-scale omni-channel dominance for established brands, franchise networks, and rapid-growth SaaS firms.",
     "features": [
-      "Unlimited Target Keywords & Geo-Locations",
-      "Omni-Channel PPC (Google, Meta, LinkedIn)",
-      "Custom High-Converting Web Design / Landing Pages",
-      "Authoritative PR Backlinks & Outreach",
-      "Dedicated Account Squad & Slack Channel",
-      "Custom Multi-Touch Attribution Modeling"
+      "Unlimited High-Volume Target Keywords",
+      "Full-Funnel Omni-Channel PPC (Google, Meta, LinkedIn)",
+      "Bespoke Web App / High-Converting Portal Redesign",
+      "Tier-1 Press Release & Media Placements",
+      "Dedicated Senior Account Squad & Slack Channel",
+      "Custom CRM Integration & Multi-Touch Attribution"
     ]
+  }
+],
+    testimonials: [
+  {
+    "quote": "Webmok transformed our South Florida lead pipeline. We went from page 4 to #1 on Google Maps in Brickell, reducing our cost per acquisition by 45%.",
+    "author": "Carlos M.",
+    "role": "Managing Director",
+    "company": "Miami Commercial Real Estate Group",
+    "rating": 5
+  },
+  {
+    "quote": "Their bilingual campaign execution is unmatched. We captured over $1.8M in new customer revenue within 6 months of launching our Google Ads and SEO sprints.",
+    "author": "Elena S.",
+    "role": "VP of Marketing",
+    "company": "South Florida Aesthetic & Wellness",
+    "rating": 5
   }
 ],
     faqs: [
   {
-    "q": "Why should a Miami business choose Webmok over local agencies charging $5k+/mo?",
-    "a": "Webmok delivers senior-level agency execution at an agile, value-driven price point. You get dedicated US-timezone account managers, bilingual capabilities, and technical engineers who focus strictly on measurable pipeline revenue rather than vanity metrics."
+    "q": "Why should a Miami business choose Webmok over local agencies charging $8,000+/mo?",
+    "a": "Webmok provides senior-level engineering and growth execution at an agile, value-driven investment level. You work with dedicated US-timezone directors who focus strictly on measurable pipeline revenue and closed deals rather than vanity impressions."
   },
   {
     "q": "How fast can our Miami business expect to see Google ranking improvements?",
-    "a": "Local Google Maps optimizations and high-intent PPC campaigns yield calls within 14 to 30 days. Broad organic SEO keywords typically achieve major page #1 breakthroughs in 60 to 90 days as authority compounds."
+    "a": "Local Google Maps 3-Pack optimizations and high-intent PPC campaigns begin funneling leads within 14 to 30 days. Broad organic SEO keywords achieve major page #1 breakthroughs in 60 to 90 days as domain equity compounds."
   },
   {
     "q": "Do you offer bilingual English and Spanish marketing campaigns for South Florida?",
-    "a": "Yes, absolutely! Over 70% of Miami-Dade county engages in bilingual search. We craft tailored ad copy, localized keywords, and landing pages in both English and Spanish to maximize market penetration."
+    "a": "Yes, absolutely. Over 68% of Miami-Dade engages in bilingual search behavior. We craft tailored ad copy, localized keywords, and landing page funnels in both English and Spanish to maximize market penetration."
+  },
+  {
+    "q": "How do you handle Google Ads and paid media budget waste?",
+    "a": "We implement hyper-granular zip-code targeting, aggressive negative keyword sculpting, automated bid strategies, and day-parting to ensure your ad spend only captures ready-to-buy consumers."
   },
   {
     "q": "Are there any long-term contract lock-ins?",
-    "a": "Zero mandatory lock-in. All our Miami digital marketing packages are month-to-month. We retain our clients because of relentless performance and compounding ROI."
+    "a": "Zero mandatory lock-in. All our Miami digital marketing packages operate on flexible month-to-month agreements. We retain our clients through compounding performance and measurable ROI."
   }
 ]
   };
@@ -121,14 +313,14 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-intl-miami-page-root">
       {/* 1. HERO SECTION */}
-      <section className="wm-intl-miami-hero-section">
+      <section className="wm-intl-miami-hero-section" id="overview">
         <div className="wm-intl-miami-container">
           <div className="wm-intl-miami-hero-grid">
             <div className="wm-intl-miami-hero-left">
               <span className="wm-intl-miami-hero-est-tag">{pageData.tagline}</span>
 
               <h1 className="wm-intl-miami-hero-title-dual">
-                <span className="wm-intl-miami-hero-italic-gold">Accelerate Market Dominance with</span>
+                <span className="wm-intl-miami-hero-italic-gold">{pageData.heroItalic}</span>
                 <span className="wm-intl-miami-hero-bold-white">{pageData.heroHighlight}</span>
               </h1>
 
@@ -139,12 +331,12 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-intl-miami-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Audit`)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
                 >
-                  Get Free Strategy Audit <FaPaperPlane />
+                  Get Free Digital Proposal <FaPaperPlane />
                 </button>
                 <a href="#pricing-plans" className="wm-intl-miami-btn-outline">
-                  View {pageData.city} Packages <FaChevronRight />
+                  View {pageData.city} Rates <FaChevronRight />
                 </a>
               </div>
             </div>
@@ -162,7 +354,7 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-intl-miami-trust-card">
                 <div className="wm-intl-miami-tcard-info">
                   <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Agency</p>
+                  <p>Upwork Top 1% Verified Agency</p>
                 </div>
                 <div className="wm-intl-miami-tcard-badge wm-intl-miami-badge-upwork">up</div>
               </div>
@@ -196,7 +388,25 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
+      {/* 2. STICKY IN-PAGE SUB-NAV */}
+      <nav className="wm-intl-miami-inpage-nav">
+        <div className="wm-intl-miami-container">
+          <div className="wm-intl-miami-inpage-nav-inner">
+            <a href="#overview" className="wm-intl-miami-inpage-nav-link">Overview</a>
+            <a href="#services" className="wm-intl-miami-inpage-nav-link">Services</a>
+            <a href="#why-us" className="wm-intl-miami-inpage-nav-link">Why Choose Us</a>
+            <a href="#results" className="wm-intl-miami-inpage-nav-link">Live Telemetry</a>
+            <a href="#market-dynamics" className="wm-intl-miami-inpage-nav-link">Market Insights</a>
+            <a href="#process" className="wm-intl-miami-inpage-nav-link">Our Approach</a>
+            <a href="#industries" className="wm-intl-miami-inpage-nav-link">Industries</a>
+            <a href="#pricing-plans" className="wm-intl-miami-inpage-nav-link">Published Rates</a>
+            <a href="#testimonials" className="wm-intl-miami-inpage-nav-link">Client Reviews</a>
+            <a href="#faqs" className="wm-intl-miami-inpage-nav-link">FAQs</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* 3. STATS STRIP */}
       <section className="wm-intl-miami-stats-strip">
         <div className="wm-intl-miami-container">
           <div className="wm-intl-miami-stats-grid">
@@ -210,184 +420,192 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3. INTRO SECTION */}
-      <section className="wm-intl-miami-intro-section">
+      {/* 4. SERVICES SUITE */}
+      <section className="wm-intl-miami-services-section" id="services">
         <div className="wm-intl-miami-container">
-          <div className="wm-intl-miami-intro-grid">
-            <div className="wm-intl-miami-intro-left">
-              <span className="wm-intl-miami-intro-tag">SOUTH FLORIDA GROWTH SPECIALISTS</span>
-              <h2 className="wm-intl-miami-intro-title">
-                High-Impact Digital Growth for 
-                <span>Miami Businesses</span>
-              </h2>
-            </div>
-            <div className="wm-intl-miami-intro-right">
-              <p>
-                <span>Webmok Technologies is a premier global digital partner</span> Webmok Technologies is a globally recognized digital partner helping Miami brands capture local demand and scale internationally. We combine deep bilingual market insights, technical SEO, precision PPC, and bespoke web architecture to deliver compound revenue growth.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. BACKED BY NUMBERS SECTION */}
-      <section className="wm-intl-miami-numbers-section">
-        <div className="wm-intl-miami-container">
-          <div className="wm-intl-miami-numbers-heading">
-            <span className="wm-intl-miami-numbers-subtitle">MIAMI MARKET TELEMETRY</span>
-            <h2>
-              Proven Track Record Across 
-              <span>South Florida</span>
+          <div className="wm-intl-miami-sec-heading-center">
+            <span className="wm-intl-miami-sec-badge">COMPREHENSIVE CAPABILITIES</span>
+            <h2 className="wm-intl-miami-sec-h2">
+              Our {pageData.city} <span>Digital Marketing Services</span>
             </h2>
+            <div className="wm-intl-miami-sec-bar-center"></div>
           </div>
 
-          <div className="wm-intl-miami-numstats-grid">
-            <div key="0" className="wm-intl-miami-numstat-item">
-              <div className="wm-intl-miami-numstat-number">{"85+"}</div>
-              <div className="wm-intl-miami-numstat-line"></div>
-              <p>{"Miami Brands Scaled"}</p>
-            </div>
-            <div key="1" className="wm-intl-miami-numstat-item">
-              <div className="wm-intl-miami-numstat-number">{"$18M+"}</div>
-              <div className="wm-intl-miami-numstat-line"></div>
-              <p>{"Client Revenue Generated"}</p>
-            </div>
-            <div key="2" className="wm-intl-miami-numstat-item">
-              <div className="wm-intl-miami-numstat-number">{"99.4%"}</div>
-              <div className="wm-intl-miami-numstat-line"></div>
-              <p>{"Client Retention Rate"}</p>
-            </div>
-            <div key="3" className="wm-intl-miami-numstat-item">
-              <div className="wm-intl-miami-numstat-number">{"Under 28s"}</div>
-              <div className="wm-intl-miami-numstat-line"></div>
-              <p>{"Direct Response Time"}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INCLUSION / CAPABILITIES SECTION */}
-      <section className="wm-intl-miami-include-section">
-        <div className="wm-intl-miami-container">
-          <div className="wm-intl-miami-include-grid">
-            <div className="wm-intl-miami-include-content">
-              <span className="wm-intl-miami-include-tag">FULL-STACK SUITE</span>
-              <h2 className="wm-intl-miami-include-title">
-                Comprehensive Digital Solutions in 
-                <span>Miami, FL</span>
-              </h2>
-              <p>Our Miami digital marketing packages encompass hyper-local Google Maps ranking, Spanish/English bilingual campaigns, high-converting PPC funnels, and enterprise UX web development.</p>
-              <p>Whether you need B2B pipeline acceleration or retail foot-traffic expansion, our dedicated Miami squad executes end-to-end campaigns with zero fluff.</p>
-
-              <div className="wm-intl-miami-feature-list">
-                <div key="Bilingual Local SEO (English & Spanish Optimization)" className="wm-intl-miami-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Bilingual Local SEO (English & Spanish Optimization)"}</span>
+          <div className="wm-intl-miami-services-grid">
+            {pageData.services.map((svc, i) => (
+              <div key={i} className="wm-intl-miami-service-card">
+                <div className="wm-intl-miami-svc-icon">
+                  {svc.icon === 'FaSearch' && <FaSearch />}
+                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                  {svc.icon === 'FaPenNib' && <FaPenNib />}
+                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {svc.icon === 'FaVideo' && <FaVideo />}
+                  {svc.icon === 'FaChartLine' && <FaChartLine />}
+                  {svc.icon === 'FaCompass' && <FaCompass />}
                 </div>
-                <div key="Google Local Services Ads (LSA) & High-Intent PPC" className="wm-intl-miami-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Google Local Services Ads (LSA) & High-Intent PPC"}</span>
-                </div>
-                <div key="South Florida Geo-Fenced Social Ads (Meta & TikTok)" className="wm-intl-miami-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"South Florida Geo-Fenced Social Ads (Meta & TikTok)"}</span>
-                </div>
-                <div key="Conversion-Optimized Landing Page Design" className="wm-intl-miami-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Conversion-Optimized Landing Page Design"}</span>
-                </div>
-                <div key="Real-Time Telemetry Dashboard & Revenue Attribution" className="wm-intl-miami-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Real-Time Telemetry Dashboard & Revenue Attribution"}</span>
-                </div>
-                <div key="Dedicated US East-Coast Timezone Account Director" className="wm-intl-miami-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Dedicated US East-Coast Timezone Account Director"}</span>
-                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. WHY HIRE OUTSIDE */}
+      <section className="wm-intl-miami-whyoutside-section" id="why-us">
+        <div className="wm-intl-miami-container">
+          <div className="wm-intl-miami-whyoutside-grid">
+            <div className="wm-intl-miami-whyoutside-text">
+              <span className="wm-intl-miami-sec-badge">{pageData.whyHireOutsideSubtitle}</span>
+              <h2>{pageData.whyHireOutsideTitle}</h2>
+              <p>{pageData.whyHireDesc1}</p>
+              <p>{pageData.whyHireDesc2}</p>
             </div>
 
-            <div className="wm-intl-miami-include-image">
-              <img src="/onpage1.avif" alt="Miami Digital Marketing Agency" />
+            <div className="wm-intl-miami-compare-table">
+              <div className="wm-intl-miami-compare-row wm-intl-miami-compare-hdr">
+                <div>Deliverable / Metric</div>
+                <div>Typical Local Agency</div>
+                <div>Webmok Advantage</div>
+              </div>
+              {pageData.comparisonPoints.map((cp, idx) => (
+                <div key={idx} className="wm-intl-miami-compare-row">
+                  <div className="wm-intl-miami-compare-feat">{cp.feature}</div>
+                  <div className="wm-intl-miami-compare-local">{cp.local}</div>
+                  <div className="wm-intl-miami-compare-wm">{cp.webmok}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. IMPORTANCE SECTION */}
-      <section className="wm-intl-miami-importance-section">
+      {/* 6. RESULTS TELEMETRY */}
+      <section className="wm-intl-miami-results-section" id="results">
         <div className="wm-intl-miami-container">
-          <div className="wm-intl-miami-importance-box">
-            <h2 className="wm-intl-miami-importance-title">
-              Why Digital Dominance Matters in 
-              <span>Miami</span>
+          <div className="wm-intl-miami-sec-heading-center">
+            <span className="wm-intl-miami-sec-badge">{pageData.resultsSubtitle}</span>
+            <h2 className="wm-intl-miami-sec-h2">{pageData.resultsTitle}</h2>
+            <div className="wm-intl-miami-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-miami-results-grid">
+            {pageData.resultsStats.map((rs, i) => (
+              <div key={i} className="wm-intl-miami-result-card">
+                <strong>{rs.metric}</strong>
+                <p>{rs.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. MARKET DYNAMICS */}
+      <section className="wm-intl-miami-market-section" id="market-dynamics">
+        <div className="wm-intl-miami-container">
+          <div className="wm-intl-miami-sec-heading-center">
+            <span className="wm-intl-miami-sec-badge">{pageData.marketInsightsSubtitle}</span>
+            <h2 className="wm-intl-miami-sec-h2">{pageData.marketInsightsTitle}</h2>
+            <div className="wm-intl-miami-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-miami-market-grid">
+            {pageData.marketInsights.map((mi, i) => (
+              <div key={i} className="wm-intl-miami-market-card">
+                <h4>{mi.title}</h4>
+                <p>{mi.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 4-STEP PROCESS */}
+      <section className="wm-intl-miami-process-section" id="process">
+        <div className="wm-intl-miami-container">
+          <div className="wm-intl-miami-sec-heading-center">
+            <span className="wm-intl-miami-sec-badge">OUR PROCESS & APPROACH</span>
+            <h2 className="wm-intl-miami-sec-h2">
+              Our 4-Step <span>Agile Growth Framework</span>
             </h2>
-
-            <div className="wm-intl-miami-importance-content">
-              <p>Miami is now one of the fastest-growing tech and business hubs in the Americas. With hundreds of new companies moving to South Florida each month, organic visibility on Google and surgical ad targeting are required to outpace competitors.</p>
-              <p>Without aggressive technical SEO and optimized customer acquisition funnels, local competitors will capture your market share.</p>
-            </div>
+            <div className="wm-intl-miami-sec-bar-center"></div>
           </div>
-        </div>
-      </section>
 
-      {/* 7. WHY WEBMOK SECTION */}
-      <section className="wm-intl-miami-why-section">
-        <div className="wm-intl-miami-container">
-          <div className="wm-intl-miami-why-grid">
-            <div className="wm-intl-miami-why-content">
-              <span className="wm-intl-miami-why-tag">THE WEBMOK DIFFERENCE</span>
-              <h2 className="wm-intl-miami-why-title">
-                Engineered for Miami Market 
-                <span className="s1"> Supremacy</span>{' '}
-                <span className="s2">& Scalable ROI</span>
-              </h2>
-
-              <div className="wm-intl-miami-why-text">
-                <p>We don’t believe in cookie-cutter strategies. Every Miami campaign is custom engineered around your industry unit economics, competitor vulnerabilities, and high-converting search intent.</p>
-                <p>With transparent weekly reporting, zero long-term lock-in, and senior digital architects on call, you get Fortune-500 execution at mid-market agility.</p>
+          <div className="wm-intl-miami-process-grid">
+            {pageData.processSteps.map((ps, i) => (
+              <div key={i} className="wm-intl-miami-process-card">
+                <span className="wm-intl-miami-proc-num">STEP {ps.num}</span>
+                <h4>{ps.title}</h4>
+                <p>{ps.desc}</p>
               </div>
-            </div>
-
-            <div className="wm-intl-miami-why-image">
-              <img src="/onpage3.avif" alt="Why Webmok" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. PRICING PLANS SECTION */}
+      {/* 9. INDUSTRIES */}
+      <section className="wm-intl-miami-industries-section" id="industries">
+        <div className="wm-intl-miami-container">
+          <div className="wm-intl-miami-sec-heading-center">
+            <span className="wm-intl-miami-sec-badge">WHO WE WORK WITH</span>
+            <h2 className="wm-intl-miami-sec-h2">
+              Specialized Industry <span>Growth Solutions</span>
+            </h2>
+            <div className="wm-intl-miami-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-miami-industries-grid">
+            {pageData.industries.map((ind, i) => (
+              <div key={i} className="wm-intl-miami-industry-card">
+                <div className="wm-intl-miami-ind-icon">
+                  {ind.icon === 'FaBuilding' && <FaBuilding />}
+                  {ind.icon === 'FaUserMd' && <FaUserMd />}
+                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                  {ind.icon === 'FaUtensils' && <FaUtensils />}
+                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {ind.icon === 'FaCompass' && <FaCompass />}
+                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                </div>
+                <h4>{ind.name}</h4>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. PRICING PLANS */}
       <section className="wm-intl-miami-pricing-section" id="pricing-plans">
         <div className="wm-intl-miami-container">
-          <div className="wm-intl-miami-sec-header">
-            <span className="wm-intl-miami-sec-subtitle">Transparent Monthly Plans</span>
-            <h2 className="wm-intl-miami-sec-title">Flexible Miami Growth Packages with Zero Lock-In</h2>
-            <div className="wm-intl-miami-sec-bar"></div>
+          <div className="wm-intl-miami-sec-heading-center">
+            <span className="wm-intl-miami-sec-badge">PUBLISHED RATES · ZERO LOCK-IN</span>
+            <h2 className="wm-intl-miami-sec-h2">
+              Transparent {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-miami-sec-bar-center"></div>
 
             {/* Currency Switcher */}
             <div className="wm-intl-miami-currency-toggle">
-              
-              <button
-                type="button"
-                className={`wm-intl-miami-curr-btn ${currency === 'USD' ? 'active' : ''}`}
-                onClick={() => setCurrency('USD')}
-              >
-                $ USD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-miami-curr-btn ${currency === 'INR' ? 'active' : ''}`}
-                onClick={() => setCurrency('INR')}
-              >
-                ₹ INR
-              </button>
+              {[{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  className={`wm-intl-miami-curr-btn ${currency === c.code ? 'active' : ''}`}
+                  onClick={() => setCurrency(c.code)}
+                >
+                  {c.symbol} {c.code}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Pricing Grid */}
           <div className="wm-intl-miami-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : `$${plan.usdPrice}`;
+              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
               return (
                 <div key={i} className={`wm-intl-miami-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (
@@ -435,93 +653,80 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 9. BENEFITS SECTION */}
-      <section className="wm-intl-miami-benefits-section">
+      {/* 11. TESTIMONIALS */}
+      <section className="wm-intl-miami-testimonials-section" id="testimonials">
         <div className="wm-intl-miami-container">
-          <div className="wm-intl-miami-benefits-grid">
-            <div className="wm-intl-miami-benefits-content">
-              <span className="wm-intl-miami-benefits-tag">PROVEN OUTCOMES</span>
-              <h2 className="wm-intl-miami-benefits-title">
-                Transforming Miami Brands into 
-                <span>Category Leaders</span>
-              </h2>
+          <div className="wm-intl-miami-sec-heading-center">
+            <span className="wm-intl-miami-sec-badge">CLIENT SUCCESS STORIES</span>
+            <h2 className="wm-intl-miami-sec-h2">
+              What {pageData.city} <span>Leaders Say About Webmok</span>
+            </h2>
+            <div className="wm-intl-miami-sec-bar-center"></div>
+          </div>
 
-              <div className="wm-intl-miami-benefits-text">
-                <p>Our tailored Miami digital marketing campaigns produce sustainable, compounding organic rankings that lower your blended customer acquisition costs over time.</p>
-                <p>We build digital assets that continuously funnel qualified sales calls, form leads, and transactions into your pipeline.</p>
-              </div>
-
-              <div className="wm-intl-miami-benefits-points">
-                <div key="Top 3 Google Maps 3-Pack Rankings in Miami Metro" className="wm-intl-miami-benefit-point">
-                  <span className="wm-intl-miami-benefit-icon">✓</span>
-                  <span>{"Top 3 Google Maps 3-Pack Rankings in Miami Metro"}</span>
+          <div className="wm-intl-miami-testimonials-grid">
+            {pageData.testimonials.map((t, idx) => (
+              <div key={idx} className="wm-intl-miami-testimonial-card">
+                <div className="wm-intl-miami-t-stars">
+                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
-                <div key="Average 38% Reduction in Cost Per Lead (CPL)" className="wm-intl-miami-benefit-point">
-                  <span className="wm-intl-miami-benefit-icon">✓</span>
-                  <span>{"Average 38% Reduction in Cost Per Lead (CPL)"}</span>
-                </div>
-                <div key="Substantial Organic Keyword Footprint Expansion" className="wm-intl-miami-benefit-point">
-                  <span className="wm-intl-miami-benefit-icon">✓</span>
-                  <span>{"Substantial Organic Keyword Footprint Expansion"}</span>
-                </div>
-                <div key="Transparent Telemetry with Real-Time Revenue Tracking" className="wm-intl-miami-benefit-point">
-                  <span className="wm-intl-miami-benefit-icon">✓</span>
-                  <span>{"Transparent Telemetry with Real-Time Revenue Tracking"}</span>
+                <p className="wm-intl-miami-t-quote">"{t.quote}"</p>
+                <div className="wm-intl-miami-t-author">
+                  <h5>{t.author}</h5>
+                  <p>{t.role} · {t.company}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="wm-intl-miami-benefits-image">
-              <img src="/onpagebenifts.jpg" alt="Miami Digital Marketing Agency" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. ADVANTAGE SECTION */}
+      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
       <section className="wm-intl-miami-advantage-section">
         <div className="wm-intl-miami-container">
-          <div className="wm-intl-miami-sec-header">
-            <span className="wm-intl-miami-sec-subtitle">Why Partner With Us</span>
-            <h2 className="wm-intl-miami-sec-title">The WebMok Advantage in Global Digital Execution</h2>
-            <div className="wm-intl-miami-sec-bar"></div>
+          <div className="wm-intl-miami-sec-heading-center">
+            <span className="wm-intl-miami-sec-badge">WHY CHOOSE WEBMOK</span>
+            <h2 className="wm-intl-miami-sec-h2">The Webmok Operational Guarantees</h2>
+            <div className="wm-intl-miami-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-miami-advantage-grid">
             <div className="wm-intl-miami-advantage-card">
               <div className="wm-intl-miami-aicon"><FaShieldAlt /></div>
-              <h4>100% Proven Method</h4>
-              <p>Strict white-hat execution that protects your brand equity and produces compounding organic growth.</p>
+              <h4>100% White-Hat Proven Methods</h4>
+              <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
             </div>
 
             <div className="wm-intl-miami-advantage-card">
               <div className="wm-intl-miami-aicon"><FaRocket /></div>
-              <h4>Full Telemetry Dashboards</h4>
+              <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
             </div>
 
             <div className="wm-intl-miami-advantage-card">
               <div className="wm-intl-miami-aicon"><FaHeadset /></div>
               <h4>Dedicated Senior Squad</h4>
-              <p>Work directly with dedicated senior strategists and technical engineers with direct phone & WhatsApp support.</p>
+              <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
             </div>
 
             <div className="wm-intl-miami-advantage-card">
               <div className="wm-intl-miami-aicon"><FaClock /></div>
               <h4>Zero Mandatory Lock-In</h4>
-              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable growth.</p>
+              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. FAQS ACCORDION */}
-      <section className="wm-intl-miami-faqs-section">
+      {/* 13. REGIONAL FAQS */}
+      <section className="wm-intl-miami-faqs-section" id="faqs">
         <div className="wm-intl-miami-container">
-          <div className="wm-intl-miami-sec-header">
-            <span className="wm-intl-miami-sec-subtitle">Frequently Asked Questions</span>
-            <h2 className="wm-intl-miami-sec-title">Common Queries About Our Miami Growth Packages</h2>
-            <div className="wm-intl-miami-sec-bar"></div>
+          <div className="wm-intl-miami-sec-heading-center">
+            <span className="wm-intl-miami-sec-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 className="wm-intl-miami-sec-h2">
+              Common Queries About Our {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-miami-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-miami-faqs-wrap">
@@ -546,12 +751,12 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. BOTTOM CONVERSION BANNER */}
+      {/* 14. BOTTOM CONVERSION BANNER */}
       <section className="wm-intl-miami-bottom-banner">
         <div className="wm-intl-miami-container">
           <div className="wm-intl-miami-banner-inner">
             <div className="wm-intl-miami-banner-text">
-              <h2>Ready to Accelerate Growth in Miami?</h2>
+              <h2>Ready to Accelerate Revenue in {pageData.city}?</h2>
               <p>Schedule a quick 1-on-1 strategy consultation with our senior digital directors today.</p>
             </div>
             <div className="wm-intl-miami-banner-btns">
@@ -567,7 +772,7 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 className="wm-intl-miami-bbtn-quote"
                 onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Bottom Banner Inquiry`)}
               >
-                Get Custom Quote <FaArrowRight />
+                Get Free Custom Proposal <FaArrowRight />
               </button>
             </div>
           </div>

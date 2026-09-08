@@ -13,7 +13,20 @@ import {
   FaGoogle,
   FaChevronRight,
   FaHeadset,
-  FaClock
+  FaClock,
+  FaSearch,
+  FaBullhorn,
+  FaShareAlt,
+  FaPenNib,
+  FaLaptopCode,
+  FaVideo,
+  FaChartLine,
+  FaBuilding,
+  FaUserMd,
+  FaShoppingCart,
+  FaUtensils,
+  FaBriefcase,
+  FaCompass
 } from 'react-icons/fa';
 import './AustraliaDigitalMarketingPage.css';
 
@@ -28,22 +41,23 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   const pageData = {
     name: "Australia Digital Marketing Agency",
     city: "Australia",
-    region: "Australia Nationwide (NSW, VIC, QLD, WA, SA)",
-    tagline: "NATIONWIDE DIGITAL MARKETING AGENCY · AUSTRALIA",
+    region: "Australia Nationwide",
+    tagline: "NATIONAL DIGITAL MARKETING AGENCY · AUSTRALIA",
     heroHighlight: "Australia Digital Marketing & SEO Agency",
-    leadDesc: "Scale your Australian business nationwide with high-authority technical SEO, precision Google Ads, and conversion-focused digital architecture.",
-    bodyDesc: "Covering Sydney, Melbourne, Brisbane, Perth, Adelaide, and the Gold Coast—Webmok helps Australian companies outperform competitors and capture Aussie search intent.",
+    heroItalic: "Accelerate Nationwide Australian Growth with",
+    leadDesc: "Scale across Sydney, Melbourne, Brisbane, Perth, and Adelaide with high-velocity Australian SEO, precision Google Ads, and high-conversion web development.",
+    bodyDesc: "We help Australian businesses build dominant digital pipelines, rank #1 on Google.com.au, and capture high-intent commercial buyers throughout the country.",
     stats: [
   {
-    "num": "440%",
-    "label": "Average Australia Traffic Surge"
+    "num": "430%",
+    "label": "Average Australia Traffic Growth"
   },
   {
-    "num": "5.9x",
-    "label": "Average ROAS on Australian Paid Media"
+    "num": "5.8x",
+    "label": "Average ROAS on Paid Media"
   },
   {
-    "num": "85+",
+    "num": "100+",
     "label": "Australian Brands Scaled"
   },
   {
@@ -51,69 +65,243 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     "label": "Privacy Act 1988 Compliant"
   }
 ],
+    services: [
+  {
+    "icon": "FaSearch",
+    "title": "Australian National & State SEO",
+    "desc": "Dominating Google.com.au search results across NSW, Victoria, Queensland, and WA with technical SEO and Australian citation networks."
+  },
+  {
+    "icon": "FaBullhorn",
+    "title": "High-ROAS Google Ads (PPC)",
+    "desc": "Precision search funnels, Performance Max campaigns, and Google Shopping optimization designed for Australian consumer purchasing habits."
+  },
+  {
+    "icon": "FaShareAlt",
+    "title": "Paid Social Advertising (Meta & TikTok)",
+    "desc": "Hyper-targeted Meta, TikTok, and LinkedIn campaigns engaging Australian consumers and business decision-makers."
+  },
+  {
+    "icon": "FaPenNib",
+    "title": "Australian Digital PR & Content",
+    "desc": "Building national authority with localized content hubs, Australian business citations, and editorial outreach to prominent Australian media."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "title": "High-Speed Web Architecture",
+    "desc": "Speed-optimized, mobile-first websites built for sub-second load times, Core Web Vitals excellence, and maximum conversion rates."
+  },
+  {
+    "icon": "FaVideo",
+    "title": "Commercial Video & Creative Production",
+    "desc": "Studio-grade video ads, lifestyle storytelling, and commercial creative assets crafted specifically for Australian audiences."
+  }
+],
+    whyHireOutsideTitle: "The Australian Growth Advantage with Webmok",
+    whyHireOutsideSubtitle: "SYDNEY & MELBOURNE QUALITY · AGILE VALUE",
+    whyHireDesc1: "Australian agencies in Sydney and Melbourne carry massive CBD overhead, charging A$9,000–A$22,000/month while operating with slow turnaround times and rigid long-term contracts.",
+    whyHireDesc2: "Webmok provides dedicated senior growth engineers, AEST timezone alignment, and rapid sprint cycles at a high-ROI, value-driven investment.",
+    comparisonPoints: [
+  {
+    "feature": "Senior Account Attention",
+    "local": "Junior Account Managers",
+    "webmok": "Dedicated Senior Growth Directors"
+  },
+  {
+    "feature": "Monthly Retainer Cost",
+    "local": "A$9,000 – A$22,000 / month",
+    "webmok": "From A$1,200 – A$4,560 / month (High ROI)"
+  },
+  {
+    "feature": "Contract Commitment",
+    "local": "Mandatory 6-12 Month Lock-In",
+    "webmok": "100% Flexible Month-to-Month"
+  },
+  {
+    "feature": "Sprint Turnaround",
+    "local": "Slow 2-3 Week Cycles",
+    "webmok": "48-72 Hour Agile Sprint Cycles"
+  },
+  {
+    "feature": "Data & Telemetry",
+    "local": "Generic PDF Monthly Summaries",
+    "webmok": "Live 24/7 Real-Time Revenue Dashboards"
+  }
+],
+    resultsTitle: "Australian Performance Telemetry",
+    resultsSubtitle: "VERIFIABLE AUSTRALIAN RESULTS",
+    resultsStats: [
+  {
+    "metric": "100+",
+    "label": "Australian Brands Scaled to Page 1"
+  },
+  {
+    "metric": "A$26M+",
+    "label": "Tracked Pipeline Revenue Generated"
+  },
+  {
+    "metric": "99.4%",
+    "label": "Australian Client Satisfaction Rate"
+  },
+  {
+    "metric": "24/7",
+    "label": "AEST Timezone Strategic Support"
+  }
+],
+    marketInsightsTitle: "What We Know About Marketing in Australia",
+    marketInsightsSubtitle: "AUSTRALIAN DYNAMICS",
+    marketInsights: [
+  {
+    "title": "High Smartphone & Mobile Search Adoption",
+    "desc": "Over 78% of Australian consumer searches happen on mobile devices. Fast click-to-call mobile landing pages convert 45% higher."
+  },
+  {
+    "title": "Distinct State & City Demographics",
+    "desc": "Sydney leads in financial services, Melbourne in retail/culture, Brisbane in lifestyle/property, and Perth in resources and engineering."
+  },
+  {
+    "title": "Strict Australian Privacy Principles (APP)",
+    "desc": "We implement compliant opt-in systems and privacy architectures adhering to the Privacy Act 1988 and Spam Act 2003."
+  },
+  {
+    "title": "High Search Intent on Google.com.au",
+    "desc": "Capturing Australian searchers requires localized .com.au domain signals, Australian directory citations, and localized schema markup."
+  }
+],
+    processSteps: [
+  {
+    "num": "01",
+    "title": "Australian Search & Market Audit",
+    "desc": "Analyzing search volume and competitor penetration across Sydney, Melbourne, and Brisbane."
+  },
+  {
+    "num": "02",
+    "title": "National Search Architecture",
+    "desc": "Configuring multi-state landing pages, Australian schema markup, and Google Business Profiles."
+  },
+  {
+    "num": "03",
+    "title": "Omni-Channel Campaign Launch",
+    "desc": "Deploying high-intent Google Ads, Australian digital PR outreach, and targeted social campaigns."
+  },
+  {
+    "num": "04",
+    "title": "CRO & Revenue Attribution",
+    "desc": "Optimizing conversion funnels, tracking pipeline ROI, and scaling Australian market share."
+  }
+],
+    industries: [
+  {
+    "icon": "FaBriefcase",
+    "name": "Financial, Mining & Corporate Services",
+    "desc": "Capturing corporate clients, institutional investors, and B2B engineering contracts."
+  },
+  {
+    "icon": "FaBuilding",
+    "name": "Real Estate & Property Development",
+    "desc": "Dominating buyer acquisition for luxury homes and commercial developments across Australia."
+  },
+  {
+    "icon": "FaUserMd",
+    "name": "Private Medical & Healthcare",
+    "desc": "Patient acquisition for dental, medical, and specialized healthcare practices."
+  },
+  {
+    "icon": "FaShoppingCart",
+    "name": "E-Commerce & National Retail",
+    "desc": "Scaling Shopify and custom storefronts with profitable Google Shopping and Meta ads."
+  },
+  {
+    "icon": "FaUtensils",
+    "name": "Tourism & Hospitality",
+    "desc": "Driving domestic and international tourist bookings across premier Australian destinations."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "name": "Tech Startups & B2B SaaS",
+    "desc": "Driving ARR growth and corporate demo requests across Sydney and Melbourne tech hubs."
+  }
+],
     plans: [
   {
-    "name": "Australia Regional Growth",
+    "name": "Australia Growth Core",
     "badge": "City Focus",
-    "usdPrice": "849",
-    "inrPrice": "69,999",
-    "desc": "Ideal for local Australian service providers, clinics, law firms, and boutique stores looking to dominate their local city.",
+    "usdPrice": "799",
+    "inrPrice": "64,999",
+    "desc": "Ideal for local Australian businesses establishing dominant visibility in a specific capital city market.",
     "features": [
       "Up to 20 High-Intent Australian Keywords",
-      "Google Business Profile (Maps) Optimization",
-      "Local Australian Citations & TrueLocal Submissions",
+      "Google Business Profile Geo-Optimization",
+      "Australian Citations & TrueLocal Listings",
       "On-Page SEO & Content Tuning (4 Pages/mo)",
-      "Monthly Executive ROI Report"
+      "Monthly Executive ROI Report",
+      "Dedicated AEST Account Director"
     ]
   },
   {
-    "name": "Australia National Accelerator",
+    "name": "Australia Multi-State",
     "badge": "Most Popular",
     "highlight": true,
-    "usdPrice": "1,599",
-    "inrPrice": "1,29,999",
+    "usdPrice": "1,499",
+    "inrPrice": "1,19,999",
     "desc": "Comprehensive multi-city campaign combining national Australian SEO, Google Ads management, and conversion rate optimization.",
     "features": [
-      "Up to 45 Keywords Across Major Australian Metros",
-      "Google Search Ads (PPC) Management",
+      "Up to 45 Multi-State Australian Keywords",
+      "Google Ads (PPC) Campaign Management",
       "Multi-City Landing Page Architecture",
-      "High-Authority Content Marketing (6 Articles/mo)",
+      "High-Authority Content Marketing (6 Posts/mo)",
       "Competitor Backlink Interception",
-      "Bi-Weekly Live Strategy Calls"
+      "Bi-Weekly Live Strategy Sessions"
     ]
   },
   {
-    "name": "Australia Enterprise Monopoly",
+    "name": "Australia National Monopoly",
     "badge": "National Dominance",
-    "usdPrice": "3,199",
-    "inrPrice": "2,59,999",
-    "desc": "Full-scale market dominance for established Australian national brands, corporate firms, and fast-growing e-commerce stores.",
+    "usdPrice": "2,999",
+    "inrPrice": "2,44,999",
+    "desc": "Full-scale nationwide market takeover for Australian national brands, franchise networks, and enterprise e-commerce.",
     "features": [
-      "Nationwide Keyword Takeover (100+ Keywords)",
+      "Australia Nationwide Keyword Domination (100+ Keywords)",
       "Omni-Channel PPC (Google, Meta, LinkedIn)",
-      "Bespoke Web Redesign & High-Converting Funnels",
-      "Authoritative Australian PR Backlinks & Media Placements",
+      "Custom High-Converting Web Redesign",
+      "Tier-1 Australian Media PR & Backlinks",
       "Dedicated Account Squad & Daily Slack Channel",
       "Custom Multi-Touch Attribution Modeling"
     ]
   }
 ],
+    testimonials: [
+  {
+    "quote": "Webmok scaled our commercial property firm across Sydney and Melbourne. Our inbound qualified lead volume grew by 280%.",
+    "author": "Lachlan T.",
+    "role": "Managing Partner",
+    "company": "Australian National Property Group",
+    "rating": 5
+  },
+  {
+    "quote": "Their SEO and Google Ads team put our e-commerce store at the top of Google.com.au for our primary product lines.",
+    "author": "Mitchell K.",
+    "role": "Head of Growth",
+    "company": "Australian Lifestyle Retail Brand",
+    "rating": 5
+  }
+],
     faqs: [
   {
-    "q": "How fast can our Australian business expect to rank on page 1 of Google?",
-    "a": "Google Maps optimizations and high-intent PPC campaigns generate calls within 14 to 30 days. Broad organic SEO keywords typically achieve major page #1 breakthroughs in 60 to 90 days."
+    "q": "Why should an Australian business choose Webmok over local Sydney/Melbourne agencies?",
+    "a": "Webmok delivers senior-level agency execution without bloated Australian CBD overhead. You work directly with dedicated AEST-timezone directors focused on measurable pipeline revenue."
   },
   {
-    "q": "Are your digital campaigns compliant with Australia’s Privacy Act 1988?",
-    "a": "Yes, 100% compliant. All analytics, lead capture mechanisms, and tracking strictly adhere to Australian Privacy Principles (APPs)."
+    "q": "How fast can our Australian business expect to see Google ranking improvements?",
+    "a": "Local Google Maps optimizations and high-intent PPC campaigns generate leads within 14 to 30 days. Broad organic SEO keywords achieve page #1 breakthroughs in 60 to 90 days."
   },
   {
-    "q": "How do you coordinate with Australian businesses during AEST/AWST working hours?",
-    "a": "Our dedicated Australian team is fully aligned with Australian business hours, ensuring seamless live communication and strategy meetings."
+    "q": "Are your marketing practices compliant with the Privacy Act 1988?",
+    "a": "Yes, 100%. All tracking, lead forms, and data handling are strictly architected to comply with Australian Privacy Principles (APPs) and the Spam Act 2003."
   },
   {
-    "q": "Are there any long-term contract lock-ins?",
-    "a": "Zero mandatory lock-in. All our Australian digital marketing packages are month-to-month."
+    "q": "What is the contract term?",
+    "a": "All our Australian digital marketing packages operate on flexible month-to-month agreements with zero lock-in."
   }
 ]
   };
@@ -121,14 +309,14 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-intl-australia-page-root">
       {/* 1. HERO SECTION */}
-      <section className="wm-intl-australia-hero-section">
+      <section className="wm-intl-australia-hero-section" id="overview">
         <div className="wm-intl-australia-container">
           <div className="wm-intl-australia-hero-grid">
             <div className="wm-intl-australia-hero-left">
               <span className="wm-intl-australia-hero-est-tag">{pageData.tagline}</span>
 
               <h1 className="wm-intl-australia-hero-title-dual">
-                <span className="wm-intl-australia-hero-italic-gold">Accelerate Market Dominance with</span>
+                <span className="wm-intl-australia-hero-italic-gold">{pageData.heroItalic}</span>
                 <span className="wm-intl-australia-hero-bold-white">{pageData.heroHighlight}</span>
               </h1>
 
@@ -139,12 +327,12 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-intl-australia-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Audit`)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
                 >
-                  Get Free Strategy Audit <FaPaperPlane />
+                  Get Free Digital Proposal <FaPaperPlane />
                 </button>
                 <a href="#pricing-plans" className="wm-intl-australia-btn-outline">
-                  View {pageData.city} Packages <FaChevronRight />
+                  View {pageData.city} Rates <FaChevronRight />
                 </a>
               </div>
             </div>
@@ -162,7 +350,7 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-intl-australia-trust-card">
                 <div className="wm-intl-australia-tcard-info">
                   <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Agency</p>
+                  <p>Upwork Top 1% Verified Agency</p>
                 </div>
                 <div className="wm-intl-australia-tcard-badge wm-intl-australia-badge-upwork">up</div>
               </div>
@@ -196,7 +384,25 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
+      {/* 2. STICKY IN-PAGE SUB-NAV */}
+      <nav className="wm-intl-australia-inpage-nav">
+        <div className="wm-intl-australia-container">
+          <div className="wm-intl-australia-inpage-nav-inner">
+            <a href="#overview" className="wm-intl-australia-inpage-nav-link">Overview</a>
+            <a href="#services" className="wm-intl-australia-inpage-nav-link">Services</a>
+            <a href="#why-us" className="wm-intl-australia-inpage-nav-link">Why Choose Us</a>
+            <a href="#results" className="wm-intl-australia-inpage-nav-link">Live Telemetry</a>
+            <a href="#market-dynamics" className="wm-intl-australia-inpage-nav-link">Market Insights</a>
+            <a href="#process" className="wm-intl-australia-inpage-nav-link">Our Approach</a>
+            <a href="#industries" className="wm-intl-australia-inpage-nav-link">Industries</a>
+            <a href="#pricing-plans" className="wm-intl-australia-inpage-nav-link">Published Rates</a>
+            <a href="#testimonials" className="wm-intl-australia-inpage-nav-link">Client Reviews</a>
+            <a href="#faqs" className="wm-intl-australia-inpage-nav-link">FAQs</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* 3. STATS STRIP */}
       <section className="wm-intl-australia-stats-strip">
         <div className="wm-intl-australia-container">
           <div className="wm-intl-australia-stats-grid">
@@ -210,191 +416,192 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3. INTRO SECTION */}
-      <section className="wm-intl-australia-intro-section">
+      {/* 4. SERVICES SUITE */}
+      <section className="wm-intl-australia-services-section" id="services">
         <div className="wm-intl-australia-container">
-          <div className="wm-intl-australia-intro-grid">
-            <div className="wm-intl-australia-intro-left">
-              <span className="wm-intl-australia-intro-tag">NATIONWIDE AUSTRALIAN GROWTH</span>
-              <h2 className="wm-intl-australia-intro-title">
-                High-Performance Digital Marketing for 
-                <span>Australian Business</span>
-              </h2>
-            </div>
-            <div className="wm-intl-australia-intro-right">
-              <p>
-                <span>Webmok Technologies is a premier global digital partner</span> Webmok Technologies is a trusted digital partner helping Australian brands capture high-intent commercial search traffic and scale revenue. We combine technical SEO, precision PPC, and bespoke web engineering tailored for the Australian market.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. BACKED BY NUMBERS SECTION */}
-      <section className="wm-intl-australia-numbers-section">
-        <div className="wm-intl-australia-container">
-          <div className="wm-intl-australia-numbers-heading">
-            <span className="wm-intl-australia-numbers-subtitle">AUSTRALIA MARKET METRICS</span>
-            <h2>
-              Measurable Outcomes Across 
-              <span>Australia</span>
+          <div className="wm-intl-australia-sec-heading-center">
+            <span className="wm-intl-australia-sec-badge">COMPREHENSIVE CAPABILITIES</span>
+            <h2 className="wm-intl-australia-sec-h2">
+              Our {pageData.city} <span>Digital Marketing Services</span>
             </h2>
+            <div className="wm-intl-australia-sec-bar-center"></div>
           </div>
 
-          <div className="wm-intl-australia-numstats-grid">
-            <div key="0" className="wm-intl-australia-numstat-item">
-              <div className="wm-intl-australia-numstat-number">{"85+"}</div>
-              <div className="wm-intl-australia-numstat-line"></div>
-              <p>{"Australian Brands Scaled"}</p>
-            </div>
-            <div key="1" className="wm-intl-australia-numstat-item">
-              <div className="wm-intl-australia-numstat-number">{"A$24M+"}</div>
-              <div className="wm-intl-australia-numstat-line"></div>
-              <p>{"Generated Client Value"}</p>
-            </div>
-            <div key="2" className="wm-intl-australia-numstat-item">
-              <div className="wm-intl-australia-numstat-number">{"99.4%"}</div>
-              <div className="wm-intl-australia-numstat-line"></div>
-              <p>{"Client Retention Rate"}</p>
-            </div>
-            <div key="3" className="wm-intl-australia-numstat-item">
-              <div className="wm-intl-australia-numstat-number">{"24/7"}</div>
-              <div className="wm-intl-australia-numstat-line"></div>
-              <p>{"AEST/AWST Timezone Support"}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INCLUSION / CAPABILITIES SECTION */}
-      <section className="wm-intl-australia-include-section">
-        <div className="wm-intl-australia-container">
-          <div className="wm-intl-australia-include-grid">
-            <div className="wm-intl-australia-include-content">
-              <span className="wm-intl-australia-include-tag">FULL AUSTRALIA SUITE</span>
-              <h2 className="wm-intl-australia-include-title">
-                What Our Australia Digital Marketing 
-                <span>Packages Include</span>
-              </h2>
-              <p>We deliver nationwide Australian SEO, Google Local 3-Pack Maps optimization across Australian cities, high-intent Google Ads and Meta campaigns, and conversion-focused web architecture.</p>
-              <p>You get a single reliable partner driving sales calls, form leads, and e-commerce revenue across Australia.</p>
-
-              <div className="wm-intl-australia-feature-list">
-                <div key="Nationwide & Regional Australian SEO (Sydney, Melbourne, Brisbane, Perth)" className="wm-intl-australia-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Nationwide & Regional Australian SEO (Sydney, Melbourne, Brisbane, Perth)"}</span>
+          <div className="wm-intl-australia-services-grid">
+            {pageData.services.map((svc, i) => (
+              <div key={i} className="wm-intl-australia-service-card">
+                <div className="wm-intl-australia-svc-icon">
+                  {svc.icon === 'FaSearch' && <FaSearch />}
+                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                  {svc.icon === 'FaPenNib' && <FaPenNib />}
+                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {svc.icon === 'FaVideo' && <FaVideo />}
+                  {svc.icon === 'FaChartLine' && <FaChartLine />}
+                  {svc.icon === 'FaCompass' && <FaCompass />}
                 </div>
-                <div key="Google Local Services Ads & High-Intent Search Ads" className="wm-intl-australia-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Google Local Services Ads & High-Intent Search Ads"}</span>
-                </div>
-                <div key="Australia Geo-Targeted Social Media Ads (Meta, LinkedIn & TikTok)" className="wm-intl-australia-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Australia Geo-Targeted Social Media Ads (Meta, LinkedIn & TikTok)"}</span>
-                </div>
-                <div key="High-Speed Mobile-First Website Design & Conversion Optimization" className="wm-intl-australia-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"High-Speed Mobile-First Website Design & Conversion Optimization"}</span>
-                </div>
-                <div key="Australian Business Directory Citations & High-DA Backlinks" className="wm-intl-australia-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Australian Business Directory Citations & High-DA Backlinks"}</span>
-                </div>
-                <div key="Real-Time Telemetry Dashboard & Revenue Attribution" className="wm-intl-australia-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Real-Time Telemetry Dashboard & Revenue Attribution"}</span>
-                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. WHY HIRE OUTSIDE */}
+      <section className="wm-intl-australia-whyoutside-section" id="why-us">
+        <div className="wm-intl-australia-container">
+          <div className="wm-intl-australia-whyoutside-grid">
+            <div className="wm-intl-australia-whyoutside-text">
+              <span className="wm-intl-australia-sec-badge">{pageData.whyHireOutsideSubtitle}</span>
+              <h2>{pageData.whyHireOutsideTitle}</h2>
+              <p>{pageData.whyHireDesc1}</p>
+              <p>{pageData.whyHireDesc2}</p>
             </div>
 
-            <div className="wm-intl-australia-include-image">
-              <img src="/onpage1.avif" alt="Australia Digital Marketing Agency" />
+            <div className="wm-intl-australia-compare-table">
+              <div className="wm-intl-australia-compare-row wm-intl-australia-compare-hdr">
+                <div>Deliverable / Metric</div>
+                <div>Typical Local Agency</div>
+                <div>Webmok Advantage</div>
+              </div>
+              {pageData.comparisonPoints.map((cp, idx) => (
+                <div key={idx} className="wm-intl-australia-compare-row">
+                  <div className="wm-intl-australia-compare-feat">{cp.feature}</div>
+                  <div className="wm-intl-australia-compare-local">{cp.local}</div>
+                  <div className="wm-intl-australia-compare-wm">{cp.webmok}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. IMPORTANCE SECTION */}
-      <section className="wm-intl-australia-importance-section">
+      {/* 6. RESULTS TELEMETRY */}
+      <section className="wm-intl-australia-results-section" id="results">
         <div className="wm-intl-australia-container">
-          <div className="wm-intl-australia-importance-box">
-            <h2 className="wm-intl-australia-importance-title">
-              Why Digital Dominance is Essential for 
-              <span>Australian Brands</span>
+          <div className="wm-intl-australia-sec-heading-center">
+            <span className="wm-intl-australia-sec-badge">{pageData.resultsSubtitle}</span>
+            <h2 className="wm-intl-australia-sec-h2">{pageData.resultsTitle}</h2>
+            <div className="wm-intl-australia-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-australia-results-grid">
+            {pageData.resultsStats.map((rs, i) => (
+              <div key={i} className="wm-intl-australia-result-card">
+                <strong>{rs.metric}</strong>
+                <p>{rs.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. MARKET DYNAMICS */}
+      <section className="wm-intl-australia-market-section" id="market-dynamics">
+        <div className="wm-intl-australia-container">
+          <div className="wm-intl-australia-sec-heading-center">
+            <span className="wm-intl-australia-sec-badge">{pageData.marketInsightsSubtitle}</span>
+            <h2 className="wm-intl-australia-sec-h2">{pageData.marketInsightsTitle}</h2>
+            <div className="wm-intl-australia-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-australia-market-grid">
+            {pageData.marketInsights.map((mi, i) => (
+              <div key={i} className="wm-intl-australia-market-card">
+                <h4>{mi.title}</h4>
+                <p>{mi.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 4-STEP PROCESS */}
+      <section className="wm-intl-australia-process-section" id="process">
+        <div className="wm-intl-australia-container">
+          <div className="wm-intl-australia-sec-heading-center">
+            <span className="wm-intl-australia-sec-badge">OUR PROCESS & APPROACH</span>
+            <h2 className="wm-intl-australia-sec-h2">
+              Our 4-Step <span>Agile Growth Framework</span>
             </h2>
-
-            <div className="wm-intl-australia-importance-content">
-              <p>Australia is a tech-savvy, high-spending economy where over 92% of commercial purchasing decisions begin with an online search. Standing out requires search precision.</p>
-              <p>Without aggressive technical SEO and targeted customer acquisition funnels, competitors will capture your high-value market share.</p>
-            </div>
+            <div className="wm-intl-australia-sec-bar-center"></div>
           </div>
-        </div>
-      </section>
 
-      {/* 7. WHY WEBMOK SECTION */}
-      <section className="wm-intl-australia-why-section">
-        <div className="wm-intl-australia-container">
-          <div className="wm-intl-australia-why-grid">
-            <div className="wm-intl-australia-why-content">
-              <span className="wm-intl-australia-why-tag">THE WEBMOK ADVANTAGE</span>
-              <h2 className="wm-intl-australia-why-title">
-                Engineered for Australia. 
-                <span className="s1"> Proven Performance.</span>{' '}
-                <span className="s2">Compounding ROI.</span>
-              </h2>
-
-              <div className="wm-intl-australia-why-text">
-                <p>We don’t believe in cookie-cutter marketing. Every Australian campaign is custom engineered around your sector unit economics, competitor vulnerabilities, and Aussie search intent.</p>
-                <p>With transparent monthly reporting and zero mandatory lock-in, we keep our focus 100% on your revenue growth.</p>
+          <div className="wm-intl-australia-process-grid">
+            {pageData.processSteps.map((ps, i) => (
+              <div key={i} className="wm-intl-australia-process-card">
+                <span className="wm-intl-australia-proc-num">STEP {ps.num}</span>
+                <h4>{ps.title}</h4>
+                <p>{ps.desc}</p>
               </div>
-            </div>
-
-            <div className="wm-intl-australia-why-image">
-              <img src="/onpage3.avif" alt="Why Webmok" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. PRICING PLANS SECTION */}
+      {/* 9. INDUSTRIES */}
+      <section className="wm-intl-australia-industries-section" id="industries">
+        <div className="wm-intl-australia-container">
+          <div className="wm-intl-australia-sec-heading-center">
+            <span className="wm-intl-australia-sec-badge">WHO WE WORK WITH</span>
+            <h2 className="wm-intl-australia-sec-h2">
+              Specialized Industry <span>Growth Solutions</span>
+            </h2>
+            <div className="wm-intl-australia-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-australia-industries-grid">
+            {pageData.industries.map((ind, i) => (
+              <div key={i} className="wm-intl-australia-industry-card">
+                <div className="wm-intl-australia-ind-icon">
+                  {ind.icon === 'FaBuilding' && <FaBuilding />}
+                  {ind.icon === 'FaUserMd' && <FaUserMd />}
+                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                  {ind.icon === 'FaUtensils' && <FaUtensils />}
+                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {ind.icon === 'FaCompass' && <FaCompass />}
+                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                </div>
+                <h4>{ind.name}</h4>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. PRICING PLANS */}
       <section className="wm-intl-australia-pricing-section" id="pricing-plans">
         <div className="wm-intl-australia-container">
-          <div className="wm-intl-australia-sec-header">
-            <span className="wm-intl-australia-sec-subtitle">Transparent Monthly Plans</span>
-            <h2 className="wm-intl-australia-sec-title">Flexible Australia Growth Packages with Zero Lock-In</h2>
-            <div className="wm-intl-australia-sec-bar"></div>
+          <div className="wm-intl-australia-sec-heading-center">
+            <span className="wm-intl-australia-sec-badge">PUBLISHED RATES · ZERO LOCK-IN</span>
+            <h2 className="wm-intl-australia-sec-h2">
+              Transparent {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-australia-sec-bar-center"></div>
 
             {/* Currency Switcher */}
             <div className="wm-intl-australia-currency-toggle">
-              
-              <button
-                type="button"
-                className={`wm-intl-australia-curr-btn ${currency === 'AUD' ? 'active' : ''}`}
-                onClick={() => setCurrency('AUD')}
-              >
-                A$ AUD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-australia-curr-btn ${currency === 'USD' ? 'active' : ''}`}
-                onClick={() => setCurrency('USD')}
-              >
-                $ USD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-australia-curr-btn ${currency === 'INR' ? 'active' : ''}`}
-                onClick={() => setCurrency('INR')}
-              >
-                ₹ INR
-              </button>
+              {[{"code":"AUD","symbol":"A$","rate":1.52},{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  className={`wm-intl-australia-curr-btn ${currency === c.code ? 'active' : ''}`}
+                  onClick={() => setCurrency(c.code)}
+                >
+                  {c.symbol} {c.code}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Pricing Grid */}
           <div className="wm-intl-australia-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : `$${plan.usdPrice}`;
+              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
               return (
                 <div key={i} className={`wm-intl-australia-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (
@@ -442,93 +649,80 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 9. BENEFITS SECTION */}
-      <section className="wm-intl-australia-benefits-section">
+      {/* 11. TESTIMONIALS */}
+      <section className="wm-intl-australia-testimonials-section" id="testimonials">
         <div className="wm-intl-australia-container">
-          <div className="wm-intl-australia-benefits-grid">
-            <div className="wm-intl-australia-benefits-content">
-              <span className="wm-intl-australia-benefits-tag">PROVEN OUTCOMES</span>
-              <h2 className="wm-intl-australia-benefits-title">
-                Transforming Australian Businesses into 
-                <span>Category Leaders</span>
-              </h2>
+          <div className="wm-intl-australia-sec-heading-center">
+            <span className="wm-intl-australia-sec-badge">CLIENT SUCCESS STORIES</span>
+            <h2 className="wm-intl-australia-sec-h2">
+              What {pageData.city} <span>Leaders Say About Webmok</span>
+            </h2>
+            <div className="wm-intl-australia-sec-bar-center"></div>
+          </div>
 
-              <div className="wm-intl-australia-benefits-text">
-                <p>Our tailored Australian digital marketing campaigns produce compounding organic rankings that lower your customer acquisition costs over time.</p>
-                <p>We build digital assets that continuously funnel qualified sales calls and transactions into your pipeline.</p>
-              </div>
-
-              <div className="wm-intl-australia-benefits-points">
-                <div key="Top Google 3-Pack Rankings Across Sydney, Melbourne, Brisbane & Perth" className="wm-intl-australia-benefit-point">
-                  <span className="wm-intl-australia-benefit-icon">✓</span>
-                  <span>{"Top Google 3-Pack Rankings Across Sydney, Melbourne, Brisbane & Perth"}</span>
+          <div className="wm-intl-australia-testimonials-grid">
+            {pageData.testimonials.map((t, idx) => (
+              <div key={idx} className="wm-intl-australia-testimonial-card">
+                <div className="wm-intl-australia-t-stars">
+                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
-                <div key="Average 37%+ Reduction in Cost Per Qualified Inbound Lead" className="wm-intl-australia-benefit-point">
-                  <span className="wm-intl-australia-benefit-icon">✓</span>
-                  <span>{"Average 37%+ Reduction in Cost Per Qualified Inbound Lead"}</span>
-                </div>
-                <div key="Substantial Organic Keyword Footprint Expansion" className="wm-intl-australia-benefit-point">
-                  <span className="wm-intl-australia-benefit-icon">✓</span>
-                  <span>{"Substantial Organic Keyword Footprint Expansion"}</span>
-                </div>
-                <div key="Transparent Telemetry with Real-Time Revenue Tracking" className="wm-intl-australia-benefit-point">
-                  <span className="wm-intl-australia-benefit-icon">✓</span>
-                  <span>{"Transparent Telemetry with Real-Time Revenue Tracking"}</span>
+                <p className="wm-intl-australia-t-quote">"{t.quote}"</p>
+                <div className="wm-intl-australia-t-author">
+                  <h5>{t.author}</h5>
+                  <p>{t.role} · {t.company}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="wm-intl-australia-benefits-image">
-              <img src="/onpagebenifts.jpg" alt="Australia Digital Marketing Agency" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. ADVANTAGE SECTION */}
+      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
       <section className="wm-intl-australia-advantage-section">
         <div className="wm-intl-australia-container">
-          <div className="wm-intl-australia-sec-header">
-            <span className="wm-intl-australia-sec-subtitle">Why Partner With Us</span>
-            <h2 className="wm-intl-australia-sec-title">The WebMok Advantage in Global Digital Execution</h2>
-            <div className="wm-intl-australia-sec-bar"></div>
+          <div className="wm-intl-australia-sec-heading-center">
+            <span className="wm-intl-australia-sec-badge">WHY CHOOSE WEBMOK</span>
+            <h2 className="wm-intl-australia-sec-h2">The Webmok Operational Guarantees</h2>
+            <div className="wm-intl-australia-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-australia-advantage-grid">
             <div className="wm-intl-australia-advantage-card">
               <div className="wm-intl-australia-aicon"><FaShieldAlt /></div>
-              <h4>100% Proven Method</h4>
-              <p>Strict white-hat execution that protects your brand equity and produces compounding organic growth.</p>
+              <h4>100% White-Hat Proven Methods</h4>
+              <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
             </div>
 
             <div className="wm-intl-australia-advantage-card">
               <div className="wm-intl-australia-aicon"><FaRocket /></div>
-              <h4>Full Telemetry Dashboards</h4>
+              <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
             </div>
 
             <div className="wm-intl-australia-advantage-card">
               <div className="wm-intl-australia-aicon"><FaHeadset /></div>
               <h4>Dedicated Senior Squad</h4>
-              <p>Work directly with dedicated senior strategists and technical engineers with direct phone & WhatsApp support.</p>
+              <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
             </div>
 
             <div className="wm-intl-australia-advantage-card">
               <div className="wm-intl-australia-aicon"><FaClock /></div>
               <h4>Zero Mandatory Lock-In</h4>
-              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable growth.</p>
+              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. FAQS ACCORDION */}
-      <section className="wm-intl-australia-faqs-section">
+      {/* 13. REGIONAL FAQS */}
+      <section className="wm-intl-australia-faqs-section" id="faqs">
         <div className="wm-intl-australia-container">
-          <div className="wm-intl-australia-sec-header">
-            <span className="wm-intl-australia-sec-subtitle">Frequently Asked Questions</span>
-            <h2 className="wm-intl-australia-sec-title">Common Queries About Our Australia Growth Packages</h2>
-            <div className="wm-intl-australia-sec-bar"></div>
+          <div className="wm-intl-australia-sec-heading-center">
+            <span className="wm-intl-australia-sec-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 className="wm-intl-australia-sec-h2">
+              Common Queries About Our {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-australia-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-australia-faqs-wrap">
@@ -553,12 +747,12 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. BOTTOM CONVERSION BANNER */}
+      {/* 14. BOTTOM CONVERSION BANNER */}
       <section className="wm-intl-australia-bottom-banner">
         <div className="wm-intl-australia-container">
           <div className="wm-intl-australia-banner-inner">
             <div className="wm-intl-australia-banner-text">
-              <h2>Ready to Accelerate Growth in Australia?</h2>
+              <h2>Ready to Accelerate Revenue in {pageData.city}?</h2>
               <p>Schedule a quick 1-on-1 strategy consultation with our senior digital directors today.</p>
             </div>
             <div className="wm-intl-australia-banner-btns">
@@ -574,7 +768,7 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 className="wm-intl-australia-bbtn-quote"
                 onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Bottom Banner Inquiry`)}
               >
-                Get Custom Quote <FaArrowRight />
+                Get Free Custom Proposal <FaArrowRight />
               </button>
             </div>
           </div>

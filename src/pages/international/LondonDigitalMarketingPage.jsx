@@ -13,7 +13,20 @@ import {
   FaGoogle,
   FaChevronRight,
   FaHeadset,
-  FaClock
+  FaClock,
+  FaSearch,
+  FaBullhorn,
+  FaShareAlt,
+  FaPenNib,
+  FaLaptopCode,
+  FaVideo,
+  FaChartLine,
+  FaBuilding,
+  FaUserMd,
+  FaShoppingCart,
+  FaUtensils,
+  FaBriefcase,
+  FaCompass
 } from 'react-icons/fa';
 import './LondonDigitalMarketingPage.css';
 
@@ -28,19 +41,20 @@ const LondonDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   const pageData = {
     name: "London Digital Marketing Agency",
     city: "London",
-    region: "Greater London & The City, UK",
-    tagline: "PREMIER GREATER LONDON GROWTH AGENCY · LONDON, UK",
+    region: "Greater London & City of London, UK",
+    tagline: "PREMIER LONDON DIGITAL MARKETING AGENCY · UK",
     heroHighlight: "London Digital Marketing & SEO Agency",
-    leadDesc: "Outrank Mayfair, Canary Wharf, Shoreditch, and City of London competitors with high-authority technical SEO, precision PPC, and luxury web engineering.",
-    bodyDesc: "In one of the most competitive financial and commercial capitals in the world, Webmok builds bulletproof organic ranking engines and high-ROAS paid funnels that capture elite London commercial intent.",
+    heroItalic: "Dominate the Capital of Commerce with",
+    leadDesc: "Scale your London brand with elite technical SEO, precision Google Ads, and bespoke conversion funnels built for the UK’s most competitive commercial landscape.",
+    bodyDesc: "From the City of London and Canary Wharf finance to Soho creative studios, Mayfair luxury, and Shoreditch tech innovators—Webmok engineers dominant digital growth.",
     stats: [
   {
-    "num": "480%",
-    "label": "Average London Client Traffic Surge"
+    "num": "460%",
+    "label": "Average London Traffic Growth"
   },
   {
     "num": "6.1x",
-    "label": "Average ROAS on London Paid Media"
+    "label": "Average ROAS on Paid Media"
   },
   {
     "num": "70+",
@@ -51,69 +65,243 @@ const LondonDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     "label": "White-Hat SEO Execution"
   }
 ],
+    services: [
+  {
+    "icon": "FaSearch",
+    "title": "London Local & Enterprise SEO",
+    "desc": "Dominating Google Maps 3-Pack and organic rankings across Central London, Canary Wharf, West End, and Greater London boroughs."
+  },
+  {
+    "icon": "FaBullhorn",
+    "title": "High-ROAS Google Ads (PPC)",
+    "desc": "Precision search funnels, Performance Max campaigns, and Local Services Ads designed to capture high-value London commercial intent."
+  },
+  {
+    "icon": "FaShareAlt",
+    "title": "Targeted Paid Social (Meta & LinkedIn)",
+    "desc": "B2B LinkedIn campaigns targeting City decision-makers and high-converting Meta ads engaging London consumers."
+  },
+  {
+    "icon": "FaPenNib",
+    "title": "Topical Authority Content & PR",
+    "desc": "Authoritative content hubs, London business citations, and editorial PR outreach establishing market leadership."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "title": "High-Converting Web Architecture",
+    "desc": "Speed-optimized React, Webflow, and WordPress websites built for sub-second load times and maximum lead conversion."
+  },
+  {
+    "icon": "FaVideo",
+    "title": "Commercial Video & Creative Production",
+    "desc": "Studio-grade commercial video ads, brand storytelling, and social reels tailored for the Greater London market."
+  }
+],
+    whyHireOutsideTitle: "Why London Brands Choose Webmok",
+    whyHireOutsideSubtitle: "THE LONDON ADVANTAGE",
+    whyHireDesc1: "London agencies in Mayfair and Shoreditch carry massive central London overhead, charging £10,000–£25,000/month while treating mid-market accounts as secondary priorities.",
+    whyHireDesc2: "Webmok provides dedicated senior growth engineers, GMT timezone alignment, and rapid sprint cycles at a high-ROI, value-driven investment.",
+    comparisonPoints: [
+  {
+    "feature": "Senior Account Attention",
+    "local": "Junior Account Managers",
+    "webmok": "Dedicated Senior Growth Directors"
+  },
+  {
+    "feature": "Monthly Retainer Cost",
+    "local": "£10,000 – £25,000 / month",
+    "webmok": "From £630 – £2,370 / month"
+  },
+  {
+    "feature": "Contract Commitment",
+    "local": "Mandatory 6-12 Months",
+    "webmok": "100% Flexible Month-to-Month"
+  },
+  {
+    "feature": "Turnaround Speed",
+    "local": "2-3 Weeks per Sprint",
+    "webmok": "48-72 Hours Agile Sprints"
+  },
+  {
+    "feature": "Reporting Telemetry",
+    "local": "Generic PDF Monthly Summaries",
+    "webmok": "Live 24/7 Real-Time Revenue Dashboards"
+  }
+],
+    resultsTitle: "London Performance Telemetry",
+    resultsSubtitle: "VERIFIABLE RESULTS",
+    resultsStats: [
+  {
+    "metric": "70+",
+    "label": "London Brands Scaled to Page 1"
+  },
+  {
+    "metric": "£18M+",
+    "label": "Tracked Pipeline Revenue Generated"
+  },
+  {
+    "metric": "99.5%",
+    "label": "London Client Satisfaction Rate"
+  },
+  {
+    "metric": "24/7",
+    "label": "GMT Timezone Direct Support"
+  }
+],
+    marketInsightsTitle: "What We Know About Selling in London",
+    marketInsightsSubtitle: "LONDON DYNAMICS",
+    marketInsights: [
+  {
+    "title": "Intense Local Search Competition",
+    "desc": "London is Europe’s most competitive digital landscape. Ranking on Google Maps requires precise micro-citations across London boroughs."
+  },
+  {
+    "title": "Diverse Demographic Micro-Markets",
+    "desc": "Marketing across West End, City of London, and Shoreditch requires culturally aware, tailored messaging and segmentation."
+  },
+  {
+    "title": "B2B Procurement Cycles in the City & Canary Wharf",
+    "desc": "City corporate buyers conduct extensive digital due diligence. Dense topical authority and case study proof are essential to close deals."
+  },
+  {
+    "title": "Mobile-First Inbound Call Conversion",
+    "desc": "Over 80% of local London service searches happen on mobile devices. We build instant click-to-call mobile landing pages with zero friction."
+  }
+],
+    processSteps: [
+  {
+    "num": "01",
+    "title": "London Market & Competitor Audit",
+    "desc": "Analyzing search intent and competitor positioning across Central London and key commercial hubs."
+  },
+  {
+    "num": "02",
+    "title": "Hyper-Local Search Architecture",
+    "desc": "Building multi-borough landing pages, localized schema markup, and Google Business Profiles."
+  },
+  {
+    "num": "03",
+    "title": "Omni-Channel Sprint Deployment",
+    "desc": "Launching high-intent Google Ads, local SEO optimizations, and targeted social campaigns."
+  },
+  {
+    "num": "04",
+    "title": "CRO & Revenue Attribution",
+    "desc": "Optimizing conversion funnels, tracking pipeline ROI, and scaling market share."
+  }
+],
+    industries: [
+  {
+    "icon": "FaBriefcase",
+    "name": "Financial & Corporate Services",
+    "desc": "Capturing corporate clients, wealth management leads, and B2B finance contracts in the City."
+  },
+  {
+    "icon": "FaBuilding",
+    "name": "Real Estate & Luxury Property",
+    "desc": "Dominating buyer acquisition for luxury homes and prime commercial properties in London."
+  },
+  {
+    "icon": "FaUserMd",
+    "name": "Harley Street Medical Clinics",
+    "desc": "Patient acquisition for cosmetic surgery, dental clinics, and wellness centers across London."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "name": "Tech Startups & B2B SaaS",
+    "desc": "Driving ARR growth and user signups in London’s Silicon Roundabout."
+  },
+  {
+    "icon": "FaCompass",
+    "name": "Legal & Professional Practices",
+    "desc": "Generating high-value litigation cases and corporate advisory retainers."
+  },
+  {
+    "icon": "FaShoppingCart",
+    "name": "Luxury Retail & E-Commerce",
+    "desc": "Driving store foot traffic and e-commerce revenue across Greater London."
+  }
+],
     plans: [
   {
-    "name": "London Starter",
-    "badge": "Local London",
-    "usdPrice": "899",
-    "inrPrice": "72,999",
-    "desc": "Perfect for boutique London service providers, clinics, law firms, and boutique practices looking to rank #1 locally.",
+    "name": "London Growth Core",
+    "badge": "Borough Focus",
+    "usdPrice": "799",
+    "inrPrice": "64,999",
+    "desc": "Ideal for local London businesses establishing dominant Google Maps and search visibility.",
     "features": [
       "Up to 20 High-Intent London Keywords",
-      "Google Business Profile (Maps) Optimization",
-      "Local Citations & London Directory Submissions",
+      "Google Business Profile London Optimization",
+      "Local Citations & Yell Listings",
       "On-Page SEO & Content Tuning (4 Pages/mo)",
-      "Monthly Executive ROI Report"
+      "Monthly Executive ROI Report",
+      "Dedicated GMT Account Director"
     ]
   },
   {
     "name": "London Accelerator",
     "badge": "Most Popular",
     "highlight": true,
-    "usdPrice": "1,699",
-    "inrPrice": "1,39,999",
+    "usdPrice": "1,499",
+    "inrPrice": "1,19,999",
     "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and conversion rate optimization.",
     "features": [
-      "Up to 50 Keywords (Greater London & UK Nationwide)",
-      "Google Search Ads (PPC) Management",
+      "Up to 45 Multi-Borough London Keywords",
+      "Google Ads (PPC) Campaign Management",
       "Multi-Borough Landing Page Architecture",
-      "High-Authority Content Marketing (6 Articles/mo)",
+      "High-Authority Content Marketing (6 Posts/mo)",
       "Competitor Backlink Interception",
-      "Bi-Weekly Live Strategy Calls"
+      "Bi-Weekly Live Strategy Sessions"
     ]
   },
   {
-    "name": "London Enterprise Pro",
-    "badge": "Capital Dominance",
-    "usdPrice": "3,299",
-    "inrPrice": "2,69,999",
-    "desc": "Full-scale market dominance for established London enterprises, financial firms, and fast-growing tech powerhouses.",
+    "name": "London Enterprise Monopoly",
+    "badge": "Category Leader",
+    "usdPrice": "2,999",
+    "inrPrice": "2,44,999",
+    "desc": "Full-scale market dominance for London enterprises, multi-location franchises, and high-growth brands.",
     "features": [
-      "Unlimited Keywords & Regional/National/Global Footprint",
+      "London & Nationwide Keyword Domination",
       "Omni-Channel PPC (Google, Meta, LinkedIn)",
-      "Custom Web Redesign & High-Converting Funnels",
-      "Authoritative British PR Backlinks & Media Placements",
+      "Bespoke High-Converting Web Redesign",
+      "Tier-1 UK Media PR & Backlinks",
       "Dedicated Account Squad & Daily Slack Channel",
       "Custom Multi-Touch Attribution Modeling"
     ]
   }
 ],
+    testimonials: [
+  {
+    "quote": "Webmok put our commercial firm at the top of Google for competitive London search terms. Our qualified deal pipeline grew by 260%.",
+    "author": "Edward B.",
+    "role": "Partner",
+    "company": "Central London Corporate Advisory",
+    "rating": 5
+  },
+  {
+    "quote": "Our Harley Street clinic now ranks in the top 3 on Google Maps across all high-ticket treatment keywords.",
+    "author": "Dr. Claire M.",
+    "role": "Clinical Director",
+    "company": "Harley Street Medical Group",
+    "rating": 5
+  }
+],
     faqs: [
   {
+    "q": "Why should a London business choose Webmok over local Mayfair agencies?",
+    "a": "Webmok delivers senior-level agency execution without bloated London real estate overhead. You work directly with dedicated GMT-timezone directors focused on measurable pipeline revenue."
+  },
+  {
     "q": "How fast can our London business expect to rank on page 1 of Google?",
-    "a": "Google Maps optimizations and high-intent PPC campaigns generate calls within 14 to 30 days. Broad organic SEO keywords typically achieve major page #1 breakthroughs in 60 to 90 days."
+    "a": "Google Maps optimizations and high-intent PPC campaigns generate leads within 14 to 30 days. Broad organic SEO keywords achieve page #1 breakthroughs in 60 to 90 days."
   },
   {
-    "q": "Can you target specific London boroughs (e.g. Westminster, Camden, Kensington, City of London)?",
-    "a": "Yes! We create dedicated multi-location SEO architectures tailored to each specific borough and high-value London postal code."
-  },
-  {
-    "q": "Do you manage Google Ads and LinkedIn advertising for London B2B & corporate firms?",
-    "a": "Yes, our team handles end-to-end paid search and B2B LinkedIn campaigns with daily bid optimization, negative keyword filtering, and A/B testing."
+    "q": "Can you target multiple London boroughs (e.g. Westminster, Camden, City, Islington)?",
+    "a": "Yes! We build dedicated multi-location SEO architectures tailored to each specific borough and commercial district across London."
   },
   {
     "q": "Are there any long-term contract lock-ins?",
-    "a": "Zero mandatory lock-in. All our London digital marketing packages are month-to-month."
+    "a": "Zero mandatory lock-in. All our London digital marketing packages are flexible month-to-month agreements."
   }
 ]
   };
@@ -121,14 +309,14 @@ const LondonDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-intl-london-page-root">
       {/* 1. HERO SECTION */}
-      <section className="wm-intl-london-hero-section">
+      <section className="wm-intl-london-hero-section" id="overview">
         <div className="wm-intl-london-container">
           <div className="wm-intl-london-hero-grid">
             <div className="wm-intl-london-hero-left">
               <span className="wm-intl-london-hero-est-tag">{pageData.tagline}</span>
 
               <h1 className="wm-intl-london-hero-title-dual">
-                <span className="wm-intl-london-hero-italic-gold">Accelerate Market Dominance with</span>
+                <span className="wm-intl-london-hero-italic-gold">{pageData.heroItalic}</span>
                 <span className="wm-intl-london-hero-bold-white">{pageData.heroHighlight}</span>
               </h1>
 
@@ -139,12 +327,12 @@ const LondonDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-intl-london-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Audit`)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
                 >
-                  Get Free Strategy Audit <FaPaperPlane />
+                  Get Free Digital Proposal <FaPaperPlane />
                 </button>
                 <a href="#pricing-plans" className="wm-intl-london-btn-outline">
-                  View {pageData.city} Packages <FaChevronRight />
+                  View {pageData.city} Rates <FaChevronRight />
                 </a>
               </div>
             </div>
@@ -162,7 +350,7 @@ const LondonDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-intl-london-trust-card">
                 <div className="wm-intl-london-tcard-info">
                   <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Agency</p>
+                  <p>Upwork Top 1% Verified Agency</p>
                 </div>
                 <div className="wm-intl-london-tcard-badge wm-intl-london-badge-upwork">up</div>
               </div>
@@ -196,7 +384,25 @@ const LondonDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
+      {/* 2. STICKY IN-PAGE SUB-NAV */}
+      <nav className="wm-intl-london-inpage-nav">
+        <div className="wm-intl-london-container">
+          <div className="wm-intl-london-inpage-nav-inner">
+            <a href="#overview" className="wm-intl-london-inpage-nav-link">Overview</a>
+            <a href="#services" className="wm-intl-london-inpage-nav-link">Services</a>
+            <a href="#why-us" className="wm-intl-london-inpage-nav-link">Why Choose Us</a>
+            <a href="#results" className="wm-intl-london-inpage-nav-link">Live Telemetry</a>
+            <a href="#market-dynamics" className="wm-intl-london-inpage-nav-link">Market Insights</a>
+            <a href="#process" className="wm-intl-london-inpage-nav-link">Our Approach</a>
+            <a href="#industries" className="wm-intl-london-inpage-nav-link">Industries</a>
+            <a href="#pricing-plans" className="wm-intl-london-inpage-nav-link">Published Rates</a>
+            <a href="#testimonials" className="wm-intl-london-inpage-nav-link">Client Reviews</a>
+            <a href="#faqs" className="wm-intl-london-inpage-nav-link">FAQs</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* 3. STATS STRIP */}
       <section className="wm-intl-london-stats-strip">
         <div className="wm-intl-london-container">
           <div className="wm-intl-london-stats-grid">
@@ -210,198 +416,192 @@ const LondonDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3. INTRO SECTION */}
-      <section className="wm-intl-london-intro-section">
+      {/* 4. SERVICES SUITE */}
+      <section className="wm-intl-london-services-section" id="services">
         <div className="wm-intl-london-container">
-          <div className="wm-intl-london-intro-grid">
-            <div className="wm-intl-london-intro-left">
-              <span className="wm-intl-london-intro-tag">GREATER LONDON SPECIALISTS</span>
-              <h2 className="wm-intl-london-intro-title">
-                High-Impact Digital Growth for 
-                <span>London Enterprises</span>
-              </h2>
-            </div>
-            <div className="wm-intl-london-intro-right">
-              <p>
-                <span>Webmok Technologies is a premier global digital partner</span> London demands an uncompromising standard of digital execution. Webmok equips London businesses with the technical SEO precision, Google Ads agility, and conversion-optimized web assets required to dominate the capital’s marketplace.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. BACKED BY NUMBERS SECTION */}
-      <section className="wm-intl-london-numbers-section">
-        <div className="wm-intl-london-container">
-          <div className="wm-intl-london-numbers-heading">
-            <span className="wm-intl-london-numbers-subtitle">LONDON MARKET TELEMETRY</span>
-            <h2>
-              Proven Track Record Across 
-              <span>Greater London</span>
+          <div className="wm-intl-london-sec-heading-center">
+            <span className="wm-intl-london-sec-badge">COMPREHENSIVE CAPABILITIES</span>
+            <h2 className="wm-intl-london-sec-h2">
+              Our {pageData.city} <span>Digital Marketing Services</span>
             </h2>
+            <div className="wm-intl-london-sec-bar-center"></div>
           </div>
 
-          <div className="wm-intl-london-numstats-grid">
-            <div key="0" className="wm-intl-london-numstat-item">
-              <div className="wm-intl-london-numstat-number">{"70+"}</div>
-              <div className="wm-intl-london-numstat-line"></div>
-              <p>{"London Brands Scaled"}</p>
-            </div>
-            <div key="1" className="wm-intl-london-numstat-item">
-              <div className="wm-intl-london-numstat-number">{"£22M+"}</div>
-              <div className="wm-intl-london-numstat-line"></div>
-              <p>{"Tracked Pipeline Value"}</p>
-            </div>
-            <div key="2" className="wm-intl-london-numstat-item">
-              <div className="wm-intl-london-numstat-number">{"99.5%"}</div>
-              <div className="wm-intl-london-numstat-line"></div>
-              <p>{"Client Retention Rate"}</p>
-            </div>
-            <div key="3" className="wm-intl-london-numstat-item">
-              <div className="wm-intl-london-numstat-number">{"< 28s"}</div>
-              <div className="wm-intl-london-numstat-line"></div>
-              <p>{"Direct Response Time"}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INCLUSION / CAPABILITIES SECTION */}
-      <section className="wm-intl-london-include-section">
-        <div className="wm-intl-london-container">
-          <div className="wm-intl-london-include-grid">
-            <div className="wm-intl-london-include-content">
-              <span className="wm-intl-london-include-tag">ELITE LONDON SUITE</span>
-              <h2 className="wm-intl-london-include-title">
-                What Our London Digital 
-                <span>Marketing Packages Include</span>
-              </h2>
-              <p>We combine hyper-local London Google Maps ranking, high-intent Google Search and LinkedIn Ads, technical SEO fixes, and high-speed web engineering.</p>
-              <p>You get an elite digital squad focused strictly on driving qualified inbound leads and corporate pipeline.</p>
-
-              <div className="wm-intl-london-feature-list">
-                <div key="Hyper-Local London & Multi-Borough SEO (Central London, City, Canary Wharf, West End)" className="wm-intl-london-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Hyper-Local London & Multi-Borough SEO (Central London, City, Canary Wharf, West End)"}</span>
+          <div className="wm-intl-london-services-grid">
+            {pageData.services.map((svc, i) => (
+              <div key={i} className="wm-intl-london-service-card">
+                <div className="wm-intl-london-svc-icon">
+                  {svc.icon === 'FaSearch' && <FaSearch />}
+                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                  {svc.icon === 'FaPenNib' && <FaPenNib />}
+                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {svc.icon === 'FaVideo' && <FaVideo />}
+                  {svc.icon === 'FaChartLine' && <FaChartLine />}
+                  {svc.icon === 'FaCompass' && <FaCompass />}
                 </div>
-                <div key="High-Intent Google Search & LinkedIn ABM Paid Campaigns" className="wm-intl-london-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"High-Intent Google Search & LinkedIn ABM Paid Campaigns"}</span>
-                </div>
-                <div key="Targeted Social Media Ad Campaigns (Meta, TikTok & YouTube)" className="wm-intl-london-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Targeted Social Media Ad Campaigns (Meta, TikTok & YouTube)"}</span>
-                </div>
-                <div key="High-Speed Conversion Landing Page Development" className="wm-intl-london-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"High-Speed Conversion Landing Page Development"}</span>
-                </div>
-                <div key="Real-Time Telemetry Dashboard & Revenue Attribution" className="wm-intl-london-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Real-Time Telemetry Dashboard & Revenue Attribution"}</span>
-                </div>
-                <div key="Dedicated GMT/BST Timezone Senior Account Director" className="wm-intl-london-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Dedicated GMT/BST Timezone Senior Account Director"}</span>
-                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. WHY HIRE OUTSIDE */}
+      <section className="wm-intl-london-whyoutside-section" id="why-us">
+        <div className="wm-intl-london-container">
+          <div className="wm-intl-london-whyoutside-grid">
+            <div className="wm-intl-london-whyoutside-text">
+              <span className="wm-intl-london-sec-badge">{pageData.whyHireOutsideSubtitle}</span>
+              <h2>{pageData.whyHireOutsideTitle}</h2>
+              <p>{pageData.whyHireDesc1}</p>
+              <p>{pageData.whyHireDesc2}</p>
             </div>
 
-            <div className="wm-intl-london-include-image">
-              <img src="/onpage2.avif" alt="London Digital Marketing Agency" />
+            <div className="wm-intl-london-compare-table">
+              <div className="wm-intl-london-compare-row wm-intl-london-compare-hdr">
+                <div>Deliverable / Metric</div>
+                <div>Typical Local Agency</div>
+                <div>Webmok Advantage</div>
+              </div>
+              {pageData.comparisonPoints.map((cp, idx) => (
+                <div key={idx} className="wm-intl-london-compare-row">
+                  <div className="wm-intl-london-compare-feat">{cp.feature}</div>
+                  <div className="wm-intl-london-compare-local">{cp.local}</div>
+                  <div className="wm-intl-london-compare-wm">{cp.webmok}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. IMPORTANCE SECTION */}
-      <section className="wm-intl-london-importance-section">
+      {/* 6. RESULTS TELEMETRY */}
+      <section className="wm-intl-london-results-section" id="results">
         <div className="wm-intl-london-container">
-          <div className="wm-intl-london-importance-box">
-            <h2 className="wm-intl-london-importance-title">
-              Why Digital Dominance is Essential in 
-              <span>London</span>
+          <div className="wm-intl-london-sec-heading-center">
+            <span className="wm-intl-london-sec-badge">{pageData.resultsSubtitle}</span>
+            <h2 className="wm-intl-london-sec-h2">{pageData.resultsTitle}</h2>
+            <div className="wm-intl-london-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-london-results-grid">
+            {pageData.resultsStats.map((rs, i) => (
+              <div key={i} className="wm-intl-london-result-card">
+                <strong>{rs.metric}</strong>
+                <p>{rs.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. MARKET DYNAMICS */}
+      <section className="wm-intl-london-market-section" id="market-dynamics">
+        <div className="wm-intl-london-container">
+          <div className="wm-intl-london-sec-heading-center">
+            <span className="wm-intl-london-sec-badge">{pageData.marketInsightsSubtitle}</span>
+            <h2 className="wm-intl-london-sec-h2">{pageData.marketInsightsTitle}</h2>
+            <div className="wm-intl-london-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-london-market-grid">
+            {pageData.marketInsights.map((mi, i) => (
+              <div key={i} className="wm-intl-london-market-card">
+                <h4>{mi.title}</h4>
+                <p>{mi.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 4-STEP PROCESS */}
+      <section className="wm-intl-london-process-section" id="process">
+        <div className="wm-intl-london-container">
+          <div className="wm-intl-london-sec-heading-center">
+            <span className="wm-intl-london-sec-badge">OUR PROCESS & APPROACH</span>
+            <h2 className="wm-intl-london-sec-h2">
+              Our 4-Step <span>Agile Growth Framework</span>
             </h2>
-
-            <div className="wm-intl-london-importance-content">
-              <p>Greater London is home to nearly 10 million consumers and the highest concentration of high-net-worth buyers in Europe. Second-page rankings yield zero return.</p>
-              <p>Without aggressive search optimization and high-converting ad funnels, competing London firms capture your high-value market share.</p>
-            </div>
+            <div className="wm-intl-london-sec-bar-center"></div>
           </div>
-        </div>
-      </section>
 
-      {/* 7. WHY WEBMOK SECTION */}
-      <section className="wm-intl-london-why-section">
-        <div className="wm-intl-london-container">
-          <div className="wm-intl-london-why-grid">
-            <div className="wm-intl-london-why-content">
-              <span className="wm-intl-london-why-tag">THE WEBMOK DIFFERENCE</span>
-              <h2 className="wm-intl-london-why-title">
-                Engineered for London. 
-                <span className="s1"> Elite Precision.</span>{' '}
-                <span className="s2">Compounding Revenue.</span>
-              </h2>
-
-              <div className="wm-intl-london-why-text">
-                <p>We don’t believe in generic marketing templates. Every London campaign is engineered around your specific sector economics, competitor gaps, and localized search intent.</p>
-                <p>With transparent monthly reporting and zero mandatory lock-in, we keep our focus 100% on your bottom-line growth.</p>
+          <div className="wm-intl-london-process-grid">
+            {pageData.processSteps.map((ps, i) => (
+              <div key={i} className="wm-intl-london-process-card">
+                <span className="wm-intl-london-proc-num">STEP {ps.num}</span>
+                <h4>{ps.title}</h4>
+                <p>{ps.desc}</p>
               </div>
-            </div>
-
-            <div className="wm-intl-london-why-image">
-              <img src="/onpage3.avif" alt="Why Webmok" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. PRICING PLANS SECTION */}
+      {/* 9. INDUSTRIES */}
+      <section className="wm-intl-london-industries-section" id="industries">
+        <div className="wm-intl-london-container">
+          <div className="wm-intl-london-sec-heading-center">
+            <span className="wm-intl-london-sec-badge">WHO WE WORK WITH</span>
+            <h2 className="wm-intl-london-sec-h2">
+              Specialized Industry <span>Growth Solutions</span>
+            </h2>
+            <div className="wm-intl-london-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-london-industries-grid">
+            {pageData.industries.map((ind, i) => (
+              <div key={i} className="wm-intl-london-industry-card">
+                <div className="wm-intl-london-ind-icon">
+                  {ind.icon === 'FaBuilding' && <FaBuilding />}
+                  {ind.icon === 'FaUserMd' && <FaUserMd />}
+                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                  {ind.icon === 'FaUtensils' && <FaUtensils />}
+                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {ind.icon === 'FaCompass' && <FaCompass />}
+                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                </div>
+                <h4>{ind.name}</h4>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. PRICING PLANS */}
       <section className="wm-intl-london-pricing-section" id="pricing-plans">
         <div className="wm-intl-london-container">
-          <div className="wm-intl-london-sec-header">
-            <span className="wm-intl-london-sec-subtitle">Transparent Monthly Plans</span>
-            <h2 className="wm-intl-london-sec-title">Flexible London Growth Packages with Zero Lock-In</h2>
-            <div className="wm-intl-london-sec-bar"></div>
+          <div className="wm-intl-london-sec-heading-center">
+            <span className="wm-intl-london-sec-badge">PUBLISHED RATES · ZERO LOCK-IN</span>
+            <h2 className="wm-intl-london-sec-h2">
+              Transparent {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-london-sec-bar-center"></div>
 
             {/* Currency Switcher */}
             <div className="wm-intl-london-currency-toggle">
-              
-              <button
-                type="button"
-                className={`wm-intl-london-curr-btn ${currency === 'GBP' ? 'active' : ''}`}
-                onClick={() => setCurrency('GBP')}
-              >
-                £ GBP
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-london-curr-btn ${currency === 'USD' ? 'active' : ''}`}
-                onClick={() => setCurrency('USD')}
-              >
-                $ USD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-london-curr-btn ${currency === 'EUR' ? 'active' : ''}`}
-                onClick={() => setCurrency('EUR')}
-              >
-                € EUR
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-london-curr-btn ${currency === 'INR' ? 'active' : ''}`}
-                onClick={() => setCurrency('INR')}
-              >
-                ₹ INR
-              </button>
+              {[{"code":"GBP","symbol":"£","rate":0.79},{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  className={`wm-intl-london-curr-btn ${currency === c.code ? 'active' : ''}`}
+                  onClick={() => setCurrency(c.code)}
+                >
+                  {c.symbol} {c.code}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Pricing Grid */}
           <div className="wm-intl-london-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : `$${plan.usdPrice}`;
+              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
               return (
                 <div key={i} className={`wm-intl-london-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (
@@ -449,93 +649,80 @@ const LondonDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 9. BENEFITS SECTION */}
-      <section className="wm-intl-london-benefits-section">
+      {/* 11. TESTIMONIALS */}
+      <section className="wm-intl-london-testimonials-section" id="testimonials">
         <div className="wm-intl-london-container">
-          <div className="wm-intl-london-benefits-grid">
-            <div className="wm-intl-london-benefits-content">
-              <span className="wm-intl-london-benefits-tag">MEASURABLE OUTCOMES</span>
-              <h2 className="wm-intl-london-benefits-title">
-                Transforming London Businesses into 
-                <span>Industry Leaders</span>
-              </h2>
+          <div className="wm-intl-london-sec-heading-center">
+            <span className="wm-intl-london-sec-badge">CLIENT SUCCESS STORIES</span>
+            <h2 className="wm-intl-london-sec-h2">
+              What {pageData.city} <span>Leaders Say About Webmok</span>
+            </h2>
+            <div className="wm-intl-london-sec-bar-center"></div>
+          </div>
 
-              <div className="wm-intl-london-benefits-text">
-                <p>Our tailored London digital marketing campaigns produce compounding organic rankings that lower your customer acquisition costs over time.</p>
-                <p>We build digital assets that continuously funnel qualified corporate calls and transactions into your pipeline.</p>
-              </div>
-
-              <div className="wm-intl-london-benefits-points">
-                <div key="Top 3 Google Maps Rankings Across Central London & Boroughs" className="wm-intl-london-benefit-point">
-                  <span className="wm-intl-london-benefit-icon">✓</span>
-                  <span>{"Top 3 Google Maps Rankings Across Central London & Boroughs"}</span>
+          <div className="wm-intl-london-testimonials-grid">
+            {pageData.testimonials.map((t, idx) => (
+              <div key={idx} className="wm-intl-london-testimonial-card">
+                <div className="wm-intl-london-t-stars">
+                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
-                <div key="Average 38%+ Reduction in Cost Per Inbound Lead" className="wm-intl-london-benefit-point">
-                  <span className="wm-intl-london-benefit-icon">✓</span>
-                  <span>{"Average 38%+ Reduction in Cost Per Inbound Lead"}</span>
-                </div>
-                <div key="Substantial Organic Keyword Footprint Expansion" className="wm-intl-london-benefit-point">
-                  <span className="wm-intl-london-benefit-icon">✓</span>
-                  <span>{"Substantial Organic Keyword Footprint Expansion"}</span>
-                </div>
-                <div key="Transparent Telemetry with Real-Time Revenue Tracking" className="wm-intl-london-benefit-point">
-                  <span className="wm-intl-london-benefit-icon">✓</span>
-                  <span>{"Transparent Telemetry with Real-Time Revenue Tracking"}</span>
+                <p className="wm-intl-london-t-quote">"{t.quote}"</p>
+                <div className="wm-intl-london-t-author">
+                  <h5>{t.author}</h5>
+                  <p>{t.role} · {t.company}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="wm-intl-london-benefits-image">
-              <img src="/onpagebenifts.jpg" alt="London Digital Marketing Agency" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. ADVANTAGE SECTION */}
+      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
       <section className="wm-intl-london-advantage-section">
         <div className="wm-intl-london-container">
-          <div className="wm-intl-london-sec-header">
-            <span className="wm-intl-london-sec-subtitle">Why Partner With Us</span>
-            <h2 className="wm-intl-london-sec-title">The WebMok Advantage in Global Digital Execution</h2>
-            <div className="wm-intl-london-sec-bar"></div>
+          <div className="wm-intl-london-sec-heading-center">
+            <span className="wm-intl-london-sec-badge">WHY CHOOSE WEBMOK</span>
+            <h2 className="wm-intl-london-sec-h2">The Webmok Operational Guarantees</h2>
+            <div className="wm-intl-london-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-london-advantage-grid">
             <div className="wm-intl-london-advantage-card">
               <div className="wm-intl-london-aicon"><FaShieldAlt /></div>
-              <h4>100% Proven Method</h4>
-              <p>Strict white-hat execution that protects your brand equity and produces compounding organic growth.</p>
+              <h4>100% White-Hat Proven Methods</h4>
+              <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
             </div>
 
             <div className="wm-intl-london-advantage-card">
               <div className="wm-intl-london-aicon"><FaRocket /></div>
-              <h4>Full Telemetry Dashboards</h4>
+              <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
             </div>
 
             <div className="wm-intl-london-advantage-card">
               <div className="wm-intl-london-aicon"><FaHeadset /></div>
               <h4>Dedicated Senior Squad</h4>
-              <p>Work directly with dedicated senior strategists and technical engineers with direct phone & WhatsApp support.</p>
+              <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
             </div>
 
             <div className="wm-intl-london-advantage-card">
               <div className="wm-intl-london-aicon"><FaClock /></div>
               <h4>Zero Mandatory Lock-In</h4>
-              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable growth.</p>
+              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. FAQS ACCORDION */}
-      <section className="wm-intl-london-faqs-section">
+      {/* 13. REGIONAL FAQS */}
+      <section className="wm-intl-london-faqs-section" id="faqs">
         <div className="wm-intl-london-container">
-          <div className="wm-intl-london-sec-header">
-            <span className="wm-intl-london-sec-subtitle">Frequently Asked Questions</span>
-            <h2 className="wm-intl-london-sec-title">Common Queries About Our London Growth Packages</h2>
-            <div className="wm-intl-london-sec-bar"></div>
+          <div className="wm-intl-london-sec-heading-center">
+            <span className="wm-intl-london-sec-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 className="wm-intl-london-sec-h2">
+              Common Queries About Our {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-london-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-london-faqs-wrap">
@@ -560,12 +747,12 @@ const LondonDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. BOTTOM CONVERSION BANNER */}
+      {/* 14. BOTTOM CONVERSION BANNER */}
       <section className="wm-intl-london-bottom-banner">
         <div className="wm-intl-london-container">
           <div className="wm-intl-london-banner-inner">
             <div className="wm-intl-london-banner-text">
-              <h2>Ready to Accelerate Growth in London?</h2>
+              <h2>Ready to Accelerate Revenue in {pageData.city}?</h2>
               <p>Schedule a quick 1-on-1 strategy consultation with our senior digital directors today.</p>
             </div>
             <div className="wm-intl-london-banner-btns">
@@ -581,7 +768,7 @@ const LondonDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 className="wm-intl-london-bbtn-quote"
                 onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Bottom Banner Inquiry`)}
               >
-                Get Custom Quote <FaArrowRight />
+                Get Free Custom Proposal <FaArrowRight />
               </button>
             </div>
           </div>

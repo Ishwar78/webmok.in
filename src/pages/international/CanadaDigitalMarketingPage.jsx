@@ -13,7 +13,20 @@ import {
   FaGoogle,
   FaChevronRight,
   FaHeadset,
-  FaClock
+  FaClock,
+  FaSearch,
+  FaBullhorn,
+  FaShareAlt,
+  FaPenNib,
+  FaLaptopCode,
+  FaVideo,
+  FaChartLine,
+  FaBuilding,
+  FaUserMd,
+  FaShoppingCart,
+  FaUtensils,
+  FaBriefcase,
+  FaCompass
 } from 'react-icons/fa';
 import './CanadaDigitalMarketingPage.css';
 
@@ -31,6 +44,7 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     region: "Canada Nationwide",
     tagline: "NATIONAL DIGITAL MARKETING AGENCY · CANADA",
     heroHighlight: "Canada Digital Marketing & SEO Agency",
+    heroItalic: "Accelerate Nationwide Canadian Revenue with",
     leadDesc: "Scale your Canadian business nationwide with bilingual SEO, Google Ads, and custom conversion funnels engineered for the Canadian market.",
     bodyDesc: "Covering Ontario, British Columbia, Alberta, Quebec, and beyond—Webmok delivers compliant, high-performing digital marketing that captures Canadian search intent.",
     stats: [
@@ -51,6 +65,163 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     "label": "PIPEDA & CASL Compliant"
   }
 ],
+    services: [
+  {
+    "icon": "FaSearch",
+    "title": "National & Provincial Canada SEO",
+    "desc": "Dominating organic search across all 10 provinces with bilingual keyword optimization (English/French) and local Google 3-Pack authority."
+  },
+  {
+    "icon": "FaBullhorn",
+    "title": "Canadian Google Ads (PPC)",
+    "desc": "High-intent search, Shopping, and Local Services Ads optimized for Canadian consumer purchasing habits and provincial taxation nuances."
+  },
+  {
+    "icon": "FaShareAlt",
+    "title": "Paid Social & Community Ads",
+    "desc": "Meta, TikTok, and LinkedIn funnels targeted specifically to major Canadian metropolitan centers (GTA, Vancouver Metro, Montreal, Calgary)."
+  },
+  {
+    "icon": "FaPenNib",
+    "title": "Canadian Editorial PR & Content",
+    "desc": "Building national authority with localized content hubs, Canadian business citations, and editorial outreach to prominent Canadian media."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "title": "PIPEDA-Compliant Web Engineering",
+    "desc": "Speed-optimized, accessible websites fully compliant with PIPEDA, CASL anti-spam laws, and bilingual language requirements."
+  },
+  {
+    "icon": "FaVideo",
+    "title": "Creative Video & Brand Assets",
+    "desc": "High-production visual storytelling and commercial video ads that resonate with Canadian cultural values and regional markets."
+  }
+],
+    whyHireOutsideTitle: "The Canadian Growth Advantage with Webmok",
+    whyHireOutsideSubtitle: "COAST-TO-COAST VALUE",
+    whyHireDesc1: "Canadian agencies in Toronto and Vancouver charge steep retainer fees while operating with slow turnaround times and rigid long-term contracts.",
+    whyHireDesc2: "Webmok delivers senior-level digital marketing execution, bilingual capabilities, and timezone-aligned support at a high-ROI price point.",
+    comparisonPoints: [
+  {
+    "feature": "National Coverage",
+    "local": "Often City-Specific Only",
+    "webmok": "Full 10-Province Search & Media Scaling"
+  },
+  {
+    "feature": "Bilingual Execution",
+    "local": "Additional Expensive Translation Fees",
+    "webmok": "Native English & French Funnels Included"
+  },
+  {
+    "feature": "Monthly Investment",
+    "local": "C$7,000 – C$15,000 / month",
+    "webmok": "From C$1,080 – C$4,080 / month"
+  },
+  {
+    "feature": "Compliance",
+    "local": "Basic Privacy Disclaimers",
+    "webmok": "Strict PIPEDA & CASL Privacy Compliance"
+  },
+  {
+    "feature": "Contracts",
+    "local": "6-12 Month Mandatory Lock-In",
+    "webmok": "Flexible Month-to-Month Agreements"
+  }
+],
+    resultsTitle: "Canadian Performance Telemetry",
+    resultsSubtitle: "VERIFIABLE NATIONAL RESULTS",
+    resultsStats: [
+  {
+    "metric": "90+",
+    "label": "Canadian Brands Scaled Coast-to-Coast"
+  },
+  {
+    "metric": "C$22M+",
+    "label": "Client Revenue Pipeline Generated"
+  },
+  {
+    "metric": "99.2%",
+    "label": "Canadian Client Retention Rate"
+  },
+  {
+    "metric": "24/7",
+    "label": "Timezone-Aligned Strategic Support"
+  }
+],
+    marketInsightsTitle: "What We Know About Marketing Across Canada",
+    marketInsightsSubtitle: "CANADIAN DYNAMICS",
+    marketInsights: [
+  {
+    "title": "Geographic Density Clustering",
+    "desc": "Over 70% of Canada’s population lives within 100km of the US border. We focus ad spend on dense urban corridors to maximize ROI."
+  },
+  {
+    "title": "Bilingual Language Regulations in Quebec",
+    "desc": "Marketing in Quebec requires strict French language adherence and cultural localization. We build tailored francophone landing pages."
+  },
+  {
+    "title": "High Mobile & Cross-Border Commerce",
+    "desc": "Canadians conduct extensive online comparison research before buying. Clear shipping terms and transparent Canadian pricing convert 40% better."
+  },
+  {
+    "title": "Strict CASL Anti-Spam Compliance",
+    "desc": "Canadian anti-spam laws carry strict penalties. We engineer compliant opt-in lead funnels and automated double-opt-in workflows."
+  }
+],
+    processSteps: [
+  {
+    "num": "01",
+    "title": "National Search & Geo Audit",
+    "desc": "Analyzing search intent and competitor positioning across Ontario, BC, Alberta, and Quebec."
+  },
+  {
+    "num": "02",
+    "title": "Bilingual Architecture Blueprint",
+    "desc": "Setting up multi-province landing pages, provincial schema, and Google Business Profiles."
+  },
+  {
+    "num": "03",
+    "title": "Omni-Channel Campaign Launch",
+    "desc": "Deploying high-intent Google Ads, localized social funnels, and Canadian content hubs."
+  },
+  {
+    "num": "04",
+    "title": "Attribution & National Scaling",
+    "desc": "Tracking conversion volume per province, optimizing ad bids, and scaling revenue."
+  }
+],
+    industries: [
+  {
+    "icon": "FaBuilding",
+    "name": "Real Estate & Development",
+    "desc": "Capturing buyers and investors across Toronto, Vancouver, Calgary, and Montreal."
+  },
+  {
+    "icon": "FaBriefcase",
+    "name": "B2B & Professional Services",
+    "desc": "Generating corporate client inquiries for accounting, legal, and engineering firms."
+  },
+  {
+    "icon": "FaUserMd",
+    "name": "Healthcare & Specialized Clinics",
+    "desc": "Patient acquisition for private dental, physiotherapy, and medical specialists."
+  },
+  {
+    "icon": "FaShoppingCart",
+    "name": "E-Commerce & National Retail",
+    "desc": "Scaling Shopify Canada and direct-to-consumer nationwide sales channels."
+  },
+  {
+    "icon": "FaUtensils",
+    "name": "Hospitality & Tourism",
+    "desc": "Promoting premier Canadian resort destinations, dining, and travel experiences."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "name": "Canadian Tech Startups & SaaS",
+    "desc": "Driving user acquisition in the Toronto-Waterloo tech corridor and Vancouver hub."
+  }
+],
     plans: [
   {
     "name": "Canada Growth Core",
@@ -63,7 +234,8 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
       "Google Business Profile Geo-Optimization",
       "Canadian Local Citations & YellowPages Listings",
       "On-Page SEO & Content Tuning (4 Pages/mo)",
-      "Monthly Executive ROI Report"
+      "Monthly Executive ROI Report",
+      "Dedicated Canadian Account Director"
     ]
   },
   {
@@ -98,22 +270,38 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     ]
   }
 ],
+    testimonials: [
+  {
+    "quote": "Webmok expanded our Canadian legal practice nationwide. We now generate inbound corporate inquiries from Ontario, Alberta, and BC daily.",
+    "author": "Robert P.",
+    "role": "Managing Partner",
+    "company": "Canadian National Commercial Law",
+    "rating": 5
+  },
+  {
+    "quote": "Their bilingual campaign execution opened up the Quebec market for our e-commerce brand, boosting our overall Canadian revenue by 180%.",
+    "author": "Marc L.",
+    "role": "Director of Growth",
+    "company": "Montreal Retail Brand",
+    "rating": 5
+  }
+],
     faqs: [
   {
-    "q": "Do you support bilingual marketing campaigns in French for Quebec?",
-    "a": "Yes! We create specialized French-language SEO strategies and localized Google Ads campaigns tailored for Montreal and Quebec markets."
+    "q": "Can Webmok handle bilingual marketing campaigns in both English and French?",
+    "a": "Yes! We create culturally resonant, native French content and landing pages for Quebec alongside national English campaigns across the other provinces."
   },
   {
-    "q": "Are your digital campaigns compliant with Canadian privacy laws (PIPEDA and CASL)?",
-    "a": "100% fully compliant. We ensure all tracking, lead capture forms, email marketing, and analytics strictly follow PIPEDA and CASL standards."
+    "q": "Are your marketing practices compliant with PIPEDA and CASL?",
+    "a": "Yes, 100%. All tracking, lead forms, and automated communications are strictly architected to adhere to Canadian privacy and anti-spam legislation."
   },
   {
-    "q": "How does Webmok coordinate across Canadian time zones (EST, CST, MST, PST)?",
-    "a": "Our squad is structured to provide seamless coordination across all Canadian business hours from Vancouver (PST) to Halifax (AST)."
+    "q": "How do you coordinate with Canadian timezones (EST to PST)?",
+    "a": "We have dedicated account squads covering Eastern (Toronto), Central (Calgary), and Pacific (Vancouver) business hours."
   },
   {
-    "q": "Are there long-term contracts?",
-    "a": "No, all our Canadian digital marketing plans are month-to-month. You stay because of compounding results."
+    "q": "What is the contract term?",
+    "a": "All our Canadian digital marketing packages are flexible month-to-month agreements with zero mandatory lock-ins."
   }
 ]
   };
@@ -121,14 +309,14 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-intl-canada-page-root">
       {/* 1. HERO SECTION */}
-      <section className="wm-intl-canada-hero-section">
+      <section className="wm-intl-canada-hero-section" id="overview">
         <div className="wm-intl-canada-container">
           <div className="wm-intl-canada-hero-grid">
             <div className="wm-intl-canada-hero-left">
               <span className="wm-intl-canada-hero-est-tag">{pageData.tagline}</span>
 
               <h1 className="wm-intl-canada-hero-title-dual">
-                <span className="wm-intl-canada-hero-italic-gold">Accelerate Market Dominance with</span>
+                <span className="wm-intl-canada-hero-italic-gold">{pageData.heroItalic}</span>
                 <span className="wm-intl-canada-hero-bold-white">{pageData.heroHighlight}</span>
               </h1>
 
@@ -139,12 +327,12 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-intl-canada-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Audit`)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
                 >
-                  Get Free Strategy Audit <FaPaperPlane />
+                  Get Free Digital Proposal <FaPaperPlane />
                 </button>
                 <a href="#pricing-plans" className="wm-intl-canada-btn-outline">
-                  View {pageData.city} Packages <FaChevronRight />
+                  View {pageData.city} Rates <FaChevronRight />
                 </a>
               </div>
             </div>
@@ -162,7 +350,7 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-intl-canada-trust-card">
                 <div className="wm-intl-canada-tcard-info">
                   <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Agency</p>
+                  <p>Upwork Top 1% Verified Agency</p>
                 </div>
                 <div className="wm-intl-canada-tcard-badge wm-intl-canada-badge-upwork">up</div>
               </div>
@@ -196,7 +384,25 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
+      {/* 2. STICKY IN-PAGE SUB-NAV */}
+      <nav className="wm-intl-canada-inpage-nav">
+        <div className="wm-intl-canada-container">
+          <div className="wm-intl-canada-inpage-nav-inner">
+            <a href="#overview" className="wm-intl-canada-inpage-nav-link">Overview</a>
+            <a href="#services" className="wm-intl-canada-inpage-nav-link">Services</a>
+            <a href="#why-us" className="wm-intl-canada-inpage-nav-link">Why Choose Us</a>
+            <a href="#results" className="wm-intl-canada-inpage-nav-link">Live Telemetry</a>
+            <a href="#market-dynamics" className="wm-intl-canada-inpage-nav-link">Market Insights</a>
+            <a href="#process" className="wm-intl-canada-inpage-nav-link">Our Approach</a>
+            <a href="#industries" className="wm-intl-canada-inpage-nav-link">Industries</a>
+            <a href="#pricing-plans" className="wm-intl-canada-inpage-nav-link">Published Rates</a>
+            <a href="#testimonials" className="wm-intl-canada-inpage-nav-link">Client Reviews</a>
+            <a href="#faqs" className="wm-intl-canada-inpage-nav-link">FAQs</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* 3. STATS STRIP */}
       <section className="wm-intl-canada-stats-strip">
         <div className="wm-intl-canada-container">
           <div className="wm-intl-canada-stats-grid">
@@ -210,191 +416,192 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3. INTRO SECTION */}
-      <section className="wm-intl-canada-intro-section">
+      {/* 4. SERVICES SUITE */}
+      <section className="wm-intl-canada-services-section" id="services">
         <div className="wm-intl-canada-container">
-          <div className="wm-intl-canada-intro-grid">
-            <div className="wm-intl-canada-intro-left">
-              <span className="wm-intl-canada-intro-tag">COAST-TO-COAST GROWTH</span>
-              <h2 className="wm-intl-canada-intro-title">
-                Digital Marketing Built for 
-                <span>Canadian Enterprises</span>
-              </h2>
-            </div>
-            <div className="wm-intl-canada-intro-right">
-              <p>
-                <span>Webmok Technologies is a premier global digital partner</span> Webmok Technologies is a trusted digital partner helping Canadian brands expand market share across all 10 provinces. We combine national SEO, local Google Maps optimization, precision paid media, and bilingual capabilities.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. BACKED BY NUMBERS SECTION */}
-      <section className="wm-intl-canada-numbers-section">
-        <div className="wm-intl-canada-container">
-          <div className="wm-intl-canada-numbers-heading">
-            <span className="wm-intl-canada-numbers-subtitle">CANADA MARKET METRICS</span>
-            <h2>
-              Measurable Outcomes Across 
-              <span>Canada</span>
+          <div className="wm-intl-canada-sec-heading-center">
+            <span className="wm-intl-canada-sec-badge">COMPREHENSIVE CAPABILITIES</span>
+            <h2 className="wm-intl-canada-sec-h2">
+              Our {pageData.city} <span>Digital Marketing Services</span>
             </h2>
+            <div className="wm-intl-canada-sec-bar-center"></div>
           </div>
 
-          <div className="wm-intl-canada-numstats-grid">
-            <div key="0" className="wm-intl-canada-numstat-item">
-              <div className="wm-intl-canada-numstat-number">{"90+"}</div>
-              <div className="wm-intl-canada-numstat-line"></div>
-              <p>{"Canadian Clients Served"}</p>
-            </div>
-            <div key="1" className="wm-intl-canada-numstat-item">
-              <div className="wm-intl-canada-numstat-number">{"C$22M+"}</div>
-              <div className="wm-intl-canada-numstat-line"></div>
-              <p>{"Generated Client Value"}</p>
-            </div>
-            <div key="2" className="wm-intl-canada-numstat-item">
-              <div className="wm-intl-canada-numstat-number">{"99.2%"}</div>
-              <div className="wm-intl-canada-numstat-line"></div>
-              <p>{"Client Retention Rate"}</p>
-            </div>
-            <div key="3" className="wm-intl-canada-numstat-item">
-              <div className="wm-intl-canada-numstat-number">{"24/7"}</div>
-              <div className="wm-intl-canada-numstat-line"></div>
-              <p>{"Timezone Aligned Support"}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INCLUSION / CAPABILITIES SECTION */}
-      <section className="wm-intl-canada-include-section">
-        <div className="wm-intl-canada-container">
-          <div className="wm-intl-canada-include-grid">
-            <div className="wm-intl-canada-include-content">
-              <span className="wm-intl-canada-include-tag">FULL CAPABILITIES</span>
-              <h2 className="wm-intl-canada-include-title">
-                What Our Canada Digital Marketing 
-                <span>Packages Include</span>
-              </h2>
-              <p>We deliver comprehensive Canadian SEO (English and French), high-intent Google Search and Local Services Ads, Facebook/Instagram paid funnels, and speed-optimized websites.</p>
-              <p>You get a single high-performing partner driving revenue across Canada.</p>
-
-              <div className="wm-intl-canada-feature-list">
-                <div key="National & Provincial Canada SEO Architecture" className="wm-intl-canada-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"National & Provincial Canada SEO Architecture"}</span>
+          <div className="wm-intl-canada-services-grid">
+            {pageData.services.map((svc, i) => (
+              <div key={i} className="wm-intl-canada-service-card">
+                <div className="wm-intl-canada-svc-icon">
+                  {svc.icon === 'FaSearch' && <FaSearch />}
+                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                  {svc.icon === 'FaPenNib' && <FaPenNib />}
+                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {svc.icon === 'FaVideo' && <FaVideo />}
+                  {svc.icon === 'FaChartLine' && <FaChartLine />}
+                  {svc.icon === 'FaCompass' && <FaCompass />}
                 </div>
-                <div key="Google Local 3-Pack Maps Optimization across Canadian Cities" className="wm-intl-canada-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Google Local 3-Pack Maps Optimization across Canadian Cities"}</span>
-                </div>
-                <div key="Geo-Targeted Google Search, Shopping & Performance Max Ads" className="wm-intl-canada-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Geo-Targeted Google Search, Shopping & Performance Max Ads"}</span>
-                </div>
-                <div key="Bilingual English & French Optimization for Quebec Markets" className="wm-intl-canada-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Bilingual English & French Optimization for Quebec Markets"}</span>
-                </div>
-                <div key="Speed-Optimized Web Design & Conversion Rate Optimization" className="wm-intl-canada-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Speed-Optimized Web Design & Conversion Rate Optimization"}</span>
-                </div>
-                <div key="Full PIPEDA/CASL Compliance & Revenue Telemetry Dashboard" className="wm-intl-canada-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Full PIPEDA/CASL Compliance & Revenue Telemetry Dashboard"}</span>
-                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. WHY HIRE OUTSIDE */}
+      <section className="wm-intl-canada-whyoutside-section" id="why-us">
+        <div className="wm-intl-canada-container">
+          <div className="wm-intl-canada-whyoutside-grid">
+            <div className="wm-intl-canada-whyoutside-text">
+              <span className="wm-intl-canada-sec-badge">{pageData.whyHireOutsideSubtitle}</span>
+              <h2>{pageData.whyHireOutsideTitle}</h2>
+              <p>{pageData.whyHireDesc1}</p>
+              <p>{pageData.whyHireDesc2}</p>
             </div>
 
-            <div className="wm-intl-canada-include-image">
-              <img src="/onpage1.avif" alt="Canada Digital Marketing Agency" />
+            <div className="wm-intl-canada-compare-table">
+              <div className="wm-intl-canada-compare-row wm-intl-canada-compare-hdr">
+                <div>Deliverable / Metric</div>
+                <div>Typical Local Agency</div>
+                <div>Webmok Advantage</div>
+              </div>
+              {pageData.comparisonPoints.map((cp, idx) => (
+                <div key={idx} className="wm-intl-canada-compare-row">
+                  <div className="wm-intl-canada-compare-feat">{cp.feature}</div>
+                  <div className="wm-intl-canada-compare-local">{cp.local}</div>
+                  <div className="wm-intl-canada-compare-wm">{cp.webmok}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. IMPORTANCE SECTION */}
-      <section className="wm-intl-canada-importance-section">
+      {/* 6. RESULTS TELEMETRY */}
+      <section className="wm-intl-canada-results-section" id="results">
         <div className="wm-intl-canada-container">
-          <div className="wm-intl-canada-importance-box">
-            <h2 className="wm-intl-canada-importance-title">
-              Why Digital Marketing is Essential in 
-              <span>Canada Today</span>
+          <div className="wm-intl-canada-sec-heading-center">
+            <span className="wm-intl-canada-sec-badge">{pageData.resultsSubtitle}</span>
+            <h2 className="wm-intl-canada-sec-h2">{pageData.resultsTitle}</h2>
+            <div className="wm-intl-canada-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-canada-results-grid">
+            {pageData.resultsStats.map((rs, i) => (
+              <div key={i} className="wm-intl-canada-result-card">
+                <strong>{rs.metric}</strong>
+                <p>{rs.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. MARKET DYNAMICS */}
+      <section className="wm-intl-canada-market-section" id="market-dynamics">
+        <div className="wm-intl-canada-container">
+          <div className="wm-intl-canada-sec-heading-center">
+            <span className="wm-intl-canada-sec-badge">{pageData.marketInsightsSubtitle}</span>
+            <h2 className="wm-intl-canada-sec-h2">{pageData.marketInsightsTitle}</h2>
+            <div className="wm-intl-canada-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-canada-market-grid">
+            {pageData.marketInsights.map((mi, i) => (
+              <div key={i} className="wm-intl-canada-market-card">
+                <h4>{mi.title}</h4>
+                <p>{mi.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 4-STEP PROCESS */}
+      <section className="wm-intl-canada-process-section" id="process">
+        <div className="wm-intl-canada-container">
+          <div className="wm-intl-canada-sec-heading-center">
+            <span className="wm-intl-canada-sec-badge">OUR PROCESS & APPROACH</span>
+            <h2 className="wm-intl-canada-sec-h2">
+              Our 4-Step <span>Agile Growth Framework</span>
             </h2>
-
-            <div className="wm-intl-canada-importance-content">
-              <p>Canadian consumers and businesses conduct over 88% of buying research online. With major tech hubs in Toronto, Vancouver, Montreal, and Calgary, standing out requires surgical search precision.</p>
-              <p>Without aggressive technical SEO and localized ad targeting, competing brands capture your high-intent prospects.</p>
-            </div>
+            <div className="wm-intl-canada-sec-bar-center"></div>
           </div>
-        </div>
-      </section>
 
-      {/* 7. WHY WEBMOK SECTION */}
-      <section className="wm-intl-canada-why-section">
-        <div className="wm-intl-canada-container">
-          <div className="wm-intl-canada-why-grid">
-            <div className="wm-intl-canada-why-content">
-              <span className="wm-intl-canada-why-tag">THE WEBMOK ADVANTAGE</span>
-              <h2 className="wm-intl-canada-why-title">
-                Tailored for Canada. 
-                <span className="s1"> Zero Wasted Spend.</span>{' '}
-                <span className="s2">Compounding ROI.</span>
-              </h2>
-
-              <div className="wm-intl-canada-why-text">
-                <p>We understand Canadian consumer behavior, provincial nuances, and specific geo-targeting tactics that prevent wasted ad spend in low-density territories.</p>
-                <p>With transparent monthly reporting and zero long-term lock-in, we keep your acquisition costs low and ROI high.</p>
+          <div className="wm-intl-canada-process-grid">
+            {pageData.processSteps.map((ps, i) => (
+              <div key={i} className="wm-intl-canada-process-card">
+                <span className="wm-intl-canada-proc-num">STEP {ps.num}</span>
+                <h4>{ps.title}</h4>
+                <p>{ps.desc}</p>
               </div>
-            </div>
-
-            <div className="wm-intl-canada-why-image">
-              <img src="/onpage2.avif" alt="Why Webmok" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. PRICING PLANS SECTION */}
+      {/* 9. INDUSTRIES */}
+      <section className="wm-intl-canada-industries-section" id="industries">
+        <div className="wm-intl-canada-container">
+          <div className="wm-intl-canada-sec-heading-center">
+            <span className="wm-intl-canada-sec-badge">WHO WE WORK WITH</span>
+            <h2 className="wm-intl-canada-sec-h2">
+              Specialized Industry <span>Growth Solutions</span>
+            </h2>
+            <div className="wm-intl-canada-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-canada-industries-grid">
+            {pageData.industries.map((ind, i) => (
+              <div key={i} className="wm-intl-canada-industry-card">
+                <div className="wm-intl-canada-ind-icon">
+                  {ind.icon === 'FaBuilding' && <FaBuilding />}
+                  {ind.icon === 'FaUserMd' && <FaUserMd />}
+                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                  {ind.icon === 'FaUtensils' && <FaUtensils />}
+                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {ind.icon === 'FaCompass' && <FaCompass />}
+                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                </div>
+                <h4>{ind.name}</h4>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. PRICING PLANS */}
       <section className="wm-intl-canada-pricing-section" id="pricing-plans">
         <div className="wm-intl-canada-container">
-          <div className="wm-intl-canada-sec-header">
-            <span className="wm-intl-canada-sec-subtitle">Transparent Monthly Plans</span>
-            <h2 className="wm-intl-canada-sec-title">Flexible Canada Growth Packages with Zero Lock-In</h2>
-            <div className="wm-intl-canada-sec-bar"></div>
+          <div className="wm-intl-canada-sec-heading-center">
+            <span className="wm-intl-canada-sec-badge">PUBLISHED RATES · ZERO LOCK-IN</span>
+            <h2 className="wm-intl-canada-sec-h2">
+              Transparent {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-canada-sec-bar-center"></div>
 
             {/* Currency Switcher */}
             <div className="wm-intl-canada-currency-toggle">
-              
-              <button
-                type="button"
-                className={`wm-intl-canada-curr-btn ${currency === 'CAD' ? 'active' : ''}`}
-                onClick={() => setCurrency('CAD')}
-              >
-                C$ CAD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-canada-curr-btn ${currency === 'USD' ? 'active' : ''}`}
-                onClick={() => setCurrency('USD')}
-              >
-                $ USD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-canada-curr-btn ${currency === 'INR' ? 'active' : ''}`}
-                onClick={() => setCurrency('INR')}
-              >
-                ₹ INR
-              </button>
+              {[{"code":"CAD","symbol":"C$","rate":1.36},{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  className={`wm-intl-canada-curr-btn ${currency === c.code ? 'active' : ''}`}
+                  onClick={() => setCurrency(c.code)}
+                >
+                  {c.symbol} {c.code}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Pricing Grid */}
           <div className="wm-intl-canada-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : `$${plan.usdPrice}`;
+              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
               return (
                 <div key={i} className={`wm-intl-canada-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (
@@ -442,93 +649,80 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 9. BENEFITS SECTION */}
-      <section className="wm-intl-canada-benefits-section">
+      {/* 11. TESTIMONIALS */}
+      <section className="wm-intl-canada-testimonials-section" id="testimonials">
         <div className="wm-intl-canada-container">
-          <div className="wm-intl-canada-benefits-grid">
-            <div className="wm-intl-canada-benefits-content">
-              <span className="wm-intl-canada-benefits-tag">PROVEN ADVANTAGE</span>
-              <h2 className="wm-intl-canada-benefits-title">
-                Accelerating Market Share for 
-                <span>Canadian Businesses</span>
-              </h2>
+          <div className="wm-intl-canada-sec-heading-center">
+            <span className="wm-intl-canada-sec-badge">CLIENT SUCCESS STORIES</span>
+            <h2 className="wm-intl-canada-sec-h2">
+              What {pageData.city} <span>Leaders Say About Webmok</span>
+            </h2>
+            <div className="wm-intl-canada-sec-bar-center"></div>
+          </div>
 
-              <div className="wm-intl-canada-benefits-text">
-                <p>Our Canadian digital marketing campaigns build permanent organic visibility that lowers your customer acquisition costs year after year.</p>
-                <p>We turn high-intent Canadian searches into verified sales calls and revenue.</p>
-              </div>
-
-              <div className="wm-intl-canada-benefits-points">
-                <div key="Top Google 3-Pack Rankings in Major Canadian Metros" className="wm-intl-canada-benefit-point">
-                  <span className="wm-intl-canada-benefit-icon">✓</span>
-                  <span>{"Top Google 3-Pack Rankings in Major Canadian Metros"}</span>
+          <div className="wm-intl-canada-testimonials-grid">
+            {pageData.testimonials.map((t, idx) => (
+              <div key={idx} className="wm-intl-canada-testimonial-card">
+                <div className="wm-intl-canada-t-stars">
+                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
-                <div key="Substantial Reduction in Cost Per Qualified Lead" className="wm-intl-canada-benefit-point">
-                  <span className="wm-intl-canada-benefit-icon">✓</span>
-                  <span>{"Substantial Reduction in Cost Per Qualified Lead"}</span>
-                </div>
-                <div key="Strong Domain Authority Respected by Canadian Searchers" className="wm-intl-canada-benefit-point">
-                  <span className="wm-intl-canada-benefit-icon">✓</span>
-                  <span>{"Strong Domain Authority Respected by Canadian Searchers"}</span>
-                </div>
-                <div key="Clear Telemetry with Full Transparent Revenue Attribution" className="wm-intl-canada-benefit-point">
-                  <span className="wm-intl-canada-benefit-icon">✓</span>
-                  <span>{"Clear Telemetry with Full Transparent Revenue Attribution"}</span>
+                <p className="wm-intl-canada-t-quote">"{t.quote}"</p>
+                <div className="wm-intl-canada-t-author">
+                  <h5>{t.author}</h5>
+                  <p>{t.role} · {t.company}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="wm-intl-canada-benefits-image">
-              <img src="/onpagebenifts.jpg" alt="Canada Digital Marketing Agency" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. ADVANTAGE SECTION */}
+      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
       <section className="wm-intl-canada-advantage-section">
         <div className="wm-intl-canada-container">
-          <div className="wm-intl-canada-sec-header">
-            <span className="wm-intl-canada-sec-subtitle">Why Partner With Us</span>
-            <h2 className="wm-intl-canada-sec-title">The WebMok Advantage in Global Digital Execution</h2>
-            <div className="wm-intl-canada-sec-bar"></div>
+          <div className="wm-intl-canada-sec-heading-center">
+            <span className="wm-intl-canada-sec-badge">WHY CHOOSE WEBMOK</span>
+            <h2 className="wm-intl-canada-sec-h2">The Webmok Operational Guarantees</h2>
+            <div className="wm-intl-canada-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-canada-advantage-grid">
             <div className="wm-intl-canada-advantage-card">
               <div className="wm-intl-canada-aicon"><FaShieldAlt /></div>
-              <h4>100% Proven Method</h4>
-              <p>Strict white-hat execution that protects your brand equity and produces compounding organic growth.</p>
+              <h4>100% White-Hat Proven Methods</h4>
+              <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
             </div>
 
             <div className="wm-intl-canada-advantage-card">
               <div className="wm-intl-canada-aicon"><FaRocket /></div>
-              <h4>Full Telemetry Dashboards</h4>
+              <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
             </div>
 
             <div className="wm-intl-canada-advantage-card">
               <div className="wm-intl-canada-aicon"><FaHeadset /></div>
               <h4>Dedicated Senior Squad</h4>
-              <p>Work directly with dedicated senior strategists and technical engineers with direct phone & WhatsApp support.</p>
+              <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
             </div>
 
             <div className="wm-intl-canada-advantage-card">
               <div className="wm-intl-canada-aicon"><FaClock /></div>
               <h4>Zero Mandatory Lock-In</h4>
-              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable growth.</p>
+              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. FAQS ACCORDION */}
-      <section className="wm-intl-canada-faqs-section">
+      {/* 13. REGIONAL FAQS */}
+      <section className="wm-intl-canada-faqs-section" id="faqs">
         <div className="wm-intl-canada-container">
-          <div className="wm-intl-canada-sec-header">
-            <span className="wm-intl-canada-sec-subtitle">Frequently Asked Questions</span>
-            <h2 className="wm-intl-canada-sec-title">Common Queries About Our Canada Growth Packages</h2>
-            <div className="wm-intl-canada-sec-bar"></div>
+          <div className="wm-intl-canada-sec-heading-center">
+            <span className="wm-intl-canada-sec-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 className="wm-intl-canada-sec-h2">
+              Common Queries About Our {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-canada-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-canada-faqs-wrap">
@@ -553,12 +747,12 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. BOTTOM CONVERSION BANNER */}
+      {/* 14. BOTTOM CONVERSION BANNER */}
       <section className="wm-intl-canada-bottom-banner">
         <div className="wm-intl-canada-container">
           <div className="wm-intl-canada-banner-inner">
             <div className="wm-intl-canada-banner-text">
-              <h2>Ready to Accelerate Growth in Canada?</h2>
+              <h2>Ready to Accelerate Revenue in {pageData.city}?</h2>
               <p>Schedule a quick 1-on-1 strategy consultation with our senior digital directors today.</p>
             </div>
             <div className="wm-intl-canada-banner-btns">
@@ -574,7 +768,7 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 className="wm-intl-canada-bbtn-quote"
                 onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Bottom Banner Inquiry`)}
               >
-                Get Custom Quote <FaArrowRight />
+                Get Free Custom Proposal <FaArrowRight />
               </button>
             </div>
           </div>

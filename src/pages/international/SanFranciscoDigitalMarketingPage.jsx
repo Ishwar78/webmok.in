@@ -13,7 +13,20 @@ import {
   FaGoogle,
   FaChevronRight,
   FaHeadset,
-  FaClock
+  FaClock,
+  FaSearch,
+  FaBullhorn,
+  FaShareAlt,
+  FaPenNib,
+  FaLaptopCode,
+  FaVideo,
+  FaChartLine,
+  FaBuilding,
+  FaUserMd,
+  FaShoppingCart,
+  FaUtensils,
+  FaBriefcase,
+  FaCompass
 } from 'react-icons/fa';
 import './SanFranciscoDigitalMarketingPage.css';
 
@@ -31,6 +44,7 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     region: "Bay Area & Silicon Valley, CA, USA",
     tagline: "BAY AREA & SILICON VALLEY GROWTH SQUAD · SF, USA",
     heroHighlight: "San Francisco Digital Marketing Agency",
+    heroItalic: "Accelerate B2B Pipeline & ARR with",
     leadDesc: "Fuel your Silicon Valley startup or Bay Area enterprise with high-velocity B2B lead generation, technical SaaS SEO, and precision paid acquisition.",
     bodyDesc: "From SOMA and FiDi tech firms to South Bay enterprises and East Bay innovators—Webmok engineers scalable, data-backed digital engines that accelerate ARR and pipeline value.",
     stats: [
@@ -51,6 +65,163 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     "label": "Data-Backed Execution"
   }
 ],
+    services: [
+  {
+    "icon": "FaSearch",
+    "title": "B2B SaaS & Enterprise SEO",
+    "desc": "Topical authority architecture, product-led SEO hubs, programmatic landing pages, and technical optimizations engineered for enterprise search volume."
+  },
+  {
+    "icon": "FaBullhorn",
+    "title": "LinkedIn & Google Search Ads (PPC)",
+    "desc": "Account-Based Marketing (ABM) funnels, high-intent commercial Google Search ads, and retargeting that drives qualified demo requests."
+  },
+  {
+    "icon": "FaPenNib",
+    "title": "Product-Led Content & Whitepapers",
+    "desc": "In-depth comparison guides, technical whitepapers, and industry benchmarks that position your platform as the category standard."
+  },
+  {
+    "icon": "FaLaptopCode",
+    "title": "High-Converting Webflow & React Dev",
+    "desc": "Modern, high-velocity SaaS marketing websites and interactive demo landing pages engineered for optimal conversion rates."
+  },
+  {
+    "icon": "FaChartLine",
+    "title": "CRM & Multi-Touch Attribution",
+    "desc": "Seamless HubSpot, Salesforce, and Segment integrations mapping every click directly to pipeline stage and closed ARR."
+  },
+  {
+    "icon": "FaShareAlt",
+    "title": "Developer Marketing & Brand PR",
+    "desc": "Technical digital PR, GitHub community amplification, and tech publication editorial placements that drive organic developer adoption."
+  }
+],
+    whyHireOutsideTitle: "Engineering-Driven Marketing for the Bay Area",
+    whyHireOutsideSubtitle: "SILICON VALLEY PRECISION",
+    whyHireDesc1: "Bay Area agencies charge exorbitant retainers ($15k–$30k/mo) driven by local commercial real estate and overhead, delivering generic marketing that fails in technical B2B sectors.",
+    whyHireDesc2: "Webmok approaches growth marketing like software engineering—running agile sprints, instrumenting full-funnel attribution, and scaling pipeline with provable unit economics.",
+    comparisonPoints: [
+  {
+    "feature": "Methodology",
+    "local": "Generalist Marketing Agency",
+    "webmok": "Engineering-Driven B2B & SaaS Growth Squad"
+  },
+  {
+    "feature": "Attribution Depth",
+    "local": "Basic Google Analytics Clicks",
+    "webmok": "Full CRM Revenue Attribution (HubSpot/Salesforce)"
+  },
+  {
+    "feature": "Cost Efficiency",
+    "local": "$15,000 – $30,000 / month",
+    "webmok": "From $949 – $3,499 / month (Compound ARR Lift)"
+  },
+  {
+    "feature": "Sprint Speed",
+    "local": "Bi-Monthly Reviews",
+    "webmok": "Agile Weekly Telemetry & Daily Slack Access"
+  },
+  {
+    "feature": "Contract Terms",
+    "local": "1-Year Strict Lock-In",
+    "webmok": "Flexible Month-to-Month Agreements"
+  }
+],
+    resultsTitle: "Bay Area Performance Telemetry",
+    resultsSubtitle: "VERIFIABLE B2B RESULTS",
+    resultsStats: [
+  {
+    "metric": "80+",
+    "label": "SF Tech Startups & Enterprises Scaled"
+  },
+  {
+    "metric": "$28M+",
+    "label": "Tracked Pipeline ARR Generated"
+  },
+  {
+    "metric": "99.5%",
+    "label": "Client Retention Rate"
+  },
+  {
+    "metric": "Under 28s",
+    "label": "Engineer Response Time"
+  }
+],
+    marketInsightsTitle: "What We Know About Selling to B2B Tech in SF",
+    marketInsightsSubtitle: "SILICON VALLEY DYNAMICS",
+    marketInsights: [
+  {
+    "title": "High-Intent Commercial Searches Win Deals",
+    "desc": "Enterprise buyers search for specific product comparison terms (e.g. \"X vs Y\" or \"Best enterprise solution for Z\"). We build dominant comparison hubs."
+  },
+  {
+    "title": "CAC Payback Period is the Ultimate Metric",
+    "desc": "We optimize every paid campaign around CAC payback velocity and pipeline quality rather than cheap, unqualified top-of-funnel clicks."
+  },
+  {
+    "title": "Multi-Stakeholder Buying Committees",
+    "desc": "B2B software purchases require approval from Engineering, Security, and Finance. We craft tailored content assets for each stakeholder persona."
+  },
+  {
+    "title": "Speed to Lead Conversion",
+    "desc": "Demo requests that are contacted within 5 minutes convert 8x higher. We build automated webhook integrations directly into your sales team’s Slack."
+  }
+],
+    processSteps: [
+  {
+    "num": "01",
+    "title": "Product & ICP Deep Dive",
+    "desc": "Understanding your Ideal Customer Profile (ICP), ACV economics, and competitor positioning."
+  },
+  {
+    "num": "02",
+    "title": "Technical Demand Gen Architecture",
+    "desc": "Building high-intent B2B search funnels, comparison hubs, and LinkedIn ABM audiences."
+  },
+  {
+    "num": "03",
+    "title": "Omni-Channel Sprint Deployment",
+    "desc": "Launching targeted PPC, programmatic SEO hubs, and CRM attribution pipelines."
+  },
+  {
+    "num": "04",
+    "title": "Pipeline Optimization & ARR Scale",
+    "desc": "A/B testing demo landing pages, optimizing lead scoring, and compounding pipeline ARR."
+  }
+],
+    industries: [
+  {
+    "icon": "FaLaptopCode",
+    "name": "B2B SaaS & Cloud Platforms",
+    "desc": "Accelerating product demos, free-trial conversions, and enterprise contract ARR."
+  },
+  {
+    "icon": "FaShieldAlt",
+    "name": "Cybersecurity & Infrastructure",
+    "desc": "Establishing category authority and capturing high-intent technical enterprise buyers."
+  },
+  {
+    "icon": "FaChartLine",
+    "name": "FinTech & Blockchain Platforms",
+    "desc": "Driving compliance-ready user acquisition and institutional investor interest."
+  },
+  {
+    "icon": "FaUserMd",
+    "name": "HealthTech & BioTech Ventures",
+    "desc": "Connecting innovative clinical platforms with hospital networks and research labs."
+  },
+  {
+    "icon": "FaBriefcase",
+    "name": "Venture Capital & Advisory",
+    "desc": "Amplifying portfolio brand value, deal flow discovery, and founder recruitment."
+  },
+  {
+    "icon": "FaBuilding",
+    "name": "Commercial Real Estate Tech (PropTech)",
+    "desc": "Scaling corporate tenant acquisition and commercial property software adoption."
+  }
+],
     plans: [
   {
     "name": "SF Seed / Local Growth",
@@ -63,7 +234,8 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
       "Google Business Profile & Local SF Citations",
       "Core Technical SEO & Schema Markup",
       "On-Page Optimization & 4 Quality Blog Hubs",
-      "Monthly Executive ROI Report"
+      "Monthly Executive ROI Report",
+      "Dedicated US PST Growth Strategist"
     ]
   },
   {
@@ -98,6 +270,22 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     ]
   }
 ],
+    testimonials: [
+  {
+    "quote": "Webmok scaled our Series A SaaS pipeline by 340% within 5 months. Their understanding of B2B search intent and HubSpot attribution is unmatched.",
+    "author": "David L.",
+    "role": "VP of Growth",
+    "company": "San Francisco AI Workflow Platform",
+    "rating": 5
+  },
+  {
+    "quote": "They operate like an internal growth squad. Weekly sprints, zero fluff, and direct pipeline ARR delivered every month.",
+    "author": "Sarah M.",
+    "role": "Head of Demand Generation",
+    "company": "Bay Area CyberTech Platform",
+    "rating": 5
+  }
+],
     faqs: [
   {
     "q": "Do you specialize in B2B SaaS and technology companies in San Francisco?",
@@ -121,14 +309,14 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-intl-sanfrancisco-page-root">
       {/* 1. HERO SECTION */}
-      <section className="wm-intl-sanfrancisco-hero-section">
+      <section className="wm-intl-sanfrancisco-hero-section" id="overview">
         <div className="wm-intl-sanfrancisco-container">
           <div className="wm-intl-sanfrancisco-hero-grid">
             <div className="wm-intl-sanfrancisco-hero-left">
               <span className="wm-intl-sanfrancisco-hero-est-tag">{pageData.tagline}</span>
 
               <h1 className="wm-intl-sanfrancisco-hero-title-dual">
-                <span className="wm-intl-sanfrancisco-hero-italic-gold">Accelerate Market Dominance with</span>
+                <span className="wm-intl-sanfrancisco-hero-italic-gold">{pageData.heroItalic}</span>
                 <span className="wm-intl-sanfrancisco-hero-bold-white">{pageData.heroHighlight}</span>
               </h1>
 
@@ -139,12 +327,12 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-intl-sanfrancisco-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Audit`)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
                 >
-                  Get Free Strategy Audit <FaPaperPlane />
+                  Get Free Digital Proposal <FaPaperPlane />
                 </button>
                 <a href="#pricing-plans" className="wm-intl-sanfrancisco-btn-outline">
-                  View {pageData.city} Packages <FaChevronRight />
+                  View {pageData.city} Rates <FaChevronRight />
                 </a>
               </div>
             </div>
@@ -162,7 +350,7 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-intl-sanfrancisco-trust-card">
                 <div className="wm-intl-sanfrancisco-tcard-info">
                   <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Agency</p>
+                  <p>Upwork Top 1% Verified Agency</p>
                 </div>
                 <div className="wm-intl-sanfrancisco-tcard-badge wm-intl-sanfrancisco-badge-upwork">up</div>
               </div>
@@ -196,7 +384,25 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
+      {/* 2. STICKY IN-PAGE SUB-NAV */}
+      <nav className="wm-intl-sanfrancisco-inpage-nav">
+        <div className="wm-intl-sanfrancisco-container">
+          <div className="wm-intl-sanfrancisco-inpage-nav-inner">
+            <a href="#overview" className="wm-intl-sanfrancisco-inpage-nav-link">Overview</a>
+            <a href="#services" className="wm-intl-sanfrancisco-inpage-nav-link">Services</a>
+            <a href="#why-us" className="wm-intl-sanfrancisco-inpage-nav-link">Why Choose Us</a>
+            <a href="#results" className="wm-intl-sanfrancisco-inpage-nav-link">Live Telemetry</a>
+            <a href="#market-dynamics" className="wm-intl-sanfrancisco-inpage-nav-link">Market Insights</a>
+            <a href="#process" className="wm-intl-sanfrancisco-inpage-nav-link">Our Approach</a>
+            <a href="#industries" className="wm-intl-sanfrancisco-inpage-nav-link">Industries</a>
+            <a href="#pricing-plans" className="wm-intl-sanfrancisco-inpage-nav-link">Published Rates</a>
+            <a href="#testimonials" className="wm-intl-sanfrancisco-inpage-nav-link">Client Reviews</a>
+            <a href="#faqs" className="wm-intl-sanfrancisco-inpage-nav-link">FAQs</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* 3. STATS STRIP */}
       <section className="wm-intl-sanfrancisco-stats-strip">
         <div className="wm-intl-sanfrancisco-container">
           <div className="wm-intl-sanfrancisco-stats-grid">
@@ -210,184 +416,192 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3. INTRO SECTION */}
-      <section className="wm-intl-sanfrancisco-intro-section">
+      {/* 4. SERVICES SUITE */}
+      <section className="wm-intl-sanfrancisco-services-section" id="services">
         <div className="wm-intl-sanfrancisco-container">
-          <div className="wm-intl-sanfrancisco-intro-grid">
-            <div className="wm-intl-sanfrancisco-intro-left">
-              <span className="wm-intl-sanfrancisco-intro-tag">SILICON VALLEY GROWTH ARCHITECTURE</span>
-              <h2 className="wm-intl-sanfrancisco-intro-title">
-                Engineering Scalable Demand in 
-                <span>San Francisco</span>
-              </h2>
-            </div>
-            <div className="wm-intl-sanfrancisco-intro-right">
-              <p>
-                <span>Webmok Technologies is a premier global digital partner</span> San Francisco and the Bay Area demand sophisticated, engineering-driven marketing. Webmok integrates technical search architecture, high-intent LinkedIn & Google B2B funnels, and conversion optimization to drive qualified demos and closed deals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. BACKED BY NUMBERS SECTION */}
-      <section className="wm-intl-sanfrancisco-numbers-section">
-        <div className="wm-intl-sanfrancisco-container">
-          <div className="wm-intl-sanfrancisco-numbers-heading">
-            <span className="wm-intl-sanfrancisco-numbers-subtitle">BAY AREA TELEMETRY</span>
-            <h2>
-              Proven Metrics Across 
-              <span>Silicon Valley</span>
+          <div className="wm-intl-sanfrancisco-sec-heading-center">
+            <span className="wm-intl-sanfrancisco-sec-badge">COMPREHENSIVE CAPABILITIES</span>
+            <h2 className="wm-intl-sanfrancisco-sec-h2">
+              Our {pageData.city} <span>Digital Marketing Services</span>
             </h2>
+            <div className="wm-intl-sanfrancisco-sec-bar-center"></div>
           </div>
 
-          <div className="wm-intl-sanfrancisco-numstats-grid">
-            <div key="0" className="wm-intl-sanfrancisco-numstat-item">
-              <div className="wm-intl-sanfrancisco-numstat-number">{"80+"}</div>
-              <div className="wm-intl-sanfrancisco-numstat-line"></div>
-              <p>{"SF Startups & Enterprises"}</p>
-            </div>
-            <div key="1" className="wm-intl-sanfrancisco-numstat-item">
-              <div className="wm-intl-sanfrancisco-numstat-number">{"$28M+"}</div>
-              <div className="wm-intl-sanfrancisco-numstat-line"></div>
-              <p>{"Tracked Pipeline ARR"}</p>
-            </div>
-            <div key="2" className="wm-intl-sanfrancisco-numstat-item">
-              <div className="wm-intl-sanfrancisco-numstat-number">{"99.5%"}</div>
-              <div className="wm-intl-sanfrancisco-numstat-line"></div>
-              <p>{"Client Retention"}</p>
-            </div>
-            <div key="3" className="wm-intl-sanfrancisco-numstat-item">
-              <div className="wm-intl-sanfrancisco-numstat-number">{"< 28s"}</div>
-              <div className="wm-intl-sanfrancisco-numstat-line"></div>
-              <p>{"Engineer Response Time"}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INCLUSION / CAPABILITIES SECTION */}
-      <section className="wm-intl-sanfrancisco-include-section">
-        <div className="wm-intl-sanfrancisco-container">
-          <div className="wm-intl-sanfrancisco-include-grid">
-            <div className="wm-intl-sanfrancisco-include-content">
-              <span className="wm-intl-sanfrancisco-include-tag">B2B & TECH CAPABILITIES</span>
-              <h2 className="wm-intl-sanfrancisco-include-title">
-                What Our San Francisco Digital 
-                <span>Marketing Packages Include</span>
-              </h2>
-              <p>We deliver full-funnel SaaS & B2B SEO, precision account-based marketing (ABM), Google Search & LinkedIn PPC ads, and high-performance Webflow/React web development.</p>
-              <p>You get a senior digital squad that speaks your product language and optimizes for qualified pipeline rather than vanity clicks.</p>
-
-              <div className="wm-intl-sanfrancisco-feature-list">
-                <div key="B2B & SaaS Topical Authority & Technical SEO Architecture" className="wm-intl-sanfrancisco-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"B2B & SaaS Topical Authority & Technical SEO Architecture"}</span>
+          <div className="wm-intl-sanfrancisco-services-grid">
+            {pageData.services.map((svc, i) => (
+              <div key={i} className="wm-intl-sanfrancisco-service-card">
+                <div className="wm-intl-sanfrancisco-svc-icon">
+                  {svc.icon === 'FaSearch' && <FaSearch />}
+                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                  {svc.icon === 'FaPenNib' && <FaPenNib />}
+                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {svc.icon === 'FaVideo' && <FaVideo />}
+                  {svc.icon === 'FaChartLine' && <FaChartLine />}
+                  {svc.icon === 'FaCompass' && <FaCompass />}
                 </div>
-                <div key="High-Intent Google Ads & LinkedIn ABM Paid Campaigns" className="wm-intl-sanfrancisco-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"High-Intent Google Ads & LinkedIn ABM Paid Campaigns"}</span>
-                </div>
-                <div key="Product-Led Growth (PLG) Content & Comparison Hubs" className="wm-intl-sanfrancisco-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Product-Led Growth (PLG) Content & Comparison Hubs"}</span>
-                </div>
-                <div key="High-Converting Landing Page Design & CRO Frameworks" className="wm-intl-sanfrancisco-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"High-Converting Landing Page Design & CRO Frameworks"}</span>
-                </div>
-                <div key="CRM Integration (HubSpot, Salesforce) & Lead Scoring" className="wm-intl-sanfrancisco-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"CRM Integration (HubSpot, Salesforce) & Lead Scoring"}</span>
-                </div>
-                <div key="Dedicated US Pacific Timezone Growth Strategist" className="wm-intl-sanfrancisco-feature-item">
-                  <span className="chk">✓</span>
-                  <span>{"Dedicated US Pacific Timezone Growth Strategist"}</span>
-                </div>
+                <h3>{svc.title}</h3>
+                <p>{svc.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. WHY HIRE OUTSIDE */}
+      <section className="wm-intl-sanfrancisco-whyoutside-section" id="why-us">
+        <div className="wm-intl-sanfrancisco-container">
+          <div className="wm-intl-sanfrancisco-whyoutside-grid">
+            <div className="wm-intl-sanfrancisco-whyoutside-text">
+              <span className="wm-intl-sanfrancisco-sec-badge">{pageData.whyHireOutsideSubtitle}</span>
+              <h2>{pageData.whyHireOutsideTitle}</h2>
+              <p>{pageData.whyHireDesc1}</p>
+              <p>{pageData.whyHireDesc2}</p>
             </div>
 
-            <div className="wm-intl-sanfrancisco-include-image">
-              <img src="/onpage1.avif" alt="San Francisco Digital Marketing Agency" />
+            <div className="wm-intl-sanfrancisco-compare-table">
+              <div className="wm-intl-sanfrancisco-compare-row wm-intl-sanfrancisco-compare-hdr">
+                <div>Deliverable / Metric</div>
+                <div>Typical Local Agency</div>
+                <div>Webmok Advantage</div>
+              </div>
+              {pageData.comparisonPoints.map((cp, idx) => (
+                <div key={idx} className="wm-intl-sanfrancisco-compare-row">
+                  <div className="wm-intl-sanfrancisco-compare-feat">{cp.feature}</div>
+                  <div className="wm-intl-sanfrancisco-compare-local">{cp.local}</div>
+                  <div className="wm-intl-sanfrancisco-compare-wm">{cp.webmok}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. IMPORTANCE SECTION */}
-      <section className="wm-intl-sanfrancisco-importance-section">
+      {/* 6. RESULTS TELEMETRY */}
+      <section className="wm-intl-sanfrancisco-results-section" id="results">
         <div className="wm-intl-sanfrancisco-container">
-          <div className="wm-intl-sanfrancisco-importance-box">
-            <h2 className="wm-intl-sanfrancisco-importance-title">
-              Why San Francisco Companies Demand 
-              <span>Scientific Marketing</span>
+          <div className="wm-intl-sanfrancisco-sec-heading-center">
+            <span className="wm-intl-sanfrancisco-sec-badge">{pageData.resultsSubtitle}</span>
+            <h2 className="wm-intl-sanfrancisco-sec-h2">{pageData.resultsTitle}</h2>
+            <div className="wm-intl-sanfrancisco-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-sanfrancisco-results-grid">
+            {pageData.resultsStats.map((rs, i) => (
+              <div key={i} className="wm-intl-sanfrancisco-result-card">
+                <strong>{rs.metric}</strong>
+                <p>{rs.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. MARKET DYNAMICS */}
+      <section className="wm-intl-sanfrancisco-market-section" id="market-dynamics">
+        <div className="wm-intl-sanfrancisco-container">
+          <div className="wm-intl-sanfrancisco-sec-heading-center">
+            <span className="wm-intl-sanfrancisco-sec-badge">{pageData.marketInsightsSubtitle}</span>
+            <h2 className="wm-intl-sanfrancisco-sec-h2">{pageData.marketInsightsTitle}</h2>
+            <div className="wm-intl-sanfrancisco-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-sanfrancisco-market-grid">
+            {pageData.marketInsights.map((mi, i) => (
+              <div key={i} className="wm-intl-sanfrancisco-market-card">
+                <h4>{mi.title}</h4>
+                <p>{mi.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 4-STEP PROCESS */}
+      <section className="wm-intl-sanfrancisco-process-section" id="process">
+        <div className="wm-intl-sanfrancisco-container">
+          <div className="wm-intl-sanfrancisco-sec-heading-center">
+            <span className="wm-intl-sanfrancisco-sec-badge">OUR PROCESS & APPROACH</span>
+            <h2 className="wm-intl-sanfrancisco-sec-h2">
+              Our 4-Step <span>Agile Growth Framework</span>
             </h2>
-
-            <div className="wm-intl-sanfrancisco-importance-content">
-              <p>In the tech capital of the world, buyer attention is fiercely contested. Generic marketing agencies that don’t understand B2B sales cycles burn cash with zero pipeline to show.</p>
-              <p>Success requires technical search superiority, high-intent targeting, and clear multi-touch attribution that connects clicks directly to closed ARR.</p>
-            </div>
+            <div className="wm-intl-sanfrancisco-sec-bar-center"></div>
           </div>
-        </div>
-      </section>
 
-      {/* 7. WHY WEBMOK SECTION */}
-      <section className="wm-intl-sanfrancisco-why-section">
-        <div className="wm-intl-sanfrancisco-container">
-          <div className="wm-intl-sanfrancisco-why-grid">
-            <div className="wm-intl-sanfrancisco-why-content">
-              <span className="wm-intl-sanfrancisco-why-tag">THE WEBMOK ADVANTAGE</span>
-              <h2 className="wm-intl-sanfrancisco-why-title">
-                Data-Driven. 
-                <span className="s1"> Pipeline Focused.</span>{' '}
-                <span className="s2">Rapid Velocity.</span>
-              </h2>
-
-              <div className="wm-intl-sanfrancisco-why-text">
-                <p>We approach marketing like software engineering—running disciplined sprints, testing hypotheses, and scaling channels with proven unit economics.</p>
-                <p>With transparent bi-weekly telemetry and zero long-term lock-in, we keep our focus 100% on driving your revenue.</p>
+          <div className="wm-intl-sanfrancisco-process-grid">
+            {pageData.processSteps.map((ps, i) => (
+              <div key={i} className="wm-intl-sanfrancisco-process-card">
+                <span className="wm-intl-sanfrancisco-proc-num">STEP {ps.num}</span>
+                <h4>{ps.title}</h4>
+                <p>{ps.desc}</p>
               </div>
-            </div>
-
-            <div className="wm-intl-sanfrancisco-why-image">
-              <img src="/onpage2.avif" alt="Why Webmok" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. PRICING PLANS SECTION */}
+      {/* 9. INDUSTRIES */}
+      <section className="wm-intl-sanfrancisco-industries-section" id="industries">
+        <div className="wm-intl-sanfrancisco-container">
+          <div className="wm-intl-sanfrancisco-sec-heading-center">
+            <span className="wm-intl-sanfrancisco-sec-badge">WHO WE WORK WITH</span>
+            <h2 className="wm-intl-sanfrancisco-sec-h2">
+              Specialized Industry <span>Growth Solutions</span>
+            </h2>
+            <div className="wm-intl-sanfrancisco-sec-bar-center"></div>
+          </div>
+
+          <div className="wm-intl-sanfrancisco-industries-grid">
+            {pageData.industries.map((ind, i) => (
+              <div key={i} className="wm-intl-sanfrancisco-industry-card">
+                <div className="wm-intl-sanfrancisco-ind-icon">
+                  {ind.icon === 'FaBuilding' && <FaBuilding />}
+                  {ind.icon === 'FaUserMd' && <FaUserMd />}
+                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                  {ind.icon === 'FaUtensils' && <FaUtensils />}
+                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                  {ind.icon === 'FaCompass' && <FaCompass />}
+                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                </div>
+                <h4>{ind.name}</h4>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. PRICING PLANS */}
       <section className="wm-intl-sanfrancisco-pricing-section" id="pricing-plans">
         <div className="wm-intl-sanfrancisco-container">
-          <div className="wm-intl-sanfrancisco-sec-header">
-            <span className="wm-intl-sanfrancisco-sec-subtitle">Transparent Monthly Plans</span>
-            <h2 className="wm-intl-sanfrancisco-sec-title">Flexible San Francisco Growth Packages with Zero Lock-In</h2>
-            <div className="wm-intl-sanfrancisco-sec-bar"></div>
+          <div className="wm-intl-sanfrancisco-sec-heading-center">
+            <span className="wm-intl-sanfrancisco-sec-badge">PUBLISHED RATES · ZERO LOCK-IN</span>
+            <h2 className="wm-intl-sanfrancisco-sec-h2">
+              Transparent {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-sanfrancisco-sec-bar-center"></div>
 
             {/* Currency Switcher */}
             <div className="wm-intl-sanfrancisco-currency-toggle">
-              
-              <button
-                type="button"
-                className={`wm-intl-sanfrancisco-curr-btn ${currency === 'USD' ? 'active' : ''}`}
-                onClick={() => setCurrency('USD')}
-              >
-                $ USD
-              </button>
-              <button
-                type="button"
-                className={`wm-intl-sanfrancisco-curr-btn ${currency === 'INR' ? 'active' : ''}`}
-                onClick={() => setCurrency('INR')}
-              >
-                ₹ INR
-              </button>
+              {[{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  className={`wm-intl-sanfrancisco-curr-btn ${currency === c.code ? 'active' : ''}`}
+                  onClick={() => setCurrency(c.code)}
+                >
+                  {c.symbol} {c.code}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Pricing Grid */}
           <div className="wm-intl-sanfrancisco-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : `$${plan.usdPrice}`;
+              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
               return (
                 <div key={i} className={`wm-intl-sanfrancisco-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (
@@ -435,93 +649,80 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 9. BENEFITS SECTION */}
-      <section className="wm-intl-sanfrancisco-benefits-section">
+      {/* 11. TESTIMONIALS */}
+      <section className="wm-intl-sanfrancisco-testimonials-section" id="testimonials">
         <div className="wm-intl-sanfrancisco-container">
-          <div className="wm-intl-sanfrancisco-benefits-grid">
-            <div className="wm-intl-sanfrancisco-benefits-content">
-              <span className="wm-intl-sanfrancisco-benefits-tag">PROVEN VALUE</span>
-              <h2 className="wm-intl-sanfrancisco-benefits-title">
-                Accelerating ARR and Pipeline for 
-                <span>Bay Area Innovators</span>
-              </h2>
+          <div className="wm-intl-sanfrancisco-sec-heading-center">
+            <span className="wm-intl-sanfrancisco-sec-badge">CLIENT SUCCESS STORIES</span>
+            <h2 className="wm-intl-sanfrancisco-sec-h2">
+              What {pageData.city} <span>Leaders Say About Webmok</span>
+            </h2>
+            <div className="wm-intl-sanfrancisco-sec-bar-center"></div>
+          </div>
 
-              <div className="wm-intl-sanfrancisco-benefits-text">
-                <p>Our San Francisco marketing campaigns create predictable, compounding pipeline that reduces dependency on outbound sales.</p>
-                <p>We turn high-intent organic and paid searchers into qualified demo requests and enterprise customers.</p>
-              </div>
-
-              <div className="wm-intl-sanfrancisco-benefits-points">
-                <div key="Page #1 Dominance for High-Value Commercial & B2B Search Terms" className="wm-intl-sanfrancisco-benefit-point">
-                  <span className="wm-intl-sanfrancisco-benefit-icon">✓</span>
-                  <span>{"Page #1 Dominance for High-Value Commercial & B2B Search Terms"}</span>
+          <div className="wm-intl-sanfrancisco-testimonials-grid">
+            {pageData.testimonials.map((t, idx) => (
+              <div key={idx} className="wm-intl-sanfrancisco-testimonial-card">
+                <div className="wm-intl-sanfrancisco-t-stars">
+                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 </div>
-                <div key="Consistent 35%+ Reduction in Blended Cost Per Acquisition (CPA)" className="wm-intl-sanfrancisco-benefit-point">
-                  <span className="wm-intl-sanfrancisco-benefit-icon">✓</span>
-                  <span>{"Consistent 35%+ Reduction in Blended Cost Per Acquisition (CPA)"}</span>
-                </div>
-                <div key="High-Authority Domain Equity Recognized Across Tech Industry" className="wm-intl-sanfrancisco-benefit-point">
-                  <span className="wm-intl-sanfrancisco-benefit-icon">✓</span>
-                  <span>{"High-Authority Domain Equity Recognized Across Tech Industry"}</span>
-                </div>
-                <div key="Full Pipeline Attribution Directly Connected to Your CRM" className="wm-intl-sanfrancisco-benefit-point">
-                  <span className="wm-intl-sanfrancisco-benefit-icon">✓</span>
-                  <span>{"Full Pipeline Attribution Directly Connected to Your CRM"}</span>
+                <p className="wm-intl-sanfrancisco-t-quote">"{t.quote}"</p>
+                <div className="wm-intl-sanfrancisco-t-author">
+                  <h5>{t.author}</h5>
+                  <p>{t.role} · {t.company}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="wm-intl-sanfrancisco-benefits-image">
-              <img src="/onpagebenifts.jpg" alt="San Francisco Digital Marketing Agency" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. ADVANTAGE SECTION */}
+      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
       <section className="wm-intl-sanfrancisco-advantage-section">
         <div className="wm-intl-sanfrancisco-container">
-          <div className="wm-intl-sanfrancisco-sec-header">
-            <span className="wm-intl-sanfrancisco-sec-subtitle">Why Partner With Us</span>
-            <h2 className="wm-intl-sanfrancisco-sec-title">The WebMok Advantage in Global Digital Execution</h2>
-            <div className="wm-intl-sanfrancisco-sec-bar"></div>
+          <div className="wm-intl-sanfrancisco-sec-heading-center">
+            <span className="wm-intl-sanfrancisco-sec-badge">WHY CHOOSE WEBMOK</span>
+            <h2 className="wm-intl-sanfrancisco-sec-h2">The Webmok Operational Guarantees</h2>
+            <div className="wm-intl-sanfrancisco-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-sanfrancisco-advantage-grid">
             <div className="wm-intl-sanfrancisco-advantage-card">
               <div className="wm-intl-sanfrancisco-aicon"><FaShieldAlt /></div>
-              <h4>100% Proven Method</h4>
-              <p>Strict white-hat execution that protects your brand equity and produces compounding organic growth.</p>
+              <h4>100% White-Hat Proven Methods</h4>
+              <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
             </div>
 
             <div className="wm-intl-sanfrancisco-advantage-card">
               <div className="wm-intl-sanfrancisco-aicon"><FaRocket /></div>
-              <h4>Full Telemetry Dashboards</h4>
+              <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
             </div>
 
             <div className="wm-intl-sanfrancisco-advantage-card">
               <div className="wm-intl-sanfrancisco-aicon"><FaHeadset /></div>
               <h4>Dedicated Senior Squad</h4>
-              <p>Work directly with dedicated senior strategists and technical engineers with direct phone & WhatsApp support.</p>
+              <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
             </div>
 
             <div className="wm-intl-sanfrancisco-advantage-card">
               <div className="wm-intl-sanfrancisco-aicon"><FaClock /></div>
               <h4>Zero Mandatory Lock-In</h4>
-              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable growth.</p>
+              <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. FAQS ACCORDION */}
-      <section className="wm-intl-sanfrancisco-faqs-section">
+      {/* 13. REGIONAL FAQS */}
+      <section className="wm-intl-sanfrancisco-faqs-section" id="faqs">
         <div className="wm-intl-sanfrancisco-container">
-          <div className="wm-intl-sanfrancisco-sec-header">
-            <span className="wm-intl-sanfrancisco-sec-subtitle">Frequently Asked Questions</span>
-            <h2 className="wm-intl-sanfrancisco-sec-title">Common Queries About Our San Francisco Growth Packages</h2>
-            <div className="wm-intl-sanfrancisco-sec-bar"></div>
+          <div className="wm-intl-sanfrancisco-sec-heading-center">
+            <span className="wm-intl-sanfrancisco-sec-badge">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 className="wm-intl-sanfrancisco-sec-h2">
+              Common Queries About Our {pageData.city} <span>Growth Packages</span>
+            </h2>
+            <div className="wm-intl-sanfrancisco-sec-bar-center"></div>
           </div>
 
           <div className="wm-intl-sanfrancisco-faqs-wrap">
@@ -546,12 +747,12 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. BOTTOM CONVERSION BANNER */}
+      {/* 14. BOTTOM CONVERSION BANNER */}
       <section className="wm-intl-sanfrancisco-bottom-banner">
         <div className="wm-intl-sanfrancisco-container">
           <div className="wm-intl-sanfrancisco-banner-inner">
             <div className="wm-intl-sanfrancisco-banner-text">
-              <h2>Ready to Accelerate Growth in San Francisco?</h2>
+              <h2>Ready to Accelerate Revenue in {pageData.city}?</h2>
               <p>Schedule a quick 1-on-1 strategy consultation with our senior digital directors today.</p>
             </div>
             <div className="wm-intl-sanfrancisco-banner-btns">
@@ -567,7 +768,7 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 className="wm-intl-sanfrancisco-bbtn-quote"
                 onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Bottom Banner Inquiry`)}
               >
-                Get Custom Quote <FaArrowRight />
+                Get Free Custom Proposal <FaArrowRight />
               </button>
             </div>
           </div>
