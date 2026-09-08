@@ -38,6 +38,24 @@ import SmoPackagesPage from './pages/packages/SmoPackagesPage';
 import WebsiteMaintenancePackagesPage from './pages/packages/WebsiteMaintenancePackagesPage';
 import WebsitePackagesPage from './pages/packages/WebsitePackagesPage';
 import PackageDetailPage from './pages/packages/PackageDetailPage';
+
+// Dedicated 15 International Geo-Targeted Pages (Each with independent component & CSS)
+import MiamiDigitalMarketingPage from './pages/international/MiamiDigitalMarketingPage';
+import FloridaDigitalMarketingPage from './pages/international/FloridaDigitalMarketingPage';
+import SeoServicesNewYorkPage from './pages/international/SeoServicesNewYorkPage';
+import LosAngelesDigitalMarketingPage from './pages/international/LosAngelesDigitalMarketingPage';
+import SanFranciscoDigitalMarketingPage from './pages/international/SanFranciscoDigitalMarketingPage';
+import CanadaDigitalMarketingPage from './pages/international/CanadaDigitalMarketingPage';
+import TorontoDigitalMarketingPage from './pages/international/TorontoDigitalMarketingPage';
+import OttawaDigitalMarketingPage from './pages/international/OttawaDigitalMarketingPage';
+import EuropeDigitalMarketingPage from './pages/international/EuropeDigitalMarketingPage';
+import UkDigitalMarketingPage from './pages/international/UkDigitalMarketingPage';
+import LondonDigitalMarketingPage from './pages/international/LondonDigitalMarketingPage';
+import DubaiDigitalMarketingPage from './pages/international/DubaiDigitalMarketingPage';
+import SouthAfricaDigitalMarketingPage from './pages/international/SouthAfricaDigitalMarketingPage';
+import AustraliaDigitalMarketingPage from './pages/international/AustraliaDigitalMarketingPage';
+import MelbourneDigitalMarketingPage from './pages/international/MelbourneDigitalMarketingPage';
+
 import Portfolio from './pages/Portfolio';
 import PortfolioDetail from './pages/PortfolioDetail';
 import Blogs from './pages/Blogs';
@@ -86,6 +104,24 @@ import './pages/packages/LogoDesignPackagesPage.css';
 import './pages/packages/SmoPackagesPage.css';
 import './pages/packages/WebsiteMaintenancePackagesPage.css';
 import './pages/packages/WebsitePackagesPage.css';
+
+// Eager International Stylesheets
+import './pages/international/MiamiDigitalMarketingPage.css';
+import './pages/international/FloridaDigitalMarketingPage.css';
+import './pages/international/SeoServicesNewYorkPage.css';
+import './pages/international/LosAngelesDigitalMarketingPage.css';
+import './pages/international/SanFranciscoDigitalMarketingPage.css';
+import './pages/international/CanadaDigitalMarketingPage.css';
+import './pages/international/TorontoDigitalMarketingPage.css';
+import './pages/international/OttawaDigitalMarketingPage.css';
+import './pages/international/EuropeDigitalMarketingPage.css';
+import './pages/international/UkDigitalMarketingPage.css';
+import './pages/international/LondonDigitalMarketingPage.css';
+import './pages/international/DubaiDigitalMarketingPage.css';
+import './pages/international/SouthAfricaDigitalMarketingPage.css';
+import './pages/international/AustraliaDigitalMarketingPage.css';
+import './pages/international/MelbourneDigitalMarketingPage.css';
+
 
 
 
@@ -373,6 +409,144 @@ function App() {
             />
           }
         />
+
+        {/* 15 Dedicated International Geo-Targeted Routes */}
+        <Route
+          path="/international/miami-digital-marketing"
+          element={
+            <MiamiDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/florida-digital-marketing"
+          element={
+            <FloridaDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/seo-services-new-york"
+          element={
+            <SeoServicesNewYorkPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/los-angeles-digital-marketing"
+          element={
+            <LosAngelesDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/san-francisco-digital-marketing"
+          element={
+            <SanFranciscoDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/canada-digital-marketing"
+          element={
+            <CanadaDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/toronto-digital-marketing"
+          element={
+            <TorontoDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/ottawa-digital-marketing"
+          element={
+            <OttawaDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/europe-digital-marketing"
+          element={
+            <EuropeDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/uk-digital-marketing"
+          element={
+            <UkDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/london-digital-marketing"
+          element={
+            <LondonDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/dubai-digital-marketing"
+          element={
+            <DubaiDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/south-africa-digital-marketing"
+          element={
+            <SouthAfricaDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/australia-digital-marketing"
+          element={
+            <AustraliaDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/international/melbourne-digital-marketing"
+          element={
+            <MelbourneDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+
         <Route
           path="/portfolio"
           element={

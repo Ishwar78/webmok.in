@@ -28,10 +28,12 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [packagesDropdownOpen, setPackagesDropdownOpen] = useState(false);
   const [clientsDropdownOpen, setClientsDropdownOpen] = useState(false);
+  const [internationalDropdownOpen, setInternationalDropdownOpen] = useState(false);
   const [activePkgHover, setActivePkgHover] = useState('seo');
   const [mobileServicesAccordion, setMobileServicesAccordion] = useState(false);
   const [mobilePackagesAccordion, setMobilePackagesAccordion] = useState(false);
   const [mobileClientsAccordion, setMobileClientsAccordion] = useState(false);
+  const [mobileInternationalAccordion, setMobileInternationalAccordion] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -53,6 +55,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
     setServicesDropdownOpen(false);
     setPackagesDropdownOpen(false);
     setClientsDropdownOpen(false);
+    setInternationalDropdownOpen(false);
   }, [location]);
 
   return (
@@ -70,11 +73,11 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
         {/* Desktop Navigation */}
         <nav className="wm-desktop-nav">
           <ul className="wm-nav-list">
-            <li>
+            {/* <li>
               <NavLink to="/" className={({ isActive }) => (isActive ? 'wm-nav-link active' : 'wm-nav-link')}>
                 Home
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/about-us" className={({ isActive }) => (isActive ? 'wm-nav-link active' : 'wm-nav-link')}>
                 About Us
@@ -447,6 +450,86 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
               </div>
             </li>
 
+            {/* INTERNATIONAL MEGA MENU DROPDOWN (MATCHING USER REFERENCE SCREENSHOT) */}
+            <li
+              className="wm-mega-parent wm-intl-nav-parent"
+              onMouseEnter={() => setInternationalDropdownOpen(true)}
+              onMouseLeave={() => setInternationalDropdownOpen(false)}
+            >
+              <span
+                className={`wm-nav-link wm-has-dropdown ${location.pathname.startsWith('/international') ? 'active' : ''}`}
+                style={{ cursor: 'pointer' }}
+              >
+                International <FaChevronDown className="wm-dropdown-arrow" />
+              </span>
+
+              <div className={`wm-intl-mega-menu ${internationalDropdownOpen ? 'wm-intl-mega-visible' : ''}`}>
+                <div className="wm-intl-mega-inner">
+                  <div className="wm-intl-cols-grid">
+                    {/* Column 1: UNITED STATES */}
+                    <div className="wm-intl-col">
+                      <div className="wm-intl-col-hdr">
+                        <h4>UNITED STATES</h4>
+                        <div className="wm-intl-hdr-bar"></div>
+                      </div>
+                      <ul className="wm-intl-links">
+                        <li><Link to="/international/miami-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Miami Digital Marketing</Link></li>
+                        <li><Link to="/international/florida-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Florida Digital Marketing</Link></li>
+                        <li><Link to="/international/seo-services-new-york" onClick={() => setInternationalDropdownOpen(false)}>SEO Services in New York</Link></li>
+                        <li><Link to="/international/los-angeles-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Los Angeles Digital Marketing</Link></li>
+                        <li><Link to="/international/san-francisco-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>San Francisco Digital Marketing</Link></li>
+                      </ul>
+                    </div>
+
+                    {/* Column 2: CANADA */}
+                    <div className="wm-intl-col">
+                      <div className="wm-intl-col-hdr">
+                        <h4>CANADA</h4>
+                        <div className="wm-intl-hdr-bar"></div>
+                      </div>
+                      <ul className="wm-intl-links">
+                        <li><Link to="/international/canada-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Canada Digital Marketing</Link></li>
+                        <li><Link to="/international/toronto-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Toronto Digital Marketing</Link></li>
+                        <li><Link to="/international/ottawa-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Ottawa Digital Marketing</Link></li>
+                      </ul>
+                    </div>
+
+                    {/* Column 3: EUROPE & UK */}
+                    <div className="wm-intl-col">
+                      <div className="wm-intl-col-hdr">
+                        <h4>EUROPE & UK</h4>
+                        <div className="wm-intl-hdr-bar"></div>
+                      </div>
+                      <ul className="wm-intl-links">
+                        <li><Link to="/international/europe-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Europe Digital Marketing</Link></li>
+                        <li><Link to="/international/uk-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>UK Digital Marketing</Link></li>
+                        <li><Link to="/international/london-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>London Digital Marketing</Link></li>
+                      </ul>
+                    </div>
+
+                    {/* Column 4: MIDDLE EAST, AFRICA & APAC */}
+                    <div className="wm-intl-col">
+                      <div className="wm-intl-col-hdr">
+                        <h4>MIDDLE EAST, AFRICA & APAC</h4>
+                        <div className="wm-intl-hdr-bar"></div>
+                      </div>
+                      <ul className="wm-intl-links">
+                        <li><Link to="/international/dubai-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Dubai Digital Marketing</Link></li>
+                        <li><Link to="/international/south-africa-digital-marketing" className="wm-intl-highlight" onClick={() => setInternationalDropdownOpen(false)}>South Africa Digital Marketing</Link></li>
+                        <li><Link to="/international/australia-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Australia Digital Marketing</Link></li>
+                        <li><Link to="/international/melbourne-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Melbourne Digital Marketing</Link></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Bottom Bar matching screenshot */}
+                  <div className="wm-intl-bottom-bar">
+                    <p>Don't see your market? <strong>We work with brands worldwide.</strong></p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
             <li>
               <NavLink to="/portfolio" className={({ isActive }) => (isActive ? 'wm-nav-link active' : 'wm-nav-link')}>
                 Portfolio
@@ -575,6 +658,60 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                   <li><Link to="/video-showcase" onClick={() => setMobileMenuOpen(false)}>Video Showcase</Link></li>
                   <li><Link to="/testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</Link></li>
                 </ul>
+              )}
+            </li>
+
+            {/* International Mobile Drawer Accordion */}
+            <li className="wm-mobile-dropdown-item">
+              <div
+                className="wm-mobile-dropdown-header"
+                onClick={() => setMobileInternationalAccordion(!mobileInternationalAccordion)}
+              >
+                <span>International</span>
+                <FaChevronDown className={`wm-marrow ${mobileInternationalAccordion ? 'wm-marrow-up' : ''}`} />
+              </div>
+
+              {mobileInternationalAccordion && (
+                <div className="wm-mobile-intl-wrap">
+                  <div className="wm-mobile-intl-group">
+                    <strong className="wm-m-intl-hdr">UNITED STATES</strong>
+                    <ul className="wm-mobile-sublist">
+                      <li><Link to="/international/miami-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Miami Digital Marketing</Link></li>
+                      <li><Link to="/international/florida-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Florida Digital Marketing</Link></li>
+                      <li><Link to="/international/seo-services-new-york" onClick={() => setMobileMenuOpen(false)}>SEO Services in New York</Link></li>
+                      <li><Link to="/international/los-angeles-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Los Angeles Digital Marketing</Link></li>
+                      <li><Link to="/international/san-francisco-digital-marketing" onClick={() => setMobileMenuOpen(false)}>San Francisco Digital Marketing</Link></li>
+                    </ul>
+                  </div>
+
+                  <div className="wm-mobile-intl-group">
+                    <strong className="wm-m-intl-hdr">CANADA</strong>
+                    <ul className="wm-mobile-sublist">
+                      <li><Link to="/international/canada-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Canada Digital Marketing</Link></li>
+                      <li><Link to="/international/toronto-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Toronto Digital Marketing</Link></li>
+                      <li><Link to="/international/ottawa-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Ottawa Digital Marketing</Link></li>
+                    </ul>
+                  </div>
+
+                  <div className="wm-mobile-intl-group">
+                    <strong className="wm-m-intl-hdr">EUROPE & UK</strong>
+                    <ul className="wm-mobile-sublist">
+                      <li><Link to="/international/europe-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Europe Digital Marketing</Link></li>
+                      <li><Link to="/international/uk-digital-marketing" onClick={() => setMobileMenuOpen(false)}>UK Digital Marketing</Link></li>
+                      <li><Link to="/international/london-digital-marketing" onClick={() => setMobileMenuOpen(false)}>London Digital Marketing</Link></li>
+                    </ul>
+                  </div>
+
+                  <div className="wm-mobile-intl-group">
+                    <strong className="wm-m-intl-hdr">MIDDLE EAST, AFRICA & APAC</strong>
+                    <ul className="wm-mobile-sublist">
+                      <li><Link to="/international/dubai-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Dubai Digital Marketing</Link></li>
+                      <li><Link to="/international/south-africa-digital-marketing" onClick={() => setMobileMenuOpen(false)}>South Africa Digital Marketing</Link></li>
+                      <li><Link to="/international/australia-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Australia Digital Marketing</Link></li>
+                      <li><Link to="/international/melbourne-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Melbourne Digital Marketing</Link></li>
+                    </ul>
+                  </div>
+                </div>
               )}
             </li>
             <li>
