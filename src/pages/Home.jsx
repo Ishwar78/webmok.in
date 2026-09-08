@@ -841,7 +841,12 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                   <button
                     key={service.id}
                     className={`wm-hsvc-tab${activeHomeService === idx ? ' wm-hsvc-tab--active' : ''}`}
-                    onClick={() => setActiveHomeService(idx)}
+                    onClick={(e) => {
+                      setActiveHomeService(idx);
+                      if (e?.currentTarget) {
+                        e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                      }
+                    }}
                   >
                     <span className="wm-hsvc-tab-num">{String(idx + 1).padStart(2, '0')}</span>
                     <span className="wm-hsvc-tab-icon">{service.icon}</span>

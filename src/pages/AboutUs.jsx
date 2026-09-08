@@ -290,33 +290,26 @@ const AboutUs = ({ onOpenCallMe, onOpenEnquiry }) => {
   return (
     <div className="wm-about-root">
       {/* 1. HERO BANNER */}
-      <section className="wm-about-hero">
-        <div className="wm-about-ambient-glow"></div>
-        <div className="wm-about-container">
-          <span className="wm-about-tag">Know About Webmok Private Limited</span>
-          <h1 className="wm-about-hero-title">
-            Empowering Global Businesses with <span className="wm-gradient-cyan">Next-Gen Digital Solutions</span>
-          </h1>
-          <p className="wm-about-hero-desc">
-            Webmok Pvt Ltd is a premier global IT services and digital marketing company established on <strong>16 June 2016</strong>. With our headquarters in <strong>Delhi</strong> and branch offices in <strong>Rohtak</strong>, we rank among India's top companies transforming businesses across India and around the world.
-          </p>
+     <section className="wm-about-hero">
+  <div className="wm-about-overlay"></div>
 
-          <div className="wm-about-hero-badges">
-            <div className="wm-ab-badge">
-              <FaCalendarAlt className="wm-ab-icon" />
-              <span>Established 16 June 2016</span>
-            </div>
-            <div className="wm-ab-badge">
-              <FaGlobeAmericas className="wm-ab-icon" />
-              <span>Global Footprint: India & Abroad</span>
-            </div>
-            <div className="wm-ab-badge">
-              <FaShieldAlt className="wm-ab-icon" />
-              <span>100% Earned Result Guarantee</span>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="wm-about-container">
+    <div className="wm-about-hero-content">
+      <span className="wm-about-tag">
+        KNOW ABOUT WEBMOK
+      </span>
+
+      <h1 className="wm-about-hero-title">
+        About <span>Webmok</span>
+      </h1>
+
+      <p className="wm-about-hero-desc">
+        Empowering businesses with innovative digital solutions,
+        technology, creativity and global expertise.
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* 1.5 BENTO STATS SECTION */}
       <section className="wm-about-bento-section">

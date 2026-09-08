@@ -12,9 +12,9 @@
 }
 
 .wm-pkg-container {
-  max-width: 1320px;
+  max-width: 1540px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 /* ==========================================================================
@@ -60,7 +60,7 @@
 
 .wm-pkg-hero-title-dual .wm-hero-italic-orange {
   font-style: italic;
-  color: #f25822; /* High-impact vibrant orange matching screenshot */
+  color: #020616;; /* High-impact vibrant orange matching screenshot */
   display: block;
 }
 
@@ -72,16 +72,16 @@
 }
 
 .wm-pkg-hero-lead-desc {
-  font-size: 16.5px;
+  font-size: 17px;
   font-weight: 500;
-  color: #334155;
+  color: #0d0e11;
   line-height: 1.6;
   margin: 0 0 14px 0;
 }
 
 .wm-pkg-hero-body-desc {
-  font-size: 15px;
-  color: #64748b;
+  font-size: 17px;
+  color: #0e0f11;
   line-height: 1.65;
   margin: 0 0 28px 0;
 }
@@ -97,7 +97,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #f25822;
+  background: #0a3064;
   color: #ffffff;
   font-size: 15px;
   font-weight: 700;
@@ -111,7 +111,7 @@
 }
 
 .wm-pkg-btn-case-study:hover {
-  background: #d94310;
+  background: #0a3064;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(242, 88, 34, 0.45);
 }
@@ -771,15 +771,63 @@
 }
 
 @media (max-width: 640px) {
+  .wm-pkg-hero-btns-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .wm-pkg-btn-case-study,
+  .wm-pkg-btn-packages-outline {
+    flex: 1;
+    justify-content: center;
+    padding: 11px 8px;
+    font-size: 13px;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .wm-pkg-btn-case-study {
+    gap: 6px;
+  }
+
+  .wm-pkg-btn-packages-outline {
+    gap: 5px;
+  }
+
   .wm-pkg-hero-title-dual {
     font-size: 28px;
   }
 
   .wm-pkg-cards-grid.wm-grid-4,
   .wm-pkg-cards-grid.wm-grid-3,
-  .wm-pkg-why-grid,
-  .wm-pkg-stats-grid {
+  .wm-pkg-why-grid {
     grid-template-columns: 1fr;
+  }
+
+  .wm-pkg-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 10px;
+  }
+
+  .wm-pkg-stat-card {
+    padding: 12px 8px;
+    border-right: none;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .wm-pkg-stat-card strong {
+    font-size: 24px;
+  }
+
+  .wm-pkg-stat-card span {
+    font-size: 11px;
+    line-height: 1.3;
   }
 
   .wm-pkg-banner-btns {
@@ -2679,7 +2727,7 @@
 ========================================= */
 
 .opseo-numbers-heading {
-  max-width: 1100px;
+  max-width: 1540px;
 
   margin:
     0 auto
@@ -3098,11 +3146,8 @@
 
 
   .opseo-stats-grid {
-    grid-template-columns:
-      1fr;
-
-    gap: 5px;
-
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 12px;
     margin-bottom: 35px;
   }
 
@@ -3115,12 +3160,12 @@
 
 
   .opseo-stat-number {
-    font-size: 42px;
+    font-size: 32px;
   }
 
-
   .opseo-stat-item p {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.35;
   }
 
 
@@ -3134,4 +3179,1842 @@
       20px;
   }
 
+}
+
+
+
+.ppc-packages-section {
+  position: relative;
+  padding: 100px 0;
+  background: #f7f8fb;
+  overflow: hidden;
+}
+
+.ppc-packages-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -250px;
+  right: -150px;
+  border-radius: 50%;
+  background: rgba(20, 70, 120, 0.06);
+  filter: blur(30px);
+}
+
+.ppc-container {
+  width: 90%;
+  max-width: 1500px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 70px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* LEFT SIDE */
+
+.ppc-subtitle {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #176f9d;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.ppc-title {
+  margin: 0 0 25px;
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 4vw, 68px);
+  line-height: 1.08;
+  font-weight: 400;
+  color: #172536;
+}
+
+.ppc-title span {
+  font-style: italic;
+  background: linear-gradient(
+    90deg,
+    #092a4a,
+    #176f9d,
+    #0b3459
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ppc-description {
+  margin-bottom: 16px;
+  color: #596774;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.ppc-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  margin: 28px 0 32px;
+}
+
+.ppc-points div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #24384a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ppc-check {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  background: linear-gradient(
+    135deg,
+    #0b2c4c,
+    #1685a8
+  );
+}
+
+
+/* BUTTON */
+
+.ppc-btn {
+  border: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px 30px;
+  border-radius: 50px;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+
+  background: linear-gradient(
+    135deg,
+    #071f38,
+    #123f69,
+    #1685a8
+  );
+
+  box-shadow:
+    0 12px 30px rgba(9, 42, 74, 0.25);
+
+  transition: all 0.35s ease;
+}
+
+.ppc-btn span {
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.ppc-btn:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 18px 40px rgba(9, 42, 74, 0.35);
+}
+
+.ppc-btn:hover span {
+  transform: translateX(5px);
+}
+
+
+/* SERVICES GRID */
+
+.ppc-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ppc-service-card {
+  position: relative;
+  min-height: 230px;
+  padding: 28px 22px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  border: 1px solid rgba(18, 63, 105, 0.12);
+
+  box-shadow:
+    0 8px 30px rgba(20, 40, 60, 0.06);
+
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+
+  animation: ppcCardFloat 0.8s ease forwards;
+}
+
+
+/* CARD GLOW */
+
+.ppc-service-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  top: -70px;
+  right: -70px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(23, 111, 157, 0.18),
+      transparent 70%
+    );
+
+  transition: 0.4s;
+}
+
+
+/* BOTTOM LINE */
+
+.ppc-service-card::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #082542,
+    #1685a8
+  );
+
+  transition: width 0.4s ease;
+}
+
+
+.ppc-service-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(22, 133, 168, 0.35);
+
+  box-shadow:
+    0 22px 45px rgba(9, 42, 74, 0.15);
+}
+
+.ppc-service-card:hover::before {
+  transform: scale(1.6);
+}
+
+.ppc-service-card:hover::after {
+  width: 100%;
+}
+
+
+/* ICON */
+
+.ppc-icon {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  border-radius: 16px;
+
+  color: #fff;
+
+  font-size: 25px;
+
+  background: linear-gradient(
+    135deg,
+    #082542,
+    #176f9d
+  );
+
+  box-shadow:
+    0 10px 20px rgba(9, 42, 74, 0.2);
+
+  transition: all 0.4s ease;
+}
+
+.ppc-service-card:hover .ppc-icon {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+
+/* CARD TEXT */
+
+.ppc-service-card h3 {
+  margin: 0 0 12px;
+
+  color: #162638;
+
+  font-family: Georgia, serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+}
+
+.ppc-service-card p {
+  margin: 0;
+
+  color: #687581;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ARROW */
+
+.ppc-card-arrow {
+  position: absolute;
+
+  right: 20px;
+  bottom: 18px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #edf5f8;
+
+  color: #0b3a63;
+
+  opacity: 0;
+
+  transform: translateX(-10px);
+
+  transition: all 0.35s ease;
+}
+
+.ppc-service-card:hover .ppc-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* ANIMATION */
+
+@keyframes ppcCardFloat {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+  .ppc-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .ppc-packages-section {
+    padding: 70px 0;
+  }
+
+  .ppc-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ppc-title {
+    font-size: 42px;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .ppc-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ppc-title {
+    font-size: 35px;
+  }
+
+  .ppc-points {
+    flex-direction: column;
+  }
+
+}
+
+
+
+
+
+
+/* =========================================
+   PPC QUICK RESULTS SECTION
+========================================= */
+
+.ppc-results-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 7%;
+  background:
+    radial-gradient(
+      circle at 8% 20%,
+      rgba(30, 94, 170, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(0, 174, 239, 0.10),
+      transparent 25%
+    ),
+    linear-gradient(135deg, #f8f9fc 0%, #eef2f8 100%);
+}
+
+/* Background Glow */
+
+.ppc-results-glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.ppc-glow-one {
+  top: -250px;
+  left: -180px;
+  background: rgba(21, 76, 137, 0.10);
+}
+
+.ppc-glow-two {
+  bottom: -250px;
+  right: -150px;
+  background: rgba(0, 122, 193, 0.10);
+}
+
+
+/* Container */
+
+.ppc-results-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1500px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.ppc-results-left {
+  animation: ppcFadeLeft 0.8s ease forwards;
+}
+
+.ppc-results-tag {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #1d4f91;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  position: relative;
+  padding-left: 16px;
+}
+
+.ppc-results-tag::before {
+  content: "";
+
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  background: #174a88;
+
+  border-radius: 50%;
+
+  left: 0;
+  top: 6px;
+
+  box-shadow: 0 0 12px rgba(23, 74, 136, 0.8);
+}
+
+
+/* Heading */
+
+.ppc-results-title {
+  margin: 0 0 25px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(42px, 4vw, 72px);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  color: #121d2b;
+
+  letter-spacing: -1px;
+}
+
+.ppc-results-title span {
+  background: linear-gradient(
+    90deg,
+    #0b315f,
+    #145da0,
+    #1687c5
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Paragraph */
+
+.ppc-results-text {
+  max-width: 680px;
+
+  color: #4c5968;
+
+  font-size: 17px;
+
+  line-height: 1.85;
+
+  margin-bottom: 16px;
+}
+
+
+/* Stats */
+
+.ppc-results-stats {
+  display: flex;
+
+  gap: 20px;
+
+  margin-top: 35px;
+}
+
+.ppc-mini-stat {
+  min-width: 170px;
+
+  padding: 18px 20px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  border: 1px solid rgba(22, 73, 130, 0.12);
+
+  border-radius: 14px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 10px 30px rgba(22, 55, 90, 0.06);
+
+  transition: 0.3s ease;
+}
+
+.ppc-mini-stat:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 40px rgba(22, 55, 90, 0.12);
+}
+
+.ppc-mini-stat strong {
+  display: block;
+
+  font-size: 25px;
+
+  color: #123f75;
+
+  margin-bottom: 5px;
+}
+
+.ppc-mini-stat span {
+  font-size: 13px;
+
+  color: #657181;
+}
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.ppc-results-right {
+  position: relative;
+
+  animation: ppcFadeRight 0.8s ease forwards;
+}
+
+
+/* Main Card */
+
+.ppc-content-card {
+  position: relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      #102c52,
+      #163f70,
+      #0a2445
+    );
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 80px rgba(9, 40, 76, 0.25);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.10);
+}
+
+.ppc-content-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0, 170, 255, 0.12);
+
+  top: -160px;
+  right: -100px;
+
+  filter: blur(20px);
+}
+
+
+/* Card Header */
+
+.ppc-card-top {
+  position: relative;
+
+  z-index: 2;
+
+  height: 62px;
+
+  padding: 0 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ppc-card-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.4);
+}
+
+.ppc-card-label {
+  margin-left: auto;
+
+  color: #a9c9ec;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  font-weight: 600;
+}
+
+
+/* Card Body */
+
+.ppc-card-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 45px;
+}
+
+.ppc-icon-box {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1676c5,
+      #00a8e8
+    );
+
+  box-shadow:
+    0 10px 30px rgba(0, 150, 220, 0.25);
+
+  margin-bottom: 25px;
+}
+
+.ppc-icon-box span {
+  color: white;
+
+  font-size: 30px;
+
+  font-weight: 300;
+}
+
+
+/* Card Title */
+
+.ppc-card-content h3 {
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 34px;
+
+  font-weight: 400;
+}
+
+
+/* Card Text */
+
+.ppc-card-content p {
+  color: #b9c9db;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  margin-bottom: 15px;
+}
+
+
+/* Progress */
+
+.ppc-progress-area {
+  margin-top: 28px;
+
+  padding: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 14px;
+}
+
+.ppc-progress-head {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+  color: #dbeaff;
+
+  font-size: 14px;
+}
+
+.ppc-progress-head strong {
+  color: #38bdf8;
+}
+
+.ppc-progress-bar {
+  width: 100%;
+
+  height: 7px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.10);
+
+  overflow: hidden;
+}
+
+.ppc-progress-bar span {
+  display: block;
+
+  width: 92%;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #176fc0,
+      #00b4f0
+    );
+
+  animation: ppcProgress 2s ease infinite;
+}
+
+
+/* Button */
+
+.ppc-results-btn {
+  border: none;
+
+  margin-top: 30px;
+
+  padding: 16px 28px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #123f75,
+      #176fc0,
+      #0c9fd8
+    );
+
+  box-shadow:
+    0 12px 30px rgba(0, 130, 210, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.ppc-results-btn span {
+  font-size: 20px;
+
+  transition: 0.3s ease;
+}
+
+.ppc-results-btn:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 18px 40px rgba(0, 130, 210, 0.40);
+}
+
+.ppc-results-btn:hover span {
+  transform:
+    translate(4px, -4px);
+}
+
+
+/* =========================================
+   FLOATING CARDS
+========================================= */
+
+.ppc-floating-card {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 18px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  border:
+    1px solid rgba(20, 70, 120, 0.10);
+
+  box-shadow:
+    0 18px 45px rgba(10, 40, 70, 0.16);
+
+  backdrop-filter:
+    blur(12px);
+
+  animation:
+    ppcFloat 4s ease-in-out infinite;
+}
+
+.ppc-floating-card > span {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  color: white;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  background:
+    linear-gradient(
+      135deg,
+      #15508d,
+      #1696d2
+    );
+}
+
+.ppc-floating-card strong {
+  display: block;
+
+  color: #14273c;
+
+  font-size: 14px;
+}
+
+.ppc-floating-card small {
+  display: block;
+
+  color: #748292;
+
+  font-size: 11px;
+
+  margin-top: 3px;
+}
+
+
+/* First Floating */
+
+.ppc-float-one {
+  top: 70px;
+
+  right: -45px;
+}
+
+
+/* Second Floating */
+
+.ppc-float-two {
+  bottom: 70px;
+
+  left: -65px;
+
+  animation-delay: 1.5s;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes ppcFadeLeft {
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0);
+  }
+}
+
+
+@keyframes ppcFadeRight {
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0);
+  }
+}
+
+
+@keyframes ppcFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-12px);
+  }
+}
+
+
+@keyframes ppcProgress {
+  0% {
+    width: 75%;
+  }
+
+  50% {
+    width: 92%;
+  }
+
+  100% {
+    width: 75%;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .ppc-results-container {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .ppc-results-right {
+    max-width: 700px;
+
+    margin: auto;
+
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .ppc-results-section {
+    padding:
+      70px 20px;
+  }
+
+  .ppc-results-title {
+    font-size: 45px;
+  }
+
+  .ppc-results-text {
+    font-size: 15px;
+  }
+
+  .ppc-results-stats {
+    flex-wrap: wrap;
+  }
+
+  .ppc-mini-stat {
+    flex: 1;
+
+    min-width: 140px;
+  }
+
+  .ppc-card-content {
+    padding: 30px 22px;
+  }
+
+  .ppc-card-content h3 {
+    font-size: 27px;
+  }
+
+  .ppc-floating-card {
+    position: relative;
+
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+
+    margin-top: 15px;
+
+    width: fit-content;
+  }
+
+  .ppc-results-right {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .ppc-results-title {
+    font-size: 37px;
+  }
+
+  .ppc-results-tag {
+    font-size: 10px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .ppc-results-stats {
+    flex-direction: column;
+  }
+
+  .ppc-mini-stat {
+    width: 100%;
+  }
+
+  .ppc-results-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}
+
+
+
+/* ===================================
+   PPC INVEST SECTION
+=================================== */
+
+.ppc-invest-section {
+  position: relative;
+  width: 100%;
+  padding: 100px 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(30, 78, 121, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(12, 42, 72, 0.2),
+      transparent 30%
+    ),
+    #07111f;
+}
+
+
+/* Background Effects */
+
+.ppc-invest-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  top: -250px;
+  right: -150px;
+  background: rgba(25, 85, 135, 0.12);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+
+.ppc-invest-section::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  bottom: -150px;
+  left: -100px;
+  background: rgba(17, 64, 105, 0.16);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+
+/* Container */
+
+.ppc-invest-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1600px;
+  margin: auto;
+}
+
+
+/* ===================================
+   TOP AREA
+=================================== */
+
+.ppc-invest-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+
+/* Tag */
+
+.ppc-invest-tag {
+  display: inline-block;
+  margin-bottom: 22px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  color: #54b6ff;
+}
+
+
+/* Heading */
+
+.ppc-invest-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(48px, 5vw, 78px);
+  font-weight: 400;
+  line-height: 1.05;
+
+  color: #ffffff;
+}
+
+
+.ppc-invest-heading h2 span {
+  font-style: italic;
+
+  background: linear-gradient(
+    90deg,
+    #3f8fd8,
+    #68c6ff,
+    #285d96
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* Intro */
+
+.ppc-invest-intro {
+  position: relative;
+  padding-left: 30px;
+}
+
+
+.ppc-invest-intro::before {
+  content: "";
+  position: absolute;
+
+  top: 5px;
+  bottom: 5px;
+  left: 0;
+
+  width: 2px;
+
+  background: linear-gradient(
+    to bottom,
+    #4db7ff,
+    transparent
+  );
+}
+
+
+.ppc-invest-intro p {
+  margin: 0;
+
+  font-size: 19px;
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+
+.ppc-intro-small {
+  font-size: 15px !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+
+.ppc-intro-line {
+  width: 70px;
+  height: 2px;
+
+  margin: 22px 0;
+
+  background: linear-gradient(
+    90deg,
+    #3f9fe5,
+    transparent
+  );
+}
+
+
+/* ===================================
+   BENEFITS GRID
+=================================== */
+
+.ppc-benefits-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+
+/* Card */
+
+.ppc-benefit-card {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 42px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(19, 38, 58, 0.95),
+      rgba(8, 20, 34, 0.95)
+    );
+
+  border: 1px solid rgba(103, 178, 235, 0.15);
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+/* Top Gradient Border */
+
+.ppc-benefit-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 30px;
+  right: 30px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #4db7ff,
+    transparent
+  );
+
+  opacity: 0;
+
+  transition: 0.4s ease;
+}
+
+
+/* Hover */
+
+.ppc-benefit-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(77, 183, 255, 0.45);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(32, 120, 190, 0.12);
+}
+
+
+.ppc-benefit-card:hover::before {
+  opacity: 1;
+}
+
+
+/* Card Number */
+
+.ppc-card-number {
+  position: absolute;
+
+  top: 30px;
+  right: 35px;
+
+  font-size: 13px;
+  letter-spacing: 2px;
+
+  color: rgba(116, 198, 255, 0.6);
+}
+
+
+/* Icon */
+
+.ppc-card-icon {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(67, 150, 215, 0.18),
+      rgba(28, 68, 105, 0.12)
+    );
+
+  border: 1px solid rgba(89, 179, 240, 0.2);
+
+  color: #58b9ff;
+
+  font-size: 25px;
+
+  transition: 0.4s ease;
+}
+
+
+.ppc-benefit-card:hover .ppc-card-icon {
+  transform: rotate(-6deg) scale(1.1);
+
+  background:
+    linear-gradient(
+      135deg,
+      #1d5f97,
+      #2d9ee8
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(44, 142, 215, 0.3);
+}
+
+
+/* Card Heading */
+
+.ppc-benefit-card h3 {
+  margin: 0 0 18px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 36px;
+  font-weight: 400;
+
+  color: #ffffff;
+
+  transition: 0.3s ease;
+}
+
+
+.ppc-benefit-card:hover h3 {
+  color: #6ac7ff;
+}
+
+
+/* Card Text */
+
+.ppc-benefit-card p {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  max-width: 720px;
+
+  font-size: 16px;
+  line-height: 1.85;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* Glow */
+
+.ppc-card-glow {
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+
+  right: -100px;
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(45, 137, 205, 0.12);
+
+  filter: blur(50px);
+
+  transition: 0.5s ease;
+}
+
+
+.ppc-benefit-card:hover .ppc-card-glow {
+  transform: scale(1.6);
+
+  background: rgba(55, 155, 230, 0.18);
+}
+
+
+/* ===================================
+   CTA
+=================================== */
+
+.ppc-invest-cta {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  margin-top: 55px;
+}
+
+
+.ppc-invest-button {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-width: 290px;
+
+  padding: 18px 35px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #123f67,
+      #1d6ca5,
+      #0b2b4a
+    );
+
+  box-shadow:
+    0 12px 35px rgba(12, 77, 128, 0.35);
+
+  transition: 0.4s ease;
+
+  overflow: hidden;
+}
+
+
+/* Button Shine */
+
+.ppc-invest-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+
+  transition: 0.6s ease;
+}
+
+
+.ppc-invest-button:hover::before {
+  left: 120%;
+}
+
+
+.ppc-invest-button:hover {
+  transform: translateY(-5px) scale(1.03);
+
+  background:
+    linear-gradient(
+      135deg,
+      #1d6ca5,
+      #2c96dd,
+      #164d78
+    );
+
+  box-shadow:
+    0 18px 45px rgba(30, 130, 205, 0.45);
+}
+
+
+.ppc-invest-button span,
+.ppc-invest-button i {
+  position: relative;
+  z-index: 2;
+}
+
+
+.ppc-invest-button i {
+  transition: 0.3s ease;
+}
+
+
+.ppc-invest-button:hover i {
+  transform: translate(5px, -4px);
+}
+
+
+/* ===================================
+   ANIMATION
+=================================== */
+
+.ppc-benefit-card {
+  animation: ppcCardReveal 0.8s ease forwards;
+}
+
+
+.ppc-benefit-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+
+.ppc-benefit-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+
+.ppc-benefit-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+
+.ppc-benefit-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+
+@keyframes ppcCardReveal {
+
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 1100px) {
+
+  .ppc-invest-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .ppc-invest-section {
+    padding: 70px 15px;
+  }
+
+
+  .ppc-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .ppc-benefit-card {
+    min-height: auto;
+
+    padding: 32px 25px;
+  }
+
+
+  .ppc-benefit-card h3 {
+    font-size: 30px;
+  }
+
+
+  .ppc-invest-heading h2 {
+    font-size: 48px;
+  }
+
+
+  .ppc-invest-intro {
+    padding-left: 20px;
+  }
+
+
+  .ppc-invest-intro p {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .ppc-invest-heading h2 {
+    font-size: 40px;
+  }
+
+
+  .ppc-benefit-card h3 {
+    font-size: 27px;
+  }
+
+
+  .ppc-invest-button {
+    width: 100%;
+
+    min-width: auto;
+  }
+
+}
+@media (max-width: 380px) {
+  .wm-pkg-hero-btns-row {
+    gap: 6px;
+  }
+
+  .wm-pkg-btn-case-study,
+  .wm-pkg-btn-packages-outline {
+    padding: 10px 4px;
+    font-size: 11.5px;
+  }
 }

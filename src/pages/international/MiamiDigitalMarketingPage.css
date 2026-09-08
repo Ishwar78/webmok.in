@@ -103,9 +103,9 @@
 }
 
 .wm-intl-miami-hero-body-desc {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.65;
-  color: #64748b;
+  color: #090a0b;
   margin-bottom: 28px;
 }
 
@@ -316,7 +316,7 @@
    4. SERVICES SUITE (PREMIUM ANIMATED CARDS)
    ========================================================================== */
 .wm-intl-miami-services-section {
-  padding: 85px 0 90px;
+  padding: 35px 0 40px;
   background: #ffffff;
   position: relative;
 }
@@ -463,9 +463,9 @@
 }
 
 .wm-intl-miami-service-card p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
-  color: #64748b;
+  color: #090a0b;
   margin: 0 0 22px;
   flex-grow: 1;
 }
@@ -503,7 +503,7 @@
 
 /* 5. WHY HIRE OUTSIDE (SOFT GREY-BLUE) */
 .wm-intl-miami-whyoutside-section {
-  padding: 85px 0 90px;
+  padding: 35px 0 40px;
   background: #f8fafc;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
@@ -525,9 +525,9 @@
 }
 
 .wm-intl-miami-whyoutside-text p {
-  font-size: 14.5px;
+  font-size: 16px;
   line-height: 1.65;
-  color: #475569;
+  color: #090a0b;
   margin-bottom: 14px;
 }
 
@@ -578,7 +578,7 @@
 
 /* 6. RESULTS TELEMETRY (CLEAN WHITE) */
 .wm-intl-miami-results-section {
-  padding: 85px 0 90px;
+  padding: 35px 0 40px;
   background: #ffffff;
 }
 
@@ -646,7 +646,7 @@
    7. MARKET INTELLIGENCE (INSPIRED BY OUTSTANDING REVIEWS CARDS)
    ========================================================================== */
 .wm-intl-miami-market-section {
-  padding: 85px 0 90px;
+  padding: 35px 0 40px;
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
@@ -743,9 +743,9 @@
 }
 
 .wm-intl-miami-market-card p {
-  font-size: 14.5px;
+  font-size: 16px;
   line-height: 1.68;
-  color: #475569;
+  color: #090a0b;
   margin: 0;
 }
 
@@ -753,7 +753,7 @@
    8. 4-STEP PROCESS (MATCHING HOME HOW WE WORK FLOATING CARDS)
    ========================================================================== */
 .wm-intl-miami-process-section {
-  padding: 85px 0 90px;
+  padding: 35px 0 40px;
   background: #ffffff;
   position: relative;
 }
@@ -873,8 +873,8 @@
 .wm-intl-miami-process-card p {
   position: relative;
   z-index: 2;
-  font-size: 13.5px;
-  color: #64748b;
+  font-size: 15px;
+  color: #070708;
   line-height: 1.6;
   margin: 0 0 16px;
   flex-grow: 1;
@@ -897,7 +897,7 @@
 
 /* 9. INDUSTRIES (SOFT GREY-BLUE) */
 .wm-intl-miami-industries-section {
-  padding: 85px 0 90px;
+  padding: 35px 0 40px;
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
@@ -967,15 +967,15 @@
 }
 
 .wm-intl-miami-industry-card p {
-  font-size: 13.5px;
-  color: #64748b;
+  font-size: 15px;
+  color: #070708;
   line-height: 1.55;
   margin: 0;
 }
 
 /* 10. PRICING PLANS (CLEAN WHITE) */
 .wm-intl-miami-pricing-section {
-  padding: 85px 0 90px;
+  padding: 35px 0 40px;
   background: #ffffff;
 }
 
@@ -1076,8 +1076,8 @@
 }
 
 .wm-intl-miami-card-desc {
-  font-size: 13.5px;
-  color: #64748b;
+  font-size: 15px;
+  color: #0b0c0f;
   line-height: 1.55;
   margin: 0;
   min-height: 42px;
@@ -1133,8 +1133,8 @@
 }
 
 .wm-intl-miami-card-features li {
-  font-size: 13.5px;
-  color: #475569;
+  font-size: 15px;
+  color: #0b0c0e;
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -1180,7 +1180,7 @@
 
 /* 11. TESTIMONIALS (SOFT GREY-BLUE) */
 .wm-intl-miami-testimonials-section {
-  padding: 85px 0 90px;
+  padding: 35px 0 40px;
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
@@ -1249,7 +1249,7 @@
    12. OPERATIONAL GUARANTEES / WHY US (CLEAN WHITE)
    ========================================================================== */
 .wm-intl-miami-advantage-section {
-  padding: 85px 0 90px;
+  padding: 35px 0 40px;
   background: #ffffff;
   position: relative;
 }
@@ -1343,8 +1343,8 @@
 }
 
 .wm-intl-miami-advantage-card p {
-  font-size: 13.5px;
-  color: #64748b;
+  font-size: 15px;
+  color: #090a0b;
   line-height: 1.6;
   margin: 0 0 18px;
   flex-grow: 1;
@@ -1421,9 +1421,9 @@
 }
 
 .wm-intl-miami-faq-a p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.68;
-  color: #475569;
+  color: #090a0b;
   margin: 14px 0 0;
 }
 

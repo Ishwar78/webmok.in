@@ -215,26 +215,249 @@ const PpcPackagesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           </div>
         </div>
       </section>
+<section className="ppc-packages-section">
+  <div className="ppc-bg-shape ppc-shape-1"></div>
+  <div className="ppc-bg-shape ppc-shape-2"></div>
 
-      {/* 3. INTRO SECTION */}
-      <section className="opseo-intro-section">
-        <div className="opseo-container">
-          <div className="opseo-intro-grid">
-            <div className="opseo-intro-left">
-              <span className="opseo-tag">PRECISION PAID SEARCH ADVERTISING</span>
-              <h2 className="opseo-main-title">
-                Best PPC & Google Ads
-                <span>Packages in India</span>
-              </h2>
+  <div className="ppc-container">
+    
+    {/* Left Content */}
+    <div className="ppc-content">
+      <span className="ppc-subtitle">
+        GET MORE CLICKS, LEADS & SALES WITH RIGHT PPC PLANS
+      </span>
+
+      <h2 className="ppc-title">
+        Affordable PPC <br />
+        Management <span>Packages and Pricing Plans</span>
+      </h2>
+
+      <p className="ppc-description">
+        If you are new in the online market, getting your first lead can
+        take time. With the right PPC strategy, you can achieve faster
+        results and connect with customers who are actively searching for
+        your products and services.
+      </p>
+
+      <p className="ppc-description">
+        Our experienced PPC specialists create data-driven campaigns that
+        help businesses generate quality leads, increase conversions and
+        maximize return on investment.
+      </p>
+
+      <div className="ppc-points">
+        <div>
+          <span className="ppc-check">✓</span>
+          <span>Google Ads Certified Experts</span>
+        </div>
+
+        <div>
+          <span className="ppc-check">✓</span>
+          <span>Customized PPC Strategies</span>
+        </div>
+
+        <div>
+          <span className="ppc-check">✓</span>
+          <span>Maximum ROI & Quality Leads</span>
+        </div>
+      </div>
+
+      <button className="ppc-btn">
+        Explore PPC Plans
+        <span>→</span>
+      </button>
+    </div>
+
+
+    {/* Right Cards */}
+    <div className="ppc-services-grid">
+
+      <div className="ppc-service-card">
+        <div className="ppc-icon">⌕</div>
+        <h3>Search Ads</h3>
+        <p>
+          Reach high-intent customers actively searching for your
+          products and services.
+        </p>
+        <div className="ppc-card-arrow">→</div>
+      </div>
+
+
+      <div className="ppc-service-card">
+        <div className="ppc-icon">▣</div>
+        <h3>Display Ads</h3>
+        <p>
+          Build strong brand awareness across premium websites and
+          digital platforms.
+        </p>
+        <div className="ppc-card-arrow">→</div>
+      </div>
+
+
+      <div className="ppc-service-card">
+        <div className="ppc-icon">▶</div>
+        <h3>Video Ads</h3>
+        <p>
+          Engage your audience with creative and powerful video
+          advertising campaigns.
+        </p>
+        <div className="ppc-card-arrow">→</div>
+      </div>
+
+
+      <div className="ppc-service-card">
+        <div className="ppc-icon">🛍</div>
+        <h3>Shopping Ads</h3>
+        <p>
+          Showcase your products directly to customers ready
+          to make a purchase.
+        </p>
+        <div className="ppc-card-arrow">→</div>
+      </div>
+
+
+      <div className="ppc-service-card">
+        <div className="ppc-icon">▯</div>
+        <h3>App Promotion</h3>
+        <p>
+          Increase app installs and reach the right mobile
+          audience effectively.
+        </p>
+        <div className="ppc-card-arrow">→</div>
+      </div>
+
+
+      <div className="ppc-service-card">
+        <div className="ppc-icon">◉</div>
+        <h3>Remarketing</h3>
+        <p>
+          Reconnect with previous visitors and turn them
+          into valuable customers.
+        </p>
+        <div className="ppc-card-arrow">→</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section className="ppc-results-section">
+  <div className="ppc-results-glow ppc-glow-one"></div>
+  <div className="ppc-results-glow ppc-glow-two"></div>
+
+  <div className="ppc-results-container">
+
+    {/* Left Content */}
+    <div className="ppc-results-left">
+      <span className="ppc-results-tag">
+        QUICK RESULTS & BETTER ROI WITH RIGHT PPC PACKAGES
+      </span>
+
+      <h2 className="ppc-results-title">
+        Quick Results & Better
+        <br />
+        ROI <span>With Our Best In Class</span>
+        <br />
+        <span>PPC Packages</span>
+      </h2>
+
+      <p className="ppc-results-text">
+        RankON Technologies offers affordable yet effective PPC marketing
+        packages for businesses of all sizes. Our team of Google Ads experts
+        continually monitors the results your ads are achieving and takes the
+        necessary actions during PPC ad optimization to increase ROI.
+      </p>
+
+      <p className="ppc-results-text">
+        When you partner with RankON Technologies for Google Ads services, you
+        get a top-quality PPC strategy designed to help you outperform your
+        competitors and achieve better results.
+      </p>
+
+      <div className="ppc-results-stats">
+        <div className="ppc-mini-stat">
+          <strong>10+</strong>
+          <span>Years Experience</span>
+        </div>
+
+        <div className="ppc-mini-stat">
+          <strong>24/7</strong>
+          <span>Campaign Monitoring</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Right Content */}
+    <div className="ppc-results-right">
+      <div className="ppc-content-card">
+
+        <div className="ppc-card-top">
+          <span className="ppc-card-dot"></span>
+          <span className="ppc-card-dot"></span>
+          <span className="ppc-card-dot"></span>
+
+          <span className="ppc-card-label">PPC PERFORMANCE</span>
+        </div>
+
+        <div className="ppc-card-content">
+          <div className="ppc-icon-box">
+            <span>↗</span>
+          </div>
+
+          <h3>Get Results Faster With PPC</h3>
+
+          <p>
+            Pay-per-click advertising is one of the fastest ways to generate
+            quality leads and grow your business online.
+          </p>
+
+          <p>
+            When you start running targeted ads on Google, your business gets
+            in front of potential customers at the right time. PPC provides
+            measurable results and allows you to optimize campaigns for better
+            performance.
+          </p>
+
+          <div className="ppc-progress-area">
+            <div className="ppc-progress-head">
+              <span>Campaign Growth</span>
+              <strong>92%</strong>
             </div>
-            <div className="opseo-intro-right">
-              <p>
-                <span>Webmok Technologies is a trusted digital partner</span> Webmok Technologies builds high-intent Google Ads campaigns that connect your business with buyers actively searching for your solutions. We use exact negative keyword sculpting, conversion rate optimized landing pages, and smart bid strategies to maximize your ROI.
-              </p>
+
+            <div className="ppc-progress-bar">
+              <span></span>
             </div>
           </div>
+
+          <button className="ppc-results-btn">
+            Request Proposal
+            <span>↗</span>
+          </button>
         </div>
-      </section>
+      </div>
+
+      <div className="ppc-floating-card ppc-float-one">
+        <span>↑</span>
+        <div>
+          <strong>High ROI</strong>
+          <small>Optimized Campaigns</small>
+        </div>
+      </div>
+
+      <div className="ppc-floating-card ppc-float-two">
+        <span>✓</span>
+        <div>
+          <strong>More Leads</strong>
+          <small>Better Conversion</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  
 
       {/* 4. BACKED BY NUMBERS SECTION */}
       <section className="opseo-numbers-section">
@@ -273,6 +496,160 @@ const PpcPackagesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           </div>
         </div>
       </section>
+    {/* 3. INTRO SECTION */}
+      <section className="opseo-intro-section">
+        <div className="opseo-container">
+          <div className="opseo-intro-grid">
+            <div className="opseo-intro-left">
+              <span className="opseo-tag">PRECISION PAID SEARCH ADVERTISING</span>
+              <h2 className="opseo-main-title">
+                Best PPC & Google Ads
+                <span>Packages in India</span>
+              </h2>
+            </div>
+            <div className="opseo-intro-right">
+              <p>
+                <span>Webmok Technologies is a trusted digital partner</span> Webmok Technologies builds high-intent Google Ads campaigns that connect your business with buyers actively searching for your solutions. We use exact negative keyword sculpting, conversion rate optimized landing pages, and smart bid strategies to maximize your ROI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+<section className="ppc-invest-section">
+  <div className="ppc-invest-container">
+
+    {/* Top Content */}
+    <div className="ppc-invest-top">
+      <div className="ppc-invest-heading">
+        <span className="ppc-invest-tag">
+          WHY INVEST IN PAY PER CLICK ADVERTISING?
+        </span>
+
+        <h2>
+          Why Should You
+          <span> Invest in</span>
+          <br />
+          PPC Packages?
+        </h2>
+      </div>
+
+      <div className="ppc-invest-intro">
+        <p>
+          Prior to knowing the Google Ads Pricing Models it is essential to
+          know about its benefits of advertising on Google in India.
+        </p>
+
+        <div className="ppc-intro-line"></div>
+
+        <p className="ppc-intro-small">
+          Discover how PPC advertising helps businesses gain more control,
+          reach the right audience and achieve measurable growth.
+        </p>
+      </div>
+    </div>
+
+
+    {/* Benefits Grid */}
+    <div className="ppc-benefits-grid">
+
+      <div className="ppc-benefit-card">
+        <div className="ppc-card-number">01</div>
+
+        <div className="ppc-card-icon">
+          <i className="fas fa-wallet"></i>
+        </div>
+
+        <h3>Budget Control</h3>
+
+        <p>
+          There is absolutely no minimum investment required to create a
+          Google Ads account or run a Google Ads campaign. When you start
+          advertising on Google, you have full control over your budget as
+          you can increase and decrease your ad spend according to your PPC
+          budget.
+        </p>
+
+        <div className="ppc-card-glow"></div>
+      </div>
+
+
+      <div className="ppc-benefit-card">
+        <div className="ppc-card-number">02</div>
+
+        <div className="ppc-card-icon">
+          <i className="fas fa-chart-line"></i>
+        </div>
+
+        <h3>Scalability</h3>
+
+        <p>
+          You can either scale up or scale down on the basis of the
+          performance of your Google Ads Marketing campaign. You can scale
+          ads, control the cost inflows and maximize the results of your
+          best performing ad campaigns.
+        </p>
+
+        <div className="ppc-card-glow"></div>
+      </div>
+
+
+      <div className="ppc-benefit-card">
+        <div className="ppc-card-number">03</div>
+
+        <div className="ppc-card-icon">
+          <i className="fas fa-chart-pie"></i>
+        </div>
+
+        <h3>Analytics</h3>
+
+        <p>
+          You can thoroughly analyse the success of your Google Ads campaign
+          with the help of analytic tools. You can also determine the number
+          of clicks on your Google ads, about the users that clicked on your
+          ads and much more.
+        </p>
+
+        <div className="ppc-card-glow"></div>
+      </div>
+
+
+      <div className="ppc-benefit-card">
+        <div className="ppc-card-number">04</div>
+
+        <div className="ppc-card-icon">
+          <i className="fas fa-bullseye"></i>
+        </div>
+
+        <h3>Intent</h3>
+
+        <p>
+          Audience with an intent is likely to search on Google. Therefore,
+          it provides a platform that gets you connected directly to the
+          target audience through Google ads marketing in India.
+        </p>
+
+        <div className="ppc-card-glow"></div>
+      </div>
+
+    </div>
+
+
+    {/* Bottom CTA */}
+    <div className="ppc-invest-cta">
+      <div className="ppc-cta-orbit orbit-one"></div>
+      <div className="ppc-cta-orbit orbit-two"></div>
+
+      <button className="ppc-invest-button">
+        <span>Start Your PPC Campaign</span>
+        <i className="fas fa-paper-plane"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+
 
       {/* 5. INCLUSION / DELIVERABLES SECTION */}
       <section className="opseo-include-section">

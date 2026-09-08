@@ -13,14 +13,14 @@
 
 /* Global Section Containers */
 .wm-section-container {
-  max-width: 1320px;
+  max-width: 1540px;
   margin: 0 auto;
-  padding: 20px 24px;
+  padding: 20px 32px;
 }
 
 .wm-section-header {
   text-align: center;
-  max-width: 1200px;
+  max-width: 1540px;
   margin: 0 auto 50px auto;
   width: 100%;
 }
@@ -117,7 +117,8 @@
 .wm-hero-container {
   position: relative;
   z-index: 1;
-  max-width: 1320px;
+  max-width: 1540px;
+  padding: 0 32px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -575,8 +576,9 @@
 }
 
 .wm-industries-inner {
-  max-width: 1320px;
+  max-width: 1540px;
   margin: 0 auto;
+  padding: 0 32px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -660,9 +662,9 @@
 }
 
 .wm-reviews-container {
-  max-width: 1220px;
+  max-width: 1540px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
   position: relative;
   z-index: 1;
 }
@@ -972,8 +974,9 @@
 }
 
 .wm-services-section .wm-section-container {
-  position: relative;
-  z-index: 1;
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 20px 32px;
 }
 
 /* Header on dark background */
@@ -1633,21 +1636,49 @@
 }
 
 @media (max-width: 768px) {
+  .wm-section-container {
+    padding: 20px 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .wm-services-section {
+    padding: 25px 0 35px 0;
+    overflow: hidden;
+  }
+
+  .wm-services-section .wm-section-container {
+    padding: 15px 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .wm-hsvc-layout {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: 100%;
+    gap: 16px;
+    width: 100%;
   }
 
   .wm-hsvc-left {
     position: static;
+    width: 100%;
+    overflow: hidden;
   }
 
   .wm-hsvc-scroll-wrap {
+    display: flex;
     flex-direction: row;
     overflow-x: auto;
     gap: 10px;
-    padding-bottom: 6px;
+    padding: 4px 16px 12px 16px;
+    margin: 0 -16px;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    scroll-behavior: smooth;
+    width: calc(100% + 32px);
+    box-sizing: border-box;
+    scroll-snap-type: x proximity;
   }
 
   .wm-hsvc-scroll-wrap::-webkit-scrollbar {
@@ -1658,11 +1689,16 @@
     flex-direction: column;
     align-items: center;
     min-width: 110px;
-    padding: 12px 10px;
+    max-width: 135px;
+    padding: 12px 8px;
     text-align: center;
-    gap: 5px;
+    gap: 6px;
+    flex-shrink: 0;
     transform: none !important;
     border-radius: 12px;
+    scroll-snap-align: center;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .wm-hsvc-tab::before {
@@ -1681,43 +1717,165 @@
 
   .wm-hsvc-tab-num {
     font-size: 10px;
+    font-weight: 800;
   }
 
   .wm-hsvc-tab-icon {
-    font-size: 19px;
+    font-size: 20px;
   }
 
   .wm-hsvc-tab-label {
-    font-size: 11.5px;
+    font-size: 12px;
+    line-height: 1.25;
     text-align: center;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .wm-hsvc-right {
+    min-height: auto;
+    width: 100%;
   }
 
   .wm-hsvc-panel {
-    padding: 22px 18px;
-    border-radius: 14px;
+    padding: 20px 16px;
+    border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .wm-hsvc-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .wm-hsvc-panel-header > div:nth-child(2) {
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .wm-hsvc-panel-iconbox {
+    width: 44px;
+    height: 44px;
+    font-size: 19px;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  .wm-hsvc-panel-num {
+    font-size: 10px;
+    margin-bottom: 2px;
   }
 
   .wm-hsvc-panel-title {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.25;
+    word-break: normal;
+    overflow-wrap: break-word;
+    color: #ffffff;
   }
 
   .wm-hsvc-panel-metric {
     display: none;
   }
 
+  .wm-hsvc-panel-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    word-break: normal;
+    overflow-wrap: break-word;
+    width: 100%;
+  }
+
   .wm-hsvc-features-grid {
     grid-template-columns: 1fr;
     gap: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .wm-hsvc-feature-item {
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .wm-hsvc-feature-item span {
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .wm-hsvc-tags-row {
+    gap: 6px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .wm-hsvc-tag {
+    font-size: 11.5px;
+    padding: 3px 8px;
+    white-space: nowrap;
+  }
+
+  .wm-hsvc-divider {
+    margin-bottom: 16px;
   }
 
   .wm-hsvc-action-btns {
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
   }
 
   .wm-hsvc-act-btn {
+    padding: 10px 8px;
+    font-size: 12px;
     justify-content: center;
     width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 420px) {
+  .wm-hsvc-tab {
+    min-width: 100px;
+    padding: 10px 6px;
+  }
+
+  .wm-hsvc-panel {
+    padding: 18px 12px;
+  }
+
+  .wm-hsvc-panel-title {
+    font-size: 16.5px;
+  }
+
+  .wm-hsvc-action-btns {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .wm-hsvc-act-btn {
+    font-size: 11px;
+    padding: 9px 4px;
+    gap: 4px;
   }
 }
 
@@ -2246,7 +2404,7 @@
 
 .wm-step-card {
   position: relative;
-  min-height: 190px;
+  min-height: 170px;
   padding: 28px 24px 25px;
 
   display: flex;
@@ -2586,7 +2744,7 @@
 
   color: #103b6d;
 
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.4;
 
   font-weight: 750;
@@ -2843,7 +3001,7 @@
   grid-template-columns: repeat(6, 1fr);
   gap: 14px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1540px;
   margin: 0 auto 45px auto;
 }
 
@@ -4108,9 +4266,16 @@ a.wm-lead-cbox-val:hover {
 /* Tablets and small laptops */
 @media (max-width: 1200px) {
   .wm-hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+  position: relative;
+  z-index: 1;
+  max-width: 1540px;
+  padding: 0 32px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+}
 
   .wm-hero-badge {
     margin-left: auto;
@@ -4170,11 +4335,13 @@ a.wm-lead-cbox-val:hover {
 /* Mobile Screens (Strict rules requested by user) */
 @media (max-width: 768px) {
   .wm-section-container {
-    padding: 40px 16px;
+    padding: 25px 16px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .wm-hero-section {
-    padding: 40px 16px 60px 16px;
+    padding: 1px 1px 0px 1px;
   }
 
   .wm-hero-title {
@@ -4222,21 +4389,22 @@ a.wm-lead-cbox-val:hover {
     grid-column: span 2;
   }
 
-  /* Section Title in 1 Single Line on Mobile */
+  /* Section Title wrapping cleanly on Mobile */
   .wm-section-header {
-    margin: 0 auto 30px auto;
+    margin: 0 auto 28px auto;
     padding: 0 4px;
     width: 100%;
   }
 
   .wm-section-header .wm-title {
-    white-space: nowrap;
-    font-size: clamp(14px, 4.2vw, 19px);
-    letter-spacing: -0.3px;
+    white-space: normal;
+    font-size: clamp(20px, 5.2vw, 26px);
+    letter-spacing: -0.4px;
     text-align: center;
     width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.35;
   }
 
   /* Reviews Cards */
@@ -5027,13 +5195,15 @@ a.wm-lead-cbox-val:hover {
 
   .wm-split-right-panel {
     min-height: unset;
-    max-height: 280px;
+    max-height: 240px;
+    height: auto;
     overflow: hidden;
   }
 
   .wm-split-logos-grid-wrapper {
     grid-template-columns: repeat(3, 1fr);
-    height: 230px;
+    height: 195px;
+    overflow: hidden;
   }
 
   .wm-split-logos-col:nth-child(4),
@@ -5042,21 +5212,23 @@ a.wm-lead-cbox-val:hover {
   }
 
   .wm-split-logo-cell {
-    min-height: 60px;
-    padding: 8px 4px 6px 4px;
+    min-height: 58px;
+    padding: 6px 4px;
+    gap: 3px;
   }
 
   .wm-split-logo-cell img {
-    max-width: 70px;
-    max-height: 28px;
+    max-width: 72px;
+    max-height: 26px;
   }
 
   .wm-split-logo-name {
-    font-size: 8px;
+    font-size: 8.5px;
+    font-weight: 700;
   }
 
   .wm-split-logos-header {
-    padding: 12px 16px 10px 16px;
+    padding: 10px 16px 6px 16px;
   }
 
   .wm-split-photo-collage {
@@ -5088,12 +5260,15 @@ a.wm-lead-cbox-val:hover {
   }
 
   .wm-split-right-panel {
-    max-height: 240px;
+    max-height: 210px;
+    height: auto;
+    overflow: hidden;
   }
 
   .wm-split-logos-grid-wrapper {
     grid-template-columns: repeat(2, 1fr);
-    height: 200px;
+    height: 175px;
+    overflow: hidden;
   }
 
   .wm-split-logos-col:nth-child(3) {
@@ -5103,11 +5278,18 @@ a.wm-lead-cbox-val:hover {
   .wm-split-logo-cell {
     min-height: 52px;
     padding: 6px 4px;
+    gap: 2px;
   }
 
   .wm-split-logo-cell img {
-    max-width: 60px;
-    max-height: 24px;
+    max-width: 65px;
+    max-height: 22px;
+  }
+
+  .wm-split-logo-name {
+    font-size: 8px;
+    font-weight: 700;
+    opacity: 0.85;
   }
 
   .wm-split-testi-title {

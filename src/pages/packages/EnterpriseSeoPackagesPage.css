@@ -12,9 +12,9 @@
 }
 
 .wm-pkg-container {
-  max-width: 1320px;
+  max-width: 1540px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 /* ==========================================================================
@@ -60,7 +60,7 @@
 
 .wm-pkg-hero-title-dual .wm-hero-italic-orange {
   font-style: italic;
-  color: #f25822; /* High-impact vibrant orange matching screenshot */
+  color: #020616;; /* High-impact vibrant orange matching screenshot */
   display: block;
 }
 
@@ -72,16 +72,16 @@
 }
 
 .wm-pkg-hero-lead-desc {
-  font-size: 16.5px;
+  font-size: 17px;
   font-weight: 500;
-  color: #334155;
+  color: #0d0e11;
   line-height: 1.6;
   margin: 0 0 14px 0;
 }
 
 .wm-pkg-hero-body-desc {
-  font-size: 15px;
-  color: #64748b;
+  font-size: 16px;
+  color: #0e0f11;
   line-height: 1.65;
   margin: 0 0 28px 0;
 }
@@ -97,7 +97,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #f25822;
+  background: #0a3064;
   color: #ffffff;
   font-size: 15px;
   font-weight: 700;
@@ -111,7 +111,7 @@
 }
 
 .wm-pkg-btn-case-study:hover {
-  background: #d94310;
+  background: #138ddf;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(242, 88, 34, 0.45);
 }
@@ -771,15 +771,63 @@
 }
 
 @media (max-width: 640px) {
+  .wm-pkg-hero-btns-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .wm-pkg-btn-case-study,
+  .wm-pkg-btn-packages-outline {
+    flex: 1;
+    justify-content: center;
+    padding: 11px 8px;
+    font-size: 13px;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .wm-pkg-btn-case-study {
+    gap: 6px;
+  }
+
+  .wm-pkg-btn-packages-outline {
+    gap: 5px;
+  }
+
   .wm-pkg-hero-title-dual {
     font-size: 28px;
   }
 
   .wm-pkg-cards-grid.wm-grid-4,
   .wm-pkg-cards-grid.wm-grid-3,
-  .wm-pkg-why-grid,
-  .wm-pkg-stats-grid {
+  .wm-pkg-why-grid {
     grid-template-columns: 1fr;
+  }
+
+  .wm-pkg-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 10px;
+  }
+
+  .wm-pkg-stat-card {
+    padding: 12px 8px;
+    border-right: none;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .wm-pkg-stat-card strong {
+    font-size: 24px;
+  }
+
+  .wm-pkg-stat-card span {
+    font-size: 11px;
+    line-height: 1.3;
   }
 
   .wm-pkg-banner-btns {
@@ -2679,7 +2727,7 @@
 ========================================= */
 
 .opseo-numbers-heading {
-  max-width: 1100px;
+  max-width: 1540px;
 
   margin:
     0 auto
@@ -3098,11 +3146,8 @@
 
 
   .opseo-stats-grid {
-    grid-template-columns:
-      1fr;
-
-    gap: 5px;
-
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 12px;
     margin-bottom: 35px;
   }
 
@@ -3115,12 +3160,12 @@
 
 
   .opseo-stat-number {
-    font-size: 42px;
+    font-size: 32px;
   }
 
-
   .opseo-stat-item p {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.35;
   }
 
 
@@ -3134,4 +3179,15 @@
       20px;
   }
 
+}
+@media (max-width: 380px) {
+  .wm-pkg-hero-btns-row {
+    gap: 6px;
+  }
+
+  .wm-pkg-btn-case-study,
+  .wm-pkg-btn-packages-outline {
+    padding: 10px 4px;
+    font-size: 11.5px;
+  }
 }

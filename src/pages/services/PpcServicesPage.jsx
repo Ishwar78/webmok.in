@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  FaBullseye,
   FaSearchDollar,
   FaImage,
   FaShareAlt,
@@ -10,124 +9,325 @@ import {
   FaSyncAlt,
   FaArrowRight,
   FaPhoneAlt,
-  FaCheckCircle,
   FaCertificate,
-  FaChartLine
+  FaChevronDown,
+  FaRocket
 } from 'react-icons/fa';
 import ServiceSidebarForm from '../../components/ServiceSidebarForm';
 import './ServicePageShared.css';
 
 const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
-  const adChannels = [
+  const [openFaq, setOpenFaq] = useState(0);
+  const [auditUrl, setAuditUrl] = useState('');
+
+  const stats = [
+    { num: '10+ yrs', label: 'Of certified Google & Meta ad management' },
+    { num: '₹15 Cr+', label: 'Profitable ad spend managed across verticals' },
+    { num: '4.2×', label: 'Average documented Return on Ad Spend (ROAS)' },
+    { num: '100%', label: 'Transparent client dashboard & server-side tracking' }
+  ];
+
+  const caseStudies = [
     {
-      icon: <FaSearchDollar />,
-      title: 'Search Advertising',
-      desc: 'One of the most effective results-providing advertising methods. When a user searches for keywords related to your business, your website appears prominently at the very top of Google.'
+      cat: 'B2B · Industrial',
+      metric: '+380%',
+      sub: 'ROAS improvement · ₹12.4L new pipeline',
+      name: 'SKF Industrial Solutions',
+      desc: 'Precision Google Search ad campaign restructuring that eliminated 48% wasted negative spend while doubling qualified B2B RFQs.',
+      link: '/clients/case-studies'
     },
     {
-      icon: <FaImage />,
-      title: 'Display Advertising',
-      desc: 'Brings enormous branding power by reaching your targeted audience across millions of partner sites with engaging banners, video snippets, and responsive graphic placements.'
+      cat: 'Real Estate · NCR',
+      metric: '-42%',
+      sub: 'Cost-per-Lead reduction · 1,240 site visits',
+      name: 'Omaxe Real Estate',
+      desc: 'Hyper-targeted geo-fenced Meta & Google Ads campaigns driving high-intent luxury apartment buyers and overseas NRI investors.',
+      link: '/clients/case-studies'
     },
     {
-      icon: <FaShareAlt />,
-      title: 'Social Media Advertising',
-      desc: 'WebMok helps you increase engagement and optimize ad spend across Meta, Instagram, LinkedIn, and YouTube, driving targeted leads and elevating brand authority.'
+      cat: 'E-Commerce & Retail',
+      metric: '8.5×',
+      sub: 'Google Shopping ROAS · 18,200 orders',
+      name: 'Farmer Fresh Brands',
+      desc: 'Performance Max and dynamic product listing ads scaling e-commerce transactions across tier-1 and tier-2 Indian cities.',
+      link: '/clients/case-studies'
     },
     {
-      icon: <FaShoppingBag />,
-      title: 'Google Shopping Advertising',
-      desc: 'Product listing ads are the backbone of eCommerce sales. We optimize your Google Merchant Center product feed to maximize ROAS and boost repeat purchases.'
+      cat: 'Home Decor & Coating',
+      metric: '+210%',
+      sub: 'inbound contractor inquiries · 5.2× ROAS',
+      name: 'Sirca Paints Italy',
+      desc: 'Multi-channel YouTube video and search advertising capturing architectural specifiers and premium homeowners.',
+      link: '/clients/case-studies'
     },
     {
-      icon: <FaMobileAlt />,
-      title: 'Mobile Advertising',
-      desc: 'A cost-effective strategy to connect with mobile audiences on smartphones and apps. Our specialists analyze user behavior to ensure maximum conversion efficiency.'
+      cat: 'International · UAE',
+      metric: '+315%',
+      sub: 'qualified WhatsApp leads · Dubai market',
+      name: 'RadiantBiz Dubai',
+      desc: 'Ultra-competitive commercial Google search ads optimized with automated 28-second callback lead funnels.',
+      link: '/clients/case-studies'
     },
     {
-      icon: <FaSyncAlt />,
-      title: 'Remarketing & Retargeting',
-      desc: 'One of the smartest techniques to convert undecided prospects into paying customers by re-engaging visitors who have already shown interest in your products or services.'
+      cat: 'Healthcare & Clinics',
+      metric: '+190%',
+      sub: 'verified doctor appointments booked',
+      name: 'Dr. Haror\'s Clinic',
+      desc: 'Location-based Google Search ads and Instagram reels lead generation with zero spam form fills.',
+      link: '/clients/case-studies'
     }
   ];
 
-  const ppcDeliverables = [
-    { num: '01', title: 'Ad Campaign Architecture & Set Up', text: 'Custom campaign structure with segmented ad groups, negative keyword sculpting, and conversion tracking.' },
-    { num: '02', title: 'High-Converting Landing Page Design', text: 'Fast-loading, UX-optimized landing pages designed strictly to convert ad clicks into telephone calls and form fills.' },
-    { num: '03', title: 'Paid Search Scheme Implementation', text: 'Strategic bidding rules, ad copy A/B variations, and automated smart-bidding for lowest acquisition costs.' },
-    { num: '04', title: 'Aggressive Cost-Per-Click (CPC) Reduction', text: 'Improving Quality Scores (CTR, relevance, landing page experience) to pay significantly less per click than competitors.' },
-    { num: '05', title: 'Enhanced Paid Inbound Traffic', text: 'Filtering out junk clicks to bring qualified, high-intent buyers ready to make purchasing decisions.' },
-    { num: '06', title: 'Dynamic Multi-Channel Retargeting', text: 'Re-engaging website visitors across YouTube, Display, and Social media until conversion takes place.' }
+  const ppcDisciplines = [
+    {
+      badge: '01',
+      icon: <FaSearchDollar />,
+      title: 'Google Search & AdWords Ads',
+      desc: 'Capture users at the exact moment of high buying intent. We build granular single-keyword ad groups with negative keyword sculpting for lowest cost-per-click.'
+    },
+    {
+      badge: '02',
+      icon: <FaRocket />,
+      title: 'Google Performance Max (PMax)',
+      desc: 'Automated AI-driven multi-channel campaigns running across Search, YouTube, Maps, Gmail, and Discover to unlock incremental revenue.'
+    },
+    {
+      badge: '03',
+      icon: <FaShareAlt />,
+      title: 'Meta & Instagram Paid Advertising',
+      desc: 'Target laser-focused demographic, interest, and lookalike audiences with thumb-stopping video reels, carousel ads, and instant lead forms.'
+    },
+    {
+      badge: '04',
+      icon: <FaShoppingBag />,
+      title: 'Google Shopping & Merchant Center',
+      desc: 'Optimized eCommerce product feeds, bidding matrices, and merchant promotions designed to maximize cart value and product visibility.'
+    },
+    {
+      badge: '05',
+      icon: <FaImage />,
+      title: 'Google Display Network & YouTube Video',
+      desc: 'Massive brand recall and contextual visual placements across millions of premier partner websites, apps, and video placements.'
+    },
+    {
+      badge: '06',
+      icon: <FaSyncAlt />,
+      title: 'Dynamic Multi-Channel Remarketing',
+      desc: 'Re-engage undecided website visitors and abandoned cart prospects across social and search networks until conversion takes place.'
+    }
   ];
+
+  const industries = [
+    'Real Estate & Luxury Housing',
+    'E-Commerce & D2C Brands',
+    'B2B Manufacturing & Industrial',
+    'Healthcare, Hospitals & Clinics',
+    'Education, Coaching & EdTech',
+    'Financial Services & Fintech',
+    'Automotive & EV Dealerships',
+    'Hospitality, Travel & Resorts',
+    'Home Decor & Construction',
+    'Professional Legal & Consulting',
+    'Electronics & Gadgets',
+    'Food & Beverage (FMCG)'
+  ];
+
+  const faqs = [
+    {
+      q: 'How does PPC advertising work?',
+      a: 'Pay-Per-Click (PPC) allows your business to appear at the very top of Google and social feeds instantly. You only pay when an interested user clicks on your advertisement. Our certified specialists optimize your quality scores, ad copy, and landing pages to minimize your cost per acquisition (CPA).'
+    },
+    {
+      q: 'What daily ad budget is recommended to begin with?',
+      a: 'We recommend starting with a minimum test budget of ₹1,000 to ₹3,000 per day depending on keyword competition in your industry. Once positive ROAS is proven, budgets can be scaled profitably without diminishing returns.'
+    },
+    {
+      q: 'How fast can our ad campaign go live?',
+      a: 'After our initial briefing and account audit, we architect your complete keyword matrix, write conversion-tested ad copy, set up GA4/GTM server-side tracking, and launch within 3 to 5 business days.'
+    },
+    {
+      q: 'How do you prevent wasted ad budget on junk clicks?',
+      a: 'We implement rigorous negative keyword lists, disable poor-performing display placements, apply geo-fencing, and monitor search terms daily to ensure zero budget is wasted on irrelevant searches.'
+    },
+    {
+      q: 'Do you design custom high-converting landing pages?',
+      a: 'Yes! Every high-performing PPC campaign is paired with custom, ultra-fast mobile landing pages featuring clear value propositions, trust badges, and 1-click WhatsApp or call triggers.'
+    },
+    {
+      q: 'Will we have complete ownership of our Google Ads account?',
+      a: '100% yes. You maintain complete administrative ownership of your Google Ads and Meta accounts. All billing is direct and transparent.'
+    }
+  ];
+
+  const handleAuditSubmit = (e) => {
+    e.preventDefault();
+    if (auditUrl.trim()) {
+      onOpenEnquiry();
+    }
+  };
 
   return (
     <div className="wm-sp-root">
-      {/* Hero Header */}
       <section className="wm-sp-hero">
         <div className="wm-sp-container">
           <div className="wm-sp-breadcrumb">
-            <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>PPC Services Company</span>
+            <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>PPC Services</span>
           </div>
           <span className="wm-sp-hero-pill">
-            <FaCertificate /> Google Certified Partner
+            <FaCertificate /> Google Premier Partner Agency · #Performance First
           </span>
-          <h1 className="wm-sp-hero-title">PPC Services Company</h1>
+          <h1 className="wm-sp-hero-title">
+            PPC & <span>Google Ads</span> Management Agency
+          </h1>
           <p className="wm-sp-hero-lead">
-            Pay-Per-Click (PPC) and Google AdWords management agency in Delhi and Rohtak, Haryana. Boost your sales, generate instant qualified traffic, and maximize your return on ad spend (ROAS).
+            Maximize your Return on Ad Spend (ROAS) and generate predictable, high-intent inbound customer calls with data-backed paid search, shopping, and social ad campaigns managed by WebMok.
           </p>
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
-              Launch Campaign Now <FaArrowRight />
+              Launch Profitable Campaign <FaArrowRight />
             </button>
             <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
-              <FaPhoneAlt /> Call in 28 Seconds
+              <FaPhoneAlt /> Call Me in 28 Seconds
             </button>
+          </div>
+          <div className="wm-seost">
+            {stats.map((st, i) => (
+              <div key={i} className="wm-seost__i">
+                <p className="wm-seost__n">{st.num}</p>
+                <p className="wm-seost__l">{st.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Main Body */}
+      <div className="wm-dsm-rating-wrap">
+        <div className="wm-sp-container">
+          <div className="wm-dsm-rating">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>200+ active performance advertisers</strong> across India, UAE, and North America.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section className="wm-sp-body">
         <div className="wm-sp-container wm-sp-layout">
-          {/* Main Column */}
           <div className="wm-sp-main-col">
-            {/* Overview Card */}
             <div className="wm-sp-card">
-              <h2 className="wm-sp-card-title">Instant Visibility & Sales with Best PPC Management</h2>
+              <h2 className="wm-sp-card-title">Instant Commercial Visibility & Precision Customer Acquisition</h2>
               <p className="wm-sp-paragraph">
-                PPC is the fastest method to gain direct visibility for your business on every search engine by reaching your exact audience through paid advertising. Our certified experts monitor your geo-targeted audience and high-valuable commercial keywords to deliver instant results and provide high-ROI customer acquisition at affordable costs.
+                Stop burning marketing budget on low-converting clicks. Pay-Per-Click (PPC) and Google AdWords management allows you to capture buyers at the exact psychological moment they are searching for solutions.
               </p>
               <p className="wm-sp-paragraph">
-                <strong>WebMok Pvt Ltd</strong> is a Google Certified PPC / AdWords Management Company in Delhi and Rohtak, Haryana. AdWords brings the most rapid results through paid advertising strategies and high ROI. We target your buyers on the basis of behavior, demographics, interest, geographic location, and high search intent.
+                At <strong>WebMok</strong>, we treat ad spend as an investment portfolio. Every campaign is engineered with server-side GA4 tracking, rigorous negative keyword sculpting, A/B tested ad copy, and high-velocity landing pages designed to maximize your profit margin.
               </p>
             </div>
 
-            {/* 6 Ad Channels */}
-            <div className="wm-sp-card">
-              <h2 className="wm-sp-card-title">Diverse Paid Advertising Formats</h2>
-              <p className="wm-sp-paragraph">
-                We design and manage performance marketing across multiple ad platforms tailored to your business model:
+            <section className="wm-dsm-stack">
+              <span className="wm-dsm-stack__eyebrow">Our Methodology</span>
+              <h2 className="wm-dsm-stack__title">Three Sequential Layers of Paid Acquisition</h2>
+              <p className="wm-dsm-stack__lede">
+                High-converting PPC requires an end-to-end performance engine where keyword intent, creative funnels, and automated bid sculpting work in complete harmony.
               </p>
-              <div className="wm-sp-grid-2">
-                {adChannels.map((ch, idx) => (
-                  <div key={idx} className="wm-sp-feature-item">
-                    <div className="wm-sp-fi-icon">{ch.icon}</div>
-                    <h3 className="wm-sp-fi-title">{ch.title}</h3>
-                    <p className="wm-sp-fi-desc">{ch.desc}</p>
+
+              <div className="wm-dsm-layer wm-dsm-layer--1">
+                <div className="wm-dsm-layer__head">
+                  <span className="wm-dsm-layer__num">LAYER 01</span>
+                  <h3 className="wm-dsm-layer__name">Intent & Keyword Architecture</h3>
+                  <span className="wm-dsm-layer__role">The Foundation</span>
+                </div>
+                <p className="wm-dsm-layer__desc">
+                  Filtering out tire-kickers and low-intent searches. We isolate high-intent commercial keywords and enforce strict negative keyword sculpting.
+                </p>
+                <ul className="wm-dsm-layer__list">
+                  <li>Granular Single-Theme Ad Groups (STAG) structure</li>
+                  <li>Extensive negative keyword sculpting to stop wasted spend</li>
+                  <li>Server-side conversion tracking setup via GTM and GA4</li>
+                  <li>Competitor CPC gap analysis and strategic bid ceilings</li>
+                </ul>
+              </div>
+
+              <div className="wm-dsm-layer wm-dsm-layer--2">
+                <div className="wm-dsm-layer__head">
+                  <span className="wm-dsm-layer__num">LAYER 02</span>
+                  <h3 className="wm-dsm-layer__name">A/B Creative & Landing Funnels</h3>
+                  <span className="wm-dsm-layer__role">Conversion Rate Optimization</span>
+                </div>
+                <p className="wm-dsm-layer__desc">
+                  Ad clicks are useless without conversion. We design high-speed landing pages engineered strictly to convert visitors into phone calls and lead forms.
+                </p>
+                <ul className="wm-dsm-layer__list">
+                  <li>Bespoke responsive landing pages with sub-second loading</li>
+                  <li>Multi-variant A/B copy testing for maximum CTR</li>
+                  <li>1-click WhatsApp, click-to-call & CRM lead integrations</li>
+                  <li>Quality Score optimization to pay less per click than competitors</li>
+                </ul>
+              </div>
+
+              <div className="wm-dsm-layer wm-dsm-layer--3">
+                <div className="wm-dsm-layer__head">
+                  <span className="wm-dsm-layer__num">LAYER 03</span>
+                  <h3 className="wm-dsm-layer__name">Omnichannel Retargeting & Smart Scaling</h3>
+                  <span className="wm-dsm-layer__role">Revenue Maximization</span>
+                </div>
+                <p className="wm-dsm-layer__desc">
+                  Re-engaging visitors across Meta, YouTube, and Display while using automated smart bidding to scale profitable ad groups.
+                </p>
+                <ul className="wm-dsm-layer__list">
+                  <li>Dynamic multi-channel remarketing sequences</li>
+                  <li>Target CPA (tCPA) and Target ROAS (tROAS) machine learning models</li>
+                  <li>Lookalike audience modeling from verified buyer CRM lists</li>
+                  <li>Bi-weekly live performance dashboards and ROI reviews</li>
+                </ul>
+              </div>
+
+              <div className="wm-dsm-stack__foot">
+                <p>
+                  <strong>Ready to eliminate wasted ad budget?</strong> Get a comprehensive audit of your current Google Ads account.
+                </p>
+                <button type="button" onClick={onOpenEnquiry}>
+                  Request Free PPC Audit &rarr;
+                </button>
+              </div>
+            </section>
+
+            <div className="wm-sp-card">
+              <h2 className="wm-sp-card-title">PPC Results, from Client Analytics</h2>
+              <p className="wm-sp-paragraph">
+                Every metric below comes directly from verified Google Ads, Meta Ads Manager, and GA4 transaction reports:
+              </p>
+              <div className="wm-seocs__grid">
+                {caseStudies.map((cs, idx) => (
+                  <div key={idx} className="wm-seocs__c">
+                    <p className="wm-seocs__cat">{cs.cat}</p>
+                    <div className="wm-seocs__big">{cs.metric}</div>
+                    <p className="wm-seocs__met">{cs.sub}</p>
+                    <h3 className="wm-seocs__nm">{cs.name}</h3>
+                    <p className="wm-seocs__d">{cs.desc}</p>
+                    <Link to="/clients/case-studies" className="wm-seocs__go">
+                      Read Case Study &rarr;
+                    </Link>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Benefits in Delhi NCR */}
             <div className="wm-sp-card">
-              <h2 className="wm-sp-card-title">Benefits Of Pay Per Click Services in Delhi, Gurgaon & Rohtak</h2>
+              <h2 className="wm-sp-card-title">Comprehensive PPC & Paid Media Channels</h2>
               <p className="wm-sp-paragraph">
-                Ever since Google introduced Google AdWords, online marketing revolutionized forever. Pay-per-click advertising has become the premier engine driving customer acquisition worldwide. The great benefit of PPC services with WebMok is that you only pay when an interested prospect actually clicks and visits your landing page.
+                We manage multi-channel paid acquisition to capture prospective customers across every relevant touchpoint:
               </p>
-              <p className="wm-sp-paragraph">
-                PPC provides immediate predictability to evaluate the cost-effectiveness and profitability of your marketing spend. Clicks estimate direct customer interest. You bid on high-conversion keywords and acquire maximum impressions. Our Rohtak and Delhi teams deliver superior ROI via continuous bid monitoring and keyword negative-matching.
-              </p>
+              <div className="wm-sp-disciplines-grid">
+                {ppcDisciplines.map((item, idx) => (
+                  <div key={idx} className="wm-sp-feature-item">
             </div>
 
             {/* 6 Step Deliverables */}

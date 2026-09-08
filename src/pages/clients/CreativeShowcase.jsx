@@ -303,7 +303,12 @@ const CreativeShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
                   key={cat.id}
                   type="button"
                   className={`wm-cg-tab-btn ${activeTab === cat.id ? 'active' : ''}`}
-                  onClick={() => setActiveTab(cat.id)}
+                  onClick={(e) => {
+                    setActiveTab(cat.id);
+                    if (e?.currentTarget) {
+                      e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    }
+                  }}
                 >
                   {cat.label}
                 </button>
@@ -319,15 +324,8 @@ const CreativeShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
                   <img src={item.image} alt={item.title} className="wm-citem-img" />
                   <div className="wm-citem-hover-mask">
                     <FaSearchPlus className="wm-zoom-icon" />
-                    <span>View Project</span>
+                    <span>View Image</span>
                   </div>
-                  <span className="wm-citem-cat-badge">{item.categoryName}</span>
-                </div>
-
-                <div className="wm-citem-body">
-                  <span className="wm-citem-client">{item.client}</span>
-                  <h3 className="wm-citem-title">{item.title}</h3>
-                  <p className="wm-citem-deliv">{item.deliverable}</p>
                 </div>
               </div>
             ))}
@@ -382,27 +380,7 @@ const CreativeShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-cmodal-img-col">
               <img src={previewItem.image} alt={previewItem.title} />
             </div>
-            <div className="wm-cmodal-text-col">
-              <span className="wm-cmodal-cat">{previewItem.categoryName}</span>
-              <h3>{previewItem.title}</h3>
-              <div className="wm-cmodal-client-row">
-                <strong>Client:</strong> <span>{previewItem.client}</span>
-              </div>
-              <div className="wm-cmodal-client-row">
-                <strong>Scope:</strong> <span>{previewItem.deliverable}</span>
-              </div>
-              <p>{previewItem.description}</p>
-              <button
-                type="button"
-                className="wm-cmodal-cta-btn"
-                onClick={() => {
-                  setPreviewItem(null);
-                  onOpenEnquiry();
-                }}
-              >
-                Inquire About Similar Design <FaArrowRight />
-              </button>
-            </div>
+            
           </div>
         </div>
       )}

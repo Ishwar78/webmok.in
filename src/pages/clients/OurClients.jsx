@@ -342,7 +342,12 @@ const OurClients = ({ onOpenCallMe, onOpenEnquiry }) => {
                   key={cat.id}
                   type="button"
                   className={`wm-ctab-pill ${activeCategory === cat.id ? 'active' : ''}`}
-                  onClick={() => setActiveCategory(cat.id)}
+                  onClick={(e) => {
+                    setActiveCategory(cat.id);
+                    if (e?.currentTarget) {
+                      e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    }
+                  }}
                 >
                   {cat.label}
                 </button>

@@ -11,9 +11,9 @@
 }
 
 .wm-video-container {
-  max-width: 1320px;
+  max-width: 1540px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 /* 1. CINEMATIC HERO SECTION */
@@ -881,7 +881,26 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .wm-vhero-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .wm-vhero-btn-primary,
+  .wm-vhero-btn-call {
+    flex: 1;
+    justify-content: center;
+    padding: 12px 8px;
+    font-size: 13px;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 0;
+  }
+
   .wm-video-hero-right {
     height: 330px;
   }
@@ -904,5 +923,17 @@
   .wm-vcta-btn-wa {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .wm-vhero-actions {
+    gap: 6px;
+  }
+
+  .wm-vhero-btn-primary,
+  .wm-vhero-btn-call {
+    padding: 10px 4px;
+    font-size: 11.5px;
   }
 }

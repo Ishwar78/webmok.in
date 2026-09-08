@@ -14,9 +14,9 @@
 
 .wm-test-container,
 .wm-testpage-container {
-  max-width: 1320px;
+  max-width: 1540px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 /* 1. HERO SECTION */
@@ -515,7 +515,26 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .wm-thero-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .wm-thero-btn-primary,
+  .wm-thero-btn-call {
+    flex: 1;
+    justify-content: center;
+    padding: 12px 8px;
+    font-size: 13px;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 0;
+  }
+
   .wm-tgrid,
   .wm-testpage-grid {
     grid-template-columns: 1fr;
@@ -533,5 +552,17 @@
   .wm-tcta-btn-wa {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .wm-thero-actions {
+    gap: 6px;
+  }
+
+  .wm-thero-btn-primary,
+  .wm-thero-btn-call {
+    padding: 10px 4px;
+    font-size: 11.5px;
   }
 }

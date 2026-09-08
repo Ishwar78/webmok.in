@@ -16,7 +16,7 @@
 .wm-clients-container {
   max-width: 1360px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 /* ==========================================================================
@@ -33,7 +33,7 @@
 .wm-clients-hero-container {
   max-width: 1380px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 .wm-clients-hero-grid {
@@ -799,6 +799,44 @@
     height: 340px;
   }
 
+  /* 12 Category Filter Tabs: Smooth Horizontal Swipe Scroll */
+  .wm-cbrands-tabs-wrap {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .wm-cbrands-tabs-scroll {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 4px 16px 12px 16px;
+    margin: 0 -16px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    scroll-behavior: smooth;
+    width: calc(100% + 32px);
+    box-sizing: border-box;
+  }
+
+  .wm-cbrands-tabs-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .wm-ctab-pill {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 8px 16px;
+    font-size: 13px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .wm-cbrands-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -824,5 +862,38 @@
   .wm-cstrip-flex {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .wm-chero-cta-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .wm-chero-btn-enquire,
+  .wm-chero-btn-call {
+    flex: 1;
+    justify-content: center;
+    padding: 12px 8px;
+    font-size: 13px;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .wm-chero-cta-row {
+    gap: 6px;
+  }
+
+  .wm-chero-btn-enquire,
+  .wm-chero-btn-call {
+    padding: 10px 4px;
+    font-size: 11.5px;
   }
 }

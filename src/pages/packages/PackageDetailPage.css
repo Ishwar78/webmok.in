@@ -6,3 +6,15 @@
   min-height: 60vh;
   background: #f8fafc;
 }
+
+@media (max-width: 380px) {
+  .wm-pkg-hero-btns-row {
+    gap: 6px;
+  }
+
+  .wm-pkg-btn-case-study,
+  .wm-pkg-btn-packages-outline {
+    padding: 10px 4px;
+    font-size: 11.5px;
+  }
+}

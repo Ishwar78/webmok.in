@@ -65,7 +65,7 @@
 }
 
 .wm-nav-link {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   color: #1e293b;
   text-decoration: none;
@@ -436,6 +436,10 @@
 }
 
 @media (max-width: 1024px) {
+  .wm-nav-container {
+    padding: 0 16px;
+  }
+
   .wm-desktop-nav {
     display: none;
   }
