@@ -26,7 +26,9 @@ import {
   FaShoppingCart,
   FaUtensils,
   FaBriefcase,
-  FaCompass
+  FaCompass,
+  FaRegLightbulb,
+  FaProjectDiagram
 } from 'react-icons/fa';
 import './SouthAfricaDigitalMarketingPage.css';
 
@@ -430,18 +432,32 @@ const SouthAfricaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-southafrica-services-grid">
             {pageData.services.map((svc, i) => (
               <div key={i} className="wm-intl-southafrica-service-card">
-                <div className="wm-intl-southafrica-svc-icon">
-                  {svc.icon === 'FaSearch' && <FaSearch />}
-                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
-                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
-                  {svc.icon === 'FaPenNib' && <FaPenNib />}
-                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
-                  {svc.icon === 'FaVideo' && <FaVideo />}
-                  {svc.icon === 'FaChartLine' && <FaChartLine />}
-                  {svc.icon === 'FaCompass' && <FaCompass />}
+                <div className="wm-intl-southafrica-svc-card-glow"></div>
+                <div className="wm-intl-southafrica-svc-card-top">
+                  <div className="wm-intl-southafrica-svc-icon">
+                    {svc.icon === 'FaSearch' && <FaSearch />}
+                    {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                    {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                    {svc.icon === 'FaPenNib' && <FaPenNib />}
+                    {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                    {svc.icon === 'FaVideo' && <FaVideo />}
+                    {svc.icon === 'FaChartLine' && <FaChartLine />}
+                    {svc.icon === 'FaCompass' && <FaCompass />}
+                  </div>
+                  <span className="wm-intl-southafrica-svc-num">0{i + 1}</span>
                 </div>
                 <h3>{svc.title}</h3>
                 <p>{svc.desc}</p>
+                <div className="wm-intl-southafrica-svc-card-footer">
+                  <button
+                    type="button"
+                    className="wm-intl-southafrica-svc-card-btn"
+                    onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - ${svc.title}`)}
+                  >
+                    <span>Explore Solution</span>
+                    <FaArrowRight className="wm-intl-southafrica-svc-arrow" />
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -497,7 +513,7 @@ const SouthAfricaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 7. MARKET DYNAMICS */}
+      {/* 7. MARKET DYNAMICS (WHAT WE KNOW ABOUT MARKETING) */}
       <section className="wm-intl-southafrica-market-section" id="market-dynamics">
         <div className="wm-intl-southafrica-container">
           <div className="wm-intl-southafrica-sec-heading-center">
@@ -509,6 +525,14 @@ const SouthAfricaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-southafrica-market-grid">
             {pageData.marketInsights.map((mi, i) => (
               <div key={i} className="wm-intl-southafrica-market-card">
+                <div className="wm-intl-southafrica-market-card-glow"></div>
+                <div className="wm-intl-southafrica-market-card-hdr">
+                  <div className="wm-intl-southafrica-market-badge-wrap">
+                    <span className="wm-intl-southafrica-market-badge">MARKET DYNAMICS</span>
+                    <span className="wm-intl-southafrica-market-num">0{i + 1}</span>
+                  </div>
+                  <div className="wm-intl-southafrica-market-pulse-dot"></div>
+                </div>
                 <h4>{mi.title}</h4>
                 <p>{mi.desc}</p>
               </div>
@@ -517,7 +541,7 @@ const SouthAfricaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 8. 4-STEP PROCESS */}
+      {/* 8. 4-STEP PROCESS (HOW WE WORK FLOATING CARDS) */}
       <section className="wm-intl-southafrica-process-section" id="process">
         <div className="wm-intl-southafrica-container">
           <div className="wm-intl-southafrica-sec-heading-center">
@@ -531,9 +555,19 @@ const SouthAfricaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-southafrica-process-grid">
             {pageData.processSteps.map((ps, i) => (
               <div key={i} className="wm-intl-southafrica-process-card">
-                <span className="wm-intl-southafrica-proc-num">STEP {ps.num}</span>
+                <div className="wm-intl-southafrica-proc-card-glow"></div>
+                <div className="wm-intl-southafrica-proc-header-row">
+                  <span className="wm-intl-southafrica-proc-num">0{i + 1}</span>
+                  <div className="wm-intl-southafrica-proc-icon">
+                    {i === 0 && <FaRegLightbulb />}
+                    {i === 1 && <FaProjectDiagram />}
+                    {i === 2 && <FaLaptopCode />}
+                    {i === 3 && <FaRocket />}
+                  </div>
+                </div>
                 <h4>{ps.title}</h4>
                 <p>{ps.desc}</p>
+                <div className="wm-intl-southafrica-proc-step-tag">Phase 0{i + 1}</div>
               </div>
             ))}
           </div>
@@ -554,16 +588,19 @@ const SouthAfricaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-southafrica-industries-grid">
             {pageData.industries.map((ind, i) => (
               <div key={i} className="wm-intl-southafrica-industry-card">
-                <div className="wm-intl-southafrica-ind-icon">
-                  {ind.icon === 'FaBuilding' && <FaBuilding />}
-                  {ind.icon === 'FaUserMd' && <FaUserMd />}
-                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
-                  {ind.icon === 'FaUtensils' && <FaUtensils />}
-                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
-                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
-                  {ind.icon === 'FaCompass' && <FaCompass />}
-                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
-                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                <div className="wm-intl-southafrica-ind-card-top">
+                  <div className="wm-intl-southafrica-ind-icon">
+                    {ind.icon === 'FaBuilding' && <FaBuilding />}
+                    {ind.icon === 'FaUserMd' && <FaUserMd />}
+                    {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                    {ind.icon === 'FaUtensils' && <FaUtensils />}
+                    {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                    {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                    {ind.icon === 'FaCompass' && <FaCompass />}
+                    {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                    {ind.icon === 'FaChartLine' && <FaChartLine />}
+                  </div>
+                  <span className="wm-intl-southafrica-ind-tag">VERTICAL 0{i + 1}</span>
                 </div>
                 <h4>{ind.name}</h4>
                 <p>{ind.desc}</p>
@@ -584,7 +621,7 @@ const SouthAfricaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-intl-southafrica-sec-bar-center"></div>
 
             {/* Currency Switcher */}
-            <div className="wm-intl-southafrica-currency-toggle">
+            <div className="wm-intl-southafrica-currency-toggle" style={{ marginTop: '24px' }}>
               {[{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
                 <button
                   key={c.code}
@@ -677,8 +714,8 @@ const SouthAfricaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
-      <section className="wm-intl-southafrica-advantage-section">
+      {/* 12. OPERATIONAL GUARANTEES / WHY US (CLEAN WHITE) */}
+      <section className="wm-intl-southafrica-advantage-section" id="why-us-guarantees">
         <div className="wm-intl-southafrica-container">
           <div className="wm-intl-southafrica-sec-heading-center">
             <span className="wm-intl-southafrica-sec-badge">WHY CHOOSE WEBMOK</span>
@@ -688,27 +725,55 @@ const SouthAfricaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
 
           <div className="wm-intl-southafrica-advantage-grid">
             <div className="wm-intl-southafrica-advantage-card">
-              <div className="wm-intl-southafrica-aicon"><FaShieldAlt /></div>
+              <div className="wm-intl-southafrica-adv-glow"></div>
+              <div className="wm-intl-southafrica-adv-top">
+                <div className="wm-intl-southafrica-aicon"><FaShieldAlt /></div>
+                <span className="wm-intl-southafrica-adv-badge">STANDARDS</span>
+              </div>
               <h4>100% White-Hat Proven Methods</h4>
               <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
+              <div className="wm-intl-southafrica-adv-check-row">
+                <FaCheck className="wm-intl-southafrica-adv-check" /> <span>Google Webmaster Certified</span>
+              </div>
             </div>
 
             <div className="wm-intl-southafrica-advantage-card">
-              <div className="wm-intl-southafrica-aicon"><FaRocket /></div>
+              <div className="wm-intl-southafrica-adv-glow"></div>
+              <div className="wm-intl-southafrica-adv-top">
+                <div className="wm-intl-southafrica-aicon"><FaRocket /></div>
+                <span className="wm-intl-southafrica-adv-badge">TELEMETRY</span>
+              </div>
               <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
+              <div className="wm-intl-southafrica-adv-check-row">
+                <FaCheck className="wm-intl-southafrica-adv-check" /> <span>24/7 Live BI Access</span>
+              </div>
             </div>
 
             <div className="wm-intl-southafrica-advantage-card">
-              <div className="wm-intl-southafrica-aicon"><FaHeadset /></div>
+              <div className="wm-intl-southafrica-adv-glow"></div>
+              <div className="wm-intl-southafrica-adv-top">
+                <div className="wm-intl-southafrica-aicon"><FaHeadset /></div>
+                <span className="wm-intl-southafrica-adv-badge">DEDICATED</span>
+              </div>
               <h4>Dedicated Senior Squad</h4>
               <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
+              <div className="wm-intl-southafrica-adv-check-row">
+                <FaCheck className="wm-intl-southafrica-adv-check" /> <span>Direct Senior Access</span>
+              </div>
             </div>
 
             <div className="wm-intl-southafrica-advantage-card">
-              <div className="wm-intl-southafrica-aicon"><FaClock /></div>
+              <div className="wm-intl-southafrica-adv-glow"></div>
+              <div className="wm-intl-southafrica-adv-top">
+                <div className="wm-intl-southafrica-aicon"><FaClock /></div>
+                <span className="wm-intl-southafrica-adv-badge">FLEXIBILITY</span>
+              </div>
               <h4>Zero Mandatory Lock-In</h4>
               <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
+              <div className="wm-intl-southafrica-adv-check-row">
+                <FaCheck className="wm-intl-southafrica-adv-check" /> <span>Month-to-Month Freedom</span>
+              </div>
             </div>
           </div>
         </div>

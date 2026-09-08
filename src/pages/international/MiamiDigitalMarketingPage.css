@@ -2,6 +2,31 @@
    WEB MOK - WM-INTL-MIAMI DEDICATED STYLESHEET (14 COMPREHENSIVE SECTIONS)
    ========================================================================== */
 
+/* Keyframe Animations */
+@keyframes wmPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes wmPulseCyan {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(0, 212, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+  }
+}
+
 .wm-intl-miami-page-root {
   background-color: #ffffff;
   color: #1e293b;
@@ -20,7 +45,7 @@
 /* 1. HERO SECTION (CLEAN WHITE) */
 .wm-intl-miami-hero-section {
   background: #ffffff;
-  padding: 65px 0 55px;
+  padding: 70px 0 60px;
   position: relative;
   border-bottom: 1px solid #f1f5f9;
 }
@@ -96,14 +121,14 @@
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
-  padding: 13px 26px;
-  border-radius: 6px;
+  padding: 14px 28px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 16px rgba(7, 20, 38, 0.25);
   text-decoration: none;
 }
@@ -111,8 +136,8 @@
 .wm-intl-miami-btn-primary:hover {
   background: #00a8cc;
   color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 168, 204, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 168, 204, 0.4);
 }
 
 .wm-intl-miami-btn-outline {
@@ -120,21 +145,21 @@
   color: #071426;
   font-size: 14px;
   font-weight: 700;
-  padding: 12px 24px;
-  border-radius: 6px;
+  padding: 13px 26px;
+  border-radius: 8px;
   border: 1.5px solid #071426;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .wm-intl-miami-btn-outline:hover {
   background: #071426;
   color: #ffffff;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 /* Trust Cards Stack */
@@ -147,30 +172,30 @@
 .wm-intl-miami-trust-card {
   background: #ffffff;
   border: 1.5px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 14px 20px;
+  border-radius: 14px;
+  padding: 16px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
 }
 
 .wm-intl-miami-trust-card:hover {
   border-color: #00a8cc;
-  transform: translateX(4px);
-  box-shadow: 0 8px 22px rgba(11, 79, 138, 0.08);
+  transform: translateX(6px);
+  box-shadow: 0 10px 25px rgba(11, 79, 138, 0.1);
 }
 
 .wm-intl-miami-tcard-info h4 {
   font-size: 15px;
   font-weight: 800;
   color: #0f172a;
-  margin: 0 0 2px;
+  margin: 0 0 3px;
 }
 
 .wm-intl-miami-tcard-info p {
-  font-size: 12px;
+  font-size: 12.5px;
   color: #64748b;
   margin: 0;
   display: flex;
@@ -185,8 +210,8 @@
 }
 
 .wm-intl-miami-tcard-badge {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -204,10 +229,11 @@
 .wm-intl-miami-inpage-nav {
   position: sticky;
   top: 80px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid #e2e8f0;
   z-index: 90;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .wm-intl-miami-inpage-nav-inner {
@@ -215,7 +241,7 @@
   align-items: center;
   gap: 8px;
   overflow-x: auto;
-  padding: 10px 0;
+  padding: 12px 0;
   scrollbar-width: none;
 }
 
@@ -228,7 +254,7 @@
   font-weight: 700;
   color: #475569;
   text-decoration: none;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 20px;
   white-space: nowrap;
   background: #f8fafc;
@@ -245,7 +271,7 @@
 /* 3. STATS STRIP (DARK NAVY ACCENT STRIP) */
 .wm-intl-miami-stats-strip {
   background: #071426;
-  padding: 34px 0;
+  padding: 38px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -256,54 +282,70 @@
 }
 
 .wm-intl-miami-stat-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 20px 22px;
+  border-radius: 12px;
+  padding: 22px 24px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.wm-intl-miami-stat-card:hover {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.35);
+  transform: translateY(-4px);
 }
 
 .wm-intl-miami-stat-card strong {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 900;
   color: #00d4ff;
+  letter-spacing: -0.5px;
 }
 
 .wm-intl-miami-stat-card span {
-  font-size: 12.5px;
+  font-size: 13px;
   color: #cbd5e1;
   font-weight: 600;
 }
 
-/* 4. SERVICES SUITE (CLEAN WHITE) */
+/* ==========================================================================
+   4. SERVICES SUITE (PREMIUM ANIMATED CARDS)
+   ========================================================================== */
 .wm-intl-miami-services-section {
-  padding: 80px 0;
+  padding: 85px 0 90px;
   background: #ffffff;
+  position: relative;
 }
 
 .wm-intl-miami-sec-heading-center {
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 
 .wm-intl-miami-sec-badge {
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #0b4f8a;
-  display: block;
-  margin-bottom: 8px;
+  background: rgba(11, 79, 138, 0.08);
+  border: 1px solid rgba(11, 79, 138, 0.18);
+  padding: 5px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 12px;
 }
 
 .wm-intl-miami-sec-h2 {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 900;
   color: #0f172a;
   margin: 0 0 14px;
+  letter-spacing: -0.5px;
 }
 
 .wm-intl-miami-sec-h2 span {
@@ -311,9 +353,9 @@
 }
 
 .wm-intl-miami-sec-bar-center {
-  width: 60px;
+  width: 64px;
   height: 4px;
-  background: #00a8cc;
+  background: linear-gradient(90deg, #0b4f8a, #00a8cc);
   margin: 0 auto;
   border-radius: 2px;
 }
@@ -325,52 +367,143 @@
 }
 
 .wm-intl-miami-service-card {
+  position: relative;
   background: #ffffff;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 32px 24px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-  transition: all 0.25s ease;
+  border: 1.5px solid rgba(11, 79, 138, 0.12);
+  border-radius: 18px;
+  padding: 34px 28px 26px;
+  box-shadow: 0 10px 30px rgba(11, 79, 138, 0.04);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.wm-intl-miami-service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #00a8cc, #0b4f8a, #00d4ff);
+  transform: scaleX(0.2);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.wm-intl-miami-svc-card-glow {
+  position: absolute;
+  top: -35px;
+  right: -35px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 168, 204, 0.14) 0%, transparent 70%);
+  pointer-events: none;
+  transition: transform 0.45s ease;
 }
 
 .wm-intl-miami-service-card:hover {
-  transform: translateY(-4px);
-  border-color: #00a8cc;
-  box-shadow: 0 12px 30px rgba(11, 79, 138, 0.08);
+  transform: translateY(-8px);
+  border-color: rgba(0, 168, 204, 0.45);
+  box-shadow: 0 22px 48px rgba(11, 79, 138, 0.12);
+}
+
+.wm-intl-miami-service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.wm-intl-miami-service-card:hover .wm-intl-miami-svc-card-glow {
+  transform: scale(1.7);
+}
+
+.wm-intl-miami-svc-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .wm-intl-miami-svc-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
-  background: rgba(11, 79, 138, 0.08);
-  color: #0b4f8a;
+  width: 54px;
+  height: 54px;
+  border-radius: 16px 6px 16px 6px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.12), rgba(11, 79, 138, 0.08));
+  border: 1.5px solid rgba(0, 212, 255, 0.25);
+  color: #00a8cc;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  margin-bottom: 18px;
+  transition: all 0.35s ease;
+}
+
+.wm-intl-miami-service-card:hover .wm-intl-miami-svc-icon {
+  background: #071426;
+  color: #00e5ff;
+  transform: rotate(-6deg) scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 168, 204, 0.3);
+}
+
+.wm-intl-miami-svc-num {
+  font-size: 13px;
+  font-weight: 900;
+  color: #94a3b8;
+  font-family: 'Montserrat', monospace, sans-serif;
+  letter-spacing: 1px;
 }
 
 .wm-intl-miami-service-card h3 {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 800;
   color: #0f172a;
   margin: 0 0 12px;
+  line-height: 1.35;
 }
 
 .wm-intl-miami-service-card p {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: #64748b;
-  margin: 0;
+  margin: 0 0 22px;
+  flex-grow: 1;
+}
+
+.wm-intl-miami-svc-card-footer {
+  padding-top: 16px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.wm-intl-miami-svc-card-btn {
+  background: transparent;
+  border: none;
+  color: #0b4f8a;
+  font-weight: 700;
+  font-size: 13.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.wm-intl-miami-svc-card-btn:hover {
+  color: #00a8cc;
+}
+
+.wm-intl-miami-svc-arrow {
+  transition: transform 0.2s ease;
+}
+
+.wm-intl-miami-svc-card-btn:hover .wm-intl-miami-svc-arrow {
+  transform: translateX(5px);
 }
 
 /* 5. WHY HIRE OUTSIDE (SOFT GREY-BLUE) */
 .wm-intl-miami-whyoutside-section {
-  padding: 80px 0;
+  padding: 85px 0 90px;
   background: #f8fafc;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
@@ -400,16 +533,16 @@
 
 .wm-intl-miami-compare-table {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  border: 1px solid rgba(11, 79, 138, 0.12);
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
 }
 
 .wm-intl-miami-compare-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 14px 18px;
+  padding: 16px 20px;
   border-bottom: 1px solid #f1f5f9;
   font-size: 13.5px;
   align-items: center;
@@ -445,7 +578,7 @@
 
 /* 6. RESULTS TELEMETRY (CLEAN WHITE) */
 .wm-intl-miami-results-section {
-  padding: 80px 0;
+  padding: 85px 0 90px;
   background: #ffffff;
 }
 
@@ -456,42 +589,68 @@
 }
 
 .wm-intl-miami-result-card {
-  background: #032e58;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 30px 22px;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(11, 79, 138, 0.12);
+  border-radius: 16px;
+  padding: 34px 24px;
   text-align: center;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
-  transition: all 0.25s ease;
+  box-shadow: 0 8px 24px rgba(11, 79, 138, 0.04);
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.wm-intl-miami-result-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #0b4f8a, #00a8cc);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s ease;
 }
 
 .wm-intl-miami-result-card:hover {
-  transform: translateY(-4px);
-  border-color: #00a8cc;
-  box-shadow: 0 10px 25px rgba(11, 79, 138, 0.08);
+  transform: translateY(-6px);
+  border-color: rgba(0, 168, 204, 0.45);
+  box-shadow: 0 18px 40px rgba(11, 79, 138, 0.1);
+}
+
+.wm-intl-miami-result-card:hover::after {
+  transform: scaleX(1);
 }
 
 .wm-intl-miami-result-card strong {
-  font-size: 34px;
+  font-size: 38px;
   font-weight: 900;
-  color: #f3f4f6;
+  background: linear-gradient(135deg, #071426 0%, #00a8cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: block;
   margin-bottom: 8px;
+  letter-spacing: -0.5px;
 }
 
 .wm-intl-miami-result-card p {
-  font-size: 15px;
-  color: #f7f8fa;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #64748b;
   margin: 0;
   line-height: 1.45;
 }
 
-/* 7. MARKET INTELLIGENCE (SOFT GREY-BLUE) */
+/* ==========================================================================
+   7. MARKET INTELLIGENCE (INSPIRED BY OUTSTANDING REVIEWS CARDS)
+   ========================================================================== */
 .wm-intl-miami-market-section {
-  padding: 80px 0;
-  background: #f8fafc;
+  padding: 85px 0 90px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
+  position: relative;
 }
 
 .wm-intl-miami-market-grid {
@@ -501,96 +660,245 @@
 }
 
 .wm-intl-miami-market-card {
+  position: relative;
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 28px 26px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(11, 79, 138, 0.12);
+  border-radius: 18px;
+  padding: 34px 30px;
+  box-shadow: 0 8px 24px rgba(11, 79, 138, 0.05);
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.wm-intl-miami-market-card-glow {
+  position: absolute;
+  bottom: -35px;
+  right: -35px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 168, 204, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  transition: transform 0.4s ease;
+}
+
+.wm-intl-miami-market-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 168, 204, 0.45);
+  box-shadow: 0 22px 48px rgba(11, 79, 138, 0.12);
+}
+
+.wm-intl-miami-market-card:hover .wm-intl-miami-market-card-glow {
+  transform: scale(1.6);
+}
+
+.wm-intl-miami-market-card-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.wm-intl-miami-market-badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wm-intl-miami-market-badge {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #00a8cc;
+  background: rgba(0, 168, 204, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.wm-intl-miami-market-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.wm-intl-miami-market-pulse-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+  animation: wmPulse 2s infinite ease-in-out;
 }
 
 .wm-intl-miami-market-card h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 800;
   color: #0f172a;
-  margin: 0 0 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.wm-intl-miami-market-card h4::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: #00a8cc;
-  border-radius: 50%;
-  display: inline-block;
+  margin: 0 0 12px;
+  line-height: 1.35;
 }
 
 .wm-intl-miami-market-card p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #64748b;
+  font-size: 14.5px;
+  line-height: 1.68;
+  color: #475569;
   margin: 0;
 }
 
-/* 8. 4-STEP PROCESS (CLEAN WHITE) */
+/* ==========================================================================
+   8. 4-STEP PROCESS (MATCHING HOME HOW WE WORK FLOATING CARDS)
+   ========================================================================== */
 .wm-intl-miami-process-section {
-  padding: 80px 0;
+  padding: 85px 0 90px;
   background: #ffffff;
+  position: relative;
 }
 
 .wm-intl-miami-process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  position: relative;
+  z-index: 2;
 }
 
 .wm-intl-miami-process-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 28px 20px;
   position: relative;
-  transition: all 0.25s ease;
+  min-height: 240px;
+  padding: 32px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 8px 28px 8px 28px;
+  border: 1px solid rgba(14, 83, 145, 0.16);
+  box-shadow: 0 12px 32px rgba(12, 58, 105, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(.2, .8, .2, 1), box-shadow 0.45s ease, border-radius 0.45s ease, border-color 0.45s ease;
+}
+
+.wm-intl-miami-process-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #00a9d6, #1260a8, #00a9d6);
+  transform: scaleX(.25);
+  transform-origin: left;
+  transition: transform .5s ease;
+}
+
+.wm-intl-miami-proc-card-glow {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  right: -80px;
+  bottom: -80px;
+  border-radius: 50%;
+  background: rgba(0, 169, 214, 0.08);
+  filter: blur(2px);
+  pointer-events: none;
+  transition: transform .5s ease, background .5s ease;
 }
 
 .wm-intl-miami-process-card:hover {
-  transform: translateY(-4px);
-  border-color: #00a8cc;
-  background: #ffffff;
-  box-shadow: 0 10px 25px rgba(11, 79, 138, 0.08);
+  transform: translateY(-12px);
+  border-radius: 28px 8px 28px 8px;
+  border-color: rgba(0, 169, 214, .45);
+  box-shadow: 0 24px 50px rgba(13, 55, 104, .13), 0 8px 24px rgba(0, 169, 214, .12);
+}
+
+.wm-intl-miami-process-card:hover::before {
+  transform: scaleX(1);
+}
+
+.wm-intl-miami-process-card:hover .wm-intl-miami-proc-card-glow {
+  transform: scale(1.7);
+  background: rgba(0, 169, 214, .14);
+}
+
+.wm-intl-miami-proc-header-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
 }
 
 .wm-intl-miami-proc-num {
-  font-size: 13px;
+  font-size: 26px;
   font-weight: 900;
   color: #00a8cc;
-  background: rgba(0, 168, 204, 0.1);
-  padding: 4px 10px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 14px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.wm-intl-miami-proc-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 168, 204, 0.12), rgba(11, 79, 138, 0.08));
+  border: 1.5px solid rgba(0, 168, 204, 0.25);
+  color: #0b4f8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.wm-intl-miami-process-card:hover .wm-intl-miami-proc-icon {
+  background: #071426;
+  color: #00e5ff;
+  transform: rotate(-6deg) scale(1.08);
 }
 
 .wm-intl-miami-process-card h4 {
-  font-size: 17px;
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
   font-weight: 800;
   color: #0f172a;
   margin: 0 0 10px;
+  line-height: 1.35;
 }
 
 .wm-intl-miami-process-card p {
+  position: relative;
+  z-index: 2;
   font-size: 13.5px;
   color: #64748b;
-  line-height: 1.55;
-  margin: 0;
+  line-height: 1.6;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.wm-intl-miami-proc-step-tag {
+  position: relative;
+  z-index: 2;
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00a8cc;
+  background: rgba(0, 168, 204, 0.08);
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  align-self: flex-start;
 }
 
 /* 9. INDUSTRIES (SOFT GREY-BLUE) */
 .wm-intl-miami-industries-section {
-  padding: 80px 0;
-  background: #f8fafc;
+  padding: 85px 0 90px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
 }
@@ -603,23 +911,52 @@
 
 .wm-intl-miami-industry-card {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 26px 22px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
-  transition: all 0.25s ease;
+  border: 1px solid rgba(11, 79, 138, 0.12);
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 6px 20px rgba(11, 79, 138, 0.04);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .wm-intl-miami-industry-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-6px);
   border-color: #00a8cc;
-  box-shadow: 0 8px 20px rgba(11, 79, 138, 0.08);
+  box-shadow: 0 16px 36px rgba(11, 79, 138, 0.1);
+}
+
+.wm-intl-miami-ind-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
 }
 
 .wm-intl-miami-ind-icon {
-  font-size: 22px;
-  color: #0b4f8a;
-  margin-bottom: 12px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(0, 168, 204, 0.1);
+  color: #00a8cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.wm-intl-miami-industry-card:hover .wm-intl-miami-ind-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: #071426;
+  color: #00e5ff;
+}
+
+.wm-intl-miami-ind-tag {
+  font-size: 10px;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 0.8px;
 }
 
 .wm-intl-miami-industry-card h4 {
@@ -632,13 +969,13 @@
 .wm-intl-miami-industry-card p {
   font-size: 13.5px;
   color: #64748b;
-  line-height: 1.5;
+  line-height: 1.55;
   margin: 0;
 }
 
 /* 10. PRICING PLANS (CLEAN WHITE) */
 .wm-intl-miami-pricing-section {
-  padding: 80px 0;
+  padding: 85px 0 90px;
   background: #ffffff;
 }
 
@@ -680,24 +1017,24 @@
 .wm-intl-miami-card {
   background: #ffffff;
   border: 1.5px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 32px 24px;
+  border-radius: 18px;
+  padding: 34px 26px;
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
 }
 
 .wm-intl-miami-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
   border-color: #00a8cc;
-  box-shadow: 0 12px 30px rgba(11, 79, 138, 0.1);
+  box-shadow: 0 20px 45px rgba(11, 79, 138, 0.12);
 }
 
 .wm-intl-miami-card.popular {
   border: 2px solid #00a8cc;
-  box-shadow: 0 8px 30px rgba(0, 168, 204, 0.15);
+  box-shadow: 0 12px 35px rgba(0, 168, 204, 0.18);
 }
 
 .wm-intl-miami-popular-tag {
@@ -705,13 +1042,14 @@
   top: -13px;
   left: 50%;
   transform: translateX(-50%);
-  background: #00a8cc;
+  background: linear-gradient(135deg, #00a8cc, #0b4f8a);
   color: #ffffff;
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 1px;
-  padding: 3px 14px;
-  border-radius: 12px;
+  padding: 4px 16px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 168, 204, 0.3);
 }
 
 .wm-intl-miami-card-top {
@@ -724,32 +1062,32 @@
   text-transform: uppercase;
   color: #0b4f8a;
   background: rgba(11, 79, 138, 0.08);
-  padding: 3px 10px;
-  border-radius: 4px;
+  padding: 4px 12px;
+  border-radius: 6px;
   display: inline-block;
   margin-bottom: 10px;
 }
 
 .wm-intl-miami-card-name {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 900;
   color: #0f172a;
   margin: 0 0 8px;
 }
 
 .wm-intl-miami-card-desc {
-  font-size: 13px;
+  font-size: 13.5px;
   color: #64748b;
-  line-height: 1.5;
+  line-height: 1.55;
   margin: 0;
-  min-height: 40px;
+  min-height: 42px;
 }
 
 .wm-intl-miami-card-pricing {
   margin-bottom: 24px;
   border-top: 1px solid #f1f5f9;
   border-bottom: 1px solid #f1f5f9;
-  padding: 16px 0;
+  padding: 18px 0;
 }
 
 .wm-intl-miami-price-row {
@@ -759,9 +1097,10 @@
 }
 
 .wm-intl-miami-price-val {
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 900;
   color: #0f172a;
+  letter-spacing: -0.5px;
 }
 
 .wm-intl-miami-price-period {
@@ -772,7 +1111,7 @@
 
 .wm-intl-miami-card-features {
   flex-grow: 1;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .wm-intl-miami-card-features h4 {
@@ -780,7 +1119,8 @@
   font-weight: 800;
   color: #334155;
   text-transform: uppercase;
-  margin: 0 0 12px;
+  letter-spacing: 0.5px;
+  margin: 0 0 14px;
 }
 
 .wm-intl-miami-card-features ul {
@@ -789,21 +1129,21 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 11px;
 }
 
 .wm-intl-miami-card-features li {
-  font-size: 13px;
+  font-size: 13.5px;
   color: #475569;
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  line-height: 1.4;
+  gap: 10px;
+  line-height: 1.45;
 }
 
 .wm-intl-miami-feat-check {
   color: #10b981;
-  font-size: 13px;
+  font-size: 14px;
   margin-top: 2px;
   flex-shrink: 0;
 }
@@ -814,32 +1154,34 @@
   color: #ffffff;
   font-size: 14px;
   font-weight: 800;
-  padding: 12px 18px;
+  padding: 13px 20px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(7, 20, 38, 0.2);
 }
 
 .wm-intl-miami-card.popular .wm-intl-miami-select-btn {
-  background: #0b2545;
-  box-shadow: 0 4px 16px rgba(11, 37, 69, 0.3);
+  background: #071426;
+  box-shadow: 0 6px 18px rgba(7, 20, 38, 0.35);
 }
 
 .wm-intl-miami-select-btn:hover {
   background: #00a8cc;
   color: #ffffff;
   transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 168, 204, 0.4);
 }
 
 /* 11. TESTIMONIALS (SOFT GREY-BLUE) */
 .wm-intl-miami-testimonials-section {
-  padding: 80px 0;
-  background: #f8fafc;
+  padding: 85px 0 90px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
 }
@@ -852,101 +1194,181 @@
 
 .wm-intl-miami-testimonial-card {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 32px 28px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(11, 79, 138, 0.12);
+  border-radius: 18px;
+  padding: 34px 30px;
+  box-shadow: 0 6px 20px rgba(11, 79, 138, 0.04);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.wm-intl-miami-testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 168, 204, 0.4);
+  box-shadow: 0 18px 40px rgba(11, 79, 138, 0.1);
 }
 
 .wm-intl-miami-t-stars {
   color: #f59e0b;
   display: flex;
   gap: 4px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  font-size: 15px;
 }
 
 .wm-intl-miami-t-quote {
   font-size: 15px;
-  line-height: 1.65;
+  line-height: 1.7;
   color: #334155;
   font-style: italic;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.wm-intl-miami-t-author {
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
 }
 
 .wm-intl-miami-t-author h5 {
-  font-size: 15px;
+  font-size: 15.5px;
   font-weight: 800;
   color: #0f172a;
   margin: 0 0 2px;
 }
 
 .wm-intl-miami-t-author p {
-  font-size: 12.5px;
+  font-size: 13px;
   color: #64748b;
   margin: 0;
 }
 
-/* 12. OPERATIONAL GUARANTEES / WHY US (CLEAN WHITE) */
+/* ==========================================================================
+   12. OPERATIONAL GUARANTEES / WHY US (CLEAN WHITE)
+   ========================================================================== */
 .wm-intl-miami-advantage-section {
-  padding: 80px 0;
+  padding: 85px 0 90px;
   background: #ffffff;
+  position: relative;
 }
 
 .wm-intl-miami-advantage-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  gap: 24px;
 }
 
 .wm-intl-miami-advantage-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 24px 20px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
-  transition: all 0.25s ease;
+  position: relative;
+  background: #ffffff;
+  border: 1.5px solid rgba(11, 79, 138, 0.12);
+  border-radius: 18px;
+  padding: 32px 24px 24px;
+  box-shadow: 0 10px 30px rgba(11, 79, 138, 0.04);
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.wm-intl-miami-adv-glow {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 168, 204, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  transition: transform 0.4s ease;
 }
 
 .wm-intl-miami-advantage-card:hover {
-  border-color: #00a8cc;
-  background: #ffffff;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(11, 79, 138, 0.08);
+  transform: translateY(-8px);
+  border-color: rgba(0, 168, 204, 0.45);
+  box-shadow: 0 22px 48px rgba(11, 79, 138, 0.12);
+}
+
+.wm-intl-miami-advantage-card:hover .wm-intl-miami-adv-glow {
+  transform: scale(1.6);
+}
+
+.wm-intl-miami-adv-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .wm-intl-miami-aicon {
-  width: 44px;
-  height: 44px;
-  background: rgba(11, 79, 138, 0.08);
-  border-radius: 8px;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px 6px 16px 6px;
+  background: linear-gradient(135deg, rgba(0, 168, 204, 0.12), rgba(11, 79, 138, 0.08));
+  border: 1.5px solid rgba(0, 168, 204, 0.25);
+  color: #00a8cc;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.wm-intl-miami-advantage-card:hover .wm-intl-miami-aicon {
+  background: #071426;
+  color: #00e5ff;
+  transform: scale(1.08) rotate(-4deg);
+  box-shadow: 0 8px 20px rgba(0, 168, 204, 0.3);
+}
+
+.wm-intl-miami-adv-badge {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
   color: #0b4f8a;
-  margin-bottom: 14px;
+  background: rgba(11, 79, 138, 0.08);
+  padding: 4px 10px;
+  border-radius: 20px;
 }
 
 .wm-intl-miami-advantage-card h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   color: #0f172a;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
+  line-height: 1.35;
 }
 
 .wm-intl-miami-advantage-card p {
-  font-size: 13px;
+  font-size: 13.5px;
   color: #64748b;
-  line-height: 1.55;
-  margin: 0;
+  line-height: 1.6;
+  margin: 0 0 18px;
+  flex-grow: 1;
+}
+
+.wm-intl-miami-adv-check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #10b981;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.wm-intl-miami-adv-check {
+  font-size: 13px;
+  flex-shrink: 0;
 }
 
 /* 13. FAQS SECTION (SOFT GREY-BLUE) */
 .wm-intl-miami-faqs-section {
-  padding: 80px 0;
+  padding: 85px 0 90px;
   background: #f8fafc;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
@@ -957,29 +1379,29 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .wm-intl-miami-faq-item {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .wm-intl-miami-faq-item.open {
   border-color: #00a8cc;
-  box-shadow: 0 4px 14px rgba(0, 168, 204, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 168, 204, 0.1);
 }
 
 .wm-intl-miami-faq-q {
   width: 100%;
   background: transparent;
   border: none;
-  padding: 18px 20px;
+  padding: 20px 24px;
   text-align: left;
-  font-size: 15px;
+  font-size: 15.5px;
   font-weight: 700;
   color: #0f172a;
   cursor: pointer;
@@ -994,20 +1416,20 @@
 }
 
 .wm-intl-miami-faq-a {
-  padding: 0 20px 18px;
-  border-top: 1px solid #e2e8f0;
+  padding: 0 24px 20px;
+  border-top: 1px solid #f1f5f9;
 }
 
 .wm-intl-miami-faq-a p {
   font-size: 14px;
-  line-height: 1.65;
+  line-height: 1.68;
   color: #475569;
-  margin: 12px 0 0;
+  margin: 14px 0 0;
 }
 
 /* 14. BOTTOM BANNER (DEEP NAVY LUXURY) */
 .wm-intl-miami-bottom-banner {
-  padding: 60px 0;
+  padding: 65px 0;
   background: linear-gradient(135deg, #071426 0%, #0b2545 100%);
   border-top: 1px solid #e2e8f0;
 }
@@ -1020,14 +1442,14 @@
 }
 
 .wm-intl-miami-banner-text h2 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 900;
   color: #ffffff;
   margin: 0 0 8px;
 }
 
 .wm-intl-miami-banner-text p {
-  font-size: 14.5px;
+  font-size: 15px;
   color: #cbd5e1;
   margin: 0;
 }
@@ -1043,19 +1465,21 @@
   color: #ffffff;
   font-size: 14px;
   font-weight: 800;
-  padding: 13px 22px;
-  border-radius: 6px;
+  padding: 14px 24px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
 }
 
 .wm-intl-miami-bbtn-call:hover {
   background: #059669;
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
 }
 
 .wm-intl-miami-bbtn-quote {
@@ -1064,8 +1488,8 @@
   color: #ffffff;
   font-size: 14px;
   font-weight: 800;
-  padding: 13px 22px;
-  border-radius: 6px;
+  padding: 14px 24px;
+  border-radius: 8px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -1076,6 +1500,7 @@
 .wm-intl-miami-bbtn-quote:hover {
   background: #00a8cc;
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 168, 204, 0.35);
 }
 
 /* ==========================================================================

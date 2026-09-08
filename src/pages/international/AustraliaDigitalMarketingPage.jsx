@@ -26,7 +26,9 @@ import {
   FaShoppingCart,
   FaUtensils,
   FaBriefcase,
-  FaCompass
+  FaCompass,
+  FaRegLightbulb,
+  FaProjectDiagram
 } from 'react-icons/fa';
 import './AustraliaDigitalMarketingPage.css';
 
@@ -430,18 +432,32 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-australia-services-grid">
             {pageData.services.map((svc, i) => (
               <div key={i} className="wm-intl-australia-service-card">
-                <div className="wm-intl-australia-svc-icon">
-                  {svc.icon === 'FaSearch' && <FaSearch />}
-                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
-                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
-                  {svc.icon === 'FaPenNib' && <FaPenNib />}
-                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
-                  {svc.icon === 'FaVideo' && <FaVideo />}
-                  {svc.icon === 'FaChartLine' && <FaChartLine />}
-                  {svc.icon === 'FaCompass' && <FaCompass />}
+                <div className="wm-intl-australia-svc-card-glow"></div>
+                <div className="wm-intl-australia-svc-card-top">
+                  <div className="wm-intl-australia-svc-icon">
+                    {svc.icon === 'FaSearch' && <FaSearch />}
+                    {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                    {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                    {svc.icon === 'FaPenNib' && <FaPenNib />}
+                    {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                    {svc.icon === 'FaVideo' && <FaVideo />}
+                    {svc.icon === 'FaChartLine' && <FaChartLine />}
+                    {svc.icon === 'FaCompass' && <FaCompass />}
+                  </div>
+                  <span className="wm-intl-australia-svc-num">0{i + 1}</span>
                 </div>
                 <h3>{svc.title}</h3>
                 <p>{svc.desc}</p>
+                <div className="wm-intl-australia-svc-card-footer">
+                  <button
+                    type="button"
+                    className="wm-intl-australia-svc-card-btn"
+                    onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - ${svc.title}`)}
+                  >
+                    <span>Explore Solution</span>
+                    <FaArrowRight className="wm-intl-australia-svc-arrow" />
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -497,7 +513,7 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 7. MARKET DYNAMICS */}
+      {/* 7. MARKET DYNAMICS (WHAT WE KNOW ABOUT MARKETING) */}
       <section className="wm-intl-australia-market-section" id="market-dynamics">
         <div className="wm-intl-australia-container">
           <div className="wm-intl-australia-sec-heading-center">
@@ -509,6 +525,14 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-australia-market-grid">
             {pageData.marketInsights.map((mi, i) => (
               <div key={i} className="wm-intl-australia-market-card">
+                <div className="wm-intl-australia-market-card-glow"></div>
+                <div className="wm-intl-australia-market-card-hdr">
+                  <div className="wm-intl-australia-market-badge-wrap">
+                    <span className="wm-intl-australia-market-badge">MARKET DYNAMICS</span>
+                    <span className="wm-intl-australia-market-num">0{i + 1}</span>
+                  </div>
+                  <div className="wm-intl-australia-market-pulse-dot"></div>
+                </div>
                 <h4>{mi.title}</h4>
                 <p>{mi.desc}</p>
               </div>
@@ -517,7 +541,7 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 8. 4-STEP PROCESS */}
+      {/* 8. 4-STEP PROCESS (HOW WE WORK FLOATING CARDS) */}
       <section className="wm-intl-australia-process-section" id="process">
         <div className="wm-intl-australia-container">
           <div className="wm-intl-australia-sec-heading-center">
@@ -531,9 +555,19 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-australia-process-grid">
             {pageData.processSteps.map((ps, i) => (
               <div key={i} className="wm-intl-australia-process-card">
-                <span className="wm-intl-australia-proc-num">STEP {ps.num}</span>
+                <div className="wm-intl-australia-proc-card-glow"></div>
+                <div className="wm-intl-australia-proc-header-row">
+                  <span className="wm-intl-australia-proc-num">0{i + 1}</span>
+                  <div className="wm-intl-australia-proc-icon">
+                    {i === 0 && <FaRegLightbulb />}
+                    {i === 1 && <FaProjectDiagram />}
+                    {i === 2 && <FaLaptopCode />}
+                    {i === 3 && <FaRocket />}
+                  </div>
+                </div>
                 <h4>{ps.title}</h4>
                 <p>{ps.desc}</p>
+                <div className="wm-intl-australia-proc-step-tag">Phase 0{i + 1}</div>
               </div>
             ))}
           </div>
@@ -554,16 +588,19 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-australia-industries-grid">
             {pageData.industries.map((ind, i) => (
               <div key={i} className="wm-intl-australia-industry-card">
-                <div className="wm-intl-australia-ind-icon">
-                  {ind.icon === 'FaBuilding' && <FaBuilding />}
-                  {ind.icon === 'FaUserMd' && <FaUserMd />}
-                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
-                  {ind.icon === 'FaUtensils' && <FaUtensils />}
-                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
-                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
-                  {ind.icon === 'FaCompass' && <FaCompass />}
-                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
-                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                <div className="wm-intl-australia-ind-card-top">
+                  <div className="wm-intl-australia-ind-icon">
+                    {ind.icon === 'FaBuilding' && <FaBuilding />}
+                    {ind.icon === 'FaUserMd' && <FaUserMd />}
+                    {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                    {ind.icon === 'FaUtensils' && <FaUtensils />}
+                    {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                    {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                    {ind.icon === 'FaCompass' && <FaCompass />}
+                    {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                    {ind.icon === 'FaChartLine' && <FaChartLine />}
+                  </div>
+                  <span className="wm-intl-australia-ind-tag">VERTICAL 0{i + 1}</span>
                 </div>
                 <h4>{ind.name}</h4>
                 <p>{ind.desc}</p>
@@ -584,7 +621,7 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-intl-australia-sec-bar-center"></div>
 
             {/* Currency Switcher */}
-            <div className="wm-intl-australia-currency-toggle">
+            <div className="wm-intl-australia-currency-toggle" style={{ marginTop: '24px' }}>
               {[{"code":"AUD","symbol":"A$","rate":1.52},{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
                 <button
                   key={c.code}
@@ -677,8 +714,8 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
-      <section className="wm-intl-australia-advantage-section">
+      {/* 12. OPERATIONAL GUARANTEES / WHY US (CLEAN WHITE) */}
+      <section className="wm-intl-australia-advantage-section" id="why-us-guarantees">
         <div className="wm-intl-australia-container">
           <div className="wm-intl-australia-sec-heading-center">
             <span className="wm-intl-australia-sec-badge">WHY CHOOSE WEBMOK</span>
@@ -688,27 +725,55 @@ const AustraliaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
 
           <div className="wm-intl-australia-advantage-grid">
             <div className="wm-intl-australia-advantage-card">
-              <div className="wm-intl-australia-aicon"><FaShieldAlt /></div>
+              <div className="wm-intl-australia-adv-glow"></div>
+              <div className="wm-intl-australia-adv-top">
+                <div className="wm-intl-australia-aicon"><FaShieldAlt /></div>
+                <span className="wm-intl-australia-adv-badge">STANDARDS</span>
+              </div>
               <h4>100% White-Hat Proven Methods</h4>
               <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
+              <div className="wm-intl-australia-adv-check-row">
+                <FaCheck className="wm-intl-australia-adv-check" /> <span>Google Webmaster Certified</span>
+              </div>
             </div>
 
             <div className="wm-intl-australia-advantage-card">
-              <div className="wm-intl-australia-aicon"><FaRocket /></div>
+              <div className="wm-intl-australia-adv-glow"></div>
+              <div className="wm-intl-australia-adv-top">
+                <div className="wm-intl-australia-aicon"><FaRocket /></div>
+                <span className="wm-intl-australia-adv-badge">TELEMETRY</span>
+              </div>
               <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
+              <div className="wm-intl-australia-adv-check-row">
+                <FaCheck className="wm-intl-australia-adv-check" /> <span>24/7 Live BI Access</span>
+              </div>
             </div>
 
             <div className="wm-intl-australia-advantage-card">
-              <div className="wm-intl-australia-aicon"><FaHeadset /></div>
+              <div className="wm-intl-australia-adv-glow"></div>
+              <div className="wm-intl-australia-adv-top">
+                <div className="wm-intl-australia-aicon"><FaHeadset /></div>
+                <span className="wm-intl-australia-adv-badge">DEDICATED</span>
+              </div>
               <h4>Dedicated Senior Squad</h4>
               <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
+              <div className="wm-intl-australia-adv-check-row">
+                <FaCheck className="wm-intl-australia-adv-check" /> <span>Direct Senior Access</span>
+              </div>
             </div>
 
             <div className="wm-intl-australia-advantage-card">
-              <div className="wm-intl-australia-aicon"><FaClock /></div>
+              <div className="wm-intl-australia-adv-glow"></div>
+              <div className="wm-intl-australia-adv-top">
+                <div className="wm-intl-australia-aicon"><FaClock /></div>
+                <span className="wm-intl-australia-adv-badge">FLEXIBILITY</span>
+              </div>
               <h4>Zero Mandatory Lock-In</h4>
               <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
+              <div className="wm-intl-australia-adv-check-row">
+                <FaCheck className="wm-intl-australia-adv-check" /> <span>Month-to-Month Freedom</span>
+              </div>
             </div>
           </div>
         </div>

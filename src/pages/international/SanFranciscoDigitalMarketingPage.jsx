@@ -26,7 +26,9 @@ import {
   FaShoppingCart,
   FaUtensils,
   FaBriefcase,
-  FaCompass
+  FaCompass,
+  FaRegLightbulb,
+  FaProjectDiagram
 } from 'react-icons/fa';
 import './SanFranciscoDigitalMarketingPage.css';
 
@@ -430,18 +432,32 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-sanfrancisco-services-grid">
             {pageData.services.map((svc, i) => (
               <div key={i} className="wm-intl-sanfrancisco-service-card">
-                <div className="wm-intl-sanfrancisco-svc-icon">
-                  {svc.icon === 'FaSearch' && <FaSearch />}
-                  {svc.icon === 'FaBullhorn' && <FaBullhorn />}
-                  {svc.icon === 'FaShareAlt' && <FaShareAlt />}
-                  {svc.icon === 'FaPenNib' && <FaPenNib />}
-                  {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
-                  {svc.icon === 'FaVideo' && <FaVideo />}
-                  {svc.icon === 'FaChartLine' && <FaChartLine />}
-                  {svc.icon === 'FaCompass' && <FaCompass />}
+                <div className="wm-intl-sanfrancisco-svc-card-glow"></div>
+                <div className="wm-intl-sanfrancisco-svc-card-top">
+                  <div className="wm-intl-sanfrancisco-svc-icon">
+                    {svc.icon === 'FaSearch' && <FaSearch />}
+                    {svc.icon === 'FaBullhorn' && <FaBullhorn />}
+                    {svc.icon === 'FaShareAlt' && <FaShareAlt />}
+                    {svc.icon === 'FaPenNib' && <FaPenNib />}
+                    {svc.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                    {svc.icon === 'FaVideo' && <FaVideo />}
+                    {svc.icon === 'FaChartLine' && <FaChartLine />}
+                    {svc.icon === 'FaCompass' && <FaCompass />}
+                  </div>
+                  <span className="wm-intl-sanfrancisco-svc-num">0{i + 1}</span>
                 </div>
                 <h3>{svc.title}</h3>
                 <p>{svc.desc}</p>
+                <div className="wm-intl-sanfrancisco-svc-card-footer">
+                  <button
+                    type="button"
+                    className="wm-intl-sanfrancisco-svc-card-btn"
+                    onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - ${svc.title}`)}
+                  >
+                    <span>Explore Solution</span>
+                    <FaArrowRight className="wm-intl-sanfrancisco-svc-arrow" />
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -497,7 +513,7 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 7. MARKET DYNAMICS */}
+      {/* 7. MARKET DYNAMICS (WHAT WE KNOW ABOUT MARKETING) */}
       <section className="wm-intl-sanfrancisco-market-section" id="market-dynamics">
         <div className="wm-intl-sanfrancisco-container">
           <div className="wm-intl-sanfrancisco-sec-heading-center">
@@ -509,6 +525,14 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-sanfrancisco-market-grid">
             {pageData.marketInsights.map((mi, i) => (
               <div key={i} className="wm-intl-sanfrancisco-market-card">
+                <div className="wm-intl-sanfrancisco-market-card-glow"></div>
+                <div className="wm-intl-sanfrancisco-market-card-hdr">
+                  <div className="wm-intl-sanfrancisco-market-badge-wrap">
+                    <span className="wm-intl-sanfrancisco-market-badge">MARKET DYNAMICS</span>
+                    <span className="wm-intl-sanfrancisco-market-num">0{i + 1}</span>
+                  </div>
+                  <div className="wm-intl-sanfrancisco-market-pulse-dot"></div>
+                </div>
                 <h4>{mi.title}</h4>
                 <p>{mi.desc}</p>
               </div>
@@ -517,7 +541,7 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 8. 4-STEP PROCESS */}
+      {/* 8. 4-STEP PROCESS (HOW WE WORK FLOATING CARDS) */}
       <section className="wm-intl-sanfrancisco-process-section" id="process">
         <div className="wm-intl-sanfrancisco-container">
           <div className="wm-intl-sanfrancisco-sec-heading-center">
@@ -531,9 +555,19 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-sanfrancisco-process-grid">
             {pageData.processSteps.map((ps, i) => (
               <div key={i} className="wm-intl-sanfrancisco-process-card">
-                <span className="wm-intl-sanfrancisco-proc-num">STEP {ps.num}</span>
+                <div className="wm-intl-sanfrancisco-proc-card-glow"></div>
+                <div className="wm-intl-sanfrancisco-proc-header-row">
+                  <span className="wm-intl-sanfrancisco-proc-num">0{i + 1}</span>
+                  <div className="wm-intl-sanfrancisco-proc-icon">
+                    {i === 0 && <FaRegLightbulb />}
+                    {i === 1 && <FaProjectDiagram />}
+                    {i === 2 && <FaLaptopCode />}
+                    {i === 3 && <FaRocket />}
+                  </div>
+                </div>
                 <h4>{ps.title}</h4>
                 <p>{ps.desc}</p>
+                <div className="wm-intl-sanfrancisco-proc-step-tag">Phase 0{i + 1}</div>
               </div>
             ))}
           </div>
@@ -554,16 +588,19 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-intl-sanfrancisco-industries-grid">
             {pageData.industries.map((ind, i) => (
               <div key={i} className="wm-intl-sanfrancisco-industry-card">
-                <div className="wm-intl-sanfrancisco-ind-icon">
-                  {ind.icon === 'FaBuilding' && <FaBuilding />}
-                  {ind.icon === 'FaUserMd' && <FaUserMd />}
-                  {ind.icon === 'FaBriefcase' && <FaBriefcase />}
-                  {ind.icon === 'FaUtensils' && <FaUtensils />}
-                  {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
-                  {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
-                  {ind.icon === 'FaCompass' && <FaCompass />}
-                  {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
-                  {ind.icon === 'FaChartLine' && <FaChartLine />}
+                <div className="wm-intl-sanfrancisco-ind-card-top">
+                  <div className="wm-intl-sanfrancisco-ind-icon">
+                    {ind.icon === 'FaBuilding' && <FaBuilding />}
+                    {ind.icon === 'FaUserMd' && <FaUserMd />}
+                    {ind.icon === 'FaBriefcase' && <FaBriefcase />}
+                    {ind.icon === 'FaUtensils' && <FaUtensils />}
+                    {ind.icon === 'FaShoppingCart' && <FaShoppingCart />}
+                    {ind.icon === 'FaLaptopCode' && <FaLaptopCode />}
+                    {ind.icon === 'FaCompass' && <FaCompass />}
+                    {ind.icon === 'FaShieldAlt' && <FaShieldAlt />}
+                    {ind.icon === 'FaChartLine' && <FaChartLine />}
+                  </div>
+                  <span className="wm-intl-sanfrancisco-ind-tag">VERTICAL 0{i + 1}</span>
                 </div>
                 <h4>{ind.name}</h4>
                 <p>{ind.desc}</p>
@@ -584,7 +621,7 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-intl-sanfrancisco-sec-bar-center"></div>
 
             {/* Currency Switcher */}
-            <div className="wm-intl-sanfrancisco-currency-toggle">
+            <div className="wm-intl-sanfrancisco-currency-toggle" style={{ marginTop: '24px' }}>
               {[{"code":"USD","symbol":"$","rate":1},{"code":"INR","symbol":"₹","rate":83}].map((c) => (
                 <button
                   key={c.code}
@@ -677,8 +714,8 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 12. OPERATIONAL GUARANTEES / WHY US */}
-      <section className="wm-intl-sanfrancisco-advantage-section">
+      {/* 12. OPERATIONAL GUARANTEES / WHY US (CLEAN WHITE) */}
+      <section className="wm-intl-sanfrancisco-advantage-section" id="why-us-guarantees">
         <div className="wm-intl-sanfrancisco-container">
           <div className="wm-intl-sanfrancisco-sec-heading-center">
             <span className="wm-intl-sanfrancisco-sec-badge">WHY CHOOSE WEBMOK</span>
@@ -688,27 +725,55 @@ const SanFranciscoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
 
           <div className="wm-intl-sanfrancisco-advantage-grid">
             <div className="wm-intl-sanfrancisco-advantage-card">
-              <div className="wm-intl-sanfrancisco-aicon"><FaShieldAlt /></div>
+              <div className="wm-intl-sanfrancisco-adv-glow"></div>
+              <div className="wm-intl-sanfrancisco-adv-top">
+                <div className="wm-intl-sanfrancisco-aicon"><FaShieldAlt /></div>
+                <span className="wm-intl-sanfrancisco-adv-badge">STANDARDS</span>
+              </div>
               <h4>100% White-Hat Proven Methods</h4>
               <p>Strict algorithm compliance protecting your brand equity while compounding organic search traffic.</p>
+              <div className="wm-intl-sanfrancisco-adv-check-row">
+                <FaCheck className="wm-intl-sanfrancisco-adv-check" /> <span>Google Webmaster Certified</span>
+              </div>
             </div>
 
             <div className="wm-intl-sanfrancisco-advantage-card">
-              <div className="wm-intl-sanfrancisco-aicon"><FaRocket /></div>
+              <div className="wm-intl-sanfrancisco-adv-glow"></div>
+              <div className="wm-intl-sanfrancisco-adv-top">
+                <div className="wm-intl-sanfrancisco-aicon"><FaRocket /></div>
+                <span className="wm-intl-sanfrancisco-adv-badge">TELEMETRY</span>
+              </div>
               <h4>Real-Time Telemetry Dashboards</h4>
               <p>Live 24/7 access to your custom performance analytics, keyword rankings, and direct ROI attribution.</p>
+              <div className="wm-intl-sanfrancisco-adv-check-row">
+                <FaCheck className="wm-intl-sanfrancisco-adv-check" /> <span>24/7 Live BI Access</span>
+              </div>
             </div>
 
             <div className="wm-intl-sanfrancisco-advantage-card">
-              <div className="wm-intl-sanfrancisco-aicon"><FaHeadset /></div>
+              <div className="wm-intl-sanfrancisco-adv-glow"></div>
+              <div className="wm-intl-sanfrancisco-adv-top">
+                <div className="wm-intl-sanfrancisco-aicon"><FaHeadset /></div>
+                <span className="wm-intl-sanfrancisco-adv-badge">DEDICATED</span>
+              </div>
               <h4>Dedicated Senior Squad</h4>
               <p>Work directly with dedicated senior strategists and technical growth engineers on call.</p>
+              <div className="wm-intl-sanfrancisco-adv-check-row">
+                <FaCheck className="wm-intl-sanfrancisco-adv-check" /> <span>Direct Senior Access</span>
+              </div>
             </div>
 
             <div className="wm-intl-sanfrancisco-advantage-card">
-              <div className="wm-intl-sanfrancisco-aicon"><FaClock /></div>
+              <div className="wm-intl-sanfrancisco-adv-glow"></div>
+              <div className="wm-intl-sanfrancisco-adv-top">
+                <div className="wm-intl-sanfrancisco-aicon"><FaClock /></div>
+                <span className="wm-intl-sanfrancisco-adv-badge">FLEXIBILITY</span>
+              </div>
               <h4>Zero Mandatory Lock-In</h4>
               <p>Flexible month-to-month contracts. You continue because you see compounding results and profitable pipeline.</p>
+              <div className="wm-intl-sanfrancisco-adv-check-row">
+                <FaCheck className="wm-intl-sanfrancisco-adv-check" /> <span>Month-to-Month Freedom</span>
+              </div>
             </div>
           </div>
         </div>
