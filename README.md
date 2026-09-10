@@ -61,7 +61,7 @@ Complete modern React Single Page Application (SPA) for **Web Mok Pvt. Ltd.** (h
    - HTML Site Map (`/site-map`)
 
 6. **Admin Portal**:
-   - Admin Login (`/admin/login`): Clean authentication interface. Demo login: `admininfo@webmok.in` / `Admin@info1234`.
+   - Admin Login (`/admin/login`): Clean authentication interface. Demo login: 
    - Admin Dashboard (`/admin/dashboard`):
      - Quick KPI summary cards.
      - Manage Services (add, view, delete).
