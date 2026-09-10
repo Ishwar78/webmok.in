@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CallMeModal from './components/CallMeModal';
 import EnquiryModal from './components/EnquiryModal';
+import MobileBottomBar from './components/MobileBottomBar';
 
 // Public Pages
 import Home from './pages/Home';
@@ -1767,6 +1768,14 @@ function App() {
 
       {/* Public Footer */}
       {!isAdminRoute && <Footer />}
+
+      {/* Mobile Sticky Quick-Action Bar (Home, Call, WhatsApp, Inquiry) */}
+      {!isAdminRoute && (
+        <MobileBottomBar
+          onOpenCallMe={() => setIsCallMeOpen(true)}
+          onOpenEnquiry={() => setIsEnquiryOpen(true)}
+        />
+      )}
 
       {/* Interactive Global Modals */}
       <CallMeModal

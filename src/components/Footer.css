@@ -1,4 +1,7 @@
-/* Footer Component Styles */
+
+/* =========================================
+   FOOTER ROOT
+========================================= */
 
 .wm-footer-root {
   background: #071c36;
@@ -9,7 +12,9 @@
 }
 
 
-/* MAIN CONTAINER */
+/* =========================================
+   MAIN CONTAINER
+========================================= */
 
 .wm-footer-container {
   max-width: 1540px;
@@ -18,102 +23,133 @@
 }
 
 
-/* GRID */
+/* =========================================
+   DESKTOP GRID
+========================================= */
 
 .wm-footer-grid {
   display: grid;
-  grid-template-columns: 1.35fr 1fr 1fr 1.25fr;
+
+  grid-template-columns:
+    1.35fr
+    2fr
+    1.25fr;
+
   gap: 50px;
+
+  align-items: start;
 }
 
 
-@media (max-width: 1100px) {
+/* =========================================
+   ABOUT + RESOURCES WRAPPER
+========================================= */
 
-  .wm-footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 45px;
-  }
+.wm-footer-links-wrapper {
+  display: grid;
 
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 50px;
+
+  width: 100%;
 }
 
 
-@media (max-width: 640px) {
-
-  .wm-footer-container {
-    padding: 50px 22px 35px;
-  }
-
-  .wm-footer-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-}
-
-
-/* FOOTER COLUMN */
+/* =========================================
+   FOOTER COLUMN
+========================================= */
 
 .wm-footer-col {
   display: flex;
+
   flex-direction: column;
+
+  min-width: 0;
 }
 
 
-/* =========================
+/* =========================================
    BRAND COLUMN
-========================= */
+========================================= */
 
 .wm-fcol-brand {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 
 .wm-footer-logo {
   display: inline-flex;
+
   align-items: center;
+
   width: fit-content;
+
   margin-bottom: 20px;
+
   text-decoration: none;
 }
 
 
 .wm-footer-logo-image {
   max-width: 190px;
+
   width: 100%;
+
   height: auto;
+
   object-fit: contain;
 }
 
 
-/* DESCRIPTION */
+/* =========================================
+   DESCRIPTION
+========================================= */
 
 .wm-footer-description {
   font-size: 14.5px;
+
   line-height: 1.8;
+
   color: #aab8c8;
+
   margin: 0 0 25px;
+
   max-width: 360px;
 }
 
 
-/* FOLLOW US */
+/* =========================================
+   FOLLOW US
+========================================= */
 
 .wm-footer-social-title {
   color: #ffffff;
+
   font-size: 15px;
+
   font-weight: 700;
+
   margin-bottom: 15px;
+
   text-transform: uppercase;
+
   letter-spacing: 0.5px;
 }
 
 
-/* SOCIAL ICONS */
+/* =========================================
+   SOCIAL ICONS
+========================================= */
 
 .wm-footer-social-links {
   display: flex;
+
   align-items: center;
+
   flex-wrap: wrap;
+
   gap: 10px;
 }
 
@@ -123,12 +159,15 @@
   height: 40px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 10px;
 
-  background: rgba(255, 255, 255, 0.08);
+  background:
+    rgba(255, 255, 255, 0.08);
 
   color: #ffffff;
 
@@ -136,26 +175,35 @@
 
   text-decoration: none;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
 
-  transition: all 0.3s ease;
+  transition:
+    all 0.3s ease;
 }
 
 
 .wm-footer-social-links a:hover {
   background: #00a8cc;
+
   border-color: #00a8cc;
+
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 168, 204, 0.3);
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 168, 204, 0.3);
 }
 
 
-/* =========================
+/* =========================================
    FOOTER HEADINGS
-========================= */
+========================================= */
 
 .wm-footer-heading {
   font-size: 16px;
+
   font-weight: 700;
 
   color: #ffffff;
@@ -164,12 +212,13 @@
 
   text-transform: uppercase;
 
-  margin-bottom: 8px;
+  margin: 0 0 8px;
 }
 
 
 .wm-footer-heading-line {
   width: 42px;
+
   height: 3px;
 
   background: #00a8cc;
@@ -180,20 +229,29 @@
 }
 
 
-/* =========================
+/* =========================================
    FOOTER LINKS
-========================= */
+========================================= */
 
 .wm-footer-links {
   list-style: none;
 
   padding: 0;
+
   margin: 0;
 
   display: flex;
+
   flex-direction: column;
 
   gap: 11px;
+}
+
+
+.wm-footer-links li {
+  margin: 0;
+
+  padding: 0;
 }
 
 
@@ -204,7 +262,8 @@
 
   text-decoration: none;
 
-  transition: all 0.25s ease;
+  transition:
+    all 0.25s ease;
 
   display: inline-block;
 
@@ -219,12 +278,18 @@
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* =========================================
+   OFFICE ADDRESS
+========================================= */
+
+.wm-footer-office {
+  width: 100%;
+}
+
 
 .wm-footer-contact-items {
   display: flex;
+
   flex-direction: column;
 
   gap: 17px;
@@ -267,7 +332,8 @@ a.wm-fcontact-text {
 
   text-decoration: none;
 
-  transition: color 0.25s ease;
+  transition:
+    color 0.25s ease;
 }
 
 
@@ -276,14 +342,17 @@ a.wm-fcontact-text:hover {
 }
 
 
-/* =========================
+/* =========================================
    WORKING HOURS
-========================= */
+========================================= */
 
 .wm-footer-hours-box {
-  background: rgba(255, 255, 255, 0.05);
+  background:
+    rgba(255, 255, 255, 0.05);
 
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
 
   padding: 16px;
 
@@ -312,17 +381,21 @@ a.wm-fcontact-text:hover {
   color: #e5e9ee;
 
   margin: 0 0 5px;
+
+  line-height: 1.5;
 }
 
 
-/* =========================
-   BOTTOM BAR
-========================= */
+/* =========================================
+   COPYRIGHT BAR
+========================================= */
 
 .wm-footer-bottom {
   background: #041224;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
 
   padding: 20px 0;
 }
@@ -351,20 +424,24 @@ a.wm-fcontact-text:hover {
   margin: 0;
 
   text-align: center;
+
+  line-height: 1.5;
 }
 
 
-/* =========================
+/* =========================================
    FLOATING WHATSAPP
-========================= */
+========================================= */
 
 .wm-floating-whatsapp {
   position: fixed;
 
   bottom: 24px;
+
   left: 24px;
 
   width: 54px;
+
   height: 54px;
 
   border-radius: 50%;
@@ -381,15 +458,20 @@ a.wm-fcontact-text:hover {
 
   font-size: 30px;
 
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+  box-shadow:
+    0 6px 20px
+    rgba(37, 211, 102, 0.45);
 
   z-index: 990;
 
-  transition: all 0.3s ease;
+  transition:
+    all 0.3s ease;
 
   text-decoration: none;
 
-  animation: pulseWhatsApp 2s infinite;
+  animation:
+    pulseWhatsApp
+    2s infinite;
 }
 
 
@@ -417,17 +499,19 @@ a.wm-fcontact-text:hover {
 }
 
 
-/* =========================
-   SCROLL TO TOP
-========================= */
+/* =========================================
+   SCROLL TOP
+========================================= */
 
 .wm-scroll-top-btn {
   position: fixed;
 
   bottom: 24px;
+
   right: 24px;
 
   width: 46px;
+
   height: 46px;
 
   border-radius: 50%;
@@ -446,13 +530,16 @@ a.wm-fcontact-text:hover {
 
   font-size: 18px;
 
-  box-shadow: 0 4px 16px rgba(11, 79, 138, 0.35);
+  box-shadow:
+    0 4px 16px
+    rgba(11, 79, 138, 0.35);
 
   z-index: 990;
 
   cursor: pointer;
 
-  transition: all 0.25s ease;
+  transition:
+    all 0.25s ease;
 }
 
 
@@ -463,29 +550,327 @@ a.wm-fcontact-text:hover {
 }
 
 
-/* MOBILE */
+/* =========================================
+   TABLET VIEW
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .wm-footer-grid {
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap: 45px;
+
+  }
+
+
+  .wm-fcol-brand {
+
+    grid-column: span 2;
+
+  }
+
+
+  .wm-footer-links-wrapper {
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 35px;
+
+  }
+
+
+}
+
+
+/* =========================================
+   MOBILE VIEW
+========================================= */
 
 @media (max-width: 640px) {
 
-  .wm-bottom-container {
-    padding: 0 20px;
+
+  /* CONTAINER */
+
+  .wm-footer-container {
+
+    padding:
+      50px 20px 35px;
+
   }
+
+
+  /* MAIN GRID */
+
+  .wm-footer-grid {
+
+    grid-template-columns:
+      1fr;
+
+    gap: 38px;
+
+  }
+
+
+  /* BRAND FULL WIDTH */
+
+  .wm-fcol-brand {
+
+    grid-column: auto;
+
+    width: 100%;
+
+    padding-right: 0;
+
+  }
+
+
+  /* ABOUT + RESOURCES
+     EXACT SIDE BY SIDE */
+
+  .wm-footer-links-wrapper {
+
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    gap: 18px;
+
+    width: 100%;
+
+    align-items: start;
+
+  }
+
+
+  /* EACH COLUMN */
+
+  .wm-footer-links-wrapper .wm-footer-col {
+
+    width: 100%;
+
+    min-width: 0;
+
+  }
+
+
+  /* HEADING */
+
+  .wm-footer-links-wrapper
+  .wm-footer-heading {
+
+    font-size: 13px;
+
+    letter-spacing: 0.2px;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+
+  }
+
+
+  /* HEADING LINE */
+
+  .wm-footer-links-wrapper
+  .wm-footer-heading-line {
+
+    width: 34px;
+
+    height: 2.5px;
+
+    margin-bottom: 16px;
+
+  }
+
+
+  /* LINKS */
+
+  .wm-footer-links-wrapper
+  .wm-footer-links {
+
+    gap: 9px;
+
+  }
+
+
+  .wm-footer-links-wrapper
+  .wm-footer-links li a {
+
+    font-size: 12px;
+
+    line-height: 1.45;
+
+    word-break: break-word;
+
+  }
+
+
+  /* HOVER MOBILE */
+
+  .wm-footer-links li a:hover {
+
+    transform: none;
+
+  }
+
+
+  /* LOGO */
 
   .wm-footer-logo-image {
+
     max-width: 170px;
+
   }
 
+
+  /* DESCRIPTION */
+
+  .wm-footer-description {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+
+  }
+
+
+  /* SOCIAL */
+
+  .wm-footer-social-links {
+
+    gap: 8px;
+
+  }
+
+
+  .wm-footer-social-links a {
+
+    width: 38px;
+
+    height: 38px;
+
+    font-size: 15px;
+
+  }
+
+
+  /* OFFICE ADDRESS
+     FULL WIDTH BELOW */
+
+  .wm-footer-office {
+
+    width: 100%;
+
+  }
+
+
+  /* OFFICE CONTACT */
+
+  .wm-fcontact-text {
+
+    font-size: 14px;
+
+  }
+
+
+  /* COPYRIGHT */
+
+  .wm-bottom-container {
+
+    padding: 0 20px;
+
+  }
+
+
+  .wm-copyright-text {
+
+    font-size: 12.5px;
+
+  }
+
+
+  /* WHATSAPP */
+
   .wm-floating-whatsapp {
+
     width: 50px;
+
     height: 50px;
 
     left: 18px;
+
     bottom: 18px;
+
+    font-size: 27px;
+    display: none;
+
   }
 
+
+  /* SCROLL TOP */
+
   .wm-scroll-top-btn {
+
+    width: 44px;
+
+    height: 44px;
+
     right: 18px;
+
     bottom: 18px;
+    display: none;
+
   }
 
 }
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+
+  .wm-footer-container {
+
+    padding-left: 15px;
+
+    padding-right: 15px;
+
+  }
+
+
+  .wm-footer-links-wrapper {
+
+    gap: 12px;
+
+  }
+
+
+  .wm-footer-links-wrapper
+  .wm-footer-heading {
+
+    font-size: 12px;
+
+  }
+
+
+  .wm-footer-links-wrapper
+  .wm-footer-links li a {
+
+    font-size: 11.5px;
+
+  }
+
+}
+

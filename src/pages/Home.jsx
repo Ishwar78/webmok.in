@@ -37,6 +37,7 @@ import {
   FaGraduationCap
 } from 'react-icons/fa';
 import './Home.css';
+import { resolveMediaUrl, handleImageError } from '../utils/mediaUrl';
 
 const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
   const navigate = useNavigate();
@@ -639,11 +640,50 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
     setHomeFormSuccess(true);
   };
 
-  // Combined all testimonials for the new split-view slider
-  const allTestimonials = [
+  // Combined fallback testimonials for initial render & offline resiliency
+  const defaultTestimonials = [
     ...testimonialsRow1,
     ...testimonialsRow2
   ];
+
+  // Dynamic testimonials state (loaded from admin backend /api/testimonials)
+  const [testimonials, setTestimonials] = useState(defaultTestimonials);
+
+  useEffect(() => {
+    fetch('http://localhost:5005/api/testimonials')
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+          const mapped = json.data.map((item, idx) => {
+            const roleParts = [];
+            if (item.designation) roleParts.push(item.designation);
+            if (item.company) roleParts.push(item.company);
+            const role = roleParts.length > 0
+              ? roleParts.join(', ')
+              : (item.role || item.categoryName || 'Verified Client');
+
+            return {
+              id: item._id || item.id || `testi-${idx}`,
+              name: item.name,
+              role: role,
+              service: item.categoryName || item.service || 'Digital Solutions',
+              avatar: resolveMediaUrl(item.avatar) || '/DeepakSir-1.png',
+              quote: item.text || item.quote || item.title || '',
+              rating: item.rating || 5,
+              date: item.date || ''
+            };
+          });
+          setTestimonials(mapped);
+        }
+      })
+      .catch((err) => {
+        console.warn('Backend server offline, using fallback testimonials:', err.message);
+      });
+  }, []);
+
+  // Ensure current active index is always valid
+  const safeActiveIdx = testimonialActiveIdx < testimonials.length ? testimonialActiveIdx : 0;
+  const currentTestimonial = testimonials[safeActiveIdx] || testimonials[0] || {};
 
   // Prestigious client logos for the right-side logo grid
   const clientLogos = [
@@ -671,22 +711,30 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
 
   // Testimonial autoplay
   useEffect(() => {
+    if (!testimonials || testimonials.length === 0) return;
     testimonialTimerRef.current = setInterval(() => {
-      setTestimonialActiveIdx((prev) => (prev + 1) % allTestimonials.length);
+      setTestimonialActiveIdx((prev) => (prev + 1) % testimonials.length);
     }, 4500);
     return () => clearInterval(testimonialTimerRef.current);
-  }, [allTestimonials.length]);
+  }, [testimonials.length]);
 
   const goToTestimonial = (idx) => {
+    if (!testimonials || testimonials.length === 0) return;
     clearInterval(testimonialTimerRef.current);
     setTestimonialActiveIdx(idx);
     testimonialTimerRef.current = setInterval(() => {
-      setTestimonialActiveIdx((prev) => (prev + 1) % allTestimonials.length);
+      setTestimonialActiveIdx((prev) => (prev + 1) % testimonials.length);
     }, 4500);
   };
 
-  const prevTestimonial = () => goToTestimonial((testimonialActiveIdx - 1 + allTestimonials.length) % allTestimonials.length);
-  const nextTestimonial = () => goToTestimonial((testimonialActiveIdx + 1) % allTestimonials.length);
+  const prevTestimonial = () => {
+    if (!testimonials || testimonials.length === 0) return;
+    goToTestimonial((testimonialActiveIdx - 1 + testimonials.length) % testimonials.length);
+  };
+  const nextTestimonial = () => {
+    if (!testimonials || testimonials.length === 0) return;
+    goToTestimonial((testimonialActiveIdx + 1) % testimonials.length);
+  };
 
   // Counter animation on scroll into view
   useEffect(() => {
@@ -1479,8 +1527,9 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-split-photo-collage">
                 <div className="wm-split-photo-main">
                   <img
-                    src={allTestimonials[testimonialActiveIdx].avatar}
-                    alt={allTestimonials[testimonialActiveIdx].name}
+                    src={currentTestimonial.avatar || '/DeepakSir-1.png'}
+                    alt={currentTestimonial.name || 'Client Review'}
+                    onError={(e) => handleImageError(e, '/DeepakSir-1.png')}
                   />
                 </div>
                 <div className="wm-split-quote-badge">
@@ -1492,20 +1541,21 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-split-testi-card">
                 <div className="wm-split-quote-icon"><FaQuoteLeft /></div>
                 <p className="wm-split-quote-text">
-                  "{allTestimonials[testimonialActiveIdx].quote}"
+                  "{currentTestimonial.quote || ''}"
                 </p>
                 <div className="wm-split-author-row">
                   <img
-                    src={allTestimonials[testimonialActiveIdx].avatar}
-                    alt={allTestimonials[testimonialActiveIdx].name}
+                    src={currentTestimonial.avatar || '/DeepakSir-1.png'}
+                    alt={currentTestimonial.name || 'Client Review'}
                     className="wm-split-author-avatar"
+                    onError={(e) => handleImageError(e, '/DeepakSir-1.png')}
                   />
                   <div className="wm-split-author-info">
-                    <h4 className="wm-split-author-name">{allTestimonials[testimonialActiveIdx].name}</h4>
-                    <span className="wm-split-author-role">{allTestimonials[testimonialActiveIdx].role}</span>
+                    <h4 className="wm-split-author-name">{currentTestimonial.name}</h4>
+                    <span className="wm-split-author-role">{currentTestimonial.role}</span>
                   </div>
                   <div className="wm-split-stars">
-                    {[...Array(5)].map((_, si) => <FaStar key={si} />)}
+                    {[...Array(Math.max(1, Math.min(5, currentTestimonial.rating || 5)))].map((_, si) => <FaStar key={si} />)}
                   </div>
                 </div>
               </div>
@@ -1516,10 +1566,10 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
               <button className="wm-split-arrow" onClick={prevTestimonial} aria-label="Previous">
                 <FaChevronLeft />
               </button>
-              {allTestimonials.map((_, i) => (
+              {testimonials.map((_, i) => (
                 <button
                   key={i}
-                  className={`wm-split-dot${i === testimonialActiveIdx ? ' active' : ''}`}
+                  className={`wm-split-dot${i === safeActiveIdx ? ' active' : ''}`}
                   onClick={() => goToTestimonial(i)}
                   aria-label={`Testimonial ${i + 1}`}
                 />
