@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for OrmServicesPage */
+@import './ServicePageShared.css';
+
+.ormservicespage-root {
+  width: 100%;
+}

@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for WordPressServicesPage */
+@import './ServicePageShared.css';
+
+.wordpressservicespage-root {
+  width: 100%;
+}

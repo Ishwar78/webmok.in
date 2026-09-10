@@ -29,10 +29,12 @@ import {
   FaExternalLinkAlt,
   FaQuoteLeft,
   FaChevronLeft,
+  FaChevronRight,
   FaChevronDown,
   FaChevronUp,
   FaQuestionCircle,
-  FaWhatsapp
+  FaWhatsapp,
+  FaGraduationCap
 } from 'react-icons/fa';
 import './Home.css';
 
@@ -74,6 +76,70 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
   const [reviewsStarted, setReviewsStarted] = useState(false);
   const [reviewVals, setReviewVals] = useState({ gScore: '0.0', fbScore: '0.0', jdScore: '0.0', gCount: 0, fbCount: 0, jdCount: 0 });
   const reviewSectionRef = useRef(null);
+
+  // 10-Step Proven Execution Blueprint covering Web Development & Digital Marketing
+  const workflowSteps = [
+    {
+      num: '01',
+      title: 'Discovery & Market Analysis',
+      category: 'Research',
+      icon: <FaRegLightbulb />
+    },
+    {
+      num: '02',
+      title: 'Audience & Keyword Scoping',
+      category: 'Digital Marketing',
+      icon: <FaSearch />
+    },
+    {
+      num: '03',
+      title: 'Growth Strategy & Architecture',
+      category: 'Planning',
+      icon: <FaProjectDiagram />
+    },
+    {
+      num: '04',
+      title: 'High-Converting UI/UX Design',
+      category: 'Creative Design',
+      icon: <FaLaptopCode />
+    },
+    {
+      num: '05',
+      title: 'Modern Web & App Engineering',
+      category: 'Development',
+      icon: <FaCode />
+    },
+    {
+      num: '06',
+      title: 'Technical & On-Page SEO',
+      category: 'Search Engine',
+      icon: <FaBolt />
+    },
+    {
+      num: '07',
+      title: 'High-ROAS Paid Ads & PPC',
+      category: 'Performance Marketing',
+      icon: <FaBullhorn />
+    },
+    {
+      num: '08',
+      title: 'Social Media & Brand Funnels',
+      category: 'Organic Growth',
+      icon: <FaUsers />
+    },
+    {
+      num: '09',
+      title: 'Rigorous QA & Security Audits',
+      category: 'Quality & Testing',
+      icon: <FaShieldAlt />
+    },
+    {
+      num: '10',
+      title: 'Global Launch, Tracking & Scaling',
+      category: 'Continuous Growth',
+      icon: <FaRocket />
+    }
+  ];
 
   // Tab content data (Embedded directly, no external data.js)
   const tabContents = {
@@ -201,7 +267,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
     }
   };
 
-  // Default Core services list
+  // Default Core services list (including Digital Marketing Course)
   const defaultCoreServices = [
     {
       id: 'web-designing-development-services-company',
@@ -210,6 +276,8 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
       desc: 'Bespoke, blazing-fast, and responsive web applications built with modern frameworks to turn casual visitors into loyal paying customers.',
       tags: ['React.js', 'WordPress', 'Next.js', 'Custom UI/UX'],
       metric: '0.8s Avg Speed',
+      videoUrl: '/Home-Hero.mp4',
+      videoBadge: 'Live Web Demo',
       subFeatures: ['Custom UI/UX Design', 'React & Next.js Apps', 'WordPress & CMS', 'Mobile-First Approach', 'Speed Optimization', 'Conversion-Focused Layouts']
     },
     {
@@ -219,6 +287,8 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
       desc: 'Native and hybrid iOS & Android apps with frictionless interfaces, fluid gestures, real-time push notifications, and rock-solid backend APIs.',
       tags: ['Flutter', 'React Native', 'Android', 'iOS'],
       metric: '99.9% Crash Free',
+      videoUrl: '/hh3-CAsds3iE.mp4',
+      videoBadge: 'Mobile App Showcase',
       subFeatures: ['iOS & Android Apps', 'Flutter & React Native', 'App Store Optimization', 'Push Notifications', 'Offline-First Architecture', 'Backend API Integration']
     },
     {
@@ -228,6 +298,8 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
       desc: 'Dominate Google rankings and drive high-intent organic visitors with data-backed technical SEO, high-authority link building, and content strategy.',
       tags: ['Technical SEO', 'Keyword Intent', 'High DA Links', 'Local Maps'],
       metric: '#1 Page Ranks',
+      videoUrl: '/hh2-CH6clGIc.mp4',
+      videoBadge: 'SEO & Ranking Proof',
       subFeatures: ['Technical SEO Audit', 'Keyword Research & Mapping', 'On-Page Optimization', 'High-DA Backlink Building', 'Local SEO & Google Maps', 'Monthly Ranking Reports']
     },
     {
@@ -237,6 +309,8 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
       desc: 'Generate immediate high-ticket leads with laser-targeted Google Search Ads, Display Campaigns, Meta Advertising, and conversion retargeting.',
       tags: ['Google Ads', 'Meta Ads', 'Remarketing', 'High ROAS'],
       metric: '3.4x Avg ROAS',
+      videoUrl: '/hh4-a6dUAa-8.mp4',
+      videoBadge: 'High-ROAS Ad Campaign',
       subFeatures: ['Google Search Campaigns', 'Meta & Instagram Ads', 'Display Retargeting', 'Performance Max', 'Bid Strategy Optimization', 'ROAS Tracking & Reporting']
     },
     {
@@ -246,6 +320,8 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
       desc: 'Scalable e-commerce stores engineered for seamless transactions, frictionless one-click checkouts, secure payment gateways, and inventory control.',
       tags: ['Shopify', 'WooCommerce', 'Custom Stores', 'Stripe/UPI'],
       metric: '+48% Checkout Lift',
+      videoUrl: '/TM0011-CnXlWYx0.mp4',
+      videoBadge: 'E-Commerce Store',
       subFeatures: ['Shopify & WooCommerce', 'Custom Store Development', 'Payment Gateway Integration', 'Product Catalog Management', 'One-Click Checkout Flows', 'Inventory & Order Systems']
     },
     {
@@ -255,7 +331,20 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
       desc: 'Elevate your online presence with strategic content calendars, interactive video graphics, targeted Facebook & Instagram ads, and community trust.',
       tags: ['Instagram', 'LinkedIn', 'Facebook', 'Creative Video'],
       metric: '10x Engagement',
+      videoUrl: '/TM0016-CLpL79Mu.mp4',
+      videoBadge: 'Social Growth Reel',
       subFeatures: ['Facebook & Instagram Ads', 'LinkedIn B2B Campaigns', 'Creative Reels & Graphics', 'Content Calendar Strategy', 'Community Management', 'Influencer Partnerships']
+    },
+    {
+      id: 'advance-digital-marketing-course',
+      title: 'Advance Digital Marketing Course',
+      icon: <FaGraduationCap />,
+      desc: 'Industry-accredited practical training covering Generative AI in Marketing, Google Ads, Meta Funnels, Technical SEO, and 100% Guaranteed Placement Support.',
+      tags: ['AI Marketing', 'Live Campaigns', 'Google Certified', '100% Placement'],
+      metric: '100% Placement',
+      videoUrl: '/TM004-ypZUa7vp.mp4',
+      videoBadge: 'Live Student Review',
+      subFeatures: ['Live ₹5L+ Ad Spend Practice', 'Generative AI Marketing Tools', 'Google & Meta Certification', '1-on-1 Mentor Guidance', 'Real Client Capstone Project', 'Placement Assistance']
     }
   ];
 
@@ -328,9 +417,38 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
     }
   ];
 
+  // Dynamic Portfolio from MongoDB API with static fallback
+  const [dynamicPortfolio, setDynamicPortfolio] = useState(portfolioProjects);
+
+  useEffect(() => {
+    const fetchPortfolio = async () => {
+      try {
+        const res = await fetch('http://localhost:5005/api/portfolio');
+        if (res.ok) {
+          const json = await res.json();
+          if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+            setDynamicPortfolio(json.data.map((item, idx) => ({
+              id: item.slug || item._id || `proj-${idx}`,
+              title: item.title,
+              category: item.category,
+              categoryName: item.categoryName || (item.category === 'web' ? 'Web Development' : item.category === 'app' ? 'App Development' : item.category === 'ecommerce' ? 'E-Commerce' : 'SEO & Marketing'),
+              image: item.image,
+              client: item.client,
+              results: item.results,
+              tag: item.tag || ''
+            })));
+          }
+        }
+      } catch (err) {
+        console.warn('Backend offline, using fallback portfolio projects:', err.message);
+      }
+    };
+    fetchPortfolio();
+  }, []);
+
   const filteredPortfolio = portfolioFilter === 'all'
-    ? portfolioProjects
-    : portfolioProjects.filter((p) => p.category === portfolioFilter);
+    ? dynamicPortfolio
+    : dynamicPortfolio.filter((p) => p.category === portfolioFilter);
 
   // Latest blogs
   const latestBlogs = [
@@ -633,25 +751,57 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
   // Dynamic Outstanding Tabs State from MongoDB API
   const [outstandingData, setOutstandingData] = useState(null);
 
-  // Dynamic Hero Video State from MongoDB API
+  // Dynamic Hero Video & Multi-Slide State from MongoDB API
   const [heroVideoUrl, setHeroVideoUrl] = useState('/Home-Hero.mp4');
+  const [heroSlides, setHeroSlides] = useState([]);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   useEffect(() => {
-    const fetchHeroVideo = async () => {
+    const fetchHeroMedia = async () => {
       try {
-        const res = await fetch('http://localhost:5005/api/hero-video');
-        if (res.ok) {
-          const json = await res.json();
+        const [videoRes, slidesRes] = await Promise.allSettled([
+          fetch('http://localhost:5005/api/hero-video'),
+          fetch('http://localhost:5005/api/hero-slides')
+        ]);
+        if (videoRes.status === 'fulfilled' && videoRes.value.ok) {
+          const json = await videoRes.value.json();
           if (json.success && json.data && json.data.videoUrl) {
             setHeroVideoUrl(json.data.videoUrl);
           }
         }
+        if (slidesRes.status === 'fulfilled' && slidesRes.value.ok) {
+          const json = await slidesRes.value.json();
+          if (json.success && Array.isArray(json.data)) {
+            setHeroSlides(json.data);
+          }
+        }
       } catch (err) {
-        console.warn('Backend offline, using fallback hero video:', err.message);
+        console.warn('Backend offline, using fallback hero video & slides:', err.message);
       }
     };
-    fetchHeroVideo();
+    fetchHeroMedia();
   }, []);
+
+  const activeHeroSlides = heroSlides.filter(s => s.isActive);
+
+  // Auto-play slider only when 2 or more slides exist
+  useEffect(() => {
+    if (activeHeroSlides.length <= 1) return;
+    const interval = setInterval(() => {
+      setActiveSlideIndex(prev => (prev + 1) % activeHeroSlides.length);
+    }, 5500);
+    return () => clearInterval(interval);
+  }, [activeHeroSlides.length]);
+
+  const handlePrevSlide = (e) => {
+    if (e) e.stopPropagation();
+    setActiveSlideIndex(prev => (prev === 0 ? activeHeroSlides.length - 1 : prev - 1));
+  };
+
+  const handleNextSlide = (e) => {
+    if (e) e.stopPropagation();
+    setActiveSlideIndex(prev => (prev + 1) % activeHeroSlides.length);
+  };
 
   useEffect(() => {
     const fetchServices = async () => {
@@ -713,18 +863,97 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
 
   return (
     <div className="wm-home-root">
-      {/* 1. HERO SECTION - NEW SIMPLE PREMIUM 2026 DESIGN */}
+      {/* 1. HERO SECTION - VIDEO & MULTI-SLIDE MEDIA CAROUSEL */}
       <section className="wm-hero-section wm-hero-video-only">
-        <video 
-          key={heroVideoUrl}
-          className="wm-hero-main-video" 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-        >
-          <source src={getMediaUrl(heroVideoUrl)} type="video/mp4" />
-        </video>
+        {activeHeroSlides.length === 0 ? (
+          <video 
+            key={heroVideoUrl}
+            className="wm-hero-main-video" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+          >
+            <source src={getMediaUrl(heroVideoUrl)} type="video/mp4" />
+          </video>
+        ) : activeHeroSlides.length === 1 ? (
+          activeHeroSlides[0].mediaType === 'video' ? (
+            <video 
+              key={activeHeroSlides[0].mediaUrl}
+              className="wm-hero-main-video" 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+            >
+              <source src={getMediaUrl(activeHeroSlides[0].mediaUrl)} type="video/mp4" />
+            </video>
+          ) : (
+            <img 
+              src={getMediaUrl(activeHeroSlides[0].mediaUrl)} 
+              alt={activeHeroSlides[0].title || 'Hero Banner'} 
+              className="wm-hero-main-video wm-hero-main-image"
+            />
+          )
+        ) : (
+          /* Multi-Slide Interactive Auto-play Carousel */
+          <div className="wm-hero-slider-wrap">
+            {activeHeroSlides.map((slide, idx) => (
+              <div 
+                key={slide._id || slide.id || idx}
+                className={`wm-hero-slide-item ${idx === activeSlideIndex ? 'active' : ''}`}
+              >
+                {slide.mediaType === 'video' ? (
+                  <video 
+                    src={getMediaUrl(slide.mediaUrl)} 
+                    className="wm-hero-main-video" 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                  />
+                ) : (
+                  <img 
+                    src={getMediaUrl(slide.mediaUrl)} 
+                    alt={slide.title || `Webmok Slide ${idx + 1}`} 
+                    className="wm-hero-main-video wm-hero-main-image"
+                  />
+                )}
+              </div>
+            ))}
+
+            {/* Slider Navigation Arrows */}
+            <button 
+              type="button" 
+              className="wm-hero-nav-arrow wm-hero-arrow-prev" 
+              onClick={handlePrevSlide}
+              aria-label="Previous Hero Slide"
+            >
+              <FaChevronLeft />
+            </button>
+            <button 
+              type="button" 
+              className="wm-hero-nav-arrow wm-hero-arrow-next" 
+              onClick={handleNextSlide}
+              aria-label="Next Hero Slide"
+            >
+              <FaChevronRight />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="wm-hero-dots-container">
+              {activeHeroSlides.map((_, dotIdx) => (
+                <button
+                  key={dotIdx}
+                  type="button"
+                  className={`wm-hero-dot ${dotIdx === activeSlideIndex ? 'active' : ''}`}
+                  onClick={(e) => { e.stopPropagation(); setActiveSlideIndex(dotIdx); }}
+                  aria-label={`Go to slide ${dotIdx + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </section>
 
       {/* 1.5. ENTERPRISE INDUSTRIES STRIP (Inspired by Saminus & Dibull) */}
@@ -843,8 +1072,11 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                     className={`wm-hsvc-tab${activeHomeService === idx ? ' wm-hsvc-tab--active' : ''}`}
                     onClick={(e) => {
                       setActiveHomeService(idx);
-                      if (e?.currentTarget) {
-                        e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                      const container = e?.currentTarget?.parentElement;
+                      if (container) {
+                        const btn = e.currentTarget;
+                        const scrollTarget = btn.offsetLeft - (container.clientWidth / 2) + (btn.clientWidth / 2);
+                        container.scrollTo({ left: Math.max(0, scrollTarget), behavior: 'smooth' });
                       }
                     }}
                   >
@@ -864,60 +1096,85 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                 if (!currentSvc) return null;
                 return (
                   <div className="wm-hsvc-panel" key={activeHomeService}>
-                    {/* Panel Header */}
-                    <div className="wm-hsvc-panel-header">
-                      <div className="wm-hsvc-panel-iconbox">
-                        {currentSvc.icon}
-                      </div>
-                      <div>
-                        <span className="wm-hsvc-panel-num">{String((activeHomeService < coreServices.length ? activeHomeService : 0) + 1).padStart(2, '0')}</span>
-                        <h3 className="wm-hsvc-panel-title">{currentSvc.title}</h3>
-                      </div>
-                      <span className="wm-hsvc-panel-metric">{currentSvc.metric}</span>
-                    </div>
-
-                    {/* Description */}
-                    <p className="wm-hsvc-panel-desc">{currentSvc.desc}</p>
-
-                    {/* Sub-Features Grid */}
-                    <div className="wm-hsvc-features-grid">
-                      {(currentSvc.subFeatures || []).map((feat, fi) => (
-                        <div key={fi} className="wm-hsvc-feature-item">
-                          <FaArrowRight className="wm-hsvc-feat-arrow" />
-                          <span>{feat}</span>
+                    <div className="wm-hsvc-panel-grid">
+                      {/* Left / Content Column */}
+                      <div className="wm-hsvc-content-col">
+                        {/* Panel Header */}
+                        <div className="wm-hsvc-panel-header">
+                          <div className="wm-hsvc-panel-iconbox">
+                            {currentSvc.icon}
+                          </div>
+                          <div>
+                            <span className="wm-hsvc-panel-num">{String((activeHomeService < coreServices.length ? activeHomeService : 0) + 1).padStart(2, '0')}</span>
+                            <h3 className="wm-hsvc-panel-title">{currentSvc.title}</h3>
+                          </div>
+                          <span className="wm-hsvc-panel-metric">{currentSvc.metric}</span>
                         </div>
-                      ))}
-                    </div>
 
-                    {/* Tags */}
-                    <div className="wm-hsvc-tags-row">
-                      {(currentSvc.tags || []).map((tag, ti) => (
-                        <span key={ti} className="wm-hsvc-tag">{tag}</span>
-                      ))}
-                    </div>
+                        {/* Description */}
+                        <p className="wm-hsvc-panel-desc">{currentSvc.desc}</p>
 
-                    {/* Divider */}
-                    <div className="wm-hsvc-divider"></div>
+                        {/* Sub-Features Grid */}
+                        <div className="wm-hsvc-features-grid">
+                          {(currentSvc.subFeatures || []).map((feat, fi) => (
+                            <div key={fi} className="wm-hsvc-feature-item">
+                              <FaArrowRight className="wm-hsvc-feat-arrow" />
+                              <span>{feat}</span>
+                            </div>
+                          ))}
+                        </div>
 
-                    {/* Action Buttons */}
-                    <div className="wm-hsvc-action-btns">
-                      <button className="wm-hsvc-act-btn wm-hsvc-act-call" onClick={onOpenCallMe}>
-                        <FaPhoneAlt /> Call Now
-                      </button>
-                      <a
-                        className="wm-hsvc-act-btn wm-hsvc-act-wa"
-                        href="https://wa.me/918684031003?text=Hi%20Webmok%20Team,%20I%20am%20interested%20in%20your%20services"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FaWhatsapp /> WhatsApp
-                      </a>
-                      <button className="wm-hsvc-act-btn wm-hsvc-act-enq" onClick={onOpenEnquiry}>
-                        Enquiry Now
-                      </button>
-                      <Link to={`/services/${currentSvc.id}`} className="wm-hsvc-act-btn wm-hsvc-act-explore">
-                        Explore Service <FaArrowRight />
-                      </Link>
+                        {/* Tags */}
+                        <div className="wm-hsvc-tags-row">
+                          {(currentSvc.tags || []).map((tag, ti) => (
+                            <span key={ti} className="wm-hsvc-tag">{tag}</span>
+                          ))}
+                        </div>
+
+                        {/* Divider */}
+                        <div className="wm-hsvc-divider"></div>
+
+                        {/* Action Buttons */}
+                        <div className="wm-hsvc-action-btns">
+                          <a href="tel:8684031003" className="wm-hsvc-act-btn wm-hsvc-act-call">
+                            <FaPhoneAlt /> Call Now
+                          </a>
+                          <a
+                            className="wm-hsvc-act-btn wm-hsvc-act-wa"
+                            href="https://wa.me/918684031003?text=Hi%20Webmok%20Team,%20I%20am%20interested%20in%20your%20services"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaWhatsapp /> WhatsApp
+                          </a>
+                          <button className="wm-hsvc-act-btn wm-hsvc-act-enq" onClick={onOpenEnquiry}>
+                            Enquiry Now
+                          </button>
+                          <Link to={`/services/${currentSvc.id}`} className="wm-hsvc-act-btn wm-hsvc-act-explore">
+                            Explore Service <FaArrowRight />
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Right / Video Column */}
+                      <div className="wm-hsvc-video-col">
+                        <div className="wm-hsvc-video-frame">
+                          <video
+                            key={currentSvc.videoUrl || currentSvc.id}
+                            src={currentSvc.videoUrl || '/Home-Hero.mp4'}
+                            controls
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="wm-hsvc-video-player"
+                          />
+                          <div className="wm-hsvc-video-badge">
+                            <span className="wm-hsvc-video-dot"></span>
+                            {currentSvc.videoBadge || 'Interactive Showcase'}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 );
@@ -931,55 +1188,29 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
 
     
 
-      {/* 5. WORK FLOW SECTION */}
+      {/* 5. WORK FLOW SECTION — CONTINUOUS HORIZONTAL SCROLLING MARQUEE (DESKTOP & MOBILE) */}
       <section className="wm-workflow-section">
         <div className="wm-section-container">
           <div className="wm-section-header">
             <span className="wm-subtitle">How We Work</span>
-            <h2 className="wm-title">Our 5-Step Proven Execution Blueprint</h2>
+            <h2 className="wm-title">Our Proven Digital & Web Execution Blueprint</h2>
             <div className="wm-title-bar-center"></div>
           </div>
+        </div>
 
-          <div className="wm-steps-grid">
-            <div className="wm-step-card">
-              <div className="wm-step-header-row">
-                <div className="wm-step-num">01</div>
-                <div className="wm-step-icon"><FaRegLightbulb /></div>
+        {/* Continuous Horizontal Scrolling Track (Desktop & Mobile) */}
+        <div className="wm-workflow-marquee-wrapper">
+          <div className="wm-workflow-marquee-track">
+            {[...workflowSteps, ...workflowSteps].map((step, idx) => (
+              <div key={idx} className="wm-step-card">
+                <div className="wm-step-header-row">
+                  <div className="wm-step-num">{step.num}</div>
+                  <div className="wm-step-icon">{step.icon}</div>
+                </div>
+                <h4>{step.title}</h4>
+                <span className="wm-step-badge">{step.category}</span>
               </div>
-              <h4>Discovery & Analysis</h4>
-            </div>
-
-            <div className="wm-step-card">
-              <div className="wm-step-header-row">
-                <div className="wm-step-num">02</div>
-                <div className="wm-step-icon"><FaProjectDiagram /></div>
-              </div>
-              <h4>Strategy & Wireframing</h4>
-            </div>
-
-            <div className="wm-step-card">
-              <div className="wm-step-header-row">
-                <div className="wm-step-num">03</div>
-                <div className="wm-step-icon"><FaLaptopCode /></div>
-              </div>
-              <h4>Design & Development</h4>
-            </div>
-
-            <div className="wm-step-card">
-              <div className="wm-step-header-row">
-                <div className="wm-step-num">04</div>
-                <div className="wm-step-icon"><FaShieldAlt /></div>
-              </div>
-              <h4>Testing & QA Audits</h4>
-            </div>
-
-            <div className="wm-step-card">
-              <div className="wm-step-header-row">
-                <div className="wm-step-num">05</div>
-                <div className="wm-step-icon"><FaRocket /></div>
-              </div>
-              <h4>Launch & Scale</h4>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -992,73 +1223,65 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-outstanding-bar"></div>
           </div>
 
-          {/* Tab Navigation Buttons (Step-Card Style Boxes) */}
+          {/* Tab Navigation Buttons (Step-Card Style Boxes with Action Buttons) */}
           <div className="wm-tab-buttons-container">
-            <button
-              className={`wm-tab-card-btn ${activeTab === 'analytics' ? 'active' : ''}`}
-              onClick={() => setActiveTab('analytics')}
-            >
-              <div className="wm-tab-card-top">
-                <span className="wm-tab-card-num">01</span>
-                <div className="wm-tab-card-icon"><FaChartLine /></div>
-              </div>
-              <span className="wm-tab-card-title">{(outstandingData && outstandingData['analytics']?.tabTitle) || 'Real-Time Analytics'}</span>
-            </button>
+            {[
+              { key: 'analytics', num: '01', icon: <FaChartLine />, fallback: 'Real-Time Analytics' },
+              { key: 'ppc', num: '02', icon: <FaBullhorn />, fallback: 'Pay-Per-Click' },
+              { key: 'online', num: '03', icon: <FaLaptopCode />, fallback: 'Online Marketing' },
+              { key: 'email', num: '04', icon: <FaEnvelope />, fallback: 'Email Marketing' },
+              { key: 'social', num: '05', icon: <FaUsers />, fallback: 'Social Marketing' },
+              { key: 'digital', num: '06', icon: <FaRocket />, fallback: 'Digital Marketing' }
+            ].map((tab) => {
+              const tabTitle = (outstandingData && outstandingData[tab.key]?.tabTitle) || tab.fallback;
+              return (
+                <div
+                  key={tab.key}
+                  className={`wm-tab-card-btn ${activeTab === tab.key ? 'active' : ''}`}
+                  onClick={() => setActiveTab(tab.key)}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <div className="wm-tab-card-top">
+                    <span className="wm-tab-card-num">{tab.num}</span>
+                    <div className="wm-tab-card-icon">{tab.icon}</div>
+                  </div>
+                  <span className="wm-tab-card-title">{tabTitle}</span>
 
-            <button
-              className={`wm-tab-card-btn ${activeTab === 'ppc' ? 'active' : ''}`}
-              onClick={() => setActiveTab('ppc')}
-            >
-              <div className="wm-tab-card-top">
-                <span className="wm-tab-card-num">02</span>
-                <div className="wm-tab-card-icon"><FaBullhorn /></div>
-              </div>
-              <span className="wm-tab-card-title">{(outstandingData && outstandingData['ppc']?.tabTitle) || 'Pay-Per-Click'}</span>
-            </button>
-
-            <button
-              className={`wm-tab-card-btn ${activeTab === 'online' ? 'active' : ''}`}
-              onClick={() => setActiveTab('online')}
-            >
-              <div className="wm-tab-card-top">
-                <span className="wm-tab-card-num">03</span>
-                <div className="wm-tab-card-icon"><FaLaptopCode /></div>
-              </div>
-              <span className="wm-tab-card-title">{(outstandingData && outstandingData['online']?.tabTitle) || 'Online Marketing'}</span>
-            </button>
-
-            <button
-              className={`wm-tab-card-btn ${activeTab === 'email' ? 'active' : ''}`}
-              onClick={() => setActiveTab('email')}
-            >
-              <div className="wm-tab-card-top">
-                <span className="wm-tab-card-num">04</span>
-                <div className="wm-tab-card-icon"><FaEnvelope /></div>
-              </div>
-              <span className="wm-tab-card-title">{(outstandingData && outstandingData['email']?.tabTitle) || 'Email Marketing'}</span>
-            </button>
-
-            <button
-              className={`wm-tab-card-btn ${activeTab === 'social' ? 'active' : ''}`}
-              onClick={() => setActiveTab('social')}
-            >
-              <div className="wm-tab-card-top">
-                <span className="wm-tab-card-num">05</span>
-                <div className="wm-tab-card-icon"><FaUsers /></div>
-              </div>
-              <span className="wm-tab-card-title">{(outstandingData && outstandingData['social']?.tabTitle) || 'Social Marketing'}</span>
-            </button>
-
-            <button
-              className={`wm-tab-card-btn ${activeTab === 'digital' ? 'active' : ''}`}
-              onClick={() => setActiveTab('digital')}
-            >
-              <div className="wm-tab-card-top">
-                <span className="wm-tab-card-num">06</span>
-                <div className="wm-tab-card-icon"><FaRocket /></div>
-              </div>
-              <span className="wm-tab-card-title">{(outstandingData && outstandingData['digital']?.tabTitle) || 'Digital Marketing'}</span>
-            </button>
+                  <div className="wm-tab-card-actions">
+                    <a
+                      href="tel:8684031003"
+                      className="wm-tc-btn wm-tc-call"
+                      title="Call Now: 8684031003"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <FaPhoneAlt /> Call
+                    </a>
+                    <button
+                      type="button"
+                      className="wm-tc-btn wm-tc-enq"
+                      title="Inquiry Now"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onOpenEnquiry && onOpenEnquiry(`Outstanding - ${tabTitle}`);
+                      }}
+                    >
+                      Inquiry
+                    </button>
+                    <a
+                      href={`https://wa.me/918684031003?text=${encodeURIComponent(`Hi WebMok Team, I am interested in ${tabTitle}`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="wm-tc-btn wm-tc-wa"
+                      title="WhatsApp Chat"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <FaWhatsapp /> WhatsApp
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* Dynamic Tab Content Box */}
@@ -1099,6 +1322,28 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                         </div>
                       </div>
                     ))}
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="wm-tab-action-btns">
+                    <a href="tel:8684031003" className="wm-tab-act-btn wm-tab-act-call">
+                      <FaPhoneAlt /> Call Now: 8684031003
+                    </a>
+                    <button
+                      type="button"
+                      className="wm-tab-act-btn wm-tab-act-enq"
+                      onClick={() => onOpenEnquiry && onOpenEnquiry(`Outstanding - ${currentTabContent.title}`)}
+                    >
+                      Enquiry Now
+                    </button>
+                    <a
+                      href={`https://wa.me/918684031003?text=${encodeURIComponent(`Hi WebMok Team, I am interested in ${currentTabContent.title}`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="wm-tab-act-btn wm-tab-act-wa"
+                    >
+                      <FaWhatsapp /> WhatsApp Chat
+                    </a>
                   </div>
                 </div>
 
@@ -1164,7 +1409,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
           })()}
 
           {/* 4 Counter Cards with animated counting */}
-          <div className="wm-counter-cards-grid" ref={counterSectionRef}>
+          {/* <div className="wm-counter-cards-grid" ref={counterSectionRef}>
             <div className="wm-counter-card">
               <div className="wm-counter-icon-box wm-cicon-coral">
                 <FaProjectDiagram />
@@ -1212,7 +1457,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <span className="wm-counter-label">Winning Awards</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -1230,24 +1475,12 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
             </div>
 
             <div className="wm-split-slider-area">
-              {/* Decorative person photo collage */}
+              {/* Active client photo */}
               <div className="wm-split-photo-collage">
                 <div className="wm-split-photo-main">
                   <img
-                    src="/public/Rahish Sir.png"
-                    alt="Client"
-                  />
-                </div>
-                <div className="wm-split-photo-bubble wm-bubble-top">
-                  <img
-                    src={allTestimonials[(testimonialActiveIdx + 1) % allTestimonials.length].avatar}
-                    alt="client"
-                  />
-                </div>
-                <div className="wm-split-photo-bubble wm-bubble-bottom">
-                  <img
-                    src={allTestimonials[(testimonialActiveIdx + 2) % allTestimonials.length].avatar}
-                    alt="client"
+                    src={allTestimonials[testimonialActiveIdx].avatar}
+                    alt={allTestimonials[testimonialActiveIdx].name}
                   />
                 </div>
                 <div className="wm-split-quote-badge">
@@ -1418,7 +1651,13 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                 title={`View ${item.title} Case Study`}
               >
                 <div className="wm-port-img-wrap">
-                  <img src={item.image} alt={item.title} className="wm-port-img" loading="lazy" />
+                  <img
+                    src={getMediaUrl(item.image)}
+                    alt={item.title}
+                    className="wm-port-img"
+                    loading="lazy"
+                    onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=700&auto=format&fit=crop&q=80'; }}
+                  />
                   <span className="wm-port-cat-badge">{item.categoryName}</span>
                   <span className="wm-port-tag-badge">{item.tag}</span>
                   <div className="wm-port-hover-overlay">
@@ -1438,12 +1677,25 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
 
                   <div className="wm-port-footer-row">
-                    <span className="wm-port-detail-link">
-                      Explore Case Study
-                    </span>
-                    <span className="wm-port-arrow-circle">
-                      <FaArrowRight />
-                    </span>
+                    <div className="wm-port-left-link">
+                      <span className="wm-port-detail-link">
+                        Explore 
+                      </span>
+                      {/* <span className="wm-port-arrow-circle">
+                        <FaArrowRight />
+                      </span> */}
+                    </div>
+                    <button
+                      type="button"
+                      className="wm-port-enquiry-btn"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        onOpenEnquiry && onOpenEnquiry(`Case Study: ${item.title}`);
+                      }}
+                    >
+                      Inquiry Now
+                    </button>
                   </div>
                 </div>
               </Link>
@@ -1716,7 +1968,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
               {latestBlogs.slice(0, 1).map((blog) => (
                 <Link
                   key={blog.id}
-                  to={`/blogs/${blog.id}`}
+                  to={`/${blog.id}`}
                   className="wm-blog-featured-card"
                   title={`Read ${blog.title}`}
                 >
@@ -1738,7 +1990,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
               {latestBlogs.slice(1, 4).map((blog) => (
                 <Link
                   key={blog.id}
-                  to={`/blogs/${blog.id}`}
+                  to={`/${blog.id}`}
                   className="wm-blog-stacked-card"
                   title={`Read ${blog.title}`}
                 >

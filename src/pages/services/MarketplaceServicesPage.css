@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for MarketplaceServicesPage */
+@import './ServicePageShared.css';
+
+.marketplaceservicespage-root {
+  width: 100%;
+}

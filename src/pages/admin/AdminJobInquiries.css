@@ -1,0 +1,136 @@
+/* Admin Job Inquiries Stylesheet */
+.wm-ajinq-root {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.wm-ajinq-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+}
+
+.wm-ajinq-header h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0d2f57;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wm-ajinq-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13.5px;
+}
+
+.wm-ajinq-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.wm-ajinq-kpi-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wm-ajinq-kpi-val {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0d2f57;
+}
+
+.wm-ajinq-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+  padding: 24px;
+}
+
+.wm-ajinq-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.wm-ajinq-fbtn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.wm-ajinq-fbtn.active {
+  background: #0077b6;
+  color: #ffffff;
+  border-color: #0077b6;
+}
+
+.wm-ajinq-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.wm-ajinq-cv-btn:hover {
+  background: #dbeafe;
+  transform: translateY(-1px);
+}
+
+.wm-ajinq-no-cv {
+  display: inline-block;
+  font-size: 11.5px;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.wm-ajinq-status-select {
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+}
+
+.wm-ajinq-status-select.Pending { background: #fef3c7; color: #92400e; }
+.wm-ajinq-status-select.Reviewed { background: #e0f2fe; color: #0369a1; }
+.wm-ajinq-status-select.Shortlisted { background: #dcfce7; color: #166534; }
+.wm-ajinq-status-select.Rejected { background: #fee2e2; color: #991b1b; }
+
+@media (max-width: 768px) {
+  .wm-ajinq-kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for IosAppServicesPage */
+@import './ServicePageShared.css';
+
+.iosappservicespage-root {
+  width: 100%;
+}

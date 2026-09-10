@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for SocialMediaMarketingPage */
+@import './ServicePageShared.css';
+
+.socialmediamarketingpage-root {
+  width: 100%;
+}

@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for SocialMediaOptimizationPage */
+@import './ServicePageShared.css';
+
+.socialmediaoptimizationpage-root {
+  width: 100%;
+}

@@ -1595,3 +1595,45 @@
     gap: 6px;
   }
 }
+
+
+/* MOBILE 2-COL TELEMETRY RESULTS GRID */
+@media (max-width: 640px) {
+  .wm-intl-europe-results-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .wm-intl-europe-result-card {
+    padding: 20px 10px !important;
+  }
+
+  .wm-intl-europe-result-card strong {
+    font-size: 28px !important;
+    line-height: 1.1 !important;
+  }
+
+  .wm-intl-europe-result-card p {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    margin-top: 6px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .wm-intl-europe-results-grid {
+    gap: 8px !important;
+  }
+
+  .wm-intl-europe-result-card {
+    padding: 16px 6px !important;
+  }
+
+  .wm-intl-europe-result-card strong {
+    font-size: 22px !important;
+  }
+
+  .wm-intl-europe-result-card p {
+    font-size: 11px !important;
+  }
+}

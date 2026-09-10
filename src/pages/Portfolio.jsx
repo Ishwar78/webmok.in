@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaArrowRight, FaFilter } from 'react-icons/fa';
+import { FaArrowRight, FaFilter, FaPaperPlane } from 'react-icons/fa';
 import './Portfolio.css';
 
 const Portfolio = ({ onOpenEnquiry }) => {
@@ -69,9 +69,45 @@ const Portfolio = ({ onOpenEnquiry }) => {
     }
   ];
 
+  const [dynamicProjects, setDynamicProjects] = useState(projects);
+
+  useEffect(() => {
+    const fetchPortfolio = async () => {
+      try {
+        const res = await fetch('http://localhost:5005/api/portfolio');
+        if (res.ok) {
+          const json = await res.json();
+          if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+            setDynamicProjects(json.data.map((item, idx) => ({
+              id: item.slug || item._id || `proj-${idx}`,
+              title: item.title,
+              category: item.category,
+              categoryName: item.categoryName || (item.category === 'web' ? 'Web Development' : item.category === 'app' ? 'App Development' : item.category === 'ecommerce' ? 'E-Commerce' : 'SEO & PPC'),
+              image: item.image,
+              client: item.client,
+              results: item.results,
+              description: item.description || ''
+            })));
+          }
+        }
+      } catch (err) {
+        console.warn('Backend offline, using fallback portfolio:', err.message);
+      }
+    };
+    fetchPortfolio();
+  }, []);
+
+  const getMediaUrl = (url) => {
+    if (!url) return '';
+    if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:')) {
+      return url;
+    }
+    return `http://localhost:5005${url.startsWith('/') ? '' : '/'}${url}`;
+  };
+
   const filtered = activeFilter === 'all'
-    ? projects
-    : projects.filter((p) => p.category === activeFilter);
+    ? dynamicProjects
+    : dynamicProjects.filter((p) => p.category === activeFilter);
 
   return (
     <div className="wm-portpage-root">
@@ -136,7 +172,12 @@ const Portfolio = ({ onOpenEnquiry }) => {
                 title={`View ${item.title} Case Study`}
               >
                 <div className="wm-portpage-img-wrap">
-                  <img src={item.image} alt={item.title} className="wm-portpage-img" />
+                  <img
+                    src={getMediaUrl(item.image)}
+                    alt={item.title}
+                    className="wm-portpage-img"
+                    onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=700&auto=format&fit=crop&q=80'; }}
+                  />
                   <span className="wm-portpage-badge">{item.categoryName}</span>
                 </div>
                 <div className="wm-portpage-body">
@@ -149,8 +190,20 @@ const Portfolio = ({ onOpenEnquiry }) => {
                   </div>
                   <div className="wm-portpage-cta-row">
                     <span className="wm-portpage-link">
-                      Read Case Study Details <FaArrowRight />
+                      Case Study <FaArrowRight />
                     </span>
+                    <button
+                      type="button"
+                      className="wm-portpage-inquiry-btn"
+                      title="Enquire About This Project"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        if (onOpenEnquiry) onOpenEnquiry();
+                      }}
+                    >
+                      <FaPaperPlane /> Inquiry Now
+                    </button>
                   </div>
                 </div>
               </Link>

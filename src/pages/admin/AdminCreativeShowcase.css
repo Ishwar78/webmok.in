@@ -1,0 +1,97 @@
+.wm-adm-creative-root {
+  color: #e2e8f0;
+  width: 100%;
+}
+
+.wm-adm-creative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.wm-adm-creative-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.wm-adm-creative-card:hover {
+  border-color: rgba(0, 212, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.wm-adm-creative-card.inactive {
+  opacity: 0.6;
+}
+
+.wm-adm-ccard-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #020617;
+}
+
+.wm-adm-ccard-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.wm-adm-creative-card:hover .wm-adm-ccard-img {
+  transform: scale(1.05);
+}
+
+.wm-adm-ccard-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  color: #00d4ff;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.wm-adm-ccard-body {
+  padding: 16px;
+  flex: 1;
+}
+
+.wm-adm-ccard-client {
+  display: block;
+  font-size: 0.76rem;
+  color: #00d4ff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.wm-adm-ccard-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  line-height: 1.4;
+}
+
+.wm-adm-ccard-deliv {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.wm-adm-creative-card .wm-adm-rcard-actions {
+  padding: 12px 16px;
+  border-top: 1px solid #1e293b;
+}

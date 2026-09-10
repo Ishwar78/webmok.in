@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for LandingPageServicesPage */
+@import './ServicePageShared.css';
+
+.landingpageservicespage-root {
+  width: 100%;
+}

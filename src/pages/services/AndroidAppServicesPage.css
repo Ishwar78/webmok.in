@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for AndroidAppServicesPage */
+@import './ServicePageShared.css';
+
+.androidappservicespage-root {
+  width: 100%;
+}

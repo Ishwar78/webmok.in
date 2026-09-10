@@ -11,7 +11,12 @@ import {
   FaSignOutAlt,
   FaHome,
   FaLayerGroup,
-  FaVideo
+  FaVideo,
+  FaInfoCircle,
+  FaBoxOpen,
+  FaStar,
+  FaPalette,
+  FaFilm
 } from 'react-icons/fa';
 import './AdminSidebar.css';
 
@@ -48,6 +53,17 @@ const AdminSidebar = ({ activeTab, setActiveTab, onLogout, enquiryCount = 6, con
 
         {/* <div className="wm-admin-nav-group-label">CONTENT & CMS</div> */}
 
+        {/* Dedicated About Us Page CMS Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'about' ? 'active' : ''}`}
+          onClick={() => setActiveTab('about')}
+          title="Manage About Us Page Content (Hero Bento, Corporate Profile, Expertise & Execution, Executive Guidance)"
+        >
+          <FaInfoCircle className="wm-admin-btn-icon" />
+          <span>Manage About Us</span>
+          <span className="wm-nav-pill-badge wm-pill-blue">CMS</span>
+        </button>
+
         {/* Dedicated Blog Management Button */}
         <button
           className={`wm-admin-nav-btn ${activeTab === 'blogs' ? 'active' : ''}`}
@@ -74,10 +90,10 @@ const AdminSidebar = ({ activeTab, setActiveTab, onLogout, enquiryCount = 6, con
         <button
           className={`wm-admin-nav-btn ${activeTab === 'hero-video' ? 'active' : ''}`}
           onClick={() => setActiveTab('hero-video')}
-          title="Upload and Manage Home Page Hero Video"
+          title="Upload and Manage Home Page Hero Images & Videos (Slider)"
         >
           <FaVideo className="wm-admin-btn-icon" />
-          <span>Hero Video</span>
+          <span>Hero Slider / Video</span>
           <span className="wm-nav-pill-badge wm-pill-purple">Hero</span>
         </button>
 
@@ -101,12 +117,89 @@ const AdminSidebar = ({ activeTab, setActiveTab, onLogout, enquiryCount = 6, con
           <span>Manage Services</span>
         </button>
 
+        {/* Dedicated Package Management Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'packages' ? 'active' : ''}`}
+          onClick={() => setActiveTab('packages')}
+          title="Manage Package Pages, Custom Pricing Tiers & Image Uploads"
+        >
+          <FaBoxOpen className="wm-admin-btn-icon" />
+          <span>Manage Packages</span>
+          <span className="wm-nav-pill-badge wm-pill-blue">CMS</span>
+        </button>
+
+        {/* Dedicated Testimonials Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'testimonials' ? 'active' : ''}`}
+          onClick={() => setActiveTab('testimonials')}
+          title="Add, Update, and Manage Client Testimonials & Google Reviews"
+        >
+          <FaStar className="wm-admin-btn-icon" />
+          <span>Testimonials</span>
+          <span className="wm-nav-pill-badge wm-pill-purple">Reviews</span>
+        </button>
+
+        {/* Dedicated Video Reviews Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'video-reviews' ? 'active' : ''}`}
+          onClick={() => setActiveTab('video-reviews')}
+          title="Upload and Manage Student & Client Video Reviews"
+        >
+          <FaVideo className="wm-admin-btn-icon" />
+          <span>Video Reviews</span>
+          <span className="wm-nav-pill-badge wm-pill-blue">Videos</span>
+        </button>
+
+        {/* Dedicated Creative Showcase Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'creative-showcase' ? 'active' : ''}`}
+          onClick={() => setActiveTab('creative-showcase')}
+          title="Upload Packaging, Social Creatives, Branding & UI/UX Showcase Artworks"
+        >
+          <FaPalette className="wm-admin-btn-icon" />
+          <span>Creative Showcase</span>
+          <span className="wm-nav-pill-badge wm-pill-purple">Designs</span>
+        </button>
+
+        {/* Dedicated Video Showcase Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'video-showcase' ? 'active' : ''}`}
+          onClick={() => setActiveTab('video-showcase')}
+          title="Upload Showcase Films, CGI Renders & YouTube Commercial Links"
+        >
+          <FaFilm className="wm-admin-btn-icon" />
+          <span>Video Showcase</span>
+          <span className="wm-nav-pill-badge wm-pill-blue">Films</span>
+        </button>
+
         <button
           className={`wm-admin-nav-btn ${activeTab === 'portfolio' ? 'active' : ''}`}
           onClick={() => setActiveTab('portfolio')}
         >
           <FaBriefcase className="wm-admin-btn-icon" />
           <span>Manage Portfolio</span>
+        </button>
+
+        {/* Dedicated Job Vacancies Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'jobs' ? 'active' : ''}`}
+          onClick={() => setActiveTab('jobs')}
+          title="Create, Edit, and Manage Public Job Vacancies"
+        >
+          <FaBriefcase className="wm-admin-btn-icon" />
+          <span>Manage Jobs</span>
+          <span className="wm-nav-pill-badge wm-pill-blue">Career</span>
+        </button>
+
+        {/* Dedicated Job Candidate Inquiries Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'job-inquiries' ? 'active' : ''}`}
+          onClick={() => setActiveTab('job-inquiries')}
+          title="Review Candidate Applications and Download Uploaded CVs"
+        >
+          <FaClipboardList className="wm-admin-btn-icon" />
+          <span>Job Inquiries</span>
+          <span className="wm-nav-pill-badge wm-pill-purple">Leads</span>
         </button>
       </nav>
 

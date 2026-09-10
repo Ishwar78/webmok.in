@@ -292,7 +292,7 @@
 .wm-pkg-sec-title {
   font-size: 34px;
   font-weight: 800;
-  color: #e8e9eb;
+  color: #1d78d2;
   line-height: 1.25;
   margin: 0 0 14px 0;
 }
@@ -739,13 +739,9 @@
     font-size: 38px;
   }
 
-  .wm-pkg-cards-grid.wm-grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* .wm-pkg-cards-grid.wm-grid-4 kept 1-row on desktop */
 
-  .wm-pkg-cards-grid.wm-grid-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* .wm-pkg-cards-grid.wm-grid-3 kept 1-row on desktop */
 
   .wm-pkg-why-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -3189,5 +3185,56 @@
   .wm-pkg-btn-packages-outline {
     padding: 10px 4px;
     font-size: 11.5px;
+  }
+}
+
+
+/* ==========================================================================
+   DESKTOP 1-ROW PRICING GRID ENFORCEMENT
+   ========================================================================== */
+@media (min-width: 769px) {
+  .wm-pkg-cards-grid {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: 1fr !important;
+    grid-template-columns: none !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+  }
+
+  .wm-pkg-cards-grid.wm-grid-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-flow: dense !important;
+  }
+
+  .wm-pkg-cards-grid.wm-grid-4 {
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-auto-flow: dense !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1180px) {
+  .wm-pkg-cards-grid {
+    gap: 12px !important;
+  }
+  .wm-pkg-card {
+    padding: 24px 14px !important;
+  }
+  .wm-pkg-price-val {
+    font-size: 24px !important;
+  }
+  .wm-pkg-card-name {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .wm-pkg-cards-grid,
+  .wm-pkg-cards-grid.wm-grid-4,
+  .wm-pkg-cards-grid.wm-grid-3 {
+    display: grid !important;
+    grid-auto-flow: row !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
 }

@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for WebDesignServicesPage */
+@import './ServicePageShared.css';
+
+.webdesignservicespage-root {
+  width: 100%;
+}

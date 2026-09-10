@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for LogoDesignServicesPage */
+@import './ServicePageShared.css';
+
+.logodesignservicespage-root {
+  width: 100%;
+}

@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
   FaArrowLeft,
+  FaArrowRight,
   FaCalendarAlt,
+  FaRegCalendarAlt,
   FaUser,
   FaTag,
   FaShareAlt,
@@ -15,6 +17,7 @@ import './BlogDetail.css';
 const BlogDetail = ({ onOpenCallMe, onOpenEnquiry }) => {
   const { blogId } = useParams();
   const [article, setArticle] = useState(null);
+  const [relatedBlogs, setRelatedBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
   // Default fallback articles
@@ -45,8 +48,73 @@ const BlogDetail = ({ onOpenCallMe, onOpenEnquiry }) => {
     }
   };
 
+  const allDefaultBlogs = [
+    {
+      id: 'future-of-web-development-2026',
+      title: 'Top Web Development Trends in 2026: Why Modern Frameworks Matter',
+      date: 'August 28, 2026',
+      author: 'Web Mok Tech Desk',
+      readTime: '6 min read',
+      excerpt: 'Discover how modern server components, headless architectures, micro-interactions, and AI integrations are reshaping enterprise web development.',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&auto=format&fit=crop&q=80',
+      category: 'Web Tech'
+    },
+    {
+      id: 'seo-ranking-factors-guide',
+      title: 'Mastering Search Engine Optimization: How to Outrank Big Brands Organically',
+      date: 'August 19, 2026',
+      author: 'SEO Strategy Lead',
+      readTime: '8 min read',
+      excerpt: 'A comprehensive blueprint to winning the Google search algorithm using search intent mapping, technical site health, and high-authority backlinks.',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&auto=format&fit=crop&q=80',
+      category: 'SEO Insights'
+    },
+    {
+      id: 'ppc-lead-generation-secrets',
+      title: 'How We Reduced Cost Per Lead by 58% Using Smart Google & Meta Ads',
+      date: 'August 10, 2026',
+      author: 'Performance Marketing Desk',
+      readTime: '5 min read',
+      excerpt: 'Step inside our PPC playbook covering negative keyword sculpting, ad copywriting heuristics, and conversion-optimized landing page funnels.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&auto=format&fit=crop&q=80',
+      category: 'PPC & Ads'
+    },
+    {
+      id: 'mobile-app-growth-strategies',
+      title: 'Mobile App Architecture: Choosing Between React Native and Flutter',
+      date: 'July 30, 2026',
+      author: 'Mobile Lead Architect',
+      readTime: '7 min read',
+      excerpt: 'An unbiased comparison of developer velocity, native bridging, UI fidelity, and long-term maintainability for corporate mobile applications.',
+      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=700&auto=format&fit=crop&q=80',
+      category: 'App Strategy'
+    },
+    {
+      id: 'ecommerce-conversion-rate-optimization',
+      title: '12 Proven E-Commerce UX Tweaks That Double Checkout Conversions',
+      date: 'July 15, 2026',
+      author: 'E-Commerce Specialist',
+      readTime: '6 min read',
+      excerpt: 'Tactical CRO strategies covering one-page checkouts, sticky buy buttons, social proof badges, and instant UPI/wallet payment flows.',
+      image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=700&auto=format&fit=crop&q=80',
+      category: 'E-Commerce'
+    },
+    {
+      id: 'social-media-video-reels-strategy',
+      title: 'The Power of Short-Form Video: Building High-Trust Brands on Reels',
+      date: 'July 04, 2026',
+      author: 'Creative Director',
+      readTime: '5 min read',
+      excerpt: 'How our clients leverage 30-second storytelling, motion graphics, and organic algorithms to capture attention and drive inbound leads.',
+      image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=700&auto=format&fit=crop&q=80',
+      category: 'Video & Social'
+    }
+  ];
+
   useEffect(() => {
-    const fetchArticle = async () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const fetchArticleAndRelated = async () => {
       try {
         setLoading(true);
         const res = await fetch('http://localhost:5005/api/blogs/' + blogId);
@@ -73,28 +141,70 @@ const BlogDetail = ({ onOpenCallMe, onOpenEnquiry }) => {
               seoDescription: data.seoDescription,
               excerpt: data.excerpt
             });
-            return;
           }
         }
       } catch (err) {
         console.warn('Backend API unavailable, using fallback:', err);
       }
 
+      // Fetch related blogs
+      try {
+        const listRes = await fetch('http://localhost:5005/api/blogs?status=Published');
+        if (listRes.ok) {
+          const listJson = await listRes.json();
+          if (listJson.success && Array.isArray(listJson.data) && listJson.data.length > 0) {
+            const others = listJson.data
+              .filter((item) => (item.slug || item._id) !== blogId)
+              .map((item) => ({
+                id: item.slug || item._id,
+                title: item.title,
+                date: item.createdAt
+                  ? new Date(item.createdAt).toLocaleDateString('en-US', {
+                      month: 'long',
+                      day: 'numeric',
+                      year: 'numeric'
+                    })
+                  : 'Recent',
+                author: item.author || 'Web Mok Team',
+                readTime: item.readTime || '5 min read',
+                excerpt: item.excerpt || '',
+                image: item.image || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&auto=format&fit=crop&q=80',
+                category: item.category || 'Web Tech'
+              }));
+            if (others.length > 0) {
+              setRelatedBlogs(others.slice(0, 3));
+              setLoading(false);
+              return;
+            }
+          }
+        }
+      } catch (e) {
+        // use fallback below
+      }
+
+      // Fallback related
+      const filteredFallback = allDefaultBlogs
+        .filter((b) => b.id !== blogId)
+        .slice(0, 3);
+      setRelatedBlogs(filteredFallback);
+
       // Fallback
-      const fallback = defaultBlogDetails[blogId] || {
-        title: blogId ? blogId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) : 'Web Mok Publication',
-        date: 'August 2026',
-        author: 'Web Mok Editorial Team',
-        category: 'Digital Strategy',
-        readTime: '5 min read',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80',
-        content: '<p>Digital strategy is the foundation of every high-growth modern business. In today’s competitive digital ecosystem, having a modern website and targeted advertising campaigns is no longer optional — it is the cornerstone of brand survival and customer acquisition.</p><p>By integrating high-speed web engineering with continuous SEO optimization and disciplined paid traffic management, businesses can achieve exponential compound returns on their marketing spend.</p><p>Web Mok Pvt. Ltd. continues to partner with forward-thinking enterprises across India and internationally to engineer tailor-made digital growth ecosystems.</p>'
-      };
-      setArticle(fallback);
+      setArticle((prev) => {
+        if (prev) return prev;
+        return defaultBlogDetails[blogId] || {
+          title: blogId ? blogId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) : 'Web Mok Publication',
+          date: 'August 2026',
+          author: 'Web Mok Editorial Team',
+          category: 'Digital Strategy',
+          readTime: '5 min read',
+          image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80',
+          content: '<p>Digital strategy is the foundation of every high-growth modern business. In today’s competitive digital ecosystem, having a modern website and targeted advertising campaigns is no longer optional — it is the cornerstone of brand survival and customer acquisition.</p><p>By integrating high-speed web engineering with continuous SEO optimization and disciplined paid traffic management, businesses can achieve exponential compound returns on their marketing spend.</p><p>Web Mok Pvt. Ltd. continues to partner with forward-thinking enterprises across India and internationally to engineer tailor-made digital growth ecosystems.</p>'
+        };
+      });
       setLoading(false);
     };
 
-    fetchArticle();
+    fetchArticleAndRelated();
   }, [blogId]);
 
   // SEO Dynamic Title & Meta Tag Injection
@@ -134,7 +244,33 @@ const BlogDetail = ({ onOpenCallMe, onOpenEnquiry }) => {
     );
   }
 
-  if (!article) return null;
+  if (!article) {
+    return (
+      <div className="wm-bdetail-root" style={{ textAlign: 'center', padding: '140px 24px 80px 24px' }}>
+        <h2 style={{ fontSize: '28px', color: '#0b4f8a', marginBottom: '12px', fontWeight: 800 }}>Article Not Found</h2>
+        <p style={{ color: '#64748b', fontSize: '16px', maxWidth: '500px', margin: '0 auto 24px auto', lineHeight: 1.6 }}>
+          The blog article you are looking for might have been updated, moved, or does not exist.
+        </p>
+        <Link
+          to="/blogs"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '12px 28px',
+            background: 'linear-gradient(135deg, #0b4f8a, #00a8cc)',
+            color: '#ffffff',
+            borderRadius: '30px',
+            textDecoration: 'none',
+            fontWeight: 700,
+            boxShadow: '0 4px 14px rgba(0, 168, 204, 0.3)'
+          }}
+        >
+          <FaArrowLeft /> View All Insights & Articles
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div className="wm-bdetail-root">
@@ -200,6 +336,50 @@ const BlogDetail = ({ onOpenCallMe, onOpenEnquiry }) => {
           </aside>
         </div>
       </section>
+
+      {/* Related / Recent Blogs Section */}
+      {relatedBlogs && relatedBlogs.length > 0 && (
+        <section className="wm-bdetail-related-sec">
+          <div className="wm-bdetail-container">
+            <div className="wm-bdetail-related-head">
+              <span className="wm-bdetail-related-badge">More Knowledge</span>
+              <h2 className="wm-bdetail-related-title">Related Insights & Recent Articles</h2>
+              <p className="wm-bdetail-related-desc">
+                Continue exploring proven digital strategies, engineering principles, and marketing playbooks.
+              </p>
+            </div>
+
+            <div className="wm-bdetail-related-grid">
+              {relatedBlogs.map((rel) => (
+                <Link
+                  key={rel.id}
+                  to={'/' + rel.id}
+                  className="wm-bdetail-rel-card"
+                  title={'Read ' + rel.title}
+                >
+                  <div className="wm-bdetail-rel-thumb-wrap">
+                    <img src={rel.image} alt={rel.title} className="wm-bdetail-rel-thumb" />
+                    <span className="wm-bdetail-rel-tag">{rel.category}</span>
+                  </div>
+                  <div className="wm-bdetail-rel-body">
+                    <div className="wm-bdetail-rel-meta">
+                      <span><FaRegCalendarAlt /> {rel.date}</span>
+                      <span>• {rel.readTime}</span>
+                    </div>
+                    <h3 className="wm-bdetail-rel-title">{rel.title}</h3>
+                    <p className="wm-bdetail-rel-excerpt">{rel.excerpt}</p>
+                    <div className="wm-bdetail-rel-footer">
+                      <span className="wm-bdetail-rel-link">
+                        Read Article <FaArrowRight />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 };

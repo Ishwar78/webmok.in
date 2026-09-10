@@ -22,6 +22,9 @@ import {
   FaLaptopCode,
   FaCheckCircle
 } from 'react-icons/fa';
+import HeroLeadForm from '../../components/HeroLeadForm';
+import usePackageData from '../../hooks/usePackageData';
+import '../../components/HeroTwoColShared.css';
 import './FacebookMarketingPackagesPage.css';
 
 const FacebookMarketingPackagesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
@@ -32,7 +35,7 @@ const FacebookMarketingPackagesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const pageData = {
+  const defaultPageData = {
     name: "Facebook Marketing Packages",
     tagline: "HIGH-ROAS META ADS & CONVERSION RETARGETING INDIA · EST. 2018",
     heroTitleHighlight: "Facebook Marketing Packages in India",
@@ -122,96 +125,72 @@ const FacebookMarketingPackagesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   }
 ]
   };
+  const pageData = usePackageData('facebook-marketing-packages', defaultPageData);
 
   return (
     <div className="wm-pkg-page-root">
-      {/* 1. HERO SECTION (DUAL TYPOGRAPHY & TRUST CARDS) */}
-      <section className="wm-pkg-hero-section">
-        <div className="wm-pkg-container">
-          <div className="wm-pkg-hero-grid">
-            {/* Left Column: Heading, Copy, & Buttons */}
-            <div className="wm-pkg-hero-left">
-              <span className="wm-pkg-hero-est-tag">{pageData.tagline}</span>
+            {/* 1. HERO SECTION (2-COLUMN MODERN DESIGN WITH COMMON LEAD FORM) */}
+      <section className="wm-hero-shared-section">
+        <div className="wm-hero-shared-container">
+          <div className="wm-hero-two-col">
+            {/* Left Column: Content & 4-Metric Performance Bar */}
+            <div className="wm-hero-col-left">
+              <div className="wm-hero-breadcrumb">
+                <Link to="/">Home</Link> / <Link to="/packages">Packages</Link> / <span>{pageData.name}</span>
+              </div>
 
-              <h1 className="wm-pkg-hero-title-dual">
-                <span className="wm-hero-italic-orange">Make Your Business Stand Out Using</span>
-                <span className="wm-hero-bold-dark">{pageData.heroTitleHighlight}</span>
+              <span className="wm-hero-pill">
+                <FaAward /> {pageData.tagline}
+              </span>
+
+              <h1 className="wm-hero-title">
+                Make Your Business Stand Out Using <span className="wm-hero-title-highlight">{pageData.heroTitleHighlight || pageData.name}</span>
               </h1>
 
-              <p className="wm-pkg-hero-lead-desc">{pageData.leadDesc}</p>
-              <p className="wm-pkg-hero-body-desc">{pageData.bodyDesc}</p>
+              <p className="wm-hero-lead">
+                {pageData.leadDesc}
+              </p>
+              {pageData.image && (
+                <div style={{ borderRadius: '10px', overflow: 'hidden', margin: '14px 0 18px 0', border: '1px solid rgba(0, 210, 255, 0.25)', maxWidth: '540px' }}>
+                  <img src={pageData.image} alt={pageData.name} style={{ width: '100%', maxHeight: '220px', objectFit: 'cover', display: 'block' }} />
+                </div>
+              )}
 
-              <div className="wm-pkg-hero-btns-row">
+              <div className="wm-hero-cta-group">
                 <button
                   type="button"
-                  className="wm-pkg-btn-case-study"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Audit / Case Study`)}
+                  className="wm-hero-cta-primary"
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Custom Quote`)}
                 >
-                  {pageData.shortName} Case Study <FaPaperPlane />
+                  Get Free Custom Quote <FaArrowRight />
                 </button>
-                <a href="#pricing-plans" className="wm-pkg-btn-packages-outline">
-                  {pageData.shortName} Packages <FaChevronRight />
-                </a>
+                <button
+                  type="button"
+                  className="wm-hero-cta-secondary"
+                  onClick={onOpenCallMe}
+                >
+                  <FaPhoneAlt /> Call Me in 28 Seconds
+                </button>
+              </div>
+
+              {/* 4-Metric Performance Bar (Embedded in Hero) */}
+              <div className="wm-hero-stats-grid">
+                {(pageData.stats || []).map((st, i) => (
+                  <div key={i} className="wm-hstat-card">
+                    <p className="wm-hstat-num">{st.num}</p>
+                    <p className="wm-hstat-label">{st.label}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Right Column: 4 Credibility / Review Cards Stack */}
-            <div className="wm-pkg-hero-right-trust">
-              <div className="wm-pkg-trust-card">
-                <div className="wm-pkg-tcard-info">
-                  <h4>#1 Growth Agency</h4>
-                  <p>Clutch · India 2025</p>
-                </div>
-                <div className="wm-pkg-tcard-icon-badge wm-badge-clutch">C</div>
-              </div>
-
-              <div className="wm-pkg-trust-card">
-                <div className="wm-pkg-tcard-info">
-                  <h4>Top-Rated Plus</h4>
-                  <p>On Upwork</p>
-                </div>
-                <div className="wm-pkg-tcard-icon-badge wm-badge-upwork">up</div>
-              </div>
-
-              <div className="wm-pkg-trust-card">
-                <div className="wm-pkg-tcard-info">
-                  <h4>4.9 / 5</h4>
-                  <p>
-                    Google Reviews · 130+{' '}
-                    <span className="wm-pkg-tcard-stars">
-                      <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
-                    </span>
-                  </p>
-                </div>
-                <div className="wm-pkg-tcard-icon-badge wm-badge-google-stars">
-                  <FaGoogle />
-                </div>
-              </div>
-
-              <div className="wm-pkg-trust-card">
-                <div className="wm-pkg-tcard-info">
-                  <h4>Google Partner</h4>
-                  <p>Certified Agency</p>
-                </div>
-                <div className="wm-pkg-tcard-icon-badge wm-badge-google-partner">
-                  <FaAward />
-                </div>
-              </div>
+            {/* Right Column: Reusable Hero Lead Form */}
+            <div className="wm-hero-col-right">
+              <HeroLeadForm
+                pageName={pageData.name}
+                source={`${pageData.name} Hero Section`}
+              />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. STATS STRIP */}
-      <section className="wm-pkg-stats-strip">
-        <div className="wm-pkg-container">
-          <div className="wm-pkg-stats-grid">
-            {pageData.stats.map((st, i) => (
-              <div key={i} className="wm-pkg-stat-card">
-                <strong>{st.num}</strong>
-                <span>{st.label}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>

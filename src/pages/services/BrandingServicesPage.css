@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for BrandingServicesPage */
+@import './ServicePageShared.css';
+
+.brandingservicespage-root {
+  width: 100%;
+}

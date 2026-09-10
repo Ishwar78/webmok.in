@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for ContentMarketingPage */
+@import './ServicePageShared.css';
+
+.contentmarketingpage-root {
+  width: 100%;
+}

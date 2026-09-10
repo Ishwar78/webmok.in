@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for ShopifyWooServicesPage */
+@import './ServicePageShared.css';
+
+.shopifywooservicespage-root {
+  width: 100%;
+}

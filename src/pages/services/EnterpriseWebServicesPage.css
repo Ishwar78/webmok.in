@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for EnterpriseWebServicesPage */
+@import './ServicePageShared.css';
+
+.enterprisewebservicespage-root {
+  width: 100%;
+}

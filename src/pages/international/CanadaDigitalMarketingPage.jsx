@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   FaCheck,
   FaStar,
@@ -30,6 +31,8 @@ import {
   FaRegLightbulb,
   FaProjectDiagram
 } from 'react-icons/fa';
+import HeroLeadForm from '../../components/HeroLeadForm';
+import '../../components/HeroTwoColShared.css';
 import './CanadaDigitalMarketingPage.css';
 
 const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
@@ -310,77 +313,63 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
 
   return (
     <div className="wm-intl-canada-page-root">
-      {/* 1. HERO SECTION */}
-      <section className="wm-intl-canada-hero-section" id="overview">
-        <div className="wm-intl-canada-container">
-          <div className="wm-intl-canada-hero-grid">
-            <div className="wm-intl-canada-hero-left">
-              <span className="wm-intl-canada-hero-est-tag">{pageData.tagline}</span>
+            {/* 1. HERO SECTION (2-COLUMN MODERN DESIGN WITH COMMON LEAD FORM) */}
+      <section className="wm-hero-shared-section" id="overview">
+        <div className="wm-hero-shared-container">
+          <div className="wm-hero-two-col">
+            {/* Left Column: Content & 4-Metric Performance Bar */}
+            <div className="wm-hero-col-left">
+              <div className="wm-hero-breadcrumb">
+                <Link to="/">Home</Link> / <span>International</span> / <span>{pageData.city || pageData.name}</span>
+              </div>
 
-              <h1 className="wm-intl-canada-hero-title-dual">
-                <span className="wm-intl-canada-hero-italic-gold">{pageData.heroItalic}</span>
-                <span className="wm-intl-canada-hero-bold-white">{pageData.heroHighlight}</span>
+              <span className="wm-hero-pill">
+                <FaAward /> {pageData.tagline}
+              </span>
+
+              <h1 className="wm-hero-title">
+                {pageData.heroItalic ? `${pageData.heroItalic} ` : 'Accelerate High-Yield Growth with '}
+                <span className="wm-hero-title-highlight">{pageData.heroHighlight || pageData.name}</span>
               </h1>
 
-              <p className="wm-intl-canada-hero-lead-desc">{pageData.leadDesc}</p>
-              <p className="wm-intl-canada-hero-body-desc">{pageData.bodyDesc}</p>
+              <p className="wm-hero-lead">
+                {pageData.leadDesc}
+              </p>
 
-              <div className="wm-intl-canada-hero-btns-row">
+              <div className="wm-hero-cta-group">
                 <button
                   type="button"
-                  className="wm-intl-canada-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Free Strategy Proposal`)}
+                  className="wm-hero-cta-primary"
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Custom Strategy Proposal`)}
                 >
-                  Get Free Digital Proposal <FaPaperPlane />
+                  Get Free Custom Quote <FaArrowRight />
                 </button>
-                <a href="#pricing-plans" className="wm-intl-canada-btn-outline">
-                  View {pageData.city} Rates <FaChevronRight />
-                </a>
+                <button
+                  type="button"
+                  className="wm-hero-cta-secondary"
+                  onClick={onOpenCallMe}
+                >
+                  <FaPhoneAlt /> Call Me in 28 Seconds
+                </button>
+              </div>
+
+              {/* 4-Metric Performance Bar (Embedded in Hero) */}
+              <div className="wm-hero-stats-grid">
+                {(pageData.stats || []).map((st, i) => (
+                  <div key={i} className="wm-hstat-card">
+                    <p className="wm-hstat-num">{st.num}</p>
+                    <p className="wm-hstat-label">{st.label}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Right Column: Credibility Stack */}
-            <div className="wm-intl-canada-hero-right-trust">
-              <div className="wm-intl-canada-trust-card">
-                <div className="wm-intl-canada-tcard-info">
-                  <h4>#1 Global Growth Agency</h4>
-                  <p>Clutch Leader · 2025/2026</p>
-                </div>
-                <div className="wm-intl-canada-tcard-badge wm-intl-canada-badge-clutch">C</div>
-              </div>
-
-              <div className="wm-intl-canada-trust-card">
-                <div className="wm-intl-canada-tcard-info">
-                  <h4>Top-Rated Plus</h4>
-                  <p>Upwork Top 1% Verified Agency</p>
-                </div>
-                <div className="wm-intl-canada-tcard-badge wm-intl-canada-badge-upwork">up</div>
-              </div>
-
-              <div className="wm-intl-canada-trust-card">
-                <div className="wm-intl-canada-tcard-info">
-                  <h4>4.9 / 5.0 Rating</h4>
-                  <p>
-                    Google Verified · 140+{' '}
-                    <span className="wm-intl-canada-tcard-stars">
-                      <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
-                    </span>
-                  </p>
-                </div>
-                <div className="wm-intl-canada-tcard-badge wm-intl-canada-badge-google">
-                  <FaGoogle />
-                </div>
-              </div>
-
-              <div className="wm-intl-canada-trust-card">
-                <div className="wm-intl-canada-tcard-info">
-                  <h4>Google Partner</h4>
-                  <p>Premier Certified Agency</p>
-                </div>
-                <div className="wm-intl-canada-tcard-badge wm-intl-canada-badge-partner">
-                  <FaAward />
-                </div>
-              </div>
+            {/* Right Column: Reusable Hero Lead Form */}
+            <div className="wm-hero-col-right">
+              <HeroLeadForm
+                pageName={pageData.name}
+                source={`${pageData.name} Hero Section`}
+              />
             </div>
           </div>
         </div>
@@ -404,19 +393,7 @@ const CanadaDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </nav>
 
-      {/* 3. STATS STRIP */}
-      <section className="wm-intl-canada-stats-strip">
-        <div className="wm-intl-canada-container">
-          <div className="wm-intl-canada-stats-grid">
-            {pageData.stats.map((st, i) => (
-              <div key={i} className="wm-intl-canada-stat-card">
-                <strong>{st.num}</strong>
-                <span>{st.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* 4. SERVICES SUITE */}
       <section className="wm-intl-canada-services-section" id="services">

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import HeroLeadForm from '../../components/HeroLeadForm';
+import {
+  Link } from 'react-router-dom';
 import {
   FaSearch,
   FaLink,
@@ -19,10 +21,11 @@ import {
   FaBolt,
   FaLayerGroup,
   FaChartLine,
-  FaExternalLinkAlt
+  FaExternalLinkAlt,
+  FaWhatsapp,
+  FaPaperPlane
 } from 'react-icons/fa';
-import ServiceSidebarForm from '../../components/ServiceSidebarForm';
-import './ServicePageShared.css';
+import './SeoServicesPage.css';
 
 const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   const [openFaq, setOpenFaq] = useState(0);
@@ -209,6 +212,8 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
       {/* 1. Hero Section */}
       <section className="wm-sp-hero">
         <div className="wm-sp-container">
+          <div className="wm-sp-hero-two-col">
+            <div className="wm-sp-hero-col-left">
           <div className="wm-sp-breadcrumb">
             <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>SEO Services</span>
           </div>
@@ -238,6 +243,15 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <p className="wm-seost__l">{st.label}</p>
               </div>
             ))}
+          </div>
+        
+            </div>
+            <div className="wm-sp-hero-col-right">
+              <HeroLeadForm
+                pageName="SEO Services"
+                source="SEO Services Hero Section"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -360,9 +374,33 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     <p className="wm-seocs__met">{cs.sub}</p>
                     <h3 className="wm-seocs__nm">{cs.name}</h3>
                     <p className="wm-seocs__d">{cs.desc}</p>
-                    <Link to="/clients/case-studies" className="wm-seocs__go">
-                      Read Case Study &rarr;
-                    </Link>
+                    <div className="wm-seocs__actions">
+                      <button
+                        type="button"
+                        className="wm-seocs-btn-inquiry"
+                        onClick={() => onOpenEnquiry && onOpenEnquiry(`${cs.name} - Case Study Inquiry`)}
+                        title="Request an Inquiry"
+                      >
+                        <FaPaperPlane /> Inquire
+                      </button>
+                      <button
+                        type="button"
+                        className="wm-seocs-btn-call"
+                        onClick={onOpenCallMe}
+                        title="Call Webmok"
+                      >
+                        <FaPhoneAlt /> Call
+                      </button>
+                      <a
+                        href={`https://wa.me/918684031003?text=${encodeURIComponent(`Hi Webmok Team, I am interested in case study: ${cs.name} (${cs.metric})`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="wm-seocs-btn-whatsapp"
+                        title="Chat on WhatsApp"
+                      >
+                        <FaWhatsapp /> WhatsApp
+                      </a>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -576,14 +614,6 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Sticky Sidebar Lead Capture Form */}
-          <div className="wm-sp-sidebar-col">
-            <ServiceSidebarForm
-              serviceName="SEO Services"
-              source="SEO Services Page"
-            />
           </div>
         </div>
       </section>

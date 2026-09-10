@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FaPlay,
@@ -18,6 +18,7 @@ import {
   FaCheckCircle
 } from 'react-icons/fa';
 import './VideoShowcase.css';
+import { resolveMediaUrl, handleImageError } from '../../utils/mediaUrl';
 
 const VideoShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -154,6 +155,21 @@ const VideoShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
     }
   ];
 
+  const [projects, setProjects] = useState(videoProjects);
+
+  useEffect(() => {
+    fetch('http://localhost:5005/api/video-showcase')
+      .then(res => res.json())
+      .then(json => {
+        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+          setProjects(json.data);
+        }
+      })
+      .catch(err => {
+        console.warn('Notice: Video showcase live API offline, using defaults:', err.message);
+      });
+  }, []);
+
   const categories = [
     { id: 'all', label: 'All Videos' },
     { id: 'corporate', label: 'Corporate Films' },
@@ -163,8 +179,8 @@ const VideoShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
   ];
 
   const filteredVideos = activeCategory === 'all'
-    ? videoProjects
-    : videoProjects.filter(v => v.category === activeCategory);
+    ? projects
+    : projects.filter(v => v.category === activeCategory);
 
   return (
     <div className="wm-video-page-root">
@@ -321,9 +337,14 @@ const VideoShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
           {/* Video Grid */}
           <div className="wm-vgrid">
             {filteredVideos.map(video => (
-              <div key={video.id} className="wm-vcard">
+              <div key={video._id || video.id} className="wm-vcard">
                 <div className="wm-vcard-thumb-wrap" onClick={() => setActiveVideo(video)}>
-                  <img src={video.thumbnail} alt={video.title} className="wm-vcard-thumb" />
+                  <img
+                    src={resolveMediaUrl(video.thumbnail)}
+                    alt={video.title}
+                    className="wm-vcard-thumb"
+                    onError={(e) => handleImageError(e, 'https://images.unsplash.com/photo-1509391365360-2e959784a276?w=800&auto=format&fit=crop&q=80')}
+                  />
                   <div className="wm-vcard-play-btn">
                     <FaPlay />
                   </div>
@@ -401,13 +422,22 @@ const VideoShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
               <FaTimes />
             </button>
             <div className="wm-vmodal-video-wrap">
-              <iframe
-                src={activeVideo.videoUrl}
-                title={activeVideo.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              {activeVideo.videoType === 'upload' || (activeVideo.videoUrl && (activeVideo.videoUrl.endsWith('.mp4') || activeVideo.videoUrl.endsWith('.webm') || activeVideo.videoUrl.startsWith('/uploads/'))) ? (
+                <video
+                  src={resolveMediaUrl(activeVideo.videoUrl)}
+                  controls
+                  autoPlay
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                />
+              ) : (
+                <iframe
+                  src={activeVideo.videoUrl}
+                  title={activeVideo.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              )}
             </div>
             <div className="wm-vmodal-details">
               <h3>{activeVideo.title}</h3>

@@ -88,6 +88,134 @@
   display: block;
 }
 
+/* Hero Slider Styles (When 2+ active slides exist) */
+.wm-hero-slider-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  max-height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wm-hero-slide-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wm-hero-slide-item.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.wm-hero-main-image {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* Nav Arrows */
+.wm-hero-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(13, 47, 87, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wm-hero-nav-arrow:hover {
+  background: rgba(0, 168, 204, 0.9);
+  border-color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.wm-hero-arrow-prev {
+  left: 24px;
+}
+
+.wm-hero-arrow-next {
+  right: 24px;
+}
+
+/* Dots Indicator */
+.wm-hero-dots-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.wm-hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.wm-hero-dot.active {
+  width: 28px;
+  border-radius: 10px;
+  background: #00a8cc;
+  box-shadow: 0 0 10px rgba(0, 168, 204, 0.6);
+}
+
+@media (max-width: 768px) {
+  .wm-hero-nav-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  .wm-hero-arrow-prev {
+    left: 12px;
+  }
+  .wm-hero-arrow-next {
+    right: 12px;
+  }
+  .wm-hero-main-image,
+  .wm-hero-main-video {
+    max-height: 50vh;
+  }
+}
+
 /* Ambient glow orbs */
 .wm-hero-ambient-glow {
   position: absolute;
@@ -877,12 +1005,49 @@
 
 @media (max-width: 860px) {
   .wm-reviews-row {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
+    grid-template-columns: 1fr 1fr !important; /* Single row with 2 cards on mobile */
+    gap: 12px !important;
+  }
+
+  .wm-rcard-facebook {
+    display: none !important; /* Hide Facebook review on mobile as requested */
   }
 
   .wm-rcard {
-    padding: 20px 18px !important;
+    padding: 16px 14px !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .wm-reviews-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .wm-rcard {
+    padding: 12px 10px !important;
+    border-radius: 14px !important;
+  }
+
+  .wm-rcard-score {
+    font-size: 19px !important;
+  }
+
+  .wm-rcard-brand-icon {
+    font-size: 15px !important;
+  }
+
+  .wm-rcard-badge {
+    font-size: 8px !important;
+    padding: 2px 5px !important;
+  }
+
+  .wm-rcard-count {
+    font-size: 10px !important;
+  }
+
+  .wm-rcard-stars svg {
+    font-size: 9.5px !important;
   }
 }
 
@@ -1434,6 +1599,99 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* 50/50 Split Layout: Content on one side, Video on the other half */
+.wm-hsvc-panel-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.wm-hsvc-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.wm-hsvc-video-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.wm-hsvc-video-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid rgba(0, 212, 255, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 24px rgba(0, 212, 255, 0.18);
+  background: #020617;
+}
+
+.wm-hsvc-video-player {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.wm-hsvc-video-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(8, 22, 40, 0.85);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.3px;
+  z-index: 2;
+}
+
+.wm-hsvc-video-dot {
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981;
+  animation: wmPulseDot 1.5s infinite;
+}
+
+@keyframes wmPulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+@media (max-width: 992px) {
+  .wm-hsvc-panel-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .wm-hsvc-video-col {
+    order: 1; /* Video on TOP in mobile view */
+    width: 100%;
+  }
+
+  .wm-hsvc-content-col {
+    order: 2; /* Content BELOW video in mobile view */
+    width: 100%;
+  }
+
+  .wm-hsvc-video-player {
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -2397,6 +2655,91 @@
   z-index: 2;
 }
 
+/* =========================================================
+   🔥 CONTINUOUS HORIZONTAL WORKFLOW MARQUEE (DESKTOP & MOBILE)
+   ========================================================= */
+
+.wm-workflow-marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 16px 0 32px 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.wm-workflow-marquee-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  align-items: stretch;
+  animation: wmWorkflowMarquee 45s linear infinite;
+  will-change: transform;
+}
+
+.wm-workflow-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes wmWorkflowMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.wm-workflow-marquee-track .wm-step-card {
+  width: 275px;
+  min-width: 275px;
+  flex-shrink: 0;
+  min-height: 175px;
+  animation: none !important;
+  cursor: pointer;
+}
+
+.wm-step-badge {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0077b6;
+  background: #e0f2fe;
+  border: 1px solid rgba(0, 119, 182, 0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+}
+
+.wm-step-card:hover .wm-step-badge {
+  background: #0077b6;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .wm-workflow-marquee-track {
+    animation-duration: 30s;
+    gap: 16px;
+  }
+
+  .wm-workflow-marquee-track .wm-step-card {
+    width: 235px;
+    min-width: 235px;
+    min-height: 155px;
+    padding: 20px 16px;
+  }
+
+  .wm-workflow-marquee-track .wm-step-card:last-child {
+    grid-column: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+}
+
 
 /* -----------------------------------------
    MAIN CARD
@@ -3128,6 +3471,93 @@
   color: #ffffff;
 }
 
+/* Card Quick Action Buttons */
+.wm-tab-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(14, 83, 145, 0.15);
+  width: 100%;
+}
+
+.wm-tab-card-btn.active .wm-tab-card-actions {
+  border-top-color: rgba(255, 255, 255, 0.25);
+}
+
+.wm-tc-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 4px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.wm-tc-call {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid rgba(22, 163, 74, 0.25);
+}
+.wm-tc-call:hover {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.wm-tc-enq {
+  background: #e0f2fe;
+  color: #0284c7;
+  border: 1px solid rgba(2, 132, 199, 0.25);
+}
+.wm-tc-enq:hover {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.wm-tc-wa {
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid rgba(5, 150, 105, 0.25);
+}
+.wm-tc-wa:hover {
+  background: #25d366;
+  color: #ffffff;
+}
+
+/* When the card is active (dark gradient background), make buttons pop nicely */
+.wm-tab-card-btn.active .wm-tc-call {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.wm-tab-card-btn.active .wm-tc-call:hover {
+  background: #16a34a;
+}
+.wm-tab-card-btn.active .wm-tc-enq {
+  background: #00d2ff;
+  color: #050d18;
+  border: none;
+}
+.wm-tab-card-btn.active .wm-tc-enq:hover {
+  background: #ffffff;
+}
+.wm-tab-card-btn.active .wm-tc-wa {
+  background: rgba(37, 211, 102, 0.3);
+  color: #ffffff;
+  border-color: rgba(37, 211, 102, 0.5);
+}
+.wm-tab-card-btn.active .wm-tc-wa:hover {
+  background: #25d366;
+}
 
 /* Dynamic Tab Content Box */
 .wm-tab-content-wrapper {
@@ -3194,6 +3624,63 @@
   color: #0f1114;
   line-height: 1.6;
   margin: 0;
+}
+
+/* Full Action Buttons inside Tab Content Box */
+.wm-tab-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.wm-tab-act-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.wm-tab-act-call {
+  background: #16a34a;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25);
+}
+.wm-tab-act-call:hover {
+  background: #15803d;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.wm-tab-act-enq {
+  background: #0b4f8a;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(11, 79, 138, 0.25);
+}
+.wm-tab-act-enq:hover {
+  background: #00a8cc;
+  transform: translateY(-2px);
+}
+
+.wm-tab-act-wa {
+  background: #25d366;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+}
+.wm-tab-act-wa:hover {
+  background: #1eb954;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /* Illustration Box */
@@ -3579,7 +4066,7 @@
   letter-spacing: 0.2px;
 }
 
-/* Footer Row with Circular Arrow Indicator */
+/* Footer Row with Circular Arrow Indicator & Inquiry Button */
 .wm-port-footer-row {
   margin-top: auto;
   padding-top: 12px;
@@ -3587,6 +4074,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
+}
+
+.wm-port-left-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wm-port-enquiry-btn {
+  background: #00a8cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 168, 204, 0.25);
+}
+
+.wm-port-enquiry-btn:hover {
+  background: #0b4f8a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(11, 79, 138, 0.35);
 }
 
 .wm-port-detail-link {
@@ -4319,7 +4834,19 @@ a.wm-lead-cbox-val:hover {
   }
 
   .wm-tab-content-wrapper {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .wm-tab-right-col {
+    order: 1;
+    width: 100%;
+  }
+
+  .wm-tab-left-col {
+    order: 2;
+    width: 100%;
   }
 
   .wm-lead-grid {
@@ -4407,10 +4934,40 @@ a.wm-lead-cbox-val:hover {
     line-height: 1.35;
   }
 
-  /* Reviews Cards */
+  /* Reviews Cards: Force 1 single row with 2 cards on mobile, Facebook hidden */
   .wm-reviews-row {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .wm-rcard-facebook {
+    display: none !important;
+  }
+
+  .wm-rcard {
+    padding: 14px 10px !important;
+    border-radius: 14px !important;
+  }
+
+  .wm-rcard-score {
+    font-size: 19px !important;
+  }
+
+  .wm-rcard-brand-icon {
+    font-size: 15px !important;
+  }
+
+  .wm-rcard-badge {
+    font-size: 8px !important;
+    padding: 2px 5px !important;
+  }
+
+  .wm-rcard-count {
+    font-size: 10px !important;
+  }
+
+  .wm-rcard-stars svg {
+    font-size: 9.5px !important;
   }
 
   .wm-services-grid {

@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import AdminSidebar from '../components/AdminSidebar';
 import RichTextEditor from '../components/RichTextEditor';
+import AdminJobs from './admin/AdminJobs';
+import AdminJobInquiries from './admin/AdminJobInquiries';
+import AdminPackages from './admin/AdminPackages';
+import AdminTestimonials from './admin/AdminTestimonials';
+import AdminVideoReviews from './admin/AdminVideoReviews';
+import AdminCreativeShowcase from './admin/AdminCreativeShowcase';
+import AdminVideoShowcase from './admin/AdminVideoShowcase';
 
 const API_BASE = 'http://localhost:5005/api';
 import {
@@ -43,12 +50,480 @@ import {
   FaLaptopCode,
   FaUsers,
   FaRocket,
-  FaInfoCircle
+  FaInfoCircle,
+  FaTrophy,
+  FaAward,
+  FaShieldAlt,
+  FaHandshake,
+  FaBuilding,
+  FaRegLightbulb,
+  FaMobileAlt,
+  FaShareAlt,
+  FaAd,
+  FaHome,
+  FaQuestionCircle,
+  FaArrowRight
 } from 'react-icons/fa';
 import './AdminDashboard.css';
 
+
+const defaultAboutData = {
+  bentoStats: {
+    tagline: 'Our foundation for every project we deliver.',
+    accentWord: 'Excellence.',
+    taglineDesc: 'Since 2016, Webmok Pvt Ltd has consistently delivered measurable digital success to businesses across India and globally — backed by a team of seasoned experts and a proven track record.',
+    whyTitle: 'Why Webmok?',
+    whyDesc1: 'We are a premier IT and Digital Marketing company with offices in Delhi and Rohtak, serving 500+ active clients across India and abroad.',
+    whyDesc2: 'Our team of 75+ specialists combines cutting-edge technology with deep domain expertise to engineer digital growth engines that outperform the competition.',
+    stats: [
+      { id: '1', num: '1500+', label: 'Projects Delivered', icon: 'FaTrophy' },
+      { id: '2', num: '20+', label: 'Industry Sectors', icon: 'FaLayerGroup' },
+      { id: '3', num: '75+', label: 'Professionals', icon: 'FaUsers' },
+      { id: '4', num: '10+', label: 'Years of Experience', icon: 'FaBuilding' }
+    ]
+  },
+  corporateProfile: {
+    subtitle: 'Corporate Profile',
+    title: 'Developing Any Kind of Business in Digital Form',
+    leadPara: 'Webmok Pvt Ltd is a top-ranking IT service providing enterprise from India delivering comprehensive, end-to-end digital transformation solutions. Operating on a global level, we spearhead strategic projects for clients across India as well as overseas markets.',
+    bodyPara: 'We have over 500+ active clients and have successfully delivered 1500+ projects across diverse sectors. We ensure to promote your business digitally and provide you 100% ranking on Google.',
+    guaranteeTitle: '100% Earned Result & Money-Back Policy',
+    guaranteeText: 'Webmok Pvt Ltd gives you a 100% guarantee for delivering earned results. If due to any unforeseen reason we are unable to deliver your project milestones, according to our transparent policy we will return your entire amount of consideration. We build healthy, fair client relationships, deliver every project on time, and disclose our complete execution process prior to agreement.',
+    fastFacts: [
+      { label: 'Incorporation Date', value: '16 June 2016' },
+      { label: 'Corporate Headquarters', value: 'New Delhi, India' },
+      { label: 'Branch Offices', value: 'Rohtak, Haryana' },
+      { label: 'Client Geographic Scope', value: 'Pan-India & Global International Clients' },
+      { label: 'Active Client Roster', value: '500+ Ongoing Partnerships' },
+      { label: 'Completed Projects', value: '1500+ Digital Deployments' },
+      { label: 'Assurance Policy', value: '100% Milestones or Full Consideration Refund' }
+    ]
+  },
+  expertiseExecution: {
+    subtitle: 'Expertise & Execution',
+    title: 'Well-Qualified Staff & Complete Services Portfolio',
+    services: [
+      {
+        id: 'web-design',
+        icon: 'FaLaptopCode',
+        title: 'Web Designing',
+        desc: 'Crafting stunning, human-centric visual interfaces and frictionless user experiences tailored for high brand authority.',
+        subFeatures: ['UI/UX Strategy & Wireframing', 'Responsive Mobile-First Design', 'Brand Identity & Style Guides', 'Figma / Adobe XD Prototyping', 'Landing Page & CRO Design', 'E-Commerce Storefront Design']
+      },
+      {
+        id: 'web-dev',
+        icon: 'FaCogs',
+        title: 'Web Development',
+        desc: 'Engineering robust, full-stack web software, React apps, and custom CMS platforms with sub-second page performance.',
+        subFeatures: ['React / Next.js Applications', 'WordPress & Custom CMS', 'RESTful API Integration', 'Performance Optimization', 'Progressive Web Apps (PWA)', 'Database Architecture & Scaling']
+      },
+      {
+        id: 'seo',
+        icon: 'FaSearch',
+        title: 'Search Engine Optimization',
+        desc: '100% white-hat organic ranking strategies designed to dominate competitive keyword niches on Google search.',
+        subFeatures: ['Technical SEO Audit & Fix', 'On-Page & Off-Page SEO', 'Local SEO & Google Maps', 'Backlink Authority Building', 'Keyword Research & Mapping', 'Monthly Ranking Reports']
+      },
+      {
+        id: 'email-mkt',
+        icon: 'FaEnvelopeOpenText',
+        title: 'Email Marketing',
+        desc: 'High-deliverability automated email funnels, behavioral trigger campaigns, and high-converting subscriber flows.',
+        subFeatures: ['Drip Campaign Automation', 'Behavioral Trigger Emails', 'Subscriber List Management', 'A/B Split Testing', 'HTML Email Template Design', 'Deliverability & Open Rate Boost']
+      },
+      {
+        id: 'content-mkt',
+        icon: 'FaRegLightbulb',
+        title: 'Content Marketing',
+        desc: 'In-depth editorial articles, authority whitepapers, and compelling brand storytelling that drives qualified traffic.',
+        subFeatures: ['SEO Blog Articles & Guides', 'Brand Storytelling & Copywriting', 'Authority Whitepapers', 'Infographic & Visual Content', 'YouTube Script Writing', 'Content Distribution Strategy']
+      },
+      {
+        id: 'mobile-mkt',
+        icon: 'FaMobileAlt',
+        title: 'Mobile Marketing',
+        desc: 'Targeted in-app marketing, device-optimized acquisition flows, and App Store Optimization (ASO) for native apps.',
+        subFeatures: ['App Store Optimization (ASO)', 'Push Notification Campaigns', 'SMS & WhatsApp Marketing', 'In-App Advertising Strategy', 'Mobile-First Campaign Design', 'User Retention & Re-engagement']
+      },
+      {
+        id: 'smm',
+        icon: 'FaBullhorn',
+        title: 'Social Media Marketing',
+        desc: 'Viral creative campaigns, interactive motion graphics, and paid performance ad funnels on Meta, LinkedIn & Instagram.',
+        subFeatures: ['Facebook & Instagram Ads', 'LinkedIn B2B Campaigns', 'Creative Reels & Motion Graphics', 'Influencer Collaboration Strategy', 'Paid Ad Funnel Optimization', 'Audience Targeting & Retargeting']
+      },
+      {
+        id: 'smo',
+        icon: 'FaShareAlt',
+        title: 'Social Media Optimization',
+        desc: 'Optimizing corporate profiles, amplifying brand authority, and cultivating vibrant, engaged customer communities.',
+        subFeatures: ['Profile Setup & Branding', 'Content Calendar Planning', 'Organic Reach Amplification', 'Hashtag Strategy Research', 'Community Engagement Management', 'Social Analytics & Reporting']
+      },
+      {
+        id: 'ppc',
+        icon: 'FaAd',
+        title: 'PPC & Google AdWords',
+        desc: 'Precision laser-targeted Google Search Ads and Performance Max funnels designed to deliver maximum return on ad spend.',
+        subFeatures: ['Google Search Ad Campaigns', 'Performance Max Campaigns', 'Display & Remarketing Ads', 'Shopping Ads for E-Commerce', 'Bid Strategy & Budget Optimization', 'Conversion Tracking & ROAS Analysis']
+      }
+    ]
+  },
+  executiveGuidance: {
+    subtitle: 'Executive Guidance',
+    title: 'Meet The Experts Guiding Your Brand',
+    leaders: [
+      {
+        id: '1',
+        name: 'Rahish Sangwan',
+        role: 'Founder & Managing Director',
+        bio: 'Over a decade of leadership in digital transformation, tech architecture, and scaling business development in NCR & North India.',
+        image: '/Rahish Sir.png'
+      },
+      {
+        id: '2',
+        name: 'Simran Narang',
+        role: 'Digital Marketing Head',
+        bio: 'Full-stack engineering expert specializing in scalable React ecosystem, mobile application pipelines, and high-load web architectures.',
+        image: '/simran1.png'
+      },
+      {
+        id: '3',
+        name: 'Deepak Suhag',
+        role: 'Director of Performance Marketing',
+        bio: 'Data-driven PPC and SEO strategist who has managed over ₹15+ Crore in profitable digital advertising spend across enterprise brands.',
+        image: '/DeepakSir-1.png'
+      }
+    ]
+  }
+};
+
 const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
+
+  // ==========================================
+  // ABOUT US PAGE CMS STATE & HANDLERS
+  // ==========================================
+  const [aboutSubTab, setAboutSubTab] = useState('bento'); // 'bento' | 'profile' | 'expertise' | 'guidance'
+  const [aboutLoading, setAboutLoading] = useState(false);
+  const [aboutSaving, setAboutSaving] = useState(false);
+  const [aboutFeedback, setAboutFeedback] = useState(null);
+  const [aboutData, setAboutData] = useState(() => {
+    try {
+      const cached = localStorage.getItem('webmok_about_data');
+      if (cached) return JSON.parse(cached);
+    } catch (e) {}
+    return defaultAboutData;
+  });
+
+  const fetchAboutData = async () => {
+    try {
+      setAboutLoading(true);
+      const res = await fetch(`${API_BASE}/about`);
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success && json.data) {
+          setAboutData(json.data);
+          localStorage.setItem('webmok_about_data', JSON.stringify(json.data));
+        }
+      }
+    } catch (err) {
+      console.warn('Backend /api/about offline, using local cached state:', err.message);
+    } finally {
+      setAboutLoading(false);
+    }
+  };
+
+  const handleSaveAboutData = async (e) => {
+    if (e) e.preventDefault();
+    setAboutSaving(true);
+    setAboutFeedback(null);
+    try {
+      localStorage.setItem('webmok_about_data', JSON.stringify(aboutData));
+      window.dispatchEvent(new Event('webmok_about_updated'));
+
+      const res = await fetch(`${API_BASE}/about`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(aboutData)
+      });
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success && json.data) {
+          setAboutData(json.data);
+          localStorage.setItem('webmok_about_data', JSON.stringify(json.data));
+        }
+      }
+      setAboutFeedback({ type: 'success', message: 'About Us page content successfully saved and published!' });
+    } catch (err) {
+      console.warn('Error saving about data to API:', err.message);
+      setAboutFeedback({ type: 'success', message: 'Saved in browser storage (Backend sync offline)!' });
+    } finally {
+      setAboutSaving(false);
+      setTimeout(() => setAboutFeedback(null), 5000);
+    }
+  };
+
+  const handleResetAboutData = async () => {
+    if (!window.confirm('Are you sure you want to reset all About Us page sections to factory defaults?')) return;
+    setAboutSaving(true);
+    try {
+      const res = await fetch(`${API_BASE}/about/reset`, { method: 'POST' });
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success && json.data) {
+          setAboutData(json.data);
+          localStorage.setItem('webmok_about_data', JSON.stringify(json.data));
+          window.dispatchEvent(new Event('webmok_about_updated'));
+          setAboutFeedback({ type: 'success', message: 'About Us page successfully reset to factory defaults!' });
+          return;
+        }
+      }
+    } catch (e) {
+      console.warn('Backend reset failed:', e.message);
+    }
+    setAboutData(defaultAboutData);
+    localStorage.setItem('webmok_about_data', JSON.stringify(defaultAboutData));
+    window.dispatchEvent(new Event('webmok_about_updated'));
+    setAboutFeedback({ type: 'success', message: 'Reset locally to default factory content!' });
+    setAboutSaving(false);
+    setTimeout(() => setAboutFeedback(null), 5000);
+  };
+
+  // Upload leader image
+  const handleLeaderImageUpload = async (index, file) => {
+    if (!file) return;
+    try {
+      const formData = new FormData();
+      formData.append('image', file);
+      const res = await fetch(`${API_BASE}/about/upload`, {
+        method: 'POST',
+        body: formData
+      });
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success && json.fileUrl) {
+          const updatedLeaders = [...aboutData.executiveGuidance.leaders];
+          updatedLeaders[index] = { ...updatedLeaders[index], image: json.fileUrl };
+          setAboutData({
+            ...aboutData,
+            executiveGuidance: { ...aboutData.executiveGuidance, leaders: updatedLeaders }
+          });
+          return;
+        }
+      }
+    } catch (err) {
+      console.warn('Backend file upload failed, using Base64 data URL fallback:', err.message);
+    }
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const updatedLeaders = [...aboutData.executiveGuidance.leaders];
+      updatedLeaders[index] = { ...updatedLeaders[index], image: e.target.result };
+      setAboutData({
+        ...aboutData,
+        executiveGuidance: { ...aboutData.executiveGuidance, leaders: updatedLeaders }
+      });
+    };
+    reader.readAsDataURL(file);
+  };
+
+  // Bento helpers
+  const handleBentoChange = (field, val) => {
+    setAboutData(prev => ({
+      ...prev,
+      bentoStats: { ...prev.bentoStats, [field]: val }
+    }));
+  };
+
+  const handleStatChange = (index, field, val) => {
+    const nextStats = [...aboutData.bentoStats.stats];
+    nextStats[index] = { ...nextStats[index], [field]: val };
+    setAboutData(prev => ({
+      ...prev,
+      bentoStats: { ...prev.bentoStats, stats: nextStats }
+    }));
+  };
+
+  const handleAddStat = () => {
+    const nextStats = [...aboutData.bentoStats.stats, {
+      id: Date.now().toString(),
+      num: '100+',
+      label: 'New Metric',
+      icon: 'FaAward'
+    }];
+    setAboutData(prev => ({
+      ...prev,
+      bentoStats: { ...prev.bentoStats, stats: nextStats }
+    }));
+  };
+
+  const handleDeleteStat = (index) => {
+    if (!window.confirm('Delete this stat card?')) return;
+    const nextStats = aboutData.bentoStats.stats.filter((_, idx) => idx !== index);
+    setAboutData(prev => ({
+      ...prev,
+      bentoStats: { ...prev.bentoStats, stats: nextStats }
+    }));
+  };
+
+  // Corporate Profile helpers
+  const handleCorporateChange = (field, val) => {
+    setAboutData(prev => ({
+      ...prev,
+      corporateProfile: { ...prev.corporateProfile, [field]: val }
+    }));
+  };
+
+  const handleFastFactChange = (index, field, val) => {
+    const nextFacts = [...aboutData.corporateProfile.fastFacts];
+    nextFacts[index] = { ...nextFacts[index], [field]: val };
+    setAboutData(prev => ({
+      ...prev,
+      corporateProfile: { ...prev.corporateProfile, fastFacts: nextFacts }
+    }));
+  };
+
+  const handleAddFastFact = () => {
+    const nextFacts = [...aboutData.corporateProfile.fastFacts, {
+      label: 'New Label',
+      value: 'New Description'
+    }];
+    setAboutData(prev => ({
+      ...prev,
+      corporateProfile: { ...prev.corporateProfile, fastFacts: nextFacts }
+    }));
+  };
+
+  const handleDeleteFastFact = (index) => {
+    if (!window.confirm('Delete this fast fact?')) return;
+    const nextFacts = aboutData.corporateProfile.fastFacts.filter((_, idx) => idx !== index);
+    setAboutData(prev => ({
+      ...prev,
+      corporateProfile: { ...prev.corporateProfile, fastFacts: nextFacts }
+    }));
+  };
+
+  // Expertise & Execution helpers
+  const handleExpertiseChange = (field, val) => {
+    setAboutData(prev => ({
+      ...prev,
+      expertiseExecution: { ...prev.expertiseExecution, [field]: val }
+    }));
+  };
+
+  const handleServiceChange = (index, field, val) => {
+    const nextServices = [...aboutData.expertiseExecution.services];
+    nextServices[index] = { ...nextServices[index], [field]: val };
+    setAboutData(prev => ({
+      ...prev,
+      expertiseExecution: { ...prev.expertiseExecution, services: nextServices }
+    }));
+  };
+
+
+  const handleServiceSubFeatureChange = (serviceIndex, featIndex, value) => {
+    const nextServices = [...aboutData.expertiseExecution.services];
+    const nextSubFeatures = [...(nextServices[serviceIndex].subFeatures || [])];
+    nextSubFeatures[featIndex] = value;
+    nextServices[serviceIndex] = { ...nextServices[serviceIndex], subFeatures: nextSubFeatures };
+    setAboutData(prev => ({
+      ...prev,
+      expertiseExecution: { ...prev.expertiseExecution, services: nextServices }
+    }));
+  };
+
+  const handleAddServiceSubFeature = (serviceIndex) => {
+    const nextServices = [...aboutData.expertiseExecution.services];
+    const nextSubFeatures = [...(nextServices[serviceIndex].subFeatures || []), ''];
+    nextServices[serviceIndex] = { ...nextServices[serviceIndex], subFeatures: nextSubFeatures };
+    setAboutData(prev => ({
+      ...prev,
+      expertiseExecution: { ...prev.expertiseExecution, services: nextServices }
+    }));
+  };
+
+  const handleDeleteServiceSubFeature = (serviceIndex, featIndex) => {
+    const nextServices = [...aboutData.expertiseExecution.services];
+    const nextSubFeatures = (nextServices[serviceIndex].subFeatures || []).filter((_, idx) => idx !== featIndex);
+    nextServices[serviceIndex] = { ...nextServices[serviceIndex], subFeatures: nextSubFeatures };
+    setAboutData(prev => ({
+      ...prev,
+      expertiseExecution: { ...prev.expertiseExecution, services: nextServices }
+    }));
+  };
+
+  const handleServiceSubFeaturesChange = (index, text) => {
+    const list = text.split('\n').map(s => s.trim()).filter(Boolean);
+    const nextServices = [...aboutData.expertiseExecution.services];
+    nextServices[index] = { ...nextServices[index], subFeatures: list };
+    setAboutData(prev => ({
+      ...prev,
+      expertiseExecution: { ...prev.expertiseExecution, services: nextServices }
+    }));
+  };
+
+  const handleAddAboutService = () => {
+    const nextServices = [...aboutData.expertiseExecution.services, {
+      id: 'service-' + Date.now(),
+      icon: 'FaLaptopCode',
+      title: 'New Service',
+      desc: 'High-impact enterprise digital service engineered for rapid growth.',
+      subFeatures: ['Tailored Strategy', 'Quality Execution', '24/7 Support']
+    }];
+    setAboutData(prev => ({
+      ...prev,
+      expertiseExecution: { ...prev.expertiseExecution, services: nextServices }
+    }));
+  };
+
+  const handleDeleteAboutService = (index) => {
+    if (!window.confirm('Delete this service card from Expertise & Execution?')) return;
+    const nextServices = aboutData.expertiseExecution.services.filter((_, idx) => idx !== index);
+    setAboutData(prev => ({
+      ...prev,
+      expertiseExecution: { ...prev.expertiseExecution, services: nextServices }
+    }));
+  };
+
+  // Executive Guidance helpers
+  const handleGuidanceChange = (field, val) => {
+    setAboutData(prev => ({
+      ...prev,
+      executiveGuidance: { ...prev.executiveGuidance, [field]: val }
+    }));
+  };
+
+  const handleLeaderChange = (index, field, val) => {
+    const nextLeaders = [...aboutData.executiveGuidance.leaders];
+    nextLeaders[index] = { ...nextLeaders[index], [field]: val };
+    setAboutData(prev => ({
+      ...prev,
+      executiveGuidance: { ...prev.executiveGuidance, leaders: nextLeaders }
+    }));
+  };
+
+  const handleAddLeader = () => {
+    const nextLeaders = [...aboutData.executiveGuidance.leaders, {
+      id: Date.now().toString(),
+      name: 'Leader Name',
+      role: 'Executive Role / Designation',
+      bio: 'Professional leadership biography, milestones and expertise...',
+      image: '/Rahish Sir.png'
+    }];
+    setAboutData(prev => ({
+      ...prev,
+      executiveGuidance: { ...prev.executiveGuidance, leaders: nextLeaders }
+    }));
+  };
+
+  const handleDeleteLeader = (index) => {
+    if (!window.confirm('Delete this executive leader?')) return;
+    const nextLeaders = aboutData.executiveGuidance.leaders.filter((_, idx) => idx !== index);
+    setAboutData(prev => ({
+      ...prev,
+      executiveGuidance: { ...prev.executiveGuidance, leaders: nextLeaders }
+    }));
+  };
+
   const navigate = useNavigate();
 
   // Services State (Dynamic MongoDB Managed for Home Page & Explore Pages)
@@ -132,13 +607,35 @@ const AdminDashboard = () => {
     { id: 4, title: 'Mobile App Architecture: React Native vs Flutter', author: 'Mobile Lead', date: 'Jul 30, 2026', views: 1980, category: 'App Dev' }
   ]);
 
-  // Portfolio State
-  const [portfolioList, setPortfolioList] = useState([
-    { id: 1, title: 'EduTech Interactive Platform', client: 'Apex Global Academy', category: 'Web Development', outcome: '+320% Enrollments' },
-    { id: 2, title: 'PaySwift Mobile Finance App', client: 'PaySwift Fintech Ltd', category: 'App Development', outcome: '500K+ Active Installs' },
-    { id: 3, title: 'LuxeCart E-Commerce Brand', client: 'Vogue Essentials', category: 'E-Commerce', outcome: '₹1.8 Cr Monthly GMV' },
-    { id: 4, title: 'MediCare Healthcare Lead Funnel', client: 'MediCare Multispecialty', category: 'SEO & PPC', outcome: '1st Page Rank 480+ Keywords' }
-  ]);
+  // Portfolio State & Management
+  const [portfolioList, setPortfolioList] = useState([]);
+  const [portfolioLoading, setPortfolioLoading] = useState(false);
+  const [portfolioSaving, setPortfolioSaving] = useState(false);
+  const [portfolioFeedback, setPortfolioFeedback] = useState(null);
+  const [isPortfolioModalOpen, setIsPortfolioModalOpen] = useState(false);
+  const [editingProjectId, setEditingProjectId] = useState(null);
+  const [portfolioFormData, setPortfolioFormData] = useState({
+    title: '',
+    client: '',
+    category: 'web',
+    image: '',
+    results: '',
+    description: '',
+    tag: '',
+    order: 0
+  });
+  const [portfolioImageFile, setPortfolioImageFile] = useState(null);
+  const [portfolioImageUploading, setPortfolioImageUploading] = useState(false);
+
+  // Hero Multi-Slide State & Management (Image and Video)
+  const [heroSlides, setHeroSlides] = useState([]);
+  const [heroSlideLoading, setHeroSlideLoading] = useState(false);
+  const [heroSlideSaving, setHeroSlideSaving] = useState(false);
+  const [heroSlideUploading, setHeroSlideUploading] = useState(false);
+  const [heroSlideFeedback, setHeroSlideFeedback] = useState(null);
+  const [newSlideType, setNewSlideType] = useState('video');
+  const [newSlideUrl, setNewSlideUrl] = useState('');
+  const [newSlideTitle, setNewSlideTitle] = useState('');
 
   // 1. Enquiry Now Submissions State (Only real inquiries from MongoDB)
   const [enquiryNowList, setEnquiryNowList] = useState([]);
@@ -318,6 +815,41 @@ const AdminDashboard = () => {
         setHeroVideoLoading(false);
       }
     };
+    const fetchHeroSlides = async () => {
+      try {
+        setHeroSlideLoading(true);
+        const res = await fetch(`${API_BASE}/hero-slides`);
+        if (res.ok) {
+          const json = await res.json();
+          if (json.success && Array.isArray(json.data)) {
+            setHeroSlides(json.data);
+          }
+        }
+      } catch (err) {
+        console.warn('Backend offline, using fallback hero slides:', err.message);
+      } finally {
+        setHeroSlideLoading(false);
+      }
+    };
+
+    const fetchPortfolio = async () => {
+      try {
+        setPortfolioLoading(true);
+        const res = await fetch(`${API_BASE}/portfolio`);
+        if (res.ok) {
+          const json = await res.json();
+          if (json.success && Array.isArray(json.data)) {
+            setPortfolioList(json.data);
+          }
+        }
+      } catch (err) {
+        console.warn('Backend offline, using fallback portfolio:', err.message);
+      } finally {
+        setPortfolioLoading(false);
+      }
+    };
+
+
 
     const fetchServicesFromDB = async () => {
       try {
@@ -343,7 +875,10 @@ const AdminDashboard = () => {
     fetchContactInfo();
     fetchOutstanding();
     fetchHeroVideo();
+    fetchHeroSlides();
+    fetchPortfolio();
     fetchServicesFromDB();
+    fetchAboutData();
   }, []);
 
   const handleLogout = () => {
@@ -812,6 +1347,236 @@ const AdminDashboard = () => {
       setTimeout(() => setHeroVideoFeedback(null), 5000);
     }
   };
+  // =========================================================================
+  // HERO SLIDER HANDLERS (IMAGES & VIDEOS)
+  // =========================================================================
+  const handleAddHeroSlideUrl = async (e) => {
+    if (e) e.preventDefault();
+    if (!newSlideUrl.trim()) return;
+
+    try {
+      setHeroSlideSaving(true);
+      setHeroSlideFeedback(null);
+      const res = await fetch(`${API_BASE}/hero-slides`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: newSlideTitle.trim() || (newSlideType === 'video' ? 'Hero Video Slide' : 'Hero Image Slide'),
+          mediaType: newSlideType,
+          mediaUrl: newSlideUrl.trim(),
+          order: heroSlides.length
+        })
+      });
+      const json = await res.json();
+      if (res.ok && json.success) {
+        setHeroSlides((prev) => [...prev, json.data]);
+        setNewSlideUrl('');
+        setNewSlideTitle('');
+        setHeroSlideFeedback({ type: 'success', message: 'Hero slide added successfully!' });
+      } else {
+        setHeroSlideFeedback({ type: 'error', message: json.message || 'Failed to add slide' });
+      }
+    } catch (err) {
+      setHeroSlideFeedback({ type: 'error', message: err.message });
+    } finally {
+      setHeroSlideSaving(false);
+      setTimeout(() => setHeroSlideFeedback(null), 5000);
+    }
+  };
+
+  const handleUploadHeroSlideFile = async (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append('mediaFile', file);
+    if (newSlideTitle) {
+      formData.append('title', newSlideTitle);
+    }
+
+    try {
+      setHeroSlideUploading(true);
+      setHeroSlideFeedback(null);
+      const res = await fetch(`${API_BASE}/hero-slides/upload`, {
+        method: 'POST',
+        body: formData
+      });
+      const json = await res.json();
+      if (res.ok && json.success) {
+        setHeroSlides((prev) => [...prev, json.data]);
+        setNewSlideTitle('');
+        setHeroSlideFeedback({ type: 'success', message: `Slide "${file.name}" uploaded successfully!` });
+      } else {
+        setHeroSlideFeedback({ type: 'error', message: json.message || 'Failed to upload slide' });
+      }
+    } catch (err) {
+      setHeroSlideFeedback({ type: 'error', message: err.message });
+    } finally {
+      setHeroSlideUploading(false);
+      setTimeout(() => setHeroSlideFeedback(null), 5000);
+    }
+  };
+
+  const handleDeleteHeroSlide = async (id) => {
+    if (!window.confirm('Are you sure you want to delete this hero slide?')) return;
+    try {
+      setHeroSlideLoading(true);
+      const res = await fetch(`${API_BASE}/hero-slides/${id}`, { method: 'DELETE' });
+      if (res.ok) {
+        setHeroSlides((prev) => prev.filter((s) => (s._id || s.id) !== id));
+        setHeroSlideFeedback({ type: 'success', message: 'Slide deleted successfully!' });
+      }
+    } catch (err) {
+      setHeroSlideFeedback({ type: 'error', message: err.message });
+    } finally {
+      setHeroSlideLoading(false);
+      setTimeout(() => setHeroSlideFeedback(null), 4000);
+    }
+  };
+
+  const handleToggleHeroSlideActive = async (slide) => {
+    const id = slide._id || slide.id;
+    try {
+      const res = await fetch(`${API_BASE}/hero-slides/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ isActive: !slide.isActive })
+      });
+      if (res.ok) {
+        setHeroSlides((prev) =>
+          prev.map((s) => ((s._id || s.id) === id ? { ...s, isActive: !s.isActive } : s))
+        );
+      }
+    } catch (err) {
+      console.warn('Error toggling slide status:', err.message);
+    }
+  };
+
+  // =========================================================================
+  // PORTFOLIO MANAGEMENT HANDLERS (FULL CRUD)
+  // =========================================================================
+  const handleOpenAddPortfolio = () => {
+    setEditingProjectId(null);
+    setPortfolioFormData({
+      title: '',
+      client: '',
+      category: 'web',
+      image: '',
+      results: '',
+      description: '',
+      tag: '',
+      order: portfolioList.length + 1
+    });
+    setPortfolioImageFile(null);
+    setPortfolioFeedback(null);
+    setIsPortfolioModalOpen(true);
+  };
+
+  const handleOpenEditPortfolio = (proj) => {
+    setEditingProjectId(proj._id || proj.id);
+    setPortfolioFormData({
+      title: proj.title || '',
+      client: proj.client || '',
+      category: proj.category || 'web',
+      image: proj.image || '',
+      results: proj.results || '',
+      description: proj.description || '',
+      tag: proj.tag || '',
+      order: proj.order || 0
+    });
+    setPortfolioImageFile(null);
+    setPortfolioFeedback(null);
+    setIsPortfolioModalOpen(true);
+  };
+
+  const handleSavePortfolio = async (e) => {
+    e.preventDefault();
+    if (!portfolioFormData.title.trim() || !portfolioFormData.client.trim()) {
+      alert('Please fill out the Project Title and Client Name.');
+      return;
+    }
+
+    try {
+      setPortfolioSaving(true);
+      let finalImageUrl = portfolioFormData.image;
+
+      // If a local image file was selected, upload it first
+      if (portfolioImageFile) {
+        setPortfolioImageUploading(true);
+        const imgData = new FormData();
+        imgData.append('imageFile', portfolioImageFile);
+        const upRes = await fetch(`${API_BASE}/portfolio/upload`, {
+          method: 'POST',
+          body: imgData
+        });
+        const upJson = await upRes.json();
+        if (upRes.ok && upJson.success && upJson.imageUrl) {
+          finalImageUrl = upJson.imageUrl;
+        }
+        setPortfolioImageUploading(false);
+      }
+
+      const payload = {
+        ...portfolioFormData,
+        image: finalImageUrl || 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=700&auto=format&fit=crop&q=80'
+      };
+
+      if (editingProjectId) {
+        // Update existing
+        const res = await fetch(`${API_BASE}/portfolio/${editingProjectId}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const json = await res.json();
+        if (res.ok && json.success) {
+          setPortfolioList((prev) =>
+            prev.map((p) => ((p._id || p.id) === editingProjectId ? json.data : p))
+          );
+          setIsPortfolioModalOpen(false);
+          setPortfolioFeedback({ type: 'success', message: 'Project updated successfully!' });
+        } else {
+          setPortfolioFeedback({ type: 'error', message: json.message || 'Failed to update project' });
+        }
+      } else {
+        // Create new
+        const res = await fetch(`${API_BASE}/portfolio`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const json = await res.json();
+        if (res.ok && json.success) {
+          setPortfolioList((prev) => [...prev, json.data]);
+          setIsPortfolioModalOpen(false);
+          setPortfolioFeedback({ type: 'success', message: 'Project created successfully!' });
+        } else {
+          setPortfolioFeedback({ type: 'error', message: json.message || 'Failed to create project' });
+        }
+      }
+    } catch (err) {
+      setPortfolioFeedback({ type: 'error', message: err.message });
+    } finally {
+      setPortfolioSaving(false);
+      setTimeout(() => setPortfolioFeedback(null), 5000);
+    }
+  };
+
+  const handleDeletePortfolio = async (id) => {
+    if (!window.confirm('Are you sure you want to delete this portfolio project?')) return;
+    try {
+      const res = await fetch(`${API_BASE}/portfolio/${id}`, { method: 'DELETE' });
+      if (res.ok) {
+        setPortfolioList((prev) => prev.filter((p) => (p._id || p.id) !== id));
+        setPortfolioFeedback({ type: 'success', message: 'Project deleted successfully!' });
+      }
+    } catch (err) {
+      setPortfolioFeedback({ type: 'error', message: err.message });
+    } finally {
+      setTimeout(() => setPortfolioFeedback(null), 4000);
+    }
+  };
+
 
   // =========================================================================
   // SERVICES MANAGEMENT HANDLERS (Home Page Showcase + Explore Page Content)
@@ -1027,19 +1792,26 @@ const AdminDashboard = () => {
     }
   };
 
-  const handleDeleteService = async (serviceId) => {
-    if (!window.confirm('Delete this service permanently from MongoDB?')) return;
+  const handleDeleteService = async (serviceIdOrSlug, serviceTitle) => {
+    const titleToDisplay = serviceTitle || 'this service';
+    if (!window.confirm(`Are you sure you want to permanently delete service "${titleToDisplay}"?`)) return;
     try {
       setServicesLoading(true);
-      const res = await fetch(`${API_BASE}/services/${serviceId}`, { method: 'DELETE' });
+      const res = await fetch(`${API_BASE}/services/${serviceIdOrSlug}`, { method: 'DELETE' });
       const json = await res.json();
-      if (res.ok && json.success) {
-        setServicesList(prev => prev.filter(s => s._id !== serviceId && s.slug !== serviceId));
-        setServicesFeedback({
-          type: 'success',
-          message: 'Service deleted successfully'
-        });
-      }
+      
+      setServicesList(prev => {
+        const updated = prev.filter(s => s._id !== serviceIdOrSlug && s.slug !== serviceIdOrSlug);
+        if ((activeServiceKey === serviceIdOrSlug || currentService.slug === serviceIdOrSlug || currentService._id === serviceIdOrSlug) && updated.length > 0) {
+          setActiveServiceKey(updated[0].slug || updated[0]._id);
+        }
+        return updated;
+      });
+
+      setServicesFeedback({
+        type: 'success',
+        message: (json && json.message) || `Service "${titleToDisplay}" deleted successfully`
+      });
     } catch (err) {
       setServicesFeedback({
         type: 'error',
@@ -1230,6 +2002,626 @@ const AdminDashboard = () => {
         {/* =========================================================================
             TAB 3: MANAGE BLOGS (CONNECTED TO MONGODB & RICH TEXT EDITOR)
            ========================================================================= */}
+        {/* =========================================================================
+            TAB: MANAGE ABOUT US (HERO BENTO, CORPORATE PROFILE, EXPERTISE, EXECUTIVE GUIDANCE)
+           ========================================================================= */}
+        {activeTab === 'about' && (
+          <div className="wm-adash-tab-view">
+            <div className="wm-adash-section-header">
+              <div>
+                <h2>Manage About Us Page CMS</h2>
+                <p>
+                  Full control over Corporate Profile, Hero Bottom Bento Stats, Expertise & Execution services,
+                  and Executive Guidance leadership team with photo upload capability.
+                </p>
+              </div>
+              <div className="wm-out-header-actions">
+                {/* <button
+                  type="button"
+                  className="wm-out-btn-reset-all"
+                  onClick={handleResetAboutData}
+                  disabled={aboutSaving || aboutLoading}
+                  title="Reset all About Us sections to factory defaults"
+                >
+                  <FaUndoAlt /> Reset Defaults
+                </button> */}
+                <a
+                  href="/about-us"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="wm-out-btn-view-site"
+                >
+                  <FaExternalLinkAlt /> View Live About Us
+                </a>
+                <button
+                  type="button"
+                  className="wm-about-save-btn"
+                  onClick={handleSaveAboutData}
+                  disabled={aboutSaving || aboutLoading}
+                >
+                  {aboutSaving ? (
+                    <><FaSpinner className="wm-spinner-icon" /> Saving...</>
+                  ) : (
+                    <><FaSave /> Save Changes</>
+                  )}
+                </button>
+              </div>
+            </div>
+
+            {aboutFeedback && (
+              <div className={`wm-out-alert ${aboutFeedback.type === 'error' ? 'wm-out-alert-error' : 'wm-out-alert-success'}`}>
+                {aboutFeedback.type === 'error' ? <FaTimes /> : <FaCheckCircle />}
+                <span>{aboutFeedback.message}</span>
+              </div>
+            )}
+
+            {/* Subtabs Bar */}
+            <div className="wm-about-subnav-bar">
+              <button
+                type="button"
+                className={`wm-about-subnav-btn ${aboutSubTab === 'bento' ? 'active' : ''}`}
+                onClick={() => setAboutSubTab('bento')}
+              >
+                <FaLayerGroup /> Hero Bento & Stats ({aboutData?.bentoStats?.stats?.length || 0})
+              </button>
+              <button
+                type="button"
+                className={`wm-about-subnav-btn ${aboutSubTab === 'profile' ? 'active' : ''}`}
+                onClick={() => setAboutSubTab('profile')}
+              >
+                <FaBuilding /> Corporate Profile ({aboutData?.corporateProfile?.fastFacts?.length || 0} Facts)
+              </button>
+              <button
+                type="button"
+                className={`wm-about-subnav-btn ${aboutSubTab === 'expertise' ? 'active' : ''}`}
+                onClick={() => setAboutSubTab('expertise')}
+              >
+                <FaLaptopCode /> Expertise & Execution ({aboutData?.expertiseExecution?.services?.length || 0} Services)
+              </button>
+              <button
+                type="button"
+                className={`wm-about-subnav-btn ${aboutSubTab === 'guidance' ? 'active' : ''}`}
+                onClick={() => setAboutSubTab('guidance')}
+              >
+                <FaUsers /> Executive Guidance ({aboutData?.executiveGuidance?.leaders?.length || 0} Leaders)
+              </button>
+            </div>
+
+            {/* 1. HERO BOTTOM BENTO & STATS SECTION */}
+            {aboutSubTab === 'bento' && (
+              <div className="wm-about-tab-content">
+                <div className="wm-about-card">
+                  <div className="wm-about-card-head">
+                    <h3><FaLayerGroup /> Hero Bottom Bento Content</h3>
+                    <p>Customize the headline, accent wording, and Why Webmok story displayed below the hero.</p>
+                  </div>
+                  <div className="wm-about-form-grid">
+                    <div className="wm-cfield">
+                      <label>Main Tagline Heading</label>
+                      <input
+                        type="text"
+                        value={aboutData?.bentoStats?.tagline || ''}
+                        onChange={(e) => handleBentoChange('tagline', e.target.value)}
+                        placeholder="e.g. Our foundation for every project we deliver."
+                      />
+                    </div>
+                    <div className="wm-cfield">
+                      <label>Accent Word / Highlight</label>
+                      <input
+                        type="text"
+                        value={aboutData?.bentoStats?.accentWord || ''}
+                        onChange={(e) => handleBentoChange('accentWord', e.target.value)}
+                        placeholder="e.g. Excellence."
+                      />
+                    </div>
+                    <div className="wm-cfield full-width">
+                      <label>Tagline Description Text</label>
+                      <textarea
+                        rows="3"
+                        value={aboutData?.bentoStats?.taglineDesc || ''}
+                        onChange={(e) => handleBentoChange('taglineDesc', e.target.value)}
+                        placeholder="Detailed mission / foundation statement..."
+                      />
+                    </div>
+                    <div className="wm-cfield full-width">
+                      <label>Why Webmok Section Heading</label>
+                      <input
+                        type="text"
+                        value={aboutData?.bentoStats?.whyTitle || ''}
+                        onChange={(e) => handleBentoChange('whyTitle', e.target.value)}
+                        placeholder="e.g. Why Webmok?"
+                      />
+                    </div>
+                    <div className="wm-cfield">
+                      <label>Why Description Paragraph 1</label>
+                      <textarea
+                        rows="3"
+                        value={aboutData?.bentoStats?.whyDesc1 || ''}
+                        onChange={(e) => handleBentoChange('whyDesc1', e.target.value)}
+                        placeholder="First paragraph of Why Webmok..."
+                      />
+                    </div>
+                    <div className="wm-cfield">
+                      <label>Why Description Paragraph 2</label>
+                      <textarea
+                        rows="3"
+                        value={aboutData?.bentoStats?.whyDesc2 || ''}
+                        onChange={(e) => handleBentoChange('whyDesc2', e.target.value)}
+                        placeholder="Second paragraph of Why Webmok..."
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* 4 Stat Cards */}
+                <div className="wm-about-card">
+                  <div className="wm-about-card-head flex-between">
+                    <div>
+                      <h3><FaTrophy /> Bento Stat Metrics</h3>
+                      <p>Manage the 4 key stat highlights shown in the Bento box.</p>
+                    </div>
+                    <button
+                      type="button"
+                      className="wm-about-btn-add"
+                      onClick={handleAddStat}
+                    >
+                      <FaPlus /> Add Stat Card
+                    </button>
+                  </div>
+
+                  <div className="wm-about-stats-grid">
+                    {(aboutData?.bentoStats?.stats || []).map((stat, idx) => (
+                      <div key={stat.id || idx} className="wm-about-stat-item-card">
+                        <div className="wm-about-item-top">
+                          <span className="wm-about-item-badge">Stat #{idx + 1}</span>
+                          <button
+                            type="button"
+                            className="wm-about-btn-del"
+                            onClick={() => handleDeleteStat(idx)}
+                            title="Delete this stat"
+                          >
+                            <FaTrash />
+                          </button>
+                        </div>
+                        <div className="wm-cfield">
+                          <label>Number / Metric</label>
+                          <input
+                            type="text"
+                            value={stat.num || ''}
+                            onChange={(e) => handleStatChange(idx, 'num', e.target.value)}
+                            placeholder="e.g. 1500+"
+                          />
+                        </div>
+                        <div className="wm-cfield">
+                          <label>Metric Label</label>
+                          <input
+                            type="text"
+                            value={stat.label || ''}
+                            onChange={(e) => handleStatChange(idx, 'label', e.target.value)}
+                            placeholder="e.g. Projects Delivered"
+                          />
+                        </div>
+                        <div className="wm-cfield">
+                          <label>Icon Style</label>
+                          <select
+                            value={stat.icon || 'FaTrophy'}
+                            onChange={(e) => handleStatChange(idx, 'icon', e.target.value)}
+                          >
+                            <option value="FaTrophy">FaTrophy (Cup)</option>
+                            <option value="FaLayerGroup">FaLayerGroup (Layers)</option>
+                            <option value="FaUsers">FaUsers (Team)</option>
+                            <option value="FaBuilding">FaBuilding (Office)</option>
+                            <option value="FaRocket">FaRocket (Rocket)</option>
+                            <option value="FaAward">FaAward (Medal)</option>
+                            <option value="FaShieldAlt">FaShieldAlt (Shield)</option>
+                            <option value="FaChartLine">FaChartLine (Growth)</option>
+                          </select>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* 2. CORPORATE PROFILE SECTION */}
+            {aboutSubTab === 'profile' && (
+              <div className="wm-about-tab-content">
+                <div className="wm-about-card">
+                  <div className="wm-about-card-head">
+                    <h3><FaBuilding /> Corporate Profile Story & Guarantee</h3>
+                    <p>Update company registration profile, mission copy, and the 100% money-back guarantee policy.</p>
+                  </div>
+                  <div className="wm-about-form-grid">
+                    <div className="wm-cfield">
+                      <label>Section Subtitle / Badge</label>
+                      <input
+                        type="text"
+                        value={aboutData?.corporateProfile?.subtitle || ''}
+                        onChange={(e) => handleCorporateChange('subtitle', e.target.value)}
+                        placeholder="e.g. Corporate Profile"
+                      />
+                    </div>
+                    <div className="wm-cfield">
+                      <label>Main Headline</label>
+                      <input
+                        type="text"
+                        value={aboutData?.corporateProfile?.title || ''}
+                        onChange={(e) => handleCorporateChange('title', e.target.value)}
+                        placeholder="e.g. Developing Any Kind of Business in Digital Form"
+                      />
+                    </div>
+                    <div className="wm-cfield full-width">
+                      <label>Lead Paragraph</label>
+                      <textarea
+                        rows="3"
+                        value={aboutData?.corporateProfile?.leadPara || ''}
+                        onChange={(e) => handleCorporateChange('leadPara', e.target.value)}
+                        placeholder="Opening corporate introduction..."
+                      />
+                    </div>
+                    <div className="wm-cfield full-width">
+                      <label>Body Paragraph</label>
+                      <textarea
+                        rows="3"
+                        value={aboutData?.corporateProfile?.bodyPara || ''}
+                        onChange={(e) => handleCorporateChange('bodyPara', e.target.value)}
+                        placeholder="Secondary details on achievements and client scope..."
+                      />
+                    </div>
+                    <div className="wm-cfield full-width">
+                      <label>Guarantee Policy Box Title</label>
+                      <input
+                        type="text"
+                        value={aboutData?.corporateProfile?.guaranteeTitle || ''}
+                        onChange={(e) => handleCorporateChange('guaranteeTitle', e.target.value)}
+                        placeholder="e.g. 100% Earned Result & Money-Back Policy"
+                      />
+                    </div>
+                    <div className="wm-cfield full-width">
+                      <label>Guarantee Policy Text</label>
+                      <textarea
+                        rows="4"
+                        value={aboutData?.corporateProfile?.guaranteeText || ''}
+                        onChange={(e) => handleCorporateChange('guaranteeText', e.target.value)}
+                        placeholder="Full terms of 100% result satisfaction policy..."
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Fast Facts Key-Values */}
+                <div className="wm-about-card">
+                  <div className="wm-about-card-head flex-between">
+                    <div>
+                      <h3><FaAward /> Corporate Fast Facts & Credentials</h3>
+                      <p>Manage the bullet credentials (Incorporation date, offices, assurance policy, etc.).</p>
+                    </div>
+                    <button
+                      type="button"
+                      className="wm-about-btn-add"
+                      onClick={handleAddFastFact}
+                    >
+                      <FaPlus /> Add Fast Fact
+                    </button>
+                  </div>
+
+                  <div className="wm-about-facts-list">
+                    {(aboutData?.corporateProfile?.fastFacts || []).map((fact, idx) => (
+                      <div key={idx} className="wm-about-fact-row">
+                        <div className="wm-cfield fact-label">
+                          <label>Fact Label #{idx + 1}</label>
+                          <input
+                            type="text"
+                            value={fact.label || ''}
+                            onChange={(e) => handleFastFactChange(idx, 'label', e.target.value)}
+                            placeholder="e.g. Incorporation Date"
+                          />
+                        </div>
+                        <div className="wm-cfield fact-value">
+                          <label>Fact Detail / Value</label>
+                          <input
+                            type="text"
+                            value={fact.value || ''}
+                            onChange={(e) => handleFastFactChange(idx, 'value', e.target.value)}
+                            placeholder="e.g. 16 June 2016"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          className="wm-about-btn-del row-del"
+                          onClick={() => handleDeleteFastFact(idx)}
+                          title="Delete fact"
+                        >
+                          <FaTrash />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* 3. EXPERTISE & EXECUTION SECTION */}
+            {aboutSubTab === 'expertise' && (
+              <div className="wm-about-tab-content">
+                <div className="wm-about-card">
+                  <div className="wm-about-card-head">
+                    <h3><FaLaptopCode /> Expertise & Execution Section Header</h3>
+                    <p>Header titles for the full service portfolio section on About Us.</p>
+                  </div>
+                  <div className="wm-about-form-grid">
+                    <div className="wm-cfield">
+                      <label>Section Subtitle / Badge</label>
+                      <input
+                        type="text"
+                        value={aboutData?.expertiseExecution?.subtitle || ''}
+                        onChange={(e) => handleExpertiseChange('subtitle', e.target.value)}
+                        placeholder="e.g. Expertise & Execution"
+                      />
+                    </div>
+                    <div className="wm-cfield">
+                      <label>Main Headline</label>
+                      <input
+                        type="text"
+                        value={aboutData?.expertiseExecution?.title || ''}
+                        onChange={(e) => handleExpertiseChange('title', e.target.value)}
+                        placeholder="e.g. Well-Qualified Staff & Complete Services Portfolio"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Services Cards CRUD */}
+                <div className="wm-about-card">
+                  <div className="wm-about-card-head flex-between">
+                    <div>
+                      <h3><FaCogs /> Service Offerings ({aboutData?.expertiseExecution?.services?.length || 0})</h3>
+                      <p>Add, edit, or delete the services and sub-bullet items displayed on the About Us page.</p>
+                    </div>
+                    <button
+                      type="button"
+                      className="wm-about-btn-add"
+                      onClick={handleAddAboutService}
+                    >
+                      <FaPlus /> Add New Service
+                    </button>
+                  </div>
+
+                  <div className="wm-about-services-grid">
+                    {(aboutData?.expertiseExecution?.services || []).map((service, idx) => (
+                      <div key={service.id || idx} className="wm-about-service-card">
+                        <div className="wm-about-item-top">
+                          <span className="wm-about-item-badge">Service #{idx + 1}</span>
+                          <button
+                            type="button"
+                            className="wm-about-btn-del"
+                            onClick={() => handleDeleteAboutService(idx)}
+                            title="Delete this service"
+                          >
+                            <FaTrash />
+                          </button>
+                        </div>
+
+                        <div className="wm-cfield">
+                          <label>Service Title</label>
+                          <input
+                            type="text"
+                            value={service.title || ''}
+                            onChange={(e) => handleServiceChange(idx, 'title', e.target.value)}
+                            placeholder="e.g. Web Designing"
+                          />
+                        </div>
+
+                        <div className="wm-cfield">
+                          <label>Service Icon</label>
+                          <select
+                            value={service.icon || 'FaLaptopCode'}
+                            onChange={(e) => handleServiceChange(idx, 'icon', e.target.value)}
+                          >
+                            <option value="FaLaptopCode">FaLaptopCode (Laptop)</option>
+                            <option value="FaCogs">FaCogs (Gears / Dev)</option>
+                            <option value="FaSearch">FaSearch (SEO)</option>
+                            <option value="FaEnvelopeOpenText">FaEnvelopeOpenText (Email)</option>
+                            <option value="FaRegLightbulb">FaRegLightbulb (Content)</option>
+                            <option value="FaMobileAlt">FaMobileAlt (Mobile App)</option>
+                            <option value="FaBullhorn">FaBullhorn (SMM)</option>
+                            <option value="FaShareAlt">FaShareAlt (SMO)</option>
+                            <option value="FaAd">FaAd (PPC / Ads)</option>
+                            <option value="FaChartLine">FaChartLine (Analytics)</option>
+                            <option value="FaRocket">FaRocket (Growth)</option>
+                            <option value="FaAward">FaAward (Quality)</option>
+                          </select>
+                        </div>
+
+                        <div className="wm-cfield full-width">
+                          <label>Short Description</label>
+                          <textarea
+                            rows="2"
+                            value={service.desc || ''}
+                            onChange={(e) => handleServiceChange(idx, 'desc', e.target.value)}
+                            placeholder="Brief description of this capability..."
+                          />
+                        </div>
+
+                        <div className="wm-cfield full-width">
+                          <div className="wm-about-item-top" style={{ marginBottom: '8px' }}>
+                            <label style={{ margin: 0, fontWeight: 700 }}>
+                              Sub-Features / Deliverables ({service.subFeatures?.length || 0})
+                            </label>
+                            <button
+                              type="button"
+                              className="wm-about-btn-add"
+                              style={{ padding: '4px 10px', fontSize: '12px' }}
+                              onClick={() => handleAddServiceSubFeature(idx)}
+                            >
+                              <FaPlus /> Add Sub-Feature
+                            </button>
+                          </div>
+
+                          <div className="wm-about-subfeat-list">
+                            {(service.subFeatures || []).map((feat, fidx) => (
+                              <div key={fidx} className="wm-about-subfeat-row">
+                                <span className="wm-about-subfeat-num">{fidx + 1}.</span>
+                                <input
+                                  type="text"
+                                  value={feat}
+                                  onChange={(e) => handleServiceSubFeatureChange(idx, fidx, e.target.value)}
+                                  placeholder={`Sub-Feature #${fidx + 1}`}
+                                />
+                                <button
+                                  type="button"
+                                  className="wm-about-btn-del"
+                                  style={{ width: '30px', height: '30px' }}
+                                  onClick={() => handleDeleteServiceSubFeature(idx, fidx)}
+                                  title="Delete sub-feature"
+                                >
+                                  <FaTrash />
+                                </button>
+                              </div>
+                            ))}
+                            {(!service.subFeatures || service.subFeatures.length === 0) && (
+                              <p style={{ fontSize: '13px', color: '#94a3b8', margin: '4px 0 0' }}>
+                                No sub-features added yet. Click "+ Add Sub-Feature" to add deliverables.
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* 4. EXECUTIVE GUIDANCE SECTION */}
+            {aboutSubTab === 'guidance' && (
+              <div className="wm-about-tab-content">
+                <div className="wm-about-card">
+                  <div className="wm-about-card-head">
+                    <h3><FaUsers /> Executive Guidance Section Header</h3>
+                    <p>Header titles for the leadership team section on About Us.</p>
+                  </div>
+                  <div className="wm-about-form-grid">
+                    <div className="wm-cfield">
+                      <label>Section Subtitle / Badge</label>
+                      <input
+                        type="text"
+                        value={aboutData?.executiveGuidance?.subtitle || ''}
+                        onChange={(e) => handleGuidanceChange('subtitle', e.target.value)}
+                        placeholder="e.g. Executive Guidance"
+                      />
+                    </div>
+                    <div className="wm-cfield">
+                      <label>Main Headline</label>
+                      <input
+                        type="text"
+                        value={aboutData?.executiveGuidance?.title || ''}
+                        onChange={(e) => handleGuidanceChange('title', e.target.value)}
+                        placeholder="e.g. Meet The Experts Guiding Your Brand"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Leadership Team Members CRUD */}
+                <div className="wm-about-card">
+                  <div className="wm-about-card-head flex-between">
+                    <div>
+                      <h3><FaUsers /> Leadership Team ({aboutData?.executiveGuidance?.leaders?.length || 0} Executives)</h3>
+                      <p>Add, edit, delete leadership members and upload their executive profile photos.</p>
+                    </div>
+                    <button
+                      type="button"
+                      className="wm-about-btn-add"
+                      onClick={handleAddLeader}
+                    >
+                      <FaPlus /> Add Executive Leader
+                    </button>
+                  </div>
+
+                  <div className="wm-about-leaders-grid">
+                    {(aboutData?.executiveGuidance?.leaders || []).map((leader, idx) => (
+                      <div key={leader.id || idx} className="wm-about-leader-card">
+                        <div className="wm-about-item-top">
+                          <span className="wm-about-item-badge">Executive #{idx + 1}</span>
+                          <button
+                            type="button"
+                            className="wm-about-btn-del"
+                            onClick={() => handleDeleteLeader(idx)}
+                            title="Delete this leader"
+                          >
+                            <FaTrash />
+                          </button>
+                        </div>
+
+                        {/* Leader Photo & Upload */}
+                        <div className="wm-about-leader-photo-box">
+                          <div className="wm-about-photo-preview">
+                            <img
+                              src={leader.image || '/Rahish Sir.png'}
+                              alt={leader.name || 'Executive Leader'}
+                              onError={(e) => { e.target.src = '/Rahish Sir.png'; }}
+                            />
+                          </div>
+                          <div className="wm-about-photo-ctrls">
+                            <label className="wm-about-upload-label">
+                              <FaUpload /> Upload Photo
+                              <input
+                                type="file"
+                                accept="image/*"
+                                onChange={(e) => handleLeaderImageUpload(idx, e.target.files[0])}
+                                style={{ display: 'none' }}
+                              />
+                            </label>
+                            <input
+                              type="text"
+                              className="wm-about-img-url-input"
+                              value={leader.image || ''}
+                              onChange={(e) => handleLeaderChange(idx, 'image', e.target.value)}
+                              placeholder="Or paste photo URL / path (/name.png)"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="wm-cfield">
+                          <label>Full Name</label>
+                          <input
+                            type="text"
+                            value={leader.name || ''}
+                            onChange={(e) => handleLeaderChange(idx, 'name', e.target.value)}
+                            placeholder="e.g. Rahish Sangwan"
+                          />
+                        </div>
+
+                        <div className="wm-cfield">
+                          <label>Executive Role / Title</label>
+                          <input
+                            type="text"
+                            value={leader.role || ''}
+                            onChange={(e) => handleLeaderChange(idx, 'role', e.target.value)}
+                            placeholder="e.g. Founder & Managing Director"
+                          />
+                        </div>
+
+                        <div className="wm-cfield full-width">
+                          <label>Executive Biography / Track Record</label>
+                          <textarea
+                            rows="3"
+                            value={leader.bio || ''}
+                            onChange={(e) => handleLeaderChange(idx, 'bio', e.target.value)}
+                            placeholder="Over a decade of leadership in digital transformation..."
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
         {activeTab === 'blogs' && (
           <div className="wm-adash-tab-view">
             <div className="wm-adash-section-header">
@@ -1364,7 +2756,7 @@ const AdminDashboard = () => {
                                   <div>
                                     <strong>{blog.title}</strong>
                                     <div className="wm-blog-slug-preview">
-                                      <span>/blogs/{blog.slug}</span>
+                                      <span>/{blog.slug}</span>
                                     </div>
                                   </div>
                                 </div>
@@ -1420,7 +2812,7 @@ const AdminDashboard = () => {
                                     <FaEdit /> Edit
                                   </button>
                                   <a
-                                    href={`/blogs/${blog.slug}`}
+                                    href={`/${blog.slug}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="wm-action-view-btn"
@@ -1909,7 +3301,7 @@ const AdminDashboard = () => {
                 </p>
               </div>
               <div className="wm-out-header-actions">
-                <button
+                {/* <button
                   type="button"
                   className="wm-out-btn-reset-all"
                   onClick={handleResetOutstandingDefaults}
@@ -1917,7 +3309,7 @@ const AdminDashboard = () => {
                   title="Reset all tabs to default copy & mock graph"
                 >
                   <FaUndoAlt /> Reset All Defaults
-                </button>
+                </button> */}
                 <a
                   href="/"
                   target="_blank"
@@ -2276,107 +3668,270 @@ const AdminDashboard = () => {
             {/* Tab Header Banner */}
             <div className="wm-adash-section-header">
               <div>
-                <h2><FaVideo /> Home Page Hero Video Manager</h2>
-                <p>Upload a new custom video file (MP4, WebM, MOV) or manage the hero video displayed on the Home Page.</p>
+                <h2><FaVideo /> Home Page Hero Slider & Media Manager</h2>
+                <p>Upload videos (MP4, WebM) or images (JPG, PNG, WebP) to display in the Home Page hero section. If multiple active slides are added, an auto-playing slider will run smoothly on the home page.</p>
               </div>
               <div className="wm-out-header-actions">
-                <button
+                {/* <button
                   type="button"
                   className="wm-out-btn-reset-all"
                   onClick={handleResetHeroVideo}
                   disabled={heroVideoLoading}
-                  title="Reset video to default /Home-Hero.mp4"
+                  title="Reset fallback video to default /Home-Hero.mp4"
                 >
-                  <FaUndoAlt /> Reset to Default Video
-                </button>
+                  <FaUndoAlt /> Reset Default Video
+                </button> */}
               </div>
             </div>
 
             {/* Feedback Message Banner */}
-            {heroVideoFeedback && (
-              <div className={`wm-out-feedback-banner ${heroVideoFeedback.type === 'success' ? 'wm-feed-success' : 'wm-feed-error'}`}>
-                {heroVideoFeedback.type === 'success' ? <FaCheckCircle /> : <FaTimes />}
-                <span>{heroVideoFeedback.message}</span>
+            {(heroSlideFeedback || heroVideoFeedback) && (
+              <div className={`wm-out-feedback-banner ${(heroSlideFeedback?.type === 'success' || heroVideoFeedback?.type === 'success') ? 'wm-feed-success' : 'wm-feed-error'}`}>
+                {(heroSlideFeedback?.type === 'success' || heroVideoFeedback?.type === 'success') ? <FaCheckCircle /> : <FaTimes />}
+                <span>{heroSlideFeedback?.message || heroVideoFeedback?.message}</span>
               </div>
             )}
 
             {/* 2-Column Split Workspace */}
             <div className="wm-hero-vid-grid">
-              {/* Left Column: Upload Form & Settings */}
+              {/* Left Column: Upload Form & Slide List */}
               <div className="wm-hero-vid-form-col">
-                {/* Card 1: Video File Upload */}
+                {/* Card 1: Add New Slide (Image or Video) */}
                 <div className="wm-out-card">
                   <div className="wm-out-card-header">
-                    <h3><FaUpload /> Upload Video File</h3>
+                    <h3><FaPlus /> Add New Hero Slide</h3>
                   </div>
-
                   <p className="wm-out-card-help">
-                    Select an MP4, WebM, or MOV video file from your computer. The video will be saved directly into the server's uploads directory and immediately activated on the live website.
+                    Add a video or image slide to the home page hero slider. When 2 or more active slides exist, visitors will see an interactive slider with smooth transitions.
                   </p>
 
-                  <label className="wm-out-file-dropzone wm-hero-vid-dropzone">
+                  <div className="wm-hero-type-selector" style={{ display: 'flex', gap: '12px', marginBottom: '16px' }}>
+                    <button
+                      type="button"
+                      className={`wm-hero-type-btn ${newSlideType === 'video' ? 'active' : ''}`}
+                      onClick={() => setNewSlideType('video')}
+                      style={{
+                        flex: 1,
+                        padding: '10px 16px',
+                        borderRadius: '8px',
+                        border: newSlideType === 'video' ? '2px solid #0077b6' : '1px solid #cbd5e1',
+                        background: newSlideType === 'video' ? '#e0f2fe' : '#f8fafc',
+                        color: newSlideType === 'video' ? '#0077b6' : '#64748b',
+                        fontWeight: '700',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '8px'
+                      }}
+                    >
+                      <FaVideo /> Video Slide
+                    </button>
+                    <button
+                      type="button"
+                      className={`wm-hero-type-btn ${newSlideType === 'image' ? 'active' : ''}`}
+                      onClick={() => setNewSlideType('image')}
+                      style={{
+                        flex: 1,
+                        padding: '10px 16px',
+                        borderRadius: '8px',
+                        border: newSlideType === 'image' ? '2px solid #0077b6' : '1px solid #cbd5e1',
+                        background: newSlideType === 'image' ? '#e0f2fe' : '#f8fafc',
+                        color: newSlideType === 'image' ? '#0077b6' : '#64748b',
+                        fontWeight: '700',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '8px'
+                      }}
+                    >
+                      <FaImage /> Image Slide
+                    </button>
+                  </div>
+
+                  <div className="wm-csfield" style={{ marginBottom: '14px' }}>
+                    <label>Slide Title / Label (Optional):</label>
+                    <input
+                      type="text"
+                      value={newSlideTitle}
+                      onChange={(e) => setNewSlideTitle(e.target.value)}
+                      placeholder={newSlideType === 'video' ? 'e.g. Webmok Brand Reel' : 'e.g. Enterprise IT Solutions'}
+                    />
+                  </div>
+
+                  {/* Method A: File Upload Dropzone */}
+                  <label className="wm-out-file-dropzone wm-hero-vid-dropzone" style={{ marginBottom: '16px' }}>
                     <input
                       type="file"
-                      accept="video/mp4,video/webm,video/ogg,video/quicktime,video/x-matroska,video/avi"
-                      onChange={handleHeroVideoFileUpload}
-                      disabled={heroVideoUploading}
+                      accept={newSlideType === 'video' ? 'video/mp4,video/webm,video/ogg,video/quicktime,video/x-matroska,video/avi' : 'image/*'}
+                      onChange={handleUploadHeroSlideFile}
+                      disabled={heroSlideUploading}
                     />
                     <div className="wm-out-dropzone-inner">
-                      {heroVideoUploading ? (
+                      {heroSlideUploading ? (
                         <>
                           <FaSpinner className="wm-spin wm-upload-spin-icon" />
-                          <strong>Uploading Hero Video...</strong>
-                          <small>Please wait while the video file is uploading to the server...</small>
+                          <strong>Uploading {newSlideType === 'video' ? 'Video' : 'Image'} Slide...</strong>
+                          <small>Please wait while the media file is uploading to the server...</small>
                         </>
                       ) : (
                         <>
-                          <FaVideo className="wm-upload-cloud-icon" />
-                          <strong>Click or Drag & Drop Video File Here</strong>
-                          <small>Supported formats: MP4, WebM, MOV, AVI • Max size: 250MB</small>
+                          {newSlideType === 'video' ? <FaVideo className="wm-upload-cloud-icon" /> : <FaImage className="wm-upload-cloud-icon" />}
+                          <strong>Click or Drag & Drop {newSlideType === 'video' ? 'Video' : 'Image'} File</strong>
+                          <small>{newSlideType === 'video' ? 'Supports MP4, WebM, MOV (Max 250MB)' : 'Supports JPG, PNG, WebP, SVG (Max 20MB)'}</small>
                         </>
                       )}
                     </div>
                   </label>
 
-                  {/* Current File Metadata Box */}
-                  <div className="wm-hero-vid-meta-box">
-                    <div className="wm-hero-meta-row">
-                      <span className="wm-hero-meta-label">Active Status:</span>
-                      <span className={`wm-hero-status-pill ${heroVideoData.isDefault ? 'default' : 'custom'}`}>
-                        {heroVideoData.isDefault ? 'Default Built-in Video' : 'Custom Uploaded Video'}
-                      </span>
-                    </div>
-
-                    <div className="wm-hero-meta-row">
-                      <span className="wm-hero-meta-label">Active Video URL:</span>
-                      <code className="wm-hero-meta-code">{heroVideoData.videoUrl}</code>
-                    </div>
-
-                    {heroVideoData.originalName && (
-                      <div className="wm-hero-meta-row">
-                        <span className="wm-hero-meta-label">File Name:</span>
-                        <strong>{heroVideoData.originalName}</strong>
-                      </div>
-                    )}
-
-                    {heroVideoData.size > 0 && (
-                      <div className="wm-hero-meta-row">
-                        <span className="wm-hero-meta-label">File Size:</span>
-                        <span>{(heroVideoData.size / (1024 * 1024)).toFixed(2)} MB</span>
-                      </div>
-                    )}
+                  {/* Method B: Or Enter Direct URL */}
+                  <div style={{ position: 'relative', textAlign: 'center', margin: '14px 0 16px' }}>
+                    <span style={{ background: '#ffffff', padding: '0 10px', color: '#94a3b8', fontSize: '12px', fontWeight: '600' }}>OR ENTER DIRECT URL</span>
+                    <hr style={{ border: 'none', borderTop: '1px solid #e2e8f0', margin: '-10px 0 0', position: 'relative', zIndex: -1 }} />
                   </div>
+
+                  <form onSubmit={handleAddHeroSlideUrl} style={{ display: 'flex', gap: '10px' }}>
+                    <input
+                      type="text"
+                      value={newSlideUrl}
+                      onChange={(e) => setNewSlideUrl(e.target.value)}
+                      placeholder={newSlideType === 'video' ? 'e.g. /Home-Hero.mp4 or https://...' : 'e.g. https://images.unsplash.com/... or /uploads/...'}
+                      style={{ flex: 1, padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                    />
+                    <button
+                      type="submit"
+                      className="wm-out-btn-save"
+                      disabled={heroSlideSaving || !newSlideUrl.trim()}
+                      style={{ whiteSpace: 'nowrap' }}
+                    >
+                      {heroSlideSaving ? <FaSpinner className="wm-spin" /> : <FaPlus />} Add Slide
+                    </button>
+                  </form>
                 </div>
 
-                {/* Card 2: Manual URL Configuration */}
+                {/* Card 2: Current Hero Slides List */}
                 <div className="wm-out-card">
-                  <div className="wm-out-card-header">
-                    <h3><FaGlobe /> Video URL & Title Configuration</h3>
+                  <div className="wm-out-card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <h3><FaLayerGroup /> Current Hero Slides ({heroSlides.length})</h3>
+                    <span style={{ fontSize: '12.5px', color: '#64748b' }}>
+                      {heroSlides.filter(s => s.isActive).length} Active on Home
+                    </span>
                   </div>
 
+                  {heroSlideLoading ? (
+                    <div style={{ textAlign: 'center', padding: '30px', color: '#64748b' }}>
+                      <FaSpinner className="wm-spin" style={{ fontSize: '24px', marginBottom: '8px' }} />
+                      <div>Loading hero slides...</div>
+                    </div>
+                  ) : heroSlides.length === 0 ? (
+                    <div style={{ textAlign: 'center', padding: '32px 16px', background: '#f8fafc', borderRadius: '10px', border: '1px dashed #cbd5e1' }}>
+                      <FaVideo style={{ fontSize: '32px', color: '#94a3b8', marginBottom: '10px' }} />
+                      <div style={{ fontWeight: '700', color: '#334155', marginBottom: '4px' }}>No Slides Added Yet</div>
+                      <div style={{ fontSize: '13px', color: '#64748b', maxWidth: '380px', margin: '0 auto' }}>
+                        The Home Page is currently displaying the single fallback video (<code>{heroVideoData.videoUrl}</code>). Upload slides above to turn it into a dynamic slider!
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="wm-hero-slides-admin-list" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                      {heroSlides.map((slide, idx) => (
+                        <div
+                          key={slide._id || slide.id || idx}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '14px',
+                            background: '#f8fafc',
+                            border: '1px solid #e2e8f0',
+                            borderRadius: '10px',
+                            padding: '12px 16px',
+                            opacity: slide.isActive ? 1 : 0.6
+                          }}
+                        >
+                          {/* Mini Preview */}
+                          <div style={{ width: '80px', height: '52px', borderRadius: '6px', overflow: 'hidden', background: '#000', flexShrink: 0 }}>
+                            {slide.mediaType === 'video' ? (
+                              <video src={getMediaUrl(slide.mediaUrl)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            ) : (
+                              <img src={getMediaUrl(slide.mediaUrl)} alt={slide.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            )}
+                          </div>
+
+                          {/* Details */}
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                              <span
+                                style={{
+                                  fontSize: '10.5px',
+                                  fontWeight: '800',
+                                  textTransform: 'uppercase',
+                                  padding: '2px 8px',
+                                  borderRadius: '4px',
+                                  background: slide.mediaType === 'video' ? '#0077b6' : '#10b981',
+                                  color: '#ffffff'
+                                }}
+                              >
+                                {slide.mediaType}
+                              </span>
+                              <strong style={{ fontSize: '14px', color: '#0d2f57', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                {slide.title || `Slide #${idx + 1}`}
+                              </strong>
+                            </div>
+                            <div style={{ fontSize: '12px', color: '#64748b', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                              <code>{slide.mediaUrl}</code>
+                            </div>
+                          </div>
+
+                          {/* Actions */}
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <button
+                              type="button"
+                              onClick={() => handleToggleHeroSlideActive(slide)}
+                              style={{
+                                padding: '6px 12px',
+                                fontSize: '12px',
+                                fontWeight: '700',
+                                borderRadius: '6px',
+                                border: 'none',
+                                cursor: 'pointer',
+                                background: slide.isActive ? '#dcfce7' : '#f1f5f9',
+                                color: slide.isActive ? '#166534' : '#64748b'
+                              }}
+                            >
+                              {slide.isActive ? 'Active' : 'Disabled'}
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => handleDeleteHeroSlide(slide._id || slide.id)}
+                              style={{
+                                padding: '8px 10px',
+                                borderRadius: '6px',
+                                border: 'none',
+                                background: '#fee2e2',
+                                color: '#b91c1c',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                alignItems: 'center'
+                              }}
+                              title="Delete Slide"
+                            >
+                              <FaTrash />
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Card 3: Fallback Single Video Settings */}
+                <div className="wm-out-card">
+                  <div className="wm-out-card-header">
+                    <h3><FaGlobe /> Fallback Hero Video Configuration</h3>
+                  </div>
                   <form onSubmit={handleSaveHeroVideoUrl}>
                     <div className="wm-csfield">
-                      <label>Video Title / Label:</label>
+                      <label>Fallback Video Title:</label>
                       <input
                         type="text"
                         value={heroVideoCustomTitle}
@@ -2384,32 +3939,18 @@ const AdminDashboard = () => {
                         placeholder="e.g. Web Mok 2026 Brand Reel"
                       />
                     </div>
-
                     <div className="wm-csfield" style={{ marginTop: '14px' }}>
-                      <label>Direct Video URL (or /uploads/hero-video/... path):</label>
+                      <label>Fallback Video Direct URL:</label>
                       <input
                         type="text"
                         value={heroVideoCustomUrl}
                         onChange={(e) => setHeroVideoCustomUrl(e.target.value)}
-                        placeholder="e.g. /Home-Hero.mp4 or /uploads/hero-video/xyz.mp4 or https://..."
+                        placeholder="e.g. /Home-Hero.mp4"
                       />
                     </div>
-
-                    <div style={{ marginTop: '18px', display: 'flex', gap: '10px' }}>
-                      <button
-                        type="submit"
-                        className="wm-out-btn-save"
-                        disabled={heroVideoSaving || heroVideoUploading}
-                      >
-                        {heroVideoSaving ? (
-                          <>
-                            <FaSpinner className="wm-spin" /> Saving...
-                          </>
-                        ) : (
-                          <>
-                            <FaSave /> Save Video Settings
-                          </>
-                        )}
+                    <div style={{ marginTop: '16px' }}>
+                      <button type="submit" className="wm-out-btn-save" disabled={heroVideoSaving}>
+                        {heroVideoSaving ? <FaSpinner className="wm-spin" /> : <FaSave />} Save Fallback Video
                       </button>
                     </div>
                   </form>
@@ -2432,21 +3973,44 @@ const AdminDashboard = () => {
                       <div className="wm-browser-url-bar">https://webmok.in</div>
                     </div>
 
-                    <div className="wm-hero-preview-video-container">
-                      <video
-                        key={heroVideoData.videoUrl}
-                        src={getMediaUrl(heroVideoData.videoUrl)}
-                        controls
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="wm-hero-preview-video-element"
-                      />
+                    <div className="wm-hero-preview-video-container" style={{ position: 'relative', minHeight: '220px', background: '#000' }}>
+                      {heroSlides.filter(s => s.isActive).length > 0 ? (
+                        heroSlides.filter(s => s.isActive)[0].mediaType === 'video' ? (
+                          <video
+                            key={heroSlides.filter(s => s.isActive)[0].mediaUrl}
+                            src={getMediaUrl(heroSlides.filter(s => s.isActive)[0].mediaUrl)}
+                            controls
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="wm-hero-preview-video-element"
+                          />
+                        ) : (
+                          <img
+                            src={getMediaUrl(heroSlides.filter(s => s.isActive)[0].mediaUrl)}
+                            alt="Hero preview"
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                          />
+                        )
+                      ) : (
+                        <video
+                          key={heroVideoData.videoUrl}
+                          src={getMediaUrl(heroVideoData.videoUrl)}
+                          controls
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="wm-hero-preview-video-element"
+                        />
+                      )}
                     </div>
 
                     <div className="wm-hero-preview-footer-note">
-                      <FaInfoCircle /> This is how the video appears seamlessly in the hero section on desktop & mobile screens.
+                      <FaInfoCircle /> {heroSlides.filter(s => s.isActive).length > 1
+                        ? `Slider is active with ${heroSlides.filter(s => s.isActive).length} slides auto-playing smoothly.`
+                        : 'Single media view active. Add 2 or more active slides to run the auto-sliding carousel.'}
                     </div>
                   </div>
                 </div>
@@ -2478,7 +4042,7 @@ const AdminDashboard = () => {
                 >
                   <FaPlus /> Add New Service
                 </button>
-                <button
+                {/* <button
                   type="button"
                   className="wm-out-btn-reset-all"
                   onClick={handleResetServicesDefaults}
@@ -2486,7 +4050,7 @@ const AdminDashboard = () => {
                   title="Reset all services to system defaults"
                 >
                   <FaUndoAlt /> Reset Defaults
-                </button>
+                </button> */}
                 <a
                   href="/"
                   target="_blank"
@@ -2511,16 +4075,27 @@ const AdminDashboard = () => {
               {servicesList.map((svc, idx) => {
                 const isActive = activeServiceKey === svc.slug || activeServiceKey === svc._id;
                 return (
-                  <button
+                  <div
                     key={svc.slug || svc._id || idx}
-                    type="button"
                     className={`wm-out-subtab-pill ${isActive ? 'active' : ''}`}
                     onClick={() => setActiveServiceKey(svc.slug || svc._id)}
+                    style={{ cursor: 'pointer' }}
                   >
                     <span className="wm-out-subtab-num">{String(idx + 1).padStart(2, '0')}</span>
                     <span className="wm-out-subtab-title">{svc.title}</span>
                     <span className="wm-svc-cat-badge">{svc.category}</span>
-                  </button>
+                    <button
+                      type="button"
+                      className="wm-svc-pill-del-btn"
+                      title={`Delete "${svc.title}"`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleDeleteService(svc._id || svc.slug, svc.title);
+                      }}
+                    >
+                      <FaTrash />
+                    </button>
+                  </div>
                 );
               })}
             </div>
@@ -2798,16 +4373,24 @@ const AdminDashboard = () => {
                       )}
                     </button>
 
-                    {currentService._id && (
-                      <button
-                        type="button"
-                        className="wm-out-btn-reset-all"
-                        style={{ color: '#ef4444', borderColor: '#fca5a5' }}
-                        onClick={() => handleDeleteService(currentService._id)}
-                      >
-                        <FaTrash /> Delete Service
-                      </button>
-                    )}
+                    <button
+                      type="button"
+                      className="wm-out-btn-reset-all wm-svc-btn-delete-active"
+                      style={{
+                        color: '#ef4444',
+                        borderColor: '#fca5a5',
+                        background: '#fef2f2',
+                        fontWeight: 700,
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        cursor: 'pointer'
+                      }}
+                      onClick={() => handleDeleteService(currentService._id || currentService.slug, currentService.title)}
+                      title={`Delete "${currentService.title}"`}
+                    >
+                      <FaTrash /> Delete "{currentService.title}"
+                    </button>
                   </div>
                 </form>
               </div>
@@ -3021,37 +4604,350 @@ const AdminDashboard = () => {
           <div className="wm-adash-tab-view">
             <div className="wm-adash-section-header">
               <div>
-                <h2>Portfolio & Project Showcase</h2>
-                <p>Manage public case studies, deliverables, and performance metric highlights.</p>
+                <h2><FaBriefcase /> Portfolio & Project Showcase</h2>
+                <p>Manage public case studies, deliverables, and performance metric highlights shown on the Home and Portfolio pages.</p>
+              </div>
+              <div className="wm-out-header-actions">
+                <button
+                  type="button"
+                  className="wm-out-btn-save"
+                  onClick={handleOpenAddPortfolio}
+                  style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
+                >
+                  <FaPlus /> Add New Project
+                </button>
               </div>
             </div>
 
-            <div className="wm-adash-table-card">
-              <div className="wm-table-responsive">
-                <table className="wm-admin-table">
-                  <thead>
-                    <tr>
-                      <th>Project Title</th>
-                      <th>Client Name</th>
-                      <th>Discipline</th>
-                      <th>Outcome Metric</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {portfolioList.map((proj) => (
-                      <tr key={proj.id}>
-                        <td><strong>{proj.title}</strong></td>
-                        <td>{proj.client}</td>
-                        <td>{proj.category}</td>
-                        <td><strong className="wm-text-green">{proj.outcome}</strong></td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+            {/* Feedback Banner */}
+            {portfolioFeedback && (
+              <div className={`wm-out-feedback-banner ${portfolioFeedback.type === 'success' ? 'wm-feed-success' : 'wm-feed-error'}`}>
+                {portfolioFeedback.type === 'success' ? <FaCheckCircle /> : <FaTimes />}
+                <span>{portfolioFeedback.message}</span>
               </div>
+            )}
+
+            <div className="wm-adash-table-card">
+              <div className="wm-atable-header">
+                <h3>All Showcase Projects ({portfolioList.length})</h3>
+                <span style={{ fontSize: '13px', color: '#64748b' }}>Synced with MongoDB</span>
+              </div>
+
+              {portfolioLoading ? (
+                <div style={{ textAlign: 'center', padding: '40px', color: '#64748b' }}>
+                  <FaSpinner className="wm-spin" style={{ fontSize: '28px', marginBottom: '10px' }} />
+                  <div>Loading portfolio items...</div>
+                </div>
+              ) : portfolioList.length === 0 ? (
+                <div style={{ textAlign: 'center', padding: '48px 16px', background: '#f8fafc', borderRadius: '10px' }}>
+                  <FaBriefcase style={{ fontSize: '36px', color: '#94a3b8', marginBottom: '12px' }} />
+                  <div style={{ fontWeight: '700', color: '#334155', fontSize: '16px' }}>No Projects in Showcase</div>
+                  <p style={{ color: '#64748b', fontSize: '13.5px', marginTop: '4px' }}>Click "Add New Project" to add your first case study or deliverable.</p>
+                  <button
+                    type="button"
+                    className="wm-out-btn-save"
+                    onClick={handleOpenAddPortfolio}
+                    style={{ marginTop: '14px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+                  >
+                    <FaPlus /> Add New Project
+                  </button>
+                </div>
+              ) : (
+                <div className="wm-table-responsive">
+                  <table className="wm-admin-table">
+                    <thead>
+                      <tr>
+                        <th style={{ width: '80px' }}>Preview</th>
+                        <th>Project Title & Tag</th>
+                        <th>Client Name</th>
+                        <th>Category</th>
+                        <th>Outcome Metric</th>
+                        <th style={{ textAlign: 'right', width: '120px' }}>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {portfolioList.map((proj) => (
+                        <tr key={proj._id || proj.id}>
+                          <td>
+                            <div style={{ width: '70px', height: '48px', borderRadius: '6px', overflow: 'hidden', background: '#e2e8f0' }}>
+                              <img
+                                src={getMediaUrl(proj.image) || 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=300&auto=format&fit=crop&q=80'}
+                                alt={proj.title}
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=300&auto=format&fit=crop&q=80'; }}
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <strong style={{ fontSize: '14px', color: '#0d2f57' }}>{proj.title}</strong>
+                            {proj.tag && (
+                              <div style={{ fontSize: '11.5px', color: '#64748b', marginTop: '2px' }}>
+                                <span style={{ background: '#e0f2fe', color: '#0369a1', padding: '1px 6px', borderRadius: '4px', fontWeight: '600' }}>
+                                  {proj.tag}
+                                </span>
+                              </div>
+                            )}
+                          </td>
+                          <td style={{ fontWeight: '500' }}>{proj.client}</td>
+                          <td>
+                            <span style={{ textTransform: 'capitalize', background: '#f1f5f9', padding: '4px 10px', borderRadius: '20px', fontSize: '12px', fontWeight: '600', color: '#334155' }}>
+                              {proj.categoryName || proj.category}
+                            </span>
+                          </td>
+                          <td>
+                            <strong className="wm-text-green" style={{ fontSize: '13.5px', color: '#16a34a' }}>
+                              {proj.results || proj.outcome || 'Success'}
+                            </strong>
+                          </td>
+                          <td style={{ textAlign: 'right' }}>
+                            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
+                              <button
+                                type="button"
+                                onClick={() => handleOpenEditPortfolio(proj)}
+                                style={{
+                                  padding: '6px 10px',
+                                  borderRadius: '6px',
+                                  border: '1px solid #cbd5e1',
+                                  background: '#ffffff',
+                                  color: '#0b4f8a',
+                                  cursor: 'pointer',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  gap: '4px',
+                                  fontSize: '12.5px',
+                                  fontWeight: '600'
+                                }}
+                                title="Edit Project"
+                              >
+                                <FaEdit /> Edit
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => handleDeletePortfolio(proj._id || proj.id)}
+                                style={{
+                                  padding: '6px 10px',
+                                  borderRadius: '6px',
+                                  border: 'none',
+                                  background: '#fee2e2',
+                                  color: '#dc2626',
+                                  cursor: 'pointer',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  fontSize: '12.5px'
+                                }}
+                                title="Delete Project"
+                              >
+                                <FaTrash />
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </div>
           </div>
         )}
+
+        {/* =========================================================================
+            POPUP MODAL: ADD / EDIT PORTFOLIO PROJECT
+           ========================================================================= */}
+        {isPortfolioModalOpen && (
+          <div className="wm-inq-modal-overlay" onClick={() => setIsPortfolioModalOpen(false)}>
+            <div className="wm-inq-modal-dialog" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '640px' }}>
+              <div className="wm-inq-modal-header">
+                <div>
+                  <span className="wm-inq-modal-tag">{editingProjectId ? 'Edit Project' : 'New Project'}</span>
+                  <h3>{editingProjectId ? 'Update Portfolio Showcase' : 'Add Project to Showcase'}</h3>
+                </div>
+                <button
+                  type="button"
+                  className="wm-inq-modal-close"
+                  onClick={() => setIsPortfolioModalOpen(false)}
+                >
+                  <FaTimes />
+                </button>
+              </div>
+
+              <form onSubmit={handleSavePortfolio}>
+                <div className="wm-inq-modal-body" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '14px' }}>
+                    <div className="wm-csfield">
+                      <label>Project Title *</label>
+                      <input
+                        type="text"
+                        required
+                        value={portfolioFormData.title}
+                        onChange={(e) => setPortfolioFormData({ ...portfolioFormData, title: e.target.value })}
+                        placeholder="e.g. EduTech Interactive Platform"
+                      />
+                    </div>
+                    <div className="wm-csfield">
+                      <label>Client Name *</label>
+                      <input
+                        type="text"
+                        required
+                        value={portfolioFormData.client}
+                        onChange={(e) => setPortfolioFormData({ ...portfolioFormData, client: e.target.value })}
+                        placeholder="e.g. Apex Global Academy"
+                      />
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '14px' }}>
+                    <div className="wm-csfield">
+                      <label>Discipline / Category</label>
+                      <select
+                        value={portfolioFormData.category}
+                        onChange={(e) => setPortfolioFormData({ ...portfolioFormData, category: e.target.value })}
+                        style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                      >
+                        <option value="web">Web Development</option>
+                        <option value="app">App Development</option>
+                        <option value="ecommerce">E-Commerce Solutions</option>
+                        <option value="seo">SEO & Digital Marketing</option>
+                      </select>
+                    </div>
+                    <div className="wm-csfield">
+                      <label>Outcome / Metric Highlight</label>
+                      <input
+                        type="text"
+                        value={portfolioFormData.results}
+                        onChange={(e) => setPortfolioFormData({ ...portfolioFormData, results: e.target.value })}
+                        placeholder="e.g. +320% Enrollments or 500K+ Installs"
+                      />
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '14px' }}>
+                    <div className="wm-csfield">
+                      <label>Tech Stack / Tags</label>
+                      <input
+                        type="text"
+                        value={portfolioFormData.tag}
+                        onChange={(e) => setPortfolioFormData({ ...portfolioFormData, tag: e.target.value })}
+                        placeholder="e.g. React / Node / AWS"
+                      />
+                    </div>
+                    <div className="wm-csfield">
+                      <label>Display Order</label>
+                      <input
+                        type="number"
+                        value={portfolioFormData.order}
+                        onChange={(e) => setPortfolioFormData({ ...portfolioFormData, order: parseInt(e.target.value) || 0 })}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Project Image Selection */}
+                  <div className="wm-csfield" style={{ marginBottom: '14px' }}>
+                    <label>Project Cover Image</label>
+                    <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginTop: '6px' }}>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => setPortfolioImageFile(e.target.files && e.target.files[0])}
+                        style={{ flex: 1 }}
+                      />
+                    </div>
+                    <div style={{ marginTop: '8px' }}>
+                      <input
+                        type="text"
+                        value={portfolioFormData.image}
+                        onChange={(e) => setPortfolioFormData({ ...portfolioFormData, image: e.target.value })}
+                        placeholder="Or enter image URL (https://... or /uploads/...)"
+                      />
+                    </div>
+                    {(portfolioFormData.image || portfolioImageFile) && (
+                      <div style={{ marginTop: '10px', width: '120px', height: '80px', borderRadius: '8px', overflow: 'hidden', background: '#f1f5f9', border: '1px solid #cbd5e1' }}>
+                        <img
+                          src={portfolioImageFile ? URL.createObjectURL(portfolioImageFile) : getMediaUrl(portfolioFormData.image)}
+                          alt="Selected preview"
+                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        />
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="wm-csfield">
+                    <label>Brief Description / Summary</label>
+                    <textarea
+                      rows={3}
+                      value={portfolioFormData.description}
+                      onChange={(e) => setPortfolioFormData({ ...portfolioFormData, description: e.target.value })}
+                      placeholder="Brief overview of the project deliverables, key milestones, and business impact..."
+                      style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                    />
+                  </div>
+                </div>
+
+                <div className="wm-inq-modal-footer" style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', padding: '16px 24px', borderTop: '1px solid #e2e8f0' }}>
+                  <button
+                    type="button"
+                    className="wm-out-btn-reset-all"
+                    onClick={() => setIsPortfolioModalOpen(false)}
+                    disabled={portfolioSaving}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    className="wm-out-btn-save"
+                    disabled={portfolioSaving || portfolioImageUploading}
+                    style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
+                  >
+                    {(portfolioSaving || portfolioImageUploading) ? (
+                      <>
+                        <FaSpinner className="wm-spin" /> Saving...
+                      </>
+                    ) : (
+                      <>
+                        <FaSave /> {editingProjectId ? 'Update Project' : 'Save Project'}
+                      </>
+                    )}
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
+
+        {/* =========================================================================
+            TAB 8: MANAGE CAREER JOBS (Dedicated Component & CSS)
+           ========================================================================= */}
+        {activeTab === 'jobs' && <AdminJobs />}
+
+        {/* =========================================================================
+            TAB 9: JOB CANDIDATE INQUIRIES & APPLICATIONS (Dedicated Component & CSS)
+           ========================================================================= */}
+        {activeTab === 'job-inquiries' && <AdminJobInquiries />}
+
+        {/* =========================================================================
+            TAB 10: MANAGE PACKAGES CMS & PRICING TIERS
+           ========================================================================= */}
+        {activeTab === 'packages' && <AdminPackages />}
+
+        {/* =========================================================================
+            TAB 11: CLIENT TESTIMONIALS & GOOGLE REVIEWS CMS
+           ========================================================================= */}
+        {activeTab === 'testimonials' && <AdminTestimonials />}
+
+        {/* =========================================================================
+            TAB 12: STUDENT & CLIENT VIDEO REVIEWS CMS
+           ========================================================================= */}
+        {activeTab === 'video-reviews' && <AdminVideoReviews />}
+
+        {/* =========================================================================
+            TAB 13: CREATIVE SHOWCASE & DESIGN GALLERY CMS
+           ========================================================================= */}
+        {activeTab === 'creative-showcase' && <AdminCreativeShowcase />}
+
+        {/* =========================================================================
+            TAB 14: VIDEO SHOWCASE & COMMERCIAL FILMS CMS
+           ========================================================================= */}
+        {activeTab === 'video-showcase' && <AdminVideoShowcase />}
 
         {/* =========================================================================
             POPUP MODAL: VIEW FULL INQUIRY / CONTACT DETAILS
@@ -3365,7 +5261,7 @@ const AdminDashboard = () => {
                         <FaGoogle className="wm-google-icon" /> Google Search Preview
                       </div>
                       <div className="wm-serp-url">
-                        https://webmok.in/blogs/{blogFormData.slug || 'article-url-slug'}
+                        https://webmok.in/{blogFormData.slug || 'article-url-slug'}
                       </div>
                       <div className="wm-serp-title">
                         {blogFormData.seoTitle || blogFormData.title || 'Article Headline Will Appear Here'} | Web Mok

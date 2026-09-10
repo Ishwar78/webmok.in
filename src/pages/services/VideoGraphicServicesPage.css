@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for VideoGraphicServicesPage */
+@import './ServicePageShared.css';
+
+.videographicservicespage-root {
+  width: 100%;
+}

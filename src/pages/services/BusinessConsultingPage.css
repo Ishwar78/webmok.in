@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for BusinessConsultingPage */
+@import './ServicePageShared.css';
+
+.businessconsultingpage-root {
+  width: 100%;
+}

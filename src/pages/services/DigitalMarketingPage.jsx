@@ -1,177 +1,575 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import HeroLeadForm from '../../components/HeroLeadForm';
 import {
-  FaGlobe,
+  Link } from 'react-router-dom';
+import {
+  FaBullhorn,
   FaSearch,
-  FaShareAlt,
-  FaPenNib,
   FaMousePointer,
-  FaChartLine,
-  FaUsers,
+  FaChartPie,
+  FaEnvelope,
+  FaSyncAlt,
   FaArrowRight,
   FaPhoneAlt,
-  FaCheckCircle,
   FaAward,
-  FaComments
+  FaChevronDown,
+  FaWhatsapp,
+  FaPaperPlane
 } from 'react-icons/fa';
-import ServiceSidebarForm from '../../components/ServiceSidebarForm';
-import './ServicePageShared.css';
+import './DigitalMarketingPage.css';
 
 const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
-  const coreServices = [
+  const [openFaq, setOpenFaq] = useState(0);
+  const [auditUrl, setAuditUrl] = useState('');
+
+  const stats = [
+    { num: '12+ yrs', label: 'Of digital marketing excellence & innovation' },
+    { num: '500+', label: 'Global and Indian brands scaled profitably' },
+    { num: '4.8×', label: 'Average documented customer acquisition ROI' },
+    { num: '99.2%', label: 'Long-term client retention & satisfaction rate' }
+  ];
+
+  const caseStudies = [
     {
-      icon: <FaSearch />,
-      title: 'Search Engine Optimization (SEO)',
-      desc: 'Improve your website’s ranking on Google and major search engines, making it effortless for high-intent potential customers to discover your brand organically.'
+      cat: 'Manufacturing · Global',
+      metric: '+565%',
+      sub: 'Organic traffic growth · 8.2x inquiries',
+      name: 'SKF India Solutions',
+      desc: 'Holistic 360-degree digital transformation unifying enterprise SEO, AEO schema architecture, and technical Core Web Vitals optimization.',
+      link: '/clients/case-studies'
     },
     {
-      icon: <FaShareAlt />,
-      title: 'Social Media Marketing (SMM)',
-      desc: 'Engage actively with your target demographics on Facebook, Instagram, LinkedIn, and YouTube to build lasting brand loyalty and drive high-volume traffic.'
+      cat: 'Home Decor & Coating',
+      metric: '5.2×',
+      sub: 'Blended ROAS · 45,000+ social community',
+      name: 'Sirca Paints Italy',
+      desc: 'Omnichannel campaign combining influencer collaborations, YouTube video ads, and localized Google Maps ranking.',
+      link: '/clients/case-studies'
     },
     {
-      icon: <FaPenNib />,
-      title: 'Content Marketing & Strategy',
-      desc: 'Create compelling, informative, and authoritative content that resonates with your audience, answers customer problems, and establishes market authority.'
+      cat: 'EdTech & Coaching',
+      metric: '11×',
+      sub: 'Inbound student registrations',
+      name: 'Grab Guidance',
+      desc: 'Integrated growth strategy combining high-intent Google search ads, viral Reels content marketing, and automated WhatsApp nurturing.',
+      link: '/clients/case-studies'
     },
     {
-      icon: <FaMousePointer />,
-      title: 'Pay-Per-Click Advertising (PPC)',
-      desc: 'Get immediate commercial visibility through laser-targeted paid search and display ads that convert incoming clicks into loyal buying customers.'
+      cat: 'Real Estate & Housing',
+      metric: '3.4×',
+      sub: 'Pipeline value · ₹42Cr property sales',
+      name: 'Omaxe Real Estate',
+      desc: 'Multi-touch digital marketing capturing high-net-worth investors across Delhi NCR, Haryana, and NRI diaspora.',
+      link: '/clients/case-studies'
+    },
+    {
+      cat: 'International · UAE',
+      metric: '₹1.2 Cr',
+      sub: 'Closed inbound corporate contracts',
+      name: 'RadiantBiz Dubai',
+      desc: 'Full-funnel digital dominance across Google Search, localized landing pages, and instant 28-second callback integration.',
+      link: '/clients/case-studies'
+    },
+    {
+      cat: 'Healthcare & Wellness',
+      metric: '+240%',
+      sub: 'Patient appointment bookings',
+      name: "Dr. Haror's Wellness",
+      desc: 'Hyper-local SEO combined with geo-targeted Instagram video ads driving verified clinic walk-ins.',
+      link: '/clients/case-studies'
     }
   ];
 
-  const advantagePillars = [
+  const disciplines = [
     {
-      title: 'Data-Driven Decision Making',
-      text: 'Every tactical campaign decision is backed by thorough competitor analytics and industry search behavior, maximizing your return on marketing investment (ROI).'
+      badge: '01',
+      icon: <FaSearch />,
+      title: 'Search Engine Optimization (SEO & AEO)',
+      desc: 'Dominate organic search results and get quoted directly in AI Overviews, ChatGPT, and Google rich snippets.'
     },
     {
-      title: 'Real-Time Trend Optimization',
-      text: 'Our team stays updated with algorithmic shifts and emerging ad tech, continuously adapting strategies in real-time to keep you ahead of competitors.'
+      badge: '02',
+      icon: <FaMousePointer />,
+      title: 'High-ROAS Paid Ads (Google & Meta)',
+      desc: 'Scale high-converting paid search, shopping, video, and social campaigns with granular negative keyword and audience sculpting.'
     },
     {
-      title: 'Absolute Transparency & Communication',
-      text: 'With bi-weekly updates and transparent analytical dashboards, you always have complete visibility over where your investment is moving.'
+      badge: '03',
+      icon: <FaBullhorn />,
+      title: 'Content Marketing & Brand Copywriting',
+      desc: 'Topical authority clusters, high-converting commercial copy, and corporate thought leadership that builds buyer trust.'
     },
     {
-      title: 'Tailored for Rohtak, Delhi & Global Markets',
-      text: 'Whether you need hyper-local footfall in Delhi NCR or multinational reach across foreign markets, our solutions scale smoothly with your ambitions.'
+      badge: '04',
+      icon: <FaChartPie />,
+      title: 'Social Media Management & Studio',
+      desc: 'Engaging visual branding, viral video reels, and active community management across Instagram, LinkedIn, and YouTube.'
+    },
+    {
+      badge: '05',
+      icon: <FaEnvelope />,
+      title: 'Marketing Automation & Email Drips',
+      desc: 'Nurture prospective leads into repeat purchasers with automated lifecycle emails, SMS triggers, and WhatsApp chatbots.'
+    },
+    {
+      badge: '06',
+      icon: <FaSyncAlt />,
+      title: 'Conversion Rate Optimization (CRO)',
+      desc: 'Data-driven landing page optimization, heatmaps, and A/B split testing to maximize revenue per site visitor.'
     }
   ];
+
+  const industries = [
+    'Electronics & Technology',
+    'Real Estate & Infrastructure',
+    'E-Commerce & D2C Brands',
+    'Manufacturing & Industrial',
+    'Healthcare & Medical Clinics',
+    'Education, Coaching & EdTech',
+    'Automotive & EV Dealerships',
+    'Financial Services & Fintech',
+    'Hospitality & Tourism',
+    'Home Decor & Interior Design',
+    'Food & Beverage (FMCG)',
+    'B2B Corporate Services'
+  ];
+
+  const faqs = [
+    {
+      q: 'What is included in 360° Digital Marketing services?',
+      a: 'Our 360° digital marketing combines organic search optimization (SEO/AEO), high-ROAS paid advertising (Google & Meta), creative content production, social media community management, email automation, and conversion rate optimization (CRO).'
+    },
+    {
+      q: 'How does WebMok measure marketing success?',
+      a: 'We track real commercial business metrics: Cost-Per-Acquisition (CPA), Return on Ad Spend (ROAS), Sales-Qualified Leads (SQLs), and closed revenue attribution via live GA4 and Looker Studio dashboards.'
+    },
+    {
+      q: 'How quickly can we expect to see tangible results?',
+      a: 'Paid ad campaigns deliver qualified inquiries within 48 to 72 hours of launch. Organic SEO, content authority clustering, and brand positioning compound exponentially from months 3 through 9.'
+    },
+    {
+      q: 'Will we have a dedicated account manager?',
+      a: 'Yes. Every client is assigned a dedicated Account Strategist, accompanied by specialist leads in SEO, paid media, creative design, and copy.'
+    },
+    {
+      q: 'Can you customize packages based on our specific budget?',
+      a: 'Absolutely. We formulate tailored digital growth roadmaps aligned precisely with your industry vertical, market size, and commercial revenue objectives.'
+    },
+    {
+      q: 'Do you work with international brands outside India?',
+      a: 'Yes! We actively manage digital marketing and lead acquisition for clients across the United States, UAE/Dubai, Canada, the United Kingdom, and Australia.'
+    }
+  ];
+
+  const handleAuditSubmit = (e) => {
+    e.preventDefault();
+    if (auditUrl.trim()) {
+      onOpenEnquiry();
+    }
+  };
 
   return (
     <div className="wm-sp-root">
-      {/* Hero Header */}
+      {/* 1. Hero Section */}
       <section className="wm-sp-hero">
         <div className="wm-sp-container">
+          <div className="wm-sp-hero-two-col">
+            <div className="wm-sp-hero-col-left">
           <div className="wm-sp-breadcrumb">
             <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>Digital Marketing</span>
           </div>
           <span className="wm-sp-hero-pill">
-            <FaAward /> 360° Digital Growth Agency
+            <FaAward /> Complete 360° Growth Agency · #Wise Solutions
           </span>
-          <h1 className="wm-sp-hero-title">Digital Marketing Services in Delhi & Rohtak</h1>
+          <h1 className="wm-sp-hero-title">
+            360° <span>Digital Marketing</span> & Growth Agency
+          </h1>
           <p className="wm-sp-hero-lead">
-            Webmok Pvt Ltd is your premier destination for exceptional digital marketing services in Rohtak and Delhi. Elevate your brand presence, engage audiences, and scale your online revenue.
+            Scale brand authority, capture high-intent buyers, and maximize omnichannel customer lifetime value with integrated digital marketing strategies engineered by WebMok.
           </p>
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Growth Strategy <FaArrowRight />
             </button>
             <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
-              <FaPhoneAlt /> Call in 28 Seconds
+              <FaPhoneAlt /> Call Me in 28 Seconds
             </button>
+          </div>
+
+          {/* 4-Metric Performance Bar */}
+          <div className="wm-seost">
+            {stats.map((st, i) => (
+              <div key={i} className="wm-seost__i">
+                <p className="wm-seost__n">{st.num}</p>
+                <p className="wm-seost__l">{st.label}</p>
+              </div>
+            ))}
+          </div>
+        
+            </div>
+            <div className="wm-sp-hero-col-right">
+              <HeroLeadForm
+                pageName="Digital Marketing"
+                source="Digital Marketing Hero Section"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Main Body */}
+      {/* Rating Scorecard Badge */}
+      <div className="wm-dsm-rating-wrap">
+        <div className="wm-sp-container">
+          <div className="wm-dsm-rating">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.8</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.8 out of 5</strong> from <strong>350+ brand reviews</strong> across Clutch, Google, AmbitionBox, and GoodFirms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. Main Body Section */}
       <section className="wm-sp-body">
         <div className="wm-sp-container wm-sp-layout">
           {/* Main Column */}
           <div className="wm-sp-main-col">
             {/* Overview Card */}
             <div className="wm-sp-card">
-              <h2 className="wm-sp-card-title">Premier Digital Marketing Agency in Delhi & Rohtak</h2>
+              <h2 className="wm-sp-card-title">Stop Siloing Your Marketing: Build an Omnichannel Growth Engine</h2>
               <p className="wm-sp-paragraph">
-                In today's fast-paced digital landscape, having a robust online presence is essential for businesses looking to thrive. At <strong>Webmok Pvt Ltd</strong>, we understand the unique challenges companies face across different regions, and we tailor our strategies to meet your specific industry requirements.
+                Isolated marketing tactics — running ads without conversion-optimized pages, or doing SEO without social proof — waste enormous capital. True commercial acceleration occurs when every digital touchpoint reinforces the other.
               </p>
               <p className="wm-sp-paragraph">
-                Our team of seasoned experts employs the latest techniques in search engine optimization (SEO), social media marketing, content creation, and pay-per-click (PPC) advertising. By leveraging these strategies, we help you reach your target audience effectively, drive qualified traffic to your website, and increase bottom-line conversions.
-              </p>
-              <p className="wm-sp-paragraph">
-                Choosing Webmok means partnering with a dedicated growth team that prioritizes your commercial success. We offer transparent reporting, ensuring you are always informed about campaign performance. Our customer-centric approach means we listen closely to your milestones and work collaboratively to achieve them.
+                At WebMok, we harmonize high-intent search visibility, hyper-targeted performance advertising, brand storytelling, and automated retention workflows into a unified, scalable growth engine that compounds your return on investment month over month.
               </p>
             </div>
 
-            {/* Why Choose Webmok & Core Services */}
-            <div className="wm-sp-card">
-              <h2 className="wm-sp-card-title">Comprehensive Suite of Digital Marketing Services</h2>
-              <p className="wm-sp-paragraph">
-                At Webmok, we understand that every business is unique. That is why we offer customized solutions that fit your specific needs, whether you are an agile startup or an established enterprise:
+            {/* 3-Layer Sequential Strategy Framework */}
+            <section className="wm-dsm-stack">
+              <span className="wm-dsm-stack__eyebrow">Growth Architecture</span>
+              <h2 className="wm-dsm-stack__title">Three Sequential Growth Layers</h2>
+              <p className="wm-dsm-stack__lede">
+                Sustainable digital scale requires a rock-solid foundation, followed by aggressive customer acquisition and long-term customer retention.
               </p>
-              <div className="wm-sp-grid-2">
-                {coreServices.map((srv, idx) => (
-                  <div key={idx} className="wm-sp-feature-item">
-                    <div className="wm-sp-fi-icon">{srv.icon}</div>
-                    <h3 className="wm-sp-fi-title">{srv.title}</h3>
-                    <p className="wm-sp-fi-desc">{srv.desc}</p>
-                  </div>
-                ))}
+
+              <div className="wm-dsm-layer wm-dsm-layer--1">
+                <div className="wm-dsm-layer__head">
+                  <span className="wm-dsm-layer__num">LAYER 01</span>
+                  <h3 className="wm-dsm-layer__name">Organic Foundation</h3>
+                  <span className="wm-dsm-layer__role">Search Authority & Core Technical Health</span>
+                </div>
+                <p className="wm-dsm-layer__desc">
+                  Building your organic digital moat through enterprise technical SEO, topical authority clustering, and AI answer engine schema (AEO).
+                </p>
+                <ul className="wm-dsm-layer__list">
+                  <li>Comprehensive technical SEO and Core Web Vitals optimization</li>
+                  <li>Commercial keyword intent mapping across all products/services</li>
+                  <li>Schema JSON-LD data markup for Google AI Overviews and rich snippets</li>
+                  <li>High-authority digital PR and trustworthy backlink acquisition</li>
+                </ul>
               </div>
-            </div>
 
-            {/* The Benefits of Our Services */}
+              <div className="wm-dsm-layer wm-dsm-layer--2">
+                <div className="wm-dsm-layer__head">
+                  <span className="wm-dsm-layer__num">LAYER 02</span>
+                  <h3 className="wm-dsm-layer__name">Paid Acquisition</h3>
+                  <span className="wm-dsm-layer__role">High-ROAS Paid Search & Social Ads</span>
+                </div>
+                <p className="wm-dsm-layer__desc">
+                  Capturing immediate buyer demand and scaling profitable customer acquisition through Google Ads, Meta Ads, and Performance Max.
+                </p>
+                <ul className="wm-dsm-layer__list">
+                  <li>Google Search, Shopping & Performance Max campaign architecture</li>
+                  <li>Meta & Instagram high-converting visual video and carousel ads</li>
+                  <li>Multi-device dynamic remarketing across web and social feeds</li>
+                  <li>Sub-second landing pages with 1-click WhatsApp and call conversion triggers</li>
+                </ul>
+              </div>
+
+              <div className="wm-dsm-layer wm-dsm-layer--3">
+                <div className="wm-dsm-layer__head">
+                  <span className="wm-dsm-layer__num">LAYER 03</span>
+                  <h3 className="wm-dsm-layer__name">Retention & Brand Loyalty</h3>
+                  <span className="wm-dsm-layer__role">Lifecycle Automation & Community Building</span>
+                </div>
+                <p className="wm-dsm-layer__desc">
+                  Maximizing customer lifetime value (LTV) and corporate reputation through email nurturing, social engagement, and online reputation management.
+                </p>
+                <ul className="wm-dsm-layer__list">
+                  <li>Automated email drip sequences, cart recovery, and VIP workflows</li>
+                  <li>Consistent, premium social media visual branding and thought leadership</li>
+                  <li>Proactive Google Business review generation and ORM monitoring</li>
+                  <li>Executive reporting dashboards linking spend directly to net profit</li>
+                </ul>
+              </div>
+
+              <div className="wm-dsm-stack__foot">
+                <p>
+                  <strong>We deliver transparent end-to-end revenue tracking.</strong> Receive bi-weekly sprint reviews and live Looker Studio performance dashboards.
+                </p>
+                <button type="button" onClick={onOpenEnquiry}>
+                  Talk to a Digital Marketing Strategist &rarr;
+                </button>
+              </div>
+            </section>
+
+            {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
-              <h2 className="wm-sp-card-title">The Benefits of Our Digital Marketing Solutions</h2>
+              <h2 className="wm-sp-card-title">Digital Marketing Results, from Client Analytics</h2>
               <p className="wm-sp-paragraph">
-                Opting for digital marketing services in Rohtak and Delhi with Webmok offers measurable commercial advantages:
+                Every metric below is pulled directly from verified client analytics, ad accounts, and transaction records:
               </p>
-              <div className="wm-sp-benefit-list">
-                {advantagePillars.map((item, idx) => (
-                  <div key={idx} className="wm-sp-benefit-item">
-                    <FaCheckCircle className="wm-sp-bi-icon" />
-                    <div className="wm-sp-bi-content">
-                      <h4>{item.title}</h4>
-                      <p>{item.text}</p>
+              <div className="wm-seocs__grid">
+                {caseStudies.map((cs, idx) => (
+                  <div key={idx} className="wm-seocs__c">
+                    <p className="wm-seocs__cat">{cs.cat}</p>
+                    <div className="wm-seocs__big">{cs.metric}</div>
+                    <p className="wm-seocs__met">{cs.sub}</p>
+                    <h3 className="wm-seocs__nm">{cs.name}</h3>
+                    <p className="wm-seocs__d">{cs.desc}</p>
+                    <div className="wm-seocs__actions">
+                      <button
+                        type="button"
+                        className="wm-seocs-btn-inquiry"
+                        onClick={() => onOpenEnquiry && onOpenEnquiry(`${cs.name} - Case Study Inquiry`)}
+                        title="Request an Inquiry"
+                      >
+                        <FaPaperPlane /> Inquire
+                      </button>
+                      <button
+                        type="button"
+                        className="wm-seocs-btn-call"
+                        onClick={onOpenCallMe}
+                        title="Call Webmok"
+                      >
+                        <FaPhoneAlt /> Call
+                      </button>
+                      <a
+                        href={`https://wa.me/918684031003?text=${encodeURIComponent(`Hi Webmok Team, I am interested in case study: ${cs.name} (${cs.metric})`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="wm-seocs-btn-whatsapp"
+                        title="Chat on WhatsApp"
+                      >
+                        <FaWhatsapp /> WhatsApp
+                      </a>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Callout Banner */}
-            <div className="wm-sp-callout-banner">
-              <div className="wm-sp-cb-content">
-                <h3>Elevate Your Brand’s Online Presence Today</h3>
-                <p>
-                  Join hundreds of successful businesses across Delhi NCR and Haryana that scale their inbound leads with Webmok Pvt Ltd.
-                </p>
-              </div>
-              <button className="wm-sp-cb-btn" onClick={onOpenEnquiry}>
-                Start Today
-              </button>
-            </div>
-
-            {/* Join Us Today */}
+            {/* Capabilities Grid */}
             <div className="wm-sp-card">
-              <h2 className="wm-sp-card-title">Partner with a Team Committed to Your Growth</h2>
+              <h2 className="wm-sp-card-title">Comprehensive 360° Digital Marketing Disciplines</h2>
               <p className="wm-sp-paragraph">
-                By choosing Webmok Pvt Ltd, you are not just selecting a service provider; you are partnering with a team that is deeply committed to your growth and success. Our mission is to help you navigate the complexities of digital marketing and achieve your business goals.
+                We deliver an integrated suite of full-funnel digital capabilities:
               </p>
-              <p className="wm-sp-paragraph">
-                Don’t miss out on the opportunity to elevate your brand’s online presence. Join us today for unparalleled digital marketing services in Rohtak and digital marketing services in Delhi. Contact us now to get started!
-              </p>
+              <div className="wm-sp-disciplines-grid">
+                {disciplines.map((item, idx) => (
+                  <div key={idx} className="wm-sp-feature-item">
+                    <span className="wm-sp-fi-badge">{item.badge}</span>
+                    <div className="wm-sp-fi-icon">{item.icon}</div>
+                    <h3 className="wm-sp-fi-title">{item.title}</h3>
+                    <p className="wm-sp-fi-desc">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Sticky Sidebar Lead Capture Form */}
-          <div className="wm-sp-sidebar-col">
-            <ServiceSidebarForm
-              serviceName="Digital Marketing Services"
-              source="Digital Marketing Service Page Form"
-            />
+            {/* Industry Verticals */}
+            <div className="wm-sp-card">
+              <h2 className="wm-sp-card-title">Digital Growth for Specific Industry Verticals</h2>
+              <p className="wm-sp-paragraph">
+                Proven marketing playbooks optimized for specific sector nuances and buyer behavior:
+              </p>
+              <div className="wm-sp-industries-grid">
+                {industries.map((ind, idx) => (
+                  <div key={idx} className="wm-sp-industry-chip">
+                    <span className="wm-sp-chip-dot"></span>
+                    <span>{ind}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* 4-Tier Transparent Packages */}
+            <div className="wm-sp-card">
+              <h2 className="wm-sp-card-title">360° Growth Transparent Packages</h2>
+              <p className="wm-sp-paragraph">
+                Published starting plans so you can evaluate scope with complete transparency:
+              </p>
+              <div className="wm-seopk">
+                <div className="wm-seopk__grid">
+                  {/* Starter */}
+                  <div className="wm-seopk__c">
+                    <p className="wm-seopk__nm">Starter Growth</p>
+                    <div className="wm-seopk__amt">₹45,000</div>
+                    <p className="wm-seopk__gst">+ GST / month</p>
+                    <p className="wm-seopk__per">Best for focused regional brands</p>
+                    <span className="wm-seopk__kw">SEO + Google Ads</span>
+                    <ul className="wm-seopk__l">
+                      <li>25 target SEO keywords & technical fixes</li>
+                      <li>Google Search Ads campaign management</li>
+                      <li>Monthly GA4 & Search Console reporting</li>
+                      <li>Dedicated account manager</li>
+                    </ul>
+                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={onOpenEnquiry}>
+                      Choose Starter &rarr;
+                    </button>
+                  </div>
+
+                  {/* Growth */}
+                  <div className="wm-seopk__c wm-seopk__c--hi">
+                    <span className="wm-seopk__badge">Most Chosen</span>
+                    <p className="wm-seopk__nm">Omnichannel Growth</p>
+                    <div className="wm-seopk__amt">₹85,000</div>
+                    <p className="wm-seopk__gst">+ GST / month</p>
+                    <p className="wm-seopk__per">Best for aggressive multi-channel scaling</p>
+                    <span className="wm-seopk__kw">SEO + Paid Ads + Social Studio</span>
+                    <ul className="wm-seopk__l">
+                      <li>50 target SEO keywords + AEO Schema</li>
+                      <li>Google Ads + Meta Paid Social Funnels</li>
+                      <li>12 custom creative social media assets & reels</li>
+                      <li>Conversion rate optimization & Looker Studio dashboard</li>
+                    </ul>
+                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={onOpenEnquiry}>
+                      Choose Growth &rarr;
+                    </button>
+                  </div>
+
+                  {/* Scale */}
+                  <div className="wm-seopk__c">
+                    <p className="wm-seopk__nm">Scale Enterprise</p>
+                    <div className="wm-seopk__amt">₹1.40 Lakh</div>
+                    <p className="wm-seopk__gst">+ GST / month</p>
+                    <p className="wm-seopk__per">Best for high-competition or national brands</p>
+                    <span className="wm-seopk__kw">Full-Funnel 360° Domination</span>
+                    <ul className="wm-seopk__l">
+                      <li>80+ keywords, AEO, GEO & PR link building</li>
+                      <li>Full-funnel Google, Meta & YouTube video ads</li>
+                      <li>20 social assets + email drip automation</li>
+                      <li>Bi-weekly sprint reviews & dedicated copy team</li>
+                    </ul>
+                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={onOpenEnquiry}>
+                      Choose Scale &rarr;
+                    </button>
+                  </div>
+
+                  {/* Dedicated Squad */}
+                  <div className="wm-seopk__c wm-seopk__c--dark">
+                    <p className="wm-seopk__nm">Dedicated 360° Growth Squad</p>
+                    <div className="wm-seopk__amt">₹2.25 Lakh</div>
+                    <p className="wm-seopk__gst">+ GST / month</p>
+                    <p className="wm-seopk__per">Complete outsourced marketing department</p>
+                    <span className="wm-seopk__kw">Dedicated 5-Person Team</span>
+                    <ul className="wm-seopk__l">
+                      <li>Dedicated SEO Lead + Media Buyer + Designer + Copywriter</li>
+                      <li>Unlimited scope across all digital touchpoints</li>
+                      <li>Real-time Slack collaboration & weekly growth sprints</li>
+                      <li>Custom CRM workflows & executive attribution model</li>
+                    </ul>
+                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={onOpenEnquiry}>
+                      Hire Dedicated Squad &rarr;
+                    </button>
+                  </div>
+                </div>
+
+                <div className="wm-seopk__inc">
+                  <h3>Included in Every Plan</h3>
+                  <div className="wm-seopk__incg">
+                    <span>Technical SEO & schema markup</span>
+                    <span>High-converting ad copywriting</span>
+                    <span>Custom visual design assets</span>
+                    <span>Server-side GA4 & GTM tracking</span>
+                    <span>Landing page CRO recommendations</span>
+                    <span>Looker Studio live reporting</span>
+                    <span>Direct ad account ownership</span>
+                    <span>Senior strategic oversight</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Instant Free 360 Audit Banner */}
+            <div className="wm-rsau">
+              <div className="wm-rsau__grid">
+                <div>
+                  <span className="wm-rsau__eyebrow">360° Growth Audit <i>Free</i></span>
+                  <h2>Discover Your Biggest Growth Bottlenecks in 30 Seconds</h2>
+                  <p>
+                    Enter your website URL to receive a comprehensive <b>360° Digital Growth Scorecard</b> covering SEO health, paid ad leakage, speed, and conversion friction.
+                  </p>
+                  <form className="wm-rsau__form" onSubmit={handleAuditSubmit}>
+                    <input
+                      className="wm-rsau__in"
+                      type="text"
+                      placeholder="https://yoursite.com"
+                      value={auditUrl}
+                      onChange={(e) => setAuditUrl(e.target.value)}
+                      required
+                    />
+                    <button className="wm-rsau__go" type="submit">
+                      Run Free 360° Audit &rarr;
+                    </button>
+                  </form>
+                  <p style={{ fontSize: '13px', color: '#8e8a7e', margin: 0 }}>
+                    100% Free · No credit card required · Detailed scorecard delivered within 24 hours.
+                  </p>
+                </div>
+                <div className="wm-rsau__panel">
+                  <p className="wm-rsau__pt">What Your Audit Includes</p>
+                  <div className="wm-rsau__row">
+                    <span className="wm-rsau__tick">✓</span>
+                    <span><b>SEO, AEO & indexation health</b> check</span>
+                  </div>
+                  <div className="wm-rsau__row">
+                    <span className="wm-rsau__tick">✓</span>
+                    <span><b>Paid ad competitor benchmark</b> and keyword gaps</span>
+                  </div>
+                  <div className="wm-rsau__row">
+                    <span className="wm-rsau__tick">✓</span>
+                    <span><b>Mobile speed & Core Web Vitals</b> performance</span>
+                  </div>
+                  <div className="wm-rsau__row">
+                    <span className="wm-rsau__tick">✓</span>
+                    <span><b>Prioritized 90-day action plan</b> to 3x qualified inbound pipeline</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Interactive FAQs Accordion */}
+            <div className="wm-sp-card">
+              <h2 className="wm-sp-card-title">Frequently Asked Questions</h2>
+              <div className="wm-sp-faq-list">
+                {faqs.map((faq, idx) => (
+                  <div
+                    key={idx}
+                    className={`wm-sp-faq-item ${openFaq === idx ? 'open' : ''}`}
+                  >
+                    <div
+                      className="wm-sp-faq-q"
+                      onClick={() => setOpenFaq(openFaq === idx ? -1 : idx)}
+                    >
+                      <span>
+                        <span className="wm-sp-faq-badge">{idx + 1 < 10 ? `0${idx + 1}` : idx + 1}</span>
+                        {faq.q}
+                      </span>
+                      <FaChevronDown className="wm-sp-faq-chevron" />
+                    </div>
+                    {openFaq === idx && <p className="wm-sp-faq-a">{faq.a}</p>}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

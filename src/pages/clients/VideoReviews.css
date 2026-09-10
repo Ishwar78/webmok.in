@@ -1,0 +1,595 @@
+/* ==========================================================================
+   VIDEO REVIEWS / TESTIMONIALS PAGE STYLES (MATCHING USER REFERENCE IMAGE)
+   ========================================================================== */
+
+.wm-vr-page-root {
+  background: #08111e;
+  min-height: 100vh;
+  color: #f1f5f9;
+  font-family: inherit;
+  padding-bottom: 70px;
+}
+
+.wm-vr-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Header */
+.wm-vr-hero {
+  padding: 100px 0 40px 0;
+  text-align: center;
+  background: radial-gradient(circle at 50% 20%, #0d2f57 0%, #08111e 70%);
+  border-bottom: 1px solid rgba(0, 168, 204, 0.15);
+}
+
+.wm-vr-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 168, 204, 0.15);
+  border: 1px solid #00a8cc;
+  color: #38bdf8;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.wm-vr-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+.wm-vr-subtitle {
+  font-size: 16.5px;
+  color: #94a3b8;
+  max-width: 780px;
+  margin: 0 auto 32px auto;
+  line-height: 1.7;
+}
+
+.wm-vr-stats-bar {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 12px 28px;
+  gap: 24px;
+}
+
+.wm-vr-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wm-vr-stat-num {
+  font-size: 20px;
+  font-weight: 900;
+  color: #38bdf8;
+}
+
+.wm-vr-stat-lbl {
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.wm-vr-stat-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================================================
+   8-CARD VIDEO REVIEWS GRID
+   ========================================================================== */
+.wm-vr-grid-section {
+  padding: 50px 0 30px 0;
+}
+
+.wm-vr-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+@media (max-width: 1200px) {
+  .wm-vr-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .wm-vr-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 580px) {
+  .wm-vr-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
+   INDIVIDUAL VIDEO REVIEW CARD (EXACT MATCH TO REFERENCE PHOTO)
+   ========================================================================== */
+.wm-vr-card {
+  position: relative;
+  aspect-ratio: 9 / 13.5;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #020617;
+  border: 2px solid rgba(0, 168, 204, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 168, 204, 0.12);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px 14px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.wm-vr-card:hover {
+  transform: translateY(-5px);
+  border-color: #00e1ff;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7), 0 0 24px rgba(0, 225, 255, 0.28);
+}
+
+/* Background video preview */
+.wm-vr-video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.wm-vr-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.wm-vr-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.7) 0%,
+    rgba(2, 6, 23, 0.15) 30%,
+    rgba(2, 6, 23, 0.15) 60%,
+    rgba(2, 6, 23, 0.88) 100%
+  );
+  transition: background 0.3s ease;
+}
+
+.wm-vr-card:hover .wm-vr-card-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.55) 0%,
+    rgba(2, 6, 23, 0.05) 30%,
+    rgba(2, 6, 23, 0.05) 60%,
+    rgba(2, 6, 23, 0.82) 100%
+  );
+}
+
+/* Top Bar */
+.wm-vr-card-topbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.wm-vr-top-tag {
+  background: rgba(15, 32, 54, 0.88);
+  color: #38bdf8;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border-left: 3px solid #00a8cc;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+
+.wm-vr-top-brand {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.wm-vr-brand-text {
+  font-size: 13px;
+  font-weight: 900;
+  color: #38bdf8;
+  letter-spacing: -0.3px;
+}
+
+.wm-vr-brand-sub {
+  font-size: 8px;
+  color: #cbd5e1;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Center Play Action & Pill Badge */
+.wm-vr-center-action {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: auto 0;
+}
+
+.wm-vr-student-pill {
+  background: #0f3b73;
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  letter-spacing: 0.3px;
+}
+
+.wm-vr-play-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 168, 204, 0.6);
+  transition: all 0.25s ease;
+}
+
+.wm-vr-play-icon {
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: 3px;
+}
+
+.wm-vr-card:hover .wm-vr-play-circle {
+  transform: scale(1.15);
+  background: #00a8cc;
+  border-color: #ffffff;
+  box-shadow: 0 0 28px rgba(0, 225, 255, 0.85);
+}
+
+/* Lower Dark Info Banner */
+.wm-vr-lower-banner {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 8px 10px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wm-vr-lb-line1 {
+  font-size: 11px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.wm-vr-lb-line2 {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #94a3b8;
+  line-height: 1.25;
+}
+
+.wm-vr-lb-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #38bdf8;
+  text-decoration: none;
+  margin-top: 3px;
+  transition: color 0.2s;
+}
+
+.wm-vr-lb-call:hover {
+  color: #00e1ff;
+  text-decoration: underline;
+}
+
+.wm-vr-phone-icon {
+  font-size: 9.5px;
+}
+
+/* Card Bottom Footer */
+.wm-vr-card-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 4px;
+}
+
+.wm-vr-footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.wm-vr-footer-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+}
+
+.wm-vr-footer-sub {
+  font-size: 10.5px;
+  color: #00e1ff;
+  font-weight: 700;
+}
+
+.wm-vr-footer-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.wm-vr-star {
+  font-size: 11px;
+  color: #fbbf24;
+}
+
+/* ==========================================================================
+   CALL TO ACTION SECTION
+   ========================================================================== */
+.wm-vr-cta-section {
+  padding: 40px 0 20px 0;
+}
+
+.wm-vr-cta-box {
+  background: linear-gradient(135deg, #0b2545 0%, #133a68 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 20px;
+  padding: 38px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.wm-vr-cta-text h2 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.wm-vr-cta-text p {
+  color: #94a3b8;
+  font-size: 15px;
+  margin: 0;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+.wm-vr-cta-actions {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.wm-vr-btn-call {
+  background: #10b981;
+  color: #ffffff;
+  padding: 13px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.wm-vr-btn-call:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.wm-vr-btn-enquiry {
+  background: #00a8cc;
+  color: #ffffff;
+  padding: 13px 26px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.wm-vr-btn-enquiry:hover {
+  background: #0284c7;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 960px) {
+  .wm-vr-cta-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 24px;
+  }
+  .wm-vr-cta-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   VIDEO PLAYBACK MODAL
+   ========================================================================== */
+.wm-vr-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.88);
+  backdrop-filter: blur(10px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: wmModalIn 0.25s ease-out;
+}
+
+@keyframes wmModalIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.wm-vr-modal-content {
+  background: #0b1d33;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 720px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+}
+
+.wm-vr-modal-header {
+  padding: 18px 24px;
+  background: #081628;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.wm-vr-modal-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  background: rgba(0, 168, 204, 0.2);
+  color: #38bdf8;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.wm-vr-modal-header h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.wm-vr-modal-header p {
+  font-size: 12.5px;
+  color: #94a3b8;
+  margin: 3px 0 0 0;
+}
+
+.wm-vr-modal-close {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.wm-vr-modal-close:hover {
+  color: #ef4444;
+}
+
+.wm-vr-modal-player {
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 480px;
+}
+
+.wm-vr-full-video {
+  width: 100%;
+  max-height: 480px;
+  display: block;
+}
+
+.wm-vr-modal-footer {
+  padding: 14px 24px;
+  background: #081628;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wm-vr-mf-info {
+  font-size: 13px;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wm-vr-mf-call {
+  background: #00a8cc;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+.wm-vr-mf-call:hover {
+  background: #0284c7;
+}

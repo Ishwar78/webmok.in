@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for FacebookMarketingPage */
+@import './ServicePageShared.css';
+
+.facebookmarketingpage-root {
+  width: 100%;
+}

@@ -193,18 +193,57 @@
   color: #10b981;
 }
 
-.wm-portpage-link {
-  font-size: 14px;
-  font-weight: 700;
-  color: #0b4f8a;
+.wm-portpage-cta-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.wm-portpage-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0b4f8a;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .wm-portpage-link:hover {
-  color: #ff5e3a;
+  color: #00d2ff;
+  transform: translateX(2px);
+}
+
+.wm-portpage-inquiry-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  background: linear-gradient(135deg, #0b4f8a 0%, #00a8cc 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(11, 79, 138, 0.2);
+  white-space: nowrap;
+}
+
+.wm-portpage-inquiry-btn:hover {
+  background: linear-gradient(135deg, #00a8cc 0%, #0b4f8a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 168, 204, 0.4);
+}
+
+.wm-portpage-inquiry-btn:active {
+  transform: translateY(0);
 }
 
 /* CTA */

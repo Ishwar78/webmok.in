@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   FaLaptopCode,
   FaMobileAlt,
@@ -18,11 +18,36 @@ import {
 import './Services.css';
 
 const Services = ({ onOpenEnquiry }) => {
+  const navigate = useNavigate();
   const [selectedCat, setSelectedCat] = useState('all');
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
 
-  // All service categories and their sub-services (Self-contained in this file)
+  // All service categories and their sub-services (Synchronized with Navbar Mega Menu)
   const serviceCategories = [
+    {
+      id: 'ecommerce',
+      name: 'E-Commerce & Apps',
+      icon: <FaShoppingCart />,
+      desc: 'High-conversion e-commerce stores, custom portals, and native mobile apps.',
+      services: [
+        { slug: 'e-commerce-development-services-company', title: 'E-Commerce Development', desc: 'Custom online stores with seamless payment gateways and conversion funnels.' },
+        { slug: 'application-development-services', title: 'Application Development', desc: 'Complex web platforms, SaaS dashboards, and portal architectures.' },
+        { slug: 'android-app-development', title: 'Android App Development', desc: 'Feature-packed apps optimized for all screen sizes and Google Play.' },
+        { slug: 'ios-app-development', title: 'iOS App Development', desc: 'Elegant Apple ecosystem apps complying with strict App Store guidelines.' },
+        { slug: 'shopify-woocommerce', title: 'Shopify & WooCommerce', desc: 'Specialized e-commerce storefront setups with custom themes and checkout flows.' },
+        { slug: 'custom-marketplace', title: 'Custom Marketplace', desc: 'Multi-vendor marketplace platforms with seller dashboards and split payouts.' }
+      ]
+    },
+    {
+      id: 'seo',
+      name: 'SEO Optimization',
+      icon: <FaSearch />,
+      desc: 'Rankings, organic search visibility, and dedicated SEO engineering.',
+      services: [
+        { slug: 'seo-services-company', title: 'Search Engine Optimization Company', desc: 'Top 1-3 rankings for high-intent competitive keywords.' },
+        { slug: 'hire-seo-expert', title: 'Hire Dedicated SEO Expert', desc: 'Full-time dedicated SEO strategist committed to your digital growth.' }
+      ]
+    },
     {
       id: 'web',
       name: 'Web Development',
@@ -33,19 +58,8 @@ const Services = ({ onOpenEnquiry }) => {
         { slug: 'web-designing-development-services-company', title: 'Web design & Development', desc: 'Modern responsive UX/UI with interactive animations and high speed.' },
         { slug: 'e-commerce-development-services-company', title: 'E-Commerce Development', desc: 'Custom online stores with seamless payment gateways and cart flows.' },
         { slug: 'landing-page-development-services-company', title: 'Landing Page Development', desc: 'High-converting lead gen landing pages with A/B testing frameworks.' },
-        { slug: 'website-design-development-rohtak-delhi', title: 'Website Development & Design Services', desc: 'End-to-end IT development tailored for NCR and global businesses.' },
+        { slug: 'website-development-and-design-services', title: 'Website Development & Design Services', desc: 'End-to-end IT development tailored for NCR and global businesses.' },
         { slug: 'application-development-services', title: 'Application Development', desc: 'Complex web platforms, SaaS dashboards, and portal architectures.' }
-      ]
-    },
-    {
-      id: 'app',
-      name: 'App Development',
-      icon: <FaMobileAlt />,
-      desc: 'Intuitive iOS & Android apps that keep users engaged and deliver measurable results.',
-      services: [
-        { slug: 'application-development', title: 'Native iOS & Android Apps', desc: 'Performance-tuned mobile apps built with Swift, Kotlin, and React Native.' },
-        { slug: 'android-app-development', title: 'Android App Development', desc: 'Feature-packed apps optimized for all screen sizes and Google Play.' },
-        { slug: 'ios-app-development', title: 'iOS App Development', desc: 'Elegant Apple ecosystem apps complying with strict App Store guidelines.' }
       ]
     },
     {
@@ -63,6 +77,15 @@ const Services = ({ onOpenEnquiry }) => {
       ]
     },
     {
+      id: 'consultant',
+      name: 'Business Consultant',
+      icon: <FaBriefcase />,
+      desc: 'Strategic market positioning and digital revenue scaling roadmaps.',
+      services: [
+        { slug: 'business-development-consulting', title: 'Business Development Consulting', desc: 'Strategic market positioning, unit economics, and digital revenue scaling roadmaps.' }
+      ]
+    },
+    {
       id: 'graphic',
       name: 'Graphic & Video',
       icon: <FaVideo />,
@@ -70,22 +93,22 @@ const Services = ({ onOpenEnquiry }) => {
       services: [
         { slug: 'video-and-graphic-development-company', title: 'Video & Graphic Development', desc: 'Complete brand creative design and video storytelling.' },
         { slug: 'social-media-graphic-design-services-company', title: 'Social Media Graphic Design', desc: 'Custom templates, banners, carousel designs, and story packs.' },
-        { slug: 'video-editing-services-company', title: 'Commercial Video Editing', desc: 'Color grading, motion graphics, and audio mastering for brands.' },
+        { slug: 'video-editing', title: 'Video Editing', desc: 'Color grading, motion graphics, and audio mastering for brands.' },
         { slug: 'logo-design-services-company', title: 'Logo Design & Brand Identity', desc: 'Memorable brand logos, style guides, and stationery collateral.' },
         { slug: 'promotional-video-editing-services-company', title: 'Promotional Video Production', desc: 'Explainer videos, SaaS walk-throughs, and launch commercials.' }
       ]
     },
     {
       id: 'outstanding',
-      name: 'Outstanding & Consulting Services',
+      name: 'Outstanding Services',
       icon: <FaStar />,
-      desc: 'B2B Lead generation, brand reputation, and strategic business consulting.',
+      desc: 'B2B Lead generation, brand reputation, and high-impact growth.',
       services: [
         { slug: 'lead-generation-social-media-marketing-services-company', title: 'Lead Generation Campaigns', desc: 'Predictable high-ticket B2B inquiry funnels via LinkedIn & Meta.' },
         { slug: 'social-media-optimization-services-company', title: 'Social Media Optimization (SMO)', desc: 'Organic reach expansion, profile auditing, and viral engagement.' },
         { slug: 'online-reputation-management-services-company', title: 'Online Reputation Management (ORM)', desc: 'Cultivating 5-star public perception and mitigating negative links.' },
-        { slug: 'facebook-marketing', title: 'Facebook Marketing', desc: 'Targeted custom audience funnels and retargeting campaigns.' },
-        { slug: 'business-development-consulting', title: 'Business Development Consulting', desc: 'Strategic market positioning and digital revenue scaling roadmaps.' }
+        { slug: 'digital-marketing-services-company', title: 'Digital Marketing', desc: '360-degree performance marketing across search, social, and programmatic.' },
+        { slug: 'facebook-marketing-services-company', title: 'Facebook Marketing', desc: 'Targeted custom audience funnels and high-ROAS retargeting campaigns.' }
       ]
     }
   ];
@@ -117,36 +140,15 @@ const Services = ({ onOpenEnquiry }) => {
             >
               All Services
             </button>
-            <button
-              className={`wm-spage-fbtn ${selectedCat === 'web' ? 'active' : ''}`}
-              onClick={() => setSelectedCat('web')}
-            >
-              Web Development
-            </button>
-            <button
-              className={`wm-spage-fbtn ${selectedCat === 'app' ? 'active' : ''}`}
-              onClick={() => setSelectedCat('app')}
-            >
-              App Development
-            </button>
-            <button
-              className={`wm-spage-fbtn ${selectedCat === 'digital' ? 'active' : ''}`}
-              onClick={() => setSelectedCat('digital')}
-            >
-              Digital Marketing & SEO
-            </button>
-            <button
-              className={`wm-spage-fbtn ${selectedCat === 'graphic' ? 'active' : ''}`}
-              onClick={() => setSelectedCat('graphic')}
-            >
-              Graphic & Video
-            </button>
-            <button
-              className={`wm-spage-fbtn ${selectedCat === 'outstanding' ? 'active' : ''}`}
-              onClick={() => setSelectedCat('outstanding')}
-            >
-              Outstanding & Consulting
-            </button>
+            {serviceCategories.map((cat) => (
+              <button
+                key={cat.id}
+                className={`wm-spage-fbtn ${selectedCat === cat.id ? 'active' : ''}`}
+                onClick={() => setSelectedCat(cat.id)}
+              >
+                {cat.name}
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -166,13 +168,32 @@ const Services = ({ onOpenEnquiry }) => {
 
               <div className="wm-scat-cards-grid">
                 {cat.services.map((serv, index) => (
-                  <div key={index} className="wm-scat-card">
+                  <div
+                    key={index}
+                    className="wm-scat-card"
+                    onClick={() => navigate(`/${serv.slug}`)}
+                    style={{ cursor: 'pointer' }}
+                  >
                     <h3 className="wm-scard-title">{serv.title}</h3>
                     <p className="wm-scard-desc">{serv.desc}</p>
                     <div className="wm-scard-footer">
-                      <Link to={`/services/${serv.slug}`} className="wm-scard-btn">
+                      <Link
+                        to={`/${serv.slug}`}
+                        className="wm-scard-btn"
+                        onClick={(e) => e.stopPropagation()}
+                      >
                         View Details & Packages <FaArrowRight />
                       </Link>
+                      <button
+                        type="button"
+                        className="wm-scard-enq-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onOpenEnquiry && onOpenEnquiry(serv.title);
+                        }}
+                      >
+                        Inquiry Now
+                      </button>
                     </div>
                   </div>
                 ))}

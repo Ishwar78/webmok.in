@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for EcommerceServicesPage */
+@import './ServicePageShared.css';
+
+.ecommerceservicespage-root {
+  width: 100%;
+}

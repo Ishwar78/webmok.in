@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for PromotionalVideoServicesPage */
+@import './ServicePageShared.css';
+
+.promotionalvideoservicespage-root {
+  width: 100%;
+}

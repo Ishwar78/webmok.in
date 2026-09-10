@@ -16,6 +16,9 @@ import {
 } from 'react-icons/fa';
 import { packagesRegistry } from '../../data/packagesData';
 import SeoPackagesPage from './SeoPackagesPage';
+import HeroLeadForm from '../../components/HeroLeadForm';
+import usePackageData from '../../hooks/usePackageData';
+import '../../components/HeroTwoColShared.css';
 import './PackageDetailPage.css';
 
 const PackageDetailPage = ({ onOpenCallMe, onOpenEnquiry }) => {
@@ -28,7 +31,9 @@ const PackageDetailPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     return <SeoPackagesPage onOpenCallMe={onOpenCallMe} onOpenEnquiry={onOpenEnquiry} />;
   }
 
-  const pkgData = packagesRegistry[packageSlug];
+  const staticPkg = packagesRegistry[packageSlug] || null;
+  const livePkg = usePackageData(packageSlug, staticPkg);
+  const pkgData = livePkg || staticPkg;
 
   // Fallback if package not in registry
   if (!pkgData) {
@@ -38,7 +43,7 @@ const PackageDetailPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h2>Package Details</h2>
           <p>Looking for a custom package? Explore our complete service packages.</p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '24px' }}>
-            <Link to="/packages/seo-packages" className="wm-pkg-btn-select" style={{ width: 'auto', display: 'inline-flex' }}>
+            <Link to="/seo-packages" className="wm-pkg-btn-select" style={{ width: 'auto', display: 'inline-flex' }}>
               View SEO Packages <FaArrowRight />
             </Link>
             <button className="wm-pkg-btn-call" style={{ width: 'auto' }} onClick={onOpenEnquiry}>
@@ -56,64 +61,74 @@ const PackageDetailPage = ({ onOpenCallMe, onOpenEnquiry }) => {
 
   return (
     <div className="wm-pkg-page-root">
-      {/* 1. HERO SECTION */}
-      <section className="wm-pkg-hero">
-        <div className="wm-pkg-ambient-glow"></div>
-        <div className="wm-pkg-container">
-          <div className="wm-pkg-hero-topbadge">
-            <span className="wm-pkg-badge-pill">
-              <FaAward className="wm-pkg-badge-icon" /> {pkgData.category}
-            </span>
-            <div className="wm-pkg-rating-chip">
-              <div className="wm-pkg-stars">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className="wm-star-gold" />
-                ))}
+      {/* 1. HERO SECTION (2-COLUMN MODERN DESIGN WITH COMMON LEAD FORM) */}
+      <section className="wm-hero-shared-section">
+        <div className="wm-hero-shared-container">
+          <div className="wm-hero-two-col">
+            {/* Left Column: Content & 4-Metric Performance Bar */}
+            <div className="wm-hero-col-left">
+              <div className="wm-hero-breadcrumb">
+                <Link to="/">Home</Link> / <Link to="/packages">Packages</Link> / <span>{pkgData.name}</span>
               </div>
-              <span className="wm-pkg-rating-text">4.9 / 5 Rated Agency</span>
-            </div>
-          </div>
 
-          <h1 className="wm-pkg-hero-title">
-            {pkgData.heroTitle}
-          </h1>
+              <span className="wm-hero-pill">
+                <FaAward /> {pkgData.category || 'High-Impact Digital Packages'}
+              </span>
 
-          <p className="wm-pkg-hero-desc">
-            {pkgData.heroDesc}
-          </p>
+              <h1 className="wm-hero-title">
+                {pkgData.heroTitleHighlight || pkgData.heroTitle || pkgData.name}
+              </h1>
 
-          <div className="wm-pkg-hero-badges-row">
-            <div className="wm-pkg-hbadge">
-              <FaShieldAlt className="wm-hbadge-icon" />
-              <span>100% Earned Result Guarantee</span>
+              <p className="wm-hero-lead">
+                {pkgData.leadDesc || pkgData.heroDesc}
+              </p>
+
+              {pkgData.image && (
+                <div style={{ borderRadius: '10px', overflow: 'hidden', margin: '14px 0 18px 0', border: '1px solid rgba(0, 210, 255, 0.25)', maxWidth: '540px' }}>
+                  <img src={pkgData.image} alt={pkgData.name} style={{ width: '100%', maxHeight: '220px', objectFit: 'cover', display: 'block' }} />
+                </div>
+              )}
+
+              <div className="wm-hero-cta-group">
+                <button
+                  type="button"
+                  className="wm-hero-cta-primary"
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pkgData.name} - Custom Quote`)}
+                >
+                  Get Free Custom Quote <FaArrowRight />
+                </button>
+                <button
+                  type="button"
+                  className="wm-hero-cta-secondary"
+                  onClick={onOpenCallMe}
+                >
+                  <FaPhoneAlt /> Call Me in 28 Seconds
+                </button>
+              </div>
+
+              {/* 4-Metric Performance Bar (Embedded in Hero) */}
+              {pkgData.stats && (
+                <div className="wm-hero-stats-grid">
+                  {pkgData.stats.map((st, i) => (
+                    <div key={i} className="wm-hstat-card">
+                      <p className="wm-hstat-num">{st.num}</p>
+                      <p className="wm-hstat-label">{st.label}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-            <div className="wm-pkg-hbadge">
-              <FaRocket className="wm-hbadge-icon" />
-              <span>1,500+ Delivered Deployments</span>
-            </div>
-            <div className="wm-pkg-hbadge">
-              <FaGlobeAmericas className="wm-hbadge-icon" />
-              <span>Zero Lock-In Contract</span>
+
+            {/* Right Column: Reusable Hero Lead Form */}
+            <div className="wm-hero-col-right">
+              <HeroLeadForm
+                pageName={pkgData.name}
+                source={`${pkgData.name} Hero Section`}
+              />
             </div>
           </div>
         </div>
       </section>
-
-      {/* 2. STATS STRIP */}
-      {pkgData.stats && (
-        <section className="wm-pkg-stats-strip">
-          <div className="wm-pkg-container">
-            <div className="wm-pkg-stats-grid">
-              {pkgData.stats.map((st, i) => (
-                <div key={i} className="wm-pkg-stat-card">
-                  <strong>{st.num}</strong>
-                  <span>{st.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* 3. TIERED PRICING PLANS */}
       <section className="wm-pkg-pricing-section">
@@ -145,7 +160,7 @@ const PackageDetailPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             </div>
           </div>
 
-          <div className="wm-pkg-cards-grid" style={{ gridTemplateColumns: pkgData.plans.length === 3 ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)' }}>
+          <div className={`wm-pkg-cards-grid wm-grid-${pkgData.plans.length}`}>
             {pkgData.plans.map((plan, idx) => (
               <div
                 key={idx}

@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for ComputerTrainingPage */
+@import './ServicePageShared.css';
+
+.computertrainingpage-root {
+  width: 100%;
+}

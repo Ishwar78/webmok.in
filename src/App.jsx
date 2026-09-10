@@ -12,10 +12,36 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import ServiceDetail from './pages/ServiceDetail';
+// Dedicated 23 Service Pages (Each with independent component, embedded content & CSS)
 import SeoServicesPage from './pages/services/SeoServicesPage';
 import PpcServicesPage from './pages/services/PpcServicesPage';
 import LeadGenServicesPage from './pages/services/LeadGenServicesPage';
 import DigitalMarketingPage from './pages/services/DigitalMarketingPage';
+import WordPressServicesPage from './pages/services/WordPressServicesPage';
+import WebDesignServicesPage from './pages/services/WebDesignServicesPage';
+import EcommerceServicesPage from './pages/services/EcommerceServicesPage';
+import LandingPageServicesPage from './pages/services/LandingPageServicesPage';
+import EnterpriseWebServicesPage from './pages/services/EnterpriseWebServicesPage';
+import AppDevServicesPage from './pages/services/AppDevServicesPage';
+import AndroidAppServicesPage from './pages/services/AndroidAppServicesPage';
+import IosAppServicesPage from './pages/services/IosAppServicesPage';
+import ShopifyWooServicesPage from './pages/services/ShopifyWooServicesPage';
+import MarketplaceServicesPage from './pages/services/MarketplaceServicesPage';
+import ContentMarketingPage from './pages/services/ContentMarketingPage';
+import SocialMediaMarketingPage from './pages/services/SocialMediaMarketingPage';
+import VideoGraphicServicesPage from './pages/services/VideoGraphicServicesPage';
+import OrmServicesPage from './pages/services/OrmServicesPage';
+import BusinessConsultingPage from './pages/services/BusinessConsultingPage';
+import DataSciencePage from './pages/services/DataSciencePage';
+import ComputerTrainingPage from './pages/services/ComputerTrainingPage';
+import BrandingServicesPage from './pages/services/BrandingServicesPage';
+import FacebookMarketingPage from './pages/services/FacebookMarketingPage';
+import MobileMarketingServicesPage from './pages/services/MobileMarketingServicesPage';
+import VideoEditingServicesPage from './pages/services/VideoEditingServicesPage';
+import SocialMediaOptimizationPage from './pages/services/SocialMediaOptimizationPage';
+import LogoDesignServicesPage from './pages/services/LogoDesignServicesPage';
+import PromotionalVideoServicesPage from './pages/services/PromotionalVideoServicesPage';
+import SocialMediaGraphicDesignPage from './pages/services/SocialMediaGraphicDesignPage';
 // Dedicated Package Pages (Each with independent component & CSS)
 import SeoPackagesPage from './pages/packages/SeoPackagesPage';
 import LocalSeoPackagesPage from './pages/packages/LocalSeoPackagesPage';
@@ -65,6 +91,7 @@ import Testimonials from './pages/clients/Testimonials';
 import OurClients from './pages/clients/OurClients';
 import CreativeShowcase from './pages/clients/CreativeShowcase';
 import VideoShowcase from './pages/clients/VideoShowcase';
+import VideoReviews from './pages/clients/VideoReviews';
 import RefundPolicy from './pages/RefundPolicy';
 import TermsConditions from './pages/TermsConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -84,6 +111,7 @@ import './pages/clients/Testimonials.css';
 import './pages/clients/OurClients.css';
 import './pages/clients/CreativeShowcase.css';
 import './pages/clients/VideoShowcase.css';
+import './pages/clients/VideoReviews.css';
 
 // Eager Package Stylesheets
 import './pages/packages/SeoPackagesPage.css';
@@ -186,6 +214,389 @@ function App() {
             />
           }
         />
+        {/* =========================================================================
+            DIRECT ROOT-LEVEL SERVICE ROUTES (No /services/ prefix required)
+           ========================================================================= */}
+        <Route
+          path="/seo-services-company"
+          element={
+            <SeoServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/ppc-services-company"
+          element={
+            <PpcServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/lead-generation-social-media-marketing-services-company"
+          element={
+            <LeadGenServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/digital-marketing"
+          element={
+            <DigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/digital-marketing-services-company"
+          element={
+            <DigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/mobile-marketing-services-company"
+          element={
+            <MobileMarketingServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/mobile-marketing"
+          element={
+            <MobileMarketingServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/word-press-development-services-company"
+          element={
+            <WordPressServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/web-designing-development-services-company"
+          element={
+            <WebDesignServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/e-commerce-website-design-development-services-company"
+          element={
+            <EcommerceServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/e-commerce-development"
+          element={
+            <EcommerceServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/e-commerce-development-services-company"
+          element={
+            <EcommerceServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/landing-page-development-services-company"
+          element={
+            <LandingPageServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/website-design-development-rohtak-delhi"
+          element={
+            <EnterpriseWebServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/application-development"
+          element={
+            <AppDevServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/mobile-app-development-services-company"
+          element={
+            <AppDevServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/application-development-services"
+          element={
+            <AppDevServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/android-app-development"
+          element={
+            <AndroidAppServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/ios-app-development"
+          element={
+            <IosAppServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/shopify-woocommerce"
+          element={
+            <ShopifyWooServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/custom-marketplace"
+          element={
+            <MarketplaceServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/content-marketing-services-company"
+          element={
+            <ContentMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/social-media-marketing"
+          element={
+            <SocialMediaMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/video-and-graphic-development-company"
+          element={
+            <VideoGraphicServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/video-editing"
+          element={
+            <VideoEditingServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/video-editing-services-company"
+          element={
+            <VideoEditingServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/social-media-graphic-design-services-company"
+          element={
+            <SocialMediaGraphicDesignPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/social-media-graphic-design"
+          element={
+            <SocialMediaGraphicDesignPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/promotional-video-editing-services-company"
+          element={
+            <PromotionalVideoServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/promotional-video"
+          element={
+            <PromotionalVideoServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/online-reputation-management-services-company"
+          element={
+            <OrmServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/business-development-consulting"
+          element={
+            <BusinessConsultingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/data-science"
+          element={
+            <DataSciencePage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/computer-training"
+          element={
+            <ComputerTrainingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/branding"
+          element={
+            <BrandingServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/logo-design-services-company"
+          element={
+            <LogoDesignServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/logo-design"
+          element={
+            <LogoDesignServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/social-media-optimization-services-company"
+          element={
+            <SocialMediaOptimizationPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/social-media-optimization"
+          element={
+            <SocialMediaOptimizationPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/facebook-marketing"
+          element={
+            <FacebookMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/facebook-marketing-services-company"
+          element={
+            <FacebookMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/website-development-and-design-services"
+          element={
+            <EnterpriseWebServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+
+        {/* Dedicated 23 Individual Service Pages */}
         <Route
           path="/services/seo-services-company"
           element={
@@ -223,6 +634,348 @@ function App() {
           }
         />
         <Route
+          path="/services/digital-marketing-services-company"
+          element={
+            <DigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/mobile-marketing-services-company"
+          element={
+            <MobileMarketingServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/mobile-marketing"
+          element={
+            <MobileMarketingServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/word-press-development-services-company"
+          element={
+            <WordPressServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/web-designing-development-services-company"
+          element={
+            <WebDesignServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/e-commerce-website-design-development-services-company"
+          element={
+            <EcommerceServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/e-commerce-development"
+          element={
+            <EcommerceServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/e-commerce-development-services-company"
+          element={
+            <EcommerceServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/landing-page-development-services-company"
+          element={
+            <LandingPageServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/website-design-development-rohtak-delhi"
+          element={
+            <EnterpriseWebServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/website-development-and-design-services"
+          element={
+            <EnterpriseWebServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/application-development"
+          element={
+            <AppDevServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/mobile-app-development-services-company"
+          element={
+            <AppDevServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/application-development-services"
+          element={
+            <AppDevServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/android-app-development"
+          element={
+            <AndroidAppServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/ios-app-development"
+          element={
+            <IosAppServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/shopify-woocommerce"
+          element={
+            <ShopifyWooServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/custom-marketplace"
+          element={
+            <MarketplaceServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/content-marketing-services-company"
+          element={
+            <ContentMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/social-media-marketing"
+          element={
+            <SocialMediaMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/video-and-graphic-development-company"
+          element={
+            <VideoGraphicServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/video-editing"
+          element={
+            <VideoEditingServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/video-editing-services-company"
+          element={
+            <VideoEditingServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/social-media-graphic-design-services-company"
+          element={
+            <SocialMediaGraphicDesignPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/social-media-graphic-design"
+          element={
+            <SocialMediaGraphicDesignPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/promotional-video-editing-services-company"
+          element={
+            <PromotionalVideoServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/promotional-video"
+          element={
+            <PromotionalVideoServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/online-reputation-management-services-company"
+          element={
+            <OrmServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/business-development-consulting"
+          element={
+            <BusinessConsultingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/data-science"
+          element={
+            <DataSciencePage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/computer-training"
+          element={
+            <ComputerTrainingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/branding"
+          element={
+            <BrandingServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/logo-design-services-company"
+          element={
+            <LogoDesignServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/logo-design"
+          element={
+            <LogoDesignServicesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/social-media-optimization-services-company"
+          element={
+            <SocialMediaOptimizationPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/social-media-optimization"
+          element={
+            <SocialMediaOptimizationPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/facebook-marketing"
+          element={
+            <FacebookMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/services/facebook-marketing-services-company"
+          element={
+            <FacebookMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
           path="/services/:serviceSlug"
           element={
             <ServiceDetail
@@ -231,6 +984,172 @@ function App() {
             />
           }
         />
+        {/* =========================================================================
+            DIRECT ROOT-LEVEL PACKAGE ROUTES (No /packages/ prefix required)
+           ========================================================================= */}
+        <Route
+          path="/seo-packages"
+          element={
+            <SeoPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/local-seo-packages"
+          element={
+            <LocalSeoPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/offpage-seo-packages"
+          element={
+            <OffpageSeoPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/onpage-seo-packages"
+          element={
+            <OnpageSeoPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/technical-seo-packages"
+          element={
+            <TechnicalSeoPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/white-label-seo-packages"
+          element={
+            <WhiteLabelSeoPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/enterprise-seo-packages"
+          element={
+            <EnterpriseSeoPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/smm-packages"
+          element={
+            <SmmPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/facebook-marketing-packages"
+          element={
+            <FacebookMarketingPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/instagram-marketing-packages"
+          element={
+            <InstagramMarketingPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/linkedin-marketing-packages"
+          element={
+            <LinkedinMarketingPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/youtube-marketing-packages"
+          element={
+            <YoutubeMarketingPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/ppc-packages"
+          element={
+            <PpcPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/orm-packages"
+          element={
+            <OrmPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/logo-design-packages"
+          element={
+            <LogoDesignPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/smo-packages"
+          element={
+            <SmoPackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/website-maintenance-packages"
+          element={
+            <WebsiteMaintenancePackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/website-packages"
+          element={
+            <WebsitePackagesPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+
         {/* Dedicated SEO Packages */}
         <Route
           path="/packages/seo-packages"
@@ -410,7 +1329,144 @@ function App() {
           }
         />
 
-        {/* 15 Dedicated International Geo-Targeted Routes */}
+        {/* Direct International Geo-Targeted Routes (Domain Root Slugs) */}
+        <Route
+          path="/miami-digital-marketing"
+          element={
+            <MiamiDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/florida-digital-marketing"
+          element={
+            <FloridaDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/seo-services-new-york"
+          element={
+            <SeoServicesNewYorkPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/los-angeles-digital-marketing"
+          element={
+            <LosAngelesDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/san-francisco-digital-marketing"
+          element={
+            <SanFranciscoDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/canada-digital-marketing"
+          element={
+            <CanadaDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/toronto-digital-marketing"
+          element={
+            <TorontoDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/ottawa-digital-marketing"
+          element={
+            <OttawaDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/europe-digital-marketing"
+          element={
+            <EuropeDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/uk-digital-marketing"
+          element={
+            <UkDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/london-digital-marketing"
+          element={
+            <LondonDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/dubai-digital-marketing"
+          element={
+            <DubaiDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/south-africa-digital-marketing"
+          element={
+            <SouthAfricaDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/australia-digital-marketing"
+          element={
+            <AustraliaDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/melbourne-digital-marketing"
+          element={
+            <MelbourneDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+
+        {/* 15 Dedicated International Geo-Targeted Routes (Legacy /international/ Prefix) */}
         <Route
           path="/international/miami-digital-marketing"
           element={
@@ -626,6 +1682,22 @@ function App() {
             />
           }
         />
+        <Route
+          path="/video-reviews"
+          element={
+            <VideoReviews
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/video-testimonials"
+          element={
+            <VideoReviews
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
@@ -669,6 +1741,17 @@ function App() {
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
+        {/* Direct Root-Level Blog Articles Route (e.g. /:blogId) */}
+        <Route
+          path="/:blogId"
+          element={
+            <BlogDetail
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
 
         {/* Catch-all fallback */}
         <Route

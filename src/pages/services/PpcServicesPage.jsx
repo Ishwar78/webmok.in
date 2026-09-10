@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import HeroLeadForm from '../../components/HeroLeadForm';
+import {
+  Link } from 'react-router-dom';
 import {
   FaSearchDollar,
   FaImage,
   FaShareAlt,
   FaShoppingBag,
-  FaMobileAlt,
   FaSyncAlt,
   FaArrowRight,
   FaPhoneAlt,
   FaCertificate,
   FaChevronDown,
-  FaRocket
+  FaRocket,
+  FaWhatsapp,
+  FaPaperPlane
 } from 'react-icons/fa';
-import ServiceSidebarForm from '../../components/ServiceSidebarForm';
-import './ServicePageShared.css';
+import './PpcServicesPage.css';
 
 const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   const [openFaq, setOpenFaq] = useState(0);
@@ -72,7 +74,7 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
       cat: 'Healthcare & Clinics',
       metric: '+190%',
       sub: 'verified doctor appointments booked',
-      name: 'Dr. Haror\'s Clinic',
+      name: "Dr. Haror's Clinic",
       desc: 'Location-based Google Search ads and Instagram reels lead generation with zero spam form fills.',
       link: '/clients/case-studies'
     }
@@ -168,8 +170,11 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
 
   return (
     <div className="wm-sp-root">
+      {/* 1. Hero Section */}
       <section className="wm-sp-hero">
         <div className="wm-sp-container">
+          <div className="wm-sp-hero-two-col">
+            <div className="wm-sp-hero-col-left">
           <div className="wm-sp-breadcrumb">
             <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>PPC Services</span>
           </div>
@@ -190,6 +195,8 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <FaPhoneAlt /> Call Me in 28 Seconds
             </button>
           </div>
+
+          {/* 4-Metric Performance Bar */}
           <div className="wm-seost">
             {stats.map((st, i) => (
               <div key={i} className="wm-seost__i">
@@ -198,9 +205,19 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </div>
             ))}
           </div>
+        
+            </div>
+            <div className="wm-sp-hero-col-right">
+              <HeroLeadForm
+                pageName="PPC Services"
+                source="PPC Services Hero Section"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* Rating Scorecard Badge */}
       <div className="wm-dsm-rating-wrap">
         <div className="wm-sp-container">
           <div className="wm-dsm-rating">
@@ -211,98 +228,103 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div>
               <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
               <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>200+ active performance advertisers</strong> across India, UAE, and North America.
+                Rated <strong>4.9 out of 5</strong> from <strong>300+ performance client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
               </p>
             </div>
           </div>
         </div>
       </div>
 
+      {/* 2. Main Body Section */}
       <section className="wm-sp-body">
         <div className="wm-sp-container wm-sp-layout">
+          {/* Main Column */}
           <div className="wm-sp-main-col">
+            {/* Overview Card */}
             <div className="wm-sp-card">
-              <h2 className="wm-sp-card-title">Instant Commercial Visibility & Precision Customer Acquisition</h2>
+              <h2 className="wm-sp-card-title">Eliminate Wasted Ad Spend with Scientific PPC Architecture</h2>
               <p className="wm-sp-paragraph">
-                Stop burning marketing budget on low-converting clicks. Pay-Per-Click (PPC) and Google AdWords management allows you to capture buyers at the exact psychological moment they are searching for solutions.
+                Most businesses waste 40% to 60% of their digital advertising budgets on broad-match keyword queries, bot clicks, non-converting display placements, and poorly targeted geographic zones.
               </p>
               <p className="wm-sp-paragraph">
-                At <strong>WebMok</strong>, we treat ad spend as an investment portfolio. Every campaign is engineered with server-side GA4 tracking, rigorous negative keyword sculpting, A/B tested ad copy, and high-velocity landing pages designed to maximize your profit margin.
+                At WebMok, our Google-certified performance marketers engineer mathematically sound ad accounts. By pairing high-intent search queries with laser-focused landing pages, negative keyword sculpting, and conversion-rate optimization (CRO), we turn your ad budget into a predictable customer acquisition machine.
               </p>
             </div>
 
+            {/* 3-Layer Sequential Paid Strategy Framework */}
             <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Our Methodology</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Layers of Paid Acquisition</h2>
+              <span className="wm-dsm-stack__eyebrow">Performance Architecture</span>
+              <h2 className="wm-dsm-stack__title">Three Sequential Paid Acquisition Layers</h2>
               <p className="wm-dsm-stack__lede">
-                High-converting PPC requires an end-to-end performance engine where keyword intent, creative funnels, and automated bid sculpting work in complete harmony.
+                High-converting paid advertising isn't just about bidding on keywords — it requires full-funnel synchronization from search intent to closed sale.
               </p>
 
               <div className="wm-dsm-layer wm-dsm-layer--1">
                 <div className="wm-dsm-layer__head">
                   <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Intent & Keyword Architecture</h3>
-                  <span className="wm-dsm-layer__role">The Foundation</span>
+                  <h3 className="wm-dsm-layer__name">High-Intent Capture</h3>
+                  <span className="wm-dsm-layer__role">Google Search & Exact Match Bidding</span>
                 </div>
                 <p className="wm-dsm-layer__desc">
-                  Filtering out tire-kickers and low-intent searches. We isolate high-intent commercial keywords and enforce strict negative keyword sculpting.
+                  Capturing users with immediate commercial purchase intent through granular Single Keyword Ad Groups (SKAGs) and negative keyword sculpting.
                 </p>
                 <ul className="wm-dsm-layer__list">
-                  <li>Granular Single-Theme Ad Groups (STAG) structure</li>
-                  <li>Extensive negative keyword sculpting to stop wasted spend</li>
-                  <li>Server-side conversion tracking setup via GTM and GA4</li>
-                  <li>Competitor CPC gap analysis and strategic bid ceilings</li>
+                  <li>Granular campaign segmentation: Brand vs Non-Brand vs Competitor</li>
+                  <li>Extensive negative keyword lists updated weekly to stop junk clicks</li>
+                  <li>Responsive Search Ads (RSAs) optimized with 15 headlines & 4 descriptions</li>
+                  <li>Server-side conversion tracking via Google Tag Manager and GA4</li>
                 </ul>
               </div>
 
               <div className="wm-dsm-layer wm-dsm-layer--2">
                 <div className="wm-dsm-layer__head">
                   <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">A/B Creative & Landing Funnels</h3>
-                  <span className="wm-dsm-layer__role">Conversion Rate Optimization</span>
+                  <h3 className="wm-dsm-layer__name">Audience Remarketing</h3>
+                  <span className="wm-dsm-layer__role">Multi-Touch Retargeting & Video Discovery</span>
                 </div>
                 <p className="wm-dsm-layer__desc">
-                  Ad clicks are useless without conversion. We design high-speed landing pages engineered strictly to convert visitors into phone calls and lead forms.
+                  Re-engaging website visitors and intent audiences across YouTube, Meta, and Google Display Network to accelerate pipeline velocity.
                 </p>
                 <ul className="wm-dsm-layer__list">
-                  <li>Bespoke responsive landing pages with sub-second loading</li>
-                  <li>Multi-variant A/B copy testing for maximum CTR</li>
-                  <li>1-click WhatsApp, click-to-call & CRM lead integrations</li>
-                  <li>Quality Score optimization to pay less per click than competitors</li>
+                  <li>Dynamic product remarketing for e-commerce cart abandoners</li>
+                  <li>Video action campaigns on YouTube targeting in-market shoppers</li>
+                  <li>Meta custom audiences and high-affinity lookalike modeling</li>
+                  <li>Multi-device frequency capping to maintain brand goodwill</li>
                 </ul>
               </div>
 
               <div className="wm-dsm-layer wm-dsm-layer--3">
                 <div className="wm-dsm-layer__head">
                   <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Omnichannel Retargeting & Smart Scaling</h3>
-                  <span className="wm-dsm-layer__role">Revenue Maximization</span>
+                  <h3 className="wm-dsm-layer__name">Conversion Rate CRO</h3>
+                  <span className="wm-dsm-layer__role">Landing Page Speed & Offer Engineering</span>
                 </div>
                 <p className="wm-dsm-layer__desc">
-                  Re-engaging visitors across Meta, YouTube, and Display while using automated smart bidding to scale profitable ad groups.
+                  Maximizing landing page conversion rates so every rupee spent on paid traffic yields maximum qualified leads and sales transactions.
                 </p>
                 <ul className="wm-dsm-layer__list">
-                  <li>Dynamic multi-channel remarketing sequences</li>
-                  <li>Target CPA (tCPA) and Target ROAS (tROAS) machine learning models</li>
-                  <li>Lookalike audience modeling from verified buyer CRM lists</li>
-                  <li>Bi-weekly live performance dashboards and ROI reviews</li>
+                  <li>Sub-second mobile landing page load speeds with zero layout shifts</li>
+                  <li>Frictionless 1-click WhatsApp, click-to-call, and instant lead modals</li>
+                  <li>A/B split testing of headlines, social proof badges, and CTAs</li>
+                  <li>CRM integration and automated lead routing to sales teams</li>
                 </ul>
               </div>
 
               <div className="wm-dsm-stack__foot">
                 <p>
-                  <strong>Ready to eliminate wasted ad budget?</strong> Get a comprehensive audit of your current Google Ads account.
+                  <strong>We measure real ROAS and Cost Per Lead (CPL).</strong> You get live Looker Studio dashboards linked directly to your advertising accounts.
                 </p>
                 <button type="button" onClick={onOpenEnquiry}>
-                  Request Free PPC Audit &rarr;
+                  Talk to a PPC Specialist &rarr;
                 </button>
               </div>
             </section>
 
+            {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
               <h2 className="wm-sp-card-title">PPC Results, from Client Analytics</h2>
               <p className="wm-sp-paragraph">
-                Every metric below comes directly from verified Google Ads, Meta Ads Manager, and GA4 transaction reports:
+                Every figure below comes directly from verified Google Ads, Meta Ads Manager, and GA4 revenue reports:
               </p>
               <div className="wm-seocs__grid">
                 {caseStudies.map((cs, idx) => (
@@ -312,14 +334,39 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     <p className="wm-seocs__met">{cs.sub}</p>
                     <h3 className="wm-seocs__nm">{cs.name}</h3>
                     <p className="wm-seocs__d">{cs.desc}</p>
-                    <Link to="/clients/case-studies" className="wm-seocs__go">
-                      Read Case Study &rarr;
-                    </Link>
+                    <div className="wm-seocs__actions">
+                      <button
+                        type="button"
+                        className="wm-seocs-btn-inquiry"
+                        onClick={() => onOpenEnquiry && onOpenEnquiry(`${cs.name} - Case Study Inquiry`)}
+                        title="Request an Inquiry"
+                      >
+                        <FaPaperPlane /> Inquire
+                      </button>
+                      <button
+                        type="button"
+                        className="wm-seocs-btn-call"
+                        onClick={onOpenCallMe}
+                        title="Call Webmok"
+                      >
+                        <FaPhoneAlt /> Call
+                      </button>
+                      <a
+                        href={`https://wa.me/918684031003?text=${encodeURIComponent(`Hi Webmok Team, I am interested in case study: ${cs.name} (${cs.metric})`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="wm-seocs-btn-whatsapp"
+                        title="Chat on WhatsApp"
+                      >
+                        <FaWhatsapp /> WhatsApp
+                      </a>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
+            {/* Comprehensive PPC Channels Grid */}
             <div className="wm-sp-card">
               <h2 className="wm-sp-card-title">Comprehensive PPC & Paid Media Channels</h2>
               <p className="wm-sp-paragraph">
@@ -328,55 +375,201 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-sp-disciplines-grid">
                 {ppcDisciplines.map((item, idx) => (
                   <div key={idx} className="wm-sp-feature-item">
-            </div>
-
-            {/* 6 Step Deliverables */}
-            <div className="wm-sp-card">
-              <h2 className="wm-sp-card-title">What Our PPC Management Includes</h2>
-              <p className="wm-sp-paragraph">
-                Being dedicated PPC specialists, WebMok delivers an end-to-end performance marketing ecosystem:
-              </p>
-              <div className="wm-sp-benefit-list">
-                {ppcDeliverables.map((item, idx) => (
-                  <div key={idx} className="wm-sp-benefit-item">
-                    <FaCheckCircle className="wm-sp-bi-icon" />
-                    <div className="wm-sp-bi-content">
-                      <h4>{item.title}</h4>
-                      <p>{item.text}</p>
-                    </div>
+                    <span className="wm-sp-fi-badge">{item.badge}</span>
+                    <div className="wm-sp-fi-icon">{item.icon}</div>
+                    <h3 className="wm-sp-fi-title">{item.title}</h3>
+                    <p className="wm-sp-fi-desc">{item.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Highlight Banner */}
-            <div className="wm-sp-callout-banner">
-              <div className="wm-sp-cb-content">
-                <h3>Google Certified PPC Management & Millions in Ad Budgets Handled</h3>
-                <p>
-                  We have successfully managed multi-million rupee ad accounts across Noida, Gurgaon, Chandigarh, and Delhi NCR with verified ROAS growth.
-                </p>
-              </div>
-              <button className="wm-sp-cb-btn" onClick={onOpenEnquiry}>
-                Start Your Ads
-              </button>
-            </div>
-
-            {/* Zero Risk Tracking */}
+            {/* Industry Verticals */}
             <div className="wm-sp-card">
-              <h2 className="wm-sp-card-title">Transparent Tracking & Zero Budget Wastage</h2>
+              <h2 className="wm-sp-card-title">PPC Solutions for Specific Industry Verticals</h2>
               <p className="wm-sp-paragraph">
-                There is zero guesswork when partnering with WebMok. You get access to live conversion tracking dashboards, cost-per-lead reports, and transparent budget allocation. Whether you need local leads in Delhi NCR or national eCommerce scaling, our PPC specialists ensure every single rupee spent works towards generating qualified business revenue.
+                We run tailored performance marketing frameworks for distinct commercial and B2B sectors:
               </p>
+              <div className="wm-sp-industries-grid">
+                {industries.map((ind, idx) => (
+                  <div key={idx} className="wm-sp-industry-chip">
+                    <span className="wm-sp-chip-dot"></span>
+                    <span>{ind}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Sticky Sidebar Lead Capture Form */}
-          <div className="wm-sp-sidebar-col">
-            <ServiceSidebarForm
-              serviceName="PPC Services Company"
-              source="PPC Service Page Form"
-            />
+            {/* 4-Tier Transparent Packages */}
+            <div className="wm-sp-card">
+              <h2 className="wm-sp-card-title">PPC Management Transparent Packages</h2>
+              <p className="wm-sp-paragraph">
+                Published starting management plans so you can size the scope with complete transparency:
+              </p>
+              <div className="wm-seopk">
+                <div className="wm-seopk__grid">
+                  {/* Starter */}
+                  <div className="wm-seopk__c">
+                    <p className="wm-seopk__nm">Starter Ads Plan</p>
+                    <div className="wm-seopk__amt">₹25,000</div>
+                    <p className="wm-seopk__gst">+ GST / mo (Up to ₹1L ad spend)</p>
+                    <p className="wm-seopk__per">Best for local businesses or single campaign</p>
+                    <span className="wm-seopk__kw">Google Search Ads</span>
+                    <ul className="wm-seopk__l">
+                      <li>Google Search & Call campaigns setup</li>
+                      <li>Keyword research & negative keyword list</li>
+                      <li>Conversion tracking via GTM & GA4</li>
+                      <li>Weekly bid adjustments & search term review</li>
+                    </ul>
+                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={onOpenEnquiry}>
+                      Choose Starter &rarr;
+                    </button>
+                  </div>
+
+                  {/* Growth */}
+                  <div className="wm-seopk__c wm-seopk__c--hi">
+                    <span className="wm-seopk__badge">Most Chosen</span>
+                    <p className="wm-seopk__nm">Growth Ads Plan</p>
+                    <div className="wm-seopk__amt">₹45,000</div>
+                    <p className="wm-seopk__gst">+ GST / mo (Up to ₹3L ad spend)</p>
+                    <p className="wm-seopk__per">Best for scaling leads or e-commerce orders</p>
+                    <span className="wm-seopk__kw">Google + Meta Ads</span>
+                    <ul className="wm-seopk__l">
+                      <li>Google Search + Performance Max + Meta Ads</li>
+                      <li>Custom high-converting landing page included</li>
+                      <li>Audience remarketing & dynamic catalog ads</li>
+                      <li>Bi-weekly strategy call & Looker Studio dashboard</li>
+                    </ul>
+                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={onOpenEnquiry}>
+                      Choose Growth &rarr;
+                    </button>
+                  </div>
+
+                  {/* Scale */}
+                  <div className="wm-seopk__c">
+                    <p className="wm-seopk__nm">Scale Plan</p>
+                    <div className="wm-seopk__amt">₹75,000</div>
+                    <p className="wm-seopk__gst">+ GST / mo (Up to ₹8L ad spend)</p>
+                    <p className="wm-seopk__per">Best for multi-channel national brands</p>
+                    <span className="wm-seopk__kw">Full-Funnel Paid Media</span>
+                    <ul className="wm-seopk__l">
+                      <li>Google, Meta, YouTube & LinkedIn campaigns</li>
+                      <li>Multi-variant A/B landing page CRO testing</li>
+                      <li>Server-side CAPI tracking & offline conversion sync</li>
+                      <li>Weekly sprint reviews & creative asset refreshes</li>
+                    </ul>
+                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={onOpenEnquiry}>
+                      Choose Scale &rarr;
+                    </button>
+                  </div>
+
+                  {/* Dedicated Specialist */}
+                  <div className="wm-seopk__c wm-seopk__c--dark">
+                    <p className="wm-seopk__nm">Dedicated PPC Retainer</p>
+                    <div className="wm-seopk__amt">₹1.5 Lakh</div>
+                    <p className="wm-seopk__gst">+ GST / mo (Large / Enterprise Spend)</p>
+                    <p className="wm-seopk__per">For enterprise brands scaling high volume</p>
+                    <span className="wm-seopk__kw">Dedicated Performance Team</span>
+                    <ul className="wm-seopk__l">
+                      <li>Dedicated Senior Media Buyer + Copywriter + Designer</li>
+                      <li>Unlimited ad spend scaling across all channels</li>
+                      <li>Real-time Slack channel support & daily pacing</li>
+                      <li>Custom CRM lead scoring & attribution modeling</li>
+                    </ul>
+                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={onOpenEnquiry}>
+                      Hire Dedicated Team &rarr;
+                    </button>
+                  </div>
+                </div>
+
+                <div className="wm-seopk__inc">
+                  <h3>Included in Every PPC Plan</h3>
+                  <div className="wm-seopk__incg">
+                    <span>Server-side GA4 & GTM tracking</span>
+                    <span>Negative keyword sculpting</span>
+                    <span>Ad copywriting & testing</span>
+                    <span>Geo-fencing & device bid adjustments</span>
+                    <span>Conversion rate landing page advice</span>
+                    <span>Real-time Looker Studio dashboard</span>
+                    <span>Direct account access & transparency</span>
+                    <span>Dedicated account manager</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Instant Free PPC Audit Banner */}
+            <div className="wm-rsau">
+              <div className="wm-rsau__grid">
+                <div>
+                  <span className="wm-rsau__eyebrow">PPC Audit Engine <i>Free</i></span>
+                  <h2>Uncover Wasted Ad Spend in 30 Seconds</h2>
+                  <p>
+                    Submit your website or ad account details to receive an actionable <b>25-point PPC audit</b> highlighting wasted search terms, quality score bottlenecks, and CPA reduction opportunities.
+                  </p>
+                  <form className="wm-rsau__form" onSubmit={handleAuditSubmit}>
+                    <input
+                      className="wm-rsau__in"
+                      type="text"
+                      placeholder="https://yoursite.com"
+                      value={auditUrl}
+                      onChange={(e) => setAuditUrl(e.target.value)}
+                      required
+                    />
+                    <button className="wm-rsau__go" type="submit">
+                      Get Free PPC Audit &rarr;
+                    </button>
+                  </form>
+                  <p style={{ fontSize: '13px', color: '#8e8a7e', margin: 0 }}>
+                    100% Free · No credit card required · Audit delivered within 24 hours.
+                  </p>
+                </div>
+                <div className="wm-rsau__panel">
+                  <p className="wm-rsau__pt">What Your PPC Audit Includes</p>
+                  <div className="wm-rsau__row">
+                    <span className="wm-rsau__tick">✓</span>
+                    <span><b>Negative keyword gap analysis</b> to eliminate junk clicks</span>
+                  </div>
+                  <div className="wm-rsau__row">
+                    <span className="wm-rsau__tick">✓</span>
+                    <span><b>Quality Score review</b> to lower your cost-per-click (CPC)</span>
+                  </div>
+                  <div className="wm-rsau__row">
+                    <span className="wm-rsau__tick">✓</span>
+                    <span><b>Landing page speed & CRO check</b> for conversion leakage</span>
+                  </div>
+                  <div className="wm-rsau__row">
+                    <span className="wm-rsau__tick">✓</span>
+                    <span><b>Actionable ROAS growth roadmap</b> prioritized by revenue impact</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Interactive FAQs Accordion */}
+            <div className="wm-sp-card">
+              <h2 className="wm-sp-card-title">Frequently Asked Questions</h2>
+              <div className="wm-sp-faq-list">
+                {faqs.map((faq, idx) => (
+                  <div
+                    key={idx}
+                    className={`wm-sp-faq-item ${openFaq === idx ? 'open' : ''}`}
+                  >
+                    <div
+                      className="wm-sp-faq-q"
+                      onClick={() => setOpenFaq(openFaq === idx ? -1 : idx)}
+                    >
+                      <span>
+                        <span className="wm-sp-faq-badge">{idx + 1 < 10 ? `0${idx + 1}` : idx + 1}</span>
+                        {faq.q}
+                      </span>
+                      <FaChevronDown className="wm-sp-faq-chevron" />
+                    </div>
+                    {openFaq === idx && <p className="wm-sp-faq-a">{faq.a}</p>}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

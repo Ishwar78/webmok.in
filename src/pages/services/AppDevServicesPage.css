@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for AppDevServicesPage */
+@import './ServicePageShared.css';
+
+.appdevservicespage-root {
+  width: 100%;
+}

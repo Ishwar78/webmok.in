@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for SocialMediaGraphicDesignPage */
+@import './ServicePageShared.css';
+
+.socialmediagraphicdesignpage-root {
+  width: 100%;
+}

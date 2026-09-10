@@ -1,0 +1,13 @@
+/* =========================================================================
+   WebMok - SEO Services Dedicated Page Stylesheet
+   Corporate Blue Theme · Zero Yellow Palette · 100% Responsive
+   ========================================================================= */
+
+@import './ServicePageShared.css';
+
+/* Dedicated styling hook for SeoServicesPage */
+.wm-page-seoservicespage {
+  --wm-brand-primary: #0077b6;
+  --wm-brand-blue: #0b4f8a;
+  --wm-brand-cyan: #00d2ff;
+}

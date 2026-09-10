@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for VideoEditingServicesPage */
+@import './ServicePageShared.css';
+
+.videoeditingservicespage-root {
+  width: 100%;
+}

@@ -201,7 +201,7 @@ const Blogs = () => {
               {filtered.map((blog) => (
                 <Link
                   key={blog.id}
-                  to={'/blogs/' + blog.id}
+                  to={'/' + blog.id}
                   className="wm-blogspage-card"
                   title={'Read ' + blog.title}
                 >

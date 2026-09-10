@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for MobileMarketingServicesPage */
+@import './ServicePageShared.css';
+
+.mobilemarketingservicespage-root {
+  width: 100%;
+}

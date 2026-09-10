@@ -1,0 +1,308 @@
+/* ==========================================================================
+   HeroLeadForm.css - Sleek Dark Hero Lead Capture Form
+   WebMok Corporate Blue & Cyan Theme · 100% Responsive
+   ========================================================================== */
+
+.wm-hlf-card {
+  background: linear-gradient(145deg, rgba(13, 27, 42, 0.94) 0%, rgba(10, 20, 32, 0.98) 100%);
+  border: 1.5px solid rgba(0, 210, 255, 0.28);
+  border-radius: 20px;
+  padding: 24px 22px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 5), 0 0 24px rgba(0, 210, 255, 2);
+  backdrop-filter: blur(14px);
+  color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+}
+
+.wm-hlf-header {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.wm-hlf-pill {
+  display: inline-block;
+  background: rgba(0, 210, 255, 0.12);
+  color: #00d2ff;
+  border: 1px solid rgba(0, 210, 255, 0.35);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.wm-hlf-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+}
+
+.wm-hlf-subtitle {
+  font-size: 13px !important;
+  color: #94a3b8 !important;
+  line-height: 1.45 !important;
+  margin: 0 !important;
+}
+
+.wm-hlf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wm-hlf-error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
+}
+
+.wm-hlf-row-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.wm-hlf-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wm-hlf-group label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.wm-hlf-icon {
+  color: #00d2ff;
+  font-size: 11px;
+}
+
+.wm-hlf-group input,
+.wm-hlf-group textarea {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13.5px;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.wm-hlf-group input:focus,
+.wm-hlf-group textarea:focus {
+  outline: none;
+  border-color: #00d2ff;
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.18);
+}
+
+.wm-hlf-group textarea {
+  resize: vertical;
+  min-height: 52px;
+}
+
+.wm-hlf-submit-btn {
+  background: linear-gradient(135deg, #00d2ff 0%, #0077b6 100%);
+  color: #0a1420;
+  border: none;
+  border-radius: 50px;
+  padding: 13px 20px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 22px rgba(0, 210, 255, 0.35);
+  margin-top: 4px;
+}
+
+.wm-hlf-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ffffff 0%, #00d2ff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 210, 255, 0.5);
+}
+
+.wm-hlf-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.wm-hlf-spinner {
+  animation: wmSpin 1s linear infinite;
+}
+
+@keyframes wmSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Trust Badges */
+.wm-hlf-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.wm-hlf-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: #94a3b8;
+}
+
+.wm-hlf-ticon {
+  color: #00d2ff;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Direct Connect Hotlines */
+.wm-hlf-direct {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.wm-hlf-direct-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #64748b;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.wm-hlf-direct-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.wm-hlf-dbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.wm-hlf-dbtn-phone {
+  background: rgba(37, 99, 235, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(37, 99, 235, 0.4);
+}
+
+.wm-hlf-dbtn-phone:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.wm-hlf-dbtn-wa {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.wm-hlf-dbtn-wa:hover {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+/* Success Confirmation State */
+.wm-hlf-success {
+  text-align: center;
+  padding: 24px 12px;
+}
+
+.wm-hlf-success-icon {
+  font-size: 48px;
+  color: #22c55e;
+  margin-bottom: 12px;
+}
+
+.wm-hlf-success h4 {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  font-weight: 800;
+}
+
+.wm-hlf-success p {
+  font-size: 13.5px !important;
+  color: #cbd5e1 !important;
+  line-height: 1.5 !important;
+  margin-bottom: 14px !important;
+}
+
+.wm-hlf-success-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #86efac;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.wm-hlf-reset-btn {
+  background: transparent;
+  color: #00d2ff;
+  border: 1px solid #00d2ff;
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wm-hlf-reset-btn:hover {
+  background: #00d2ff;
+  color: #0a1420;
+}
+
+@media (max-width: 480px) {
+  .wm-hlf-row-two {
+    grid-template-columns: 1fr;
+  }
+  .wm-hlf-direct-btns {
+    grid-template-columns: 1fr;
+  }
+}

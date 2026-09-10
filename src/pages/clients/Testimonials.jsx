@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   FaStar,
   FaQuoteLeft,
@@ -13,6 +13,7 @@ import {
   FaThumbsUp
 } from 'react-icons/fa';
 import './Testimonials.css';
+import { resolveMediaUrl, handleImageError } from '../../utils/mediaUrl';
 
 const Testimonials = ({ onOpenCallMe, onOpenEnquiry }) => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -156,6 +157,21 @@ const Testimonials = ({ onOpenCallMe, onOpenEnquiry }) => {
     }
   ];
 
+  const [reviews, setReviews] = useState(reviewsData);
+
+  useEffect(() => {
+    fetch('http://localhost:5005/api/testimonials')
+      .then(res => res.json())
+      .then(json => {
+        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+          setReviews(json.data);
+        }
+      })
+      .catch(err => {
+        console.warn('Notice: Testimonials live API offline, using defaults:', err.message);
+      });
+  }, []);
+
   const filterTabs = [
     { id: 'all', label: 'All Reviews (500+)' },
     { id: 'seo', label: 'SEO & Organic Growth' },
@@ -165,8 +181,8 @@ const Testimonials = ({ onOpenCallMe, onOpenEnquiry }) => {
   ];
 
   const filteredReviews = activeFilter === 'all'
-    ? reviewsData
-    : reviewsData.filter(r => r.category === activeFilter);
+    ? reviews
+    : reviews.filter(r => r.category === activeFilter);
 
   return (
     <div className="wm-test-page-root">
@@ -275,10 +291,11 @@ const Testimonials = ({ onOpenCallMe, onOpenEnquiry }) => {
 
                 <div className="wm-tcard-author-row">
                   <img
-                    src={review.avatar}
+                    src={resolveMediaUrl(review.avatar)}
                     alt={review.name}
                     className="wm-tauthor-img"
                     style={{ width: '48px', height: '48px', minWidth: '48px', minHeight: '48px', borderRadius: '50%', objectFit: 'cover' }}
+                    onError={(e) => handleImageError(e, 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80')}
                   />
                   <div className="wm-tauthor-info">
                     <h4>{review.name}</h4>

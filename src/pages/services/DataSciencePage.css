@@ -1,0 +1,6 @@
+/* Dedicated Stylesheet for DataSciencePage */
+@import './ServicePageShared.css';
+
+.datasciencepage-root {
+  width: 100%;
+}

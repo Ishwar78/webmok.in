@@ -58,6 +58,20 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
     setInternationalDropdownOpen(false);
   }, [location]);
 
+  // Close dropdowns on outside click
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (!e.target.closest('.wm-mega-parent') && !e.target.closest('.wm-mobile-drawer')) {
+        setServicesDropdownOpen(false);
+        setPackagesDropdownOpen(false);
+        setClientsDropdownOpen(false);
+        setInternationalDropdownOpen(false);
+      }
+    };
+    document.addEventListener('click', handleOutsideClick);
+    return () => document.removeEventListener('click', handleOutsideClick);
+  }, []);
+
   return (
     <header className={`wm-navbar-header ${scrolled ? 'wm-header-scrolled' : ''}`}>
       <div className="wm-nav-container">
@@ -90,14 +104,27 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
               onMouseEnter={() => setServicesDropdownOpen(true)}
               onMouseLeave={() => setServicesDropdownOpen(false)}
             >
-              <NavLink
-                to="/services"
-                className={({ isActive }) => (isActive ? 'wm-nav-link wm-has-dropdown active' : 'wm-nav-link wm-has-dropdown')}
+              <span
+                role="button"
+                tabIndex={0}
+                className={`wm-nav-link wm-has-dropdown ${location.pathname.startsWith('/services') || servicesDropdownOpen ? 'active' : ''}`}
+                style={{ cursor: 'pointer' }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setServicesDropdownOpen((prev) => !prev);
+                  setPackagesDropdownOpen(false);
+                  setClientsDropdownOpen(false);
+                  setInternationalDropdownOpen(false);
+                }}
               >
-                Services <FaChevronDown className="wm-dropdown-arrow" />
-              </NavLink>
+                Services <FaChevronDown className={`wm-dropdown-arrow ${servicesDropdownOpen ? 'wm-arrow-open' : ''}`} />
+              </span>
 
-              <div className={`wm-mega-menu ${servicesDropdownOpen ? 'wm-mega-visible' : ''}`}>
+              <div
+                className={`wm-mega-menu ${servicesDropdownOpen ? 'wm-mega-visible' : ''}`}
+                onClick={(e) => e.stopPropagation()}
+              >
                 <div className="wm-mega-topbar">
                   <div className="wm-mega-topbar-left">
                     <span className="wm-mtop-pill">Digital Growth Architecture</span>
@@ -109,7 +136,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                 </div>
 
                 <div className="wm-mega-inner">
-                  {/* Column 1: E-commerce & App Development */}
+                  {/* Column 1: E-Commerce, Apps & SEO */}
                   <div className="wm-mega-col">
                     <div className="wm-mega-block">
                       <div className="wm-mblock-header">
@@ -117,31 +144,33 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                           <FaShoppingCart />
                         </div>
                         <div>
-                          <h4 className="wm-mega-title">E-Commerce Dev</h4>
-                          <span className="wm-mtitle-sub">High-conversion stores</span>
+                          <h4 className="wm-mega-title">E-Commerce & Apps</h4>
+                          <span className="wm-mtitle-sub">High-conversion engineering</span>
                         </div>
                       </div>
                       <ul className="wm-mega-sublinks">
-                        <li><Link to="/services/e-commerce-development" onClick={() => setServicesDropdownOpen(false)}>E-Commerce Development</Link></li>
-                        <li><Link to="/services/shopify-woocommerce" onClick={() => setServicesDropdownOpen(false)}>Shopify & WooCommerce</Link></li>
-                        <li><Link to="/services/custom-marketplace" onClick={() => setServicesDropdownOpen(false)}>Custom Marketplace</Link></li>
+                        <li><Link to="/e-commerce-development-services-company" onClick={() => setServicesDropdownOpen(false)}>E-Commerce Development</Link></li>
+                        <li><Link to="/application-development-services" onClick={() => setServicesDropdownOpen(false)}>Application Development</Link></li>
+                        <li><Link to="/android-app-development" onClick={() => setServicesDropdownOpen(false)}>Android App Development</Link></li>
+                        <li><Link to="/ios-app-development" onClick={() => setServicesDropdownOpen(false)}>iOS App Development</Link></li>
+                        <li><Link to="/shopify-woocommerce" onClick={() => setServicesDropdownOpen(false)}>Shopify & WooCommerce</Link></li>
+                        <li><Link to="/custom-marketplace" onClick={() => setServicesDropdownOpen(false)}>Custom Marketplace</Link></li>
                       </ul>
                     </div>
 
-                    <div className="wm-mega-block">
+                    <div className="wm-mega-block" style={{ marginTop: '16px' }}>
                       <div className="wm-mblock-header">
-                        <div className="wm-cat-icon-wrap wm-cicon-blue">
-                          <FaMobileAlt />
+                        <div className="wm-cat-icon-wrap wm-cicon-coral">
+                          <FaSearch />
                         </div>
                         <div>
-                          <h4 className="wm-mega-title">App Development</h4>
-                          <span className="wm-mtitle-sub">iOS & Android solutions</span>
+                          <h4 className="wm-mega-title">SEO Optimization</h4>
+                          <span className="wm-mtitle-sub">Rankings & search visibility</span>
                         </div>
                       </div>
                       <ul className="wm-mega-sublinks">
-                        <li><Link to="/services/application-development" onClick={() => setServicesDropdownOpen(false)}>Application Development</Link></li>
-                        <li><Link to="/services/android-app-development" onClick={() => setServicesDropdownOpen(false)}>Android App Development</Link></li>
-                        <li><Link to="/services/ios-app-development" onClick={() => setServicesDropdownOpen(false)}>iOS App Development</Link></li>
+                        <li><Link to="/seo-services-company" onClick={() => setServicesDropdownOpen(false)}>Search Engine Optimization Company</Link></li>
+                        <li><Link to="/hire-seo-expert" onClick={() => setServicesDropdownOpen(false)}>Hire Dedicated SEO Expert</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -155,20 +184,21 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                         </div>
                         <div>
                           <h4 className="wm-mega-title">Web Development</h4>
-                          <span className="wm-mtitle-sub">Blazing-fast architectures</span>
+                          <span className="wm-mtitle-sub">Modern full-stack platforms</span>
                         </div>
                       </div>
                       <ul className="wm-mega-sublinks">
-                        <li><Link to="/services/word-press-development-services-company" onClick={() => setServicesDropdownOpen(false)}>Wordpress Development</Link></li>
-                        <li><Link to="/services/web-designing-development-services-company" onClick={() => setServicesDropdownOpen(false)}>Web Design & Development</Link></li>
-                        <li><Link to="/services/e-commerce-development-services-company" onClick={() => setServicesDropdownOpen(false)}>Custom Web Applications</Link></li>
-                        <li><Link to="/services/landing-page-development-services-company" onClick={() => setServicesDropdownOpen(false)}>Landing Page Development</Link></li>
-                        <li><Link to="/services/website-design-development-rohtak-delhi" onClick={() => setServicesDropdownOpen(false)}>Enterprise Web Portal</Link></li>
+                        <li><Link to="/word-press-development-services-company" onClick={() => setServicesDropdownOpen(false)}>Wordpress Development</Link></li>
+                        <li><Link to="/web-designing-development-services-company" onClick={() => setServicesDropdownOpen(false)}>Web design & Development</Link></li>
+                        <li><Link to="/e-commerce-development-services-company" onClick={() => setServicesDropdownOpen(false)}>E-Commerce Development</Link></li>
+                        <li><Link to="/landing-page-development-services-company" onClick={() => setServicesDropdownOpen(false)}>Landing Page Development</Link></li>
+                        <li><Link to="/website-development-and-design-services" onClick={() => setServicesDropdownOpen(false)}>Website Development & Design Services</Link></li>
+                        <li><Link to="/application-development-services" onClick={() => setServicesDropdownOpen(false)}>Application Development</Link></li>
                       </ul>
                     </div>
                   </div>
 
-                  {/* Column 3: Digital Marketing & SEO */}
+                  {/* Column 3: Digital Marketing & Business Consultant */}
                   <div className="wm-mega-col">
                     <div className="wm-mega-block">
                       <div className="wm-mblock-header">
@@ -177,71 +207,73 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                         </div>
                         <div>
                           <h4 className="wm-mega-title">Digital Marketing</h4>
-                          <span className="wm-mtitle-sub">Performance customer acquisition</span>
+                          <span className="wm-mtitle-sub">Scalable customer acquisition</span>
                         </div>
                       </div>
                       <ul className="wm-mega-sublinks">
-                        <li><Link to="/services/seo-services-company" onClick={() => setServicesDropdownOpen(false)}>SEO - Search Engine Optimization</Link></li>
-                        <li><Link to="/services/ppc-services-company" onClick={() => setServicesDropdownOpen(false)}>PPC & Performance Google Ads</Link></li>
-                        <li><Link to="/services/content-marketing-services-company" onClick={() => setServicesDropdownOpen(false)}>Content Marketing Strategy</Link></li>
-                        <li><Link to="/services/social-media-marketing" onClick={() => setServicesDropdownOpen(false)}>Social Media Marketing</Link></li>
-                        <li><Link to="/hire-seo-expert" onClick={() => setServicesDropdownOpen(false)}>Hire Dedicated SEO Expert</Link></li>
+                        <li><Link to="/seo-services-company" onClick={() => setServicesDropdownOpen(false)}>Search Engine Optimization Company</Link></li>
+                        <li><Link to="/ppc-services-company" onClick={() => setServicesDropdownOpen(false)}>PPC SERVICES</Link></li>
+                        <li><Link to="/content-marketing-services-company" onClick={() => setServicesDropdownOpen(false)}>Content Marketing</Link></li>
+                        <li><Link to="/social-media-marketing" onClick={() => setServicesDropdownOpen(false)}>Social Media Marketing</Link></li>
+                        <li><Link to="/mobile-marketing-services-company" onClick={() => setServicesDropdownOpen(false)}>Mobile Marketing</Link></li>
+                        <li><Link to="/video-editing" onClick={() => setServicesDropdownOpen(false)}>Video Editing</Link></li>
+                      </ul>
+                    </div>
+
+                    <div className="wm-mega-block" style={{ marginTop: '16px' }}>
+                      <div className="wm-mblock-header">
+                        <div className="wm-cat-icon-wrap wm-cicon-navy">
+                          <FaBriefcase />
+                        </div>
+                        <div>
+                          <h4 className="wm-mega-title">Business Consultant</h4>
+                          <span className="wm-mtitle-sub">Strategic scaling roadmaps</span>
+                        </div>
+                      </div>
+                      <ul className="wm-mega-sublinks">
+                        <li><Link to="/business-development-consulting" onClick={() => setServicesDropdownOpen(false)}>Business Development Consulting</Link></li>
                       </ul>
                     </div>
                   </div>
 
-                  {/* Column 4: Creative, Consulting & Spotlight Card */}
-                  <div className="wm-mega-col wm-mega-spotlight-col">
+                  {/* Column 4: Graphic & Video, Outstanding Services */}
+                  <div className="wm-mega-col">
                     <div className="wm-mega-block">
                       <div className="wm-mblock-header">
                         <div className="wm-cat-icon-wrap wm-cicon-purple">
                           <FaVideo />
                         </div>
                         <div>
-                          <h4 className="wm-mega-title">Creative & Consulting</h4>
-                          <span className="wm-mtitle-sub">Video, branding & strategy</span>
+                          <h4 className="wm-mega-title">Graphic & Video</h4>
+                          <span className="wm-mtitle-sub">Studio visual production</span>
                         </div>
                       </div>
                       <ul className="wm-mega-sublinks">
-                        <li><Link to="/services/video-and-graphic-development-company" onClick={() => setServicesDropdownOpen(false)}>Video & Graphic Design</Link></li>
-                        <li><Link to="/services/online-reputation-management-services-company" onClick={() => setServicesDropdownOpen(false)}>Online Reputation (ORM)</Link></li>
-                        <li><Link to="/services/business-development-consulting" onClick={() => setServicesDropdownOpen(false)}>Business Consulting</Link></li>
+                        <li><Link to="/video-and-graphic-development-company" onClick={() => setServicesDropdownOpen(false)}>Video & Graphic</Link></li>
+                        <li><Link to="/social-media-graphic-design-services-company" onClick={() => setServicesDropdownOpen(false)}>Social Media Graphic Design</Link></li>
+                        <li><Link to="/video-editing" onClick={() => setServicesDropdownOpen(false)}>Video Editing</Link></li>
+                        <li><Link to="/logo-design-services-company" onClick={() => setServicesDropdownOpen(false)}>Logo Design</Link></li>
+                        <li><Link to="/promotional-video-editing-services-company" onClick={() => setServicesDropdownOpen(false)}>Promotional Video</Link></li>
                       </ul>
                     </div>
 
-                    {/* DIBULL-STYLE SPOTLIGHT CARD */}
-                    <div className="wm-mega-spotlight-card">
-                      <div className="wm-mspot-tag">
-                        <FaBolt /> Instant Consultation
+                    <div className="wm-mega-block" style={{ marginTop: '16px' }}>
+                      <div className="wm-mblock-header">
+                        <div className="wm-cat-icon-wrap wm-cicon-blue">
+                          <FaStar />
+                        </div>
+                        <div>
+                          <h4 className="wm-mega-title">Outstanding Services</h4>
+                          <span className="wm-mtitle-sub">High-impact growth</span>
+                        </div>
                       </div>
-                      <h5>Ready to Scale Your Brand?</h5>
-                      <p>Talk with our Senior Solution Architect in 28 seconds & get an itemized scope.</p>
-                      <div className="wm-mspot-actions">
-                        <button
-                          type="button"
-                          className="wm-mspot-call-btn"
-                          onClick={() => {
-                            setServicesDropdownOpen(false);
-                            onOpenCallMe();
-                          }}
-                        >
-                          <FaPhoneAlt /> Call Me in 28 Sec
-                        </button>
-                        <button
-                          type="button"
-                          className="wm-mspot-quote-btn"
-                          onClick={() => {
-                            setServicesDropdownOpen(false);
-                            onOpenEnquiry();
-                          }}
-                        >
-                          Request Free Quote →
-                        </button>
-                      </div>
-                      <div className="wm-mspot-trust-row">
-                        <span><FaStar className="wm-star-gold" /> 4.9 Google Rating</span>
-                        <span><FaShieldAlt className="wm-shield-green" /> 100% NDA</span>
-                      </div>
+                      <ul className="wm-mega-sublinks">
+                        <li><Link to="/lead-generation-social-media-marketing-services-company" onClick={() => setServicesDropdownOpen(false)}>Lead Generation</Link></li>
+                        <li><Link to="/social-media-optimization-services-company" onClick={() => setServicesDropdownOpen(false)}>Social Media Optimization</Link></li>
+                        <li><Link to="/online-reputation-management-services-company" onClick={() => setServicesDropdownOpen(false)}>Online Reputation Management (ORM)</Link></li>
+                        <li><Link to="/digital-marketing-services-company" onClick={() => setServicesDropdownOpen(false)}>Digital Marketing</Link></li>
+                        <li><Link to="/facebook-marketing-services-company" onClick={() => setServicesDropdownOpen(false)}>Facebook Marketing</Link></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -254,21 +286,34 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
               onMouseEnter={() => setPackagesDropdownOpen(true)}
               onMouseLeave={() => setPackagesDropdownOpen(false)}
             >
-              <NavLink
-                to="/packages/seo-packages"
-                className={({ isActive }) => (isActive ? 'wm-nav-link wm-has-dropdown active' : 'wm-nav-link wm-has-dropdown')}
+              <span
+                role="button"
+                tabIndex={0}
+                className={`wm-nav-link wm-has-dropdown ${location.pathname.includes('package') || packagesDropdownOpen ? 'active' : ''}`}
+                style={{ cursor: 'pointer' }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setPackagesDropdownOpen((prev) => !prev);
+                  setServicesDropdownOpen(false);
+                  setClientsDropdownOpen(false);
+                  setInternationalDropdownOpen(false);
+                }}
               >
-                Packages <FaChevronDown className="wm-dropdown-arrow" />
-              </NavLink>
+                Packages <FaChevronDown className={`wm-dropdown-arrow ${packagesDropdownOpen ? 'wm-arrow-open' : ''}`} />
+              </span>
 
-              <div className={`wm-pkg-flyout-menu ${packagesDropdownOpen ? 'wm-pkg-flyout-visible' : ''}`}>
+              <div
+                className={`wm-pkg-flyout-menu ${packagesDropdownOpen ? 'wm-pkg-flyout-visible' : ''}`}
+                onClick={(e) => e.stopPropagation()}
+              >
                 {/* Left Column: Category Items */}
                 <div className="wm-pkg-left-menu">
                   <div
                     className={`wm-pkg-menu-item ${activePkgHover === 'seo' ? 'wm-pkg-item-active' : ''}`}
                     onMouseEnter={() => setActivePkgHover('seo')}
                   >
-                    <Link to="/packages/seo-packages" onClick={() => setPackagesDropdownOpen(false)}>
+                    <Link to="/seo-packages" onClick={() => setPackagesDropdownOpen(false)}>
                       <span>SEO Packages</span>
                       <FaChevronRight className="wm-pkg-item-arrow" />
                     </Link>
@@ -278,7 +323,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                     className={`wm-pkg-menu-item ${activePkgHover === 'ppc' ? 'wm-pkg-item-active' : ''}`}
                     onMouseEnter={() => setActivePkgHover('ppc')}
                   >
-                    <Link to="/packages/ppc-packages" onClick={() => setPackagesDropdownOpen(false)}>
+                    <Link to="/ppc-packages" onClick={() => setPackagesDropdownOpen(false)}>
                       <span>PPC Packages</span>
                     </Link>
                   </div>
@@ -287,7 +332,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                     className={`wm-pkg-menu-item ${activePkgHover === 'smm' ? 'wm-pkg-item-active' : ''}`}
                     onMouseEnter={() => setActivePkgHover('smm')}
                   >
-                    <Link to="/packages/smm-packages" onClick={() => setPackagesDropdownOpen(false)}>
+                    <Link to="/smm-packages" onClick={() => setPackagesDropdownOpen(false)}>
                       <span>SMM Packages</span>
                       <FaChevronRight className="wm-pkg-item-arrow" />
                     </Link>
@@ -297,7 +342,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                     className={`wm-pkg-menu-item ${activePkgHover === 'orm' ? 'wm-pkg-item-active' : ''}`}
                     onMouseEnter={() => setActivePkgHover('orm')}
                   >
-                    <Link to="/packages/orm-packages" onClick={() => setPackagesDropdownOpen(false)}>
+                    <Link to="/orm-packages" onClick={() => setPackagesDropdownOpen(false)}>
                       <span>ORM Packages</span>
                     </Link>
                   </div>
@@ -306,7 +351,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                     className={`wm-pkg-menu-item ${activePkgHover === 'logo' ? 'wm-pkg-item-active' : ''}`}
                     onMouseEnter={() => setActivePkgHover('logo')}
                   >
-                    <Link to="/packages/logo-design-packages" onClick={() => setPackagesDropdownOpen(false)}>
+                    <Link to="/logo-design-packages" onClick={() => setPackagesDropdownOpen(false)}>
                       <span>Logo Designing</span>
                     </Link>
                   </div>
@@ -315,7 +360,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                     className={`wm-pkg-menu-item ${activePkgHover === 'smo' ? 'wm-pkg-item-active' : ''}`}
                     onMouseEnter={() => setActivePkgHover('smo')}
                   >
-                    <Link to="/packages/smo-packages" onClick={() => setPackagesDropdownOpen(false)}>
+                    <Link to="/smo-packages" onClick={() => setPackagesDropdownOpen(false)}>
                       <span>SMO Packages</span>
                     </Link>
                   </div>
@@ -324,7 +369,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                     className={`wm-pkg-menu-item ${activePkgHover === 'maintenance' ? 'wm-pkg-item-active' : ''}`}
                     onMouseEnter={() => setActivePkgHover('maintenance')}
                   >
-                    <Link to="/packages/website-maintenance-packages" onClick={() => setPackagesDropdownOpen(false)}>
+                    <Link to="/website-maintenance-packages" onClick={() => setPackagesDropdownOpen(false)}>
                       <span>Website Maintenance</span>
                     </Link>
                   </div>
@@ -333,7 +378,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                     className={`wm-pkg-menu-item ${activePkgHover === 'website' ? 'wm-pkg-item-active' : ''}`}
                     onMouseEnter={() => setActivePkgHover('website')}
                   >
-                    <Link to="/packages/website-packages" onClick={() => setPackagesDropdownOpen(false)}>
+                    <Link to="/website-packages" onClick={() => setPackagesDropdownOpen(false)}>
                       <span>Website Packages</span>
                     </Link>
                   </div>
@@ -345,17 +390,17 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                     <div className="wm-pkg-sublist-block">
                       <div className="wm-pkg-sublist-hdr">
                         <h5>SEO Solutions</h5>
-                        <Link to="/packages/seo-packages" onClick={() => setPackagesDropdownOpen(false)}>
+                        <Link to="/seo-packages" onClick={() => setPackagesDropdownOpen(false)}>
                           All SEO Plans →
                         </Link>
                       </div>
                       <ul className="wm-pkg-sublinks">
-                        <li><Link to="/packages/local-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>Local SEO</Link></li>
-                        <li><Link to="/packages/offpage-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>OffPage SEO</Link></li>
-                        <li><Link to="/packages/onpage-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>On-Page SEO</Link></li>
-                        <li><Link to="/packages/technical-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>Technical SEO</Link></li>
-                        <li><Link to="/packages/white-label-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>White Label SEO Reseller</Link></li>
-                        <li><Link to="/packages/enterprise-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>Enterprise SEO Package</Link></li>
+                        <li><Link to="/local-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>Local SEO</Link></li>
+                        <li><Link to="/offpage-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>OffPage SEO</Link></li>
+                        <li><Link to="/onpage-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>On-Page SEO</Link></li>
+                        <li><Link to="/technical-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>Technical SEO</Link></li>
+                        <li><Link to="/white-label-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>White Label SEO Reseller</Link></li>
+                        <li><Link to="/enterprise-seo-packages" onClick={() => setPackagesDropdownOpen(false)}>Enterprise SEO Package</Link></li>
                       </ul>
                     </div>
                   )}
@@ -364,21 +409,28 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                     <div className="wm-pkg-sublist-block">
                       <div className="wm-pkg-sublist-hdr">
                         <h5>Social Media Plans</h5>
-                        <Link to="/packages/smm-packages" onClick={() => setPackagesDropdownOpen(false)}>
+                        <Link to="/smm-packages" onClick={() => setPackagesDropdownOpen(false)}>
                           All SMM Plans →
                         </Link>
                       </div>
                       <ul className="wm-pkg-sublinks">
-                        <li><Link to="/packages/facebook-marketing-packages" onClick={() => setPackagesDropdownOpen(false)}>Facebook Marketing</Link></li>
-                        <li><Link to="/packages/instagram-marketing-packages" onClick={() => setPackagesDropdownOpen(false)}>Instagram Marketing</Link></li>
-                        <li><Link to="/packages/linkedin-marketing-packages" onClick={() => setPackagesDropdownOpen(false)}>LinkedIn Marketing</Link></li>
-                        <li><Link to="/packages/youtube-marketing-packages" onClick={() => setPackagesDropdownOpen(false)}>YouTube Marketing</Link></li>
+                        <li><Link to="/facebook-marketing-packages" onClick={() => setPackagesDropdownOpen(false)}>Facebook Marketing</Link></li>
+                        <li><Link to="/instagram-marketing-packages" onClick={() => setPackagesDropdownOpen(false)}>Instagram Marketing</Link></li>
+                        <li><Link to="/linkedin-marketing-packages" onClick={() => setPackagesDropdownOpen(false)}>LinkedIn Marketing</Link></li>
+                        <li><Link to="/youtube-marketing-packages" onClick={() => setPackagesDropdownOpen(false)}>YouTube Marketing</Link></li>
                       </ul>
                     </div>
                   )}
 
                   {activePkgHover !== 'seo' && activePkgHover !== 'smm' && (
                     <div className="wm-pkg-sublist-block wm-pkg-spotlight-block">
+                      <div className="wm-pkg-spotlight-img-wrap">
+                        <img
+                          src="/onpagebenifts.jpg"
+                          alt="Transparent Packages & ROI Guarantee"
+                          className="wm-pkg-spotlight-img"
+                        />
+                      </div>
                       <h5>Transparent Packages & ROI Guarantee</h5>
                       <p>
                         All Webmok packages include 100% white-hat execution, dedicated project squad, and bi-weekly telemetry reporting.
@@ -387,7 +439,8 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                         <button
                           type="button"
                           className="wm-pkg-spot-call"
-                          onClick={() => {
+                          onClick={(e) => {
+                            e.stopPropagation();
                             setPackagesDropdownOpen(false);
                             onOpenCallMe();
                           }}
@@ -397,7 +450,8 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                         <button
                           type="button"
                           className="wm-pkg-spot-quote"
-                          onClick={() => {
+                          onClick={(e) => {
+                            e.stopPropagation();
                             setPackagesDropdownOpen(false);
                             onOpenEnquiry();
                           }}
@@ -418,13 +472,26 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
               onMouseLeave={() => setClientsDropdownOpen(false)}
             >
               <span
-                className={`wm-nav-link wm-has-dropdown ${location.pathname.includes('client') || location.pathname.includes('showcase') || location.pathname.includes('testimonial') ? 'active' : ''}`}
+                role="button"
+                tabIndex={0}
+                className={`wm-nav-link wm-has-dropdown ${location.pathname.includes('client') || location.pathname.includes('showcase') || location.pathname.includes('testimonial') || clientsDropdownOpen ? 'active' : ''}`}
                 style={{ cursor: 'pointer' }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setClientsDropdownOpen((prev) => !prev);
+                  setServicesDropdownOpen(false);
+                  setPackagesDropdownOpen(false);
+                  setInternationalDropdownOpen(false);
+                }}
               >
-                Clients <FaChevronDown className="wm-dropdown-arrow" />
+                Clients <FaChevronDown className={`wm-dropdown-arrow ${clientsDropdownOpen ? 'wm-arrow-open' : ''}`} />
               </span>
 
-              <div className={`wm-clients-dropdown-menu ${clientsDropdownOpen ? 'wm-clients-dropdown-visible' : ''}`}>
+              <div
+                className={`wm-clients-dropdown-menu ${clientsDropdownOpen ? 'wm-clients-dropdown-visible' : ''}`}
+                onClick={(e) => e.stopPropagation()}
+              >
                 <ul className="wm-clients-drop-list">
                   <li>
                     <Link to="/our-clients" onClick={() => setClientsDropdownOpen(false)}>
@@ -439,6 +506,11 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                   <li>
                     <Link to="/video-showcase" onClick={() => setClientsDropdownOpen(false)}>
                       Video Showcase
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/video-reviews" onClick={() => setClientsDropdownOpen(false)}>
+                      Video Reviews
                     </Link>
                   </li>
                   <li>
@@ -457,13 +529,26 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
               onMouseLeave={() => setInternationalDropdownOpen(false)}
             >
               <span
-                className={`wm-nav-link wm-has-dropdown ${location.pathname.startsWith('/international') ? 'active' : ''}`}
+                role="button"
+                tabIndex={0}
+                className={`wm-nav-link wm-has-dropdown ${location.pathname.startsWith('/international') || internationalDropdownOpen ? 'active' : ''}`}
                 style={{ cursor: 'pointer' }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setInternationalDropdownOpen((prev) => !prev);
+                  setServicesDropdownOpen(false);
+                  setPackagesDropdownOpen(false);
+                  setClientsDropdownOpen(false);
+                }}
               >
-                International <FaChevronDown className="wm-dropdown-arrow" />
+                International <FaChevronDown className={`wm-dropdown-arrow ${internationalDropdownOpen ? 'wm-arrow-open' : ''}`} />
               </span>
 
-              <div className={`wm-intl-mega-menu ${internationalDropdownOpen ? 'wm-intl-mega-visible' : ''}`}>
+              <div
+                className={`wm-intl-mega-menu ${internationalDropdownOpen ? 'wm-intl-mega-visible' : ''}`}
+                onClick={(e) => e.stopPropagation()}
+              >
                 <div className="wm-intl-mega-inner">
                   <div className="wm-intl-cols-grid">
                     {/* Column 1: UNITED STATES */}
@@ -473,11 +558,11 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                         <div className="wm-intl-hdr-bar"></div>
                       </div>
                       <ul className="wm-intl-links">
-                        <li><Link to="/international/miami-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Miami Digital Marketing</Link></li>
-                        <li><Link to="/international/florida-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Florida Digital Marketing</Link></li>
-                        <li><Link to="/international/seo-services-new-york" onClick={() => setInternationalDropdownOpen(false)}>SEO Services in New York</Link></li>
-                        <li><Link to="/international/los-angeles-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Los Angeles Digital Marketing</Link></li>
-                        <li><Link to="/international/san-francisco-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>San Francisco Digital Marketing</Link></li>
+                        <li><Link to="/miami-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Miami Digital Marketing</Link></li>
+                        <li><Link to="/florida-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Florida Digital Marketing</Link></li>
+                        <li><Link to="/seo-services-new-york" onClick={() => setInternationalDropdownOpen(false)}>SEO Services in New York</Link></li>
+                        <li><Link to="/los-angeles-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Los Angeles Digital Marketing</Link></li>
+                        <li><Link to="/san-francisco-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>San Francisco Digital Marketing</Link></li>
                       </ul>
                     </div>
 
@@ -488,9 +573,9 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                         <div className="wm-intl-hdr-bar"></div>
                       </div>
                       <ul className="wm-intl-links">
-                        <li><Link to="/international/canada-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Canada Digital Marketing</Link></li>
-                        <li><Link to="/international/toronto-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Toronto Digital Marketing</Link></li>
-                        <li><Link to="/international/ottawa-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Ottawa Digital Marketing</Link></li>
+                        <li><Link to="/canada-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Canada Digital Marketing</Link></li>
+                        <li><Link to="/toronto-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Toronto Digital Marketing</Link></li>
+                        <li><Link to="/ottawa-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Ottawa Digital Marketing</Link></li>
                       </ul>
                     </div>
 
@@ -501,9 +586,9 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                         <div className="wm-intl-hdr-bar"></div>
                       </div>
                       <ul className="wm-intl-links">
-                        <li><Link to="/international/europe-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Europe Digital Marketing</Link></li>
-                        <li><Link to="/international/uk-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>UK Digital Marketing</Link></li>
-                        <li><Link to="/international/london-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>London Digital Marketing</Link></li>
+                        <li><Link to="/europe-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Europe Digital Marketing</Link></li>
+                        <li><Link to="/uk-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>UK Digital Marketing</Link></li>
+                        <li><Link to="/london-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>London Digital Marketing</Link></li>
                       </ul>
                     </div>
 
@@ -514,17 +599,43 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                         <div className="wm-intl-hdr-bar"></div>
                       </div>
                       <ul className="wm-intl-links">
-                        <li><Link to="/international/dubai-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Dubai Digital Marketing</Link></li>
-                        <li><Link to="/international/south-africa-digital-marketing" className="wm-intl-highlight" onClick={() => setInternationalDropdownOpen(false)}>South Africa Digital Marketing</Link></li>
-                        <li><Link to="/international/australia-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Australia Digital Marketing</Link></li>
-                        <li><Link to="/international/melbourne-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Melbourne Digital Marketing</Link></li>
+                        <li><Link to="/dubai-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Dubai Digital Marketing</Link></li>
+                        <li><Link to="/south-africa-digital-marketing" className="wm-intl-highlight" onClick={() => setInternationalDropdownOpen(false)}>South Africa Digital Marketing</Link></li>
+                        <li><Link to="/australia-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Australia Digital Marketing</Link></li>
+                        <li><Link to="/melbourne-digital-marketing" onClick={() => setInternationalDropdownOpen(false)}>Melbourne Digital Marketing</Link></li>
                       </ul>
                     </div>
                   </div>
 
-                  {/* Bottom Bar matching screenshot */}
+                  {/* Bottom Bar with CTA buttons */}
                   <div className="wm-intl-bottom-bar">
-                    <p>Don't see your market? <strong>We work with brands worldwide.</strong></p>
+                    <div className="wm-intl-bottom-left">
+                      <p>Don't see your market? <strong>We deliver high-ROI digital solutions worldwide.</strong></p>
+                    </div>
+                    <div className="wm-intl-bottom-actions">
+                      <button
+                        type="button"
+                        className="wm-intl-call-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setInternationalDropdownOpen(false);
+                          onOpenCallMe();
+                        }}
+                      >
+                        <FaPhoneAlt /> Call Me in 28 Sec
+                      </button>
+                      <button
+                        type="button"
+                        className="wm-intl-quote-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setInternationalDropdownOpen(false);
+                          onOpenEnquiry();
+                        }}
+                      >
+                        Request Free Quote →
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -595,15 +706,99 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
               </div>
 
               {mobileServicesAccordion && (
-                <ul className="wm-mobile-sublist">
-                  <li><Link to="/services" onClick={() => setMobileMenuOpen(false)}>All Services Directory</Link></li>
-                  <li><Link to="/services/e-commerce-development" onClick={() => setMobileMenuOpen(false)}>E-Commerce Development</Link></li>
-                  <li><Link to="/services/application-development" onClick={() => setMobileMenuOpen(false)}>App Development</Link></li>
-                  <li><Link to="/services/web-designing-development-services-company" onClick={() => setMobileMenuOpen(false)}>Web Design & Development</Link></li>
-                  <li><Link to="/services/seo-services-company" onClick={() => setMobileMenuOpen(false)}>SEO Services</Link></li>
-                  <li><Link to="/services/ppc-services-company" onClick={() => setMobileMenuOpen(false)}>PPC Services</Link></li>
-                  <li><Link to="/services/video-and-graphic-development-company" onClick={() => setMobileMenuOpen(false)}>Video & Graphic Design</Link></li>
-                </ul>
+                <div className="wm-mobile-intl-wrap">
+                  <div className="wm-mobile-intl-group">
+                    <strong className="wm-m-intl-hdr">E-Commerce & Apps</strong>
+                    <ul className="wm-mobile-sublist">
+                      <li><Link to="/e-commerce-development-services-company" onClick={() => setMobileMenuOpen(false)}>E-Commerce Development</Link></li>
+                      <li><Link to="/application-development-services" onClick={() => setMobileMenuOpen(false)}>Application Development</Link></li>
+                      <li><Link to="/android-app-development" onClick={() => setMobileMenuOpen(false)}>Android App Development</Link></li>
+                      <li><Link to="/ios-app-development" onClick={() => setMobileMenuOpen(false)}>iOS App Development</Link></li>
+                      <li><Link to="/shopify-woocommerce" onClick={() => setMobileMenuOpen(false)}>Shopify & WooCommerce</Link></li>
+                      <li><Link to="/custom-marketplace" onClick={() => setMobileMenuOpen(false)}>Custom Marketplace</Link></li>
+                    </ul>
+                  </div>
+
+                  <div className="wm-mobile-intl-group">
+                    <strong className="wm-m-intl-hdr">SEO Optimization</strong>
+                    <ul className="wm-mobile-sublist">
+                      <li><Link to="/seo-services-company" onClick={() => setMobileMenuOpen(false)}>Search Engine Optimization Company</Link></li>
+                      <li><Link to="/hire-seo-expert" onClick={() => setMobileMenuOpen(false)}>Hire Dedicated SEO Expert</Link></li>
+                    </ul>
+                  </div>
+
+                  <div className="wm-mobile-intl-group">
+                    <strong className="wm-m-intl-hdr">Web Development</strong>
+                    <ul className="wm-mobile-sublist">
+                      <li><Link to="/word-press-development-services-company" onClick={() => setMobileMenuOpen(false)}>Wordpress Development</Link></li>
+                      <li><Link to="/web-designing-development-services-company" onClick={() => setMobileMenuOpen(false)}>Web design & Development</Link></li>
+                      <li><Link to="/e-commerce-development-services-company" onClick={() => setMobileMenuOpen(false)}>E-Commerce Development</Link></li>
+                      <li><Link to="/landing-page-development-services-company" onClick={() => setMobileMenuOpen(false)}>Landing Page Development</Link></li>
+                      <li><Link to="/website-development-and-design-services" onClick={() => setMobileMenuOpen(false)}>Website Development & Design Services</Link></li>
+                      <li><Link to="/application-development-services" onClick={() => setMobileMenuOpen(false)}>Application Development</Link></li>
+                    </ul>
+                  </div>
+
+                  <div className="wm-mobile-intl-group">
+                    <strong className="wm-m-intl-hdr">Digital Marketing</strong>
+                    <ul className="wm-mobile-sublist">
+                      <li><Link to="/seo-services-company" onClick={() => setMobileMenuOpen(false)}>Search Engine Optimization Company</Link></li>
+                      <li><Link to="/ppc-services-company" onClick={() => setMobileMenuOpen(false)}>PPC SERVICES</Link></li>
+                      <li><Link to="/content-marketing-services-company" onClick={() => setMobileMenuOpen(false)}>Content Marketing</Link></li>
+                      <li><Link to="/social-media-marketing" onClick={() => setMobileMenuOpen(false)}>Social Media Marketing</Link></li>
+                      <li><Link to="/mobile-marketing-services-company" onClick={() => setMobileMenuOpen(false)}>Mobile Marketing</Link></li>
+                      <li><Link to="/video-editing" onClick={() => setMobileMenuOpen(false)}>Video Editing</Link></li>
+                    </ul>
+                  </div>
+
+                  <div className="wm-mobile-intl-group">
+                    <strong className="wm-m-intl-hdr">Business Consultant</strong>
+                    <ul className="wm-mobile-sublist">
+                      <li><Link to="/business-development-consulting" onClick={() => setMobileMenuOpen(false)}>Business Development Consulting</Link></li>
+                    </ul>
+                  </div>
+
+                  <div className="wm-mobile-intl-group">
+                    <strong className="wm-m-intl-hdr">Graphic & Video</strong>
+                    <ul className="wm-mobile-sublist">
+                      <li><Link to="/video-and-graphic-development-company" onClick={() => setMobileMenuOpen(false)}>Video & Graphic</Link></li>
+                      <li><Link to="/social-media-graphic-design-services-company" onClick={() => setMobileMenuOpen(false)}>Social Media Graphic Design</Link></li>
+                      <li><Link to="/video-editing" onClick={() => setMobileMenuOpen(false)}>Video Editing</Link></li>
+                      <li><Link to="/logo-design-services-company" onClick={() => setMobileMenuOpen(false)}>Logo Design</Link></li>
+                      <li><Link to="/promotional-video-editing-services-company" onClick={() => setMobileMenuOpen(false)}>Promotional Video</Link></li>
+                    </ul>
+                  </div>
+
+                  <div className="wm-mobile-intl-group">
+                    <strong className="wm-m-intl-hdr">Outstanding Services</strong>
+                    <ul className="wm-mobile-sublist">
+                      <li><Link to="/lead-generation-social-media-marketing-services-company" onClick={() => setMobileMenuOpen(false)}>Lead Generation</Link></li>
+                      <li><Link to="/social-media-optimization-services-company" onClick={() => setMobileMenuOpen(false)}>Social Media Optimization</Link></li>
+                      <li><Link to="/online-reputation-management-services-company" onClick={() => setMobileMenuOpen(false)}>Online Reputation Management (ORM)</Link></li>
+                      <li><Link to="/digital-marketing-services-company" onClick={() => setMobileMenuOpen(false)}>Digital Marketing</Link></li>
+                      <li><Link to="/facebook-marketing-services-company" onClick={() => setMobileMenuOpen(false)}>Facebook Marketing</Link></li>
+                    </ul>
+                  </div>
+
+                  <div style={{ padding: '8px 0' }}>
+                    <Link
+                      to="/services"
+                      onClick={() => setMobileMenuOpen(false)}
+                      style={{
+                        display: 'block',
+                        fontWeight: 700,
+                        color: '#0b4f8a',
+                        textDecoration: 'none',
+                        padding: '6px 12px',
+                        background: '#e0f2fe',
+                        borderRadius: '6px',
+                        textAlign: 'center'
+                      }}
+                    >
+                      View All Services Directory →
+                    </Link>
+                  </div>
+                </div>
               )}
             </li>
 
@@ -619,24 +814,24 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
 
               {mobilePackagesAccordion && (
                 <ul className="wm-mobile-sublist">
-                  <li><Link to="/packages/seo-packages" onClick={() => setMobileMenuOpen(false)}>SEO Packages (All)</Link></li>
-                  <li><Link to="/packages/local-seo-packages" onClick={() => setMobileMenuOpen(false)}>Local SEO Packages</Link></li>
-                  <li><Link to="/packages/offpage-seo-packages" onClick={() => setMobileMenuOpen(false)}>Off-Page SEO Packages</Link></li>
-                  <li><Link to="/packages/onpage-seo-packages" onClick={() => setMobileMenuOpen(false)}>On-Page SEO Packages</Link></li>
-                  <li><Link to="/packages/technical-seo-packages" onClick={() => setMobileMenuOpen(false)}>Technical SEO Packages</Link></li>
-                  <li><Link to="/packages/white-label-seo-packages" onClick={() => setMobileMenuOpen(false)}>White Label SEO Packages</Link></li>
-                  <li><Link to="/packages/enterprise-seo-packages" onClick={() => setMobileMenuOpen(false)}>Enterprise SEO Packages</Link></li>
-                  <li><Link to="/packages/smm-packages" onClick={() => setMobileMenuOpen(false)}>SMM Packages (All)</Link></li>
-                  <li><Link to="/packages/facebook-marketing-packages" onClick={() => setMobileMenuOpen(false)}>Facebook Marketing</Link></li>
-                  <li><Link to="/packages/instagram-marketing-packages" onClick={() => setMobileMenuOpen(false)}>Instagram Marketing</Link></li>
-                  <li><Link to="/packages/linkedin-marketing-packages" onClick={() => setMobileMenuOpen(false)}>LinkedIn Marketing</Link></li>
-                  <li><Link to="/packages/youtube-marketing-packages" onClick={() => setMobileMenuOpen(false)}>YouTube Marketing</Link></li>
-                  <li><Link to="/packages/ppc-packages" onClick={() => setMobileMenuOpen(false)}>PPC Packages</Link></li>
-                  <li><Link to="/packages/orm-packages" onClick={() => setMobileMenuOpen(false)}>ORM Packages</Link></li>
-                  <li><Link to="/packages/logo-design-packages" onClick={() => setMobileMenuOpen(false)}>Logo Designing</Link></li>
-                  <li><Link to="/packages/smo-packages" onClick={() => setMobileMenuOpen(false)}>SMO Packages</Link></li>
-                  <li><Link to="/packages/website-maintenance-packages" onClick={() => setMobileMenuOpen(false)}>Website Maintenance</Link></li>
-                  <li><Link to="/packages/website-packages" onClick={() => setMobileMenuOpen(false)}>Website Packages</Link></li>
+                  <li><Link to="/seo-packages" onClick={() => setMobileMenuOpen(false)}>SEO Packages (All)</Link></li>
+                  <li><Link to="/local-seo-packages" onClick={() => setMobileMenuOpen(false)}>Local SEO Packages</Link></li>
+                  <li><Link to="/offpage-seo-packages" onClick={() => setMobileMenuOpen(false)}>Off-Page SEO Packages</Link></li>
+                  <li><Link to="/onpage-seo-packages" onClick={() => setMobileMenuOpen(false)}>On-Page SEO Packages</Link></li>
+                  <li><Link to="/technical-seo-packages" onClick={() => setMobileMenuOpen(false)}>Technical SEO Packages</Link></li>
+                  <li><Link to="/white-label-seo-packages" onClick={() => setMobileMenuOpen(false)}>White Label SEO Packages</Link></li>
+                  <li><Link to="/enterprise-seo-packages" onClick={() => setMobileMenuOpen(false)}>Enterprise SEO Packages</Link></li>
+                  <li><Link to="/smm-packages" onClick={() => setMobileMenuOpen(false)}>SMM Packages (All)</Link></li>
+                  <li><Link to="/facebook-marketing-packages" onClick={() => setMobileMenuOpen(false)}>Facebook Marketing</Link></li>
+                  <li><Link to="/instagram-marketing-packages" onClick={() => setMobileMenuOpen(false)}>Instagram Marketing</Link></li>
+                  <li><Link to="/linkedin-marketing-packages" onClick={() => setMobileMenuOpen(false)}>LinkedIn Marketing</Link></li>
+                  <li><Link to="/youtube-marketing-packages" onClick={() => setMobileMenuOpen(false)}>YouTube Marketing</Link></li>
+                  <li><Link to="/ppc-packages" onClick={() => setMobileMenuOpen(false)}>PPC Packages</Link></li>
+                  <li><Link to="/orm-packages" onClick={() => setMobileMenuOpen(false)}>ORM Packages</Link></li>
+                  <li><Link to="/logo-design-packages" onClick={() => setMobileMenuOpen(false)}>Logo Designing</Link></li>
+                  <li><Link to="/smo-packages" onClick={() => setMobileMenuOpen(false)}>SMO Packages</Link></li>
+                  <li><Link to="/website-maintenance-packages" onClick={() => setMobileMenuOpen(false)}>Website Maintenance</Link></li>
+                  <li><Link to="/website-packages" onClick={() => setMobileMenuOpen(false)}>Website Packages</Link></li>
                 </ul>
               )}
             </li>
@@ -656,6 +851,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                   <li><Link to="/our-clients" onClick={() => setMobileMenuOpen(false)}>Our Clients</Link></li>
                   <li><Link to="/creative-showcase" onClick={() => setMobileMenuOpen(false)}>Creative Showcase</Link></li>
                   <li><Link to="/video-showcase" onClick={() => setMobileMenuOpen(false)}>Video Showcase</Link></li>
+                  <li><Link to="/video-reviews" onClick={() => setMobileMenuOpen(false)}>Video Reviews</Link></li>
                   <li><Link to="/testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</Link></li>
                 </ul>
               )}
@@ -676,39 +872,39 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                   <div className="wm-mobile-intl-group">
                     <strong className="wm-m-intl-hdr">UNITED STATES</strong>
                     <ul className="wm-mobile-sublist">
-                      <li><Link to="/international/miami-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Miami Digital Marketing</Link></li>
-                      <li><Link to="/international/florida-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Florida Digital Marketing</Link></li>
-                      <li><Link to="/international/seo-services-new-york" onClick={() => setMobileMenuOpen(false)}>SEO Services in New York</Link></li>
-                      <li><Link to="/international/los-angeles-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Los Angeles Digital Marketing</Link></li>
-                      <li><Link to="/international/san-francisco-digital-marketing" onClick={() => setMobileMenuOpen(false)}>San Francisco Digital Marketing</Link></li>
+                      <li><Link to="/miami-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Miami Digital Marketing</Link></li>
+                      <li><Link to="/florida-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Florida Digital Marketing</Link></li>
+                      <li><Link to="/seo-services-new-york" onClick={() => setMobileMenuOpen(false)}>SEO Services in New York</Link></li>
+                      <li><Link to="/los-angeles-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Los Angeles Digital Marketing</Link></li>
+                      <li><Link to="/san-francisco-digital-marketing" onClick={() => setMobileMenuOpen(false)}>San Francisco Digital Marketing</Link></li>
                     </ul>
                   </div>
 
                   <div className="wm-mobile-intl-group">
                     <strong className="wm-m-intl-hdr">CANADA</strong>
                     <ul className="wm-mobile-sublist">
-                      <li><Link to="/international/canada-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Canada Digital Marketing</Link></li>
-                      <li><Link to="/international/toronto-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Toronto Digital Marketing</Link></li>
-                      <li><Link to="/international/ottawa-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Ottawa Digital Marketing</Link></li>
+                      <li><Link to="/canada-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Canada Digital Marketing</Link></li>
+                      <li><Link to="/toronto-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Toronto Digital Marketing</Link></li>
+                      <li><Link to="/ottawa-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Ottawa Digital Marketing</Link></li>
                     </ul>
                   </div>
 
                   <div className="wm-mobile-intl-group">
                     <strong className="wm-m-intl-hdr">EUROPE & UK</strong>
                     <ul className="wm-mobile-sublist">
-                      <li><Link to="/international/europe-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Europe Digital Marketing</Link></li>
-                      <li><Link to="/international/uk-digital-marketing" onClick={() => setMobileMenuOpen(false)}>UK Digital Marketing</Link></li>
-                      <li><Link to="/international/london-digital-marketing" onClick={() => setMobileMenuOpen(false)}>London Digital Marketing</Link></li>
+                      <li><Link to="/europe-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Europe Digital Marketing</Link></li>
+                      <li><Link to="/uk-digital-marketing" onClick={() => setMobileMenuOpen(false)}>UK Digital Marketing</Link></li>
+                      <li><Link to="/london-digital-marketing" onClick={() => setMobileMenuOpen(false)}>London Digital Marketing</Link></li>
                     </ul>
                   </div>
 
                   <div className="wm-mobile-intl-group">
                     <strong className="wm-m-intl-hdr">MIDDLE EAST, AFRICA & APAC</strong>
                     <ul className="wm-mobile-sublist">
-                      <li><Link to="/international/dubai-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Dubai Digital Marketing</Link></li>
-                      <li><Link to="/international/south-africa-digital-marketing" onClick={() => setMobileMenuOpen(false)}>South Africa Digital Marketing</Link></li>
-                      <li><Link to="/international/australia-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Australia Digital Marketing</Link></li>
-                      <li><Link to="/international/melbourne-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Melbourne Digital Marketing</Link></li>
+                      <li><Link to="/dubai-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Dubai Digital Marketing</Link></li>
+                      <li><Link to="/south-africa-digital-marketing" onClick={() => setMobileMenuOpen(false)}>South Africa Digital Marketing</Link></li>
+                      <li><Link to="/australia-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Australia Digital Marketing</Link></li>
+                      <li><Link to="/melbourne-digital-marketing" onClick={() => setMobileMenuOpen(false)}>Melbourne Digital Marketing</Link></li>
                     </ul>
                   </div>
                 </div>

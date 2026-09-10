@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FaArrowRight,
@@ -14,6 +14,7 @@ import {
   FaAward
 } from 'react-icons/fa';
 import './CreativeShowcase.css';
+import { resolveMediaUrl, handleImageError } from '../../utils/mediaUrl';
 
 const CreativeShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
   const [activeTab, setActiveTab] = useState('all');
@@ -168,6 +169,21 @@ const CreativeShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
     }
   ];
 
+  const [items, setItems] = useState(showcaseItems);
+
+  useEffect(() => {
+    fetch('http://localhost:5005/api/creative-showcase')
+      .then(res => res.json())
+      .then(json => {
+        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+          setItems(json.data);
+        }
+      })
+      .catch(err => {
+        console.warn('Notice: Creative showcase live API offline, using defaults:', err.message);
+      });
+  }, []);
+
   const categories = [
     { id: 'all', label: 'All Creatives' },
     { id: 'packaging', label: 'Packaging & Print' },
@@ -178,8 +194,8 @@ const CreativeShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
   ];
 
   const filteredItems = activeTab === 'all'
-    ? showcaseItems
-    : showcaseItems.filter(item => item.category === activeTab);
+    ? items
+    : items.filter(item => item.category === activeTab);
 
   return (
     <div className="wm-creative-page-root">
@@ -319,9 +335,14 @@ const CreativeShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
           {/* Gallery Grid */}
           <div className="wm-cgallery-grid">
             {filteredItems.map(item => (
-              <div key={item.id} className="wm-citem-card">
+              <div key={item._id || item.id} className="wm-citem-card">
                 <div className="wm-citem-img-wrap" onClick={() => setPreviewItem(item)}>
-                  <img src={item.image} alt={item.title} className="wm-citem-img" />
+                  <img
+                    src={resolveMediaUrl(item.image)}
+                    alt={item.title}
+                    className="wm-citem-img"
+                    onError={(e) => handleImageError(e)}
+                  />
                   <div className="wm-citem-hover-mask">
                     <FaSearchPlus className="wm-zoom-icon" />
                     <span>View Image</span>
@@ -378,7 +399,11 @@ const CreativeShowcase = ({ onOpenCallMe, onOpenEnquiry }) => {
               <FaTimes />
             </button>
             <div className="wm-cmodal-img-col">
-              <img src={previewItem.image} alt={previewItem.title} />
+              <img
+                src={resolveMediaUrl(previewItem.image)}
+                alt={previewItem.title}
+                onError={(e) => handleImageError(e)}
+              />
             </div>
             
           </div>
