@@ -74,6 +74,54 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
 
   return (
     <header className={`wm-navbar-header ${scrolled ? 'wm-header-scrolled' : ''}`}>
+      {/* Top Announcement / Alert Bar */}
+      <div className="wm-topbar">
+        <div className="wm-topbar-container">
+          <div className="wm-topbar-left">
+            <span className="wm-topbar-alert-tag">Alert:</span>
+            <div className="wm-topbar-marquee-wrap">
+              <div className="wm-topbar-marquee-track">
+                <div className="wm-topbar-marquee-group">
+                  <span className="wm-topbar-gradient-text">
+                    WEBMOK does not offer any jobs via WhatsApp. Such messages are fraudulent. Apply only through{' '}
+                    <Link to="/career" className="wm-topbar-alert-link">Careers</Link>.
+                  </span>
+                  <span className="wm-topbar-dot">✦</span>
+                  <span className="wm-topbar-gradient-text">
+                    Beware of fake job offers & task fraud. WEBMOK never demands money for interviews or employment.
+                  </span>
+                  <span className="wm-topbar-dot">✦</span>
+                </div>
+                <div className="wm-topbar-marquee-group" aria-hidden="true">
+                  <span className="wm-topbar-gradient-text">
+                    WEBMOK does not offer any jobs via WhatsApp. Such messages are fraudulent. Apply only through{' '}
+                    <Link to="/career" className="wm-topbar-alert-link">Careers</Link>.
+                  </span>
+                  <span className="wm-topbar-dot">✦</span>
+                  <span className="wm-topbar-gradient-text">
+                    Beware of fake job offers & task fraud. WEBMOK never demands money for interviews or employment.
+                  </span>
+                  <span className="wm-topbar-dot">✦</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="wm-topbar-right">
+            <Link to="/contact-us" className="wm-topbar-link">Contact</Link>
+            <span className="wm-topbar-sep">|</span>
+            <Link to="/career" className="wm-topbar-link">Career</Link>
+            <span className="wm-topbar-sep">|</span>
+            <Link to="/blogs" className="wm-topbar-link">Blog</Link>
+            <span className="wm-topbar-sep">|</span>
+            <a href="tel:+918684031003" className="wm-topbar-phone">
+              <FaPhoneAlt className="wm-topbar-phone-icon" />
+              <span>+91 8684031003</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="wm-nav-container">
         {/* Brand Logo */}
         <Link to="/" className="wm-brand-logo">

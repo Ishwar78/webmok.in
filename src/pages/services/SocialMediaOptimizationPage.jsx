@@ -227,13 +227,70 @@ const SocialMediaOptimizationPage = ({ onOpenCallMe, onOpenEnquiry }) => {
 
   return (
     <div className="socialmediaoptimizationpage-root wm-sp-root">
-      {/* 1. HERO SECTION WITH COMMON LEAD FORM */}
-      <HeroLeadForm
-        badge="Organic Social Architecture"
-        title="Data-Driven Social Media Optimization (SMO) Agency in India"
-        subtitle="Transform social profiles into high-trust brand assets. We optimize your profiles, hashtag taxonomies, bio conversion funnels, and organic engagement algorithms across Instagram, LinkedIn, Facebook, and YouTube."
-        stats={stats}
-      />
+      {/* 1. Hero Section */}
+      <section className="wm-sp-hero">
+        <div className="wm-sp-container">
+          <div className="wm-sp-hero-two-col">
+            <div className="wm-sp-hero-col-left">
+              <div className="wm-sp-breadcrumb">
+                <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>Social Media Optimization</span>
+              </div>
+              <span className="wm-sp-hero-pill">
+                <FaAward /> Organic Social Growth & Authority · #SMO Services
+              </span>
+              <h1 className="wm-sp-hero-title">
+                Data-Driven <span>Social Media Optimization</span> (SMO) Agency
+              </h1>
+              <p className="wm-sp-hero-lead">
+                Transform social profiles into high-trust brand assets. We optimize your profiles, hashtag taxonomies, bio conversion funnels, and organic engagement algorithms across Instagram, LinkedIn, Facebook, and YouTube.
+              </p>
+              <div className="wm-sp-hero-cta-group">
+                <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
+                  Get Free Custom Quote <FaArrowRight />
+                </button>
+                <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
+                  <FaPhoneAlt /> Call Me in 28 Seconds
+                </button>
+              </div>
+
+              {/* 4-Metric Performance Bar */}
+              <div className="wm-seost">
+                {stats.map((st, i) => (
+                  <div key={i} className="wm-seost__i">
+                    <p className="wm-seost__n">{st.num}</p>
+                    <p className="wm-seost__l">{st.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="wm-sp-hero-col-right">
+              <HeroLeadForm
+                pageName="Social Media Optimization"
+                source="SMO Hero Section"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Rating Scorecard Badge */}
+      <div className="wm-dsm-rating-wrap">
+        <div className="wm-sp-container">
+          <div className="wm-dsm-rating">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* 2. THREE-COLUMN ARCHITECTURE / STRATEGY */}
       <div className="wm-sp-body">

@@ -42,6 +42,14 @@ const serviceSchema = new mongoose.Schema(
       required: true,
       default: ''
     },
+    videoUrl: {
+      type: String,
+      default: ''
+    },
+    videoBadge: {
+      type: String,
+      default: 'Interactive Showcase'
+    },
     tags: {
       type: [String],
       default: []

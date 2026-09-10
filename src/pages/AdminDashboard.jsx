@@ -62,9 +62,11 @@ import {
   FaAd,
   FaHome,
   FaQuestionCircle,
-  FaArrowRight
+  FaArrowRight,
+  FaPlayCircle
 } from 'react-icons/fa';
 import './AdminDashboard.css';
+import { resolveMediaUrl } from '../utils/mediaUrl';
 
 
 const defaultAboutData = {
@@ -534,6 +536,7 @@ const AdminDashboard = () => {
   const [servicesFeedback, setServicesFeedback] = useState(null);
   const [servicePreviewTab, setServicePreviewTab] = useState('home'); // 'home' | 'explore'
   const [isAddServiceModalOpen, setIsAddServiceModalOpen] = useState(false);
+  const [serviceVideoUploading, setServiceVideoUploading] = useState(false);
   const [newServiceData, setNewServiceData] = useState({
     title: '',
     slug: '',
@@ -549,6 +552,8 @@ const AdminDashboard = () => {
     features: 'Tailored Strategy\nEnd-to-End Implementation\n24/7 Monitoring',
     techStack: 'React.js, Node.js, Cloud APIs',
     timeline: '2 to 4 Weeks Delivery',
+    videoUrl: '/Home-Hero.mp4',
+    videoBadge: 'Interactive Showcase',
     status: 'Active'
   });
 
@@ -1588,6 +1593,8 @@ const AdminDashboard = () => {
     icon: 'FaLaptopCode',
     metric: '0.8s Avg Speed',
     tag: 'Custom Web Apps',
+    videoUrl: '/Home-Hero.mp4', // default svc video
+    videoBadge: 'Live Web Demo',
     desc: 'Bespoke web applications built for high conversion.',
     tags: ['React.js', 'Next.js'],
     subFeatures: ['Custom UI/UX', 'Speed Optimization'],
@@ -1677,6 +1684,43 @@ const AdminDashboard = () => {
     }));
   };
 
+  const handleServiceVideoUpload = async (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append('video', file);
+
+    try {
+      setServiceVideoUploading(true);
+      setServicesFeedback(null);
+      const res = await fetch(`${API_BASE}/services/upload-video`, {
+        method: 'POST',
+        body: formData
+      });
+      const json = await res.json();
+      if (res.ok && json.success && json.videoUrl) {
+        handleUpdateServiceField('videoUrl', json.videoUrl);
+        setServicesFeedback({
+          type: 'success',
+          message: `Video "${file.name}" uploaded successfully! Remember to click "Save Service Changes" below.`
+        });
+      } else {
+        setServicesFeedback({
+          type: 'error',
+          message: json.message || 'Video upload failed'
+        });
+      }
+    } catch (err) {
+      setServicesFeedback({
+        type: 'error',
+        message: err.message || 'Error uploading service video'
+      });
+    } finally {
+      setServiceVideoUploading(false);
+    }
+  };
+
   const handleSaveCurrentService = async (e) => {
     if (e) e.preventDefault();
     if (!currentService) return;
@@ -1762,6 +1806,8 @@ const AdminDashboard = () => {
         techStack: typeof newServiceData.techStack === 'string' ? newServiceData.techStack.split(',').map(s => s.trim()).filter(Boolean) : newServiceData.techStack,
         timeline: newServiceData.timeline,
         status: newServiceData.status || 'Active',
+        videoUrl: newServiceData.videoUrl || '/Home-Hero.mp4',
+        videoBadge: newServiceData.videoBadge || 'Interactive Showcase',
         faqs: [
           { q: 'What is included in this service?', a: 'Complete end-to-end design, implementation, and dedicated support.' }
         ]
@@ -4206,7 +4252,6 @@ const AdminDashboard = () => {
                         ))}
                       </div>
                     </div>
-
                     {/* Tags */}
                     <div className="wm-csfield" style={{ marginTop: '16px' }}>
                       <label>Technology / Category Chips (Comma Separated)</label>
@@ -4216,6 +4261,138 @@ const AdminDashboard = () => {
                         onChange={(e) => handleUpdateServiceField('tags', e.target.value.split(',').map(s => s.trim()).filter(Boolean))}
                         placeholder="e.g. React.js, WordPress, Next.js, Custom UI/UX"
                       />
+                    </div>
+
+                    {/* Home Page Video Showcase Settings */}
+                    <div className="wm-svc-video-box" style={{ marginTop: '22px', padding: '18px', background: 'rgba(0, 212, 255, 0.05)', borderRadius: '14px', border: '1.5px solid rgba(0, 212, 255, 0.35)' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <FaPlayCircle style={{ color: '#00d4ff', fontSize: '20px' }} />
+                          <h4 style={{ margin: 0, color: '#f8fafc', fontSize: '15px', fontWeight: '700' }}>
+                            Home Page Course/Service Video Showcase Settings
+                          </h4>
+                        </div>
+                        <span style={{ fontSize: '12px', color: '#38bdf8', background: 'rgba(56, 189, 248, 0.12)', padding: '3px 10px', borderRadius: '12px', fontWeight: 600 }}>
+                          "What We Offer" Section
+                        </span>
+                      </div>
+
+                      <div className="wm-out-fields-grid">
+                        <div className="wm-csfield">
+                          <label>Video Badge Label (e.g. Live Web Demo, Live Student Review)</label>
+                          <input
+                            type="text"
+                            value={currentService.videoBadge || ''}
+                            onChange={(e) => handleUpdateServiceField('videoBadge', e.target.value)}
+                            placeholder="e.g. Live Web Demo / SEO Ranking Proof / Student Review"
+                          />
+                        </div>
+
+                        <div className="wm-csfield">
+                          <label>Video File URL / Path</label>
+                          <input
+                            type="text"
+                            value={currentService.videoUrl || ''}
+                            onChange={(e) => handleUpdateServiceField('videoUrl', e.target.value)}
+                            placeholder="e.g. /Home-Hero.mp4 or /TM004-ypZUa7vp.mp4 or direct link"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Video Quick Selection & Upload */}
+                      <div style={{ marginTop: '14px', display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
+                        <label
+                          className="wm-out-btn-reset-all"
+                          style={{
+                            cursor: 'pointer',
+                            background: 'linear-gradient(135deg, #0284c7, #00d4ff)',
+                            border: 'none',
+                            color: '#ffffff',
+                            padding: '10px 18px',
+                            borderRadius: '8px',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            fontSize: '13px',
+                            fontWeight: '700',
+                            boxShadow: '0 4px 14px rgba(0, 212, 255, 0.35)'
+                          }}
+                        >
+                          <FaUpload /> {serviceVideoUploading ? 'Uploading Video...' : 'Upload Video File (.mp4)'}
+                          <input
+                            type="file"
+                            accept="video/mp4,video/webm,video/ogg,video/quicktime,video/mov,video/m4v"
+                            style={{ display: 'none' }}
+                            onChange={handleServiceVideoUpload}
+                            disabled={serviceVideoUploading}
+                          />
+                        </label>
+
+                        {/* Quick Presets for bundled videos */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                          <span style={{ fontSize: '12px', color: '#94a3b8', fontWeight: 600 }}>Quick Pick:</span>
+                          {[
+                            { label: 'Web Hero', url: '/Home-Hero.mp4', badge: 'Live Web Demo' },
+                            { label: 'Mobile App', url: '/hh3-CAsds3iE.mp4', badge: 'Mobile App Showcase' },
+                            { label: 'SEO Proof', url: '/hh2-CH6clGIc.mp4', badge: 'SEO & Ranking Proof' },
+                            { label: 'PPC Campaign', url: '/hh4-a6dUAa-8.mp4', badge: 'High-ROAS Ad Campaign' },
+                            { label: 'E-Comm', url: '/bhuwan.mp4', badge: 'E-Commerce Store' },
+                            { label: 'Social Reel', url: '/TM0016-CLpL79Mu.mp4', badge: 'Social Growth Reel' },
+                            { label: 'Student Review', url: '/TM004-ypZUa7vp.mp4', badge: 'Live Student Review' }
+                          ].map((preset, pi) => (
+                            <button
+                              key={pi}
+                              type="button"
+                              onClick={() => {
+                                handleUpdateServiceField('videoUrl', preset.url);
+                                handleUpdateServiceField('videoBadge', preset.badge);
+                              }}
+                              style={{
+                                background: currentService.videoUrl === preset.url ? 'rgba(0, 212, 255, 0.25)' : 'rgba(255, 255, 255, 0.06)',
+                                border: currentService.videoUrl === preset.url ? '1.5px solid #00d4ff' : '1px solid rgba(255, 255, 255, 0.12)',
+                                color: currentService.videoUrl === preset.url ? '#00d4ff' : '#cbd5e1',
+                                padding: '5px 11px',
+                                borderRadius: '6px',
+                                fontSize: '11px',
+                                fontWeight: 600,
+                                cursor: 'pointer',
+                                transition: 'all 0.2s'
+                              }}
+                            >
+                              {preset.label}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Video Live Preview */}
+                      {currentService.videoUrl && (
+                        <div style={{ marginTop: '16px', display: 'flex', alignItems: 'flex-start', gap: '16px', flexWrap: 'wrap', background: 'rgba(0, 0, 0, 0.35)', padding: '14px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)' }}>
+                          <div style={{ maxWidth: '320px', width: '100%', borderRadius: '10px', overflow: 'hidden', border: '1px solid rgba(0, 212, 255, 0.35)', background: '#000', boxShadow: '0 8px 24px rgba(0,0,0,0.5)' }}>
+                            <video
+                              key={currentService.videoUrl}
+                              src={resolveMediaUrl(currentService.videoUrl)}
+                              controls
+                              playsInline
+                              style={{ width: '100%', maxHeight: '220px', display: 'block', objectFit: 'contain' }}
+                            />
+                          </div>
+                          <div style={{ fontSize: '12.5px', color: '#94a3b8', lineHeight: '1.7', flex: 1, minWidth: '220px' }}>
+                            <div style={{ color: '#10b981', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px' }}>
+                              <FaCheckCircle /> Video preview ready
+                            </div>
+                            <div style={{ marginTop: '4px' }}>
+                              <strong>File Path:</strong> <code style={{ color: '#38bdf8', background: 'rgba(56, 189, 248, 0.1)', padding: '2px 6px', borderRadius: '4px' }}>{currentService.videoUrl}</code>
+                            </div>
+                            <div>
+                              <strong>Badge Text:</strong> <code style={{ color: '#fbbf24', background: 'rgba(251, 191, 36, 0.1)', padding: '2px 6px', borderRadius: '4px' }}>{currentService.videoBadge || 'Interactive Showcase'}</code>
+                            </div>
+                            <p style={{ margin: '8px 0 0 0', fontSize: '11.5px', color: '#64748b' }}>
+                              Click "Save Changes" below to publish this video for "{currentService.title}" on the Home Page.
+                            </p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -4580,6 +4757,27 @@ const AdminDashboard = () => {
                         value={newServiceData.subFeatures}
                         onChange={(e) => setNewServiceData({ ...newServiceData, subFeatures: e.target.value })}
                       />
+                    </div>
+
+                    <div className="wm-out-fields-grid" style={{ marginTop: '12px' }}>
+                      <div className="wm-csfield">
+                        <label>Home Video Badge Label</label>
+                        <input
+                          type="text"
+                          value={newServiceData.videoBadge || ''}
+                          onChange={(e) => setNewServiceData({ ...newServiceData, videoBadge: e.target.value })}
+                          placeholder="e.g. Live Web Demo / Student Review"
+                        />
+                      </div>
+                      <div className="wm-csfield">
+                        <label>Home Video URL / Path</label>
+                        <input
+                          type="text"
+                          value={newServiceData.videoUrl || ''}
+                          onChange={(e) => setNewServiceData({ ...newServiceData, videoUrl: e.target.value })}
+                          placeholder="e.g. /Home-Hero.mp4 or /TM004-ypZUa7vp.mp4"
+                        />
+                      </div>
                     </div>
 
                     <div className="wm-blog-modal-footer" style={{ marginTop: '20px' }}>

@@ -227,13 +227,70 @@ const SocialMediaGraphicDesignPage = ({ onOpenCallMe, onOpenEnquiry }) => {
 
   return (
     <div className="socialmediagraphicdesignpage-root wm-sp-root">
-      {/* 1. HERO SECTION WITH COMMON LEAD FORM */}
-      <HeroLeadForm
-        badge="High-Impact Visual Studio"
-        title="High-Converting Social Media Graphic Design Studio in India"
-        subtitle="Stop the scroll and elevate your brand aesthetic. We craft stunning Instagram carousels, high-CTR performance ad creatives, branded story templates, and infographic decks designed for maximum engagement."
-        stats={stats}
-      />
+      {/* 1. Hero Section */}
+      <section className="wm-sp-hero">
+        <div className="wm-sp-container">
+          <div className="wm-sp-hero-two-col">
+            <div className="wm-sp-hero-col-left">
+              <div className="wm-sp-breadcrumb">
+                <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>Social Media Graphic Design</span>
+              </div>
+              <span className="wm-sp-hero-pill">
+                <FaAward /> Scroll-Stopping Creative Visuals · #Viral Graphics
+              </span>
+              <h1 className="wm-sp-hero-title">
+                High-Converting <span>Social Media Graphic Design</span> Agency
+              </h1>
+              <p className="wm-sp-hero-lead">
+                Stop the scroll and elevate your brand aesthetic. We craft stunning Instagram carousels, high-CTR performance ad creatives, branded story templates, and infographic decks designed for maximum engagement.
+              </p>
+              <div className="wm-sp-hero-cta-group">
+                <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
+                  Get Free Custom Quote <FaArrowRight />
+                </button>
+                <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
+                  <FaPhoneAlt /> Call Me in 28 Seconds
+                </button>
+              </div>
+
+              {/* 4-Metric Performance Bar */}
+              <div className="wm-seost">
+                {stats.map((st, i) => (
+                  <div key={i} className="wm-seost__i">
+                    <p className="wm-seost__n">{st.num}</p>
+                    <p className="wm-seost__l">{st.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="wm-sp-hero-col-right">
+              <HeroLeadForm
+                pageName="Social Media Graphic Design"
+                source="Social Media Graphic Design Hero Section"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Rating Scorecard Badge */}
+      <div className="wm-dsm-rating-wrap">
+        <div className="wm-sp-container">
+          <div className="wm-dsm-rating">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* 2. THREE-COLUMN ARCHITECTURE / STRATEGY */}
       <div className="wm-sp-body">

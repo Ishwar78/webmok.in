@@ -1,5 +1,39 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+
+// Multer storage for service videos
+const uploadDir = path.join(__dirname, '../uploads/services');
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: true });
+}
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => cb(null, uploadDir),
+  filename: (req, file, cb) => {
+    const cleanName = file.originalname.replace(/[^a-zA-Z0-9.-]/g, '_');
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+    cb(null, `${uniqueSuffix}-${cleanName}`);
+  }
+});
+
+const fileFilter = (req, file, cb) => {
+  const videoExts = /mp4|webm|ogg|quicktime|x-matroska|avi|mov|m4v/;
+  const ext = path.extname(file.originalname).toLowerCase();
+  if (videoExts.test(ext) || (file.mimetype && file.mimetype.startsWith('video/'))) {
+    cb(null, true);
+  } else {
+    cb(new Error('Only video files (MP4, WebM, MOV, AVI, M4V) are allowed!'));
+  }
+};
+
+const upload = multer({
+  storage,
+  limits: { fileSize: 250 * 1024 * 1024 }, // 250MB
+  fileFilter
+});
 const Service = require('../module/Service');
 
 const defaultServices = [
@@ -11,6 +45,8 @@ const defaultServices = [
     metric: '0.8s Avg Speed',
     tag: 'Custom Web Apps',
     desc: 'Bespoke, blazing-fast, and responsive web applications built with modern frameworks to turn casual visitors into loyal paying customers.',
+    videoUrl: '/Home-Hero.mp4',
+    videoBadge: 'Live Web Demo',
     tags: ['React.js', 'WordPress', 'Next.js', 'Custom UI/UX'],
     subFeatures: [
       'Custom UI/UX Design',
@@ -47,6 +83,8 @@ const defaultServices = [
     metric: '99.9% Crash Free',
     tag: 'iOS & Android Apps',
     desc: 'Native and hybrid iOS & Android apps with frictionless interfaces, fluid gestures, real-time push notifications, and rock-solid backend APIs.',
+    videoUrl: '/hh3-CAsds3iE.mp4',
+    videoBadge: 'Mobile App Showcase',
     tags: ['Flutter', 'React Native', 'Android', 'iOS'],
     subFeatures: [
       'iOS & Android Apps',
@@ -83,6 +121,8 @@ const defaultServices = [
     metric: '#1 Page Ranks',
     tag: 'Organic Growth',
     desc: 'Dominate Google rankings and drive high-intent organic visitors with data-backed technical SEO, high-authority link building, and content strategy.',
+    videoUrl: '/hh2-CH6clGIc.mp4',
+    videoBadge: 'SEO & Ranking Proof',
     tags: ['Technical SEO', 'Keyword Intent', 'High DA Links', 'Local Maps'],
     subFeatures: [
       'Technical SEO Audit',
@@ -119,6 +159,8 @@ const defaultServices = [
     metric: '3.4x Avg ROAS',
     tag: 'Paid Advertising',
     desc: 'Generate immediate high-ticket leads with laser-targeted Google Search Ads, Display Campaigns, Meta Advertising, and conversion retargeting.',
+    videoUrl: '/hh4-a6dUAa-8.mp4',
+    videoBadge: 'High-ROAS Ad Campaign',
     tags: ['Google Ads', 'Meta Ads', 'Remarketing', 'High ROAS'],
     subFeatures: [
       'Google Search Campaigns',
@@ -155,6 +197,8 @@ const defaultServices = [
     metric: '+48% Checkout Lift',
     tag: 'Online Stores',
     desc: 'Scalable e-commerce stores engineered for seamless transactions, frictionless one-click checkouts, secure payment gateways, and inventory control.',
+    videoUrl: '/bhuwan.mp4',
+    videoBadge: 'E-Commerce Store',
     tags: ['Shopify', 'WooCommerce', 'Custom Stores', 'Stripe/UPI'],
     subFeatures: [
       'Shopify & WooCommerce',
@@ -190,6 +234,8 @@ const defaultServices = [
     metric: '10x Engagement',
     tag: 'Social Authority',
     desc: 'Elevate your online presence with strategic content calendars, interactive video graphics, targeted Facebook & Instagram ads, and community trust.',
+    videoUrl: '/TM0016-CLpL79Mu.mp4',
+    videoBadge: 'Social Growth Reel',
     tags: ['Instagram', 'LinkedIn', 'Facebook', 'Creative Video'],
     subFeatures: [
       'Facebook & Instagram Ads',
@@ -216,15 +262,78 @@ const defaultServices = [
     ],
     status: 'Active',
     order: 6
+  },
+  {
+    slug: 'advance-digital-marketing-course',
+    title: 'Advance Digital Marketing Course',
+    category: 'Digital Marketing',
+    icon: 'FaGraduationCap',
+    metric: '100% Placement',
+    tag: 'Accredited Academy',
+    desc: 'Industry-accredited practical training covering Generative AI in Marketing, Google Ads, Meta Funnels, Technical SEO, and 100% Guaranteed Placement Support.',
+    videoUrl: '/TM004-ypZUa7vp.mp4',
+    videoBadge: 'Live Student Review',
+    tags: ['AI Marketing', 'Live Campaigns', 'Google Certified', '100% Placement'],
+    subFeatures: [
+      'Live ₹5L+ Ad Spend Practice',
+      'Generative AI Marketing Tools',
+      'Google & Meta Certification',
+      '1-on-1 Mentor Guidance',
+      'Real Client Capstone Project',
+      'Placement Assistance'
+    ],
+    headline: 'Master AI-Powered Performance Marketing & Secure Top Placements',
+    overview: 'Launch your high-paying career in digital marketing with hands-on live project training. Learn directly from agency founders, manage live ad budgets, and get certified by Google & HubSpot.',
+    features: [
+      'Full-stack curriculum covering SEO, SEM, SMM, and AI Tools',
+      'Hands-on live budget execution across Google Ads & Meta Ads Manager',
+      'Top-tier portfolio creation & mock interview preparation',
+      'Guaranteed internship & 100% job placement assistance',
+      'Lifetime access to updated course modules & alumni network',
+      'Recognized industry certifications from Google, Meta & HubSpot'
+    ],
+    techStack: ['Google Ads', 'Meta Ads Manager', 'SEMrush', 'GA4', 'ChatGPT', 'Midjourney', 'Canva'],
+    timeline: '3 to 6 Months Practical Program',
+    faqs: [
+      { q: 'Is there a job placement guarantee?', a: 'Yes, we provide 100% placement assistance including resume building, capstone projects, and dedicated corporate interview drives.' },
+      { q: 'Can beginners join this course?', a: 'Absolutely! The course starts from digital fundamentals and advances to enterprise-grade AI growth strategies.' }
+    ],
+    status: 'Active',
+    order: 7
   }
 ];
 
-// Helper to seed services if empty
+// Helper to seed or sync services with defaults and videoUrl
 const seedServicesIfEmpty = async () => {
-  const count = await Service.countDocuments();
-  if (count === 0) {
-    await Service.insertMany(defaultServices);
-    console.log('🌱 Seeded 6 default core services into MongoDB');
+  try {
+    const count = await Service.countDocuments();
+    if (count === 0) {
+      await Service.insertMany(defaultServices);
+      console.log('🌱 Seeded 7 default core services into MongoDB');
+    } else {
+      // Auto-sync missing fields and missing 7th course
+      for (const def of defaultServices) {
+        const existing = await Service.findOne({ slug: def.slug });
+        if (existing) {
+          let needsUpdate = false;
+          if (!existing.videoUrl) {
+            existing.videoUrl = def.videoUrl;
+            needsUpdate = true;
+          }
+          if (!existing.videoBadge) {
+            existing.videoBadge = def.videoBadge;
+            needsUpdate = true;
+          }
+          if (needsUpdate) {
+            await existing.save();
+          }
+        } else {
+          await Service.create(def);
+        }
+      }
+    }
+  } catch (err) {
+    console.warn('Services seed/sync notice:', err.message);
   }
 };
 
@@ -319,7 +428,10 @@ router.post('/', async (req, res) => {
       });
     }
 
+    const { videoUrl, videoBadge } = req.body;
     const newService = await Service.create({
+      videoUrl: videoUrl || '',
+      videoBadge: videoBadge || 'Interactive Showcase',
       title,
       slug: generatedSlug,
       category: category || 'Web Development',

@@ -7,18 +7,188 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
   background: #ffffff;
   border-bottom: 1px solid #e2e8f0;
   z-index: 1000;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .wm-header-scrolled {
   box-shadow: 0 10px 30px rgba(11, 79, 138, 0.08);
-  height: 72px;
+}
+
+/* ==========================================================================
+   TOP ALERT / ANNOUNCEMENT BAR
+   ========================================================================== */
+.wm-topbar {
+  background: #06152b;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: inherit;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.wm-topbar-container {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 5px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.wm-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.wm-topbar-alert-tag {
+  background: #dc2626;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 2.5px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(220, 38, 38, 0.45);
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
+}
+
+/* Marquee Scroller */
+.wm-topbar-marquee-wrap {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 20px, #000 calc(100% - 20px), transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 20px, #000 calc(100% - 20px), transparent 100%);
+}
+
+.wm-topbar-marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+  animation: wm-topbar-scroll 26s linear infinite;
+}
+
+.wm-topbar-marquee-wrap:hover .wm-topbar-marquee-track,
+.wm-topbar-marquee-wrap:active .wm-topbar-marquee-track {
+  animation-play-state: paused;
+}
+
+.wm-topbar-marquee-group {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.wm-topbar-gradient-text {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  background: linear-gradient(135deg, #facc15 0%, #fb923c 50%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.wm-topbar-alert-link {
+  font-weight: 800;
+  background: linear-gradient(135deg, #facc15 0%, #fb923c 50%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-decoration: underline;
+  text-decoration-color: #facc15;
+  transition: opacity 0.2s ease;
+}
+
+.wm-topbar-alert-link:hover {
+  opacity: 0.8;
+}
+
+.wm-topbar-dot {
+  color: #facc15;
+  font-size: 11px;
+  margin: 0 16px;
+  opacity: 0.85;
+  display: inline-block;
+}
+
+@keyframes wm-topbar-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.wm-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.wm-topbar-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.wm-topbar-link:hover {
+  color: #00d4ff;
+  text-decoration: underline;
+}
+
+.wm-topbar-sep {
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.wm-topbar-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #facc15;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.wm-topbar-phone:hover {
+  color: #ffffff;
+  transform: scale(1.02);
+}
+
+.wm-topbar-phone-icon {
+  font-size: 11px;
+  color: #00d4ff;
 }
 
 .wm-nav-container {
@@ -26,9 +196,15 @@
   max-width: 1540px;
   margin: 0 auto;
   padding: 0 32px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wm-header-scrolled .wm-nav-container {
+  height: 68px;
 }
 
 /* Brand Logo */
@@ -455,6 +631,7 @@
 @media (max-width: 1024px) {
   .wm-nav-container {
     padding: 0 16px;
+    height: 66px;
   }
 
   .wm-desktop-nav {
@@ -474,10 +651,10 @@
   .wm-mobile-drawer {
     display: block;
     position: fixed;
-    top: 80px;
+    top: 102px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 102px);
     background: #ffffff;
     border-top: 1px solid #e2e8f0;
     transform: translateX(-100%);
@@ -606,6 +783,84 @@
     gap: 10px;
     cursor: pointer;
     box-shadow: 0 4px 14px rgba(0, 168, 204, 0.35);
+  }
+}
+
+@media (max-width: 768px) {
+  .wm-topbar-container {
+    padding: 5px 10px 6px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .wm-topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .wm-topbar-alert-tag {
+    font-size: 10px;
+    padding: 2px 6px;
+    letter-spacing: 0.4px;
+  }
+
+  .wm-topbar-marquee-wrap {
+    mask-image: linear-gradient(90deg, transparent 0%, #000 10px, #000 calc(100% - 10px), transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 10px, #000 calc(100% - 10px), transparent 100%);
+  }
+
+  .wm-topbar-marquee-track {
+    animation-duration: 20s;
+  }
+
+  .wm-topbar-gradient-text {
+    font-size: 11.5px;
+  }
+
+  .wm-topbar-dot {
+    margin: 0 10px;
+    font-size: 9px;
+  }
+
+  .wm-topbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    padding-top: 3px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.12);
+  }
+
+  .wm-topbar-link {
+    font-size: 11.5px;
+    color: #cbd5e1;
+  }
+
+  .wm-topbar-sep {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  .wm-topbar-phone {
+    font-size: 11.5px;
+    color: #facc15;
+    gap: 4px;
+  }
+
+  .wm-nav-container {
+    height: 60px;
+    padding: 0 14px;
+  }
+
+  .wm-mobile-drawer {
+    top: 110px;
+    height: calc(100vh - 110px);
   }
 }
 

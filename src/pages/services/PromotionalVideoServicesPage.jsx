@@ -228,13 +228,70 @@ const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
 
   return (
     <div className="promotionalvideoservicespage-root wm-sp-root">
-      {/* 1. HERO SECTION WITH COMMON LEAD FORM */}
-      <HeroLeadForm
-        badge="Commercial Video Studio"
-        title="High-Impact Promotional Video Production & Commercial Editing"
-        subtitle="Drive commercial sales, build brand prestige, and captivate your audience with cinematic promotional videos. From high-converting product showcases and TVCs to event showreels and brand manifestos."
-        stats={stats}
-      />
+      {/* 1. Hero Section */}
+      <section className="wm-sp-hero">
+        <div className="wm-sp-container">
+          <div className="wm-sp-hero-two-col">
+            <div className="wm-sp-hero-col-left">
+              <div className="wm-sp-breadcrumb">
+                <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>Promotional Video Production</span>
+              </div>
+              <span className="wm-sp-hero-pill">
+                <FaAward /> Cinematic Promo Production · #High Conversion
+              </span>
+              <h1 className="wm-sp-hero-title">
+                Cinematic <span>Promotional Video Production</span> & Commercial Studio
+              </h1>
+              <p className="wm-sp-hero-lead">
+                Drive commercial sales, build brand prestige, and captivate your audience with cinematic promotional videos. From high-converting product showcases and TV commercials to 3D product animations and corporate brand manifestos.
+              </p>
+              <div className="wm-sp-hero-cta-group">
+                <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
+                  Get Free Custom Quote <FaArrowRight />
+                </button>
+                <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
+                  <FaPhoneAlt /> Call Me in 28 Seconds
+                </button>
+              </div>
+
+              {/* 4-Metric Performance Bar */}
+              <div className="wm-seost">
+                {stats.map((st, i) => (
+                  <div key={i} className="wm-seost__i">
+                    <p className="wm-seost__n">{st.num}</p>
+                    <p className="wm-seost__l">{st.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="wm-sp-hero-col-right">
+              <HeroLeadForm
+                pageName="Promotional Video Production"
+                source="Promotional Video Hero Section"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Rating Scorecard Badge */}
+      <div className="wm-dsm-rating-wrap">
+        <div className="wm-sp-container">
+          <div className="wm-dsm-rating">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* 2. THREE-COLUMN ARCHITECTURE / STRATEGY */}
       <div className="wm-sp-body">

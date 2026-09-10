@@ -116,7 +116,7 @@
 
 @media (max-width: 1024px) {
   .wm-sp-hero {
-    padding-top: 98px;
+    padding-top: 124px;
   }
   .wm-sp-hero-two-col {
     grid-template-columns: 1fr;
@@ -131,7 +131,7 @@
 
 @media (max-width: 768px) {
   .wm-sp-hero {
-    padding-top: 92px;
+    padding-top: 120px;
     padding-bottom: 40px;
   }
   .wm-sp-container {
@@ -149,7 +149,7 @@
     linear-gradient(90deg, rgba(13, 13, 13, 0.98) 0%, rgba(13, 13, 13, 0.9) 40%, rgba(13, 13, 13, 0.5) 75%, rgba(13, 13, 13, 0.35) 100%),
     linear-gradient(145deg, #16181d 0%, #0d0f12 55%, #08090b 100%);
   color: #ffffff;
-  padding: 110px 0 55px 0;
+  padding: 132px 0 55px 0;
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }

@@ -321,7 +321,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
       desc: 'Scalable e-commerce stores engineered for seamless transactions, frictionless one-click checkouts, secure payment gateways, and inventory control.',
       tags: ['Shopify', 'WooCommerce', 'Custom Stores', 'Stripe/UPI'],
       metric: '+48% Checkout Lift',
-      videoUrl: '/TM0011-CnXlWYx0.mp4',
+      videoUrl: '/bhuwan.mp4',
       videoBadge: 'E-Commerce Store',
       subFeatures: ['Shopify & WooCommerce', 'Custom Store Development', 'Payment Gateway Integration', 'Product Catalog Management', 'One-Click Checkout Flows', 'Inventory & Order Systems']
     },
@@ -859,17 +859,22 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
           const json = await res.json();
           if (json.success && Array.isArray(json.data) && json.data.length > 0) {
             setCoreServices(
-              json.data.map((item, idx) => ({
-                id: item.slug || `service-${idx}`,
-                title: item.title,
-                icon: item.icon ? getServiceIcon(item.icon) : <FaLaptopCode />,
-                desc: item.desc,
-                tags: Array.isArray(item.tags) && item.tags.length > 0 ? item.tags : ['Web Tech', 'Enterprise'],
-                metric: item.metric || '0.8s Avg Speed',
-                subFeatures: Array.isArray(item.subFeatures) && item.subFeatures.length > 0
-                  ? item.subFeatures
-                  : ['Custom Strategy', 'Dedicated Support', 'Fast Delivery']
-              }))
+              json.data.map((item, idx) => {
+                const def = defaultCoreServices.find(d => d.id === item.slug) || {};
+                return {
+                  id: item.slug || `service-${idx}`,
+                  title: item.title,
+                  icon: item.icon ? getServiceIcon(item.icon) : (def.icon || <FaLaptopCode />),
+                  desc: item.desc,
+                  tags: Array.isArray(item.tags) && item.tags.length > 0 ? item.tags : (def.tags || ['Web Tech', 'Enterprise']),
+                  metric: item.metric || def.metric || '0.8s Avg Speed',
+                  videoUrl: item.videoUrl || def.videoUrl || '/Home-Hero.mp4',
+                  videoBadge: item.videoBadge || def.videoBadge || 'Interactive Showcase',
+                  subFeatures: Array.isArray(item.subFeatures) && item.subFeatures.length > 0
+                    ? item.subFeatures
+                    : (def.subFeatures || ['Custom Strategy', 'Dedicated Support', 'Fast Delivery'])
+                };
+              })
             );
           }
         }
@@ -1209,7 +1214,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                         <div className="wm-hsvc-video-frame">
                           <video
                             key={currentSvc.videoUrl || currentSvc.id}
-                            src={currentSvc.videoUrl || '/Home-Hero.mp4'}
+                            src={resolveMediaUrl(currentSvc.videoUrl) || '/Home-Hero.mp4'}
                             controls
                             autoPlay
                             loop
