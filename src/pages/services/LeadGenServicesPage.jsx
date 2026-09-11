@@ -482,19 +482,6 @@ const LeadGenServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Verified C-Suite contact data</span>
-                    <span>100% spam-safe mailbox warmup</span>
-                    <span>Custom conversion copywriting</span>
-                    <span>CRM integration & webhook sync</span>
-                    <span>Lead qualification & filtering</span>
-                    <span>Transparent weekly pipeline tracking</span>
-                    <span>Zero duplicate contact guarantee</span>
-                    <span>Dedicated account strategist</span>
-                  </div>
-                </div>
               </div>
             </div>
 

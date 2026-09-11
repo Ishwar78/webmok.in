@@ -266,68 +266,7 @@ const SocialMediaMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Visual Brand Identity & Narrative</h3>
-                  <span className="wm-dsm-layer__role">Aesthetic Positioning & Themes</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Formulating consistent visual identity, color palettes, typography templates, and distinct brand tone of voice.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Custom monthly creative calendar aligned with business offers</li>
-                  <li>High-production motion graphics and animated carousels</li>
-                  <li>Brand aesthetic guidelines and Instagram grid curation</li>
-                  <li>Persuasive caption copywriting with clear conversion triggers</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Short-Form Viral Video Studio</h3>
-                  <span className="wm-dsm-layer__role">Reels, TikTok & YouTube Shorts</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Creating high-engagement 9:16 vertical video reels designed to trigger algorithmic distribution.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Scripting, editing, and color grading for high-impact reels</li>
-                  <li>Trending audio integration and viral pacing hooks</li>
-                  <li>Product unboxings, founder thought-leadership, and behind-the-scenes</li>
-                  <li>Custom captions and dynamic kinetic typography</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Paid Social Funnels & Community CRO</h3>
-                  <span className="wm-dsm-layer__role">Lookalike Ads & Direct DM Sales</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Scaling profitable customer acquisition through Meta Ads Manager and automated Instagram DM funnels.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Custom audience retargeting and lookalike audience modeling</li>
-                  <li>Automated ManyChat DM funnels turning story viewers into leads</li>
-                  <li>Proactive comment response and community engagement management</li>
-                  <li>Detailed monthly ROI and attribution performance reports</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+            
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +439,7 @@ const SocialMediaMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

@@ -267,7 +267,7 @@ const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             </div>
 
             {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
+            {/* <section className="wm-dsm-stack">
               <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
               <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
               <p className="wm-dsm-stack__lede">
@@ -327,7 +327,7 @@ const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   Talk to a Specialist &rarr;
                 </button>
               </div>
-            </section>
+            </section> */}
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +500,7 @@ const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+               
               </div>
             </div>
 

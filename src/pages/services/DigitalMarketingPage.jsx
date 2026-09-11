@@ -482,19 +482,7 @@ const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Technical SEO & schema markup</span>
-                    <span>High-converting ad copywriting</span>
-                    <span>Custom visual design assets</span>
-                    <span>Server-side GA4 & GTM tracking</span>
-                    <span>Landing page CRO recommendations</span>
-                    <span>Looker Studio live reporting</span>
-                    <span>Direct ad account ownership</span>
-                    <span>Senior strategic oversight</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

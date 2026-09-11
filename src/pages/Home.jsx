@@ -38,6 +38,7 @@ import {
 } from 'react-icons/fa';
 import './Home.css';
 import { resolveMediaUrl, handleImageError } from '../utils/mediaUrl';
+import IndustriesWeServeSection from '../components/IndustriesWeServeSection';
 
 const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
   const navigate = useNavigate();
@@ -1255,13 +1256,13 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
         <div className="wm-workflow-marquee-wrapper">
           <div className="wm-workflow-marquee-track">
             {[...workflowSteps, ...workflowSteps].map((step, idx) => (
-              <div key={idx} className="wm-step-card">
-                <div className="wm-step-header-row">
-                  <div className="wm-step-num">{step.num}</div>
-                  <div className="wm-step-icon">{step.icon}</div>
+              <div key={idx} className="wm-step-card wm-step-card-horizontal">
+                <div className="wm-step-num">{step.num}</div>
+                <div className="wm-step-content-col">
+                  <h4>{step.title}</h4>
+                  <span className="wm-step-badge">{step.category}</span>
                 </div>
-                <h4>{step.title}</h4>
-                <span className="wm-step-badge">{step.category}</span>
+                <div className="wm-step-icon">{step.icon}</div>
               </div>
             ))}
           </div>
@@ -1653,117 +1654,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
- {/* 7. PORTFOLIO SHOWCASE - ENTIRE CARD CLICKABLE! */}
-      <section className="wm-portfolio-section">
-        <div className="wm-section-container">
-          <div className="wm-section-header">
-            <span className="wm-subtitle">Featured Work</span>
-            <h2 className="wm-title">Our Recent Success Stories</h2>
-            <div className="wm-title-bar-center"></div>
-          </div>
 
-          {/* Filter Pills */}
-          <div className="wm-port-filters">
-            <button
-              className={`wm-port-filter-btn ${portfolioFilter === 'all' ? 'active' : ''}`}
-              onClick={() => setPortfolioFilter('all')}
-            >
-              All Projects
-            </button>
-            <button
-              className={`wm-port-filter-btn ${portfolioFilter === 'web' ? 'active' : ''}`}
-              onClick={() => setPortfolioFilter('web')}
-            >
-              Web Development
-            </button>
-            <button
-              className={`wm-port-filter-btn ${portfolioFilter === 'app' ? 'active' : ''}`}
-              onClick={() => setPortfolioFilter('app')}
-            >
-              Mobile Apps
-            </button>
-            <button
-              className={`wm-port-filter-btn ${portfolioFilter === 'ecommerce' ? 'active' : ''}`}
-              onClick={() => setPortfolioFilter('ecommerce')}
-            >
-              E-Commerce
-            </button>
-            <button
-              className={`wm-port-filter-btn ${portfolioFilter === 'seo' ? 'active' : ''}`}
-              onClick={() => setPortfolioFilter('seo')}
-            >
-              SEO & PPC
-            </button>
-          </div>
-
-          {/* Portfolio Grid - Modern, Balanced, Sleek & 100% Clickable Cards */}
-          <div className="wm-port-grid">
-            {filteredPortfolio.map((item) => (
-              <Link
-                key={item.id}
-                to={`/portfolio/${item.id}`}
-                className="wm-port-card"
-                title={`View ${item.title} Case Study`}
-              >
-                <div className="wm-port-img-wrap">
-                  <img
-                    src={getMediaUrl(item.image)}
-                    alt={item.title}
-                    className="wm-port-img"
-                    loading="lazy"
-                    onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=700&auto=format&fit=crop&q=80'; }}
-                  />
-                  <span className="wm-port-cat-badge">{item.categoryName}</span>
-                  <span className="wm-port-tag-badge">{item.tag}</span>
-                  <div className="wm-port-hover-overlay">
-                    <span className="wm-port-hover-pill">
-                      View Case Study <FaArrowRight />
-                    </span>
-                  </div>
-                </div>
-
-                <div className="wm-port-body">
-                  <div className="wm-port-client-tag">{item.client}</div>
-                  <h3 className="wm-port-title">{item.title}</h3>
-
-                  <div className="wm-port-kpi-pill">
-                    <FaChartLine className="wm-port-kpi-icon" />
-                    <span className="wm-port-kpi-text">{item.results}</span>
-                  </div>
-
-                  <div className="wm-port-footer-row">
-                    <div className="wm-port-left-link">
-                      <span className="wm-port-detail-link">
-                        Explore 
-                      </span>
-                      {/* <span className="wm-port-arrow-circle">
-                        <FaArrowRight />
-                      </span> */}
-                    </div>
-                    <button
-                      type="button"
-                      className="wm-port-enquiry-btn"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        onOpenEnquiry && onOpenEnquiry(`Case Study: ${item.title}`);
-                      }}
-                    >
-                      Inquiry Now
-                    </button>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="wm-port-view-all">
-            <Link to="/portfolio" className="wm-btn-view-portfolio">
-              Explore Full Portfolio Archive <FaArrowRight />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* 7.5. SPEED & GROWTH AUDIT BANNER (Inspired by theaonedigital & dibull) */}
       <section className="wm-audit-banner-section">
@@ -1781,6 +1672,9 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
+
+      {/* 7.5 INDUSTRIES WE SERVE INTERACTIVE SHOWCASE (MATCHING IMAGE 3 & 4) */}
+      <IndustriesWeServeSection onOpenEnquiry={onOpenEnquiry} />
 
       {/* 8. DUAL-COLUMN CONTACT & LEAD GEN SECTION */}
       <section className="wm-lead-section">

@@ -199,9 +199,7 @@ const WordPressServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Custom <span>WordPress Development</span> Company
           </h1>
-          <p className="wm-sp-hero-lead">
-            Build lightning-fast, custom-engineered WordPress websites with sub-second load times, clean code, advanced WooCommerce capabilities, and enterprise-grade security hardening.
-          </p>
+          
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Custom Quote <FaArrowRight />
@@ -266,68 +264,7 @@ const WordPressServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Custom Theme & Architecture</h3>
-                  <span className="wm-dsm-layer__role">Zero Bloatware & ACF Blocks</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Bespoke theme architecture built strictly with semantic HTML5, modern SCSS, and native WordPress Gutenberg block components.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Tailored Gutenberg block components for seamless non-technical editing</li>
-                  <li>Sub-second Core Web Vitals optimization and database caching</li>
-                  <li>Mobile-first responsive fluid grid layout for all device viewports</li>
-                  <li>Clean database architecture with zero unused plugin overhead</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">WooCommerce & API Integrations</h3>
-                  <span className="wm-dsm-layer__role">High-Volume Transactions & CRM</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Empowering e-commerce and lead-gen workflows with payment gateways, CRM routing, and third-party REST API syncs.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Payment gateway integrations (Razorpay, Stripe, CCAvenue, Paytm)</li>
-                  <li>Real-time CRM sync (HubSpot, Zoho, Salesforce, LeadSquared)</li>
-                  <li>Automated WhatsApp order notifications and cart recovery flows</li>
-                  <li>Custom plugin development tailored to proprietary business logic</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Security, Speed & Maintenance</h3>
-                  <span className="wm-dsm-layer__role">Bank-Grade Hardening & CDN</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Bank-grade security shielding, automated backups, web application firewalls (WAF), and proactive uptime monitoring.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Enterprise security hardening against brute-force & zero-day exploits</li>
-                  <li>Cloudflare CDN, server-side Redis caching & WebP image pipeline</li>
-                  <li>Automated daily cloud backups & scheduled database indexing</li>
-                  <li>24/7 uptime monitoring & priority SLA technical support</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+           
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +437,7 @@ const WordPressServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+               
               </div>
             </div>
 

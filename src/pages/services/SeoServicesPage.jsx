@@ -223,9 +223,7 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Best <span>SEO Services</span> in India & Delhi NCR
           </h1>
-          <p className="wm-sp-hero-lead">
-            At WebMok, India’s leading SEO agency delivers assured organic rankings, exponential traffic growth, and sustainable revenue expansion with proven technical strategies and expert optimization.
-          </p>
+         
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free SEO Audit <FaArrowRight />
@@ -522,19 +520,7 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Technical SEO & site health</span>
-                    <span>On-page tags & metadata</span>
-                    <span>Content strategy & briefs</span>
-                    <span>Internal linking structure</span>
-                    <span>Schema JSON-LD structured data</span>
-                    <span>AEO & GEO readiness auditing</span>
-                    <span>Core Web Vitals monitoring</span>
-                    <span>Direct Google Analytics 4 reporting</span>
-                  </div>
-                </div>
+               
 
                 <p className="wm-seopk__note">
                   <b>How to choose:</b> Starter and Growth are tiered by target keyword volume for businesses with focused product lines. The Dedicated Retainer provides unlimited keyword scope for dynamic enterprises where overall customer acquisition volume is the primary benchmark.

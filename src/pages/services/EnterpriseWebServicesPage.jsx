@@ -199,9 +199,7 @@ const EnterpriseWebServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Enterprise <span>Web Development</span> in Delhi & Rohtak
           </h1>
-          <p className="wm-sp-hero-lead">
-            Architect resilient, secure, and scalable enterprise web software, customer portals, and internal management platforms engineered by WebMok.
-          </p>
+          
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Custom Quote <FaArrowRight />
@@ -266,68 +264,7 @@ const EnterpriseWebServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">System Architecture & Data Modeling</h3>
-                  <span className="wm-dsm-layer__role">Scalable Microservices & Schemas</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Robust software architectures designed for high concurrency, multi-database synchronization, and strict data privacy compliance.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Microservices and modular component architectures</li>
-                  <li>Relational and NoSQL database modeling (PostgreSQL, MongoDB)</li>
-                  <li>Role-based access control (RBAC) and Single Sign-On (SSO)</li>
-                  <li>Comprehensive API documentation and OpenAPI schemas</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Agile Full-Stack Engineering</h3>
-                  <span className="wm-dsm-layer__role">React, Node.js & Cloud DevOps</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Rapid sprint cycles managed by senior full-stack software engineers and DevOps architects.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Modern React.js, Next.js, and TypeScript frontend codebases</li>
-                  <li>High-throughput Node.js, Express, or Python backend services</li>
-                  <li>Docker containerization and Kubernetes orchestration</li>
-                  <li>Continuous Integration / Continuous Deployment (CI/CD) pipelines</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Security Hardening & Enterprise SLA</h3>
-                  <span className="wm-dsm-layer__role">VAPT Testing & 24/7 Monitoring</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Rigorous penetration testing, compliance checks, and round-the-clock infrastructure monitoring.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Vulnerability Assessment & Penetration Testing (VAPT)</li>
-                  <li>OWASP Top 10 security mitigation and SSL encryption</li>
-                  <li>24/7 server health telemetry and automated failover recovery</li>
-                  <li>Dedicated technical account manager and formal SLA contract</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+           
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +437,7 @@ const EnterpriseWebServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

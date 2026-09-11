@@ -199,9 +199,7 @@ const IosAppServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Premium <span>iOS App</span> Development Agency
           </h1>
-          <p className="wm-sp-hero-lead">
-            Engineer elegant, ultra-responsive iOS applications written in native Swift and SwiftUI, crafted strictly to Apple Human Interface Guidelines for iPhone, iPad, and Apple Watch.
-          </p>
+          
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Custom Quote <FaArrowRight />
@@ -266,68 +264,7 @@ const IosAppServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Human Interface Guidelines & UI</h3>
-                  <span className="wm-dsm-layer__role">SwiftUI & Dynamic Island</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Pixel-perfect interfaces adhering to Apple Human Interface Guidelines with fluid 120Hz ProMotion transitions.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Custom Figma designs tailored to iOS navigation paradigms</li>
-                  <li>Dynamic Island, Lock Screen widgets, and Live Activities</li>
-                  <li>San Francisco typography scale and dark mode adaptation</li>
-                  <li>Haptic feedback and fluid interactive gestures</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Swift & Modern iOS Architecture</h3>
-                  <span className="wm-dsm-layer__role">SwiftUI, Combine & CoreData</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Clean MVVM and Composable architectures engineered for high speed, minimal memory usage, and stability.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Native Swift 5.9+ and modern declarative SwiftUI components</li>
-                  <li>Local offline persistence using CoreData and SwiftData</li>
-                  <li>Biometric FaceID / TouchID security authentication</li>
-                  <li>Apple Pay, In-App Purchases (StoreKit 2), and Subscriptions</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">App Store Launch & Privacy Compliance</h3>
-                  <span className="wm-dsm-layer__role">TestFlight, App Store & ASO</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Rigorous beta testing via TestFlight, App Store approval guarantee, and App Store Optimization.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>TestFlight beta distributions for stakeholder review</li>
-                  <li>Strict adherence to Apple App Tracking Transparency (ATT)</li>
-                  <li>App Store rejection-free approval guarantee</li>
-                  <li>App Store Search Ads (ASA) and keyword visibility optimization</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+         
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +437,7 @@ const IosAppServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

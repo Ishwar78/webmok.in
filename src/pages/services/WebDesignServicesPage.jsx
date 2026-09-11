@@ -199,9 +199,7 @@ const WebDesignServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Award-Winning <span>Web Design & Development</span> Agency
           </h1>
-          <p className="wm-sp-hero-lead">
-            Transform your brand perception with custom, interactive websites built on modern React and full-stack architectures designed to turn visitors into paying customers.
-          </p>
+          
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Custom Quote <FaArrowRight />
@@ -266,68 +264,7 @@ const WebDesignServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Bespoke UI/UX & Wireframing</h3>
-                  <span className="wm-dsm-layer__role">Figma Prototyping & User Journey</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Figma prototypes, conversion-driven user journeys, and brand design systems tailored to your target audience.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Custom Figma wireframes and interactive clickable prototypes</li>
-                  <li>Brand color psychology and visual hierarchy optimization</li>
-                  <li>Frictionless call-to-action (CTA) button placement across templates</li>
-                  <li>Cross-browser accessibility and readability testing</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Modern Frontend Engineering</h3>
-                  <span className="wm-dsm-layer__role">React, Next.js & Fluid Grids</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Fast, responsive, and SEO-friendly codebases built on modern component architectures.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>React.js, Next.js, and modern lightweight CSS3/Tailwind styling</li>
-                  <li>Sub-second page transitions and smooth micro-interactions</li>
-                  <li>Mobile-first responsive fluid grids for all smartphone screens</li>
-                  <li>Semantic HTML5 structure optimized for search engine crawlability</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Lead Funnels & Analytics Integration</h3>
-                  <span className="wm-dsm-layer__role">Conversion CRO & GA4 Tracking</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Turning traffic into qualified sales opportunities with interactive calculators, instant modals, and GA4 event tracking.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>28-Second callback integration and WhatsApp chat widgets</li>
-                  <li>Interactive quotation calculators and multi-step forms</li>
-                  <li>Server-side Google Analytics 4 and Tag Manager setup</li>
-                  <li>Enterprise security, SSL hardening, and cloud CDN deployment</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+          
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +437,7 @@ const WebDesignServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+               
               </div>
             </div>
 

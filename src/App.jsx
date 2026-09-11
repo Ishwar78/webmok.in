@@ -83,6 +83,7 @@ import SouthAfricaDigitalMarketingPage from './pages/international/SouthAfricaDi
 import AustraliaDigitalMarketingPage from './pages/international/AustraliaDigitalMarketingPage';
 import MelbourneDigitalMarketingPage from './pages/international/MelbourneDigitalMarketingPage';
 import InternationalDynamicPage from './pages/international/InternationalDynamicPage';
+import IndustriesWeServe from './pages/IndustriesWeServe';
 
 import Portfolio from './pages/Portfolio';
 import PortfolioDetail from './pages/PortfolioDetail';
@@ -172,6 +173,11 @@ function App() {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
   const location = useLocation();
 
+  // Direct Call Option: Opens phone dialer directly without popup modal
+  const handleDirectCall = () => {
+    window.location.href = 'tel:+918684031003';
+  };
+
   // Check if current route is an admin page
   const isAdminRoute = location.pathname.startsWith('/admin');
 
@@ -182,7 +188,7 @@ function App() {
       {/* Public Navbar (Hidden on Admin portal for clean workspace view) */}
       {!isAdminRoute && (
         <Navbar
-          onOpenCallMe={() => setIsCallMeOpen(true)}
+          onOpenCallMe={handleDirectCall}
           onOpenEnquiry={() => setIsEnquiryOpen(true)}
         />
       )}
@@ -193,7 +199,7 @@ function App() {
           path="/"
           element={
             <Home
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -202,7 +208,7 @@ function App() {
           path="/about-us"
           element={
             <AboutUs
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -211,7 +217,7 @@ function App() {
           path="/services"
           element={
             <Services
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -223,7 +229,7 @@ function App() {
           path="/seo-services-company"
           element={
             <SeoServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -232,7 +238,7 @@ function App() {
           path="/ppc-services-company"
           element={
             <PpcServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -241,7 +247,7 @@ function App() {
           path="/lead-generation-social-media-marketing-services-company"
           element={
             <LeadGenServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -250,7 +256,7 @@ function App() {
           path="/digital-marketing"
           element={
             <DigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -259,7 +265,7 @@ function App() {
           path="/digital-marketing-services-company"
           element={
             <DigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -268,7 +274,7 @@ function App() {
           path="/mobile-marketing-services-company"
           element={
             <MobileMarketingServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -277,7 +283,7 @@ function App() {
           path="/mobile-marketing"
           element={
             <MobileMarketingServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -286,7 +292,7 @@ function App() {
           path="/word-press-development-services-company"
           element={
             <WordPressServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -295,7 +301,7 @@ function App() {
           path="/web-designing-development-services-company"
           element={
             <WebDesignServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -304,7 +310,7 @@ function App() {
           path="/e-commerce-website-design-development-services-company"
           element={
             <EcommerceServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -313,7 +319,7 @@ function App() {
           path="/e-commerce-development"
           element={
             <EcommerceServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -322,7 +328,7 @@ function App() {
           path="/e-commerce-development-services-company"
           element={
             <EcommerceServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -331,7 +337,7 @@ function App() {
           path="/landing-page-development-services-company"
           element={
             <LandingPageServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -340,7 +346,7 @@ function App() {
           path="/website-design-development-rohtak-delhi"
           element={
             <EnterpriseWebServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -349,7 +355,7 @@ function App() {
           path="/application-development"
           element={
             <AppDevServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -358,7 +364,7 @@ function App() {
           path="/mobile-app-development-services-company"
           element={
             <AppDevServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -367,7 +373,7 @@ function App() {
           path="/application-development-services"
           element={
             <AppDevServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -376,7 +382,7 @@ function App() {
           path="/android-app-development"
           element={
             <AndroidAppServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -385,7 +391,7 @@ function App() {
           path="/ios-app-development"
           element={
             <IosAppServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -394,7 +400,7 @@ function App() {
           path="/shopify-woocommerce"
           element={
             <ShopifyWooServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -403,7 +409,7 @@ function App() {
           path="/custom-marketplace"
           element={
             <MarketplaceServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -412,7 +418,7 @@ function App() {
           path="/content-marketing-services-company"
           element={
             <ContentMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -421,7 +427,7 @@ function App() {
           path="/social-media-marketing"
           element={
             <SocialMediaMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -430,7 +436,7 @@ function App() {
           path="/video-and-graphic-development-company"
           element={
             <VideoGraphicServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -439,7 +445,7 @@ function App() {
           path="/video-editing"
           element={
             <VideoEditingServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -448,7 +454,7 @@ function App() {
           path="/video-editing-services-company"
           element={
             <VideoEditingServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -457,7 +463,7 @@ function App() {
           path="/social-media-graphic-design-services-company"
           element={
             <SocialMediaGraphicDesignPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -466,7 +472,7 @@ function App() {
           path="/social-media-graphic-design"
           element={
             <SocialMediaGraphicDesignPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -475,7 +481,7 @@ function App() {
           path="/promotional-video-editing-services-company"
           element={
             <PromotionalVideoServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -484,7 +490,7 @@ function App() {
           path="/promotional-video"
           element={
             <PromotionalVideoServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -493,7 +499,7 @@ function App() {
           path="/online-reputation-management-services-company"
           element={
             <OrmServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -502,7 +508,7 @@ function App() {
           path="/business-development-consulting"
           element={
             <BusinessConsultingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -511,7 +517,7 @@ function App() {
           path="/data-science"
           element={
             <DataSciencePage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -520,7 +526,7 @@ function App() {
           path="/computer-training"
           element={
             <ComputerTrainingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -529,7 +535,7 @@ function App() {
           path="/branding"
           element={
             <BrandingServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -538,7 +544,7 @@ function App() {
           path="/logo-design-services-company"
           element={
             <LogoDesignServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -547,7 +553,7 @@ function App() {
           path="/logo-design"
           element={
             <LogoDesignServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -556,7 +562,7 @@ function App() {
           path="/social-media-optimization-services-company"
           element={
             <SocialMediaOptimizationPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -565,7 +571,7 @@ function App() {
           path="/social-media-optimization"
           element={
             <SocialMediaOptimizationPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -574,7 +580,7 @@ function App() {
           path="/facebook-marketing"
           element={
             <FacebookMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -583,7 +589,7 @@ function App() {
           path="/facebook-marketing-services-company"
           element={
             <FacebookMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -592,7 +598,7 @@ function App() {
           path="/website-development-and-design-services"
           element={
             <EnterpriseWebServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -603,7 +609,7 @@ function App() {
           path="/services/seo-services-company"
           element={
             <SeoServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -612,7 +618,7 @@ function App() {
           path="/services/ppc-services-company"
           element={
             <PpcServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -621,7 +627,7 @@ function App() {
           path="/services/lead-generation-social-media-marketing-services-company"
           element={
             <LeadGenServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -630,7 +636,7 @@ function App() {
           path="/services/digital-marketing"
           element={
             <DigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -639,7 +645,7 @@ function App() {
           path="/services/digital-marketing-services-company"
           element={
             <DigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -648,7 +654,7 @@ function App() {
           path="/services/mobile-marketing-services-company"
           element={
             <MobileMarketingServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -657,7 +663,7 @@ function App() {
           path="/services/mobile-marketing"
           element={
             <MobileMarketingServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -666,7 +672,7 @@ function App() {
           path="/services/word-press-development-services-company"
           element={
             <WordPressServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -675,7 +681,7 @@ function App() {
           path="/services/web-designing-development-services-company"
           element={
             <WebDesignServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -684,7 +690,7 @@ function App() {
           path="/services/e-commerce-website-design-development-services-company"
           element={
             <EcommerceServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -693,7 +699,7 @@ function App() {
           path="/services/e-commerce-development"
           element={
             <EcommerceServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -702,7 +708,7 @@ function App() {
           path="/services/e-commerce-development-services-company"
           element={
             <EcommerceServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -711,7 +717,7 @@ function App() {
           path="/services/landing-page-development-services-company"
           element={
             <LandingPageServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -720,7 +726,7 @@ function App() {
           path="/services/website-design-development-rohtak-delhi"
           element={
             <EnterpriseWebServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -729,7 +735,7 @@ function App() {
           path="/services/website-development-and-design-services"
           element={
             <EnterpriseWebServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -738,7 +744,7 @@ function App() {
           path="/services/application-development"
           element={
             <AppDevServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -747,7 +753,7 @@ function App() {
           path="/services/mobile-app-development-services-company"
           element={
             <AppDevServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -756,7 +762,7 @@ function App() {
           path="/services/application-development-services"
           element={
             <AppDevServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -765,7 +771,7 @@ function App() {
           path="/services/android-app-development"
           element={
             <AndroidAppServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -774,7 +780,7 @@ function App() {
           path="/services/ios-app-development"
           element={
             <IosAppServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -783,7 +789,7 @@ function App() {
           path="/services/shopify-woocommerce"
           element={
             <ShopifyWooServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -792,7 +798,7 @@ function App() {
           path="/services/custom-marketplace"
           element={
             <MarketplaceServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -801,7 +807,7 @@ function App() {
           path="/services/content-marketing-services-company"
           element={
             <ContentMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -810,7 +816,7 @@ function App() {
           path="/services/social-media-marketing"
           element={
             <SocialMediaMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -819,7 +825,7 @@ function App() {
           path="/services/video-and-graphic-development-company"
           element={
             <VideoGraphicServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -828,7 +834,7 @@ function App() {
           path="/services/video-editing"
           element={
             <VideoEditingServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -837,7 +843,7 @@ function App() {
           path="/services/video-editing-services-company"
           element={
             <VideoEditingServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -846,7 +852,7 @@ function App() {
           path="/services/social-media-graphic-design-services-company"
           element={
             <SocialMediaGraphicDesignPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -855,7 +861,7 @@ function App() {
           path="/services/social-media-graphic-design"
           element={
             <SocialMediaGraphicDesignPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -864,7 +870,7 @@ function App() {
           path="/services/promotional-video-editing-services-company"
           element={
             <PromotionalVideoServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -873,7 +879,7 @@ function App() {
           path="/services/promotional-video"
           element={
             <PromotionalVideoServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -882,7 +888,7 @@ function App() {
           path="/services/online-reputation-management-services-company"
           element={
             <OrmServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -891,7 +897,7 @@ function App() {
           path="/services/business-development-consulting"
           element={
             <BusinessConsultingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -900,7 +906,7 @@ function App() {
           path="/services/data-science"
           element={
             <DataSciencePage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -909,7 +915,7 @@ function App() {
           path="/services/computer-training"
           element={
             <ComputerTrainingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -918,7 +924,7 @@ function App() {
           path="/services/branding"
           element={
             <BrandingServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -927,7 +933,7 @@ function App() {
           path="/services/logo-design-services-company"
           element={
             <LogoDesignServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -936,7 +942,7 @@ function App() {
           path="/services/logo-design"
           element={
             <LogoDesignServicesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -945,7 +951,7 @@ function App() {
           path="/services/social-media-optimization-services-company"
           element={
             <SocialMediaOptimizationPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -954,7 +960,7 @@ function App() {
           path="/services/social-media-optimization"
           element={
             <SocialMediaOptimizationPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -963,7 +969,7 @@ function App() {
           path="/services/facebook-marketing"
           element={
             <FacebookMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -972,7 +978,7 @@ function App() {
           path="/services/facebook-marketing-services-company"
           element={
             <FacebookMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -981,7 +987,7 @@ function App() {
           path="/services/:serviceSlug"
           element={
             <ServiceDetail
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -993,7 +999,7 @@ function App() {
           path="/seo-packages"
           element={
             <SeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1002,7 +1008,7 @@ function App() {
           path="/local-seo-packages"
           element={
             <LocalSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1011,7 +1017,7 @@ function App() {
           path="/offpage-seo-packages"
           element={
             <OffpageSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1020,7 +1026,7 @@ function App() {
           path="/onpage-seo-packages"
           element={
             <OnpageSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1029,7 +1035,7 @@ function App() {
           path="/technical-seo-packages"
           element={
             <TechnicalSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1038,7 +1044,7 @@ function App() {
           path="/white-label-seo-packages"
           element={
             <WhiteLabelSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1047,7 +1053,7 @@ function App() {
           path="/enterprise-seo-packages"
           element={
             <EnterpriseSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1056,7 +1062,7 @@ function App() {
           path="/smm-packages"
           element={
             <SmmPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1065,7 +1071,7 @@ function App() {
           path="/facebook-marketing-packages"
           element={
             <FacebookMarketingPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1074,7 +1080,7 @@ function App() {
           path="/instagram-marketing-packages"
           element={
             <InstagramMarketingPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1083,7 +1089,7 @@ function App() {
           path="/linkedin-marketing-packages"
           element={
             <LinkedinMarketingPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1092,7 +1098,7 @@ function App() {
           path="/youtube-marketing-packages"
           element={
             <YoutubeMarketingPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1101,7 +1107,7 @@ function App() {
           path="/ppc-packages"
           element={
             <PpcPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1110,7 +1116,7 @@ function App() {
           path="/orm-packages"
           element={
             <OrmPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1119,7 +1125,7 @@ function App() {
           path="/logo-design-packages"
           element={
             <LogoDesignPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1128,7 +1134,7 @@ function App() {
           path="/smo-packages"
           element={
             <SmoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1137,7 +1143,7 @@ function App() {
           path="/website-maintenance-packages"
           element={
             <WebsiteMaintenancePackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1146,7 +1152,7 @@ function App() {
           path="/website-packages"
           element={
             <WebsitePackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1157,7 +1163,7 @@ function App() {
           path="/packages/seo-packages"
           element={
             <SeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1166,7 +1172,7 @@ function App() {
           path="/packages/local-seo-packages"
           element={
             <LocalSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1175,7 +1181,7 @@ function App() {
           path="/packages/offpage-seo-packages"
           element={
             <OffpageSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1184,7 +1190,7 @@ function App() {
           path="/packages/onpage-seo-packages"
           element={
             <OnpageSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1193,7 +1199,7 @@ function App() {
           path="/packages/technical-seo-packages"
           element={
             <TechnicalSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1202,7 +1208,7 @@ function App() {
           path="/packages/white-label-seo-packages"
           element={
             <WhiteLabelSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1211,7 +1217,7 @@ function App() {
           path="/packages/enterprise-seo-packages"
           element={
             <EnterpriseSeoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1222,7 +1228,7 @@ function App() {
           path="/packages/smm-packages"
           element={
             <SmmPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1231,7 +1237,7 @@ function App() {
           path="/packages/facebook-marketing-packages"
           element={
             <FacebookMarketingPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1240,7 +1246,7 @@ function App() {
           path="/packages/instagram-marketing-packages"
           element={
             <InstagramMarketingPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1249,7 +1255,7 @@ function App() {
           path="/packages/linkedin-marketing-packages"
           element={
             <LinkedinMarketingPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1258,7 +1264,7 @@ function App() {
           path="/packages/youtube-marketing-packages"
           element={
             <YoutubeMarketingPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1269,7 +1275,7 @@ function App() {
           path="/packages/ppc-packages"
           element={
             <PpcPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1278,7 +1284,7 @@ function App() {
           path="/packages/orm-packages"
           element={
             <OrmPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1287,7 +1293,7 @@ function App() {
           path="/packages/logo-design-packages"
           element={
             <LogoDesignPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1296,7 +1302,7 @@ function App() {
           path="/packages/smo-packages"
           element={
             <SmoPackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1305,7 +1311,7 @@ function App() {
           path="/packages/website-maintenance-packages"
           element={
             <WebsiteMaintenancePackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1314,7 +1320,7 @@ function App() {
           path="/packages/website-packages"
           element={
             <WebsitePackagesPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1325,7 +1331,7 @@ function App() {
           path="/packages/:packageSlug"
           element={
             <PackageDetailPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1336,7 +1342,7 @@ function App() {
           path="/miami-digital-marketing"
           element={
             <MiamiDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1345,7 +1351,7 @@ function App() {
           path="/florida-digital-marketing"
           element={
             <FloridaDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1354,7 +1360,7 @@ function App() {
           path="/seo-services-new-york"
           element={
             <SeoServicesNewYorkPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1363,7 +1369,7 @@ function App() {
           path="/los-angeles-digital-marketing"
           element={
             <LosAngelesDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1372,7 +1378,7 @@ function App() {
           path="/san-francisco-digital-marketing"
           element={
             <SanFranciscoDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1381,7 +1387,7 @@ function App() {
           path="/canada-digital-marketing"
           element={
             <CanadaDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1390,7 +1396,7 @@ function App() {
           path="/toronto-digital-marketing"
           element={
             <TorontoDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1399,7 +1405,7 @@ function App() {
           path="/ottawa-digital-marketing"
           element={
             <OttawaDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1408,7 +1414,7 @@ function App() {
           path="/europe-digital-marketing"
           element={
             <EuropeDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1417,7 +1423,7 @@ function App() {
           path="/uk-digital-marketing"
           element={
             <UkDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1426,7 +1432,7 @@ function App() {
           path="/london-digital-marketing"
           element={
             <LondonDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1435,7 +1441,7 @@ function App() {
           path="/dubai-digital-marketing"
           element={
             <DubaiDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1444,7 +1450,7 @@ function App() {
           path="/south-africa-digital-marketing"
           element={
             <SouthAfricaDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1453,7 +1459,7 @@ function App() {
           path="/australia-digital-marketing"
           element={
             <AustraliaDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1462,7 +1468,7 @@ function App() {
           path="/melbourne-digital-marketing"
           element={
             <MelbourneDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1473,7 +1479,7 @@ function App() {
           path="/international/miami-digital-marketing"
           element={
             <MiamiDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1482,7 +1488,7 @@ function App() {
           path="/international/florida-digital-marketing"
           element={
             <FloridaDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1491,7 +1497,7 @@ function App() {
           path="/international/seo-services-new-york"
           element={
             <SeoServicesNewYorkPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1500,7 +1506,7 @@ function App() {
           path="/international/los-angeles-digital-marketing"
           element={
             <LosAngelesDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1509,7 +1515,7 @@ function App() {
           path="/international/san-francisco-digital-marketing"
           element={
             <SanFranciscoDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1518,7 +1524,7 @@ function App() {
           path="/international/canada-digital-marketing"
           element={
             <CanadaDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1527,7 +1533,7 @@ function App() {
           path="/international/toronto-digital-marketing"
           element={
             <TorontoDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1536,7 +1542,7 @@ function App() {
           path="/international/ottawa-digital-marketing"
           element={
             <OttawaDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1545,7 +1551,7 @@ function App() {
           path="/international/europe-digital-marketing"
           element={
             <EuropeDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1554,7 +1560,7 @@ function App() {
           path="/international/uk-digital-marketing"
           element={
             <UkDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1563,7 +1569,7 @@ function App() {
           path="/international/london-digital-marketing"
           element={
             <LondonDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1572,7 +1578,7 @@ function App() {
           path="/international/dubai-digital-marketing"
           element={
             <DubaiDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1581,7 +1587,7 @@ function App() {
           path="/international/south-africa-digital-marketing"
           element={
             <SouthAfricaDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1590,7 +1596,7 @@ function App() {
           path="/international/australia-digital-marketing"
           element={
             <AustraliaDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1599,7 +1605,7 @@ function App() {
           path="/international/melbourne-digital-marketing"
           element={
             <MelbourneDigitalMarketingPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1610,7 +1616,26 @@ function App() {
           path="/international/:slug"
           element={
             <InternationalDynamicPage
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+
+        <Route
+          path="/industries-we-serve"
+          element={
+            <IndustriesWeServe
+              onOpenCallMe={handleDirectCall}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+        <Route
+          path="/industries"
+          element={
+            <IndustriesWeServe
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1620,7 +1645,7 @@ function App() {
           path="/portfolio"
           element={
             <Portfolio
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1629,7 +1654,7 @@ function App() {
           path="/portfolio/:projectId"
           element={
             <PortfolioDetail
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1639,7 +1664,7 @@ function App() {
           path="/blogs/:blogId"
           element={
             <BlogDetail
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1647,14 +1672,14 @@ function App() {
         <Route
           path="/contact-us"
           element={
-            <ContactUs onOpenCallMe={() => setIsCallMeOpen(true)} />
+            <ContactUs onOpenCallMe={handleDirectCall} />
           }
         />
         <Route
           path="/testimonials"
           element={
             <Testimonials
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1663,7 +1688,7 @@ function App() {
           path="/our-clients"
           element={
             <OurClients
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1672,7 +1697,7 @@ function App() {
           path="/clients"
           element={
             <OurClients
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1681,7 +1706,7 @@ function App() {
           path="/creative-showcase"
           element={
             <CreativeShowcase
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1690,7 +1715,7 @@ function App() {
           path="/video-showcase"
           element={
             <VideoShowcase
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1724,7 +1749,7 @@ function App() {
           path="/offers"
           element={
             <OfferDiscount
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1733,7 +1758,7 @@ function App() {
           path="/hire-seo-expert"
           element={
             <HireSeoExpert
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1744,7 +1769,7 @@ function App() {
           path="/faq"
           element={
             <FAQ
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1760,7 +1785,7 @@ function App() {
           path="/:blogId"
           element={
             <BlogDetail
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1771,7 +1796,7 @@ function App() {
           path="*"
           element={
             <Home
-              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenCallMe={handleDirectCall}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />
           }
@@ -1784,7 +1809,7 @@ function App() {
       {/* Mobile Sticky Quick-Action Bar (Home, Call, WhatsApp, Inquiry) */}
       {!isAdminRoute && (
         <MobileBottomBar
-          onOpenCallMe={() => setIsCallMeOpen(true)}
+          onOpenCallMe={handleDirectCall}
           onOpenEnquiry={() => setIsEnquiryOpen(true)}
         />
       )}

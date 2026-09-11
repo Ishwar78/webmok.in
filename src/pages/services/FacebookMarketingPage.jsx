@@ -266,68 +266,7 @@ const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Creative Engine & Hook Psychology</h3>
-                  <span className="wm-dsm-layer__role">Reels, Carousels & Static Hooks</span>
-                </div>
-                <p className="wm-dsm-layer__desc">High-production direct-response ad creative engineered to stop the scroll in the first 3 seconds.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Direct-response video reels with dynamic captions and hooks</li>
-                  <li>Interactive product catalog carousels showcasing top sellers</li>
-                  <li>A/B tested primary text copy addressing specific customer pain points</li>
-                  <li>Custom thumbnail testing maximizing initial click-through rates</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Campaign Architecture & Bidding</h3>
-                  <span className="wm-dsm-layer__role">Advantage+ & Audience Sculpting</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Advanced campaign segmentation utilizing Meta Advantage+ Shopping and granular custom audiences.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Advantage+ Shopping Campaigns (ASC) for automated scaling</li>
-                  <li>Custom audience retargeting for website visitors and video viewers</li>
-                  <li>High-affinity Lookalike audiences (1% to 5% value tiers)</li>
-                  <li>Exclusion lists preventing wasted spend on existing recent purchasers</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Server-Side CAPI & Full-Funnel Attribution</h3>
-                  <span className="wm-dsm-layer__role">Data Resilience & Triple Whale/GA4</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Bypassing iOS privacy restrictions with server-side Facebook Conversions API (CAPI) for 100% accurate tracking.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Meta Conversions API (CAPI) via server-side Google Tag Manager</li>
-                  <li>Advanced offline event synchronization for phone and WhatsApp orders</li>
-                  <li>Live Looker Studio dashboards reporting real-time blended ROAS</li>
-                  <li>Weekly creative sprint refreshes preventing ad performance fatigue</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+            
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +439,7 @@ const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

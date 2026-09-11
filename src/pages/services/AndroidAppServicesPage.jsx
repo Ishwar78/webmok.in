@@ -199,9 +199,7 @@ const AndroidAppServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Native <span>Android App</span> Development Agency
           </h1>
-          <p className="wm-sp-hero-lead">
-            Build high-performance, battery-efficient native Android applications written in modern Kotlin, fully optimized across 10,000+ smartphone and tablet models.
-          </p>
+         
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Custom Quote <FaArrowRight />
@@ -266,68 +264,7 @@ const AndroidAppServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Material Design 3 & Wireframing</h3>
-                  <span className="wm-dsm-layer__role">Adaptive Multi-Screen UI</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Intuitive touch ergonomics, dark theme support, and responsive layouts tailored to all phone form factors.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Figma Android prototypes adhering to Google Material 3</li>
-                  <li>Fluid gesture navigation and bottom sheet sheets</li>
-                  <li>Dynamic screen scaling from budget to flagship devices</li>
-                  <li>Biometric fingerprint & face authentication</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Modern Kotlin & Jetpack Compose</h3>
-                  <span className="wm-dsm-layer__role">Clean Architecture & Coroutines</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Modern reactive architecture with asynchronous Kotlin coroutines for smooth 60fps performance.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Kotlin Coroutines and Flow for non-blocking operations</li>
-                  <li>Room Database for robust offline-first local caching</li>
-                  <li>Retrofit & OkHttp for resilient network communication</li>
-                  <li>CameraX, Bluetooth BLE, and GPS geofencing</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Play Store Launch & Growth</h3>
-                  <span className="wm-dsm-layer__role">Automated CI/CD & Play Console</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Play Store compliance, app bundle optimization, and Play Store Optimization (ASO) for maximum organic installs.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Android App Bundle (.aab) optimization under 15MB</li>
-                  <li>Firebase Crashlytics, Analytics & Remote Config</li>
-                  <li>Google Play Store approval guarantee within 5 days</li>
-                  <li>Play Store keyword optimization for organic ranking</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+           
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,7 +437,7 @@ const AndroidAppServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
+                {/* <div className="wm-seopk__inc">
                   <h3>Included in Every Plan</h3>
                   <div className="wm-seopk__incg">
                     <span>Dedicated Project Manager</span>
@@ -512,7 +449,7 @@ const AndroidAppServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     <span>30-Day Post-Launch Support</span>
                     <span>Direct Solution Architect Access</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 

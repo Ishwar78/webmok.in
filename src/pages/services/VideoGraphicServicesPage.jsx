@@ -266,68 +266,7 @@ const VideoGraphicServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Brand Identity & Visual Guidelines</h3>
-                  <span className="wm-dsm-layer__role">Logo, Typography & Style Guides</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Crafting cohesive brand identities that establish authority and resonate deeply with target demographics.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Custom vector logos, marks, and corporate stationery suites</li>
-                  <li>Typography hierarchy, brand color palettes, and mood boards</li>
-                  <li>Comprehensive brand style guides and asset libraries</li>
-                  <li>Social media templates and digital advertisement formats</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Cinematic Video Post-Production</h3>
-                  <span className="wm-dsm-layer__role">Premiere Pro & DaVinci Color</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Professional editing, kinetic typography, sound design, and color grading for commercial advertisements.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Corporate brand anthem videos and executive interviews</li>
-                  <li>High-paced social media reels, product explainers, and YouTube ads</li>
-                  <li>DaVinci Resolve color grading and custom sound design</li>
-                  <li>Multi-format delivery: 16:9 widescreen, 9:16 vertical, 1:1 square</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">3D Motion Graphics & Print Collateral</h3>
-                  <span className="wm-dsm-layer__role">After Effects & Blender 3D</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Dynamic 3D product visualizations, animated logo reveals, and luxury physical print packaging.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>3D photorealistic product modeling and exploded views</li>
-                  <li>Kinetic 2D/3D motion graphics and explainer animations</li>
-                  <li>Packaging design, luxury product boxes, and label printing prep</li>
-                  <li>Investor pitch decks, annual reports, and brochures</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+         
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +439,7 @@ const VideoGraphicServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

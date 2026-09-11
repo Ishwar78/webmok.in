@@ -206,7 +206,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                       </ul>
                     </div>
 
-                    <div className="wm-mega-block" style={{ marginTop: '16px' }}>
+                    {/* <div className="wm-mega-block" style={{ marginTop: '16px' }}>
                       <div className="wm-mblock-header">
                         <div className="wm-cat-icon-wrap wm-cicon-coral">
                           <FaSearch />
@@ -220,7 +220,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                         <li><Link to="/seo-services-company" onClick={() => setServicesDropdownOpen(false)}>Search Engine Optimization Company</Link></li>
                         <li><Link to="/hire-seo-expert" onClick={() => setServicesDropdownOpen(false)}>Hire Dedicated SEO Expert</Link></li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Column 2: Web Development */}
@@ -268,7 +268,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                       </ul>
                     </div>
 
-                    <div className="wm-mega-block" style={{ marginTop: '16px' }}>
+                    {/* <div className="wm-mega-block" style={{ marginTop: '16px' }}>
                       <div className="wm-mblock-header">
                         <div className="wm-cat-icon-wrap wm-cicon-navy">
                           <FaBriefcase />
@@ -281,7 +281,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <ul className="wm-mega-sublinks">
                         <li><Link to="/business-development-consulting" onClick={() => setServicesDropdownOpen(false)}>Business Development Consulting</Link></li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Column 4: Graphic & Video, Outstanding Services */}
@@ -305,7 +305,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                       </ul>
                     </div>
 
-                    <div className="wm-mega-block" style={{ marginTop: '16px' }}>
+                    {/* <div className="wm-mega-block" style={{ marginTop: '16px' }}>
                       <div className="wm-mblock-header">
                         <div className="wm-cat-icon-wrap wm-cicon-blue">
                           <FaStar />
@@ -322,7 +322,7 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
                         <li><Link to="/digital-marketing-services-company" onClick={() => setServicesDropdownOpen(false)}>Digital Marketing</Link></li>
                         <li><Link to="/facebook-marketing-services-company" onClick={() => setServicesDropdownOpen(false)}>Facebook Marketing</Link></li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

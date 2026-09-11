@@ -266,68 +266,7 @@ const DataSciencePage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Data Engineering & ETL Warehousing</h3>
-                  <span className="wm-dsm-layer__role">Snowflake, BigQuery & Redshift</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Consolidating fragmented data silos into clean, normalized cloud data lakes ready for high-speed querying.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Automated ETL/ELT pipelines using Python, Airflow, and dbt</li>
-                  <li>Centralized cloud warehousing in Google BigQuery, Snowflake, or AWS Redshift</li>
-                  <li>Real-time data streaming using Apache Kafka and REST webhooks</li>
-                  <li>Strict GDPR and data compliance encryption protocols</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Predictive ML Models & Algorithms</h3>
-                  <span className="wm-dsm-layer__role">Scikit-Learn, PyTorch & XGBoost</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Training customized machine learning models that forecast customer demand, lifetime value, and churn risk.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Customer churn prediction and proactive retention scoring</li>
-                  <li>Predictive demand forecasting and automated inventory replenishment</li>
-                  <li>Dynamic algorithmic pricing engines maximizing transaction margins</li>
-                  <li>Fraud detection, risk scoring, and anomaly identification algorithms</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Executive BI & Looker Studio Telemetry</h3>
-                  <span className="wm-dsm-layer__role">Live Dashboards & C-Suite Metrics</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Interactive, real-time executive dashboards visualizing complex KPIs with sub-second query rendering.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Looker Studio, PowerBI, and Tableau dashboard engineering</li>
-                  <li>Real-time customer acquisition cost (CAC) and ROAS attribution modeling</li>
-                  <li>Automated executive email digests and anomaly alert notifications</li>
-                  <li>Self-service SQL query interfaces for department leaders</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+            
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +439,7 @@ const DataSciencePage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

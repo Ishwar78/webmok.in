@@ -266,68 +266,7 @@ const BusinessConsultingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Diagnostic & Market Positioning</h3>
-                  <span className="wm-dsm-layer__role">Unit Economics & Moat Strategy</span>
-                </div>
-                <p className="wm-dsm-layer__desc">In-depth commercial diagnostic of your pricing matrix, customer acquisition cost (CAC), and competitive positioning.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Commercial revenue and gross margin contribution audit</li>
-                  <li>Competitor benchmarking and market differentiation strategy</li>
-                  <li>Ideal Customer Profile (ICP) and high-ticket customer journey mapping</li>
-                  <li>Sales bottleneck and conversion leakage identification</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Go-to-Market (GTM) Architecture</h3>
-                  <span className="wm-dsm-layer__role">Sales Engine & Omnichannel Funnels</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Formulating end-to-end sales pipelines, SDR playbooks, and digital marketing infrastructure.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Inbound and outbound B2B demand generation playbooks</li>
-                  <li>Sales compensation, quota structures, and commission models</li>
-                  <li>CRM workflow automation (HubSpot, Salesforce, Zoho)</li>
-                  <li>Strategic partnership and distributor network development</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Operational Scale & Governance</h3>
-                  <span className="wm-dsm-layer__role">KPI Dashboards & Executive Advisory</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Executive cadence, weekly sprint reviews, and KPI dashboards linking daily activities directly to EBITDA.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Executive Looker Studio dashboards tracking pipeline velocity and CAC</li>
-                  <li>Weekly leadership sprint reviews and accountability check-ins</li>
-                  <li>Digital transformation roadmaps eliminating redundant manual software</li>
-                  <li>M&A and investment readiness preparation support</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+          
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,18 +439,7 @@ const BusinessConsultingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
+                
                 </div>
               </div>
             </div>

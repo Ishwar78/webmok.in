@@ -266,68 +266,7 @@ const OrmServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Reputation Audit & Threat Assessment</h3>
-                  <span className="wm-dsm-layer__role">SERP Telemetry & Sentiment Analysis</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Exhaustive audit of all Page 1-3 Google search results, consumer review boards, and social mentions.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Google Page 1-3 keyword sentiment analysis for executive/brand queries</li>
-                  <li>Review board monitoring: Glassdoor, AmbitionBox, Trustpilot, Google Maps</li>
-                  <li>Entity relationship mapping on Google Knowledge Graph and Wikipedia</li>
-                  <li>Legal vs Reverse-SEO algorithmic suppression strategy formulation</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Reverse-SEO Negative Suppression</h3>
-                  <span className="wm-dsm-layer__role">Asset Flooding & De-Indexing</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Building, optimizing, and promoting high-authority positive digital assets to displace negative URLs.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Engineering 15+ high-authority corporate and personal domains</li>
-                  <li>Tier-1 editorial press releases and executive thought leadership interviews</li>
-                  <li>Strategic backlink outreach pushing positive assets above negative results</li>
-                  <li>Legal de-indexing requests under Google Right to be Forgotten and defamation policies</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Review Management & 24/7 Monitoring</h3>
-                  <span className="wm-dsm-layer__role">5-Star Acceleration & Early Warning</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Systematic customer review generation, crisis intervention, and round-the-clock reputation telemetry.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Automated 5-star Google Review generation funnels for satisfied clients</li>
-                  <li>Professional dispute handling for fake, defamatory, or competitor attack reviews</li>
-                  <li>24/7 real-time Google alert monitoring for brand and executive mentions</li>
-                  <li>Monthly SERP sentiment scorecard tracking positive impression dominance</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+           
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +439,7 @@ const OrmServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+               
               </div>
             </div>
 

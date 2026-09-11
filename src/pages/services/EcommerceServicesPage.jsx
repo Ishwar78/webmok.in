@@ -199,9 +199,7 @@ const EcommerceServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Scalable <span>E-Commerce Website</span> Development Agency
           </h1>
-          <p className="wm-sp-hero-lead">
-            Launch high-converting, lightning-fast Shopify, WooCommerce, and custom headless e-commerce stores with automated payment gateways, inventory sync, and 1-click checkouts.
-          </p>
+          
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Custom Quote <FaArrowRight />
@@ -266,68 +264,7 @@ const EcommerceServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">High-Converting Store Architecture</h3>
-                  <span className="wm-dsm-layer__role">Product Catalog & UX Design</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Frictionless product catalogs, smart faceted search filters, and mobile-optimized product detail pages.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Smart predictive search and multi-attribute variant filters</li>
-                  <li>High-res image zooms, 360 views, and video embeds</li>
-                  <li>Dynamic related product up-sells and cross-sells</li>
-                  <li>Trust badges, verified customer reviews, and urgency counters</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Checkout & Gateway Optimization</h3>
-                  <span className="wm-dsm-layer__role">1-Click UPI & Logistics Sync</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Sub-second 1-click checkouts supporting UPI, cards, netbanking, EMI, and Cash on Delivery (COD).</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Razorpay, Stripe, Paytm, and Cashfree gateway integrations</li>
-                  <li>Automated OTP login and address auto-completion</li>
-                  <li>Abandoned cart recovery workflows via WhatsApp and email</li>
-                  <li>Courier API integrations (Shiprocket, Delhivery, BlueDart)</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Inventory, ERP & Analytics Sync</h3>
-                  <span className="wm-dsm-layer__role">Multi-Warehouse & CAPI Tracking</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Real-time multi-channel inventory management, tax compliance (GST), and conversion funnel tracking.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Automated GST invoice generation and accounting sync</li>
-                  <li>Server-side Facebook Conversion API (CAPI) and GA4 e-commerce tracking</li>
-                  <li>Multi-warehouse stock routing and order fulfillment automation</li>
-                  <li>High-concurrency cloud infrastructure ready for massive traffic surges</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+           
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +437,7 @@ const EcommerceServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

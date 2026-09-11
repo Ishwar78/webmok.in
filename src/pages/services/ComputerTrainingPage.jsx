@@ -266,68 +266,7 @@ const ComputerTrainingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Foundational Mastery & Tooling</h3>
-                  <span className="wm-dsm-layer__role">Core Concepts & Modern Setup</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Thorough grounding in software fundamentals, development environments, and industry best practices.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Modern VS Code setup, Terminal mastery, and Git version control</li>
-                  <li>Clean coding standards, semantic HTML5, CSS3, and JavaScript ES6+</li>
-                  <li>Google Ads Manager, GA4, and Search Console account setups</li>
-                  <li>Problem-solving workshops and algorithmic logic development</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Hands-On Real Client Projects</h3>
-                  <span className="wm-dsm-layer__role">Zero Theory, 100% Real Code</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Students work on genuine commercial projects built for live client businesses.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Building responsive full-stack applications with React & Node.js</li>
-                  <li>Managing real Google Ads and Meta budgets under expert supervision</li>
-                  <li>Creating commercial branding portfolios in Figma and Adobe Creative Suite</li>
-                  <li>Collaborative GitHub pull requests and code review sessions</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Interview Mastery & Placement Support</h3>
-                  <span className="wm-dsm-layer__role">Resume, Mock Interviews & Referrals</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Transforming technical capability into lucrative corporate job offers and freelance contracts.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>1-on-1 resume building highlighting live portfolio GitHub links</li>
-                  <li>Rigorous technical mock interviews with senior corporate hiring managers</li>
-                  <li>Direct recruitment partnerships with leading Delhi NCR IT companies</li>
-                  <li>Government-recognized course certification and letter of recommendation</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+            
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +439,7 @@ const ComputerTrainingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+               
               </div>
             </div>
 

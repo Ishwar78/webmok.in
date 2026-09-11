@@ -199,9 +199,7 @@ const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Expert <span>Shopify & WooCommerce</span> Agency
           </h1>
-          <p className="wm-sp-hero-lead">
-            Build high-converting, high-speed Shopify and WooCommerce storefronts with custom Liquid themes, 1-click checkouts, and seamless payment and courier integrations.
-          </p>
+          
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Custom Quote <FaArrowRight />
@@ -266,68 +264,7 @@ const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Custom Theme Engineering</h3>
-                  <span className="wm-dsm-layer__role">Liquid & ACF Block Architecture</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Bespoke storefront design coded from scratch with zero template bloat for maximum mobile speed.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Custom Shopify Liquid and WooCommerce theme code</li>
-                  <li>Sub-second product detail page (PDP) load speeds</li>
-                  <li>Mobile-first responsive thumb-friendly navigation</li>
-                  <li>Brand-aligned typography, colors, and visual micro-interactions</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Checkout & Gateway Acceleration</h3>
-                  <span className="wm-dsm-layer__role">1-Click UPI, COD & Cart Upsells</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Frictionless checkout workflows configured for maximum transaction completion rates.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>1-Click checkout supporting UPI, cards, netbanking & EMI</li>
-                  <li>Automated OTP login and PIN code deliverability checker</li>
-                  <li>Pre-purchase and post-purchase one-click upsells</li>
-                  <li>Automated Cash on Delivery (COD) verification via OTP</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Logistics & Automated Recovery</h3>
-                  <span className="wm-dsm-layer__role">Shiprocket & WhatsApp Automation</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Turnkey courier synchronization and automated multi-channel abandoned cart recovery sequences.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Seamless API sync with Shiprocket, Delhivery, and BlueDart</li>
-                  <li>Automated WhatsApp cart abandonment recovery with discount triggers</li>
-                  <li>Real-time multi-channel inventory and order status tracking</li>
-                  <li>GA4 e-commerce purchase tracking and Facebook CAPI server sync</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+            
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +437,7 @@ const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

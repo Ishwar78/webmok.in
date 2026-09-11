@@ -266,68 +266,7 @@ const ContentMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Topical Authority & Gap Research</h3>
-                  <span className="wm-dsm-layer__role">Semantic Entity Mapping</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Deep competitor keyword gap analysis, search intent mapping, and topic cluster architecture.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Comprehensive competitor keyword gap analysis</li>
-                  <li>Search intent classification: Informational vs Commercial vs Transactional</li>
-                  <li>Hub-and-spoke topical cluster planning</li>
-                  <li>Entity mapping for Google AI Overviews and answer engines (AEO)</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Editorial Craft & Technical SEO</h3>
-                  <span className="wm-dsm-layer__role">High-Impact Human Copywriting</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Expert editorial writing combining compelling brand storytelling with on-page SEO formatting.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>In-depth 2,000+ word authoritative pillar articles and guides</li>
-                  <li>Clear formatting: custom callout boxes, tables, and step-by-step frameworks</li>
-                  <li>Internal linking strategies passing PageRank to commercial service pages</li>
-                  <li>Original infographics, custom charts, and illustrative graphics</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Distribution, Digital PR & CRO</h3>
-                  <span className="wm-dsm-layer__role">Amplification & Lead Capture</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Amplifying content reach across high-authority publications and converting readers into inbound inquiries.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Digital PR outreach securing earned editorial backlinks</li>
-                  <li>Content repurposing into LinkedIn carousels and email newsletters</li>
-                  <li>In-article lead magnets: downloadable checklists, templates & whitepapers</li>
-                  <li>Continuous GA4 engagement tracking and conversion rate optimization</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+            
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +439,7 @@ const ContentMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

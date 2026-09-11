@@ -199,9 +199,7 @@ const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Mobile <span>App Development</span> Company in India
           </h1>
-          <p className="wm-sp-hero-lead">
-            Build intuitive, high-performance iOS and Android mobile apps with native capabilities, fluid 60fps animations, and secure cloud backends engineered by WebMok.
-          </p>
+         
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Custom Quote <FaArrowRight />
@@ -266,68 +264,7 @@ const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Mobile UX & Interactive Wireframes</h3>
-                  <span className="wm-dsm-layer__role">Human Interface & Material Design</span>
-                </div>
-                <p className="wm-dsm-layer__desc">User-centric wireframing strictly adhering to Apple Human Interface Guidelines and Google Material Design 3.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Figma mobile design prototypes with interactive micro-animations</li>
-                  <li>Frictionless onboarding, biometric FaceID/fingerprint login</li>
-                  <li>Intuitive tab-bar navigation and bottom sheet workflows</li>
-                  <li>Dark mode and dynamic screen resolution adaptation</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Native & Flutter Engineering</h3>
-                  <span className="wm-dsm-layer__role">60fps Fluid Performance</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Robust application codebases engineered for speed, low battery drain, and offline-first operation.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>React Native & Flutter for cost-effective cross-platform launch</li>
-                  <li>Native Swift & Kotlin development for hardware-intensive features</li>
-                  <li>Offline SQLite/Realm caching for instant local data access</li>
-                  <li>Camera, GPS, Bluetooth BLE, and hardware sensor integrations</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Backend APIs & App Store Publishing</h3>
-                  <span className="wm-dsm-layer__role">Real-Time Sync & 100% Approval</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Scalable cloud backends, automated push notifications, and guaranteed App Store & Play Store approval.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Scalable REST and WebSocket backends for real-time chat and sync</li>
-                  <li>Firebase Cloud Messaging (FCM) and OneSignal push campaigns</li>
-                  <li>Apple App Store and Google Play Store submission & approval guarantee</li>
-                  <li>App Store Optimization (ASO) for maximum organic installs</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+           
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,7 +437,7 @@ const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
+                {/* <div className="wm-seopk__inc">
                   <h3>Included in Every Plan</h3>
                   <div className="wm-seopk__incg">
                     <span>Dedicated Project Manager</span>
@@ -512,7 +449,7 @@ const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     <span>30-Day Post-Launch Support</span>
                     <span>Direct Solution Architect Access</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 

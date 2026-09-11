@@ -199,9 +199,7 @@ const MarketplaceServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Custom <span>Marketplace Development</span> Agency
           </h1>
-          <p className="wm-sp-hero-lead">
-            Build high-scale multi-vendor marketplaces like Amazon, Airbnb, and Urban Company with automated vendor commission splits, escrow payments, and dedicated vendor portals.
-          </p>
+          
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Custom Quote <FaArrowRight />
@@ -266,68 +264,7 @@ const MarketplaceServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Multi-Role Architecture & Portals</h3>
-                  <span className="wm-dsm-layer__role">Buyer, Vendor & Super-Admin</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Three distinct tailored portal interfaces ensuring frictionless interactions for buyers, vendors, and marketplace operators.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Buyer Storefront with multi-vendor cart and unified checkout</li>
-                  <li>Vendor Self-Service Portal for catalog, inventory & order dispatch</li>
-                  <li>Super-Admin Central Dashboard for commission and payout control</li>
-                  <li>Vendor KYC verification and automated onboarding workflows</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Split Payments & Escrow Payouts</h3>
-                  <span className="wm-dsm-layer__role">Automated Commission Engine</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Automatic splitting of order funds between platform commission and vendor bank accounts.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Stripe Connect & Razorpay Route automated payout splits</li>
-                  <li>Escrow holding periods until delivery confirmation and return window expires</li>
-                  <li>Multi-vendor tax calculation, GST invoicing & TDS compliance</li>
-                  <li>Automated vendor payout statements and financial reporting</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">Real-Time Inventory & Geofencing</h3>
-                  <span className="wm-dsm-layer__role">Hyperlocal Delivery & Scaling</span>
-                </div>
-                <p className="wm-dsm-layer__desc">High-concurrency infrastructure handling real-time multi-warehouse stock reservation and localized vendor matching.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Real-time inventory locks preventing out-of-stock orders</li>
-                  <li>Geofenced vendor discovery matching buyers with closest local sellers</li>
-                  <li>Integrated multi-vendor courier aggregation and return routing</li>
-                  <li>Auto-scaling cloud infrastructure ready for massive flash sales</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+          
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +437,7 @@ const MarketplaceServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

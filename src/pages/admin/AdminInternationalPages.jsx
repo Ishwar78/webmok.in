@@ -534,7 +534,7 @@ const AdminInternationalPages = () => {
             <FaPlus /> Add New International Page
           </button>
 
-          <button
+          {/* <button
             type="button"
             className="wm-intl-btn-reset"
             onClick={handleResetDefaults}
@@ -542,7 +542,7 @@ const AdminInternationalPages = () => {
             title="Restore original 15 default international pages"
           >
             <FaUndoAlt /> Reset 15 Defaults
-          </button>
+          </button> */}
 
           {formData && (
             <a

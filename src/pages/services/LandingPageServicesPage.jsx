@@ -199,9 +199,7 @@ const LandingPageServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             High-Converting <span>Landing Page</span> Development Agency
           </h1>
-          <p className="wm-sp-hero-lead">
-            Turn expensive paid traffic into paying customers with lightning-fast, conversion-optimized landing pages engineered for maximum PPC and lead gen ROAS.
-          </p>
+          
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Custom Quote <FaArrowRight />
@@ -266,68 +264,7 @@ const LandingPageServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </p>
             </div>
 
-            {/* 3-Layer Sequential Strategy Framework */}
-            <section className="wm-dsm-stack">
-              <span className="wm-dsm-stack__eyebrow">Execution Framework</span>
-              <h2 className="wm-dsm-stack__title">Three Sequential Delivery Layers</h2>
-              <p className="wm-dsm-stack__lede">
-                Sustainable digital excellence requires a robust architectural foundation, followed by agile engineering and continuous conversion optimization.
-              </p>
-
-              <div className="wm-dsm-layer wm-dsm-layer--1">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 01</span>
-                  <h3 className="wm-dsm-layer__name">Psychological UX & Copy</h3>
-                  <span className="wm-dsm-layer__role">Hook, Value & Proof Structure</span>
-                </div>
-                <p className="wm-dsm-layer__desc">High-impact value propositions, clear problem-solution framing, and authority proof architecture.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Compelling above-the-fold headline & hero section</li>
-                  <li>Customer pain point agitation & clear solution proof</li>
-                  <li>Social proof badges, client ratings, and video testimonials</li>
-                  <li>Micro-copy addressing buyer objections and warranties</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--2">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 02</span>
-                  <h3 className="wm-dsm-layer__name">Mobile-First Rapid Engineering</h3>
-                  <span className="wm-dsm-layer__role">Zero Friction & Instant Load</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Clean code built for instant rendering without heavy layout shifts or third-party blocking scripts.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Next.js / React or lightweight static HTML5/Tailwind</li>
-                  <li>Sub-second mobile rendering tested across 4G/5G networks</li>
-                  <li>Sticky mobile CTA footer with 1-click call and WhatsApp</li>
-                  <li>Sticky desktop inquiry modal with auto-field population</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-layer wm-dsm-layer--3">
-                <div className="wm-dsm-layer__head">
-                  <span className="wm-dsm-layer__num">LAYER 03</span>
-                  <h3 className="wm-dsm-layer__name">A/B Testing & CRM Webhooks</h3>
-                  <span className="wm-dsm-layer__role">Split Testing & Instant Pipeline</span>
-                </div>
-                <p className="wm-dsm-layer__desc">Continuous split testing of headlines and real-time webhook routing into your sales team CRM.</p>
-                <ul className="wm-dsm-layer__list">
-                  <li>Multi-variant A/B headline and CTA split testing</li>
-                  <li>Real-time webhook sync to HubSpot, Zoho, and Salesforce</li>
-                  <li>Hotjar heatmap analysis and scroll-depth tracking</li>
-                  <li>Server-side Google Tag Manager and Facebook CAPI tracking</li>
-                </ul>
-              </div>
-
-              <div className="wm-dsm-stack__foot">
-                <p>
-                  <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
-                </p>
-                <button type="button" onClick={onOpenEnquiry}>
-                  Talk to a Specialist &rarr;
-                </button>
-              </div>
-            </section>
+          
 
             {/* Client Analytics & Case Studies Grid */}
             <div className="wm-sp-card">
@@ -500,19 +437,7 @@ const LandingPageServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                 </div>
 
-                <div className="wm-seopk__inc">
-                  <h3>Included in Every Plan</h3>
-                  <div className="wm-seopk__incg">
-                    <span>Dedicated Project Manager</span>
-                    <span>Direct WhatsApp & Slack Channel</span>
-                    <span>Transparent Sprint Tracking</span>
-                    <span>Quality Assurance & Testing</span>
-                    <span>Complete Source Code Ownership</span>
-                    <span>Non-Disclosure Agreement (NDA)</span>
-                    <span>30-Day Post-Launch Support</span>
-                    <span>Direct Solution Architect Access</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 
