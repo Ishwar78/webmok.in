@@ -1301,7 +1301,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                   </div>
                   <span className="wm-tab-card-title">{tabTitle}</span>
 
-                  <div className="wm-tab-card-actions">
+                  {/* <div className="wm-tab-card-actions">
                     <a
                       href="tel:8684031003"
                       className="wm-tc-btn wm-tc-call"
@@ -1331,7 +1331,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                     >
                       <FaWhatsapp /> WhatsApp
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               );
             })}

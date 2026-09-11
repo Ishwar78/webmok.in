@@ -1,3 +1,4 @@
+import { useInternationalPageData, formatInternationalPrice } from '../../hooks/useInternationalPageData';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -43,7 +44,7 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const pageData = {
+  const defaultPageData = {
     name: "Toronto Digital Marketing Agency",
     city: "Toronto",
     region: "Greater Toronto Area (GTA), Ontario, Canada",
@@ -310,6 +311,9 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   }
 ]
   };
+
+  const { pageData: dynamicPageData } = useInternationalPageData('toronto-digital-marketing', defaultPageData);
+  const pageData = dynamicPageData || defaultPageData;
 
   return (
     <div className="wm-intl-toronto-page-root">
@@ -615,7 +619,7 @@ const TorontoDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           {/* Pricing Grid */}
           <div className="wm-intl-toronto-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
+              const displayPrice = formatInternationalPrice(plan, currency, pageData);
               return (
                 <div key={i} className={`wm-intl-toronto-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (

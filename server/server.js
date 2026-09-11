@@ -20,6 +20,7 @@ const testimonialRoutes = require('./route/testimonialRoute');
 const videoReviewRoutes = require('./route/videoReviewRoute');
 const creativeShowcaseRoutes = require('./route/creativeShowcaseRoute');
 const videoShowcaseRoutes = require('./route/videoShowcaseRoute');
+const internationalPageRoutes = require('./route/internationalPageRoute');
 
 // Load environment variables from server/.env
 dotenv.config({ path: path.join(__dirname, '.env') });
@@ -60,6 +61,7 @@ app.use('/api/testimonials', testimonialRoutes);
 app.use('/api/video-reviews', videoReviewRoutes);
 app.use('/api/creative-showcase', creativeShowcaseRoutes);
 app.use('/api/video-showcase', videoShowcaseRoutes);
+app.use('/api/international-pages', internationalPageRoutes);
 
 // Root & Health Check Endpoint
 app.get('/', (req, res) => {

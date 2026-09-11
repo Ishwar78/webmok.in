@@ -16,7 +16,8 @@ import {
   FaBoxOpen,
   FaStar,
   FaPalette,
-  FaFilm
+  FaFilm,
+  FaGlobeAmericas
 } from 'react-icons/fa';
 import './AdminSidebar.css';
 
@@ -126,6 +127,17 @@ const AdminSidebar = ({ activeTab, setActiveTab, onLogout, enquiryCount = 6, con
           <FaBoxOpen className="wm-admin-btn-icon" />
           <span>Manage Packages</span>
           <span className="wm-nav-pill-badge wm-pill-blue">CMS</span>
+        </button>
+
+        {/* Dedicated International Geo Pages CMS Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'international-pages' ? 'active' : ''}`}
+          onClick={() => setActiveTab('international-pages')}
+          title="Manage All 15+ International Geo Landing Pages, Packages & Dynamic Content"
+        >
+          <FaGlobeAmericas className="wm-admin-btn-icon" />
+          <span>International Pages</span>
+          <span className="wm-nav-pill-badge wm-pill-purple">15 GEO</span>
         </button>
 
         {/* Dedicated Testimonials Button */}

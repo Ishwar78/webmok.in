@@ -82,6 +82,7 @@ import DubaiDigitalMarketingPage from './pages/international/DubaiDigitalMarketi
 import SouthAfricaDigitalMarketingPage from './pages/international/SouthAfricaDigitalMarketingPage';
 import AustraliaDigitalMarketingPage from './pages/international/AustraliaDigitalMarketingPage';
 import MelbourneDigitalMarketingPage from './pages/international/MelbourneDigitalMarketingPage';
+import InternationalDynamicPage from './pages/international/InternationalDynamicPage';
 
 import Portfolio from './pages/Portfolio';
 import PortfolioDetail from './pages/PortfolioDetail';
@@ -1598,6 +1599,17 @@ function App() {
           path="/international/melbourne-digital-marketing"
           element={
             <MelbourneDigitalMarketingPage
+              onOpenCallMe={() => setIsCallMeOpen(true)}
+              onOpenEnquiry={() => setIsEnquiryOpen(true)}
+            />
+          }
+        />
+
+        {/* Dynamic Fallback for Any Custom / Newly Added International Geo Pages */}
+        <Route
+          path="/international/:slug"
+          element={
+            <InternationalDynamicPage
               onOpenCallMe={() => setIsCallMeOpen(true)}
               onOpenEnquiry={() => setIsEnquiryOpen(true)}
             />

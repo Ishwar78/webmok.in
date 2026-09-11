@@ -9,6 +9,7 @@ import AdminTestimonials from './admin/AdminTestimonials';
 import AdminVideoReviews from './admin/AdminVideoReviews';
 import AdminCreativeShowcase from './admin/AdminCreativeShowcase';
 import AdminVideoShowcase from './admin/AdminVideoShowcase';
+import AdminInternationalPages from './admin/AdminInternationalPages';
 
 const API_BASE = 'http://localhost:5005/api';
 import {
@@ -5146,6 +5147,11 @@ const AdminDashboard = () => {
             TAB 14: VIDEO SHOWCASE & COMMERCIAL FILMS CMS
            ========================================================================= */}
         {activeTab === 'video-showcase' && <AdminVideoShowcase />}
+
+        {/* =========================================================================
+            TAB 15: INTERNATIONAL GEO-TARGETED PAGES CMS
+           ========================================================================= */}
+        {activeTab === 'international-pages' && <AdminInternationalPages />}
 
         {/* =========================================================================
             POPUP MODAL: VIEW FULL INQUIRY / CONTACT DETAILS

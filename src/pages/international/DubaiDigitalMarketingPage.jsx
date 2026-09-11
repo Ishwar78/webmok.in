@@ -1,3 +1,4 @@
+import { useInternationalPageData, formatInternationalPrice } from '../../hooks/useInternationalPageData';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -43,7 +44,7 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const pageData = {
+  const defaultPageData = {
     name: "Digital Marketing Agency in Dubai, UAE",
     city: "Dubai",
     region: "Dubai & United Arab Emirates (UAE)",
@@ -310,6 +311,9 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   }
 ]
   };
+
+  const { pageData: dynamicPageData } = useInternationalPageData('dubai-digital-marketing', defaultPageData);
+  const pageData = dynamicPageData || defaultPageData;
 
   return (
     <div className="wm-intl-dubai-page-root">
@@ -615,7 +619,7 @@ const DubaiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           {/* Pricing Grid */}
           <div className="wm-intl-dubai-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
+              const displayPrice = formatInternationalPrice(plan, currency, pageData);
               return (
                 <div key={i} className={`wm-intl-dubai-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (

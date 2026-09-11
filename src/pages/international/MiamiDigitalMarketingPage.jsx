@@ -1,3 +1,4 @@
+import { useInternationalPageData, formatInternationalPrice } from '../../hooks/useInternationalPageData';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -43,7 +44,7 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const pageData = {
+  const defaultPageData = {
     name: "Miami Digital Marketing Agency",
     city: "Miami",
     region: "Florida, USA",
@@ -314,6 +315,9 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
   }
 ]
   };
+
+  const { pageData: dynamicPageData } = useInternationalPageData('miami-digital-marketing', defaultPageData);
+  const pageData = dynamicPageData || defaultPageData;
 
   return (
     <div className="wm-intl-miami-page-root">
@@ -619,7 +623,7 @@ const MiamiDigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           {/* Pricing Grid */}
           <div className="wm-intl-miami-cards-grid">
             {pageData.plans.map((plan, i) => {
-              const displayPrice = currency === 'INR' ? `₹${plan.inrPrice}` : currency === 'EUR' ? `€${Math.round(plan.usdPrice * 0.92)}` : currency === 'GBP' ? `£${Math.round(plan.usdPrice * 0.79)}` : currency === 'AED' ? `AED ${Math.round(plan.usdPrice * 3.67)}` : currency === 'AUD' ? `A$${Math.round(plan.usdPrice * 1.52)}` : currency === 'CAD' ? `C$${Math.round(plan.usdPrice * 1.36)}` : `$${plan.usdPrice}`;
+              const displayPrice = formatInternationalPrice(plan, currency, pageData);
               return (
                 <div key={i} className={`wm-intl-miami-card ${plan.highlight ? 'popular' : ''}`}>
                   {plan.highlight && (

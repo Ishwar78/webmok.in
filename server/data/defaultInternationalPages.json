@@ -1,0 +1,4131 @@
+[
+  {
+    "slug": "australia-digital-marketing",
+    "name": "Australia Digital Marketing Agency",
+    "city": "Australia",
+    "region": "Australia Nationwide",
+    "country": "Australia",
+    "currency": "AUD",
+    "currencySymbol": "A$",
+    "tagline": "NATIONAL DIGITAL MARKETING AGENCY · AUSTRALIA",
+    "heroHighlight": "Australia Digital Marketing & SEO Agency",
+    "heroItalic": "Accelerate Nationwide Australian Growth with",
+    "leadDesc": "Scale across Sydney, Melbourne, Brisbane, Perth, and Adelaide with high-velocity Australian SEO, precision Google Ads, and high-conversion web development.",
+    "bodyDesc": "We help Australian businesses build dominant digital pipelines, rank #1 on Google.com.au, and capture high-intent commercial buyers throughout the country.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "430%",
+        "label": "Average Australia Traffic Growth"
+      },
+      {
+        "num": "5.8x",
+        "label": "Average ROAS on Paid Media"
+      },
+      {
+        "num": "100+",
+        "label": "Australian Brands Scaled"
+      },
+      {
+        "num": "100%",
+        "label": "Privacy Act 1988 Compliant"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "Australian National & State SEO",
+        "desc": "Dominating Google.com.au search results across NSW, Victoria, Queensland, and WA with technical SEO and Australian citation networks."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "High-ROAS Google Ads (PPC)",
+        "desc": "Precision search funnels, Performance Max campaigns, and Google Shopping optimization designed for Australian consumer purchasing habits."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Paid Social Advertising (Meta & TikTok)",
+        "desc": "Hyper-targeted Meta, TikTok, and LinkedIn campaigns engaging Australian consumers and business decision-makers."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Australian Digital PR & Content",
+        "desc": "Building national authority with localized content hubs, Australian business citations, and editorial outreach to prominent Australian media."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "High-Speed Web Architecture",
+        "desc": "Speed-optimized, mobile-first websites built for sub-second load times, Core Web Vitals excellence, and maximum conversion rates."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Commercial Video & Creative Production",
+        "desc": "Studio-grade video ads, lifestyle storytelling, and commercial creative assets crafted specifically for Australian audiences."
+      }
+    ],
+    "whyHireOutsideTitle": "The Australian Growth Advantage with Webmok",
+    "whyHireOutsideSubtitle": "SYDNEY & MELBOURNE QUALITY · AGILE VALUE",
+    "whyHireDesc1": "Australian agencies in Sydney and Melbourne carry massive CBD overhead, charging A$9,000–A$22,000/month while operating with slow turnaround times and rigid long-term contracts.",
+    "whyHireDesc2": "Webmok provides dedicated senior growth engineers, AEST timezone alignment, and rapid sprint cycles at a high-ROI, value-driven investment.",
+    "comparisonPoints": [
+      {
+        "feature": "Senior Account Attention",
+        "local": "Junior Account Managers",
+        "webmok": "Dedicated Senior Growth Directors"
+      },
+      {
+        "feature": "Monthly Retainer Cost",
+        "local": "A$9,000 – A$22,000 / month",
+        "webmok": "From A$1,200 – A$4,560 / month (High ROI)"
+      },
+      {
+        "feature": "Contract Commitment",
+        "local": "Mandatory 6-12 Month Lock-In",
+        "webmok": "100% Flexible Month-to-Month"
+      },
+      {
+        "feature": "Sprint Turnaround",
+        "local": "Slow 2-3 Week Cycles",
+        "webmok": "48-72 Hour Agile Sprint Cycles"
+      },
+      {
+        "feature": "Data & Telemetry",
+        "local": "Generic PDF Monthly Summaries",
+        "webmok": "Live 24/7 Real-Time Revenue Dashboards"
+      }
+    ],
+    "resultsTitle": "Australian Performance Telemetry",
+    "resultsSubtitle": "VERIFIABLE AUSTRALIAN RESULTS",
+    "resultsStats": [
+      {
+        "metric": "100+",
+        "label": "Australian Brands Scaled to Page 1"
+      },
+      {
+        "metric": "A$26M+",
+        "label": "Tracked Pipeline Revenue Generated"
+      },
+      {
+        "metric": "99.4%",
+        "label": "Australian Client Satisfaction Rate"
+      },
+      {
+        "metric": "24/7",
+        "label": "AEST Timezone Strategic Support"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Marketing in Australia",
+    "marketInsightsSubtitle": "AUSTRALIAN DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "High Smartphone & Mobile Search Adoption",
+        "desc": "Over 78% of Australian consumer searches happen on mobile devices. Fast click-to-call mobile landing pages convert 45% higher."
+      },
+      {
+        "title": "Distinct State & City Demographics",
+        "desc": "Sydney leads in financial services, Melbourne in retail/culture, Brisbane in lifestyle/property, and Perth in resources and engineering."
+      },
+      {
+        "title": "Strict Australian Privacy Principles (APP)",
+        "desc": "We implement compliant opt-in systems and privacy architectures adhering to the Privacy Act 1988 and Spam Act 2003."
+      },
+      {
+        "title": "High Search Intent on Google.com.au",
+        "desc": "Capturing Australian searchers requires localized .com.au domain signals, Australian directory citations, and localized schema markup."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "Australian Search & Market Audit",
+        "desc": "Analyzing search volume and competitor penetration across Sydney, Melbourne, and Brisbane."
+      },
+      {
+        "num": "02",
+        "title": "National Search Architecture",
+        "desc": "Configuring multi-state landing pages, Australian schema markup, and Google Business Profiles."
+      },
+      {
+        "num": "03",
+        "title": "Omni-Channel Campaign Launch",
+        "desc": "Deploying high-intent Google Ads, Australian digital PR outreach, and targeted social campaigns."
+      },
+      {
+        "num": "04",
+        "title": "CRO & Revenue Attribution",
+        "desc": "Optimizing conversion funnels, tracking pipeline ROI, and scaling Australian market share."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaBriefcase",
+        "name": "Financial, Mining & Corporate Services",
+        "desc": "Capturing corporate clients, institutional investors, and B2B engineering contracts."
+      },
+      {
+        "icon": "FaBuilding",
+        "name": "Real Estate & Property Development",
+        "desc": "Dominating buyer acquisition for luxury homes and commercial developments across Australia."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Private Medical & Healthcare",
+        "desc": "Patient acquisition for dental, medical, and specialized healthcare practices."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "E-Commerce & National Retail",
+        "desc": "Scaling Shopify and custom storefronts with profitable Google Shopping and Meta ads."
+      },
+      {
+        "icon": "FaUtensils",
+        "name": "Tourism & Hospitality",
+        "desc": "Driving domestic and international tourist bookings across premier Australian destinations."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "name": "Tech Startups & B2B SaaS",
+        "desc": "Driving ARR growth and corporate demo requests across Sydney and Melbourne tech hubs."
+      }
+    ],
+    "plans": [
+      {
+        "name": "Australia Growth Core",
+        "badge": "City Focus",
+        "usdPrice": "799",
+        "inrPrice": "64,999",
+        "desc": "Ideal for local Australian businesses establishing dominant visibility in a specific capital city market.",
+        "features": [
+          "Up to 20 High-Intent Australian Keywords",
+          "Google Business Profile Geo-Optimization",
+          "Australian Citations & TrueLocal Listings",
+          "On-Page SEO & Content Tuning (4 Pages/mo)",
+          "Monthly Executive ROI Report",
+          "Dedicated AEST Account Director"
+        ]
+      },
+      {
+        "name": "Australia Multi-State",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,499",
+        "inrPrice": "1,19,999",
+        "desc": "Comprehensive multi-city campaign combining national Australian SEO, Google Ads management, and conversion rate optimization.",
+        "features": [
+          "Up to 45 Multi-State Australian Keywords",
+          "Google Ads (PPC) Campaign Management",
+          "Multi-City Landing Page Architecture",
+          "High-Authority Content Marketing (6 Posts/mo)",
+          "Competitor Backlink Interception",
+          "Bi-Weekly Live Strategy Sessions"
+        ]
+      },
+      {
+        "name": "Australia National Monopoly",
+        "badge": "National Dominance",
+        "usdPrice": "2,999",
+        "inrPrice": "2,44,999",
+        "desc": "Full-scale nationwide market takeover for Australian national brands, franchise networks, and enterprise e-commerce.",
+        "features": [
+          "Australia Nationwide Keyword Domination (100+ Keywords)",
+          "Omni-Channel PPC (Google, Meta, LinkedIn)",
+          "Custom High-Converting Web Redesign",
+          "Tier-1 Australian Media PR & Backlinks",
+          "Dedicated Account Squad & Daily Slack Channel",
+          "Custom Multi-Touch Attribution Modeling"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok scaled our commercial property firm across Sydney and Melbourne. Our inbound qualified lead volume grew by 280%.",
+        "author": "Lachlan T.",
+        "role": "Managing Partner",
+        "company": "Australian National Property Group",
+        "rating": 5
+      },
+      {
+        "quote": "Their SEO and Google Ads team put our e-commerce store at the top of Google.com.au for our primary product lines.",
+        "author": "Mitchell K.",
+        "role": "Head of Growth",
+        "company": "Australian Lifestyle Retail Brand",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why should an Australian business choose Webmok over local Sydney/Melbourne agencies?",
+        "a": "Webmok delivers senior-level agency execution without bloated Australian CBD overhead. You work directly with dedicated AEST-timezone directors focused on measurable pipeline revenue."
+      },
+      {
+        "q": "How fast can our Australian business expect to see Google ranking improvements?",
+        "a": "Local Google Maps optimizations and high-intent PPC campaigns generate leads within 14 to 30 days. Broad organic SEO keywords achieve page #1 breakthroughs in 60 to 90 days."
+      },
+      {
+        "q": "Are your marketing practices compliant with the Privacy Act 1988?",
+        "a": "Yes, 100%. All tracking, lead forms, and data handling are strictly architected to comply with Australian Privacy Principles (APPs) and the Spam Act 2003."
+      },
+      {
+        "q": "What is the contract term?",
+        "a": "All our Australian digital marketing packages operate on flexible month-to-month agreements with zero lock-in."
+      }
+    ],
+    "status": "Active",
+    "order": 1
+  },
+  {
+    "slug": "canada-digital-marketing",
+    "name": "Canada Digital Marketing Agency",
+    "city": "Canada",
+    "region": "Canada Nationwide",
+    "country": "Canada",
+    "currency": "CAD",
+    "currencySymbol": "C$",
+    "tagline": "NATIONAL DIGITAL MARKETING AGENCY · CANADA",
+    "heroHighlight": "Canada Digital Marketing & SEO Agency",
+    "heroItalic": "Accelerate Nationwide Canadian Revenue with",
+    "leadDesc": "Scale your Canadian business nationwide with bilingual SEO, Google Ads, and custom conversion funnels engineered for the Canadian market.",
+    "bodyDesc": "Covering Ontario, British Columbia, Alberta, Quebec, and beyond—Webmok delivers compliant, high-performing digital marketing that captures Canadian search intent.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "390%",
+        "label": "Average Canada Traffic Lift"
+      },
+      {
+        "num": "5.5x",
+        "label": "Average ROAS on Google Ads"
+      },
+      {
+        "num": "90+",
+        "label": "Canadian Brands Scaled"
+      },
+      {
+        "num": "100%",
+        "label": "PIPEDA & CASL Compliant"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "National & Provincial Canada SEO",
+        "desc": "Dominating organic search across all 10 provinces with bilingual keyword optimization (English/French) and local Google 3-Pack authority."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "Canadian Google Ads (PPC)",
+        "desc": "High-intent search, Shopping, and Local Services Ads optimized for Canadian consumer purchasing habits and provincial taxation nuances."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Paid Social & Community Ads",
+        "desc": "Meta, TikTok, and LinkedIn funnels targeted specifically to major Canadian metropolitan centers (GTA, Vancouver Metro, Montreal, Calgary)."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Canadian Editorial PR & Content",
+        "desc": "Building national authority with localized content hubs, Canadian business citations, and editorial outreach to prominent Canadian media."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "PIPEDA-Compliant Web Engineering",
+        "desc": "Speed-optimized, accessible websites fully compliant with PIPEDA, CASL anti-spam laws, and bilingual language requirements."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Creative Video & Brand Assets",
+        "desc": "High-production visual storytelling and commercial video ads that resonate with Canadian cultural values and regional markets."
+      }
+    ],
+    "whyHireOutsideTitle": "The Canadian Growth Advantage with Webmok",
+    "whyHireOutsideSubtitle": "COAST-TO-COAST VALUE",
+    "whyHireDesc1": "Canadian agencies in Toronto and Vancouver charge steep retainer fees while operating with slow turnaround times and rigid long-term contracts.",
+    "whyHireDesc2": "Webmok delivers senior-level digital marketing execution, bilingual capabilities, and timezone-aligned support at a high-ROI price point.",
+    "comparisonPoints": [
+      {
+        "feature": "National Coverage",
+        "local": "Often City-Specific Only",
+        "webmok": "Full 10-Province Search & Media Scaling"
+      },
+      {
+        "feature": "Bilingual Execution",
+        "local": "Additional Expensive Translation Fees",
+        "webmok": "Native English & French Funnels Included"
+      },
+      {
+        "feature": "Monthly Investment",
+        "local": "C$7,000 – C$15,000 / month",
+        "webmok": "From C$1,080 – C$4,080 / month"
+      },
+      {
+        "feature": "Compliance",
+        "local": "Basic Privacy Disclaimers",
+        "webmok": "Strict PIPEDA & CASL Privacy Compliance"
+      },
+      {
+        "feature": "Contracts",
+        "local": "6-12 Month Mandatory Lock-In",
+        "webmok": "Flexible Month-to-Month Agreements"
+      }
+    ],
+    "resultsTitle": "Canadian Performance Telemetry",
+    "resultsSubtitle": "VERIFIABLE NATIONAL RESULTS",
+    "resultsStats": [
+      {
+        "metric": "90+",
+        "label": "Canadian Brands Scaled Coast-to-Coast"
+      },
+      {
+        "metric": "C$22M+",
+        "label": "Client Revenue Pipeline Generated"
+      },
+      {
+        "metric": "99.2%",
+        "label": "Canadian Client Retention Rate"
+      },
+      {
+        "metric": "24/7",
+        "label": "Timezone-Aligned Strategic Support"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Marketing Across Canada",
+    "marketInsightsSubtitle": "CANADIAN DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "Geographic Density Clustering",
+        "desc": "Over 70% of Canada’s population lives within 100km of the US border. We focus ad spend on dense urban corridors to maximize ROI."
+      },
+      {
+        "title": "Bilingual Language Regulations in Quebec",
+        "desc": "Marketing in Quebec requires strict French language adherence and cultural localization. We build tailored francophone landing pages."
+      },
+      {
+        "title": "High Mobile & Cross-Border Commerce",
+        "desc": "Canadians conduct extensive online comparison research before buying. Clear shipping terms and transparent Canadian pricing convert 40% better."
+      },
+      {
+        "title": "Strict CASL Anti-Spam Compliance",
+        "desc": "Canadian anti-spam laws carry strict penalties. We engineer compliant opt-in lead funnels and automated double-opt-in workflows."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "National Search & Geo Audit",
+        "desc": "Analyzing search intent and competitor positioning across Ontario, BC, Alberta, and Quebec."
+      },
+      {
+        "num": "02",
+        "title": "Bilingual Architecture Blueprint",
+        "desc": "Setting up multi-province landing pages, provincial schema, and Google Business Profiles."
+      },
+      {
+        "num": "03",
+        "title": "Omni-Channel Campaign Launch",
+        "desc": "Deploying high-intent Google Ads, localized social funnels, and Canadian content hubs."
+      },
+      {
+        "num": "04",
+        "title": "Attribution & National Scaling",
+        "desc": "Tracking conversion volume per province, optimizing ad bids, and scaling revenue."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaBuilding",
+        "name": "Real Estate & Development",
+        "desc": "Capturing buyers and investors across Toronto, Vancouver, Calgary, and Montreal."
+      },
+      {
+        "icon": "FaBriefcase",
+        "name": "B2B & Professional Services",
+        "desc": "Generating corporate client inquiries for accounting, legal, and engineering firms."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Healthcare & Specialized Clinics",
+        "desc": "Patient acquisition for private dental, physiotherapy, and medical specialists."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "E-Commerce & National Retail",
+        "desc": "Scaling Shopify Canada and direct-to-consumer nationwide sales channels."
+      },
+      {
+        "icon": "FaUtensils",
+        "name": "Hospitality & Tourism",
+        "desc": "Promoting premier Canadian resort destinations, dining, and travel experiences."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "name": "Canadian Tech Startups & SaaS",
+        "desc": "Driving user acquisition in the Toronto-Waterloo tech corridor and Vancouver hub."
+      }
+    ],
+    "plans": [
+      {
+        "name": "Canada Growth Core",
+        "badge": "City Focus",
+        "usdPrice": "799",
+        "inrPrice": "64,999",
+        "desc": "Ideal for local Canadian service businesses targeting a specific city market like Toronto, Vancouver, or Calgary.",
+        "features": [
+          "Up to 20 High-Intent Canadian Keywords",
+          "Google Business Profile Geo-Optimization",
+          "Canadian Local Citations & YellowPages Listings",
+          "On-Page SEO & Content Tuning (4 Pages/mo)",
+          "Monthly Executive ROI Report",
+          "Dedicated Canadian Account Director"
+        ]
+      },
+      {
+        "name": "Canada Multi-Province",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,499",
+        "inrPrice": "1,19,999",
+        "desc": "Comprehensive multi-city campaign combining national SEO, Google Ads management, and conversion rate optimization.",
+        "features": [
+          "Up to 45 Multi-Province Keywords",
+          "Google Ads (PPC) Campaign Management",
+          "Multi-City Landing Page Architecture",
+          "High-Authority Content Marketing (6 Posts/mo)",
+          "Competitor Backlink Interception",
+          "Bi-Weekly Live Strategy Sessions"
+        ]
+      },
+      {
+        "name": "Canada National Monopoly",
+        "badge": "National Dominance",
+        "usdPrice": "2,999",
+        "inrPrice": "2,44,999",
+        "desc": "Full-scale nationwide market takeover for Canadian national brands, franchise networks, and enterprise e-commerce.",
+        "features": [
+          "Coast-to-Coast Keyword Domination (100+ Keywords)",
+          "Omni-Channel PPC (Google, Meta, LinkedIn)",
+          "Bilingual English/French Optimization Available",
+          "Tier-1 Canadian Media PR & Backlinks",
+          "Dedicated Account Squad & Daily Slack Channel",
+          "Custom Multi-Touch Attribution Modeling"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok expanded our Canadian legal practice nationwide. We now generate inbound corporate inquiries from Ontario, Alberta, and BC daily.",
+        "author": "Robert P.",
+        "role": "Managing Partner",
+        "company": "Canadian National Commercial Law",
+        "rating": 5
+      },
+      {
+        "quote": "Their bilingual campaign execution opened up the Quebec market for our e-commerce brand, boosting our overall Canadian revenue by 180%.",
+        "author": "Marc L.",
+        "role": "Director of Growth",
+        "company": "Montreal Retail Brand",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can Webmok handle bilingual marketing campaigns in both English and French?",
+        "a": "Yes! We create culturally resonant, native French content and landing pages for Quebec alongside national English campaigns across the other provinces."
+      },
+      {
+        "q": "Are your marketing practices compliant with PIPEDA and CASL?",
+        "a": "Yes, 100%. All tracking, lead forms, and automated communications are strictly architected to adhere to Canadian privacy and anti-spam legislation."
+      },
+      {
+        "q": "How do you coordinate with Canadian timezones (EST to PST)?",
+        "a": "We have dedicated account squads covering Eastern (Toronto), Central (Calgary), and Pacific (Vancouver) business hours."
+      },
+      {
+        "q": "What is the contract term?",
+        "a": "All our Canadian digital marketing packages are flexible month-to-month agreements with zero mandatory lock-ins."
+      }
+    ],
+    "status": "Active",
+    "order": 2
+  },
+  {
+    "slug": "dubai-digital-marketing",
+    "name": "Digital Marketing Agency in Dubai, UAE",
+    "city": "Dubai",
+    "region": "Dubai & United Arab Emirates (UAE)",
+    "country": "United Arab Emirates",
+    "currency": "AED",
+    "currencySymbol": "AED ",
+    "tagline": "PREMIER DUBAI DIGITAL MARKETING AGENCY · UAE",
+    "heroHighlight": "Dubai Digital Marketing Agency",
+    "heroItalic": "Accelerate High-Yield UAE Growth with",
+    "leadDesc": "Scale your UAE business with high-precision bilingual SEO, Google Ads, Meta/TikTok campaigns, and luxury conversion funnels built for Dubai’s dynamic commercial economy.",
+    "bodyDesc": "From Downtown Dubai and DIFC financial hubs to Business Bay, Marina, and Free-Zone enterprises—Webmok engineers dominant digital growth across the Emirates.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "480%",
+        "label": "Average Dubai Traffic Surge"
+      },
+      {
+        "num": "6.4x",
+        "label": "Average ROAS on Paid Media"
+      },
+      {
+        "num": "95+",
+        "label": "UAE Brands Scaled"
+      },
+      {
+        "num": "100%",
+        "label": "Bilingual Arabic & English"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "Bilingual Dubai SEO & Google Maps",
+        "desc": "Dominating organic search across English and Arabic queries in Dubai, Abu Dhabi, and Sharjah with localized entity SEO and Google 3-Pack rankings."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "High-ROAS Google Ads & Performance Max",
+        "desc": "Precision search funnels, YouTube ads, and Performance Max campaigns optimized to capture high-net-worth UAE buyers and corporate decision-makers."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Social Media & TikTok / Meta Campaigns",
+        "desc": "High-impact visual creative, Arabic/English social ad scaling, and influencer integration built for the UAE’s ultra-high social engagement rates."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Digital PR & Middle East Content Hubs",
+        "desc": "Authoritative content marketing and digital PR placements in leading Gulf publications (Gulf News, Khaleej Times, Arabian Business)."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "High-Converting Luxury Web Design",
+        "desc": "Speed-optimized, mobile-first websites built for luxury aesthetic standards, multi-currency transactions, and frictionless lead conversion."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Commercial Video & 3D Visuals",
+        "desc": "Studio-grade video production, drone footage, and luxury lifestyle animations tailored for the UAE’s premium marketplace."
+      }
+    ],
+    "whyHireOutsideTitle": "Why UAE Brands Partner with Webmok",
+    "whyHireOutsideSubtitle": "DUBAI VELOCITY · AGILE PRICING",
+    "whyHireDesc1": "Dubai agencies in Business Bay and Media City charge astronomical fees (AED 25,000–60,000/mo) driven by massive local overhead, while operating with slow turnaround times.",
+    "whyHireDesc2": "Webmok delivers Fortune-500 technical execution, Gulf timezone alignment, native bilingual capability, and rapid sprint cycles at a transparent, high-ROI investment model.",
+    "comparisonPoints": [
+      {
+        "feature": "Bilingual English/Arabic",
+        "local": "Often Extra Translation Cost",
+        "webmok": "Native Dual-Language Funnels Included"
+      },
+      {
+        "feature": "Monthly Retainer Cost",
+        "local": "AED 25,000 – AED 60,000 / month",
+        "webmok": "From AED 2,930 – AED 11,000 / month (3x-5x ROI)"
+      },
+      {
+        "feature": "Contract Terms",
+        "local": "Mandatory 1-Year Lock-In",
+        "webmok": "100% Flexible Month-to-Month"
+      },
+      {
+        "feature": "Sprint Speed",
+        "local": "Slow 2-3 Week Approvals",
+        "webmok": "48-72 Hour High-Velocity Sprints"
+      },
+      {
+        "feature": "Telemetry & Attribution",
+        "local": "Vanity Impressions & Reach",
+        "webmok": "Direct Revenue, Lead Quality & ROAS Attribution"
+      }
+    ],
+    "resultsTitle": "Dubai & UAE Performance Telemetry",
+    "resultsSubtitle": "VERIFIABLE UAE RESULTS",
+    "resultsStats": [
+      {
+        "metric": "95+",
+        "label": "UAE Brands Scaled to Page 1"
+      },
+      {
+        "metric": "AED 38M+",
+        "label": "Tracked Client Revenue Generated"
+      },
+      {
+        "metric": "99.5%",
+        "label": "UAE Client Satisfaction Rate"
+      },
+      {
+        "metric": "24/7",
+        "label": "GST (Gulf Standard Time) Support"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Marketing in the UAE",
+    "marketInsightsSubtitle": "MIDDLE EAST DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "Search Happens in Two Languages, Unevenly",
+        "desc": "High-intent B2B and luxury real estate searches happen predominantly in English, while consumer, government, and regional commerce heavily utilize Arabic."
+      },
+      {
+        "title": "Free-Zone Business Setup Cycles",
+        "desc": "Over 40% of commercial inquiries in Dubai relate to free-zone company setup, corporate banking, and residency. We build specialized B2B funnels."
+      },
+      {
+        "title": "The Annual Calendar Moves the Market",
+        "desc": "Ramadan, Eid, Gitex, and the Dubai Shopping Festival dramatically shift consumer search behavior. We dynamically scale campaigns around seasonal peaks."
+      },
+      {
+        "title": "High Dependency on WhatsApp Conversions",
+        "desc": "Over 85% of Dubai leads prefer immediate communication via WhatsApp. We integrate direct WhatsApp conversion triggers into every landing page."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "Gulf Market & Keyword Audit",
+        "desc": "Analyzing English and Arabic search volume, competitor ad strategies, and free-zone commercial funnels."
+      },
+      {
+        "num": "02",
+        "title": "Bilingual Architecture Blueprint",
+        "desc": "Setting up dual-language landing pages, schema markup, and Google Business Profiles."
+      },
+      {
+        "num": "03",
+        "title": "Omni-Channel Execution Sprints",
+        "desc": "Deploying high-intent Google Search ads, Meta/TikTok social funnels, and digital PR outreach."
+      },
+      {
+        "num": "04",
+        "title": "CRO & Revenue Attribution",
+        "desc": "Optimizing WhatsApp lead flows, tracking ROAS, and scaling revenue across the Emirates."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaBuilding",
+        "name": "Real Estate & Luxury Property",
+        "desc": "Capturing international luxury property investors and off-plan buyers across Dubai."
+      },
+      {
+        "icon": "FaBriefcase",
+        "name": "Corporate Services & Free-Zone Setup",
+        "desc": "Generating high-value business setup leads, banking inquiries, and corporate retainers."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Aesthetic Medicine & Wellness Clinics",
+        "desc": "Patient acquisition for cosmetic surgery, dental clinics, and wellness centers in Dubai."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "Luxury E-Commerce & Retail",
+        "desc": "Scaling Shopify and custom storefronts with profitable Google Shopping and TikTok ads."
+      },
+      {
+        "icon": "FaUtensils",
+        "name": "Hospitality, Dining & Nightlife",
+        "desc": "Driving reservations and viral buzz for premier Dubai dining and luxury venues."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "name": "FinTech, Web3 & Tech Startups",
+        "desc": "Accelerating user acquisition and venture growth in the DIFC innovation hub."
+      }
+    ],
+    "plans": [
+      {
+        "name": "Dubai Starter Scale",
+        "badge": "Local Traction",
+        "usdPrice": "799",
+        "inrPrice": "64,999",
+        "desc": "Ideal for local Dubai service providers, clinics, and boutique firms seeking dominant Google Maps and search visibility.",
+        "features": [
+          "Up to 20 High-Intent Dubai Keywords",
+          "Google Business Profile Dubai Optimization",
+          "Local UAE Citations & Directory Listings",
+          "On-Page SEO & Content Tuning (4 Pages/mo)",
+          "Monthly Executive ROI Report",
+          "Dedicated Gulf Timezone Account Lead"
+        ]
+      },
+      {
+        "name": "Dubai Accelerator",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,499",
+        "inrPrice": "1,19,999",
+        "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and bilingual content marketing.",
+        "features": [
+          "Up to 50 UAE & Gulf Keywords",
+          "Google Ads & Meta Ads Management ($4k spend)",
+          "Bilingual English/Arabic Landing Pages",
+          "High-Authority Content Marketing (6 Posts/mo)",
+          "Competitor Backlink Interception",
+          "Bi-Weekly Live Strategic Consultation"
+        ]
+      },
+      {
+        "name": "Dubai Enterprise Monopoly",
+        "badge": "Category Leader",
+        "usdPrice": "2,999",
+        "inrPrice": "2,44,999",
+        "desc": "Full-scale market dominance for real estate developers, free-zone corporate networks, and enterprise brands.",
+        "features": [
+          "UAE & GCC Regional Keyword Domination",
+          "Omni-Channel PPC (Google, Meta, TikTok, LinkedIn)",
+          "Custom High-Converting Web Redesign",
+          "Tier-1 Middle East Media PR & Backlinks",
+          "Dedicated Account Squad & Daily Slack Channel",
+          "Direct WhatsApp Conversion & CRM Integration"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok transformed our real estate lead generation in Dubai. We closed over AED 14M in luxury property sales within 5 months of launching our Google and Meta ad funnels.",
+        "author": "Tariq A.",
+        "role": "Managing Partner",
+        "company": "Dubai Luxury Real Estate Brokerage",
+        "rating": 5
+      },
+      {
+        "quote": "Their bilingual English and Arabic campaigns generated a 320% surge in business setup inquiries for our free-zone consultancy.",
+        "author": "Zaid K.",
+        "role": "CEO",
+        "company": "UAE Corporate Services Group",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why should a Dubai business choose Webmok over local agencies charging AED 40,000+/mo?",
+        "a": "Webmok delivers senior-level agency execution at an agile, value-driven investment without bloated local overhead. You work directly with dedicated Gulf-timezone directors focused on measurable revenue."
+      },
+      {
+        "q": "Do you offer bilingual English and Arabic digital marketing campaigns?",
+        "a": "Yes! We craft complete dual-language campaigns with native Arabic and English copy, localized search keywords, and high-converting landing pages."
+      },
+      {
+        "q": "How do you integrate WhatsApp lead capture for Dubai campaigns?",
+        "a": "We configure click-to-WhatsApp automated triggers, direct ad extensions, and CRM webhooks so your sales team connects with prospects within seconds."
+      },
+      {
+        "q": "What is the contract term?",
+        "a": "All our Dubai digital marketing packages operate on flexible month-to-month agreements with zero lock-in."
+      }
+    ],
+    "status": "Active",
+    "order": 3
+  },
+  {
+    "slug": "europe-digital-marketing",
+    "name": "Europe Digital Marketing Agency",
+    "city": "Europe",
+    "region": "European Union & Continental Europe",
+    "country": "Europe",
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "tagline": "CONTINENTAL EUROPEAN DIGITAL AGENCY · EU",
+    "heroHighlight": "Europe Digital Marketing Agency",
+    "heroItalic": "Accelerate Pan-European Market Expansion with",
+    "leadDesc": "Scale across Germany, France, Netherlands, Nordics, and Spain with GDPR-compliant multi-lingual SEO, precision Google Ads, and high-conversion web development.",
+    "bodyDesc": "We help European enterprises build dominant cross-border digital pipelines, rank on page 1 across multiple language markets, and scale revenue across the EU single market.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "410%",
+        "label": "Average EU Client Traffic Growth"
+      },
+      {
+        "num": "5.6x",
+        "label": "Average ROAS on Paid Media"
+      },
+      {
+        "num": "85+",
+        "label": "Pan-European Brands Scaled"
+      },
+      {
+        "num": "100%",
+        "label": "GDPR & ePrivacy Compliant"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "Multi-Lingual Pan-European SEO",
+        "desc": "Targeted keyword dominance across English, German, French, Dutch, and Spanish search engines with hreflang international SEO architecture."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "Precision Google Ads & Shopping",
+        "desc": "Cross-border PPC funnels, Performance Max campaigns, and localized shopping ads optimized for EU consumer purchasing behaviors."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Pan-European Social Ads (Meta & LinkedIn)",
+        "desc": "B2B LinkedIn ABM funnels and localized Meta/TikTok ad campaigns engaging buyers across major European business centers."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Multi-Language Content & Digital PR",
+        "desc": "Native-speaker content hubs and authoritative digital PR outreach earning high-DA backlinks from leading European media outlets."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "GDPR-Compliant Web Engineering",
+        "desc": "Lightning-fast, mobile-first web platforms built with server-side cookie consent, zero tracking leaks, and sub-second load speeds."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Visual Storytelling & Video Ads",
+        "desc": "Studio-grade video production and commercial creative assets crafted for Europe’s diverse cultural and aesthetic standards."
+      }
+    ],
+    "whyHireOutsideTitle": "The Cross-Border European Advantage with Webmok",
+    "whyHireOutsideSubtitle": "CONTINENTAL SCALE · STRICT COMPLIANCE",
+    "whyHireDesc1": "European agencies in London, Berlin, or Paris charge €10,000–€25,000/month while struggling to deliver agile multi-lingual execution outside their domestic market.",
+    "whyHireDesc2": "Webmok provides true pan-European multi-lingual capability, CET timezone alignment, and transparent month-to-month contracts at a high-ROI price point.",
+    "comparisonPoints": [
+      {
+        "feature": "Multi-Language Capability",
+        "local": "Single Language Domestic Focus",
+        "webmok": "Turnkey Multi-Lingual EU Architecture (Hreflang)"
+      },
+      {
+        "feature": "GDPR & Privacy Architecture",
+        "local": "Basic Cookie Banners",
+        "webmok": "Full Server-Side Privacy & Cookie Compliance"
+      },
+      {
+        "feature": "Monthly Investment",
+        "local": "€10,000 – €25,000 / month",
+        "webmok": "From €740 – €2,760 / month (High ROI)"
+      },
+      {
+        "feature": "Sprint Turnaround",
+        "local": "Slow 3-4 Week Cycles",
+        "webmok": "48-72 Hour Agile Sprint Cycles"
+      },
+      {
+        "feature": "Contract Commitment",
+        "local": "12-Month Mandatory Lock-In",
+        "webmok": "100% Flexible Month-to-Month"
+      }
+    ],
+    "resultsTitle": "European Performance Telemetry",
+    "resultsSubtitle": "VERIFIABLE PAN-EUROPEAN RESULTS",
+    "resultsStats": [
+      {
+        "metric": "85+",
+        "label": "Pan-European Brands Scaled"
+      },
+      {
+        "metric": "€19M+",
+        "label": "Tracked Client Revenue Generated"
+      },
+      {
+        "metric": "99.3%",
+        "label": "EU Client Retention Rate"
+      },
+      {
+        "metric": "24/7",
+        "label": "CET Timezone Strategic Support"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Marketing in Europe",
+    "marketInsightsSubtitle": "EU MARKET DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "Hreflang & Multi-Region Technical SEO",
+        "desc": "Ranking across Germany (.de), France (.fr), Netherlands (.nl), and Spain (.es) requires flawless hreflang XML tags and ccTLD structure."
+      },
+      {
+        "title": "Strict GDPR & Cookie Consent Enforcements",
+        "desc": "European privacy authorities enforce strict tracking consent. We build server-side GTM architectures that maintain accurate conversion attribution."
+      },
+      {
+        "title": "Localized Cultural Tone & Payment Gateways",
+        "desc": "German buyers prefer invoice payments and technical proof; Dutch buyers prefer iDEAL; French buyers demand native linguistic elegance."
+      },
+      {
+        "title": "Cross-Border B2B Procurement",
+        "desc": "European enterprise software and industrial sales require multi-currency pricing, VAT transparency, and comprehensive product comparison assets."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "Cross-Border Market Audit",
+        "desc": "Analyzing search volume and competitor penetration across Germany, UK, France, and Nordics."
+      },
+      {
+        "num": "02",
+        "title": "Multi-Lingual Architecture",
+        "desc": "Configuring hreflang tags, localized subdirectories, and GDPR-compliant tracking."
+      },
+      {
+        "num": "03",
+        "title": "Pan-European Sprints",
+        "desc": "Deploying multi-lingual Google Ads, local search optimization, and LinkedIn B2B funnels."
+      },
+      {
+        "num": "04",
+        "title": "Attribution & Country Scaling",
+        "desc": "Tracking conversion rates per country, optimizing ROAS, and expanding into new EU territories."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaLaptopCode",
+        "name": "B2B SaaS & Tech Startups",
+        "desc": "Accelerating pan-European software demo signups and cross-border enterprise ARR."
+      },
+      {
+        "icon": "FaBriefcase",
+        "name": "Industrial, Manufacturing & Engineering",
+        "desc": "Capturing high-value B2B procurement contracts and distributor inquiries across the EU."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "Cross-Border E-Commerce",
+        "desc": "Scaling Shopify and custom multilingual webshops with localized checkout flows."
+      },
+      {
+        "icon": "FaBuilding",
+        "name": "Real Estate & Luxury Tourism",
+        "desc": "Capturing international luxury property buyers and holiday resort bookings."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "HealthTech & Medical Devices",
+        "desc": "Navigating European regulatory compliance to drive clinical adoption."
+      },
+      {
+        "icon": "FaCompass",
+        "name": "Corporate Advisory & Finance",
+        "desc": "Establishing thought leadership for European M&A, legal, and financial consultancies."
+      }
+    ],
+    "plans": [
+      {
+        "name": "Europe Starter Scale",
+        "badge": "Single Country Focus",
+        "usdPrice": "799",
+        "inrPrice": "64,999",
+        "desc": "Ideal for European businesses targeting a single domestic language market like Germany, France, or Netherlands.",
+        "features": [
+          "Up to 25 Target Language Keywords",
+          "Google Business Profile Geo-Optimization",
+          "Local Citations & Directory Synchronization",
+          "Technical Core Web Vitals & GDPR Audit",
+          "Monthly Executive ROI & Revenue Report",
+          "Dedicated CET Timezone Account Lead"
+        ]
+      },
+      {
+        "name": "Pan-European Accelerator",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,599",
+        "inrPrice": "1,29,999",
+        "desc": "Comprehensive multi-country campaign combining multi-lingual SEO, Google Ads, and conversion rate optimization.",
+        "features": [
+          "Up to 55 Multi-Country European Keywords",
+          "Multi-Lingual Google Ads (PPC) Management",
+          "Cross-Border Hreflang SEO Architecture",
+          "Native Content Marketing (6 Posts/mo)",
+          "Competitor Backlink Interception",
+          "Bi-Weekly Live Strategic Consultation"
+        ]
+      },
+      {
+        "name": "Europe Enterprise Monopoly",
+        "badge": "Continental Leader",
+        "usdPrice": "2,999",
+        "inrPrice": "2,44,999",
+        "desc": "Full-scale pan-European market takeover for multi-national brands, tech platforms, and enterprise e-commerce.",
+        "features": [
+          "Continental Keyword Takeover (100+ Keywords)",
+          "Full-Funnel Omni-Channel Ads (Google, Meta, LinkedIn)",
+          "Custom High-Converting Multi-Lingual Web App",
+          "Tier-1 European Media PR & Backlinks",
+          "Dedicated Senior Account Squad & Daily Slack Channel",
+          "Server-Side Multi-Touch Attribution Modeling"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok scaled our SaaS platform across Germany, France, and the UK simultaneously. Our monthly demo requests tripled within four months.",
+        "author": "Henrik V.",
+        "role": "Chief Commercial Officer",
+        "company": "European Cloud Security Platform",
+        "rating": 5
+      },
+      {
+        "quote": "Their multi-lingual SEO architecture and GDPR-compliant tracking gave us an unfair digital advantage across the EU market.",
+        "author": "Sophie B.",
+        "role": "VP of Marketing",
+        "company": "Amsterdam FinTech Group",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How does Webmok ensure 100% GDPR compliance for European campaigns?",
+        "a": "We build server-side tracking, cookie-less telemetry, and explicit consent banners that comply fully with GDPR, ePrivacy, and regional European data laws."
+      },
+      {
+        "q": "Can you handle multi-lingual SEO across German, French, Dutch, and Spanish?",
+        "a": "Yes! We configure proper hreflang tags, localized keyword clusters, and native-speaker content hubs to rank across multiple European language domains."
+      },
+      {
+        "q": "How do you coordinate with European clients in the CET timezone?",
+        "a": "We operate with dedicated CET-aligned account directors. All strategy calls and daily communications are aligned with European business hours."
+      },
+      {
+        "q": "What is the contract term?",
+        "a": "All our European digital marketing packages are flexible month-to-month agreements with zero mandatory lock-ins."
+      }
+    ],
+    "status": "Active",
+    "order": 4
+  },
+  {
+    "slug": "florida-digital-marketing",
+    "name": "Florida Digital Marketing Agency",
+    "city": "Florida",
+    "region": "Florida Statewide, USA",
+    "country": "United States",
+    "currency": "USD",
+    "currencySymbol": "$",
+    "tagline": "STATEWIDE DIGITAL GROWTH AGENCY · FLORIDA, USA",
+    "heroHighlight": "Florida Digital Marketing Services",
+    "heroItalic": "Dominate Statewide Markets with",
+    "leadDesc": "Scale across Orlando, Tampa, Jacksonville, Fort Lauderdale, Naples, and Miami with high-velocity statewide SEO, precision paid ads, and high-conversion web development.",
+    "bodyDesc": "We help Florida enterprises build dominant digital pipelines, rank #1 across multiple metro territories, and capture high-intent commercial buyers throughout the Sunshine State.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "390%",
+        "label": "Average Florida Traffic Growth"
+      },
+      {
+        "num": "6.2x",
+        "label": "Average ROAS on Paid Media"
+      },
+      {
+        "num": "120+",
+        "label": "Florida Campaigns Delivered"
+      },
+      {
+        "num": "100%",
+        "label": "White-Hat SEO Execution"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "Multi-City Florida SEO",
+        "desc": "Scalable multi-location SEO architecture targeting Orlando, Tampa, Jacksonville, and South Florida with localized schema markup and city landing pages."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "Precision Paid Acquisition",
+        "desc": "High-converting Google Search, Performance Max, and Local Services Ads optimized for Florida commercial and residential buying cycles."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Geo-Fenced Social Advertising",
+        "desc": "Surgical demographic and radius-targeted Meta, TikTok, and LinkedIn campaigns that engage Florida consumers and business decision-makers."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Authority Content Marketing",
+        "desc": "Industry-leading blog hubs, Florida case studies, and editorial PR placements that build unbeatable organic domain equity."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "High-Speed Web Architecture",
+        "desc": "Lightning-fast, mobile-optimized web portals designed to convert Florida traffic into phone calls, quote submissions, and revenue."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Visual Media & Creative Ads",
+        "desc": "High-impact video ads, brand creative, and animation assets tailored for Florida’s dynamic lifestyle and commercial sectors."
+      }
+    ],
+    "whyHireOutsideTitle": "Why Florida Enterprises Partner with Webmok",
+    "whyHireOutsideSubtitle": "ELITE EXECUTION · MEASURABLE REVENUE",
+    "whyHireDesc1": "Florida’s booming economy has created intense competition in every major metro area. Traditional marketing tactics that rely on vanity metrics burn budgets with zero pipeline accountability.",
+    "whyHireDesc2": "Webmok delivers a modern engineering approach to growth—combining technical search superiority with conversion-focused paid acquisition and transparent bi-weekly telemetry.",
+    "comparisonPoints": [
+      {
+        "feature": "Multi-City Scalability",
+        "local": "Limited to Single Metro",
+        "webmok": "Turnkey Multi-City Florida Architecture"
+      },
+      {
+        "feature": "Pricing Transparency",
+        "local": "$10,000+ Bloated Retainers",
+        "webmok": "Value-Driven Month-to-Month Packages"
+      },
+      {
+        "feature": "Accountability & Data",
+        "local": "Monthly PDF Vanity Reports",
+        "webmok": "24/7 Live Telemetry & Direct CRM Sync"
+      },
+      {
+        "feature": "Engineering Speed",
+        "local": "3-4 Week Turnaround",
+        "webmok": "48-72 Hour Sprint Turnaround"
+      },
+      {
+        "feature": "Contract Lock-In",
+        "local": "12-Month Rigid Contracts",
+        "webmok": "100% Flexible Month-to-Month"
+      }
+    ],
+    "resultsTitle": "Statewide Performance Telemetry",
+    "resultsSubtitle": "PROVEN FLORIDA OUTCOMES",
+    "resultsStats": [
+      {
+        "metric": "120+",
+        "label": "Florida Enterprise Clients Scaled"
+      },
+      {
+        "metric": "$24M+",
+        "label": "Tracked Pipeline Value Generated"
+      },
+      {
+        "metric": "99.1%",
+        "label": "Statewide Client Satisfaction Rate"
+      },
+      {
+        "metric": "24/7",
+        "label": "Real-Time Telemetry Dashboard Access"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Marketing Across Florida",
+    "marketInsightsSubtitle": "REGIONAL DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "Rapid Population Growth Drives Search Volume",
+        "desc": "Over 1,000 people move to Florida daily. Capturing new resident search volume requires active local citations and keyword conquesting."
+      },
+      {
+        "title": "Distinct Regional Sub-Markets",
+        "desc": "Orlando focuses heavily on hospitality and healthcare, Tampa on finance and tech, while South Florida demands bilingual commercial funnels."
+      },
+      {
+        "title": "Seasonal Demand Surges",
+        "desc": "Tourism and snowbird season create distinct winter peaks. We dynamically scale ad budgets and content schedules around annual buying patterns."
+      },
+      {
+        "title": "High Mobile Search Dependency",
+        "desc": "Over 82% of Florida consumer inquiries occur via smartphones. We build instant click-to-call mobile funnels with zero load latency."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "Statewide Market Audit",
+        "desc": "Mapping keyword volumes across all Florida metros and pinpointing competitor weaknesses."
+      },
+      {
+        "num": "02",
+        "title": "Multi-Location Blueprint",
+        "desc": "Structuring dedicated city landing pages, localized schema markup, and Google Business Profiles."
+      },
+      {
+        "num": "03",
+        "title": "Full-Funnel Campaign Launch",
+        "desc": "Deploying high-intent search ads, organic content hubs, and localized Meta retargeting."
+      },
+      {
+        "num": "04",
+        "title": "Telemetry Optimization & Scale",
+        "desc": "Continuous bid adjustments, landing page A/B tests, and monthly revenue scaling reviews."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaBuilding",
+        "name": "Real Estate & Development",
+        "desc": "High-intent residential and commercial lead funnels across Florida’s booming property markets."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Healthcare & Specialized Clinics",
+        "desc": "Dominating patient acquisition for dental, orthopedic, plastic surgery, and medical centers."
+      },
+      {
+        "icon": "FaCompass",
+        "name": "Legal & Personal Injury",
+        "desc": "Capturing high-ticket legal inquiries with aggressive Google Ads and organic SEO supremacy."
+      },
+      {
+        "icon": "FaUtensils",
+        "name": "Tourism & Hospitality",
+        "desc": "Maximizing direct bookings and foot traffic across Florida resorts and attractions."
+      },
+      {
+        "icon": "FaBriefcase",
+        "name": "B2B Services & Logistics",
+        "desc": "Driving qualified RFP submissions and corporate sales for Florida enterprise suppliers."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "Retail & Multi-Location Brands",
+        "desc": "Omni-channel local store traffic and e-commerce customer acquisition across all 67 counties."
+      }
+    ],
+    "plans": [
+      {
+        "name": "Florida Growth Core",
+        "badge": "Single Metro",
+        "usdPrice": "849",
+        "inrPrice": "69,999",
+        "desc": "Ideal for local Florida businesses establishing dominant visibility in a single city metro area.",
+        "features": [
+          "Up to 25 Target Florida Keywords",
+          "Google Business Profile Geo-Optimization",
+          "Local Directory & Citation Building",
+          "Technical Core Web Vitals Optimization",
+          "Monthly Telemetry & Progress Report",
+          "Dedicated Florida Account Director"
+        ]
+      },
+      {
+        "name": "Florida Multi-City Scale",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,599",
+        "inrPrice": "1,29,999",
+        "desc": "Engineered for brands expanding across 2-4 Florida cities with combined SEO and Google Ads management.",
+        "features": [
+          "Up to 50 Multi-City Florida Keywords",
+          "Google Ads (PPC) Setup & Bid Optimization",
+          "Multi-Location Landing Page Architecture",
+          "High-Authority Content Marketing (6 Posts/mo)",
+          "Competitor Backlink Interception",
+          "Bi-Weekly Strategic Consultation"
+        ]
+      },
+      {
+        "name": "Florida Statewide Dominance",
+        "badge": "Statewide Leader",
+        "usdPrice": "3,199",
+        "inrPrice": "2,59,999",
+        "desc": "Statewide market takeover for multi-location networks, healthcare groups, and enterprise brands.",
+        "features": [
+          "Statewide Keyword Takeover (100+ Keywords)",
+          "Full-Funnel Omni-Channel Ads (Google, Meta, YouTube)",
+          "Custom High-Converting Web Portal Development",
+          "Tier-1 Press Release & Media Placements",
+          "Dedicated Senior Account Squad & Slack Access",
+          "Custom CRM Integration & Multi-Touch Attribution"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok scaled our legal practice across Tampa and Orlando. We saw a 320% surge in qualified case inquiries within four months.",
+        "author": "Marcus B.",
+        "role": "Senior Partner",
+        "company": "Florida Statewide Legal Group",
+        "rating": 5
+      },
+      {
+        "quote": "The multi-location SEO architecture they built put our clinics on page 1 in 5 different Florida cities simultaneously.",
+        "author": "Dr. Sarah K.",
+        "role": "Chief Medical Officer",
+        "company": "Sunshine State Health Network",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can Webmok help our brand rank in multiple Florida cities at the same time?",
+        "a": "Yes! We engineer scalable multi-location SEO architectures with dedicated city landing pages, localized schema markup, and regional Google Business Profiles to rank across multiple Florida markets."
+      },
+      {
+        "q": "How do you structure Florida Google Ads campaigns to prevent wasted spend?",
+        "a": "We use hyper-granular radius targeting, negative keyword sculpting, automated bid rules, and day-parting to ensure your ad spend only captures high-intent Florida searchers."
+      },
+      {
+        "q": "What industries do you specialize in across Florida?",
+        "a": "We have deep experience in real estate development, legal practices, healthcare clinics, tourism/hospitality, B2B logistics, and direct-to-consumer commerce."
+      },
+      {
+        "q": "What is the onboarding timeline for new Florida campaigns?",
+        "a": "We complete comprehensive audits, tracking setup, competitor gap analysis, and campaign deployment within 5 business days."
+      }
+    ],
+    "status": "Active",
+    "order": 5
+  },
+  {
+    "slug": "london-digital-marketing",
+    "name": "London Digital Marketing Agency",
+    "city": "London",
+    "region": "Greater London & City of London, UK",
+    "country": "United Kingdom",
+    "currency": "GBP",
+    "currencySymbol": "£",
+    "tagline": "PREMIER LONDON DIGITAL MARKETING AGENCY · UK",
+    "heroHighlight": "London Digital Marketing & SEO Agency",
+    "heroItalic": "Dominate the Capital of Commerce with",
+    "leadDesc": "Scale your London brand with elite technical SEO, precision Google Ads, and bespoke conversion funnels built for the UK’s most competitive commercial landscape.",
+    "bodyDesc": "From the City of London and Canary Wharf finance to Soho creative studios, Mayfair luxury, and Shoreditch tech innovators—Webmok engineers dominant digital growth.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "460%",
+        "label": "Average London Traffic Growth"
+      },
+      {
+        "num": "6.1x",
+        "label": "Average ROAS on Paid Media"
+      },
+      {
+        "num": "70+",
+        "label": "London Brands Scaled"
+      },
+      {
+        "num": "100%",
+        "label": "White-Hat SEO Execution"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "London Local & Enterprise SEO",
+        "desc": "Dominating Google Maps 3-Pack and organic rankings across Central London, Canary Wharf, West End, and Greater London boroughs."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "High-ROAS Google Ads (PPC)",
+        "desc": "Precision search funnels, Performance Max campaigns, and Local Services Ads designed to capture high-value London commercial intent."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Targeted Paid Social (Meta & LinkedIn)",
+        "desc": "B2B LinkedIn campaigns targeting City decision-makers and high-converting Meta ads engaging London consumers."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Topical Authority Content & PR",
+        "desc": "Authoritative content hubs, London business citations, and editorial PR outreach establishing market leadership."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "High-Converting Web Architecture",
+        "desc": "Speed-optimized React, Webflow, and WordPress websites built for sub-second load times and maximum lead conversion."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Commercial Video & Creative Production",
+        "desc": "Studio-grade commercial video ads, brand storytelling, and social reels tailored for the Greater London market."
+      }
+    ],
+    "whyHireOutsideTitle": "Why London Brands Choose Webmok",
+    "whyHireOutsideSubtitle": "THE LONDON ADVANTAGE",
+    "whyHireDesc1": "London agencies in Mayfair and Shoreditch carry massive central London overhead, charging £10,000–£25,000/month while treating mid-market accounts as secondary priorities.",
+    "whyHireDesc2": "Webmok provides dedicated senior growth engineers, GMT timezone alignment, and rapid sprint cycles at a high-ROI, value-driven investment.",
+    "comparisonPoints": [
+      {
+        "feature": "Senior Account Attention",
+        "local": "Junior Account Managers",
+        "webmok": "Dedicated Senior Growth Directors"
+      },
+      {
+        "feature": "Monthly Retainer Cost",
+        "local": "£10,000 – £25,000 / month",
+        "webmok": "From £630 – £2,370 / month"
+      },
+      {
+        "feature": "Contract Commitment",
+        "local": "Mandatory 6-12 Months",
+        "webmok": "100% Flexible Month-to-Month"
+      },
+      {
+        "feature": "Turnaround Speed",
+        "local": "2-3 Weeks per Sprint",
+        "webmok": "48-72 Hours Agile Sprints"
+      },
+      {
+        "feature": "Reporting Telemetry",
+        "local": "Generic PDF Monthly Summaries",
+        "webmok": "Live 24/7 Real-Time Revenue Dashboards"
+      }
+    ],
+    "resultsTitle": "London Performance Telemetry",
+    "resultsSubtitle": "VERIFIABLE RESULTS",
+    "resultsStats": [
+      {
+        "metric": "70+",
+        "label": "London Brands Scaled to Page 1"
+      },
+      {
+        "metric": "£18M+",
+        "label": "Tracked Pipeline Revenue Generated"
+      },
+      {
+        "metric": "99.5%",
+        "label": "London Client Satisfaction Rate"
+      },
+      {
+        "metric": "24/7",
+        "label": "GMT Timezone Direct Support"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Selling in London",
+    "marketInsightsSubtitle": "LONDON DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "Intense Local Search Competition",
+        "desc": "London is Europe’s most competitive digital landscape. Ranking on Google Maps requires precise micro-citations across London boroughs."
+      },
+      {
+        "title": "Diverse Demographic Micro-Markets",
+        "desc": "Marketing across West End, City of London, and Shoreditch requires culturally aware, tailored messaging and segmentation."
+      },
+      {
+        "title": "B2B Procurement Cycles in the City & Canary Wharf",
+        "desc": "City corporate buyers conduct extensive digital due diligence. Dense topical authority and case study proof are essential to close deals."
+      },
+      {
+        "title": "Mobile-First Inbound Call Conversion",
+        "desc": "Over 80% of local London service searches happen on mobile devices. We build instant click-to-call mobile landing pages with zero friction."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "London Market & Competitor Audit",
+        "desc": "Analyzing search intent and competitor positioning across Central London and key commercial hubs."
+      },
+      {
+        "num": "02",
+        "title": "Hyper-Local Search Architecture",
+        "desc": "Building multi-borough landing pages, localized schema markup, and Google Business Profiles."
+      },
+      {
+        "num": "03",
+        "title": "Omni-Channel Sprint Deployment",
+        "desc": "Launching high-intent Google Ads, local SEO optimizations, and targeted social campaigns."
+      },
+      {
+        "num": "04",
+        "title": "CRO & Revenue Attribution",
+        "desc": "Optimizing conversion funnels, tracking pipeline ROI, and scaling market share."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaBriefcase",
+        "name": "Financial & Corporate Services",
+        "desc": "Capturing corporate clients, wealth management leads, and B2B finance contracts in the City."
+      },
+      {
+        "icon": "FaBuilding",
+        "name": "Real Estate & Luxury Property",
+        "desc": "Dominating buyer acquisition for luxury homes and prime commercial properties in London."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Harley Street Medical Clinics",
+        "desc": "Patient acquisition for cosmetic surgery, dental clinics, and wellness centers across London."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "name": "Tech Startups & B2B SaaS",
+        "desc": "Driving ARR growth and user signups in London’s Silicon Roundabout."
+      },
+      {
+        "icon": "FaCompass",
+        "name": "Legal & Professional Practices",
+        "desc": "Generating high-value litigation cases and corporate advisory retainers."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "Luxury Retail & E-Commerce",
+        "desc": "Driving store foot traffic and e-commerce revenue across Greater London."
+      }
+    ],
+    "plans": [
+      {
+        "name": "London Growth Core",
+        "badge": "Borough Focus",
+        "usdPrice": "799",
+        "inrPrice": "64,999",
+        "desc": "Ideal for local London businesses establishing dominant Google Maps and search visibility.",
+        "features": [
+          "Up to 20 High-Intent London Keywords",
+          "Google Business Profile London Optimization",
+          "Local Citations & Yell Listings",
+          "On-Page SEO & Content Tuning (4 Pages/mo)",
+          "Monthly Executive ROI Report",
+          "Dedicated GMT Account Director"
+        ]
+      },
+      {
+        "name": "London Accelerator",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,499",
+        "inrPrice": "1,19,999",
+        "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and conversion rate optimization.",
+        "features": [
+          "Up to 45 Multi-Borough London Keywords",
+          "Google Ads (PPC) Campaign Management",
+          "Multi-Borough Landing Page Architecture",
+          "High-Authority Content Marketing (6 Posts/mo)",
+          "Competitor Backlink Interception",
+          "Bi-Weekly Live Strategy Sessions"
+        ]
+      },
+      {
+        "name": "London Enterprise Monopoly",
+        "badge": "Category Leader",
+        "usdPrice": "2,999",
+        "inrPrice": "2,44,999",
+        "desc": "Full-scale market dominance for London enterprises, multi-location franchises, and high-growth brands.",
+        "features": [
+          "London & Nationwide Keyword Domination",
+          "Omni-Channel PPC (Google, Meta, LinkedIn)",
+          "Bespoke High-Converting Web Redesign",
+          "Tier-1 UK Media PR & Backlinks",
+          "Dedicated Account Squad & Daily Slack Channel",
+          "Custom Multi-Touch Attribution Modeling"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok put our commercial firm at the top of Google for competitive London search terms. Our qualified deal pipeline grew by 260%.",
+        "author": "Edward B.",
+        "role": "Partner",
+        "company": "Central London Corporate Advisory",
+        "rating": 5
+      },
+      {
+        "quote": "Our Harley Street clinic now ranks in the top 3 on Google Maps across all high-ticket treatment keywords.",
+        "author": "Dr. Claire M.",
+        "role": "Clinical Director",
+        "company": "Harley Street Medical Group",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why should a London business choose Webmok over local Mayfair agencies?",
+        "a": "Webmok delivers senior-level agency execution without bloated London real estate overhead. You work directly with dedicated GMT-timezone directors focused on measurable pipeline revenue."
+      },
+      {
+        "q": "How fast can our London business expect to rank on page 1 of Google?",
+        "a": "Google Maps optimizations and high-intent PPC campaigns generate leads within 14 to 30 days. Broad organic SEO keywords achieve page #1 breakthroughs in 60 to 90 days."
+      },
+      {
+        "q": "Can you target multiple London boroughs (e.g. Westminster, Camden, City, Islington)?",
+        "a": "Yes! We build dedicated multi-location SEO architectures tailored to each specific borough and commercial district across London."
+      },
+      {
+        "q": "Are there any long-term contract lock-ins?",
+        "a": "Zero mandatory lock-in. All our London digital marketing packages are flexible month-to-month agreements."
+      }
+    ],
+    "status": "Active",
+    "order": 6
+  },
+  {
+    "slug": "los-angeles-digital-marketing",
+    "name": "Los Angeles Digital Marketing Agency",
+    "city": "Los Angeles",
+    "region": "California, USA",
+    "country": "United States",
+    "currency": "USD",
+    "currencySymbol": "$",
+    "tagline": "PREMIER LOS ANGELES GROWTH AGENCY · CALIFORNIA, USA",
+    "heroHighlight": "Los Angeles Digital Marketing & SEO",
+    "heroItalic": "Ignite Explosive Brand Growth with",
+    "leadDesc": "Scale your LA brand with viral paid social campaigns, precision Google Ads, and aggressive SEO built for Southern California’s trendsetting market.",
+    "bodyDesc": "From Silicon Beach tech startups and Beverly Hills luxury brands to DTLA commerce and Santa Monica direct-to-consumer powerhouses—Webmok engineers explosive digital growth.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "440%",
+        "label": "Average LA Client Revenue Lift"
+      },
+      {
+        "num": "5.9x",
+        "label": "Average ROAS on Paid Social"
+      },
+      {
+        "num": "75+",
+        "label": "LA & SoCal Brands Scaled"
+      },
+      {
+        "num": "100%",
+        "label": "Data-Driven Attribution"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "LA Local SEO & Google Maps",
+        "desc": "Capturing high-intent local searchers across West LA, Beverly Hills, DTLA, Pasadena, and the San Fernando Valley."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "High-ROAS Google Ads & Shopping",
+        "desc": "Precision search funnels, Performance Max campaigns, and Google Shopping optimization designed for high conversion volume."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Viral Paid Social (Meta & TikTok)",
+        "desc": "High-impact creative production, UGC integration, and algorithmic ad scaling across TikTok, Instagram, and YouTube."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Influencer & Brand Amplification",
+        "desc": "Connecting your brand with targeted creator networks to drive authentic engagement, viral reach, and qualified sales."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "E-Commerce & High-Converting UX",
+        "desc": "Speed-optimized Shopify, Webflow, and custom headless e-commerce platforms engineered for maximum checkout conversion."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Commercial Video Production",
+        "desc": "Studio-grade video ads, lifestyle storytelling, and brand creative tailored for Southern California’s visual aesthetic."
+      }
+    ],
+    "whyHireOutsideTitle": "Why LA Brands Partner with Webmok",
+    "whyHireOutsideSubtitle": "CREATIVE VELOCITY · TECHNICAL RIGOR",
+    "whyHireDesc1": "Los Angeles agencies frequently charge astronomical retainer rates for aesthetic fluff with zero accountability for pipeline revenue or blended customer acquisition cost (CAC).",
+    "whyHireDesc2": "Webmok combines world-class creative velocity with mathematical media buying and technical SEO infrastructure to deliver compound revenue growth.",
+    "comparisonPoints": [
+      {
+        "feature": "Execution Speed",
+        "local": "Slow Multi-Week Bureaucracy",
+        "webmok": "Rapid 48-Hour Creative & Technical Sprints"
+      },
+      {
+        "feature": "Attribution & Analytics",
+        "local": "Vanity Metrics (Likes/Views)",
+        "webmok": "Direct ROAS, LTV & Pipeline Revenue Attribution"
+      },
+      {
+        "feature": "Monthly Investment",
+        "local": "$10,000 – $20,000 / month",
+        "webmok": "From $849 – $3,299 / month (High ROI)"
+      },
+      {
+        "feature": "Contract Terms",
+        "local": "Rigid Long-Term Lock-Ins",
+        "webmok": "Flexible Month-to-Month Agreements"
+      },
+      {
+        "feature": "Timezone Alignment",
+        "local": "PST Standard",
+        "webmok": "Dedicated US Pacific Timezone Account Squad"
+      }
+    ],
+    "resultsTitle": "LA Performance Telemetry",
+    "resultsSubtitle": "VERIFIABLE METRICS",
+    "resultsStats": [
+      {
+        "metric": "75+",
+        "label": "LA Brands Scaled Successfully"
+      },
+      {
+        "metric": "$21M+",
+        "label": "Tracked Client Revenue Generated"
+      },
+      {
+        "metric": "99.3%",
+        "label": "Client Satisfaction & Retention"
+      },
+      {
+        "metric": "24/7",
+        "label": "Dedicated PST Support on Call"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Marketing in Los Angeles",
+    "marketInsightsSubtitle": "SOCAL DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "Aesthetic Standard is Non-Negotiable",
+        "desc": "LA consumers have the highest visual standard in the world. Poor design kills conversion instantly; premium aesthetics build immediate trust."
+      },
+      {
+        "title": "Creator & Social-First Discovery",
+        "desc": "Over 74% of consumer brand discovery in SoCal starts on Instagram and TikTok. We engineer social ad funnels that feed organic search demand."
+      },
+      {
+        "title": "Hyper-Fragmented Neighborhoods",
+        "desc": "Marketing to Santa Monica requires a different tone and geo-targeting than Pasadena or Downtown LA. We tailor funnels per district."
+      },
+      {
+        "title": "DTC E-Commerce Saturation",
+        "desc": "With thousands of competing DTC brands, unit economics and retention modeling are required to scale profitably beyond iOS privacy changes."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "Brand & Funnel Audit",
+        "desc": "Auditing ad accounts, creative performance, conversion rates, and competitor vulnerabilities."
+      },
+      {
+        "num": "02",
+        "title": "Creative & Search Architecture",
+        "desc": "Crafting high-converting ad angles, technical SEO fixes, and mobile-first landing pages."
+      },
+      {
+        "num": "03",
+        "title": "Velocity Media Scaling",
+        "desc": "Deploying high-ROAS Google and Meta ad campaigns with automated bid optimization."
+      },
+      {
+        "num": "04",
+        "title": "Compound Growth Optimization",
+        "desc": "Weekly creative iterations, email/SMS retention funnels, and real-time revenue telemetry."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaShoppingCart",
+        "name": "Direct-to-Consumer (DTC) Brands",
+        "desc": "Scaling Shopify and custom e-commerce revenue with multi-channel ads and SEO."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "name": "Silicon Beach Tech Startups",
+        "desc": "Accelerating product signups, user acquisition, and venture-backed ARR growth."
+      },
+      {
+        "icon": "FaBuilding",
+        "name": "Luxury Real Estate & Architects",
+        "desc": "Capturing ultra-high-net-worth buyers in Beverly Hills, Bel Air, and Malibu."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Aesthetic Medicine & Wellness",
+        "desc": "Dominating local search and social ads for plastic surgery, medspas, and clinics."
+      },
+      {
+        "icon": "FaUtensils",
+        "name": "Hospitality, Dining & Nightlife",
+        "desc": "Driving reservations and viral buzz for premier LA culinary and entertainment venues."
+      },
+      {
+        "icon": "FaCompass",
+        "name": "Entertainment & Creative Agencies",
+        "desc": "Building authoritative web platforms and digital PR for creative production companies."
+      }
+    ],
+    "plans": [
+      {
+        "name": "LA Starter Growth",
+        "badge": "Local Traction",
+        "usdPrice": "849",
+        "inrPrice": "69,999",
+        "desc": "Ideal for local LA service businesses, clinics, and boutique shops seeking dominant local search visibility.",
+        "features": [
+          "Up to 20 High-Intent LA Keywords",
+          "Google Business Profile Geo-Optimization",
+          "Local Citations & LA Business Listings",
+          "Core On-Page SEO & Content Fixes",
+          "Monthly Executive Performance Report",
+          "Dedicated US PST Account Lead"
+        ]
+      },
+      {
+        "name": "LA Market Accelerator",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,649",
+        "inrPrice": "1,34,999",
+        "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads, and Meta advertising for rapid customer growth.",
+        "features": [
+          "Up to 50 SoCal & LA Keywords",
+          "Google Ads & Meta Ads Management ($4k spend)",
+          "High-Converting Landing Page Optimization",
+          "Strategic Content Creation (6 High-Impact Articles/mo)",
+          "Competitor Backlink & Ad Interception",
+          "Bi-Weekly Live Strategy Sessions"
+        ]
+      },
+      {
+        "name": "LA Enterprise Powerhouse",
+        "badge": "Category Leader",
+        "usdPrice": "3,299",
+        "inrPrice": "2,69,999",
+        "desc": "Full-scale market dominance for direct-to-consumer brands, venture-funded startups, and regional powerhouses.",
+        "features": [
+          "Unlimited Keywords & Multi-Channel Campaigns",
+          "Omni-Channel PPC (Google, Meta, TikTok, LinkedIn)",
+          "Bespoke Web App / E-Commerce Redesign",
+          "High-Tier Digital PR & Media Outreach",
+          "Dedicated Senior Account Lead & Daily Slack Channel",
+          "Advanced Revenue Attribution Modeling"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok scaled our DTC beauty brand from $40k/mo to over $280k/mo in profitable revenue within seven months.",
+        "author": "Chloe T.",
+        "role": "Founder & CEO",
+        "company": "SoCal Organic Beauty Co.",
+        "rating": 5
+      },
+      {
+        "quote": "Our medical spa in Beverly Hills now ranks in the top 3 on Google Maps across all high-ticket treatment keywords.",
+        "author": "Dr. Michael A.",
+        "role": "Medical Director",
+        "company": "Beverly Hills Aesthetic Center",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How does Webmok coordinate with LA businesses in the Pacific Timezone (PST)?",
+        "a": "We operate with dedicated US Pacific Timezone squads. Your account manager and strategy calls are fully aligned with LA business hours."
+      },
+      {
+        "q": "Do you manage e-commerce marketing for direct-to-consumer (DTC) brands in LA?",
+        "a": "Yes! We specialize in Shopify, WooCommerce, and custom headless e-commerce stores, driving revenue through targeted Google Shopping, Meta ads, and technical e-commerce SEO."
+      },
+      {
+        "q": "How do you prevent ad budget waste on Google and Meta in Los Angeles?",
+        "a": "We implement hyper-granular zip-code targeting, negative keyword sculpting, algorithmic bid adjustments, and daily ROAS telemetry tracking to ensure zero wasted spend."
+      },
+      {
+        "q": "What is the contract term?",
+        "a": "All our Los Angeles digital marketing packages operate on flexible month-to-month terms with zero lock-in."
+      }
+    ],
+    "status": "Active",
+    "order": 7
+  },
+  {
+    "slug": "melbourne-digital-marketing",
+    "name": "Melbourne Digital Marketing Agency",
+    "city": "Melbourne",
+    "region": "Melbourne & Victoria, Australia",
+    "country": "Australia",
+    "currency": "AUD",
+    "currencySymbol": "A$",
+    "tagline": "PREMIER MELBOURNE DIGITAL AGENCY · VICTORIA, AUSTRALIA",
+    "heroHighlight": "Melbourne Digital Marketing & SEO Agency",
+    "heroItalic": "Accelerate Victorian Market Dominance with",
+    "leadDesc": "Scale your Melbourne business with high-velocity local SEO, precision Google Ads, and conversion-focused web architecture built for Australia’s cultural and commercial capital.",
+    "bodyDesc": "From Melbourne CBD finance and South Yarra retail to Richmond creative agencies, Fitzroy innovators, and Docklands commerce—Webmok scales Victorian brands.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "440%",
+        "label": "Average Melbourne Traffic Growth"
+      },
+      {
+        "num": "6.0x",
+        "label": "Average ROAS on Paid Media"
+      },
+      {
+        "num": "65+",
+        "label": "Melbourne Brands Scaled"
+      },
+      {
+        "num": "100%",
+        "label": "White-Hat SEO Execution"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "Melbourne Local & Victorian SEO",
+        "desc": "Dominating Google Maps 3-Pack and organic rankings across Melbourne CBD, South Yarra, Richmond, St Kilda, and Eastern Suburbs."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "High-ROAS Google Ads (PPC)",
+        "desc": "Precision search funnels, Performance Max campaigns, and Local Services Ads designed to capture high-value Melbourne commercial intent."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Targeted Paid Social (Meta & TikTok)",
+        "desc": "High-impact creative production, UGC integration, and algorithmic ad scaling across TikTok, Instagram, and LinkedIn."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Topical Authority Content & PR",
+        "desc": "Authoritative content hubs, Melbourne business citations, and editorial PR outreach establishing market leadership."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "High-Converting Web Architecture",
+        "desc": "Speed-optimized React, Webflow, and WordPress websites built for sub-second load times, Core Web Vitals, and frictionless conversion."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Commercial Video & Creative Media",
+        "desc": "Studio-grade video production and commercial creative assets crafted specifically for Melbourne consumer and corporate audiences."
+      }
+    ],
+    "whyHireOutsideTitle": "Why Melbourne Brands Choose Webmok",
+    "whyHireOutsideSubtitle": "THE MELBOURNE ADVANTAGE",
+    "whyHireDesc1": "Melbourne agencies on Collins Street and Southbank carry massive CBD overhead, charging A$9,000–A$20,000/month while treating mid-market accounts as secondary priorities.",
+    "whyHireDesc2": "Webmok provides dedicated senior growth engineers, AEST timezone alignment, and rapid sprint cycles at a high-ROI, value-driven investment.",
+    "comparisonPoints": [
+      {
+        "feature": "Senior Account Attention",
+        "local": "Junior Account Managers",
+        "webmok": "Dedicated Senior Growth Directors"
+      },
+      {
+        "feature": "Monthly Retainer Cost",
+        "local": "A$9,000 – A$20,000 / month",
+        "webmok": "From A$1,200 – A$4,560 / month"
+      },
+      {
+        "feature": "Contract Commitment",
+        "local": "Mandatory 6-12 Months",
+        "webmok": "100% Flexible Month-to-Month"
+      },
+      {
+        "feature": "Turnaround Speed",
+        "local": "2-3 Weeks per Sprint",
+        "webmok": "48-72 Hours Agile Sprints"
+      },
+      {
+        "feature": "Reporting Telemetry",
+        "local": "Generic PDF Monthly Summaries",
+        "webmok": "Live 24/7 Real-Time Revenue Dashboards"
+      }
+    ],
+    "resultsTitle": "Melbourne Performance Telemetry",
+    "resultsSubtitle": "VERIFIABLE RESULTS",
+    "resultsStats": [
+      {
+        "metric": "65+",
+        "label": "Melbourne Brands Scaled to Page 1"
+      },
+      {
+        "metric": "A$17M+",
+        "label": "Tracked Pipeline Revenue Generated"
+      },
+      {
+        "metric": "99.5%",
+        "label": "Melbourne Client Satisfaction Rate"
+      },
+      {
+        "metric": "24/7",
+        "label": "AEST Timezone Direct Support"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Selling in Melbourne",
+    "marketInsightsSubtitle": "MELBOURNE DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "Design & Brand Authenticity Standards",
+        "desc": "Melbourne consumers value design sophistication and authenticity. Clean, modern web aesthetics significantly improve conversion rates."
+      },
+      {
+        "title": "Suburb-Specific Search Signals",
+        "desc": "Ranking on Google Maps in South Yarra versus Fitzroy or Brighton requires localized geo-citations and suburb-level schema markup."
+      },
+      {
+        "title": "Thriving Retail & Hospitality Hub",
+        "desc": "Melbourne is Australia’s culinary and boutique retail capital. We build high-converting e-commerce and local foot-traffic funnels."
+      },
+      {
+        "title": "Mobile-First Inbound Call Conversion",
+        "desc": "Over 80% of local Melbourne service searches happen on mobile devices. We build instant click-to-call mobile landing pages with zero friction."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "Melbourne Market & Competitor Audit",
+        "desc": "Analyzing search intent and competitor positioning across Melbourne CBD and suburban hubs."
+      },
+      {
+        "num": "02",
+        "title": "Hyper-Local Search Architecture",
+        "desc": "Building multi-suburb landing pages, localized schema markup, and Google Business Profiles."
+      },
+      {
+        "num": "03",
+        "title": "Omni-Channel Sprint Deployment",
+        "desc": "Launching high-intent Google Ads, local SEO optimizations, and targeted social campaigns."
+      },
+      {
+        "num": "04",
+        "title": "CRO & Revenue Attribution",
+        "desc": "Optimizing conversion funnels, tracking pipeline ROI, and scaling market share."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaBriefcase",
+        "name": "Financial & Professional Services",
+        "desc": "Capturing corporate clients, wealth management leads, and legal retainers in Melbourne CBD."
+      },
+      {
+        "icon": "FaBuilding",
+        "name": "Real Estate & Property Development",
+        "desc": "Dominating buyer acquisition for luxury homes and residential developments in Victoria."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Private Medical & Dental Clinics",
+        "desc": "Patient acquisition for cosmetic surgery, dental clinics, and wellness centers across Melbourne."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "Boutique Fashion & E-Commerce",
+        "desc": "Scaling Shopify and custom storefronts with profitable Google Shopping and TikTok ads."
+      },
+      {
+        "icon": "FaUtensils",
+        "name": "Hospitality, Cafes & Fine Dining",
+        "desc": "Driving reservations and viral buzz for premier Melbourne culinary establishments."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "name": "Tech Startups & B2B SaaS",
+        "desc": "Driving ARR growth and user signups in Melbourne’s growing technology ecosystem."
+      }
+    ],
+    "plans": [
+      {
+        "name": "Melbourne Growth Core",
+        "badge": "Suburb Focus",
+        "usdPrice": "799",
+        "inrPrice": "64,999",
+        "desc": "Ideal for local Melbourne businesses establishing dominant Google Maps and search visibility.",
+        "features": [
+          "Up to 20 High-Intent Melbourne Keywords",
+          "Google Business Profile Melbourne Optimization",
+          "Local Citations & TrueLocal Listings",
+          "On-Page SEO & Content Tuning (4 Pages/mo)",
+          "Monthly Executive ROI Report",
+          "Dedicated AEST Account Director"
+        ]
+      },
+      {
+        "name": "Melbourne Accelerator",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,499",
+        "inrPrice": "1,19,999",
+        "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and conversion rate optimization.",
+        "features": [
+          "Up to 45 Multi-Suburb Melbourne Keywords",
+          "Google Ads (PPC) Campaign Management",
+          "Multi-Suburb Landing Page Architecture",
+          "High-Authority Content Marketing (6 Posts/mo)",
+          "Competitor Backlink Interception",
+          "Bi-Weekly Live Strategy Sessions"
+        ]
+      },
+      {
+        "name": "Melbourne Enterprise Monopoly",
+        "badge": "Category Leader",
+        "usdPrice": "2,999",
+        "inrPrice": "2,44,999",
+        "desc": "Full-scale market dominance for Melbourne enterprises, multi-location franchises, and high-growth brands.",
+        "features": [
+          "Melbourne & Victorian Keyword Domination",
+          "Omni-Channel PPC (Google, Meta, LinkedIn)",
+          "Bespoke High-Converting Web Redesign",
+          "Tier-1 Australian Media PR & Backlinks",
+          "Dedicated Account Squad & Daily Slack Channel",
+          "Custom Multi-Touch Attribution Modeling"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok put our commercial firm at the top of Google for competitive Melbourne search terms. Our qualified deal pipeline grew by 270%.",
+        "author": "Liam C.",
+        "role": "Director",
+        "company": "Melbourne Commercial Advisory Group",
+        "rating": 5
+      },
+      {
+        "quote": "Our medical practice in South Yarra now ranks in the top 3 on Google Maps across all primary treatment keywords.",
+        "author": "Dr. Rebecca H.",
+        "role": "Medical Director",
+        "company": "South Yarra Health Center",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why should a Melbourne business choose Webmok over local Collins Street agencies?",
+        "a": "Webmok delivers senior-level agency execution without bloated Melbourne CBD overhead. You work directly with dedicated AEST-timezone directors focused on measurable pipeline revenue."
+      },
+      {
+        "q": "How fast can our Melbourne business expect to rank on page 1 of Google?",
+        "a": "Google Maps optimizations and high-intent PPC campaigns generate leads within 14 to 30 days. Broad organic SEO keywords achieve page #1 breakthroughs in 60 to 90 days."
+      },
+      {
+        "q": "Can you target specific Melbourne suburbs (e.g. South Yarra, Richmond, Fitzroy, Brighton)?",
+        "a": "Yes! We build dedicated multi-location SEO architectures tailored to each specific suburb and high-value Victorian territory."
+      },
+      {
+        "q": "Are there any long-term contract lock-ins?",
+        "a": "Zero mandatory lock-in. All our Melbourne digital marketing packages operate on flexible month-to-month agreements."
+      }
+    ],
+    "status": "Active",
+    "order": 8
+  },
+  {
+    "slug": "miami-digital-marketing",
+    "name": "Miami Digital Marketing Agency",
+    "city": "Miami",
+    "region": "Florida, USA",
+    "country": "United States",
+    "currency": "USD",
+    "currencySymbol": "$",
+    "tagline": "PREMIER MIAMI DIGITAL MARKETING & SEO · FLORIDA, USA",
+    "heroHighlight": "Miami Digital Marketing & SEO Agency",
+    "heroItalic": "Accelerate High-Yield Growth with",
+    "leadDesc": "Scale your South Florida business with performance-driven SEO, hyper-local Google Ads, and custom conversion funnels engineered for Miami’s hyper-competitive bilingual market.",
+    "bodyDesc": "From Brickell finance powerhouses and Wynwood creative agencies to Coral Gables commerce and South Beach hospitality—Webmok delivers compound revenue growth, top Google rankings, and high-converting customer acquisition.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "430%",
+        "label": "Average Miami Traffic Surge"
+      },
+      {
+        "num": "5.8x",
+        "label": "Average Return on Ad Spend (ROAS)"
+      },
+      {
+        "num": "#1 Rank",
+        "label": "In High-Intent Local Searches"
+      },
+      {
+        "num": "24/7",
+        "label": "US East Coast Timezone Support"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "Miami Local & Enterprise SEO",
+        "desc": "Dominate Google Maps 3-Pack and organic search across Miami-Dade, Broward, and Palm Beach counties with technical SEO, bilingual keyword targeting, and authoritative digital PR."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "High-ROAS Google Ads & PPC",
+        "desc": "Precision search, Google Local Services Ads (LSA), and Performance Max funnels designed to capture ready-to-buy South Florida buyers while strictly eliminating ad spend waste."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Bilingual Paid Social Media",
+        "desc": "Hyper-targeted Meta, TikTok, and Instagram ad campaigns optimized for Miami’s unique English and Spanish demographic landscape with high-impact visual storytelling."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Topical Authority Content & PR",
+        "desc": "Establish undisputed industry leadership with high-value localized content hubs, white-hat link acquisition from regional Florida news, and high-converting editorial assets."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "High-Converting Web Engineering",
+        "desc": "Fast, mobile-first React and WordPress web architectures built for speed, exceptional user experience, Core Web Vitals excellence, and maximum conversion rates."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Creative Video & Brand Production",
+        "desc": "Studio-grade video production, short-form reels, and commercial creative assets that capture attention in Miami’s vibrant, visually driven market."
+      }
+    ],
+    "whyHireOutsideTitle": "Why Miami Brands Are Hiring Outside Miami",
+    "whyHireOutsideSubtitle": "THE VALUE & PERFORMANCE DISRUPTION",
+    "whyHireDesc1": "Miami has experienced a massive influx of tech and enterprise capital, causing local agencies to inflate retainer fees to $8,000–$15,000/month while delegating work to junior staff.",
+    "whyHireDesc2": "Webmok provides Fortune-500 technical execution, dedicated US-timezone account directors, and agile engineering sprints at a transparent, high-ROI investment model.",
+    "comparisonPoints": [
+      {
+        "feature": "Senior Growth Engineers on Call",
+        "local": "Junior Account Coordinators",
+        "webmok": "Senior Growth Directors & Lead Techs"
+      },
+      {
+        "feature": "Monthly Retainer Cost",
+        "local": "$8,000 – $15,000 / month",
+        "webmok": "From $799 – $2,999 / month (3x-5x ROI)"
+      },
+      {
+        "feature": "Contract Commitment",
+        "local": "Mandatory 6-12 Month Lock-In",
+        "webmok": "Month-to-Month (Performance Retained)"
+      },
+      {
+        "feature": "Bilingual Execution",
+        "local": "Basic Translation Tools",
+        "webmok": "Native English & Spanish Market Strategy"
+      },
+      {
+        "feature": "Reporting & Telemetry",
+        "local": "Vague Monthly Vanity Reports",
+        "webmok": "24/7 Live Telemetry & Revenue Attribution"
+      }
+    ],
+    "resultsTitle": "Results We Show in Client Analytics",
+    "resultsSubtitle": "VERIFIABLE PERFORMANCE TELEMETRY",
+    "resultsStats": [
+      {
+        "metric": "+420%",
+        "label": "Average Organic Traffic Lift across Miami Clients"
+      },
+      {
+        "metric": "5.8x",
+        "label": "Average Blended ROAS across Meta & Google Ads"
+      },
+      {
+        "metric": "-38%",
+        "label": "Reduction in Cost Per Inbound Lead (CPL)"
+      },
+      {
+        "metric": "$18M+",
+        "label": "Tracked Client Revenue Pipeline Generated"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Selling in Miami",
+    "marketInsightsSubtitle": "LOCAL MARKET TELEMETRY",
+    "marketInsights": [
+      {
+        "title": "Bilingual Search Intent is Mandatory",
+        "desc": "Over 68% of Miami-Dade searches exhibit bilingual Spanish-English query patterns. We build dual-language ranking engines that capture both markets seamlessly."
+      },
+      {
+        "title": "Hyper-Localized Micro-Territories",
+        "desc": "Commercial behavior in Brickell differs completely from Doral, Coral Gables, or Wynwood. We build geo-targeted landing funnels specific to each neighborhood."
+      },
+      {
+        "title": "Rapid Market Influx Demands Authority",
+        "desc": "With hundreds of new companies moving to South Florida monthly, organic search equity and Google Maps superiority are required to maintain category leadership."
+      },
+      {
+        "title": "Mobile-First Conversions Drive 78% of Leads",
+        "desc": "South Florida buyers overwhelmingly browse on mobile. We engineer sub-second page load speeds and friction-free click-to-call conversions."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "Deep Market & Competitor Audit",
+        "desc": "Exhaustive analysis of your Miami competitors, keyword vulnerabilities, and funnel conversion leaks."
+      },
+      {
+        "num": "02",
+        "title": "Bespoke Blueprint & Architecture",
+        "desc": "Engineering your multi-channel acquisition roadmap with target commercial search terms and high-intent PPC funnels."
+      },
+      {
+        "num": "03",
+        "title": "Omni-Channel Execution Sprints",
+        "desc": "Deploying high-velocity SEO optimizations, ad creatives, localized landing pages, and editorial PR placements."
+      },
+      {
+        "num": "04",
+        "title": "Continuous CRO & Compound Scale",
+        "desc": "Daily bid optimizations, heat-map user analysis, and real-time revenue telemetry to maximize customer lifetime value."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaBuilding",
+        "name": "Real Estate & Luxury Property",
+        "desc": "Capturing domestic and international luxury buyers in Brickell, Sunny Isles, and Palm Beach."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Healthcare & Aesthetic Clinics",
+        "desc": "Dominating local Google Maps for cosmetic surgery, dental practices, and wellness centers."
+      },
+      {
+        "icon": "FaBriefcase",
+        "name": "B2B Tech & Financial Services",
+        "desc": "Accelerating enterprise pipeline for FinTech, venture funds, and corporate law firms."
+      },
+      {
+        "icon": "FaUtensils",
+        "name": "Hospitality & Luxury Dining",
+        "desc": "Driving high-ticket bookings and foot traffic across South Beach and Wynwood hotspots."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "E-Commerce & DTC Brands",
+        "desc": "Scaling Shopify and custom storefronts with profitable Google Shopping and TikTok ads."
+      },
+      {
+        "icon": "FaCompass",
+        "name": "Legal & Professional Services",
+        "desc": "Generating high-value litigation cases and corporate client retainers on page 1 of Google."
+      }
+    ],
+    "plans": [
+      {
+        "name": "Miami Starter Scale",
+        "badge": "Local Traction",
+        "usdPrice": "799",
+        "inrPrice": "64,999",
+        "desc": "Ideal for local Miami businesses, clinics, and professional practices aiming to capture top Google Maps 3-Pack rankings.",
+        "features": [
+          "Up to 20 High-Intent Miami Keywords",
+          "Google Business Profile (Maps) Domination",
+          "Local Citations & Directory Synchronization",
+          "On-Page Optimization & Core Web Vitals Fixes",
+          "Monthly Executive ROI & Revenue Dashboard",
+          "Dedicated US East Coast Account Manager"
+        ]
+      },
+      {
+        "name": "Miami Accelerator",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,499",
+        "inrPrice": "1,19,999",
+        "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and bilingual content marketing.",
+        "features": [
+          "Up to 50 Multi-City Florida Keywords",
+          "Google Search Ads (PPC) Management ($4k spend)",
+          "Bilingual Content Hubs (8 High-Impact Posts/mo)",
+          "Competitor Backlink Interception & PR Outreach",
+          "Conversion-Optimized Landing Page Design",
+          "Bi-Weekly Live Strategic Telemetry Review"
+        ]
+      },
+      {
+        "name": "Miami Enterprise Monopoly",
+        "badge": "Category Leader",
+        "usdPrice": "2,999",
+        "inrPrice": "2,44,999",
+        "desc": "Full-scale omni-channel dominance for established brands, franchise networks, and rapid-growth SaaS firms.",
+        "features": [
+          "Unlimited High-Volume Target Keywords",
+          "Full-Funnel Omni-Channel PPC (Google, Meta, LinkedIn)",
+          "Bespoke Web App / High-Converting Portal Redesign",
+          "Tier-1 Press Release & Media Placements",
+          "Dedicated Senior Account Squad & Slack Channel",
+          "Custom CRM Integration & Multi-Touch Attribution"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok transformed our South Florida lead pipeline. We went from page 4 to #1 on Google Maps in Brickell, reducing our cost per acquisition by 45%.",
+        "author": "Carlos M.",
+        "role": "Managing Director",
+        "company": "Miami Commercial Real Estate Group",
+        "rating": 5
+      },
+      {
+        "quote": "Their bilingual campaign execution is unmatched. We captured over $1.8M in new customer revenue within 6 months of launching our Google Ads and SEO sprints.",
+        "author": "Elena S.",
+        "role": "VP of Marketing",
+        "company": "South Florida Aesthetic & Wellness",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why should a Miami business choose Webmok over local agencies charging $8,000+/mo?",
+        "a": "Webmok provides senior-level engineering and growth execution at an agile, value-driven investment level. You work with dedicated US-timezone directors who focus strictly on measurable pipeline revenue and closed deals rather than vanity impressions."
+      },
+      {
+        "q": "How fast can our Miami business expect to see Google ranking improvements?",
+        "a": "Local Google Maps 3-Pack optimizations and high-intent PPC campaigns begin funneling leads within 14 to 30 days. Broad organic SEO keywords achieve major page #1 breakthroughs in 60 to 90 days as domain equity compounds."
+      },
+      {
+        "q": "Do you offer bilingual English and Spanish marketing campaigns for South Florida?",
+        "a": "Yes, absolutely. Over 68% of Miami-Dade engages in bilingual search behavior. We craft tailored ad copy, localized keywords, and landing page funnels in both English and Spanish to maximize market penetration."
+      },
+      {
+        "q": "How do you handle Google Ads and paid media budget waste?",
+        "a": "We implement hyper-granular zip-code targeting, aggressive negative keyword sculpting, automated bid strategies, and day-parting to ensure your ad spend only captures ready-to-buy consumers."
+      },
+      {
+        "q": "Are there any long-term contract lock-ins?",
+        "a": "Zero mandatory lock-in. All our Miami digital marketing packages operate on flexible month-to-month agreements. We retain our clients through compounding performance and measurable ROI."
+      }
+    ],
+    "status": "Active",
+    "order": 9
+  },
+  {
+    "slug": "ottawa-digital-marketing",
+    "name": "Ottawa Digital Marketing Agency",
+    "city": "Ottawa",
+    "region": "National Capital Region, Ontario/Quebec, Canada",
+    "country": "Canada",
+    "currency": "CAD",
+    "currencySymbol": "C$",
+    "tagline": "CAPITAL REGION GROWTH AGENCY · OTTAWA, CANADA",
+    "heroHighlight": "Ottawa Digital Marketing & SEO Agency",
+    "heroItalic": "Dominate the National Capital Region with",
+    "leadDesc": "Scale your Ottawa business with high-precision B2B SEO, government contractor marketing, bilingual funnels, and high-conversion web development.",
+    "bodyDesc": "From Kanata tech corridor innovators and Downtown corporate firms to Gatineau bilingual commerce and Barrhaven services—Webmok delivers compound digital growth.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "380%",
+        "label": "Average Ottawa Traffic Growth"
+      },
+      {
+        "num": "5.4x",
+        "label": "Average ROAS on Paid Media"
+      },
+      {
+        "num": "50+",
+        "label": "Ottawa & Kanata Clients"
+      },
+      {
+        "num": "100%",
+        "label": "Bilingual & Compliance Ready"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "Ottawa Local & Kanata Tech SEO",
+        "desc": "Dominating search results across Downtown Ottawa, Kanata North, Nepean, Orleans, and Gatineau with localized technical search strategies."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "High-Intent Google Ads & PPC",
+        "desc": "Precision search ads, Performance Max funnels, and local service campaigns capturing high-intent government, corporate, and consumer buyers."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "B2B LinkedIn & Social Advertising",
+        "desc": "Targeting government procurement directors, tech executives, and commercial decision-makers across the National Capital Region."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Bilingual Content & Authority PR",
+        "desc": "English and French content hubs and media placements establishing thought leadership in Canada’s capital."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "High-Converting Web Development",
+        "desc": "Bilingual, accessible (AODA/WCAG), speed-optimized web architectures built for maximum trust and seamless conversion."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Corporate Video & Media Production",
+        "desc": "High-caliber commercial video assets, corporate case studies, and brand animations designed for enterprise engagement."
+      }
+    ],
+    "whyHireOutsideTitle": "Why Ottawa Brands Partner with Webmok",
+    "whyHireOutsideSubtitle": "CAPITAL VALUE & PRECISION",
+    "whyHireDesc1": "Ottawa agencies often focus heavily on slow government contracting, resulting in conservative marketing that lacks the agility and aggressiveness needed for commercial growth.",
+    "whyHireDesc2": "Webmok delivers high-velocity growth marketing, technical search superiority, and transparent performance telemetry tailored for Ottawa’s tech and professional ecosystem.",
+    "comparisonPoints": [
+      {
+        "feature": "Agile Sprint Velocity",
+        "local": "Slow Traditional Cycles",
+        "webmok": "48-Hour High-Velocity Growth Sprints"
+      },
+      {
+        "feature": "Bilingual Execution",
+        "local": "Extra Translation Add-Ons",
+        "webmok": "Full English/French Capability Included"
+      },
+      {
+        "feature": "Pricing Transparency",
+        "local": "C$7,500 – C$14,000 / month",
+        "webmok": "From C$1,080 – C$3,980 / month"
+      },
+      {
+        "feature": "Accessibility Compliance",
+        "local": "Basic AODA Disclaimers",
+        "webmok": "Full WCAG/AODA Accessibility Compliance"
+      },
+      {
+        "feature": "Contract Terms",
+        "local": "Rigid Annual Commitments",
+        "webmok": "Flexible Month-to-Month Agreements"
+      }
+    ],
+    "resultsTitle": "Ottawa Performance Telemetry",
+    "resultsSubtitle": "PROVEN CAPITAL OUTCOMES",
+    "resultsStats": [
+      {
+        "metric": "50+",
+        "label": "Ottawa Brands Scaled Successfully"
+      },
+      {
+        "metric": "C$12M+",
+        "label": "Tracked Pipeline Value Generated"
+      },
+      {
+        "metric": "99.1%",
+        "label": "Capital Region Client Satisfaction"
+      },
+      {
+        "metric": "24/7",
+        "label": "EST Timezone Dedicated Support"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Marketing in Ottawa",
+    "marketInsightsSubtitle": "NATIONAL CAPITAL DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "Bilingual English/French Requirement",
+        "desc": "Serving the Ottawa-Gatineau region requires seamless bilingual navigation, search indexing, and customer communication."
+      },
+      {
+        "title": "Kanata Tech Corridor Innovation",
+        "desc": "Kanata is home to over 540 tech companies. B2B software and hardware marketing requires deep technical copy and ABM targeting."
+      },
+      {
+        "title": "High Average Household Income",
+        "desc": "Ottawa boasts one of Canada’s highest median incomes. Premium positioning and trust signals significantly improve conversion rates."
+      },
+      {
+        "title": "AODA/WCAG Accessibility Standards",
+        "desc": "Ontario businesses must adhere to strict web accessibility standards. We build clean, accessible markup that ranks higher on Google."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "Capital Market & SEO Audit",
+        "desc": "Evaluating bilingual search volumes, competitor gaps, and technical accessibility."
+      },
+      {
+        "num": "02",
+        "title": "Bilingual Funnel Architecture",
+        "desc": "Setting up dual-language landing pages, schema markup, and Google Business Profiles."
+      },
+      {
+        "num": "03",
+        "title": "Omni-Channel Execution",
+        "desc": "Deploying high-intent Google Search ads, B2B content hubs, and LinkedIn campaigns."
+      },
+      {
+        "num": "04",
+        "title": "CRO & Revenue Telemetry",
+        "desc": "Tracking conversion volume, optimizing lead quality, and scaling market share."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaLaptopCode",
+        "name": "Kanata Tech & SaaS Innovators",
+        "desc": "Driving B2B pipeline, product demos, and ARR growth for Ottawa tech firms."
+      },
+      {
+        "icon": "FaBriefcase",
+        "name": "Government Contractors & Consultants",
+        "desc": "Positioning defense, IT, and management consulting firms for major RFPs."
+      },
+      {
+        "icon": "FaBuilding",
+        "name": "Real Estate & Development",
+        "desc": "Capturing buyers across Ottawa, Kanata, Orleans, and the Outaouais region."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Private Medical & Healthcare",
+        "desc": "Patient acquisition for dental, medical, and specialized healthcare practices."
+      },
+      {
+        "icon": "FaCompass",
+        "name": "Legal & Accounting Practices",
+        "desc": "Generating corporate clients and high-value advisory retainers."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "Local Commercial & Retail",
+        "desc": "Driving store foot traffic and e-commerce sales across the National Capital Region."
+      }
+    ],
+    "plans": [
+      {
+        "name": "Ottawa Growth Core",
+        "badge": "Local Focus",
+        "usdPrice": "799",
+        "inrPrice": "64,999",
+        "desc": "Ideal for local Ottawa service providers and professional practices looking to capture top Google visibility.",
+        "features": [
+          "Up to 20 High-Intent Ottawa Keywords",
+          "Google Business Profile Geo-Optimization",
+          "Local Citations & YellowPages Canada",
+          "On-Page SEO & Content Tuning (4 Pages/mo)",
+          "Monthly Executive ROI Report",
+          "Dedicated EST Account Director"
+        ]
+      },
+      {
+        "name": "Ottawa Accelerator",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,499",
+        "inrPrice": "1,19,999",
+        "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and bilingual content marketing.",
+        "features": [
+          "Up to 45 Capital Region Keywords",
+          "Google Ads (PPC) Campaign Management",
+          "Bilingual English/French Landing Pages",
+          "High-Authority Content Marketing (6 Posts/mo)",
+          "Competitor Backlink Interception",
+          "Bi-Weekly Strategic Live Consultation"
+        ]
+      },
+      {
+        "name": "Ottawa Enterprise Monopoly",
+        "badge": "Category Leader",
+        "usdPrice": "2,899",
+        "inrPrice": "2,39,999",
+        "desc": "Full-scale market dominance for tech enterprises, government suppliers, and regional networks.",
+        "features": [
+          "Capital Region & Nationwide Keyword Domination",
+          "Omni-Channel PPC (Google, Meta, LinkedIn)",
+          "Custom High-Converting Web Redesign",
+          "Tier-1 Canadian Media PR & Backlinks",
+          "Dedicated Account Squad & Daily Slack Channel",
+          "Custom CRM Integration & Lead Attribution"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok built a bilingual search engine that positioned our IT consultancy at the top of Google for federal contractor keywords.",
+        "author": "Jean-Luc D.",
+        "role": "Managing Director",
+        "company": "Ottawa Enterprise IT Solutions",
+        "rating": 5
+      },
+      {
+        "quote": "Our Kanata SaaS platform saw a 310% increase in qualified demo requests within 4 months of launching our Google Ads and SEO sprints.",
+        "author": "Karen W.",
+        "role": "VP of Marketing",
+        "company": "Kanata Cloud Tech Platform",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can Webmok build bilingual marketing campaigns for Ottawa and Gatineau?",
+        "a": "Yes! We craft complete dual-language funnels in English and French, ensuring compliance with federal standards and Quebec language regulations."
+      },
+      {
+        "q": "How do you target Kanata technology and B2B buyers?",
+        "a": "We use Account-Based Marketing (ABM) on LinkedIn and high-intent commercial Google Search ads to reach C-suite and technical decision-makers directly."
+      },
+      {
+        "q": "Are your websites compliant with AODA and WCAG accessibility standards?",
+        "a": "Yes, 100%. We ensure all web assets meet Ontario AODA and WCAG 2.1 AA accessibility guidelines."
+      },
+      {
+        "q": "What is the contract term?",
+        "a": "All our Ottawa digital marketing packages operate on flexible month-to-month agreements with zero lock-in."
+      }
+    ],
+    "status": "Active",
+    "order": 10
+  },
+  {
+    "slug": "san-francisco-digital-marketing",
+    "name": "San Francisco Digital Marketing Agency",
+    "city": "San Francisco",
+    "region": "Bay Area & Silicon Valley, CA, USA",
+    "country": "United States",
+    "currency": "USD",
+    "currencySymbol": "$",
+    "tagline": "BAY AREA & SILICON VALLEY GROWTH SQUAD · SF, USA",
+    "heroHighlight": "San Francisco Digital Marketing Agency",
+    "heroItalic": "Accelerate B2B Pipeline & ARR with",
+    "leadDesc": "Fuel your Silicon Valley startup or Bay Area enterprise with high-velocity B2B lead generation, technical SaaS SEO, and precision paid acquisition.",
+    "bodyDesc": "From SOMA and FiDi tech firms to South Bay enterprises and East Bay innovators—Webmok engineers scalable, data-backed digital engines that accelerate ARR and pipeline value.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "510%",
+        "label": "Average B2B Pipeline Growth"
+      },
+      {
+        "num": "4.8x",
+        "label": "CAC to LTV Efficiency Ratio"
+      },
+      {
+        "num": "80+",
+        "label": "Bay Area Tech & B2B Clients"
+      },
+      {
+        "num": "100%",
+        "label": "Data-Backed Execution"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "B2B SaaS & Enterprise SEO",
+        "desc": "Topical authority architecture, product-led SEO hubs, programmatic landing pages, and technical optimizations engineered for enterprise search volume."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "LinkedIn & Google Search Ads (PPC)",
+        "desc": "Account-Based Marketing (ABM) funnels, high-intent commercial Google Search ads, and retargeting that drives qualified demo requests."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Product-Led Content & Whitepapers",
+        "desc": "In-depth comparison guides, technical whitepapers, and industry benchmarks that position your platform as the category standard."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "High-Converting Webflow & React Dev",
+        "desc": "Modern, high-velocity SaaS marketing websites and interactive demo landing pages engineered for optimal conversion rates."
+      },
+      {
+        "icon": "FaChartLine",
+        "title": "CRM & Multi-Touch Attribution",
+        "desc": "Seamless HubSpot, Salesforce, and Segment integrations mapping every click directly to pipeline stage and closed ARR."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Developer Marketing & Brand PR",
+        "desc": "Technical digital PR, GitHub community amplification, and tech publication editorial placements that drive organic developer adoption."
+      }
+    ],
+    "whyHireOutsideTitle": "Engineering-Driven Marketing for the Bay Area",
+    "whyHireOutsideSubtitle": "SILICON VALLEY PRECISION",
+    "whyHireDesc1": "Bay Area agencies charge exorbitant retainers ($15k–$30k/mo) driven by local commercial real estate and overhead, delivering generic marketing that fails in technical B2B sectors.",
+    "whyHireDesc2": "Webmok approaches growth marketing like software engineering—running agile sprints, instrumenting full-funnel attribution, and scaling pipeline with provable unit economics.",
+    "comparisonPoints": [
+      {
+        "feature": "Methodology",
+        "local": "Generalist Marketing Agency",
+        "webmok": "Engineering-Driven B2B & SaaS Growth Squad"
+      },
+      {
+        "feature": "Attribution Depth",
+        "local": "Basic Google Analytics Clicks",
+        "webmok": "Full CRM Revenue Attribution (HubSpot/Salesforce)"
+      },
+      {
+        "feature": "Cost Efficiency",
+        "local": "$15,000 – $30,000 / month",
+        "webmok": "From $949 – $3,499 / month (Compound ARR Lift)"
+      },
+      {
+        "feature": "Sprint Speed",
+        "local": "Bi-Monthly Reviews",
+        "webmok": "Agile Weekly Telemetry & Daily Slack Access"
+      },
+      {
+        "feature": "Contract Terms",
+        "local": "1-Year Strict Lock-In",
+        "webmok": "Flexible Month-to-Month Agreements"
+      }
+    ],
+    "resultsTitle": "Bay Area Performance Telemetry",
+    "resultsSubtitle": "VERIFIABLE B2B RESULTS",
+    "resultsStats": [
+      {
+        "metric": "80+",
+        "label": "SF Tech Startups & Enterprises Scaled"
+      },
+      {
+        "metric": "$28M+",
+        "label": "Tracked Pipeline ARR Generated"
+      },
+      {
+        "metric": "99.5%",
+        "label": "Client Retention Rate"
+      },
+      {
+        "metric": "Under 28s",
+        "label": "Engineer Response Time"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Selling to B2B Tech in SF",
+    "marketInsightsSubtitle": "SILICON VALLEY DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "High-Intent Commercial Searches Win Deals",
+        "desc": "Enterprise buyers search for specific product comparison terms (e.g. \"X vs Y\" or \"Best enterprise solution for Z\"). We build dominant comparison hubs."
+      },
+      {
+        "title": "CAC Payback Period is the Ultimate Metric",
+        "desc": "We optimize every paid campaign around CAC payback velocity and pipeline quality rather than cheap, unqualified top-of-funnel clicks."
+      },
+      {
+        "title": "Multi-Stakeholder Buying Committees",
+        "desc": "B2B software purchases require approval from Engineering, Security, and Finance. We craft tailored content assets for each stakeholder persona."
+      },
+      {
+        "title": "Speed to Lead Conversion",
+        "desc": "Demo requests that are contacted within 5 minutes convert 8x higher. We build automated webhook integrations directly into your sales team’s Slack."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "Product & ICP Deep Dive",
+        "desc": "Understanding your Ideal Customer Profile (ICP), ACV economics, and competitor positioning."
+      },
+      {
+        "num": "02",
+        "title": "Technical Demand Gen Architecture",
+        "desc": "Building high-intent B2B search funnels, comparison hubs, and LinkedIn ABM audiences."
+      },
+      {
+        "num": "03",
+        "title": "Omni-Channel Sprint Deployment",
+        "desc": "Launching targeted PPC, programmatic SEO hubs, and CRM attribution pipelines."
+      },
+      {
+        "num": "04",
+        "title": "Pipeline Optimization & ARR Scale",
+        "desc": "A/B testing demo landing pages, optimizing lead scoring, and compounding pipeline ARR."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaLaptopCode",
+        "name": "B2B SaaS & Cloud Platforms",
+        "desc": "Accelerating product demos, free-trial conversions, and enterprise contract ARR."
+      },
+      {
+        "icon": "FaShieldAlt",
+        "name": "Cybersecurity & Infrastructure",
+        "desc": "Establishing category authority and capturing high-intent technical enterprise buyers."
+      },
+      {
+        "icon": "FaChartLine",
+        "name": "FinTech & Blockchain Platforms",
+        "desc": "Driving compliance-ready user acquisition and institutional investor interest."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "HealthTech & BioTech Ventures",
+        "desc": "Connecting innovative clinical platforms with hospital networks and research labs."
+      },
+      {
+        "icon": "FaBriefcase",
+        "name": "Venture Capital & Advisory",
+        "desc": "Amplifying portfolio brand value, deal flow discovery, and founder recruitment."
+      },
+      {
+        "icon": "FaBuilding",
+        "name": "Commercial Real Estate Tech (PropTech)",
+        "desc": "Scaling corporate tenant acquisition and commercial property software adoption."
+      }
+    ],
+    "plans": [
+      {
+        "name": "SF Seed / Local Growth",
+        "badge": "Early Stage",
+        "usdPrice": "949",
+        "inrPrice": "74,999",
+        "desc": "Ideal for early-stage startups and local SF service providers building initial organic traction and localized Google visibility.",
+        "features": [
+          "Up to 25 High-Intent Bay Area Keywords",
+          "Google Business Profile & Local SF Citations",
+          "Core Technical SEO & Schema Markup",
+          "On-Page Optimization & 4 Quality Blog Hubs",
+          "Monthly Executive ROI Report",
+          "Dedicated US PST Growth Strategist"
+        ]
+      },
+      {
+        "name": "SF Scale-Up B2B",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,799",
+        "inrPrice": "1,49,999",
+        "desc": "Aggressive multi-channel demand gen for Series A/B SaaS startups and established Bay Area mid-market companies.",
+        "features": [
+          "Up to 55 B2B & Commercial Keywords",
+          "Google Search Ads & LinkedIn PPC Management",
+          "High-Converting Landing Page Creation & CRO",
+          "Technical Core Web Vitals & Speed Optimization",
+          "8 High-Authority B2B Industry Backlinks/mo",
+          "Bi-Weekly Live Strategy Sessions"
+        ]
+      },
+      {
+        "name": "SF Silicon Valley Monopoly",
+        "badge": "Enterprise Dominance",
+        "usdPrice": "3,499",
+        "inrPrice": "2,89,999",
+        "desc": "Full-scale omni-channel growth engine for growth-stage tech firms, enterprise platforms, and market leaders.",
+        "features": [
+          "Unlimited Target Keywords & Global Search Footprint",
+          "Omni-Channel PPC (Google, LinkedIn, Meta, YouTube)",
+          "Bespoke Web Portal / Headless CMS Redesign",
+          "Tier-1 Tech Editorial PR & Media Placements",
+          "Dedicated Senior Account Lead & Daily Slack Channel",
+          "HubSpot/Salesforce Revenue Attribution Integration"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok scaled our Series A SaaS pipeline by 340% within 5 months. Their understanding of B2B search intent and HubSpot attribution is unmatched.",
+        "author": "David L.",
+        "role": "VP of Growth",
+        "company": "San Francisco AI Workflow Platform",
+        "rating": 5
+      },
+      {
+        "quote": "They operate like an internal growth squad. Weekly sprints, zero fluff, and direct pipeline ARR delivered every month.",
+        "author": "Sarah M.",
+        "role": "Head of Demand Generation",
+        "company": "Bay Area CyberTech Platform",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do you specialize in B2B SaaS and technology companies in San Francisco?",
+        "a": "Yes! Over 60% of our Bay Area client roster consists of B2B software, fintech, AI platforms, and technology service companies requiring specialized technical content and ABM funnels."
+      },
+      {
+        "q": "How do you integrate with our CRM (HubSpot or Salesforce)?",
+        "a": "We configure custom UTM tracking, webhook triggers, and conversion goals to pass enriched lead data directly into HubSpot, Salesforce, or Marketo for full-funnel attribution."
+      },
+      {
+        "q": "Can you coordinate with our internal marketing and engineering teams?",
+        "a": "Absolutely. We plug directly into your Slack, Jira, or ClickUp workflows, functioning as a seamless extension of your in-house growth squad."
+      },
+      {
+        "q": "What are the contract terms?",
+        "a": "Flexible month-to-month contracts with zero lock-in. You stay because we deliver measurable pipeline growth."
+      }
+    ],
+    "status": "Active",
+    "order": 11
+  },
+  {
+    "slug": "seo-services-new-york",
+    "name": "SEO Services in New York",
+    "city": "New York",
+    "region": "New York City, NY, USA",
+    "country": "United States",
+    "currency": "USD",
+    "currencySymbol": "$",
+    "tagline": "ELITE NEW YORK SEO AGENCY · NYC, USA",
+    "heroHighlight": "Top SEO Services in New York",
+    "heroItalic": "Dominate Page #1 in Manhattan with",
+    "leadDesc": "Outrank Wall Street, Midtown, and Manhattan competitors with high-authority technical SEO, bespoke link acquisition, and data-backed organic search strategies.",
+    "bodyDesc": "In the world’s most competitive business capital, second-page rankings don’t exist. Webmok builds bulletproof organic ranking engines that capture high-ticket NYC commercial intent.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "490%",
+        "label": "Average NYC Organic Surge"
+      },
+      {
+        "num": "#1 Rank",
+        "label": "In Ultra-Competitive NYC Niches"
+      },
+      {
+        "num": "90+ DA",
+        "label": "Editorial Backlink Network"
+      },
+      {
+        "num": "100%",
+        "label": "Strict White-Hat Google Compliance"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "Enterprise & NYC Technical SEO",
+        "desc": "Advanced site architecture audits, server log file analysis, Core Web Vitals remediation, and JavaScript rendering optimization for complex enterprise domains."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Topical Authority & Semantic Content",
+        "desc": "Entity-based content hubs that establish definitive topical supremacy across competitive financial, legal, medical, and technology keywords."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "Tier-1 Digital PR & High-DA Backlinks",
+        "desc": "Manual outreach to major publications (Forbes, Bloomberg, Reuters, Industry Journals) acquiring authoritative editorial backlinks that drive unstoppable rankings."
+      },
+      {
+        "icon": "FaCompass",
+        "title": "Manhattan & Borough Local 3-Pack",
+        "desc": "Hyper-local optimization capturing high-intent searchers across Manhattan, Brooklyn, Queens, and the Tri-State area on Google Maps."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "Conversion Rate Optimization (CRO)",
+        "desc": "Turning expensive NYC search traffic into high-value executive demo requests, phone consultations, and qualified pipeline."
+      },
+      {
+        "icon": "FaChartLine",
+        "title": "Executive Telemetry & Attribution",
+        "desc": "Real-time dashboards connecting organic keyword positions directly to pipeline revenue, customer lifetime value, and CAC reduction."
+      }
+    ],
+    "whyHireOutsideTitle": "The New York SEO Advantage with Webmok",
+    "whyHireOutsideSubtitle": "UNRIVALED TECHNICAL PRECISION",
+    "whyHireDesc1": "Madison Avenue and Manhattan agencies routinely charge $12,000–$25,000/month for SEO retainers while outsourcing technical execution to automated tools.",
+    "whyHireDesc2": "Webmok provides senior technical SEO architects, manual digital PR specialists, and direct Slack communication at an agile, value-driven price point.",
+    "comparisonPoints": [
+      {
+        "feature": "Link Acquisition Method",
+        "local": "Generic Syndication / PBNs",
+        "webmok": "100% Editorial Tier-1 Digital PR (DA 60-90+)"
+      },
+      {
+        "feature": "Technical Depth",
+        "local": "Automated Audit Checklists",
+        "webmok": "Deep Server Log, Schema & Code Audits"
+      },
+      {
+        "feature": "Monthly Investment",
+        "local": "$12,000 – $25,000 / month",
+        "webmok": "From $999 – $3,499 / month"
+      },
+      {
+        "feature": "Algorithm Resilience",
+        "local": "Vulnerable to Core Updates",
+        "webmok": "Zero-Penalty White-Hat Authority Architecture"
+      },
+      {
+        "feature": "Executive Reporting",
+        "local": "Vague PDF Ranking Reports",
+        "webmok": "Live 24/7 Revenue Telemetry Dashboard"
+      }
+    ],
+    "resultsTitle": "Unrivaled Organic Results in NYC",
+    "resultsSubtitle": "MEASURABLE PIPELINE IMPACT",
+    "resultsStats": [
+      {
+        "metric": "95+",
+        "label": "NYC Enterprise Brands Ranked #1"
+      },
+      {
+        "metric": "$32M+",
+        "label": "Organic Revenue Pipeline Generated"
+      },
+      {
+        "metric": "99.6%",
+        "label": "Keyword Position Retention Rate"
+      },
+      {
+        "metric": "Top 1%",
+        "label": "Technical SEO Performance Score"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "Why Organic Dominance Matters in NYC",
+    "marketInsightsSubtitle": "MANHATTAN SEARCH DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "Ultra-High Cost Per Click in Paid Search",
+        "desc": "NYC legal and financial search terms regularly exceed $150+ per click on Google Ads. Dominating organic search creates an enduring, cost-free customer acquisition moat."
+      },
+      {
+        "title": "High-Ticket Executive Buyer Behavior",
+        "desc": "C-Suite executives and luxury consumers conduct thorough organic research. Ranking #1 establishes category trust that cannot be bought with ads."
+      },
+      {
+        "title": "Hyper-Competitive Local Search Grid",
+        "desc": "Ranking on Google Maps in Midtown versus FiDi requires localized geo-signals, micro-citations, and borough-specific schema markup."
+      },
+      {
+        "title": "Google Algorithm Core Resilience",
+        "desc": "Google frequently tests new AI Overviews and algorithm updates in US Tier-1 markets. We build dense entity authority that thrives across every update."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "Exhaustive Reverse Engineering",
+        "desc": "Analyzing the top 3 ranking domains in your NYC niche to map exact content depth and backlink velocity requirements."
+      },
+      {
+        "num": "02",
+        "title": "Technical & Architecture Overhaul",
+        "desc": "Eliminating render-blocking assets, fixing crawl depth issues, and implementing advanced JSON-LD schema."
+      },
+      {
+        "num": "03",
+        "title": "Topical Authority & Digital PR Sprints",
+        "desc": "Publishing comprehensive topic clusters and executing manual outreach to high-DA editorial news outlets."
+      },
+      {
+        "num": "04",
+        "title": "Revenue Attribution & Expansion",
+        "desc": "Tracking conversion goals, ranking retention, and scaling keyword targets nationwide."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaBriefcase",
+        "name": "Corporate Law & Legal Practices",
+        "desc": "Dominating commercial litigation, M&A, and high-stakes personal injury search queries in NYC."
+      },
+      {
+        "icon": "FaBuilding",
+        "name": "Commercial Real Estate & Finance",
+        "desc": "Capturing institutional investors, property developers, and asset managers across Manhattan."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Private Healthcare & Specialists",
+        "desc": "Ranking #1 for luxury medical practices, concierge doctors, and surgical centers."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "name": "FinTech, SaaS & Tech Ventures",
+        "desc": "Driving organic B2B product demo signups and ARR growth in Silicon Alley."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "Luxury Goods & Premium Retail",
+        "desc": "Capturing high-net-worth consumers searching for bespoke and luxury retail products."
+      },
+      {
+        "icon": "FaCompass",
+        "name": "Consulting & Executive Advisory",
+        "desc": "Establishing authority for management consulting, headhunting, and financial advisory firms."
+      }
+    ],
+    "plans": [
+      {
+        "name": "NYC Growth SEO",
+        "badge": "Local Contender",
+        "usdPrice": "999",
+        "inrPrice": "79,999",
+        "desc": "Built for NYC boutique firms, specialized practices, and startups looking to break onto page 1 for competitive terms.",
+        "features": [
+          "Up to 25 Competitive NYC Keywords",
+          "Google Business Profile NYC Optimization",
+          "Comprehensive On-Page & Schema Markup",
+          "4 High-Authority Outreach Backlinks/mo",
+          "Core Web Vitals & Speed Optimization",
+          "Monthly Transparent ROI Dashboard"
+        ]
+      },
+      {
+        "name": "NYC Market Leader",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,899",
+        "inrPrice": "1,54,999",
+        "desc": "Aggressive organic conquesting for mid-market New York firms fighting for high-value transactional search volume.",
+        "features": [
+          "Up to 60 High-Difficulty NYC Keywords",
+          "Deep Technical SEO & Core Web Vitals Fixes",
+          "10 Premium Tier-1 Editorial Backlinks/mo",
+          "Topical Authority Content Hubs (8 Posts/mo)",
+          "Competitor Backlink Interception & Gap Analysis",
+          "Bi-Weekly Strategy Sessions with Senior Lead"
+        ]
+      },
+      {
+        "name": "NYC Enterprise Monopoly",
+        "badge": "Unstoppable Authority",
+        "usdPrice": "3,499",
+        "inrPrice": "2,89,999",
+        "desc": "Uncompromising organic domination for established NYC enterprises, national brands, and venture-backed firms.",
+        "features": [
+          "Unlimited Keywords & National Expansion",
+          "Full-Scale Digital PR Campaigns & News Placements",
+          "Custom Interactive Content & Conversion Assets",
+          "Dedicated NYC Squad (SEO Lead, Tech Dev, PR Strategist)",
+          "Direct Slack Channel Access & Weekly Telemetry",
+          "Multi-Touch Attribution & Custom CRM Pipelines"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok took our Manhattan corporate law firm to #1 for our most valuable transactional keywords. Our inbound qualified lead volume tripled in 90 days.",
+        "author": "Jonathan D.",
+        "role": "Senior Partner",
+        "company": "NYC Commercial Litigation Firm",
+        "rating": 5
+      },
+      {
+        "quote": "Their digital PR team landed editorial placements in Tier-1 finance publications that established our domain as the definitive authority.",
+        "author": "Rachel W.",
+        "role": "Chief Marketing Officer",
+        "company": "Wall Street FinTech Platform",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How difficult is it to rank on Google in New York City?",
+        "a": "NYC is the most competitive search market globally. It requires flawless technical SEO, dense topical authority, and high-tier editorial backlinks. We have repeatedly ranked clients #1 across high-stakes NYC sectors."
+      },
+      {
+        "q": "How does Webmok acquire backlinks for New York campaigns?",
+        "a": "We strictly execute manual digital PR outreach to high-authority publications, industry journals, and regional business news outlets (DA 60-90+). Zero private blog networks (PBNs) or spam."
+      },
+      {
+        "q": "Can you handle local NYC 3-pack maps and national organic SEO together?",
+        "a": "Yes! We create dual-funnel SEO architectures that capture both local NYC foot/phone inquiries and nationwide organic search volume."
+      },
+      {
+        "q": "What reporting do we receive each month?",
+        "a": "You receive live 24/7 access to our real-time telemetry dashboard showing keyword movements, organic traffic growth, backlink additions, and direct conversions."
+      }
+    ],
+    "status": "Active",
+    "order": 12
+  },
+  {
+    "slug": "south-africa-digital-marketing",
+    "name": "South Africa Digital Marketing Agency",
+    "city": "South Africa",
+    "region": "South Africa Nationwide (Johannesburg, Cape Town, Durban)",
+    "country": "South Africa",
+    "currency": "ZAR",
+    "currencySymbol": "R",
+    "tagline": "PREMIER SOUTH AFRICA DIGITAL AGENCY · JHB & CAPE TOWN",
+    "heroHighlight": "South Africa Digital Marketing Agency",
+    "heroItalic": "Accelerate High-ROI Growth Across SA with",
+    "leadDesc": "Scale your South African business nationwide with performance-driven SEO, precision Google Ads, and custom conversion funnels built for Johannesburg, Cape Town, and Durban.",
+    "bodyDesc": "We help South African enterprises build dominant digital pipelines, rank #1 on Google, and capture high-intent commercial buyers throughout the country.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "410%",
+        "label": "Average SA Traffic Surge"
+      },
+      {
+        "num": "5.8x",
+        "label": "Average ROAS on Paid Ads"
+      },
+      {
+        "num": "60+",
+        "label": "SA Brands Scaled"
+      },
+      {
+        "num": "100%",
+        "label": "POPIA Compliant"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "South Africa National & Local SEO",
+        "desc": "Dominating Google.co.za rankings across Johannesburg, Cape Town, Pretoria, and Durban with technical search optimization and local citation networks."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "High-ROAS Google Ads (PPC)",
+        "desc": "Precision search funnels, Performance Max campaigns, and Google Shopping optimization designed for high conversion volume and zero wasted spend."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Paid Social Advertising (Meta & TikTok)",
+        "desc": "Hyper-targeted Meta and TikTok ad campaigns optimized for South African demographics and mobile consumer behavior."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Topical Authority Content & PR",
+        "desc": "High-value localized content hubs, South African business citations, and editorial PR placements that build unbeatable domain equity."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "High-Speed Web Architecture",
+        "desc": "Fast, mobile-first web platforms built for speed, exceptional user experience, Core Web Vitals excellence, and maximum conversion rates."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Commercial Video & Creative Production",
+        "desc": "Studio-grade video ads, lifestyle storytelling, and brand creative tailored for the South African marketplace."
+      }
+    ],
+    "whyHireOutsideTitle": "The South African Growth Advantage with Webmok",
+    "whyHireOutsideSubtitle": "GLOBAL EXPERTISE · LOCAL VALUE",
+    "whyHireDesc1": "South African agencies often operate with limited technical infrastructure, charging high fees while relying on outdated search tactics.",
+    "whyHireDesc2": "Webmok delivers Fortune-500 technical execution, SAST timezone alignment, and rapid sprint cycles at a high-ROI, value-driven investment model.",
+    "comparisonPoints": [
+      {
+        "feature": "Technical Search Rigor",
+        "local": "Basic On-Page Checklists",
+        "webmok": "Deep Entity, Schema & Core Web Vitals Engineering"
+      },
+      {
+        "feature": "POPIA Compliance",
+        "local": "Basic Privacy Disclaimers",
+        "webmok": "Strict POPIA Data Protection Compliance"
+      },
+      {
+        "feature": "Pricing Transparency",
+        "local": "High Retainers with Hidden Costs",
+        "webmok": "Value-Driven Month-to-Month Packages"
+      },
+      {
+        "feature": "Sprint Speed",
+        "local": "Slow Multi-Week Cycles",
+        "webmok": "48-72 Hour High-Velocity Sprints"
+      },
+      {
+        "feature": "Telemetry & Attribution",
+        "local": "Vanity Impressions & Clicks",
+        "webmok": "Direct Revenue, Lead Quality & ROAS Attribution"
+      }
+    ],
+    "resultsTitle": "South Africa Performance Telemetry",
+    "resultsSubtitle": "VERIFIABLE OUTCOMES",
+    "resultsStats": [
+      {
+        "metric": "60+",
+        "label": "South African Brands Scaled"
+      },
+      {
+        "metric": "$14M+",
+        "label": "Tracked Pipeline Value Generated"
+      },
+      {
+        "metric": "99.2%",
+        "label": "SA Client Satisfaction Rate"
+      },
+      {
+        "metric": "24/7",
+        "label": "SAST Timezone Direct Support"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Marketing in South Africa",
+    "marketInsightsSubtitle": "SOUTH AFRICAN DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "Mobile-First Internet Usage",
+        "desc": "Over 80% of South African internet browsing occurs on mobile devices. Fast-loading pages and low data consumption are critical."
+      },
+      {
+        "title": "Regional Economic Hubs",
+        "desc": "Johannesburg drives commercial and financial services; Cape Town leads in tech, tourism, and creative industries; Durban in logistics and retail."
+      },
+      {
+        "title": "POPIA Data Privacy Adherence",
+        "desc": "Marketing funnels must comply with South Africa’s Protection of Personal Information Act (POPIA). We build compliant opt-in systems."
+      },
+      {
+        "title": "High Search Intent on Google.co.za",
+        "desc": "Capturing local searchers requires localized ccTLD optimization, South African directory citations, and localized schema markup."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "South African Search Audit",
+        "desc": "Analyzing search intent and competitor positioning across JHB, Cape Town, and Durban."
+      },
+      {
+        "num": "02",
+        "title": "Hyper-Local Search Architecture",
+        "desc": "Building multi-city landing pages, localized schema markup, and Google Business Profiles."
+      },
+      {
+        "num": "03",
+        "title": "Omni-Channel Execution",
+        "desc": "Deploying high-intent Google Ads, local SEO optimizations, and targeted social campaigns."
+      },
+      {
+        "num": "04",
+        "title": "CRO & Revenue Telemetry",
+        "desc": "Optimizing conversion funnels, tracking pipeline ROI, and scaling market share."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaBriefcase",
+        "name": "Financial & Corporate Services",
+        "desc": "Capturing corporate clients, wealth management leads, and B2B finance contracts in JHB."
+      },
+      {
+        "icon": "FaBuilding",
+        "name": "Real Estate & Property Development",
+        "desc": "Dominating buyer acquisition for luxury homes and commercial properties in Cape Town and Gauteng."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Private Healthcare & Specialized Clinics",
+        "desc": "Patient acquisition for dental, medical, and specialized healthcare practices."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "E-Commerce & Retail Brands",
+        "desc": "Scaling Shopify and custom storefronts with profitable Google Shopping and Meta ads."
+      },
+      {
+        "icon": "FaUtensils",
+        "name": "Tourism & Safari Hospitality",
+        "desc": "Driving international tourist bookings and luxury travel experiences."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "name": "Tech Startups & B2B SaaS",
+        "desc": "Driving ARR growth and user signups in Cape Town’s Silicon Cape innovation hub."
+      }
+    ],
+    "plans": [
+      {
+        "name": "South Africa Growth Core",
+        "badge": "City Focus",
+        "usdPrice": "749",
+        "inrPrice": "59,999",
+        "desc": "Ideal for local South African businesses establishing dominant Google.co.za search visibility.",
+        "features": [
+          "Up to 20 High-Intent SA Keywords",
+          "Google Business Profile Geo-Optimization",
+          "Local Citations & Directory Listings",
+          "On-Page SEO & Content Tuning (4 Pages/mo)",
+          "Monthly Executive ROI Report",
+          "Dedicated SAST Account Lead"
+        ]
+      },
+      {
+        "name": "South Africa Accelerator",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,399",
+        "inrPrice": "1,09,999",
+        "desc": "Comprehensive multi-city campaign combining national SA SEO, Google Ads management, and conversion rate optimization.",
+        "features": [
+          "Up to 45 Multi-City SA Keywords",
+          "Google Ads (PPC) Campaign Management",
+          "Multi-City Landing Page Architecture",
+          "High-Authority Content Marketing (6 Posts/mo)",
+          "Competitor Backlink Interception",
+          "Bi-Weekly Live Strategy Sessions"
+        ]
+      },
+      {
+        "name": "South Africa Enterprise Monopoly",
+        "badge": "National Dominance",
+        "usdPrice": "2,699",
+        "inrPrice": "2,19,999",
+        "desc": "Full-scale nationwide market takeover for South African national brands, franchise networks, and enterprise e-commerce.",
+        "features": [
+          "SA Nationwide Keyword Domination (100+ Keywords)",
+          "Omni-Channel PPC (Google, Meta, LinkedIn)",
+          "Custom High-Converting Web Redesign",
+          "Tier-1 SA Media PR & Editorial Backlinks",
+          "Dedicated Account Squad & Daily Slack Channel",
+          "Custom Multi-Touch Attribution Modeling"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok scaled our Cape Town tourism and hospitality brand globally. International bookings increased by 220% in our first season.",
+        "author": "Johan V.",
+        "role": "Managing Director",
+        "company": "Cape Luxury Travel & Safari Group",
+        "rating": 5
+      },
+      {
+        "quote": "Their SEO and Google Ads team put our financial advisory firm at the top of Google.co.za across all major commercial terms.",
+        "author": "Thabo M.",
+        "role": "Director of Marketing",
+        "company": "Johannesburg Wealth Advisory",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why should a South African business choose Webmok over local agencies?",
+        "a": "Webmok delivers world-class technical engineering and growth marketing with dedicated SAST-timezone alignment, giving you an unfair digital advantage at a high-ROI price point."
+      },
+      {
+        "q": "How fast can our South African business expect to see Google ranking improvements?",
+        "a": "Google Maps optimizations and high-intent PPC campaigns generate leads within 14 to 30 days. Broad organic SEO keywords achieve page #1 breakthroughs in 60 to 90 days."
+      },
+      {
+        "q": "Are your marketing practices compliant with POPIA?",
+        "a": "Yes, 100%. All tracking, lead forms, and data handling are strictly architected to comply with South Africa’s Protection of Personal Information Act (POPIA)."
+      },
+      {
+        "q": "What is the contract term?",
+        "a": "All our South African digital marketing packages operate on flexible month-to-month agreements with zero lock-in."
+      }
+    ],
+    "status": "Active",
+    "order": 13
+  },
+  {
+    "slug": "toronto-digital-marketing",
+    "name": "Toronto Digital Marketing Agency",
+    "city": "Toronto",
+    "region": "Greater Toronto Area (GTA), Ontario, Canada",
+    "country": "Canada",
+    "currency": "CAD",
+    "currencySymbol": "C$",
+    "tagline": "PREMIER GTA GROWTH AGENCY · TORONTO, CANADA",
+    "heroHighlight": "Toronto Digital Marketing & SEO Agency",
+    "heroItalic": "Accelerate GTA Market Dominance with",
+    "leadDesc": "Dominate the Greater Toronto Area with high-velocity SEO, precision Google Ads, and conversion-focused web architecture built for Canada’s economic engine.",
+    "bodyDesc": "From Bay Street financial services and Downtown tech startups to Mississauga commerce, Vaughan retail, and Markham tech corridors—Webmok scales Toronto brands.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "430%",
+        "label": "Average GTA Traffic Growth"
+      },
+      {
+        "num": "5.7x",
+        "label": "Average ROAS on Paid Media"
+      },
+      {
+        "num": "65+",
+        "label": "Toronto & GTA Clients"
+      },
+      {
+        "num": "100%",
+        "label": "White-Hat SEO Execution"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "Toronto & GTA Local SEO",
+        "desc": "Dominating Google Maps 3-Pack and organic rankings across Downtown Toronto, North York, Mississauga, Markham, and Vaughan."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "High-Intent Google Ads (PPC)",
+        "desc": "Precision search funnels, Performance Max campaigns, and Local Services Ads designed to capture high-value Toronto commercial intent."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Targeted Paid Social (Meta & LinkedIn)",
+        "desc": "B2B LinkedIn campaigns targeting Bay Street decision-makers and high-converting Meta ads engaging GTA consumers."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "Topical Authority Content & PR",
+        "desc": "Authoritative content hubs, Toronto business citations, and editorial PR outreach establishing market leadership."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "High-Converting Web Architecture",
+        "desc": "Speed-optimized React, Webflow, and WordPress websites built for sub-second load times and maximum lead conversion."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Commercial Video & Creative Production",
+        "desc": "Studio-grade commercial video ads, brand storytelling, and social reels tailored for the Greater Toronto market."
+      }
+    ],
+    "whyHireOutsideTitle": "Why Toronto Brands Choose Webmok",
+    "whyHireOutsideSubtitle": "THE GTA ADVANTAGE",
+    "whyHireDesc1": "Toronto agencies on King West and Bay Street carry massive downtown overhead, charging C$8,000–C$18,000/month while treating mid-market accounts as secondary priorities.",
+    "whyHireDesc2": "Webmok provides dedicated senior growth engineers, EST timezone alignment, and rapid sprint cycles at a high-ROI, value-driven investment.",
+    "comparisonPoints": [
+      {
+        "feature": "Senior Account Attention",
+        "local": "Junior Account Managers",
+        "webmok": "Dedicated Senior Growth Directors"
+      },
+      {
+        "feature": "Monthly Retainer Cost",
+        "local": "C$8,000 – C$18,000 / month",
+        "webmok": "From C$1,080 – C$4,080 / month"
+      },
+      {
+        "feature": "Contract Commitment",
+        "local": "Mandatory 6-12 Months",
+        "webmok": "100% Flexible Month-to-Month"
+      },
+      {
+        "feature": "Turnaround Speed",
+        "local": "2-3 Weeks per Sprint",
+        "webmok": "48-72 Hours Agile Sprints"
+      },
+      {
+        "feature": "Reporting Telemetry",
+        "local": "Generic PDF Monthly Summaries",
+        "webmok": "Live 24/7 Real-Time Revenue Dashboards"
+      }
+    ],
+    "resultsTitle": "GTA Performance Telemetry",
+    "resultsSubtitle": "VERIFIABLE RESULTS",
+    "resultsStats": [
+      {
+        "metric": "65+",
+        "label": "GTA Brands Scaled to Page 1"
+      },
+      {
+        "metric": "C$16M+",
+        "label": "Tracked Pipeline Revenue Generated"
+      },
+      {
+        "metric": "99.4%",
+        "label": "Toronto Client Satisfaction Rate"
+      },
+      {
+        "metric": "24/7",
+        "label": "EST Timezone Direct Support"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Selling in the GTA",
+    "marketInsightsSubtitle": "TORONTO DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "Intense Local Search Competition",
+        "desc": "Toronto is Canada’s most competitive digital landscape. Ranking on Google Maps requires precise micro-citations across GTA municipalities."
+      },
+      {
+        "title": "Diverse Demographic Micro-Markets",
+        "desc": "Marketing across York Region, Peel Region, and Downtown Toronto requires culturally aware, tailored messaging and segmentation."
+      },
+      {
+        "title": "B2B Procurement Cycles in the Financial District",
+        "desc": "Bay Street corporate buyers conduct extensive digital due diligence. Dense topical authority and case study proof are essential to close deals."
+      },
+      {
+        "title": "Mobile-First Inbound Call Conversion",
+        "desc": "Over 80% of local Toronto service searches happen on mobile devices. We build instant click-to-call mobile landing pages with zero friction."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "GTA Market & Competitor Audit",
+        "desc": "Analyzing search intent and competitor positioning across Toronto, Mississauga, and Markham."
+      },
+      {
+        "num": "02",
+        "title": "Hyper-Local Search Architecture",
+        "desc": "Building multi-municipality landing pages, localized schema markup, and Google Business Profiles."
+      },
+      {
+        "num": "03",
+        "title": "Omni-Channel Sprint Deployment",
+        "desc": "Launching high-intent Google Ads, local SEO optimizations, and targeted social campaigns."
+      },
+      {
+        "num": "04",
+        "title": "CRO & Revenue Attribution",
+        "desc": "Optimizing conversion funnels, tracking pipeline ROI, and scaling market share."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaBriefcase",
+        "name": "Financial & Corporate Services",
+        "desc": "Capturing corporate clients, wealth management leads, and B2B finance contracts."
+      },
+      {
+        "icon": "FaBuilding",
+        "name": "Real Estate & Condo Development",
+        "desc": "Dominating buyer acquisition for pre-construction condos and luxury homes in the GTA."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Private Medical & Dental Clinics",
+        "desc": "Patient acquisition for cosmetic surgery, dental clinics, and wellness centers across Toronto."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "name": "Tech Startups & B2B SaaS",
+        "desc": "Driving ARR growth and user signups in the Toronto-Waterloo innovation corridor."
+      },
+      {
+        "icon": "FaCompass",
+        "name": "Legal & Professional Practices",
+        "desc": "Generating high-value litigation cases and corporate advisory retainers."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "Retail & Multi-Location Chains",
+        "desc": "Driving store foot traffic and e-commerce revenue across the Greater Toronto Area."
+      }
+    ],
+    "plans": [
+      {
+        "name": "Toronto Growth Core",
+        "badge": "Local Focus",
+        "usdPrice": "799",
+        "inrPrice": "64,999",
+        "desc": "Ideal for local Toronto and GTA businesses establishing dominant Google Maps and search visibility.",
+        "features": [
+          "Up to 20 High-Intent Toronto Keywords",
+          "Google Business Profile GTA Optimization",
+          "Local Citations & YellowPages Listings",
+          "On-Page SEO & Content Tuning (4 Pages/mo)",
+          "Monthly Executive ROI Report",
+          "Dedicated EST Account Director"
+        ]
+      },
+      {
+        "name": "Toronto Accelerator",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,499",
+        "inrPrice": "1,19,999",
+        "desc": "Comprehensive multi-channel expansion combining SEO, Google Ads management, and conversion rate optimization.",
+        "features": [
+          "Up to 45 Multi-City GTA Keywords",
+          "Google Ads (PPC) Campaign Management",
+          "Multi-Municipality Landing Page Architecture",
+          "High-Authority Content Marketing (6 Posts/mo)",
+          "Competitor Backlink Interception",
+          "Bi-Weekly Live Strategy Sessions"
+        ]
+      },
+      {
+        "name": "Toronto Enterprise Monopoly",
+        "badge": "Category Leader",
+        "usdPrice": "2,999",
+        "inrPrice": "2,44,999",
+        "desc": "Full-scale market dominance for GTA enterprises, multi-location franchises, and high-growth brands.",
+        "features": [
+          "GTA & Nationwide Keyword Domination",
+          "Omni-Channel PPC (Google, Meta, LinkedIn)",
+          "Bespoke High-Converting Web Redesign",
+          "Tier-1 Canadian Media PR & Backlinks",
+          "Dedicated Account Squad & Daily Slack Channel",
+          "Custom Multi-Touch Attribution Modeling"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok put our commercial brokerage at the top of Google for competitive Toronto search terms. Our qualified deal pipeline grew by 240%.",
+        "author": "Alexander K.",
+        "role": "Principal Broker",
+        "company": "Toronto Commercial Realty Group",
+        "rating": 5
+      },
+      {
+        "quote": "Their PPC and SEO team reduced our cost per qualified demo by 40% while doubling our monthly inbound lead volume.",
+        "author": "Natalie S.",
+        "role": "VP of Marketing",
+        "company": "Toronto B2B FinTech Platform",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why should a Toronto business choose Webmok over local downtown agencies?",
+        "a": "Webmok delivers senior-level agency execution at an agile, value-driven price point without bloated downtown overhead. You work directly with dedicated EST-timezone directors focused on measurable pipeline revenue."
+      },
+      {
+        "q": "How fast can our Toronto business expect to rank on page 1 of Google?",
+        "a": "Google Maps optimizations and high-intent PPC campaigns generate leads within 14 to 30 days. Broad organic SEO keywords achieve page #1 breakthroughs in 60 to 90 days as domain equity compounds."
+      },
+      {
+        "q": "Can you target multiple GTA municipalities (e.g. Mississauga, Markham, Vaughan, Oakville)?",
+        "a": "Yes! We build dedicated multi-location SEO architectures tailored to each specific municipality and commercial district across the GTA."
+      },
+      {
+        "q": "Are there any long-term contract lock-ins?",
+        "a": "Zero mandatory lock-in. All our Toronto digital marketing packages are flexible month-to-month agreements."
+      }
+    ],
+    "status": "Active",
+    "order": 14
+  },
+  {
+    "slug": "uk-digital-marketing",
+    "name": "UK Digital Marketing Agency",
+    "city": "UK",
+    "region": "United Kingdom Nationwide",
+    "country": "United Kingdom",
+    "currency": "GBP",
+    "currencySymbol": "£",
+    "tagline": "FULL-SERVICE UK DIGITAL MARKETING AGENCY · LONDON & UK",
+    "heroHighlight": "UK Digital Marketing & SEO Agency",
+    "heroItalic": "Accelerate Nationwide UK Revenue with",
+    "leadDesc": "Scale across London, Manchester, Birmingham, Leeds, and Edinburgh with high-velocity UK SEO, precision Google Ads, and high-conversion web development.",
+    "bodyDesc": "We help British businesses build dominant digital pipelines, rank #1 across competitive search queries, and capture high-intent commercial buyers throughout the United Kingdom.",
+    "heroImage": "",
+    "stats": [
+      {
+        "num": "420%",
+        "label": "Average UK Traffic Growth"
+      },
+      {
+        "num": "5.9x",
+        "label": "Average ROAS on Paid Media"
+      },
+      {
+        "num": "110+",
+        "label": "UK Brands Scaled Successfully"
+      },
+      {
+        "num": "100%",
+        "label": "UK GDPR & ICO Compliant"
+      }
+    ],
+    "services": [
+      {
+        "icon": "FaSearch",
+        "title": "UK National & Regional SEO",
+        "desc": "Capturing dominant search volume across London, Manchester, the Midlands, and Scotland with technical SEO and British citation networks."
+      },
+      {
+        "icon": "FaBullhorn",
+        "title": "High-ROAS Google Ads (PPC)",
+        "desc": "Precision search funnels, Performance Max campaigns, and Google Shopping optimization designed for high UK commercial conversion."
+      },
+      {
+        "icon": "FaShareAlt",
+        "title": "Targeted Paid Social (Meta & TikTok)",
+        "desc": "High-impact creative production, UGC integration, and algorithmic ad scaling across TikTok, Instagram, and LinkedIn."
+      },
+      {
+        "icon": "FaPenNib",
+        "title": "British Digital PR & Content",
+        "desc": "Manual digital PR campaigns earning authoritative editorial backlinks from major UK news outlets (BBC, Guardian, Telegraph, City A.M.)."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "title": "High-Speed Web Architecture",
+        "desc": "Speed-optimized React, Webflow, and WordPress websites built for sub-second load times, Core Web Vitals, and frictionless conversion."
+      },
+      {
+        "icon": "FaVideo",
+        "title": "Commercial Video & Creative Media",
+        "desc": "Studio-grade video production and commercial creative assets crafted specifically for British consumer and corporate audiences."
+      }
+    ],
+    "whyHireOutsideTitle": "The British Growth Advantage with Webmok",
+    "whyHireOutsideSubtitle": "LONDON QUALITY · AGILE VALUE",
+    "whyHireDesc1": "London and UK agencies routinely charge £8,000–£20,000/month driven by high overhead in Soho and Mayfair, frequently delegating execution to junior account handlers.",
+    "whyHireDesc2": "Webmok provides dedicated senior growth directors, GMT timezone alignment, and rapid sprint cycles at a high-ROI, value-driven investment.",
+    "comparisonPoints": [
+      {
+        "feature": "Senior Account Attention",
+        "local": "Junior Account Coordinators",
+        "webmok": "Dedicated Senior Growth Directors"
+      },
+      {
+        "feature": "Monthly Retainer Cost",
+        "local": "£8,000 – £20,000 / month",
+        "webmok": "From £630 – £2,370 / month (High ROI)"
+      },
+      {
+        "feature": "Contract Commitment",
+        "local": "Mandatory 6-12 Month Lock-In",
+        "webmok": "100% Flexible Month-to-Month"
+      },
+      {
+        "feature": "Sprint Turnaround",
+        "local": "Slow 2-3 Week Cycles",
+        "webmok": "48-72 Hour Agile Sprint Cycles"
+      },
+      {
+        "feature": "Data & Telemetry",
+        "local": "Basic Monthly PDF Summaries",
+        "webmok": "Live 24/7 Real-Time Revenue Dashboards"
+      }
+    ],
+    "resultsTitle": "UK Performance Telemetry",
+    "resultsSubtitle": "VERIFIABLE BRITISH RESULTS",
+    "resultsStats": [
+      {
+        "metric": "110+",
+        "label": "UK Brands Scaled to Page 1"
+      },
+      {
+        "metric": "£21M+",
+        "label": "Tracked Pipeline Revenue Generated"
+      },
+      {
+        "metric": "99.4%",
+        "label": "UK Client Satisfaction Rate"
+      },
+      {
+        "metric": "24/7",
+        "label": "GMT Timezone Strategic Support"
+      }
+    ],
+    "resultsImages": [],
+    "marketInsightsTitle": "What We Know About Marketing in the UK",
+    "marketInsightsSubtitle": "BRITISH DYNAMICS",
+    "marketInsights": [
+      {
+        "title": "High Mobile Shopping Penetration",
+        "desc": "Over 72% of UK e-commerce purchases happen on smartphones. Fast checkout, Apple Pay integration, and zero load latency are mandatory."
+      },
+      {
+        "title": "Editorial PR Drives Search Authority",
+        "desc": "Google UK places immense weight on legitimate British editorial links. We execute manual PR outreach to leading national newspapers."
+      },
+      {
+        "title": "Regional Buying Nuances",
+        "desc": "Consumer tone in London differs significantly from the North of England or Scotland. We calibrate ad copy to match regional vernacular."
+      },
+      {
+        "title": "Strict ICO & UK GDPR Compliance",
+        "desc": "We implement server-side cookie consent and strict data privacy protocols compliant with the UK Information Commissioner’s Office (ICO)."
+      }
+    ],
+    "processSteps": [
+      {
+        "num": "01",
+        "title": "UK Market & SEO Audit",
+        "desc": "Analyzing commercial search volume and competitor penetration across London and regional UK hubs."
+      },
+      {
+        "num": "02",
+        "title": "National Search Blueprint",
+        "desc": "Configuring localized city landing pages, British schema markup, and Google Business Profiles."
+      },
+      {
+        "num": "03",
+        "title": "Omni-Channel Campaign Launch",
+        "desc": "Deploying high-intent Google Ads, UK digital PR outreach, and targeted social campaigns."
+      },
+      {
+        "num": "04",
+        "title": "CRO & Revenue Attribution",
+        "desc": "Optimizing conversion funnels, tracking pipeline ROI, and scaling UK market share."
+      }
+    ],
+    "industries": [
+      {
+        "icon": "FaBriefcase",
+        "name": "FinTech, Banking & Legal",
+        "desc": "Dominating search for wealth management, corporate law, and innovative UK FinTech."
+      },
+      {
+        "icon": "FaShoppingCart",
+        "name": "E-Commerce & British Brands",
+        "desc": "Scaling Shopify and custom storefronts with profitable Google Shopping and TikTok ads."
+      },
+      {
+        "icon": "FaBuilding",
+        "name": "Property & Estate Agents",
+        "desc": "Capturing residential buyers and commercial tenants across London and prime UK cities."
+      },
+      {
+        "icon": "FaUserMd",
+        "name": "Private Healthcare & Aesthetics",
+        "desc": "Patient acquisition for Harley Street clinics, private dental, and wellness centers."
+      },
+      {
+        "icon": "FaLaptopCode",
+        "name": "B2B SaaS & Tech Startups",
+        "desc": "Driving ARR growth and corporate demo requests in London’s Silicon Roundabout."
+      },
+      {
+        "icon": "FaUtensils",
+        "name": "Hospitality & Luxury Dining",
+        "desc": "Promoting premier British hotels, Michelin-starred dining, and luxury travel."
+      }
+    ],
+    "plans": [
+      {
+        "name": "UK Growth Core",
+        "badge": "City Focus",
+        "usdPrice": "799",
+        "inrPrice": "64,999",
+        "desc": "Ideal for local UK businesses establishing dominant visibility in a regional market like Manchester or Birmingham.",
+        "features": [
+          "Up to 20 High-Intent UK Keywords",
+          "Google Business Profile Geo-Optimization",
+          "UK Local Citations & Yell.com Listings",
+          "On-Page SEO & Content Tuning (4 Pages/mo)",
+          "Monthly Executive ROI Report",
+          "Dedicated GMT Account Director"
+        ]
+      },
+      {
+        "name": "UK Accelerator",
+        "badge": "Most Popular",
+        "highlight": true,
+        "usdPrice": "1,499",
+        "inrPrice": "1,19,999",
+        "desc": "Comprehensive multi-city campaign combining national UK SEO, Google Ads management, and conversion rate optimization.",
+        "features": [
+          "Up to 45 Multi-City UK Keywords",
+          "Google Ads (PPC) Campaign Management",
+          "Multi-City Landing Page Architecture",
+          "High-Authority Content Marketing (6 Posts/mo)",
+          "Competitor Backlink Interception",
+          "Bi-Weekly Live Strategy Sessions"
+        ]
+      },
+      {
+        "name": "UK National Monopoly",
+        "badge": "National Dominance",
+        "usdPrice": "2,999",
+        "inrPrice": "2,44,999",
+        "desc": "Full-scale nationwide market takeover for British national brands, franchise networks, and enterprise e-commerce.",
+        "features": [
+          "UK Nationwide Keyword Domination (100+ Keywords)",
+          "Omni-Channel PPC (Google, Meta, LinkedIn)",
+          "Custom High-Converting Web Redesign",
+          "Tier-1 UK Media PR & Editorial Backlinks",
+          "Dedicated Account Squad & Daily Slack Channel",
+          "Custom Multi-Touch Attribution Modeling"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Webmok took our UK e-commerce brand to page 1 for our top search terms, driving a 380% revenue lift in our first 6 months.",
+        "author": "James H.",
+        "role": "Managing Director",
+        "company": "British Outdoor Apparel Brand",
+        "rating": 5
+      },
+      {
+        "quote": "Their digital PR team secured editorial features in major UK news outlets that transformed our organic domain authority.",
+        "author": "Oliver W.",
+        "role": "Head of Growth",
+        "company": "London B2B SaaS Platform",
+        "rating": 5
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why should a UK business choose Webmok over local London agencies?",
+        "a": "Webmok delivers senior-level agency execution without bloated London real estate overhead. You work directly with dedicated GMT-timezone directors focused on measurable pipeline revenue."
+      },
+      {
+        "q": "How fast can our UK business expect to see Google ranking improvements?",
+        "a": "Local Google Maps optimizations and high-intent PPC campaigns generate leads within 14 to 30 days. Broad organic SEO keywords achieve page #1 breakthroughs in 60 to 90 days."
+      },
+      {
+        "q": "Are your marketing practices compliant with UK GDPR and the ICO?",
+        "a": "Yes, 100%. All tracking, lead forms, and data handling are strictly architected to comply with UK GDPR and ICO guidelines."
+      },
+      {
+        "q": "What is the contract term?",
+        "a": "All our UK digital marketing packages operate on flexible month-to-month agreements with zero lock-in."
+      }
+    ],
+    "status": "Active",
+    "order": 15
+  }
+]
