@@ -51,7 +51,7 @@
 }
 
 .wm-pkg-hero-title-dual {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 48px;
   line-height: 1.18;
   color: #111827;
@@ -59,7 +59,7 @@
 }
 
 .wm-pkg-hero-title-dual .wm-hero-italic-orange {
-  font-style: italic;
+  font-style: normal;
   color: #020616;; /* High-impact vibrant orange matching screenshot */
   display: block;
 }
@@ -201,14 +201,14 @@
   background: #e2e8f0;
   color: #0f2d4a;
   font-size: 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .wm-badge-upwork {
   background: #f25822;
   color: #ffffff;
   font-size: 15px;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .wm-badge-google-stars {
@@ -915,7 +915,7 @@
   margin-top: 5px;
 
   color: #1688c9;
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
 }
 
@@ -1114,7 +1114,7 @@
 
   color: #1688c9;
 
-  font-style: italic;
+  font-style: normal;
 
   font-weight: 500;
 }
@@ -1558,7 +1558,7 @@
 .opseo-why-title span {
   color: #1688c9;
 
-  font-style: italic;
+  font-style: normal;
 
   font-weight: 500;
 }
@@ -1901,7 +1901,7 @@
 .opseo-importance-title span {
   color: #27aee4;
 
-  font-style: italic;
+  font-style: normal;
 
   font-weight: 500;
 }
@@ -2249,7 +2249,7 @@
 
   color: #1688c9;
 
-  font-style: italic;
+  font-style: normal;
 
   font-weight: 500;
 }
@@ -2776,7 +2776,7 @@
 .opseo-numbers-heading h2 span {
   color: #49b8f2;
 
-  font-style: italic;
+  font-style: normal;
 
   font-weight: 500;
 }
@@ -3224,7 +3224,7 @@
 
 .ppc-title {
   margin: 0 0 25px;
-  font-family: Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(42px, 4vw, 68px);
   line-height: 1.08;
   font-weight: 400;
@@ -3232,7 +3232,7 @@
 }
 
 .ppc-title span {
-  font-style: italic;
+  font-style: normal;
   background: linear-gradient(
     90deg,
     #092a4a,
@@ -3468,7 +3468,7 @@
 
   color: #162638;
 
-  font-family: Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: 23px;
 
@@ -3701,7 +3701,7 @@
 .ppc-results-title {
   margin: 0 0 25px;
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: clamp(42px, 4vw, 72px);
 
@@ -3947,7 +3947,7 @@
 
   color: #ffffff;
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: 34px;
 
@@ -4469,7 +4469,7 @@
 .ppc-invest-heading h2 {
   margin: 0;
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: clamp(48px, 5vw, 78px);
   font-weight: 400;
@@ -4480,7 +4480,7 @@
 
 
 .ppc-invest-heading h2 span {
-  font-style: italic;
+  font-style: normal;
 
   background: linear-gradient(
     90deg,
@@ -4705,7 +4705,7 @@
 .ppc-benefit-card h3 {
   margin: 0 0 18px;
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: 36px;
   font-weight: 400;

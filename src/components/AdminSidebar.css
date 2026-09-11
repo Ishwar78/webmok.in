@@ -117,6 +117,11 @@
   color: #c084fc;
 }
 
+.wm-pill-gold {
+  background: rgba(245, 158, 11, 0.25);
+  color: #fbbf24;
+}
+
 .wm-admin-sidebar-footer {
   display: flex;
   flex-direction: column;

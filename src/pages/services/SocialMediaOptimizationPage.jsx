@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
 import { Link } from 'react-router-dom';
 import {
@@ -241,6 +242,21 @@ const SocialMediaOptimizationPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <h1 className="wm-sp-hero-title">
                 Data-Driven <span>Social Media Optimization</span> (SMO) Agency
               </h1>
+
+          {/* Rating Scorecard Badge in Hero */}
+          <div className="wm-dsm-rating-hero">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+              </p>
+            </div>
+          </div>
+
               <p className="wm-sp-hero-lead">
                 Transform social profiles into high-trust brand assets. We optimize your profiles, hashtag taxonomies, bio conversion funnels, and organic engagement algorithms across Instagram, LinkedIn, Facebook, and YouTube.
               </p>
@@ -274,23 +290,7 @@ const SocialMediaOptimizationPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Rating Scorecard Badge */}
-      <div className="wm-dsm-rating-wrap">
-        <div className="wm-sp-container">
-          <div className="wm-dsm-rating">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* 2. THREE-COLUMN ARCHITECTURE / STRATEGY */}
       <div className="wm-sp-body">
@@ -378,7 +378,7 @@ const SocialMediaOptimizationPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <button
                         type="button"
                         className="wm-seocs-btn-inquiry"
-                        onClick={() => onOpenEnquiry && onOpenEnquiry(`${cs.name} - Case Study Inquiry`)}
+                        onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Social Media Optimization (SMO)', plan.name)}
                         title="Request an Inquiry"
                       >
                         <FaPaperPlane /> Inquire
@@ -488,26 +488,10 @@ const SocialMediaOptimizationPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     Enter your website or social profile URL. Receive a comprehensive, manual assessment from our senior solutions architect in under 2 hours.
                   </p>
                 </div>
-                <div className="wm-rsau__form">
-                  <div className="wm-rsau__box">
-                    <input
-                      type="text"
-                      className="wm-rsau__inp"
-                      placeholder="https://yourbrand.com"
-                      value={auditUrl}
-                      onChange={(e) => setAuditUrl(e.target.value)}
-                    />
-                    <button
-                      className="wm-rsau__btn"
-                      onClick={() => onOpenEnquiry && onOpenEnquiry(`Audit Request for: ${auditUrl || 'Company Website'}`)}
-                    >
-                      Analyze Now &rarr;
-                    </button>
-                  </div>
+                <DiagnosticLeadForm serviceName="Social Media Optimization" />
                   <span className="wm-rsau__sub">
                     100% Free · No Credit Card Required · Strictly Confidential
                   </span>
-                </div>
               </div>
             </div>
 
@@ -517,25 +501,23 @@ const SocialMediaOptimizationPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <p className="wm-sp-paragraph">
                 Essential details regarding execution deliverables, timelines, and commercial models:
               </p>
-              <div className="wm-faq-accordion-list">
+              <div className="wm-sp-faq-list">
                 {faqs.map((faq, idx) => (
                   <div
                     key={idx}
-                    className={`wm-faq-item ${openFaq === idx ? 'wm-faq-item--active' : ''}`}
+                    className={`wm-sp-faq-item ${openFaq === idx ? 'open' : ''}`}
                   >
-                    <button
-                      type="button"
-                      className="wm-faq-btn"
-                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    <div
+                      className="wm-sp-faq-q"
+                      onClick={() => setOpenFaq(openFaq === idx ? -1 : idx)}
                     >
-                      <span>{faq.q}</span>
-                      <FaChevronDown className="wm-faq-chevron" />
-                    </button>
-                    {openFaq === idx && (
-                      <div className="wm-faq-answer">
-                        <p>{faq.a}</p>
-                      </div>
-                    )}
+                      <span>
+                        <span className="wm-sp-faq-badge">{idx + 1 < 10 ? `0${idx + 1}` : idx + 1}</span>
+                        {faq.q}
+                      </span>
+                      <FaChevronDown className="wm-sp-faq-chevron" />
+                    </div>
+                    {openFaq === idx && <p className="wm-sp-faq-a">{faq.a}</p>}
                   </div>
                 ))}
               </div>

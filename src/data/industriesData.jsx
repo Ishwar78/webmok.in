@@ -140,10 +140,14 @@ export const industriesData = [
     title: 'Fitness',
     desc: 'We also create fitness web and mobile apps that help users track their workouts, set goals, and help them stay motivated. Our applications support personal trainers and gyms in managing client progress.',
     points: [
-      'Fitness tracking apps',
-      'Workout planning systems',
-      'Nutrition and diet tracking',
-      'Gym management solutions'
+      'Fitness tracking appsqwertyuiopoiuygfdsa',
+      'Workout planning systemsqwertyuiopkjhgfdsaqwerty',
+      'Nutrition and diet trackingqwertyuiopasdfghjkl',
+      'Gym management solutionsqwertyuiopasdfghjkl',
+       'Fitness tracking apps qwertyuioplkjhgfdsa',
+      'Workout planning systemsasdfghjklpoiuytrewq',
+      'Nutrition and diet trackingqwertyuiopasdfghjkl',
+      'Gym management solutionsqwertyuiopasdfghjk'
     ],
     icon: <FaDumbbell />
   },

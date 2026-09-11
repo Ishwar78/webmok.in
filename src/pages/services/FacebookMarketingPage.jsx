@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
 import {
   Link } from 'react-router-dom';
@@ -27,7 +28,7 @@ import {
 } from 'react-icons/fa';
 import './FacebookMarketingPage.css';
 
-const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
+const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -199,6 +200,21 @@ const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             High-ROAS <span>Facebook & Meta Ads</span> Agency
           </h1>
+
+          {/* Rating Scorecard Badge in Hero */}
+          <div className="wm-dsm-rating-hero">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+              </p>
+            </div>
+          </div>
+
           <p className="wm-sp-hero-lead">
             Scale your revenue with high-converting Meta and Facebook advertising campaigns featuring thumb-stopping video reels, AI lookalike audiences, and server-side Conversion API tracking.
           </p>
@@ -232,23 +248,7 @@ const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Rating Scorecard Badge */}
-      <div className="wm-dsm-rating-wrap">
-        <div className="wm-sp-container">
-          <div className="wm-dsm-rating">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* 2. Main Body Section */}
       <section className="wm-sp-body">
@@ -372,7 +372,7 @@ const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--o"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Facebook & Meta Ads', 'Starter Meta Ads Plan')}
                     >
                       Choose Starter &rarr;
                     </button>
@@ -392,7 +392,7 @@ const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--y"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Facebook & Meta Ads', 'Growth Performance Suite')}
                     >
                       Choose Growth &rarr;
                     </button>
@@ -412,7 +412,7 @@ const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--o"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Facebook & Meta Ads', 'Enterprise Scale Retainer')}
                     >
                       Choose Enterprise &rarr;
                     </button>
@@ -432,7 +432,7 @@ const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--y"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Facebook & Meta Ads', 'Dedicated Performance Squad')}
                     >
                       Choose Dedicated &rarr;
                     </button>
@@ -447,24 +447,12 @@ const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-rsau">
               <div className="wm-rsau__grid">
                 <div>
-                  <span className="wm-rsau__eyebrow">Diagnostic Engine <i>Free</i></span>
+                  <span className="wm-rsau__eyebrow">Diagnostic Engine <span>Free</span></span>
                   <h2>Request a Free Meta Ads Account Audit</h2>
                   <p>
                     Connect your Facebook Ad Account to receive an actionable 25-point audit uncovering budget leaks, creative fatigue, and attribution errors.
                   </p>
-                  <form className="wm-rsau__form" onSubmit={handleAuditSubmit}>
-                    <input
-                      className="wm-rsau__in"
-                      type="text"
-                      placeholder="https://yoursite.com"
-                      value={auditUrl}
-                      onChange={(e) => setAuditUrl(e.target.value)}
-                      required
-                    />
-                    <button className="wm-rsau__go" type="submit">
-                      Get Free Analysis &rarr;
-                    </button>
-                  </form>
+                  <DiagnosticLeadForm serviceName="Facebook Marketing" />
                   <p style={{ fontSize: '13px', color: '#8e8a7e', margin: 0 }}>
                     100% Free · No credit card required · Actionable analysis delivered within 24 hours.
                   </p>

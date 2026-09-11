@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
 import {
   Link } from 'react-router-dom';
@@ -27,7 +28,7 @@ import {
 } from 'react-icons/fa';
 import './ComputerTrainingPage.css';
 
-const ComputerTrainingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
+const ComputerTrainingPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -199,6 +200,21 @@ const ComputerTrainingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Professional <span>Computer Training</span> & IT Academy
           </h1>
+
+          {/* Rating Scorecard Badge in Hero */}
+          <div className="wm-dsm-rating-hero">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+              </p>
+            </div>
+          </div>
+
           <p className="wm-sp-hero-lead">
             Master high-income digital and software skills with 100% practical, project-based computer training courses in Full-Stack Web Development, Digital Marketing, Python, and Graphic Design.
           </p>
@@ -232,23 +248,7 @@ const ComputerTrainingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Rating Scorecard Badge */}
-      <div className="wm-dsm-rating-wrap">
-        <div className="wm-sp-container">
-          <div className="wm-dsm-rating">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* 2. Main Body Section */}
       <section className="wm-sp-body">
@@ -372,7 +372,7 @@ const ComputerTrainingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--o"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Computer Training & IT Academy', 'Certificate in Digital Marketing')}
                     >
                       Choose Certificate &rarr;
                     </button>
@@ -392,7 +392,7 @@ const ComputerTrainingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--y"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Computer Training & IT Academy', 'Full-Stack Web Developer Pro')}
                     >
                       Choose Full-Stack &rarr;
                     </button>
@@ -412,7 +412,7 @@ const ComputerTrainingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--o"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Computer Training & IT Academy', 'Python & Data Science Bootcamp')}
                     >
                       Choose Python &rarr;
                     </button>
@@ -432,7 +432,7 @@ const ComputerTrainingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--y"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Computer Training & IT Academy', 'UI/UX & Graphic Design Master')}
                     >
                       Choose UI/UX &rarr;
                     </button>
@@ -447,24 +447,12 @@ const ComputerTrainingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-rsau">
               <div className="wm-rsau__grid">
                 <div>
-                  <span className="wm-rsau__eyebrow">Diagnostic Engine <i>Free</i></span>
+                  <span className="wm-rsau__eyebrow">Diagnostic Engine <span>Free</span></span>
                   <h2>Book a Free Career Counseling & Demo Class</h2>
                   <p>
                     Visit our training centers in Delhi or Rohtak, or attend an online demo session to meet our mentors and evaluate course syllabus modules.
                   </p>
-                  <form className="wm-rsau__form" onSubmit={handleAuditSubmit}>
-                    <input
-                      className="wm-rsau__in"
-                      type="text"
-                      placeholder="https://yoursite.com"
-                      value={auditUrl}
-                      onChange={(e) => setAuditUrl(e.target.value)}
-                      required
-                    />
-                    <button className="wm-rsau__go" type="submit">
-                      Get Free Analysis &rarr;
-                    </button>
-                  </form>
+                  <DiagnosticLeadForm serviceName="Computer Training" />
                   <p style={{ fontSize: '13px', color: '#8e8a7e', margin: 0 }}>
                     100% Free · No credit card required · Actionable analysis delivered within 24 hours.
                   </p>

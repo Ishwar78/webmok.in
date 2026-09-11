@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
 import {
   Link } from 'react-router-dom';
@@ -27,7 +28,7 @@ import {
 } from 'react-icons/fa';
 import './SeoServicesPage.css';
 
-const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
+const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -217,21 +218,27 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-sp-breadcrumb">
             <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>SEO Services</span>
           </div>
-          <span className="wm-sp-hero-pill">
-            <FaAward /> Google Certified Partner Agency · #Wise Solutions
-          </span>
+         
           <h1 className="wm-sp-hero-title">
             Best <span>SEO Services</span> in India & Delhi NCR
           </h1>
-         
-          <div className="wm-sp-hero-cta-group">
-            <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
-              Get Free SEO Audit <FaArrowRight />
-            </button>
-            <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
-              <FaPhoneAlt /> Call Me in 28 Seconds
-            </button>
+
+          {/* Rating Scorecard Badge in Hero */}
+          <div className="wm-dsm-rating-hero">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.8</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.8 out of 5</strong> from <strong>250+ client reviews</strong> across Clutch, Google, AmbitionBox, and Facebook.
+              </p>
+            </div>
           </div>
+
+         
+          
 
           {/* 4-Metric Performance Bar */}
           <div className="wm-seost">
@@ -254,23 +261,7 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Rating Scorecard Badge */}
-      <div className="wm-dsm-rating-wrap">
-        <div className="wm-sp-container">
-          <div className="wm-dsm-rating">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.8</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.8 out of 5</strong> from <strong>250+ client reviews</strong> across Clutch, Google, AmbitionBox, and Facebook.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* 2. Main Body Section */}
       <section className="wm-sp-body">
@@ -459,7 +450,7 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>On-page meta tags & content optimization</li>
                       <li>Monthly GA4 & Search Console reporting</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('SEO Services', 'Starter Plan')}>
                       Choose Starter &rarr;
                     </button>
                   </div>
@@ -478,7 +469,7 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>Topical authority content clustering & internal linking</li>
                       <li>High-authority digital PR & earned backlink outreach</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('SEO Services', 'Growth Plan')}>
                       Choose Growth &rarr;
                     </button>
                   </div>
@@ -496,7 +487,7 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>Comprehensive AEO schema & Google AI Overview targeting</li>
                       <li>Bi-weekly executive synchronization & sprint reviews</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('SEO Services', 'Scale Plan')}>
                       Choose Scale &rarr;
                     </button>
                   </div>
@@ -514,7 +505,7 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>Full AEO, GEO, and international search governance</li>
                       <li>Essentially an elite in-house SEO team without hiring overhead</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('SEO Services', 'Dedicated Retainer')}>
                       Hire Dedicated Team &rarr;
                     </button>
                   </div>
@@ -532,24 +523,12 @@ const SeoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-rsau">
               <div className="wm-rsau__grid">
                 <div>
-                  <span className="wm-rsau__eyebrow">WebMok Audit Engine <i>Free</i></span>
+                  <span className="wm-rsau__eyebrow">WebMok Audit Engine <span>Free</span></span>
                   <h2>See What is Holding Your Website Back in 30 Seconds</h2>
                   <p>
                     Type your domain URL below to evaluate <b>60+ technical and on-page ranking signals</b>, Core Web Vitals health, and AI answer readiness.
                   </p>
-                  <form className="wm-rsau__form" onSubmit={handleAuditSubmit}>
-                    <input
-                      className="wm-rsau__in"
-                      type="text"
-                      placeholder="https://yoursite.com"
-                      value={auditUrl}
-                      onChange={(e) => setAuditUrl(e.target.value)}
-                      required
-                    />
-                    <button className="wm-rsau__go" type="submit">
-                      Run Free Audit &rarr;
-                    </button>
-                  </form>
+                  <DiagnosticLeadForm serviceName="SEO Services" />
                   <p style={{ fontSize: '13px', color: '#8e8a7e', margin: 0 }}>
                     100% Free · No credit card required · Detailed scorecard delivered within 24 hours.
                   </p>

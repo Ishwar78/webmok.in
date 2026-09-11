@@ -29,12 +29,17 @@ const AdminJobs = () => {
   const [formData, setFormData] = useState({
     title: '',
     department: 'Web Engineering',
+    category: 'Engineering & Technology',
     location: 'New Delhi / Hybrid',
     type: 'Full Time',
     experience: '2 - 4 Years',
     salary: 'Best in Industry',
+    education: 'B.Tech / B.E. / BCA / MCA or Relevant Degree',
+    shift: 'Day Shift (Mon - Fri, 9:30 AM - 6:30 PM)',
     description: '',
     requirements: '',
+    highlights: '',
+    benefits: '',
     order: 0,
     isActive: true
   });
@@ -45,12 +50,22 @@ const AdminJobs = () => {
       const res = await fetch(`${API_BASE}/jobs?all=true`);
       if (res.ok) {
         const json = await res.json();
-        if (json.success && Array.isArray(json.data)) {
+        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
           setJobs(json.data);
+          try {
+            localStorage.setItem('webmok_admin_jobs', JSON.stringify(json.data));
+          } catch (e) {}
         }
       }
     } catch (err) {
-      console.warn('Backend error fetching jobs:', err.message);
+      console.warn('Backend error fetching jobs, checking local cache:', err.message);
+      try {
+        const cached = localStorage.getItem('webmok_admin_jobs');
+        if (cached) {
+          const parsed = JSON.parse(cached);
+          if (Array.isArray(parsed) && parsed.length > 0) setJobs(parsed);
+        }
+      } catch (e) {}
     } finally {
       setLoading(false);
     }
@@ -65,12 +80,17 @@ const AdminJobs = () => {
     setFormData({
       title: '',
       department: 'Web Engineering',
+      category: 'Engineering & Technology',
       location: 'New Delhi / Hybrid',
       type: 'Full Time',
       experience: '2 - 4 Years',
       salary: 'Best in Industry',
+      education: 'B.Tech / B.E. / BCA / MCA or Relevant Degree',
+      shift: 'Day Shift (Mon - Fri, 9:30 AM - 6:30 PM)',
       description: '',
       requirements: '',
+      highlights: '',
+      benefits: '',
       order: jobs.length + 1,
       isActive: true
     });
@@ -80,15 +100,27 @@ const AdminJobs = () => {
 
   const handleOpenEdit = (job) => {
     setEditingJobId(job._id || job.id);
+    const hl = Array.isArray(job.highlights)
+      ? job.highlights.map(h => (typeof h === 'string' ? h : (h.text || ''))).filter(Boolean).join('\n')
+      : (job.highlights || '');
+    const bn = Array.isArray(job.benefits)
+      ? job.benefits.join('\n')
+      : (job.benefits || '');
+
     setFormData({
       title: job.title || '',
       department: job.department || 'Web Engineering',
+      category: job.category || job.department || 'Engineering',
       location: job.location || 'New Delhi / Hybrid',
       type: job.type || 'Full Time',
       experience: job.experience || '2 - 4 Years',
       salary: job.salary || 'Best in Industry',
+      education: job.education || 'Bachelor / Master in relevant field',
+      shift: job.shift || 'Day Shift (Mon - Fri, 9:30 AM - 6:30 PM)',
       description: job.description || '',
       requirements: Array.isArray(job.requirements) ? job.requirements.join('\n') : (job.requirements || ''),
+      highlights: hl,
+      benefits: bn,
       order: job.order || 0,
       isActive: job.isActive !== undefined ? job.isActive : true
     });
@@ -108,10 +140,18 @@ const AdminJobs = () => {
       const reqList = formData.requirements
         ? formData.requirements.split('\n').map(r => r.trim()).filter(Boolean)
         : [];
+      const hlList = formData.highlights
+        ? formData.highlights.split('\n').map(h => h.trim()).filter(Boolean)
+        : [];
+      const bnList = formData.benefits
+        ? formData.benefits.split('\n').map(b => b.trim()).filter(Boolean)
+        : [];
 
       const payload = {
         ...formData,
-        requirements: reqList
+        requirements: reqList,
+        highlights: hlList,
+        benefits: bnList
       };
 
       if (editingJobId) {
@@ -122,7 +162,11 @@ const AdminJobs = () => {
         });
         const json = await res.json();
         if (res.ok && json.success) {
-          setJobs(prev => prev.map(j => ((j._id || j.id) === editingJobId ? json.data : j)));
+          setJobs(prev => {
+            const next = prev.map(j => ((j._id || j.id) === editingJobId ? json.data : j));
+            try { localStorage.setItem('webmok_admin_jobs', JSON.stringify(next)); } catch (e) {}
+            return next;
+          });
           setIsModalOpen(false);
           setFeedback({ type: 'success', message: 'Job opening updated successfully!' });
         } else {
@@ -136,7 +180,11 @@ const AdminJobs = () => {
         });
         const json = await res.json();
         if (res.ok && json.success) {
-          setJobs(prev => [...prev, json.data]);
+          setJobs(prev => {
+            const next = [...prev, json.data];
+            try { localStorage.setItem('webmok_admin_jobs', JSON.stringify(next)); } catch (e) {}
+            return next;
+          });
           setIsModalOpen(false);
           setFeedback({ type: 'success', message: 'New job opening created successfully!' });
         } else {
@@ -156,7 +204,11 @@ const AdminJobs = () => {
     try {
       const res = await fetch(`${API_BASE}/jobs/${id}`, { method: 'DELETE' });
       if (res.ok) {
-        setJobs(prev => prev.filter(j => (j._id || j.id) !== id));
+        setJobs(prev => {
+          const next = prev.filter(j => (j._id || j.id) !== id);
+          try { localStorage.setItem('webmok_admin_jobs', JSON.stringify(next)); } catch (e) {}
+          return next;
+        });
         setFeedback({ type: 'success', message: 'Job opening deleted successfully!' });
       }
     } catch (err) {
@@ -175,7 +227,11 @@ const AdminJobs = () => {
         body: JSON.stringify({ isActive: !job.isActive })
       });
       if (res.ok) {
-        setJobs(prev => prev.map(j => ((j._id || j.id) === id ? { ...j, isActive: !j.isActive } : j)));
+        setJobs(prev => {
+          const next = prev.map(j => ((j._id || j.id) === id ? { ...j, isActive: !job.isActive } : j));
+          try { localStorage.setItem('webmok_admin_jobs', JSON.stringify(next)); } catch (e) {}
+          return next;
+        });
       }
     } catch (err) {
       console.warn('Error toggling job status:', err.message);
@@ -435,6 +491,37 @@ const AdminJobs = () => {
                   </div>
                 </div>
 
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+                  <div className="wm-csfield">
+                    <label>Education Qualification</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. B.Tech / B.E. / BCA / MCA or Any Graduate"
+                      value={formData.education}
+                      onChange={(e) => setFormData({ ...formData, education: e.target.value })}
+                    />
+                  </div>
+                  <div className="wm-csfield">
+                    <label>Shift & Timings</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. Day Shift (Mon - Fri, 9:30 AM - 6:30 PM)"
+                      value={formData.shift}
+                      onChange={(e) => setFormData({ ...formData, shift: e.target.value })}
+                    />
+                  </div>
+                </div>
+
+                <div className="wm-csfield">
+                  <label>Role Category / Department Tag</label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Engineering & Technology, Digital Marketing, Design"
+                    value={formData.category}
+                    onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                  />
+                </div>
+
                 <div className="wm-csfield">
                   <label>Job Description / Summary</label>
                   <textarea
@@ -447,12 +534,34 @@ const AdminJobs = () => {
                 </div>
 
                 <div className="wm-csfield">
+                  <label>Job Highlights / Key Responsibilities (One per line)</label>
+                  <textarea
+                    rows={3}
+                    placeholder="Immediate joining available&#10;Lead core client web architecture&#10;Sub-second performance optimization"
+                    value={formData.highlights}
+                    onChange={(e) => setFormData({ ...formData, highlights: e.target.value })}
+                    style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                  />
+                </div>
+
+                <div className="wm-csfield">
                   <label>Key Requirements / Skills (One per line)</label>
                   <textarea
-                    rows={4}
+                    rows={3}
                     placeholder="3+ years React.js&#10;REST APIs & WebSockets&#10;State management"
                     value={formData.requirements}
                     onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
+                    style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                  />
+                </div>
+
+                <div className="wm-csfield">
+                  <label>Benefits & Perks (One per line)</label>
+                  <textarea
+                    rows={3}
+                    placeholder="Competitive salary with biannual appraisal&#10;Hybrid / flexible working hours&#10;Comprehensive health insurance coverage&#10;Free gourmet coffee and team lunches"
+                    value={formData.benefits}
+                    onChange={(e) => setFormData({ ...formData, benefits: e.target.value })}
                     style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #cbd5e1' }}
                   />
                 </div>

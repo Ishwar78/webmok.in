@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
 import { Link } from 'react-router-dom';
 import {
@@ -236,23 +237,27 @@ const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <div className="wm-sp-breadcrumb">
                 <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>Promotional Video Production</span>
               </div>
-              <span className="wm-sp-hero-pill">
-                <FaAward /> Cinematic Promo Production · #High Conversion
-              </span>
+             
               <h1 className="wm-sp-hero-title">
                 Cinematic <span>Promotional Video Production</span> & Commercial Studio
               </h1>
-              <p className="wm-sp-hero-lead">
-                Drive commercial sales, build brand prestige, and captivate your audience with cinematic promotional videos. From high-converting product showcases and TV commercials to 3D product animations and corporate brand manifestos.
+
+          {/* Rating Scorecard Badge in Hero */}
+          <div className="wm-dsm-rating-hero">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
               </p>
-              <div className="wm-sp-hero-cta-group">
-                <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
-                  Get Free Custom Quote <FaArrowRight />
-                </button>
-                <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
-                  <FaPhoneAlt /> Call Me in 28 Seconds
-                </button>
-              </div>
+            </div>
+          </div>
+
+             
+              
 
               {/* 4-Metric Performance Bar */}
               <div className="wm-seost">
@@ -275,23 +280,7 @@ const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Rating Scorecard Badge */}
-      <div className="wm-dsm-rating-wrap">
-        <div className="wm-sp-container">
-          <div className="wm-dsm-rating">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* 2. THREE-COLUMN ARCHITECTURE / STRATEGY */}
       <div className="wm-sp-body">
@@ -355,7 +344,7 @@ const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <p>
                   <strong>We measure tangible business milestones and conversion lift.</strong> Review weekly sprint progress with your dedicated technical solution architect.
                 </p>
-                <button type="button" onClick={() => onOpenEnquiry && onOpenEnquiry('Promotional Video Production & Editing Services Company - Scope Consultation')}>
+                <button type="button" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Promotional Video Production', plan.name)}>
                   Talk to a Specialist &rarr;
                 </button>
               </div>
@@ -379,7 +368,7 @@ const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <button
                         type="button"
                         className="wm-seocs-btn-inquiry"
-                        onClick={() => onOpenEnquiry && onOpenEnquiry(`${cs.name} - Case Study Inquiry`)}
+                        onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Promotional Video Production', plan.name)}
                         title="Request an Inquiry"
                       >
                         <FaPaperPlane /> Inquire
@@ -467,7 +456,7 @@ const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       </ul>
                       <button
                         className={`wm-seopk__cta ${plan.highlight ? 'wm-seopk__cta--f' : 'wm-seopk__cta--o'}`}
-                        onClick={() => onOpenEnquiry && onOpenEnquiry(`Promotional Video Production & Editing Services Company - ${plan.name} Plan`)}
+                        onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Promotional Video Production', plan.name)}
                       >
                         Choose {plan.name.split(' ')[0]} &rarr;
                       </button>
@@ -489,26 +478,10 @@ const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     Enter your website or social profile URL. Receive a comprehensive, manual assessment from our senior solutions architect in under 2 hours.
                   </p>
                 </div>
-                <div className="wm-rsau__form">
-                  <div className="wm-rsau__box">
-                    <input
-                      type="text"
-                      className="wm-rsau__inp"
-                      placeholder="https://yourbrand.com"
-                      value={auditUrl}
-                      onChange={(e) => setAuditUrl(e.target.value)}
-                    />
-                    <button
-                      className="wm-rsau__btn"
-                      onClick={() => onOpenEnquiry && onOpenEnquiry(`Audit Request for: ${auditUrl || 'Company Website'}`)}
-                    >
-                      Analyze Now &rarr;
-                    </button>
-                  </div>
+                <DiagnosticLeadForm serviceName="Promotional Video Production" />
                   <span className="wm-rsau__sub">
                     100% Free · No Credit Card Required · Strictly Confidential
                   </span>
-                </div>
               </div>
             </div>
 
@@ -518,25 +491,23 @@ const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               <p className="wm-sp-paragraph">
                 Essential details regarding execution deliverables, timelines, and commercial models:
               </p>
-              <div className="wm-faq-accordion-list">
+              <div className="wm-sp-faq-list">
                 {faqs.map((faq, idx) => (
                   <div
                     key={idx}
-                    className={`wm-faq-item ${openFaq === idx ? 'wm-faq-item--active' : ''}`}
+                    className={`wm-sp-faq-item ${openFaq === idx ? 'open' : ''}`}
                   >
-                    <button
-                      type="button"
-                      className="wm-faq-btn"
-                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    <div
+                      className="wm-sp-faq-q"
+                      onClick={() => setOpenFaq(openFaq === idx ? -1 : idx)}
                     >
-                      <span>{faq.q}</span>
-                      <FaChevronDown className="wm-faq-chevron" />
-                    </button>
-                    {openFaq === idx && (
-                      <div className="wm-faq-answer">
-                        <p>{faq.a}</p>
-                      </div>
-                    )}
+                      <span>
+                        <span className="wm-sp-faq-badge">{idx + 1 < 10 ? `0${idx + 1}` : idx + 1}</span>
+                        {faq.q}
+                      </span>
+                      <FaChevronDown className="wm-sp-faq-chevron" />
+                    </div>
+                    {openFaq === idx && <p className="wm-sp-faq-a">{faq.a}</p>}
                   </div>
                 ))}
               </div>
@@ -552,7 +523,7 @@ const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <button
                   type="button"
                   className="wm-sp-btn-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry('Promotional Video Production & Editing Services Company - Proposal Request')}
+                  onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Promotional Video Production', plan.name)}
                 >
                   Request Itemized Proposal &rarr;
                 </button>

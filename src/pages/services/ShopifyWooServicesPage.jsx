@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
 import {
   Link } from 'react-router-dom';
@@ -27,7 +28,7 @@ import {
 } from 'react-icons/fa';
 import './ShopifyWooServicesPage.css';
 
-const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
+const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -193,21 +194,27 @@ const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-sp-breadcrumb">
             <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>Shopify & WooCommerce</span>
           </div>
-          <span className="wm-sp-hero-pill">
-            <FaAward /> D2C Commerce Specialists · #Wise Solutions
-          </span>
+          
           <h1 className="wm-sp-hero-title">
             Expert <span>Shopify & WooCommerce</span> Agency
           </h1>
-          
-          <div className="wm-sp-hero-cta-group">
-            <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
-              Get Free Custom Quote <FaArrowRight />
-            </button>
-            <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
-              <FaPhoneAlt /> Call Me in 28 Seconds
-            </button>
+
+          {/* Rating Scorecard Badge in Hero */}
+          <div className="wm-dsm-rating-hero">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+              </p>
+            </div>
           </div>
+
+          
+         
 
           {/* 4-Metric Performance Bar */}
           <div className="wm-seost">
@@ -230,23 +237,7 @@ const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Rating Scorecard Badge */}
-      <div className="wm-dsm-rating-wrap">
-        <div className="wm-sp-container">
-          <div className="wm-dsm-rating">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* 2. Main Body Section */}
       <section className="wm-sp-body">
@@ -370,7 +361,7 @@ const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--o"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Shopify & WooCommerce Development', 'Shopify Starter')}
                     >
                       Choose Shopify &rarr;
                     </button>
@@ -390,7 +381,7 @@ const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--y"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Shopify & WooCommerce Development', 'WooCommerce Custom')}
                     >
                       Choose WooCommerce &rarr;
                     </button>
@@ -410,7 +401,7 @@ const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--o"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Shopify & WooCommerce Development', 'Shopify Plus / Scale')}
                     >
                       Choose Shopify &rarr;
                     </button>
@@ -430,7 +421,7 @@ const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--y"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Shopify & WooCommerce Development', 'Store AMC & Growth Retainer')}
                     >
                       Choose Store &rarr;
                     </button>
@@ -445,24 +436,12 @@ const ShopifyWooServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-rsau">
               <div className="wm-rsau__grid">
                 <div>
-                  <span className="wm-rsau__eyebrow">Diagnostic Engine <i>Free</i></span>
+                  <span className="wm-rsau__eyebrow">Diagnostic Engine <span>Free</span></span>
                   <h2>Audit Your Store for Conversion & Checkout Leaks</h2>
                   <p>
                     Submit your store URL to receive a comprehensive 25-point e-commerce audit examining mobile speed, cart friction, and payment drop-offs.
                   </p>
-                  <form className="wm-rsau__form" onSubmit={handleAuditSubmit}>
-                    <input
-                      className="wm-rsau__in"
-                      type="text"
-                      placeholder="https://yoursite.com"
-                      value={auditUrl}
-                      onChange={(e) => setAuditUrl(e.target.value)}
-                      required
-                    />
-                    <button className="wm-rsau__go" type="submit">
-                      Get Free Analysis &rarr;
-                    </button>
-                  </form>
+                  <DiagnosticLeadForm serviceName="Shopify & WooCommerce" />
                   <p style={{ fontSize: '13px', color: '#8e8a7e', margin: 0 }}>
                     100% Free · No credit card required · Actionable analysis delivered within 24 hours.
                   </p>

@@ -133,6 +133,12 @@
   margin: 0 0 26px 0 !important;
 }
 
+/* User Request: Hide badge pill and lead paragraph on all International Geo Landing Pages */
+[class*="wm-intl-"] .wm-hero-pill,
+[class*="wm-intl-"] .wm-hero-lead {
+  display: none !important;
+}
+
 /* Dual CTA Buttons Row */
 .wm-hero-cta-group {
   display: flex;

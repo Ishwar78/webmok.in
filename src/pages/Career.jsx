@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   FaBriefcase,
   FaMapMarkerAlt,
@@ -8,42 +9,23 @@ import {
   FaUpload,
   FaPaperPlane,
   FaFilePdf,
-  FaSpinner
+  FaSpinner,
+  FaArrowRight
 } from 'react-icons/fa';
+import { jobsData } from '../data/jobsData';
 import './Career.css';
 
 const API_BASE = 'http://localhost:5005/api';
 
-const defaultJobs = [
-  {
-    title: 'Senior React / Frontend Developer',
-    location: 'New Delhi / Hybrid',
-    type: 'Full Time',
-    exp: '3 - 5 Years Experience',
-    desc: 'Looking for a passionate React.js engineer skilled with modern component architectures, state management, and high-speed UI development.'
-  },
-  {
-    title: 'Lead SEO & Organic Growth Strategist',
-    location: 'Rohtak / New Delhi',
-    type: 'Full Time',
-    exp: '2 - 4 Years Experience',
-    desc: 'Drive high-impact technical audits, link building campaigns, and organic ranking roadmaps for enterprise B2B and E-commerce clients.'
-  },
-  {
-    title: 'Performance Marketing (PPC) Specialist',
-    location: 'Remote / Delhi NCR',
-    type: 'Full Time',
-    exp: '2 - 5 Years Experience',
-    desc: 'Manage high-budget Google Search, Display, and Meta Ads accounts with deep expertise in conversion tracking and ROI optimization.'
-  },
-  {
-    title: 'UI/UX Designer & Creative Motion Graphic Artist',
-    location: 'New Delhi Office',
-    type: 'Full Time',
-    exp: '2 - 4 Years Experience',
-    desc: 'Craft intuitive Figma wireframes, interactive web prototypes, brand logos, and viral promotional video edits.'
-  }
-];
+const defaultJobs = jobsData.map((j) => ({
+  id: j.id,
+  slug: j.slug,
+  title: j.title,
+  location: j.location,
+  type: j.roleDetails?.employmentType || 'Full Time',
+  exp: j.requirements?.experience || '1 - 3 Years',
+  desc: j.description
+}));
 
 const Career = ({ onOpenEnquiry }) => {
   const [jobs, setJobs] = useState(defaultJobs);
@@ -77,6 +59,7 @@ const Career = ({ onOpenEnquiry }) => {
             setJobs(
               json.data.map(j => ({
                 id: j._id || j.id,
+                slug: j.slug || j._id || j.id,
                 title: j.title,
                 location: j.location,
                 type: j.type,
@@ -87,7 +70,24 @@ const Career = ({ onOpenEnquiry }) => {
           }
         }
       } catch (err) {
-        console.warn('Backend offline, using fallback job postings:', err.message);
+        console.warn('Backend offline, checking localStorage for admin jobs:', err.message);
+        try {
+          const cached = localStorage.getItem('webmok_admin_jobs');
+          if (cached) {
+            const parsed = JSON.parse(cached);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+              setJobs(parsed.map(j => ({
+                id: j._id || j.id,
+                slug: j.slug || j._id || j.id,
+                title: j.title,
+                location: j.location,
+                type: j.type,
+                exp: j.experience || j.exp,
+                desc: j.description || j.desc
+              })));
+            }
+          }
+        } catch (e) {}
       } finally {
         setLoading(false);
       }
@@ -188,28 +188,39 @@ const Career = ({ onOpenEnquiry }) => {
           </div>
 
           <div className="wm-career-list">
-            {jobs.map((job, idx) => (
-              <div key={job.id || idx} className="wm-job-card">
-                <div className="wm-job-main">
-                  <h3>{job.title}</h3>
-                  <div className="wm-job-meta">
-                    <span><FaMapMarkerAlt /> {job.location}</span>
-                    <span><FaClock /> {job.type}</span>
-                    <span><FaBriefcase /> {job.exp}</span>
+            {jobs.map((job, idx) => {
+              const jobSlug = job.slug || job.id || 'digital-marketing-executive';
+              return (
+                <div key={job.id || idx} className="wm-job-card">
+                  <div className="wm-job-main">
+                    <Link to={`/career/${jobSlug}`} className="wm-job-title-link">
+                      <h3>{job.title}</h3>
+                    </Link>
+                    <div className="wm-job-meta">
+                      <span><FaMapMarkerAlt /> {job.location}</span>
+                      <span><FaClock /> {job.type}</span>
+                      <span><FaBriefcase /> {job.exp}</span>
+                    </div>
+                    <p className="wm-job-desc">{job.desc}</p>
                   </div>
-                  <p className="wm-job-desc">{job.desc}</p>
+                  <div className="wm-job-action">
+                    <Link
+                      to={`/career/${jobSlug}`}
+                      className="wm-job-details-btn"
+                    >
+                      View Details <FaArrowRight />
+                    </Link>
+                    <button
+                      type="button"
+                      className="wm-job-apply-btn"
+                      onClick={() => handleOpenApply(job)}
+                    >
+                      Apply Now
+                    </button>
+                  </div>
                 </div>
-                <div className="wm-job-action">
-                  <button
-                    type="button"
-                    className="wm-job-apply-btn"
-                    onClick={() => handleOpenApply(job)}
-                  >
-                    Apply Now
-                  </button>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="wm-career-perks-box">

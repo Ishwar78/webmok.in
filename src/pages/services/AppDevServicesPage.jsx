@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
 import {
   Link } from 'react-router-dom';
@@ -27,7 +28,7 @@ import {
 } from 'react-icons/fa';
 import './AppDevServicesPage.css';
 
-const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
+const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -193,21 +194,34 @@ const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-sp-breadcrumb">
             <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>Mobile App Development</span>
           </div>
-          <span className="wm-sp-hero-pill">
-            <FaAward /> iOS, Android & Cross-Platform · #Wise Solutions
-          </span>
+          
           <h1 className="wm-sp-hero-title">
             Mobile <span>App Development</span> Company in India
           </h1>
+
+          {/* Rating Scorecard Badge in Hero */}
+          <div className="wm-dsm-rating-hero">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+              </p>
+            </div>
+          </div>
+
          
-          <div className="wm-sp-hero-cta-group">
+          {/* <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
               Get Free Custom Quote <FaArrowRight />
             </button>
             <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
               <FaPhoneAlt /> Call Me in 28 Seconds
             </button>
-          </div>
+          </div> */}
 
           {/* 4-Metric Performance Bar */}
           <div className="wm-seost">
@@ -230,23 +244,7 @@ const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Rating Scorecard Badge */}
-      <div className="wm-dsm-rating-wrap">
-        <div className="wm-sp-container">
-          <div className="wm-dsm-rating">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* 2. Main Body Section */}
       <section className="wm-sp-body">
@@ -370,7 +368,7 @@ const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--o"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Mobile App Development', 'MVP Cross-Platform App')}
                     >
                       Choose MVP &rarr;
                     </button>
@@ -390,7 +388,7 @@ const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--y"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Mobile App Development', 'Commercial Scale App')}
                     >
                       Choose Commercial &rarr;
                     </button>
@@ -410,7 +408,7 @@ const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--o"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Mobile App Development', 'Enterprise Mobile Ecosystem')}
                     >
                       Choose Enterprise &rarr;
                     </button>
@@ -430,7 +428,7 @@ const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--y"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Mobile App Development', 'App Maintenance & Updates')}
                     >
                       Choose App &rarr;
                     </button>
@@ -457,24 +455,12 @@ const AppDevServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-rsau">
               <div className="wm-rsau__grid">
                 <div>
-                  <span className="wm-rsau__eyebrow">Diagnostic Engine <i>Free</i></span>
+                  <span className="wm-rsau__eyebrow">Diagnostic Engine <span>Free</span></span>
                   <h2>Request a Free Mobile App Feasibility & Cost Estimate</h2>
                   <p>
                     Share your mobile app concept to receive a comprehensive technical feasibility analysis, recommended technology stack, and accurate timeline roadmap.
                   </p>
-                  <form className="wm-rsau__form" onSubmit={handleAuditSubmit}>
-                    <input
-                      className="wm-rsau__in"
-                      type="text"
-                      placeholder="https://yoursite.com"
-                      value={auditUrl}
-                      onChange={(e) => setAuditUrl(e.target.value)}
-                      required
-                    />
-                    <button className="wm-rsau__go" type="submit">
-                      Get Free Analysis &rarr;
-                    </button>
-                  </form>
+                  <DiagnosticLeadForm serviceName="Mobile App Development" />
                   <p style={{ fontSize: '13px', color: '#8e8a7e', margin: 0 }}>
                     100% Free · No credit card required · Actionable analysis delivered within 24 hours.
                   </p>

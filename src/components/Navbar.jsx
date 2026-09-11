@@ -37,6 +37,56 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  const defaultTopbarLines = [
+    {
+      text: "WEBMOK does not offer any jobs via WhatsApp. Such messages are fraudulent. Apply only through Careers.",
+      icon: "✦"
+    },
+    {
+      text: "Beware of fake job offers & task fraud. WEBMOK never demands money for interviews or employment.",
+      icon: "✦"
+    }
+  ];
+
+  const [topbarLines, setTopbarLines] = useState(() => {
+    try {
+      const saved = localStorage.getItem('webmok_admin_marquee');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const topbar = parsed.filter(l => l.position === 'topbar' && l.isActive !== false);
+        if (topbar.length > 0) return topbar;
+      }
+    } catch (e) {}
+    return defaultTopbarLines;
+  });
+
+  useEffect(() => {
+    const fetchTopbarLines = async () => {
+      try {
+        const res = await fetch('http://localhost:5005/api/marquee?position=topbar');
+        const json = await res.json();
+        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+          setTopbarLines(json.data);
+        }
+      } catch (err) {
+        // use fallback or localStorage
+      }
+    };
+    fetchTopbarLines();
+
+    const handleStorage = (e) => {
+      if (e.key === 'webmok_admin_marquee' && e.newValue) {
+        try {
+          const parsed = JSON.parse(e.newValue);
+          const topbar = parsed.filter(l => l.position === 'topbar' && l.isActive !== false);
+          if (topbar.length > 0) setTopbarLines(topbar);
+        } catch (err) {}
+      }
+    };
+    window.addEventListener('storage', handleStorage);
+    return () => window.removeEventListener('storage', handleStorage);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 30) {
@@ -82,26 +132,42 @@ const Navbar = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-topbar-marquee-wrap">
               <div className="wm-topbar-marquee-track">
                 <div className="wm-topbar-marquee-group">
-                  <span className="wm-topbar-gradient-text">
-                    WEBMOK does not offer any jobs via WhatsApp. Such messages are fraudulent. Apply only through{' '}
-                    <Link to="/career" className="wm-topbar-alert-link">Careers</Link>.
-                  </span>
-                  <span className="wm-topbar-dot">✦</span>
-                  <span className="wm-topbar-gradient-text">
-                    Beware of fake job offers & task fraud. WEBMOK never demands money for interviews or employment.
-                  </span>
-                  <span className="wm-topbar-dot">✦</span>
+                  {topbarLines.map((item, idx) => (
+                    <React.Fragment key={`tb-1-${item._id || item.id || idx}`}>
+                      <span className="wm-topbar-gradient-text">
+                        {item.icon && <span style={{ marginRight: '6px' }}>{item.icon}</span>}
+                        {item.text && item.text.includes('Careers') ? (
+                          <>
+                            {item.text.split('Careers')[0]}
+                            <Link to="/career" className="wm-topbar-alert-link">Careers</Link>
+                            {item.text.split('Careers')[1] || ''}
+                          </>
+                        ) : (
+                          item.text
+                        )}
+                      </span>
+                      <span className="wm-topbar-dot">✦</span>
+                    </React.Fragment>
+                  ))}
                 </div>
                 <div className="wm-topbar-marquee-group" aria-hidden="true">
-                  <span className="wm-topbar-gradient-text">
-                    WEBMOK does not offer any jobs via WhatsApp. Such messages are fraudulent. Apply only through{' '}
-                    <Link to="/career" className="wm-topbar-alert-link">Careers</Link>.
-                  </span>
-                  <span className="wm-topbar-dot">✦</span>
-                  <span className="wm-topbar-gradient-text">
-                    Beware of fake job offers & task fraud. WEBMOK never demands money for interviews or employment.
-                  </span>
-                  <span className="wm-topbar-dot">✦</span>
+                  {topbarLines.map((item, idx) => (
+                    <React.Fragment key={`tb-2-${item._id || item.id || idx}`}>
+                      <span className="wm-topbar-gradient-text">
+                        {item.icon && <span style={{ marginRight: '6px' }}>{item.icon}</span>}
+                        {item.text && item.text.includes('Careers') ? (
+                          <>
+                            {item.text.split('Careers')[0]}
+                            <Link to="/career" className="wm-topbar-alert-link">Careers</Link>
+                            {item.text.split('Careers')[1] || ''}
+                          </>
+                        ) : (
+                          item.text
+                        )}
+                      </span>
+                      <span className="wm-topbar-dot">✦</span>
+                    </React.Fragment>
+                  ))}
                 </div>
               </div>
             </div>

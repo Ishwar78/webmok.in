@@ -81,8 +81,8 @@
 }
 
 .wm-intl-florida-hero-italic-gold {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
   font-weight: 600;
   color: #0b4f8a;
   font-size: 38px;
@@ -1222,7 +1222,7 @@
   font-size: 15px;
   line-height: 1.7;
   color: #334155;
-  font-style: italic;
+  font-style: normal;
   margin-bottom: 22px;
   flex-grow: 1;
 }

@@ -93,7 +93,7 @@ const IndustriesWeServe = ({ onOpenCallMe, onOpenEnquiry }) => {
 
             {/* Right Industry Showcase Card */}
             <div className="wm-ind-showcase-display">
-              <div className={`wm-ind-display-card wm-ind-card-${activeIndustry.id}`}>
+              <div key={activeIndustry.id} className={`wm-ind-display-card wm-ind-card-${activeIndustry.id} wm-ind-card-anim`}>
                 <div className="wm-ind-card-inner">
                   <h3 className="wm-ind-card-heading">{activeIndustry.name}</h3>
                   <p className="wm-ind-card-text">{activeIndustry.desc}</p>

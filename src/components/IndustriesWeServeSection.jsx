@@ -47,7 +47,7 @@ const IndustriesWeServeSection = ({ onOpenEnquiry, isStandalone = false }) => {
 
           {/* Right Column: Display Card for Selected Industry */}
           <div className="wm-industries-display-col">
-            <div className={`wm-industries-card wm-ind-card-${activeIndustry.id}`}>
+            <div key={activeIndustry.id} className={`wm-industries-card wm-ind-card-${activeIndustry.id} wm-industries-card-anim`}>
               <div className="wm-industries-card-content">
                 <h3 className="wm-industries-card-title">{activeIndustry.name}</h3>
                 <p className="wm-industries-card-desc">{activeIndustry.desc}</p>

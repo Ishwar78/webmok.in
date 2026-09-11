@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
 import {
   Link } from 'react-router-dom';
@@ -18,7 +19,7 @@ import {
 } from 'react-icons/fa';
 import './PpcServicesPage.css';
 
-const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
+const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -178,23 +179,27 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <div className="wm-sp-breadcrumb">
             <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>PPC Services</span>
           </div>
-          <span className="wm-sp-hero-pill">
-            <FaCertificate /> Google Premier Partner Agency · #Performance First
-          </span>
+          
           <h1 className="wm-sp-hero-title">
             PPC & <span>Google Ads</span> Management Agency
           </h1>
-          <p className="wm-sp-hero-lead">
-            Maximize your Return on Ad Spend (ROAS) and generate predictable, high-intent inbound customer calls with data-backed paid search, shopping, and social ad campaigns managed by WebMok.
-          </p>
-          <div className="wm-sp-hero-cta-group">
-            <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
-              Launch Profitable Campaign <FaArrowRight />
-            </button>
-            <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
-              <FaPhoneAlt /> Call Me in 28 Seconds
-            </button>
+
+          {/* Rating Scorecard Badge in Hero */}
+          <div className="wm-dsm-rating-hero">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>300+ performance client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+              </p>
+            </div>
           </div>
+
+          
+          
 
           {/* 4-Metric Performance Bar */}
           <div className="wm-seost">
@@ -217,23 +222,7 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Rating Scorecard Badge */}
-      <div className="wm-dsm-rating-wrap">
-        <div className="wm-sp-container">
-          <div className="wm-dsm-rating">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>300+ performance client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* 2. Main Body Section */}
       <section className="wm-sp-body">
@@ -421,7 +410,7 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>Conversion tracking via GTM & GA4</li>
                       <li>Weekly bid adjustments & search term review</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('PPC & Google Ads', 'Starter Ads Plan')}>
                       Choose Starter &rarr;
                     </button>
                   </div>
@@ -440,7 +429,7 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>Audience remarketing & dynamic catalog ads</li>
                       <li>Bi-weekly strategy call & Looker Studio dashboard</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('PPC & Google Ads', 'Growth Ads Plan')}>
                       Choose Growth &rarr;
                     </button>
                   </div>
@@ -458,7 +447,7 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>Server-side CAPI tracking & offline conversion sync</li>
                       <li>Weekly sprint reviews & creative asset refreshes</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('PPC & Google Ads', 'Scale Plan')}>
                       Choose Scale &rarr;
                     </button>
                   </div>
@@ -476,7 +465,7 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>Real-time Slack channel support & daily pacing</li>
                       <li>Custom CRM lead scoring & attribution modeling</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('PPC & Google Ads', 'Dedicated PPC Retainer')}>
                       Hire Dedicated Team &rarr;
                     </button>
                   </div>
@@ -502,24 +491,12 @@ const PpcServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-rsau">
               <div className="wm-rsau__grid">
                 <div>
-                  <span className="wm-rsau__eyebrow">PPC Audit Engine <i>Free</i></span>
+                  <span className="wm-rsau__eyebrow">PPC Audit Engine <span>Free</span></span>
                   <h2>Uncover Wasted Ad Spend in 30 Seconds</h2>
                   <p>
                     Submit your website or ad account details to receive an actionable <b>25-point PPC audit</b> highlighting wasted search terms, quality score bottlenecks, and CPA reduction opportunities.
                   </p>
-                  <form className="wm-rsau__form" onSubmit={handleAuditSubmit}>
-                    <input
-                      className="wm-rsau__in"
-                      type="text"
-                      placeholder="https://yoursite.com"
-                      value={auditUrl}
-                      onChange={(e) => setAuditUrl(e.target.value)}
-                      required
-                    />
-                    <button className="wm-rsau__go" type="submit">
-                      Get Free PPC Audit &rarr;
-                    </button>
-                  </form>
+                  <DiagnosticLeadForm serviceName="PPC Services" />
                   <p style={{ fontSize: '13px', color: '#8e8a7e', margin: 0 }}>
                     100% Free · No credit card required · Audit delivered within 24 hours.
                   </p>

@@ -108,7 +108,7 @@
 .logo-hiring-title-area h2 {
   margin: 0;
 
-  font-family: Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: clamp(42px, 5vw, 74px);
 
@@ -120,7 +120,7 @@
 }
 
 .logo-hiring-title-area h2 span {
-  font-style: italic;
+  font-style: normal;
 
   background: linear-gradient(
     90deg,
@@ -360,7 +360,7 @@
 .logo-hiring-card h3 {
   margin: 0 0 18px;
 
-  font-family: Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: 31px;
 

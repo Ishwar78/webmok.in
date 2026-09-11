@@ -57,7 +57,7 @@
   background: #dc2626;
   color: #ffffff;
   font-weight: 800;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   padding: 2.5px 8px;
@@ -152,10 +152,10 @@
 }
 
 .wm-topbar-link {
-  color: #cbd5e1;
+  color: #f1f3f5;
   text-decoration: none;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 15px;
   transition: all 0.2s ease;
 }
 
@@ -177,7 +177,7 @@
   color: #facc15;
   text-decoration: none;
   font-weight: 800;
-  font-size: 13px;
+  font-size: 15px;
   transition: all 0.2s ease;
 }
 
@@ -196,7 +196,7 @@
   max-width: 1540px;
   margin: 0 auto;
   padding: 0 32px;
-  height: 76px;
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -215,7 +215,7 @@
 }
 
 .wm-logo-image {
-  height: 48px;
+  height: 56px;
   width: auto;
   object-fit: contain;
   transition: transform 0.25s ease;
@@ -241,7 +241,7 @@
 }
 
 .wm-nav-link {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
   color: #1e293b;
   text-decoration: none;
@@ -735,7 +735,7 @@
   .wm-mobile-sublist li a {
     display: block;
     font-size: 14.5px;
-    color: #475569;
+    color: #070809;
     text-decoration: none;
     font-weight: 600;
     padding: 6px 12px;

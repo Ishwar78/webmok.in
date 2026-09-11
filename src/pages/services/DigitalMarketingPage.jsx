@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
 import {
   Link } from 'react-router-dom';
@@ -18,7 +19,7 @@ import {
 } from 'react-icons/fa';
 import './DigitalMarketingPage.css';
 
-const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
+const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -184,6 +185,21 @@ const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             360° <span>Digital Marketing</span> & Growth Agency
           </h1>
+
+          {/* Rating Scorecard Badge in Hero */}
+          <div className="wm-dsm-rating-hero">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.8</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.8 out of 5</strong> from <strong>350+ brand reviews</strong> across Clutch, Google, AmbitionBox, and GoodFirms.
+              </p>
+            </div>
+          </div>
+
           <p className="wm-sp-hero-lead">
             Scale brand authority, capture high-intent buyers, and maximize omnichannel customer lifetime value with integrated digital marketing strategies engineered by WebMok.
           </p>
@@ -217,23 +233,7 @@ const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Rating Scorecard Badge */}
-      <div className="wm-dsm-rating-wrap">
-        <div className="wm-sp-container">
-          <div className="wm-dsm-rating">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.8</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.8 out of 5</strong> from <strong>350+ brand reviews</strong> across Clutch, Google, AmbitionBox, and GoodFirms.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* 2. Main Body Section */}
       <section className="wm-sp-body">
@@ -421,7 +421,7 @@ const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>Monthly GA4 & Search Console reporting</li>
                       <li>Dedicated account manager</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Digital Marketing & Growth', 'Starter Growth')}>
                       Choose Starter &rarr;
                     </button>
                   </div>
@@ -440,7 +440,7 @@ const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>12 custom creative social media assets & reels</li>
                       <li>Conversion rate optimization & Looker Studio dashboard</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Digital Marketing & Growth', 'Omnichannel Growth')}>
                       Choose Growth &rarr;
                     </button>
                   </div>
@@ -458,7 +458,7 @@ const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>20 social assets + email drip automation</li>
                       <li>Bi-weekly sprint reviews & dedicated copy team</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--o" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Digital Marketing & Growth', 'Scale Enterprise')}>
                       Choose Scale &rarr;
                     </button>
                   </div>
@@ -476,7 +476,7 @@ const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                       <li>Real-time Slack collaboration & weekly growth sprints</li>
                       <li>Custom CRM workflows & executive attribution model</li>
                     </ul>
-                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={onOpenEnquiry}>
+                    <button className="wm-seopk__cta wm-seopk__cta--y" onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Digital Marketing & Growth', 'Dedicated 360° Growth Squad')}>
                       Hire Dedicated Squad &rarr;
                     </button>
                   </div>
@@ -490,24 +490,12 @@ const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-rsau">
               <div className="wm-rsau__grid">
                 <div>
-                  <span className="wm-rsau__eyebrow">360° Growth Audit <i>Free</i></span>
+                  <span className="wm-rsau__eyebrow">360° Growth Audit <span>Free</span></span>
                   <h2>Discover Your Biggest Growth Bottlenecks in 30 Seconds</h2>
                   <p>
                     Enter your website URL to receive a comprehensive <b>360° Digital Growth Scorecard</b> covering SEO health, paid ad leakage, speed, and conversion friction.
                   </p>
-                  <form className="wm-rsau__form" onSubmit={handleAuditSubmit}>
-                    <input
-                      className="wm-rsau__in"
-                      type="text"
-                      placeholder="https://yoursite.com"
-                      value={auditUrl}
-                      onChange={(e) => setAuditUrl(e.target.value)}
-                      required
-                    />
-                    <button className="wm-rsau__go" type="submit">
-                      Run Free 360° Audit &rarr;
-                    </button>
-                  </form>
+                  <DiagnosticLeadForm serviceName="Digital Marketing" />
                   <p style={{ fontSize: '13px', color: '#8e8a7e', margin: 0 }}>
                     100% Free · No credit card required · Detailed scorecard delivered within 24 hours.
                   </p>

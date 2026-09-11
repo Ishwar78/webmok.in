@@ -262,6 +262,21 @@ const ServiceDetail = ({ onOpenCallMe, onOpenEnquiry }) => {
             <FaAward /> {currentService.heroTag} · #Wise Solutions
           </span>
           <h1 className="wm-sp-hero-title">{currentService.title}</h1>
+
+          {/* Rating Scorecard Badge in Hero */}
+          <div className="wm-dsm-rating-hero">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.8</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.8 out of 5</strong> from <strong>350+ enterprise client reviews</strong> across Clutch, Google, and AmbitionBox.
+              </p>
+            </div>
+          </div>
+
           <p className="wm-sp-hero-lead">{currentService.lead}</p>
           <div className="wm-sp-hero-cta-group">
             <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
@@ -293,23 +308,7 @@ const ServiceDetail = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Rating Scorecard Badge */}
-      <div className="wm-dsm-rating-wrap">
-        <div className="wm-sp-container">
-          <div className="wm-dsm-rating">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.8</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.8 out of 5</strong> from <strong>350+ enterprise client reviews</strong> across Clutch, Google, and AmbitionBox.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* 2. Main Body Section */}
       <section className="wm-sp-body">

@@ -682,6 +682,54 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
       });
   }, []);
 
+  // Dynamic marquee lines for "What We Offer" left side (loaded from admin /api/marquee with localStorage fallback)
+  const defaultHomeMarqueeLines = [
+    { id: 'mq-1', text: 'Ultra-Fast 0.8s Page Speed', position: 'top', icon: '⚡', badgeColor: 'cyan', order: 1, isActive: true },
+    { id: 'mq-2', text: '500+ Verified Commercial Launches', position: 'top', icon: '🚀', badgeColor: 'blue', order: 2, isActive: true },
+    { id: 'mq-3', text: '4.9★ Clutch & Google Verified Reviews', position: 'top', icon: '⭐', badgeColor: 'yellow', order: 3, isActive: true },
+    { id: 'mq-4', text: '10x Organic Traffic & Lead Surge', position: 'top', icon: '📈', badgeColor: 'orange', order: 4, isActive: true },
+    { id: 'mq-5', text: '100% Enterprise Cyber Security', position: 'top', icon: '🛡️', badgeColor: 'purple', order: 5, isActive: true },
+    { id: 'mq-6', text: 'Global Delivery Across 18+ Countries', position: 'top', icon: '🌐', badgeColor: 'green', order: 6, isActive: true },
+    { id: 'mq-7', text: 'Custom React & Next.js Scalable Web Apps', position: 'bottom', icon: '💎', badgeColor: 'cyan', order: 1, isActive: true },
+    { id: 'mq-8', text: 'High-ROAS Google & Meta Performance Ads', position: 'bottom', icon: '🎯', badgeColor: 'orange', order: 2, isActive: true },
+    { id: 'mq-9', text: 'Page #1 Google Technical SEO & AEO', position: 'bottom', icon: '🔍', badgeColor: 'green', order: 3, isActive: true },
+    { id: 'mq-10', text: 'Native iOS & Android Mobile Engineering', position: 'bottom', icon: '📱', badgeColor: 'purple', order: 4, isActive: true },
+    { id: 'mq-11', text: 'Shopify & Headless High-Conversion Stores', position: 'bottom', icon: '🛒', badgeColor: 'blue', order: 5, isActive: true },
+    { id: 'mq-12', text: 'Dedicated Technical Account Director 24/7', position: 'bottom', icon: '🤝', badgeColor: 'yellow', order: 6, isActive: true }
+  ];
+
+  const [marqueeLines, setMarqueeLines] = useState(() => {
+    try {
+      const saved = localStorage.getItem('webmok_admin_marquee');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
+    } catch (e) {}
+    return defaultHomeMarqueeLines;
+  });
+
+  useEffect(() => {
+    fetch('http://localhost:5005/api/marquee')
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+          setMarqueeLines(json.data);
+          try {
+            localStorage.setItem('webmok_admin_marquee', JSON.stringify(json.data));
+          } catch (e) {}
+        }
+      })
+      .catch((err) => {
+        console.warn('Backend server offline, using fallback marquee lines:', err.message);
+      });
+  }, []);
+
+  const homeTopLines = marqueeLines.filter((l) => l.position === 'top' && l.isActive !== false);
+  const homeBottomLines = marqueeLines.filter((l) => l.position === 'bottom' && l.isActive !== false);
+  const renderedTopList = homeTopLines.length > 0 ? homeTopLines : defaultHomeMarqueeLines.slice(0, 6);
+  const renderedBottomList = homeBottomLines.length > 0 ? homeBottomLines : defaultHomeMarqueeLines.slice(6);
+
   // Ensure current active index is always valid
   const safeActiveIdx = testimonialActiveIdx < testimonials.length ? testimonialActiveIdx : 0;
   const currentTestimonial = testimonials[safeActiveIdx] || testimonials[0] || {};
@@ -1040,21 +1088,21 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-rcard wm-rcard-google">
               <div className="wm-rcard-glow"></div>
               <div className="wm-rcard-top">
-                <div className="wm-rcard-brand-icon wm-g-icon">
-                  <span style={{ color: '#4285F4' }}>G</span>
-                  <span style={{ color: '#EA4335' }}>o</span>
-                  <span style={{ color: '#FBBC05' }}>o</span>
-                  <span style={{ color: '#4285F4' }}>g</span>
-                  <span style={{ color: '#34A853' }}>l</span>
-                  <span style={{ color: '#EA4335' }}>e</span>
+                <div className="wm-rcard-brand-line">
+                  <div className="wm-rcard-brand-icon wm-g-icon">
+                    <span style={{ color: '#4285F4' }}>G</span>
+                    <span style={{ color: '#EA4335' }}>o</span>
+                    <span style={{ color: '#FBBC05' }}>o</span>
+                    <span style={{ color: '#4285F4' }}>g</span>
+                    <span style={{ color: '#34A853' }}>l</span>
+                    <span style={{ color: '#EA4335' }}>e</span>
+                  </div>
+                  <span className="wm-rcard-score">{reviewVals.gScore}</span>
+                  <div className="wm-rcard-stars">
+                    <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+                  </div>
                 </div>
                 <span className="wm-rcard-badge">REVIEWS</span>
-              </div>
-              <div className="wm-rcard-score-row">
-                <span className="wm-rcard-score">{reviewVals.gScore}</span>
-                <div className="wm-rcard-stars">
-                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
-                </div>
               </div>
               <p className="wm-rcard-count">{reviewVals.gCount.toLocaleString()}+ Verified Reviews</p>
               <div className="wm-rcard-bar">
@@ -1066,14 +1114,14 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-rcard wm-rcard-facebook">
               <div className="wm-rcard-glow"></div>
               <div className="wm-rcard-top">
-                <div className="wm-rcard-brand-icon wm-fb-icon">facebook</div>
-                <span className="wm-rcard-badge wm-badge-fb">RATING</span>
-              </div>
-              <div className="wm-rcard-score-row">
-                <span className="wm-rcard-score">{reviewVals.fbScore}</span>
-                <div className="wm-rcard-stars wm-stars-fb">
-                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+                <div className="wm-rcard-brand-line">
+                  <div className="wm-rcard-brand-icon wm-fb-icon">facebook</div>
+                  <span className="wm-rcard-score">{reviewVals.fbScore}</span>
+                  <div className="wm-rcard-stars wm-stars-fb">
+                    <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+                  </div>
                 </div>
+                <span className="wm-rcard-badge wm-badge-fb">RATING</span>
               </div>
               <p className="wm-rcard-count">{reviewVals.fbCount}+ Recommendation Votes</p>
               <div className="wm-rcard-bar">
@@ -1085,16 +1133,16 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-rcard wm-rcard-justdial">
               <div className="wm-rcard-glow"></div>
               <div className="wm-rcard-top">
-                <div className="wm-rcard-brand-icon wm-jd-icon">
-                  Just<span className="wm-jd-dial">dial</span>
+                <div className="wm-rcard-brand-line">
+                  <div className="wm-rcard-brand-icon wm-jd-icon">
+                    Just<span className="wm-jd-dial">dial</span>
+                  </div>
+                  <span className="wm-rcard-score">{reviewVals.jdScore}</span>
+                  <div className="wm-rcard-stars wm-stars-jd">
+                    <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+                  </div>
                 </div>
                 <span className="wm-rcard-badge wm-badge-jd">VERIFIED</span>
-              </div>
-              <div className="wm-rcard-score-row">
-                <span className="wm-rcard-score">{reviewVals.jdScore}</span>
-                <div className="wm-rcard-stars wm-stars-jd">
-                  <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
-                </div>
               </div>
               <p className="wm-rcard-count">{reviewVals.jdCount}+ Verified User Ratings</p>
               <div className="wm-rcard-bar">
@@ -1140,6 +1188,51 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                     <FaArrowRight className="wm-hsvc-tab-arrow" />
                   </button>
                 ))}
+              </div>
+
+              {/* Dynamic Live Streaming Marquee Lines (Managed by Admin) */}
+              <div className="wm-hsvc-live-ticker-card">
+                {/* Header */}
+                <div className="wm-hsvc-ticker-head">
+                  <div className="wm-hsvc-ticker-title-group">
+                    <span className="wm-hsvc-pulse-dot"></span>
+                    <span className="wm-hsvc-ticker-heading">Live Enterprise Capabilities</span>
+                  </div>
+                  <span className="wm-hsvc-live-tag">Active</span>
+                </div>
+
+                {/* Line 1: Top Stream (moves right-to-left) */}
+                <div className="wm-hsvc-stream-row wm-stream-row-top">
+                  <div className="wm-hsvc-stream-track wm-track-left">
+                    {[...renderedTopList, ...renderedTopList].map((item, idx) => (
+                      <div key={idx} className={`wm-hsvc-stream-chip wm-chip-${item.badgeColor || 'cyan'}`}>
+                        <span className="wm-chip-icon">{item.icon || '⚡'}</span>
+                        <span className="wm-chip-text">{item.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Line 2: Bottom Stream (moves left-to-right) */}
+                <div className="wm-hsvc-stream-row wm-stream-row-bottom">
+                  <div className="wm-hsvc-stream-track wm-track-right">
+                    {[...renderedBottomList, ...renderedBottomList].map((item, idx) => (
+                      <div key={idx} className={`wm-hsvc-stream-chip wm-chip-${item.badgeColor || 'orange'}`}>
+                        <span className="wm-chip-icon">{item.icon || '💎'}</span>
+                        <span className="wm-chip-text">{item.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Line 3: Trust & SLA Bar */}
+                <div className="wm-hsvc-stream-footer">
+                  <span className="wm-stream-foot-item"><FaCheckCircle /> 100% Code Ownership</span>
+                  <span className="wm-stream-foot-sep">·</span>
+                  <span className="wm-stream-foot-item"><FaAward /> ISO Certified</span>
+                  {/* <span className="wm-stream-foot-sep">·</span>
+                  <span className="wm-stream-foot-item"><FaBolt /> 28-Sec Callback</span> */}
+                </div>
               </div>
             </div>
 

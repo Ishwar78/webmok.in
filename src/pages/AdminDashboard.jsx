@@ -10,6 +10,9 @@ import AdminVideoReviews from './admin/AdminVideoReviews';
 import AdminCreativeShowcase from './admin/AdminCreativeShowcase';
 import AdminVideoShowcase from './admin/AdminVideoShowcase';
 import AdminInternationalPages from './admin/AdminInternationalPages';
+import AdminMarquee from './admin/AdminMarquee';
+import AdminDiagnosticLeads from './admin/AdminDiagnosticLeads';
+import AdminServiceInquiries from './admin/AdminServiceInquiries';
 
 const API_BASE = 'http://localhost:5005/api';
 import {
@@ -5152,6 +5155,21 @@ const AdminDashboard = () => {
             TAB 15: INTERNATIONAL GEO-TARGETED PAGES CMS
            ========================================================================= */}
         {activeTab === 'international-pages' && <AdminInternationalPages />}
+
+        {/* =========================================================================
+            TAB 16: WHAT WE OFFER LIVE STREAMING MARQUEE LINES CMS
+           ========================================================================= */}
+        {activeTab === 'marquee' && <AdminMarquee />}
+
+        {/* =========================================================================
+            TAB 17: SERVICE DIAGNOSTIC ENGINE LEADS (DIRECT AUDIT SUBMISSIONS)
+           ========================================================================= */}
+        {activeTab === 'diagnostic-leads' && <AdminDiagnosticLeads />}
+
+        {/* =========================================================================
+            TAB 18: SERVICE PRICING INQUIRIES (PAGE-SPECIFIC & CATEGORY FILTERED)
+           ========================================================================= */}
+        {activeTab === 'service-inquiries' && <AdminServiceInquiries />}
 
         {/* =========================================================================
             POPUP MODAL: VIEW FULL INQUIRY / CONTACT DETAILS

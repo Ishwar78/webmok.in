@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
 import {
   Link } from 'react-router-dom';
@@ -27,7 +28,7 @@ import {
 } from 'react-icons/fa';
 import './BrandingServicesPage.css';
 
-const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
+const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -199,6 +200,21 @@ const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
           <h1 className="wm-sp-hero-title">
             Strategic <span>Corporate Branding</span> Agency
           </h1>
+
+          {/* Rating Scorecard Badge in Hero */}
+          <div className="wm-dsm-rating-hero">
+            <div className="wm-dsm-rating__score">
+              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__out">/5</span>
+            </div>
+            <div>
+              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+              <p className="wm-dsm-rating__meta">
+                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+              </p>
+            </div>
+          </div>
+
           <p className="wm-sp-hero-lead">
             Build an iconic, unforgettable brand identity that commands premium market pricing, inspires customer loyalty, and establishes definitive category leadership.
           </p>
@@ -232,23 +248,7 @@ const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Rating Scorecard Badge */}
-      <div className="wm-dsm-rating-wrap">
-        <div className="wm-sp-container">
-          <div className="wm-dsm-rating">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* 2. Main Body Section */}
       <section className="wm-sp-body">
@@ -433,7 +433,7 @@ const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--o"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Corporate Branding & Identity', 'Core Brand Starter')}
                     >
                       Choose Core &rarr;
                     </button>
@@ -453,7 +453,7 @@ const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--y"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Corporate Branding & Identity', 'Complete Corporate Brand Suite')}
                     >
                       Choose Complete &rarr;
                     </button>
@@ -473,7 +473,7 @@ const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--o"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Corporate Branding & Identity', 'Enterprise Global Rebranding')}
                     >
                       Choose Enterprise &rarr;
                     </button>
@@ -493,7 +493,7 @@ const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                     </ul>
                     <button
                       className="wm-seopk__cta wm-seopk__cta--y"
-                      onClick={onOpenEnquiry}
+                      onClick={() => (onOpenServiceInquiry || onOpenEnquiry)('Corporate Branding & Identity', 'Monthly Brand Governance')}
                     >
                       Choose Monthly &rarr;
                     </button>
@@ -508,24 +508,12 @@ const BrandingServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
             <div className="wm-rsau">
               <div className="wm-rsau__grid">
                 <div>
-                  <span className="wm-rsau__eyebrow">Diagnostic Engine <i>Free</i></span>
+                  <span className="wm-rsau__eyebrow">Diagnostic Engine <span>Free</span></span>
                   <h2>Request a Free Brand Perception & Visual Audit</h2>
                   <p>
                     Submit your existing logo and marketing assets to receive an expert brand audit evaluating visual consistency, category differentiation, and brand equity.
                   </p>
-                  <form className="wm-rsau__form" onSubmit={handleAuditSubmit}>
-                    <input
-                      className="wm-rsau__in"
-                      type="text"
-                      placeholder="https://yoursite.com"
-                      value={auditUrl}
-                      onChange={(e) => setAuditUrl(e.target.value)}
-                      required
-                    />
-                    <button className="wm-rsau__go" type="submit">
-                      Get Free Analysis &rarr;
-                    </button>
-                  </form>
+                  <DiagnosticLeadForm serviceName="Corporate Branding" />
                   <p style={{ fontSize: '13px', color: '#8e8a7e', margin: 0 }}>
                     100% Free · No credit card required · Actionable analysis delivered within 24 hours.
                   </p>

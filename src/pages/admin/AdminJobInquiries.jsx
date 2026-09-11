@@ -416,7 +416,7 @@ const AdminJobInquiries = () => {
                     </a>
                   </div>
                 ) : (
-                  <span style={{ color: '#94a3b8', fontStyle: 'italic', fontSize: '13px' }}>
+                  <span style={{ color: '#94a3b8', fontStyle: 'normal', fontSize: '13px' }}>
                     No CV attached by applicant (CV is optional).
                   </span>
                 )}

@@ -17,7 +17,10 @@ import {
   FaStar,
   FaPalette,
   FaFilm,
-  FaGlobeAmericas
+  FaGlobeAmericas,
+  FaStream,
+  FaMicrochip,
+  FaTags
 } from 'react-icons/fa';
 import './AdminSidebar.css';
 
@@ -50,6 +53,28 @@ const AdminSidebar = ({ activeTab, setActiveTab, onLogout, enquiryCount = 6, con
           <FaClipboardList className="wm-admin-btn-icon" />
           <span>Inquiries</span>
           <span className="wm-nav-pill-badge wm-pill-blue">{enquiryCount + contactCount}</span>
+        </button>
+
+        {/* Dedicated Diagnostic Engine Leads Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'diagnostic-leads' ? 'active' : ''}`}
+          onClick={() => setActiveTab('diagnostic-leads')}
+          title="Review Phone Numbers & Emails Submitted via Service Diagnostic Engines"
+        >
+          <FaMicrochip className="wm-admin-btn-icon" />
+          <span>Diagnostic Leads</span>
+          <span className="wm-nav-pill-badge wm-pill-purple">Services</span>
+        </button>
+
+        {/* Dedicated Service Pricing Inquiries Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'service-inquiries' ? 'active' : ''}`}
+          onClick={() => setActiveTab('service-inquiries')}
+          title="Review Pricing & Package Inquiries from All Service Pages"
+        >
+          <FaTags className="wm-admin-btn-icon" />
+          <span>Service Inquiries</span>
+          <span className="wm-nav-pill-badge wm-pill-gold">Pricing</span>
         </button>
 
         {/* <div className="wm-admin-nav-group-label">CONTENT & CMS</div> */}
@@ -116,6 +141,17 @@ const AdminSidebar = ({ activeTab, setActiveTab, onLogout, enquiryCount = 6, con
         >
           <FaCogs className="wm-admin-btn-icon" />
           <span>Manage Services</span>
+        </button>
+
+        {/* Dedicated What We Offer Marquee Lines Button */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'marquee' ? 'active' : ''}`}
+          onClick={() => setActiveTab('marquee')}
+          title="Manage Home Page 'What We Offer' Marquee Streaming Lines & Content"
+        >
+          <FaStream className="wm-admin-btn-icon" />
+          <span>Marquee Lines</span>
+          <span className="wm-nav-pill-badge wm-pill-blue">Home</span>
         </button>
 
         {/* Dedicated Package Management Button */}

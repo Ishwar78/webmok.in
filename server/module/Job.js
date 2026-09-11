@@ -44,6 +44,29 @@ const JobSchema = new mongoose.Schema(
       type: [String],
       default: []
     },
+    highlights: {
+      type: [String],
+      default: []
+    },
+    benefits: {
+      type: [String],
+      default: []
+    },
+    education: {
+      type: String,
+      trim: true,
+      default: 'Bachelor / Master in relevant field'
+    },
+    shift: {
+      type: String,
+      trim: true,
+      default: 'Day Shift (Mon - Fri)'
+    },
+    category: {
+      type: String,
+      trim: true,
+      default: 'IT & Digital Services'
+    },
     isActive: {
       type: Boolean,
       default: true

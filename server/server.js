@@ -21,6 +21,9 @@ const videoReviewRoutes = require('./route/videoReviewRoute');
 const creativeShowcaseRoutes = require('./route/creativeShowcaseRoute');
 const videoShowcaseRoutes = require('./route/videoShowcaseRoute');
 const internationalPageRoutes = require('./route/internationalPageRoute');
+const marqueeRoutes = require('./route/marqueeRoute');
+const diagnosticLeadRoutes = require('./route/diagnosticLeadRoute');
+const serviceInquiryRoutes = require('./route/serviceInquiryRoute');
 
 // Load environment variables from server/.env
 dotenv.config({ path: path.join(__dirname, '.env') });
@@ -62,6 +65,9 @@ app.use('/api/video-reviews', videoReviewRoutes);
 app.use('/api/creative-showcase', creativeShowcaseRoutes);
 app.use('/api/video-showcase', videoShowcaseRoutes);
 app.use('/api/international-pages', internationalPageRoutes);
+app.use('/api/marquee', marqueeRoutes);
+app.use('/api/diagnostic-leads', diagnosticLeadRoutes);
+app.use('/api/service-inquiries', serviceInquiryRoutes);
 
 // Root & Health Check Endpoint
 app.get('/', (req, res) => {

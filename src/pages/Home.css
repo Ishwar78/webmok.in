@@ -884,11 +884,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.wm-rcard-brand-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 .wm-rcard-brand-icon {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 900;
   letter-spacing: -0.5px;
   line-height: 1;
@@ -933,24 +942,18 @@
   color: #ff5e00;
 }
 
-.wm-rcard-score-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 10px;
-}
-
 .wm-rcard-score {
-  font-size: 42px;
+  font-size: 28px;
   font-weight: 900;
   color: #0d2f57;
   line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   font-family: 'Montserrat', sans-serif;
 }
 
 .wm-rcard-stars {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
   gap: 3px;
   color: #f59e0b;
   font-size: 16px;
@@ -1477,6 +1480,202 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+/* ==========================================================================
+   LIVE MARQUEE STREAMING LINES BELOW WHAT WE OFFER TABS (Managed by Admin)
+   ========================================================================== */
+.wm-hsvc-live-ticker-card {
+  margin-top: 16px;
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.95) 0%, rgba(10, 14, 23, 0.98) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(0, 212, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.wm-hsvc-ticker-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.wm-hsvc-ticker-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wm-hsvc-pulse-dot {
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981;
+  animation: wmPulseGreen 1.8s infinite;
+}
+
+@keyframes wmPulseGreen {
+  0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.wm-hsvc-ticker-heading {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.wm-hsvc-live-tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.12);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 20px;
+  padding: 2px 8px;
+  letter-spacing: 0.5px;
+}
+
+/* Stream Rows (Edge Masking) */
+.wm-hsvc-stream-row {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+.wm-hsvc-stream-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  will-change: transform;
+}
+
+.wm-track-left {
+  animation: wmMarqueeScrollLeft 24s linear infinite;
+}
+
+.wm-track-right {
+  animation: wmMarqueeScrollRight 26s linear infinite;
+}
+
+.wm-hsvc-live-ticker-card:hover .wm-hsvc-stream-track {
+  animation-play-state: paused;
+}
+
+@keyframes wmMarqueeScrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes wmMarqueeScrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Stream Chips */
+.wm-hsvc-stream-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.2s;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+}
+
+.wm-chip-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.wm-chip-text {
+  letter-spacing: -0.1px;
+}
+
+.wm-chip-cyan {
+  border-color: rgba(0, 212, 255, 0.3);
+  background: rgba(0, 212, 255, 0.08);
+}
+.wm-chip-cyan .wm-chip-text { color: #e0f2fe; }
+
+.wm-chip-orange {
+  border-color: rgba(249, 115, 22, 0.3);
+  background: rgba(249, 115, 22, 0.08);
+}
+.wm-chip-orange .wm-chip-text { color: #ffedd5; }
+
+.wm-chip-blue {
+  border-color: rgba(59, 130, 246, 0.3);
+  background: rgba(59, 130, 246, 0.08);
+}
+.wm-chip-blue .wm-chip-text { color: #dbeafe; }
+
+.wm-chip-purple {
+  border-color: rgba(168, 85, 247, 0.3);
+  background: rgba(168, 85, 247, 0.08);
+}
+.wm-chip-purple .wm-chip-text { color: #f3e8ff; }
+
+.wm-chip-green {
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.08);
+}
+.wm-chip-green .wm-chip-text { color: #d1fae5; }
+
+.wm-chip-yellow {
+  border-color: rgba(234, 179, 8, 0.3);
+  background: rgba(234, 179, 8, 0.08);
+}
+.wm-chip-yellow .wm-chip-text { color: #fef9c3; }
+
+/* Stream Footer SLA */
+.wm-hsvc-stream-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.wm-stream-foot-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.wm-stream-foot-item svg {
+  color: #00d4ff;
+  font-size: 11px;
+}
+
+.wm-stream-foot-sep {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 900px) {
+  .wm-hsvc-live-ticker-card {
+    margin-top: 14px;
+  }
 }
 
 .wm-hsvc-tab {
@@ -5462,7 +5661,7 @@ a.wm-lead-cbox-val:hover {
   line-height: 1.6;
   color: #0f1115;
   margin-bottom: 18px;
-  font-style: italic;
+  font-style: normal;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -5660,7 +5859,7 @@ a.wm-lead-cbox-val:hover {
   font-size: 18px;
   line-height: 1.65;
   color: #091d33;
-  font-style: italic;
+  font-style: normal;
   margin-bottom: 16px;
   display: -webkit-box;
   -webkit-line-clamp: 5;
