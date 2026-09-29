@@ -1,3 +1,4 @@
+import useServicePageContent from '../../utils/useServicePageContent';
 import React, { useState } from 'react';
 import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
@@ -20,6 +21,8 @@ import {
 import './DigitalMarketingPage.css';
 
 const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
+  const dynamicContent = useServicePageContent('digital-marketing-services-company');
+
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -183,45 +186,25 @@ const DigitalMarketingPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquir
             <FaAward /> Complete 360° Growth Agency · #Wise Solutions
           </span>
           <h1 className="wm-sp-hero-title">
-            360° <span>Digital Marketing</span> & Growth Agency
+            {dynamicContent.heroTitle || (
+              <>360° <span>Digital Marketing</span> & Growth Agency</>
+            )}
           </h1>
 
           {/* Rating Scorecard Badge in Hero */}
           <div className="wm-dsm-rating-hero">
             <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.8</span>
+              <span className="wm-dsm-rating__num">{dynamicContent.ratingScore || '4.8'}</span>
               <span className="wm-dsm-rating__out">/5</span>
             </div>
             <div>
               <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
               <p className="wm-dsm-rating__meta">
-                Rated <strong>4.8 out of 5</strong> from <strong>350+ brand reviews</strong> across Clutch, Google, AmbitionBox, and GoodFirms.
+                Rated <strong>{dynamicContent.ratingScore || '4.8'} out of 5</strong> from <strong>{dynamicContent.ratingCount || '350+ brand reviews'}</strong> across Clutch, Google, AmbitionBox, and GoodFirms.
               </p>
             </div>
           </div>
 
-          <p className="wm-sp-hero-lead">
-            Scale brand authority, capture high-intent buyers, and maximize omnichannel customer lifetime value with integrated digital marketing strategies engineered by WebMok.
-          </p>
-          <div className="wm-sp-hero-cta-group">
-            <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
-              Get Free Growth Strategy <FaArrowRight />
-            </button>
-            <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
-              <FaPhoneAlt /> Call Me in 28 Seconds
-            </button>
-          </div>
-
-          {/* 4-Metric Performance Bar */}
-          <div className="wm-seost">
-            {stats.map((st, i) => (
-              <div key={i} className="wm-seost__i">
-                <p className="wm-seost__n">{st.num}</p>
-                <p className="wm-seost__l">{st.label}</p>
-              </div>
-            ))}
-          </div>
-        
             </div>
             <div className="wm-sp-hero-col-right">
               <HeroLeadForm

@@ -1,3 +1,4 @@
+import useServicePageContent from '../../utils/useServicePageContent';
 import React, { useState } from 'react';
 import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
@@ -29,6 +30,8 @@ import {
 import './EcommerceServicesPage.css';
 
 const EcommerceServicesPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
+  const dynamicContent = useServicePageContent('e-commerce-website-design-development-services-company');
+
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -196,19 +199,21 @@ const EcommerceServicesPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInqui
           </div>
          
           <h1 className="wm-sp-hero-title">
-            Scalable <span>E-Commerce Website</span> Development Agency
+            {dynamicContent.heroTitle || (
+              <>Scalable <span>E-Commerce Website</span> Development Agency</>
+            )}
           </h1>
 
           {/* Rating Scorecard Badge in Hero */}
           <div className="wm-dsm-rating-hero">
             <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__num">{dynamicContent.ratingScore || '4.9'}</span>
               <span className="wm-dsm-rating__out">/5</span>
             </div>
             <div>
               <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
               <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+                Rated <strong>{dynamicContent.ratingScore || '4.9'} out of 5</strong> from <strong>{dynamicContent.ratingCount || '350+ verified client reviews'}</strong> across Clutch, Google, AmbitionBox, and G2.
               </p>
             </div>
           </div>
@@ -224,14 +229,14 @@ const EcommerceServicesPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInqui
           </div> */}
 
           {/* 4-Metric Performance Bar */}
-          <div className="wm-seost">
+          {/* <div className="wm-seost">
             {stats.map((st, i) => (
               <div key={i} className="wm-seost__i">
                 <p className="wm-seost__n">{st.num}</p>
                 <p className="wm-seost__l">{st.label}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         
             </div>
             <div className="wm-sp-hero-col-right">

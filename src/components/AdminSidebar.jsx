@@ -20,7 +20,8 @@ import {
   FaGlobeAmericas,
   FaStream,
   FaMicrochip,
-  FaTags
+  FaTags,
+  FaLaptopCode
 } from 'react-icons/fa';
 import './AdminSidebar.css';
 
@@ -141,6 +142,17 @@ const AdminSidebar = ({ activeTab, setActiveTab, onLogout, enquiryCount = 6, con
         >
           <FaCogs className="wm-admin-btn-icon" />
           <span>Manage Services</span>
+        </button>
+
+        {/* Dedicated Service Pages CMS Button (Manage All 29 Service Pages Content & Titles) */}
+        <button
+          className={`wm-admin-nav-btn ${activeTab === 'service-pages' ? 'active' : ''}`}
+          onClick={() => setActiveTab('service-pages')}
+          title="Manage Content, H1 Hero Titles, Reviews, and FAQs for All 29 Individual Service Pages"
+        >
+          <FaLaptopCode className="wm-admin-btn-icon" />
+          <span>Service Pages</span>
+          <span className="wm-nav-pill-badge wm-pill-purple">29 Pages</span>
         </button>
 
         {/* Dedicated What We Offer Marquee Lines Button */}

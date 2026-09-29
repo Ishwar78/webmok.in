@@ -1,3 +1,4 @@
+import useServicePageContent from '../../utils/useServicePageContent';
 import React, { useState } from 'react';
 import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
@@ -28,6 +29,8 @@ import {
 import './PromotionalVideoServicesPage.css';
 
 const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
+  const dynamicContent = useServicePageContent('promotional-video-editing-services-company');
+
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -239,19 +242,21 @@ const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
               </div>
              
               <h1 className="wm-sp-hero-title">
-                Cinematic <span>Promotional Video Production</span> & Commercial Studio
-              </h1>
+            {dynamicContent.heroTitle || (
+              <>Cinematic <span>Promotional Video Production</span> & Commercial Studio</>
+            )}
+          </h1>
 
           {/* Rating Scorecard Badge in Hero */}
           <div className="wm-dsm-rating-hero">
             <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__num">{dynamicContent.ratingScore || '4.9'}</span>
               <span className="wm-dsm-rating__out">/5</span>
             </div>
             <div>
               <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
               <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+                Rated <strong>{dynamicContent.ratingScore || '4.9'} out of 5</strong> from <strong>{dynamicContent.ratingCount || '350+ verified client reviews'}</strong> across Clutch, Google, AmbitionBox, and G2.
               </p>
             </div>
           </div>
@@ -259,15 +264,6 @@ const PromotionalVideoServicesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
              
               
 
-              {/* 4-Metric Performance Bar */}
-              <div className="wm-seost">
-                {stats.map((st, i) => (
-                  <div key={i} className="wm-seost__i">
-                    <p className="wm-seost__n">{st.num}</p>
-                    <p className="wm-seost__l">{st.label}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
             <div className="wm-sp-hero-col-right">

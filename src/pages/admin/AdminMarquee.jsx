@@ -245,6 +245,62 @@ const AdminMarquee = () => {
     setTimeout(() => setFeedback(null), 4000);
   };
 
+  const handleSwapTopBottom = async () => {
+    try {
+      const updated = lines.map(line => {
+        if (line.position === 'top') {
+          return { ...line, position: 'bottom' };
+        } else if (line.position === 'bottom') {
+          return { ...line, position: 'top' };
+        }
+        return line;
+      });
+      setLines(updated);
+      saveToLocal(updated);
+
+      for (const item of updated) {
+        if (item._id && !item._id.startsWith('mq-')) {
+          try {
+            await fetch(`${API_BASE}/marquee/${item._id}`, {
+              method: 'PUT',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ position: item.position })
+            });
+          } catch (e) {}
+        }
+      }
+
+      setFeedback({
+        type: 'success',
+        message: 'Top Stream and Bottom Stream positions swapped! On the Home page, the new top line is now active.'
+      });
+    } catch (err) {
+      setFeedback({ type: 'error', message: err.message });
+    } finally {
+      setTimeout(() => setFeedback(null), 4000);
+    }
+  };
+
+  const handleTogglePosition = async (line) => {
+    const id = line._id || line.id;
+    const newPos = line.position === 'top' ? 'bottom' : (line.position === 'bottom' ? 'top' : 'topbar');
+    try {
+      const updated = lines.map(l => (l._id || l.id) === id ? { ...l, position: newPos } : l);
+      setLines(updated);
+      saveToLocal(updated);
+      try {
+        await fetch(`${API_BASE}/marquee/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ position: newPos })
+        });
+      } catch (e) {}
+      setFeedback({ type: 'success', message: `Line shifted to ${newPos === 'top' ? 'Top Stream' : 'Bottom Stream'}` });
+    } catch (e) {} finally {
+      setTimeout(() => setFeedback(null), 3000);
+    }
+  };
+
   const filteredLines = lines.filter(l => {
     const matchPos = filterPos === 'all' || l.position === filterPos;
     const matchSearch = l.text.toLowerCase().includes(searchTerm.toLowerCase());
@@ -266,6 +322,15 @@ const AdminMarquee = () => {
         <div className="wm-amq-actions-top">
           <button type="button" className="wm-amq-btn-reset" onClick={handleResetDefaults}>
             Reset Defaults
+          </button>
+          <button
+            type="button"
+            className="wm-amq-btn-reset"
+            onClick={handleSwapTopBottom}
+            style={{ background: '#0284c7', color: '#ffffff', borderColor: '#0284c7', display: 'flex', alignItems: 'center', gap: '6px' }}
+            title="Swap Top and Bottom lines so the bottom line becomes Top Stream"
+          >
+            <FaStream /> Swap Top & Bottom
           </button>
           <button type="button" className="wm-amq-btn-add wm-btn-add-topbar" onClick={() => handleOpenAdd('topbar')}>
             <FaBullhorn /> Add Top Bar Line
@@ -363,6 +428,35 @@ const AdminMarquee = () => {
         </div>
       </div>
 
+      {/* 4.5. Live Preview of Home Page Rotating Lines */}
+      <div style={{ background: '#0f172a', border: '1px solid rgba(0, 212, 255, 0.25)', borderRadius: '14px', padding: '16px 20px', marginBottom: '22px', boxShadow: '0 8px 30px rgba(0,0,0,0.3)' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10b981', boxShadow: '0 0 8px #10b981' }}></span>
+            <strong style={{ color: '#f8fafc', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.6px' }}>Home Page Live Stream Preview (What We Offer)</strong>
+          </div>
+          <span style={{ fontSize: '11px', color: '#94a3b8' }}>Rotating continuously • Bottom line swaps to top on page reload</span>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+          {/* Top Line slot */}
+          <div style={{ background: 'linear-gradient(90deg, rgba(0, 212, 255, 0.12) 0%, rgba(13, 47, 87, 0.45) 100%)', border: '1px solid rgba(0, 212, 255, 0.4)', borderRadius: '10px', padding: '10px 14px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span style={{ fontSize: '9px', fontWeight: '800', background: '#10b981', color: '#fff', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase' }}>Top Stream</span>
+            <span style={{ color: '#00d4ff', fontSize: '14px' }}>{lines.find(l => l.position === 'top' && l.isActive)?.icon || '⚡'}</span>
+            <span style={{ color: '#e0f2fe', fontSize: '12.5px', fontWeight: '700', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              {lines.find(l => l.position === 'top' && l.isActive)?.text || 'Ultra-Fast 0.8s Page Speed'}
+            </span>
+          </div>
+          {/* Bottom Line slot */}
+          <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '10px', padding: '10px 14px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span style={{ fontSize: '9px', fontWeight: '800', background: '#f97316', color: '#fff', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase' }}>Next in Queue</span>
+            <span style={{ color: '#f97316', fontSize: '14px' }}>{lines.find(l => l.position === 'bottom' && l.isActive)?.icon || '💎'}</span>
+            <span style={{ color: '#cbd5e1', fontSize: '12.5px', fontWeight: '600', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              {lines.find(l => l.position === 'bottom' && l.isActive)?.text || 'Custom React & Next.js Scalable Web Apps'}
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* 5. Live Marquee Lines Table / Grid */}
       <div className="wm-amq-grid">
         {filteredLines.map((line, idx) => (
@@ -401,6 +495,17 @@ const AdminMarquee = () => {
             <div className="wm-amq-card-footer">
               <span className="wm-amq-color-tag">Color: {line.badgeColor || 'cyan'}</span>
               <div className="wm-amq-card-actions">
+                {line.position !== 'topbar' && (
+                  <button
+                    type="button"
+                    className="wm-amq-btn-edit"
+                    onClick={() => handleTogglePosition(line)}
+                    title={line.position === 'top' ? 'Move to Bottom Queue' : 'Move to Top Stream'}
+                    style={{ background: line.position === 'top' ? '#fef3c7' : '#e0f2fe', color: line.position === 'top' ? '#b45309' : '#0369a1' }}
+                  >
+                    {line.position === 'top' ? <FaArrowDown /> : <FaArrowUp />} {line.position === 'top' ? 'To Bottom' : 'To Top'}
+                  </button>
+                )}
                 <button
                   type="button"
                   className="wm-amq-btn-edit"

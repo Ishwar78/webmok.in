@@ -725,10 +725,44 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
       });
   }, []);
 
+  // 1. Alternation on refresh (sessionStorage counter so each reload swaps order)
+  const [offerRefreshOffset] = useState(() => {
+    try {
+      const prev = parseInt(sessionStorage.getItem('webmok_offer_refresh_idx') || '0', 10);
+      const next = prev + 1;
+      sessionStorage.setItem('webmok_offer_refresh_idx', String(next));
+      return prev;
+    } catch (e) {
+      return 0;
+    }
+  });
+
+  // 2. In-page continuous rotation timer (precisely 3 seconds / 3000ms)
+  const [tickerRotateIdx, setTickerRotateIdx] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTickerRotateIdx((prev) => prev + 1);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   const homeTopLines = marqueeLines.filter((l) => l.position === 'top' && l.isActive !== false);
   const homeBottomLines = marqueeLines.filter((l) => l.position === 'bottom' && l.isActive !== false);
-  const renderedTopList = homeTopLines.length > 0 ? homeTopLines : defaultHomeMarqueeLines.slice(0, 6);
-  const renderedBottomList = homeBottomLines.length > 0 ? homeBottomLines : defaultHomeMarqueeLines.slice(6);
+  const baseTopList = homeTopLines.length > 0 ? homeTopLines : defaultHomeMarqueeLines.slice(0, 1);
+  const baseBottomList = homeBottomLines.length > 0 ? homeBottomLines : (defaultHomeMarqueeLines.slice(6, 7).length > 0 ? defaultHomeMarqueeLines.slice(6, 7) : defaultHomeMarqueeLines.slice(1, 2));
+
+  // If refresh is odd, swap lists so what was on bottom comes to top!
+  const isSwappedOnRefresh = offerRefreshOffset % 2 === 1;
+  const lineAPool = isSwappedOnRefresh ? baseBottomList : baseTopList;
+  const lineBPool = isSwappedOnRefresh ? baseTopList : baseBottomList;
+
+  // Alternate top and bottom lines smoothly every 3 seconds
+  const isAlternated = tickerRotateIdx % 2 === 1;
+  const activeTopPool = isAlternated ? lineBPool : lineAPool;
+  const activeBottomPool = isAlternated ? lineAPool : lineBPool;
+
+  const currentTopItem = activeTopPool[Math.floor(tickerRotateIdx / 2) % activeTopPool.length] || activeTopPool[0];
+  const currentBottomItem = activeBottomPool[Math.floor(tickerRotateIdx / 2) % activeBottomPool.length] || activeBottomPool[0];
 
   // Ensure current active index is always valid
   const safeActiveIdx = testimonialActiveIdx < testimonials.length ? testimonialActiveIdx : 0;
@@ -965,95 +999,169 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
 
   return (
     <div className="wm-home-root">
-      {/* 1. HERO SECTION - VIDEO & MULTI-SLIDE MEDIA CAROUSEL */}
-      <section className="wm-hero-section wm-hero-video-only">
+      {/* 1. HERO SECTION - SPLIT CONTENT & MEDIA CAROUSEL (Left Content + Right Video/Image) */}
+      <section className="wm-hero-section wm-hero-split-section">
         {activeHeroSlides.length === 0 ? (
-          <video 
-            key={heroVideoUrl}
-            className="wm-hero-main-video" 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-          >
-            <source src={getMediaUrl(heroVideoUrl)} type="video/mp4" />
-          </video>
-        ) : activeHeroSlides.length === 1 ? (
-          activeHeroSlides[0].mediaType === 'video' ? (
+          <div className="wm-hero-video-fallback-wrap">
             <video 
-              key={activeHeroSlides[0].mediaUrl}
+              key={heroVideoUrl}
               className="wm-hero-main-video" 
               autoPlay 
               loop 
               muted 
               playsInline
             >
-              <source src={getMediaUrl(activeHeroSlides[0].mediaUrl)} type="video/mp4" />
+              <source src={getMediaUrl(heroVideoUrl)} type="video/mp4" />
             </video>
-          ) : (
-            <img 
-              src={getMediaUrl(activeHeroSlides[0].mediaUrl)} 
-              alt={activeHeroSlides[0].title || 'Hero Banner'} 
-              className="wm-hero-main-video wm-hero-main-image"
-            />
-          )
+          </div>
         ) : (
-          /* Multi-Slide Interactive Auto-play Carousel */
+          /* Multi-Slide Interactive Split Content & Media Carousel */
           <div className="wm-hero-slider-wrap">
-            {activeHeroSlides.map((slide, idx) => (
-              <div 
-                key={slide._id || slide.id || idx}
-                className={`wm-hero-slide-item ${idx === activeSlideIndex ? 'active' : ''}`}
-              >
-                {slide.mediaType === 'video' ? (
-                  <video 
-                    src={getMediaUrl(slide.mediaUrl)} 
-                    className="wm-hero-main-video" 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                  />
-                ) : (
-                  <img 
-                    src={getMediaUrl(slide.mediaUrl)} 
-                    alt={slide.title || `Webmok Slide ${idx + 1}`} 
-                    className="wm-hero-main-video wm-hero-main-image"
-                  />
-                )}
-              </div>
-            ))}
+            {activeHeroSlides.map((slide, idx) => {
+              const hasContent = Boolean(
+                (slide.heading && slide.heading.trim()) ||
+                (slide.description && slide.description.trim()) ||
+                (slide.badge && slide.badge.trim())
+              );
+              const hasPrimaryBtn = Boolean(slide.primaryBtnText && slide.primaryBtnText.trim());
+              const hasSecondaryBtn = Boolean(slide.secondaryBtnText && slide.secondaryBtnText.trim());
+              return (
+                <div 
+                  key={slide._id || slide.id || idx}
+                  className={`wm-hero-slide-item ${idx === activeSlideIndex ? 'active' : ''}`}
+                >
+                  {hasContent ? (
+                    <div className="wm-hero-split-slide">
+                      <div className="wm-hero-split-container">
+                        {/* Left Half: Content */}
+                        <div className="wm-hero-split-left">
+                          {slide.badge && slide.badge.trim() && (
+                            <div className="wm-hero-split-badge">
+                              <span className="wm-hero-split-badge-dot"></span>
+                              <span>{slide.badge}</span>
+                            </div>
+                          )}
+                          <h1 className="wm-hero-split-heading">
+                            {slide.heading || slide.title}
+                          </h1>
+                          {slide.description && slide.description.trim() && (
+                            <p className="wm-hero-split-desc">
+                              {slide.description}
+                            </p>
+                          )}
+                          {(hasPrimaryBtn || hasSecondaryBtn) && (
+                            <div className="wm-hero-split-btns">
+                              {hasPrimaryBtn && (
+                                <button
+                                  type="button"
+                                  className="wm-hero-split-btn wm-hero-split-btn-primary"
+                                  onClick={() => {
+                                    if (slide.primaryBtnLink && !slide.primaryBtnLink.startsWith('#')) {
+                                      window.location.href = slide.primaryBtnLink;
+                                    } else {
+                                      onOpenEnquiry && onOpenEnquiry();
+                                    }
+                                  }}
+                                >
+                                  <span>{slide.primaryBtnText.trim()}</span>
+                                  <FaArrowRight />
+                                </button>
+                              )}
+                              {hasSecondaryBtn && (
+                                <a
+                                  href={slide.secondaryBtnLink || 'tel:8684031003'}
+                                  className="wm-hero-split-btn wm-hero-split-btn-secondary"
+                                >
+                                  <FaPhoneAlt />
+                                  <span>{slide.secondaryBtnText.trim()}</span>
+                                </a>
+                              )}
+                            </div>
+                          )}
+                        </div>
 
-            {/* Slider Navigation Arrows */}
-            <button 
-              type="button" 
-              className="wm-hero-nav-arrow wm-hero-arrow-prev" 
-              onClick={handlePrevSlide}
-              aria-label="Previous Hero Slide"
-            >
-              <FaChevronLeft />
-            </button>
-            <button 
-              type="button" 
-              className="wm-hero-nav-arrow wm-hero-arrow-next" 
-              onClick={handleNextSlide}
-              aria-label="Next Hero Slide"
-            >
-              <FaChevronRight />
-            </button>
+                        {/* Right Half: Media (Video or Image) */}
+                        <div className="wm-hero-split-right">
+                          <div className="wm-hero-split-media-card">
+                            {slide.mediaType === 'video' ? (
+                              <video 
+                                src={getMediaUrl(slide.mediaUrl)} 
+                                className="wm-hero-split-media-video" 
+                                autoPlay 
+                                loop 
+                                muted 
+                                playsInline
+                              />
+                            ) : (
+                              <img 
+                                src={getMediaUrl(slide.mediaUrl)} 
+                                alt={slide.heading || slide.title || `Webmok Slide ${idx + 1}`} 
+                                className="wm-hero-split-media-img"
+                              />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    /* Fallback full-bleed media when no text is provided */
+                    <div className="wm-hero-media-only-slide">
+                      {slide.mediaType === 'video' ? (
+                        <video 
+                          src={getMediaUrl(slide.mediaUrl)} 
+                          className="wm-hero-main-video" 
+                          autoPlay 
+                          loop 
+                          muted 
+                          playsInline
+                        />
+                      ) : (
+                        <img 
+                          src={getMediaUrl(slide.mediaUrl)} 
+                          alt={slide.title || `Webmok Slide ${idx + 1}`} 
+                          className="wm-hero-main-video wm-hero-main-image"
+                        />
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
 
-            {/* Dots Indicator */}
-            <div className="wm-hero-dots-container">
-              {activeHeroSlides.map((_, dotIdx) => (
-                <button
-                  key={dotIdx}
-                  type="button"
-                  className={`wm-hero-dot ${dotIdx === activeSlideIndex ? 'active' : ''}`}
-                  onClick={(e) => { e.stopPropagation(); setActiveSlideIndex(dotIdx); }}
-                  aria-label={`Go to slide ${dotIdx + 1}`}
-                />
-              ))}
-            </div>
+            {/* Slider Navigation Arrows (only when multiple slides) */}
+            {activeHeroSlides.length > 1 && (
+              <>
+                <button 
+                  type="button" 
+                  className="wm-hero-nav-arrow wm-hero-arrow-prev" 
+                  onClick={handlePrevSlide}
+                  aria-label="Previous Hero Slide"
+                >
+                  <FaChevronLeft />
+                </button>
+                <button 
+                  type="button" 
+                  className="wm-hero-nav-arrow wm-hero-arrow-next" 
+                  onClick={handleNextSlide}
+                  aria-label="Next Hero Slide"
+                >
+                  <FaChevronRight />
+                </button>
+
+                {/* Dots Indicator */}
+                <div className="wm-hero-dots-container">
+                  {activeHeroSlides.map((_, dotIdx) => (
+                    <button
+                      key={dotIdx}
+                      type="button"
+                      className={`wm-hero-dot ${dotIdx === activeSlideIndex ? 'active' : ''}`}
+                      onClick={(e) => { e.stopPropagation(); setActiveSlideIndex(dotIdx); }}
+                      aria-label={`Go to slide ${dotIdx + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         )}
       </section>
@@ -1190,7 +1298,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                 ))}
               </div>
 
-              {/* Dynamic Live Streaming Marquee Lines (Managed by Admin) */}
+              {/* Dynamic Live Rotating Lines (Managed by Admin - Top Line & Bottom Line with Refresh Swap & Rotation) */}
               <div className="wm-hsvc-live-ticker-card">
                 {/* Header */}
                 <div className="wm-hsvc-ticker-head">
@@ -1198,40 +1306,35 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
                     <span className="wm-hsvc-pulse-dot"></span>
                     <span className="wm-hsvc-ticker-heading">Live Enterprise Capabilities</span>
                   </div>
-                  <span className="wm-hsvc-live-tag">Active</span>
+                  <span className="wm-hsvc-live-tag">
+                    {isSwappedOnRefresh ? 'Alternated' : 'Active'}
+                  </span>
                 </div>
 
-                {/* Line 1: Top Stream (moves right-to-left) */}
-                <div className="wm-hsvc-stream-row wm-stream-row-top">
-                  <div className="wm-hsvc-stream-track wm-track-left">
-                    {[...renderedTopList, ...renderedTopList].map((item, idx) => (
-                      <div key={idx} className={`wm-hsvc-stream-chip wm-chip-${item.badgeColor || 'cyan'}`}>
-                        <span className="wm-chip-icon">{item.icon || '⚡'}</span>
-                        <span className="wm-chip-text">{item.text}</span>
-                      </div>
-                    ))}
+                {/* Line 1: Top Stream (Rotates every 3s) */}
+                <div className="wm-hsvc-line-slot wm-hsvc-slot-top" key={`top-${tickerRotateIdx}`}>
+                  <div className={`wm-hsvc-single-line wm-line-lead wm-chip-${currentTopItem.badgeColor || 'cyan'}`}>
+                    <div className="wm-hsvc-line-meta">
+                      <span className="wm-hsvc-pos-dot wm-dot-top"></span>
+                    </div>
+                    <div className="wm-hsvc-line-content">
+                      <span className="wm-chip-icon">{currentTopItem.icon || '⚡'}</span>
+                      <strong className="wm-chip-text wm-text-running">{currentTopItem.text}</strong>
+                    </div>
                   </div>
                 </div>
 
-                {/* Line 2: Bottom Stream (moves left-to-right) */}
-                <div className="wm-hsvc-stream-row wm-stream-row-bottom">
-                  <div className="wm-hsvc-stream-track wm-track-right">
-                    {[...renderedBottomList, ...renderedBottomList].map((item, idx) => (
-                      <div key={idx} className={`wm-hsvc-stream-chip wm-chip-${item.badgeColor || 'orange'}`}>
-                        <span className="wm-chip-icon">{item.icon || '💎'}</span>
-                        <span className="wm-chip-text">{item.text}</span>
-                      </div>
-                    ))}
+                {/* Line 2: Bottom Stream (Alternates to top every 3s) */}
+                <div className="wm-hsvc-line-slot wm-hsvc-slot-bottom" key={`bot-${tickerRotateIdx}`}>
+                  <div className={`wm-hsvc-single-line wm-line-sub wm-chip-${currentBottomItem.badgeColor || 'orange'}`}>
+                    <div className="wm-hsvc-line-meta">
+                      <span className="wm-hsvc-pos-dot wm-dot-bottom"></span>
+                    </div>
+                    <div className="wm-hsvc-line-content">
+                      <span className="wm-chip-icon">{currentBottomItem.icon || '💎'}</span>
+                      <span className="wm-chip-text">{currentBottomItem.text}</span>
+                    </div>
                   </div>
-                </div>
-
-                {/* Line 3: Trust & SLA Bar */}
-                <div className="wm-hsvc-stream-footer">
-                  <span className="wm-stream-foot-item"><FaCheckCircle /> 100% Code Ownership</span>
-                  <span className="wm-stream-foot-sep">·</span>
-                  <span className="wm-stream-foot-item"><FaAward /> ISO Certified</span>
-                  {/* <span className="wm-stream-foot-sep">·</span>
-                  <span className="wm-stream-foot-item"><FaBolt /> 28-Sec Callback</span> */}
                 </div>
               </div>
             </div>
@@ -1767,7 +1870,7 @@ const Home = ({ onOpenCallMe, onOpenEnquiry }) => {
 
 
       {/* 7.5 INDUSTRIES WE SERVE INTERACTIVE SHOWCASE (MATCHING IMAGE 3 & 4) */}
-      <IndustriesWeServeSection onOpenEnquiry={onOpenEnquiry} />
+      {/* <IndustriesWeServeSection onOpenEnquiry={onOpenEnquiry} /> */}
 
       {/* 8. DUAL-COLUMN CONTACT & LEAD GEN SECTION */}
       <section className="wm-lead-section">

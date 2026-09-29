@@ -24,6 +24,7 @@ const internationalPageRoutes = require('./route/internationalPageRoute');
 const marqueeRoutes = require('./route/marqueeRoute');
 const diagnosticLeadRoutes = require('./route/diagnosticLeadRoute');
 const serviceInquiryRoutes = require('./route/serviceInquiryRoute');
+const servicePageRoute = require('./route/servicePageRoute');
 
 // Load environment variables from server/.env
 dotenv.config({ path: path.join(__dirname, '.env') });
@@ -68,6 +69,7 @@ app.use('/api/international-pages', internationalPageRoutes);
 app.use('/api/marquee', marqueeRoutes);
 app.use('/api/diagnostic-leads', diagnosticLeadRoutes);
 app.use('/api/service-inquiries', serviceInquiryRoutes);
+app.use('/api/service-pages', servicePageRoute);
 
 // Root & Health Check Endpoint
 app.get('/', (req, res) => {

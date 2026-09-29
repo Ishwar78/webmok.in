@@ -6,6 +6,34 @@ const heroSlideSchema = new mongoose.Schema(
       type: String,
       default: 'Hero Slide'
     },
+    badge: {
+      type: String,
+      default: ''
+    },
+    heading: {
+      type: String,
+      default: ''
+    },
+    description: {
+      type: String,
+      default: ''
+    },
+    primaryBtnText: {
+      type: String,
+      default: ''
+    },
+    primaryBtnLink: {
+      type: String,
+      default: ''
+    },
+    secondaryBtnText: {
+      type: String,
+      default: ''
+    },
+    secondaryBtnLink: {
+      type: String,
+      default: ''
+    },
     mediaType: {
       type: String,
       enum: ['video', 'image'],

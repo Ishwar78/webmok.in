@@ -1,3 +1,4 @@
+import useServicePageContent from '../../utils/useServicePageContent';
 import React, { useState } from 'react';
 import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
@@ -20,6 +21,8 @@ import {
 import './LeadGenServicesPage.css';
 
 const LeadGenServicesPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
+  const dynamicContent = useServicePageContent('lead-generation-social-media-marketing-services-company');
+
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -183,45 +186,25 @@ const LeadGenServicesPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry
             <FaAward /> Premier Demand Generation Partner · #Pipeline Velocity
           </span>
           <h1 className="wm-sp-hero-title">
-            B2B <span>Lead Generation</span> & Demand Agency
+            {dynamicContent.heroTitle || (
+              <>B2B <span>Lead Generation</span> & Demand Agency</>
+            )}
           </h1>
 
           {/* Rating Scorecard Badge in Hero */}
           <div className="wm-dsm-rating-hero">
             <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__num">{dynamicContent.ratingScore || '4.9'}</span>
               <span className="wm-dsm-rating__out">/5</span>
             </div>
             <div>
               <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
               <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>280+ enterprise client reviews</strong> across Clutch, G2, Trustpilot, and AmbitionBox.
+                Rated <strong>{dynamicContent.ratingScore || '4.9'} out of 5</strong> from <strong>{dynamicContent.ratingCount || '280+ enterprise client reviews'}</strong> across Clutch, G2, Trustpilot, and AmbitionBox.
               </p>
             </div>
           </div>
 
-          <p className="wm-sp-hero-lead">
-            Accelerate your revenue pipeline with verified, high-intent B2B inquiries and qualified customer conversations generated through data-backed omnichannel acquisition funnels.
-          </p>
-          <div className="wm-sp-hero-cta-group">
-            <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
-              Build Your Pipeline <FaArrowRight />
-            </button>
-            <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
-              <FaPhoneAlt /> Call Me in 28 Seconds
-            </button>
-          </div>
-
-          {/* 4-Metric Performance Bar */}
-          <div className="wm-seost">
-            {stats.map((st, i) => (
-              <div key={i} className="wm-seost__i">
-                <p className="wm-seost__n">{st.num}</p>
-                <p className="wm-seost__l">{st.label}</p>
-              </div>
-            ))}
-          </div>
-        
             </div>
             <div className="wm-sp-hero-col-right">
               <HeroLeadForm

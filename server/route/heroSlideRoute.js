@@ -73,7 +73,20 @@ router.get('/', async (req, res) => {
 // POST new slide by URL
 router.post('/', async (req, res) => {
   try {
-    const { title, mediaType, mediaUrl, order, isActive } = req.body;
+    const {
+      title,
+      badge,
+      heading,
+      description,
+      primaryBtnText,
+      primaryBtnLink,
+      secondaryBtnText,
+      secondaryBtnLink,
+      mediaType,
+      mediaUrl,
+      order,
+      isActive
+    } = req.body;
     if (!mediaUrl || !mediaUrl.trim()) {
       return res.status(400).json({ success: false, message: 'mediaUrl is required' });
     }
@@ -81,7 +94,14 @@ router.post('/', async (req, res) => {
     const type = mediaType || (mediaUrl.match(/\.(mp4|webm|mov|m4v|ogg)(\?.*)?$/i) ? 'video' : 'image');
 
     const newSlide = await HeroSlide.create({
-      title: title || (type === 'video' ? 'Hero Video Slide' : 'Hero Image Slide'),
+      title: title || heading || (type === 'video' ? 'Hero Video Slide' : 'Hero Image Slide'),
+      badge: badge || '',
+      heading: heading || title || '',
+      description: description || '',
+      primaryBtnText: primaryBtnText || '',
+      primaryBtnLink: primaryBtnLink || '',
+      secondaryBtnText: secondaryBtnText || '',
+      secondaryBtnLink: secondaryBtnLink || '',
       mediaType: type,
       mediaUrl: mediaUrl.trim(),
       order: Number(order) || 0,
@@ -109,7 +129,14 @@ router.post('/upload', upload.single('mediaFile'), async (req, res) => {
     const count = await HeroSlide.countDocuments();
 
     const slide = await HeroSlide.create({
-      title: req.body.title || (isVideo ? 'Uploaded Hero Video' : 'Uploaded Hero Image'),
+      title: req.body.title || req.body.heading || (isVideo ? 'Uploaded Hero Video' : 'Uploaded Hero Image'),
+      badge: req.body.badge || '',
+      heading: req.body.heading || req.body.title || '',
+      description: req.body.description || '',
+      primaryBtnText: req.body.primaryBtnText || '',
+      primaryBtnLink: req.body.primaryBtnLink || '',
+      secondaryBtnText: req.body.secondaryBtnText || '',
+      secondaryBtnLink: req.body.secondaryBtnLink || '',
       mediaType,
       mediaUrl: relativeUrl,
       originalName: req.file.originalname,
@@ -131,7 +158,20 @@ router.post('/upload', upload.single('mediaFile'), async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const { title, mediaType, mediaUrl, order, isActive } = req.body;
+    const {
+      title,
+      badge,
+      heading,
+      description,
+      primaryBtnText,
+      primaryBtnLink,
+      secondaryBtnText,
+      secondaryBtnLink,
+      mediaType,
+      mediaUrl,
+      order,
+      isActive
+    } = req.body;
 
     const slide = await HeroSlide.findById(id);
     if (!slide) {
@@ -139,6 +179,13 @@ router.put('/:id', async (req, res) => {
     }
 
     if (title !== undefined) slide.title = title;
+    if (badge !== undefined) slide.badge = badge;
+    if (heading !== undefined) slide.heading = heading;
+    if (description !== undefined) slide.description = description;
+    if (primaryBtnText !== undefined) slide.primaryBtnText = primaryBtnText;
+    if (primaryBtnLink !== undefined) slide.primaryBtnLink = primaryBtnLink;
+    if (secondaryBtnText !== undefined) slide.secondaryBtnText = secondaryBtnText;
+    if (secondaryBtnLink !== undefined) slide.secondaryBtnLink = secondaryBtnLink;
     if (mediaType !== undefined) slide.mediaType = mediaType;
     if (mediaUrl !== undefined) slide.mediaUrl = mediaUrl;
     if (order !== undefined) slide.order = Number(order);

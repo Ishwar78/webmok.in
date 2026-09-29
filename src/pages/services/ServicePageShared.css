@@ -89,11 +89,16 @@
   display: grid;
   grid-template-columns: 1fr 440px;
   gap: 48px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .wm-sp-hero-col-left {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding: 24px 0;
 }
 
 .wm-sp-hero-col-right {
@@ -1295,8 +1300,8 @@
 }
 
 .wm-rsau__go {
-  background: var(--wm-brand-cyan);
-  color: #000000;
+  background: #02052d;
+  color: #f7f8fa;
   border: none;
   border-radius: 40px;
   padding: 13px 26px;
@@ -1309,7 +1314,7 @@
 
 .wm-rsau__go:hover {
   transform: translateY(-2px);
-  background: #ffffff;
+  background: #03073a;
 }
 
 .wm-rsau__go:disabled {

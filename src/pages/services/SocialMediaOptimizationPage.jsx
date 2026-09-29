@@ -1,3 +1,4 @@
+import useServicePageContent from '../../utils/useServicePageContent';
 import React, { useState } from 'react';
 import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
@@ -28,6 +29,8 @@ import {
 import './SocialMediaOptimizationPage.css';
 
 const SocialMediaOptimizationPage = ({ onOpenCallMe, onOpenEnquiry }) => {
+  const dynamicContent = useServicePageContent('social-media-optimization-services-company');
+
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -240,44 +243,25 @@ const SocialMediaOptimizationPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <FaAward /> Organic Social Growth & Authority · #SMO Services
               </span>
               <h1 className="wm-sp-hero-title">
-                Data-Driven <span>Social Media Optimization</span> (SMO) Agency
-              </h1>
+            {dynamicContent.heroTitle || (
+              <>Data-Driven <span>Social Media Optimization</span> (SMO) Agency</>
+            )}
+          </h1>
 
           {/* Rating Scorecard Badge in Hero */}
           <div className="wm-dsm-rating-hero">
             <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__num">{dynamicContent.ratingScore || '4.9'}</span>
               <span className="wm-dsm-rating__out">/5</span>
             </div>
             <div>
               <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
               <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+                Rated <strong>{dynamicContent.ratingScore || '4.9'} out of 5</strong> from <strong>{dynamicContent.ratingCount || '350+ verified client reviews'}</strong> across Clutch, Google, AmbitionBox, and G2.
               </p>
             </div>
           </div>
 
-              <p className="wm-sp-hero-lead">
-                Transform social profiles into high-trust brand assets. We optimize your profiles, hashtag taxonomies, bio conversion funnels, and organic engagement algorithms across Instagram, LinkedIn, Facebook, and YouTube.
-              </p>
-              <div className="wm-sp-hero-cta-group">
-                <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
-                  Get Free Custom Quote <FaArrowRight />
-                </button>
-                <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
-                  <FaPhoneAlt /> Call Me in 28 Seconds
-                </button>
-              </div>
-
-              {/* 4-Metric Performance Bar */}
-              <div className="wm-seost">
-                {stats.map((st, i) => (
-                  <div key={i} className="wm-seost__i">
-                    <p className="wm-seost__n">{st.num}</p>
-                    <p className="wm-seost__l">{st.label}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
             <div className="wm-sp-hero-col-right">

@@ -40,13 +40,16 @@
   display: grid;
   grid-template-columns: 1fr 430px;
   gap: 48px;
-  align-items: start;
+  align-items: center;
 }
 
 .wm-hero-col-left {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-self: center;
   min-width: 0;
+  padding: 24px 0;
 }
 
 .wm-hero-col-right {
@@ -335,4 +338,74 @@
     padding: 10px 3px !important;
     font-size: 10px !important;
   }
+}
+
+/* Packages Pages Hero - Match Services Pages (Hide badge, paragraph, duplicate cta buttons, and 4 stats boxes) */
+.wm-pkg-page-root .wm-hero-pill,
+.wm-pkg-page-root .wm-hero-lead,
+.wm-pkg-page-root .wm-hero-cta-group,
+.wm-pkg-page-root .wm-hero-stats-grid {
+  display: none !important;
+}
+
+/* Rating Scorecard Badge in Hero (Dark Glassmorphism) */
+.wm-dsm-rating-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 212, 255, 0.28);
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin: 18px 0 0 0;
+  max-width: 580px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 212, 255, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.wm-dsm-rating-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 212, 255, 0.15);
+  border-color: rgba(0, 212, 255, 0.5);
+}
+
+.wm-dsm-rating-hero .wm-dsm-rating__score {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  line-height: 1;
+}
+
+.wm-dsm-rating-hero .wm-dsm-rating__num {
+  font-size: 32px;
+  font-weight: 800;
+  color: #00d4ff;
+}
+
+.wm-dsm-rating-hero .wm-dsm-rating__out {
+  font-size: 15px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.wm-dsm-rating-hero .wm-dsm-rating__stars {
+  color: #f59e0b;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+
+.wm-dsm-rating-hero .wm-dsm-rating__meta {
+  font-size: 13px !important;
+  color: #cbd5e1 !important;
+  margin: 2px 0 0 0 !important;
+  line-height: 1.35;
+  font-family: 'Montserrat', sans-serif !important;
+  font-style: normal !important;
+}
+
+.wm-dsm-rating-hero .wm-dsm-rating__meta strong {
+  color: #ffffff;
 }

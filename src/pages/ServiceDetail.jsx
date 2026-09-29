@@ -248,56 +248,33 @@ const ServiceDetail = ({ onOpenCallMe, onOpenEnquiry }) => {
     }
   };
 
-  return (
+    return (
     <div className="wm-sp-root">
       {/* 1. Hero Section */}
       <section className="wm-sp-hero">
         <div className="wm-sp-container">
           <div className="wm-sp-hero-two-col">
             <div className="wm-sp-hero-col-left">
-          <div className="wm-sp-breadcrumb">
-            <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>{currentService.title}</span>
-          </div>
-          <span className="wm-sp-hero-pill">
-            <FaAward /> {currentService.heroTag} · #Wise Solutions
-          </span>
-          <h1 className="wm-sp-hero-title">{currentService.title}</h1>
-
-          {/* Rating Scorecard Badge in Hero */}
-          <div className="wm-dsm-rating-hero">
-            <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.8</span>
-              <span className="wm-dsm-rating__out">/5</span>
-            </div>
-            <div>
-              <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
-              <p className="wm-dsm-rating__meta">
-                Rated <strong>4.8 out of 5</strong> from <strong>350+ enterprise client reviews</strong> across Clutch, Google, and AmbitionBox.
-              </p>
-            </div>
-          </div>
-
-          <p className="wm-sp-hero-lead">{currentService.lead}</p>
-          <div className="wm-sp-hero-cta-group">
-            <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
-              Get Free Custom Quote <FaArrowRight />
-            </button>
-            <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
-              <FaPhoneAlt /> Call Me in 28 Seconds
-            </button>
-          </div>
-
-          {/* 4-Metric Performance Bar */}
-          <div className="wm-seost">
-            {currentService.stats.map((st, i) => (
-              <div key={i} className="wm-seost__i">
-                <p className="wm-seost__n">{st.num}</p>
-                <p className="wm-seost__l">{st.label}</p>
+              <div className="wm-sp-breadcrumb">
+                <Link to="/">Home</Link> / <Link to="/services">Services</Link> / <span>{currentService.title}</span>
               </div>
-            ))}
-          </div>
-        
+              <h1 className="wm-sp-hero-title">{currentService.title}</h1>
+
+              {/* Rating Scorecard Badge in Hero */}
+              <div className="wm-dsm-rating-hero">
+                <div className="wm-dsm-rating__score">
+                  <span className="wm-dsm-rating__num">4.8</span>
+                  <span className="wm-dsm-rating__out">/5</span>
+                </div>
+                <div>
+                  <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+                  <p className="wm-dsm-rating__meta">
+                    Rated <strong>4.8 out of 5</strong> from <strong>350+ enterprise client reviews</strong> across Clutch, Google, and AmbitionBox.
+                  </p>
+                </div>
+              </div>
             </div>
+
             <div className="wm-sp-hero-col-right">
               <HeroLeadForm
                 pageName={currentService.title}
@@ -307,8 +284,6 @@ const ServiceDetail = ({ onOpenCallMe, onOpenEnquiry }) => {
           </div>
         </div>
       </section>
-
-      
 
       {/* 2. Main Body Section */}
       <section className="wm-sp-body">

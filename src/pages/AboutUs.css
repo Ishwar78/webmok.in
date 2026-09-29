@@ -404,8 +404,8 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: linear-gradient(135deg, #00a8cc, #00d4ff);
-  color: #071c36;
+  background:#03073a;
+  color: #f7f8fa;
   font-size: 15px;
   font-weight: 800;
   padding: 14px 20px;
@@ -1109,8 +1109,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #00a8cc, #00d4ff);
-  color: #071c36;
+  background:#03073a;
+  color: #f7f8fa;
   font-size: 15px;
   font-weight: 800;
   padding: 15px 28px;

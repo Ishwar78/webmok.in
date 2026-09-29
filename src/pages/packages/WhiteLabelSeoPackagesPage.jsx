@@ -1,3 +1,4 @@
+import { resolveMediaUrl } from '../../utils/mediaUrl';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -139,49 +140,29 @@ const WhiteLabelSeoPackagesPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <Link to="/">Home</Link> / <Link to="/packages">Packages</Link> / <span>{pageData.name}</span>
               </div>
 
-              <span className="wm-hero-pill">
-                <FaAward /> {pageData.tagline}
-              </span>
-
               <h1 className="wm-hero-title">
                 Make Your Business Stand Out Using <span className="wm-hero-title-highlight">{pageData.heroTitleHighlight || pageData.name}</span>
               </h1>
 
-              <p className="wm-hero-lead">
-                {pageData.leadDesc}
-              </p>
-              {pageData.image && (
-                <div style={{ borderRadius: '10px', overflow: 'hidden', margin: '14px 0 18px 0', border: '1px solid rgba(0, 210, 255, 0.25)', maxWidth: '540px' }}>
-                  <img src={pageData.image} alt={pageData.name} style={{ width: '100%', maxHeight: '220px', objectFit: 'cover', display: 'block' }} />
+              {/* Rating Scorecard Badge in Hero */}
+              <div className="wm-dsm-rating-hero">
+                <div className="wm-dsm-rating__score">
+                  <span className="wm-dsm-rating__num">4.9</span>
+                  <span className="wm-dsm-rating__out">/5</span>
+                </div>
+                <div>
+                  <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+                  <p className="wm-dsm-rating__meta">
+                    Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+                  </p>
+                </div>
+              </div>
+
+              {pageData.image && typeof pageData.image === 'string' && pageData.image.trim() !== '' && (
+                <div className="wm-hero-img-wrap" style={{ borderRadius: '12px', overflow: 'hidden', margin: '16px 0 0 0', border: '1px solid rgba(0, 210, 255, 0.25)', maxWidth: '540px' }}>
+                  <img src={resolveMediaUrl(pageData.image)} alt={pageData.name} style={{ width: '100%', maxHeight: '220px', objectFit: 'cover', display: 'block' }} />
                 </div>
               )}
-
-              <div className="wm-hero-cta-group">
-                <button
-                  type="button"
-                  className="wm-hero-cta-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pageData.name} - Custom Quote`)}
-                >
-                  Get Free Custom Quote <FaArrowRight />
-                </button>
-                <button
-                  type="button"
-                  className="wm-hero-cta-secondary"
-                  onClick={onOpenCallMe}
-                >
-                  <FaPhoneAlt /> Call Me in 28 Seconds
-                </button>
-              </div>
-
-              {/* 4-Metric Performance Bar (Embedded in Hero) */}
-              <div className="wm-hero-stats-grid">
-                {(pageData.stats || []).map((st, i) => (
-                  <div key={i} className="wm-hstat-card">
-                    <p className="wm-hstat-num">{st.num}</p>
-                    <p className="wm-hstat-label">{st.label}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Right Column: Reusable Hero Lead Form */}

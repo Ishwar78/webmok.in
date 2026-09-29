@@ -1,3 +1,4 @@
+import { resolveMediaUrl } from '../../utils/mediaUrl';
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
@@ -71,50 +72,27 @@ const PackageDetailPage = ({ onOpenCallMe, onOpenEnquiry }) => {
                 <Link to="/">Home</Link> / <Link to="/packages">Packages</Link> / <span>{pkgData.name}</span>
               </div>
 
-              <span className="wm-hero-pill">
-                <FaAward /> {pkgData.category || 'High-Impact Digital Packages'}
-              </span>
-
               <h1 className="wm-hero-title">
                 {pkgData.heroTitleHighlight || pkgData.heroTitle || pkgData.name}
               </h1>
 
-              <p className="wm-hero-lead">
-                {pkgData.leadDesc || pkgData.heroDesc}
-              </p>
-
-              {pkgData.image && (
-                <div style={{ borderRadius: '10px', overflow: 'hidden', margin: '14px 0 18px 0', border: '1px solid rgba(0, 210, 255, 0.25)', maxWidth: '540px' }}>
-                  <img src={pkgData.image} alt={pkgData.name} style={{ width: '100%', maxHeight: '220px', objectFit: 'cover', display: 'block' }} />
+              {/* Rating Scorecard Badge in Hero */}
+              <div className="wm-dsm-rating-hero">
+                <div className="wm-dsm-rating__score">
+                  <span className="wm-dsm-rating__num">4.9</span>
+                  <span className="wm-dsm-rating__out">/5</span>
                 </div>
-              )}
-
-              <div className="wm-hero-cta-group">
-                <button
-                  type="button"
-                  className="wm-hero-cta-primary"
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(`${pkgData.name} - Custom Quote`)}
-                >
-                  Get Free Custom Quote <FaArrowRight />
-                </button>
-                <button
-                  type="button"
-                  className="wm-hero-cta-secondary"
-                  onClick={onOpenCallMe}
-                >
-                  <FaPhoneAlt /> Call Me in 28 Seconds
-                </button>
+                <div>
+                  <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
+                  <p className="wm-dsm-rating__meta">
+                    Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+                  </p>
+                </div>
               </div>
 
-              {/* 4-Metric Performance Bar (Embedded in Hero) */}
-              {pkgData.stats && (
-                <div className="wm-hero-stats-grid">
-                  {pkgData.stats.map((st, i) => (
-                    <div key={i} className="wm-hstat-card">
-                      <p className="wm-hstat-num">{st.num}</p>
-                      <p className="wm-hstat-label">{st.label}</p>
-                    </div>
-                  ))}
+              {pkgData.image && typeof pkgData.image === 'string' && pkgData.image.trim() !== '' && (
+                <div className="wm-hero-img-wrap" style={{ borderRadius: '12px', overflow: 'hidden', margin: '16px 0 0 0', border: '1px solid rgba(0, 210, 255, 0.25)', maxWidth: '540px' }}>
+                  <img src={resolveMediaUrl(pkgData.image)} alt={pkgData.name} style={{ width: '100%', maxHeight: '220px', objectFit: 'cover', display: 'block' }} />
                 </div>
               )}
             </div>

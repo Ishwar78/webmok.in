@@ -13,6 +13,7 @@ import AdminInternationalPages from './admin/AdminInternationalPages';
 import AdminMarquee from './admin/AdminMarquee';
 import AdminDiagnosticLeads from './admin/AdminDiagnosticLeads';
 import AdminServiceInquiries from './admin/AdminServiceInquiries';
+import AdminServicePages from './admin/AdminServicePages';
 
 const API_BASE = 'http://localhost:5005/api';
 import {
@@ -636,7 +637,7 @@ const AdminDashboard = () => {
   const [portfolioImageFile, setPortfolioImageFile] = useState(null);
   const [portfolioImageUploading, setPortfolioImageUploading] = useState(false);
 
-  // Hero Multi-Slide State & Management (Image and Video)
+  // Hero Multi-Slide State & Management (Image and Video + Left Content)
   const [heroSlides, setHeroSlides] = useState([]);
   const [heroSlideLoading, setHeroSlideLoading] = useState(false);
   const [heroSlideSaving, setHeroSlideSaving] = useState(false);
@@ -645,6 +646,31 @@ const AdminDashboard = () => {
   const [newSlideType, setNewSlideType] = useState('video');
   const [newSlideUrl, setNewSlideUrl] = useState('');
   const [newSlideTitle, setNewSlideTitle] = useState('');
+  const [newSlideBadge, setNewSlideBadge] = useState('');
+  const [newSlideHeading, setNewSlideHeading] = useState('');
+  const [newSlideDesc, setNewSlideDesc] = useState('');
+  const [newSlideBtn1Text, setNewSlideBtn1Text] = useState('');
+  const [newSlideBtn1Link, setNewSlideBtn1Link] = useState('');
+  const [newSlideBtn2Text, setNewSlideBtn2Text] = useState('');
+  const [newSlideBtn2Link, setNewSlideBtn2Link] = useState('');
+
+  // Edit slide modal state
+  const [editingSlide, setEditingSlide] = useState(null);
+  const [editSlideFormData, setEditSlideFormData] = useState({
+    title: '',
+    badge: '',
+    heading: '',
+    description: '',
+    primaryBtnText: '',
+    primaryBtnLink: '',
+    secondaryBtnText: '',
+    secondaryBtnLink: '',
+    mediaType: 'video',
+    mediaUrl: '',
+    isActive: true
+  });
+  const [editSlideSaving, setEditSlideSaving] = useState(false);
+  const [editSlideUploading, setEditSlideUploading] = useState(false);
 
   // 1. Enquiry Now Submissions State (Only real inquiries from MongoDB)
   const [enquiryNowList, setEnquiryNowList] = useState([]);
@@ -1357,7 +1383,7 @@ const AdminDashboard = () => {
     }
   };
   // =========================================================================
-  // HERO SLIDER HANDLERS (IMAGES & VIDEOS)
+  // HERO SLIDER HANDLERS (LEFT CONTENT + RIGHT MEDIA SLIDER)
   // =========================================================================
   const handleAddHeroSlideUrl = async (e) => {
     if (e) e.preventDefault();
@@ -1370,7 +1396,14 @@ const AdminDashboard = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          title: newSlideTitle.trim() || (newSlideType === 'video' ? 'Hero Video Slide' : 'Hero Image Slide'),
+          title: newSlideHeading.trim() || newSlideTitle.trim() || (newSlideType === 'video' ? 'Hero Video Slide' : 'Hero Image Slide'),
+          badge: newSlideBadge.trim(),
+          heading: newSlideHeading.trim() || newSlideTitle.trim(),
+          description: newSlideDesc.trim(),
+          primaryBtnText: newSlideBtn1Text.trim(),
+          primaryBtnLink: newSlideBtn1Link.trim(),
+          secondaryBtnText: newSlideBtn2Text.trim(),
+          secondaryBtnLink: newSlideBtn2Link.trim(),
           mediaType: newSlideType,
           mediaUrl: newSlideUrl.trim(),
           order: heroSlides.length
@@ -1381,7 +1414,14 @@ const AdminDashboard = () => {
         setHeroSlides((prev) => [...prev, json.data]);
         setNewSlideUrl('');
         setNewSlideTitle('');
-        setHeroSlideFeedback({ type: 'success', message: 'Hero slide added successfully!' });
+        setNewSlideBadge('');
+        setNewSlideHeading('');
+        setNewSlideDesc('');
+        setNewSlideBtn1Text('');
+        setNewSlideBtn1Link('');
+        setNewSlideBtn2Text('');
+        setNewSlideBtn2Link('');
+        setHeroSlideFeedback({ type: 'success', message: 'Hero slide with content and media added successfully!' });
       } else {
         setHeroSlideFeedback({ type: 'error', message: json.message || 'Failed to add slide' });
       }
@@ -1399,9 +1439,14 @@ const AdminDashboard = () => {
 
     const formData = new FormData();
     formData.append('mediaFile', file);
-    if (newSlideTitle) {
-      formData.append('title', newSlideTitle);
-    }
+    formData.append('title', newSlideHeading.trim() || newSlideTitle.trim() || 'Uploaded Hero Slide');
+    formData.append('badge', newSlideBadge.trim());
+    formData.append('heading', newSlideHeading.trim() || newSlideTitle.trim());
+    formData.append('description', newSlideDesc.trim());
+    formData.append('primaryBtnText', newSlideBtn1Text.trim());
+    formData.append('primaryBtnLink', newSlideBtn1Link.trim());
+    formData.append('secondaryBtnText', newSlideBtn2Text.trim());
+    formData.append('secondaryBtnLink', newSlideBtn2Link.trim());
 
     try {
       setHeroSlideUploading(true);
@@ -1414,7 +1459,14 @@ const AdminDashboard = () => {
       if (res.ok && json.success) {
         setHeroSlides((prev) => [...prev, json.data]);
         setNewSlideTitle('');
-        setHeroSlideFeedback({ type: 'success', message: `Slide "${file.name}" uploaded successfully!` });
+        setNewSlideBadge('');
+        setNewSlideHeading('');
+        setNewSlideDesc('');
+        setNewSlideBtn1Text('');
+        setNewSlideBtn1Link('');
+        setNewSlideBtn2Text('');
+        setNewSlideBtn2Link('');
+        setHeroSlideFeedback({ type: 'success', message: `Slide with "${file.name}" uploaded successfully!` });
       } else {
         setHeroSlideFeedback({ type: 'error', message: json.message || 'Failed to upload slide' });
       }
@@ -1423,6 +1475,78 @@ const AdminDashboard = () => {
     } finally {
       setHeroSlideUploading(false);
       setTimeout(() => setHeroSlideFeedback(null), 5000);
+    }
+  };
+
+  const handleOpenEditHeroSlide = (slide) => {
+    setEditingSlide(slide);
+    setEditSlideFormData({
+      title: slide.title || '',
+      badge: slide.badge || '',
+      heading: slide.heading || slide.title || '',
+      description: slide.description || '',
+      primaryBtnText: slide.primaryBtnText || '',
+      primaryBtnLink: slide.primaryBtnLink || '',
+      secondaryBtnText: slide.secondaryBtnText || '',
+      secondaryBtnLink: slide.secondaryBtnLink || '',
+      mediaType: slide.mediaType || 'video',
+      mediaUrl: slide.mediaUrl || '',
+      isActive: slide.isActive !== false
+    });
+  };
+
+  const handleSaveEditHeroSlide = async (e) => {
+    if (e) e.preventDefault();
+    if (!editingSlide) return;
+    const id = editingSlide._id || editingSlide.id;
+
+    try {
+      setEditSlideSaving(true);
+      const res = await fetch(`${API_BASE}/hero-slides/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(editSlideFormData)
+      });
+      const json = await res.json();
+      if (res.ok && json.success) {
+        setHeroSlides((prev) => prev.map((s) => ((s._id || s.id) === id ? json.data : s)));
+        setEditingSlide(null);
+        setHeroSlideFeedback({ type: 'success', message: 'Hero slide updated successfully!' });
+      } else {
+        setHeroSlideFeedback({ type: 'error', message: json.message || 'Failed to update slide' });
+      }
+    } catch (err) {
+      setHeroSlideFeedback({ type: 'error', message: err.message });
+    } finally {
+      setEditSlideSaving(false);
+      setTimeout(() => setHeroSlideFeedback(null), 5000);
+    }
+  };
+
+  const handleUploadEditSlideMedia = async (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append('mediaFile', file);
+    try {
+      setEditSlideUploading(true);
+      const res = await fetch(`${API_BASE}/hero-slides/upload`, {
+        method: 'POST',
+        body: formData
+      });
+      const json = await res.json();
+      if (res.ok && json.success && json.data) {
+        setEditSlideFormData((prev) => ({
+          ...prev,
+          mediaType: json.data.mediaType,
+          mediaUrl: json.data.mediaUrl
+        }));
+      }
+    } catch (err) {
+      console.error('Error uploading replacement media:', err);
+    } finally {
+      setEditSlideUploading(false);
     }
   };
 
@@ -3746,118 +3870,203 @@ const AdminDashboard = () => {
             <div className="wm-hero-vid-grid">
               {/* Left Column: Upload Form & Slide List */}
               <div className="wm-hero-vid-form-col">
-                {/* Card 1: Add New Slide (Image or Video) */}
+                {/* Card 1: Add New Slide (Split Layout: Left Content + Right Media) */}
                 <div className="wm-out-card">
                   <div className="wm-out-card-header">
-                    <h3><FaPlus /> Add New Hero Slide</h3>
+                    <h3><FaPlus /> Add New Hero Slide (Split Layout: Left Content + Right Media)</h3>
                   </div>
                   <p className="wm-out-card-help">
-                    Add a video or image slide to the home page hero slider. When 2 or more active slides exist, visitors will see an interactive slider with smooth transitions.
+                    Configure left content (Badge, Heading, Description, Action Buttons) and right media (Video or Image) for the Home Page hero slider.
                   </p>
 
-                  <div className="wm-hero-type-selector" style={{ display: 'flex', gap: '12px', marginBottom: '16px' }}>
-                    <button
-                      type="button"
-                      className={`wm-hero-type-btn ${newSlideType === 'video' ? 'active' : ''}`}
-                      onClick={() => setNewSlideType('video')}
-                      style={{
-                        flex: 1,
-                        padding: '10px 16px',
-                        borderRadius: '8px',
-                        border: newSlideType === 'video' ? '2px solid #0077b6' : '1px solid #cbd5e1',
-                        background: newSlideType === 'video' ? '#e0f2fe' : '#f8fafc',
-                        color: newSlideType === 'video' ? '#0077b6' : '#64748b',
-                        fontWeight: '700',
-                        cursor: 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '8px'
-                      }}
-                    >
-                      <FaVideo /> Video Slide
-                    </button>
-                    <button
-                      type="button"
-                      className={`wm-hero-type-btn ${newSlideType === 'image' ? 'active' : ''}`}
-                      onClick={() => setNewSlideType('image')}
-                      style={{
-                        flex: 1,
-                        padding: '10px 16px',
-                        borderRadius: '8px',
-                        border: newSlideType === 'image' ? '2px solid #0077b6' : '1px solid #cbd5e1',
-                        background: newSlideType === 'image' ? '#e0f2fe' : '#f8fafc',
-                        color: newSlideType === 'image' ? '#0077b6' : '#64748b',
-                        fontWeight: '700',
-                        cursor: 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '8px'
-                      }}
-                    >
-                      <FaImage /> Image Slide
-                    </button>
-                  </div>
-
-                  <div className="wm-csfield" style={{ marginBottom: '14px' }}>
-                    <label>Slide Title / Label (Optional):</label>
-                    <input
-                      type="text"
-                      value={newSlideTitle}
-                      onChange={(e) => setNewSlideTitle(e.target.value)}
-                      placeholder={newSlideType === 'video' ? 'e.g. Webmok Brand Reel' : 'e.g. Enterprise IT Solutions'}
-                    />
-                  </div>
-
-                  {/* Method A: File Upload Dropzone */}
-                  <label className="wm-out-file-dropzone wm-hero-vid-dropzone" style={{ marginBottom: '16px' }}>
-                    <input
-                      type="file"
-                      accept={newSlideType === 'video' ? 'video/mp4,video/webm,video/ogg,video/quicktime,video/x-matroska,video/avi' : 'image/*'}
-                      onChange={handleUploadHeroSlideFile}
-                      disabled={heroSlideUploading}
-                    />
-                    <div className="wm-out-dropzone-inner">
-                      {heroSlideUploading ? (
-                        <>
-                          <FaSpinner className="wm-spin wm-upload-spin-icon" />
-                          <strong>Uploading {newSlideType === 'video' ? 'Video' : 'Image'} Slide...</strong>
-                          <small>Please wait while the media file is uploading to the server...</small>
-                        </>
-                      ) : (
-                        <>
-                          {newSlideType === 'video' ? <FaVideo className="wm-upload-cloud-icon" /> : <FaImage className="wm-upload-cloud-icon" />}
-                          <strong>Click or Drag & Drop {newSlideType === 'video' ? 'Video' : 'Image'} File</strong>
-                          <small>{newSlideType === 'video' ? 'Supports MP4, WebM, MOV (Max 250MB)' : 'Supports JPG, PNG, WebP, SVG (Max 20MB)'}</small>
-                        </>
-                      )}
+                  {/* 1. Left Half: Content Form */}
+                  <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '10px', padding: '14px', marginBottom: '16px' }}>
+                    <h4 style={{ margin: '0 0 12px 0', fontSize: '13px', color: '#0d2f57', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaFileAlt style={{ color: '#0077b6' }} /> 1. Left Half: Text Content & Action Buttons
+                    </h4>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '12px', marginBottom: '10px' }}>
+                      <div className="wm-csfield">
+                        <label>Pill Badge (Optional):</label>
+                        <input
+                          type="text"
+                          value={newSlideBadge}
+                          onChange={(e) => setNewSlideBadge(e.target.value)}
+                          placeholder="e.g. ⚡ India's Leading Digital Agency"
+                        />
+                      </div>
+                      <div className="wm-csfield">
+                        <label>Main Headline / H1 Title *:</label>
+                        <input
+                          type="text"
+                          value={newSlideHeading}
+                          onChange={(e) => {
+                            setNewSlideHeading(e.target.value);
+                            setNewSlideTitle(e.target.value);
+                          }}
+                          placeholder="e.g. Engineered For Exponential Digital Growth"
+                        />
+                      </div>
                     </div>
-                  </label>
+                    <div className="wm-csfield" style={{ marginBottom: '10px' }}>
+                      <label>Description Paragraph:</label>
+                      <textarea
+                        rows={2}
+                        value={newSlideDesc}
+                        onChange={(e) => setNewSlideDesc(e.target.value)}
+                        placeholder="e.g. Bespoke, blazing-fast web, mobile, and enterprise cloud applications built to convert."
+                        style={{ width: '100%', padding: '8px 12px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '13px' }}
+                      />
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '10px' }}>
+                      <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '10px' }}>
+                        <span style={{ fontSize: '12px', fontWeight: '700', color: '#0077b6', display: 'block', marginBottom: '6px' }}>🔘 Primary Button (Optional)</span>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                          <div className="wm-csfield" style={{ minWidth: 0 }}>
+                            <label>Button Text:</label>
+                            <input
+                              type="text"
+                              value={newSlideBtn1Text}
+                              onChange={(e) => setNewSlideBtn1Text(e.target.value)}
+                              placeholder="Leave blank for no button"
+                            />
+                          </div>
+                          <div className="wm-csfield" style={{ minWidth: 0 }}>
+                            <label>Button Link:</label>
+                            <input
+                              type="text"
+                              value={newSlideBtn1Link}
+                              onChange={(e) => setNewSlideBtn1Link(e.target.value)}
+                              placeholder="e.g. #enquiry or /services"
+                            />
+                          </div>
+                        </div>
+                      </div>
 
-                  {/* Method B: Or Enter Direct URL */}
-                  <div style={{ position: 'relative', textAlign: 'center', margin: '14px 0 16px' }}>
-                    <span style={{ background: '#ffffff', padding: '0 10px', color: '#94a3b8', fontSize: '12px', fontWeight: '600' }}>OR ENTER DIRECT URL</span>
-                    <hr style={{ border: 'none', borderTop: '1px solid #e2e8f0', margin: '-10px 0 0', position: 'relative', zIndex: -1 }} />
+                      <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '10px' }}>
+                        <span style={{ fontSize: '12px', fontWeight: '700', color: '#0077b6', display: 'block', marginBottom: '6px' }}>🔘 Secondary Button (Optional)</span>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                          <div className="wm-csfield" style={{ minWidth: 0 }}>
+                            <label>Button Text:</label>
+                            <input
+                              type="text"
+                              value={newSlideBtn2Text}
+                              onChange={(e) => setNewSlideBtn2Text(e.target.value)}
+                              placeholder="Leave blank for no button"
+                            />
+                          </div>
+                          <div className="wm-csfield" style={{ minWidth: 0 }}>
+                            <label>Button Link:</label>
+                            <input
+                              type="text"
+                              value={newSlideBtn2Link}
+                              onChange={(e) => setNewSlideBtn2Link(e.target.value)}
+                              placeholder="e.g. tel:8684031003"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-                  <form onSubmit={handleAddHeroSlideUrl} style={{ display: 'flex', gap: '10px' }}>
-                    <input
-                      type="text"
-                      value={newSlideUrl}
-                      onChange={(e) => setNewSlideUrl(e.target.value)}
-                      placeholder={newSlideType === 'video' ? 'e.g. /Home-Hero.mp4 or https://...' : 'e.g. https://images.unsplash.com/... or /uploads/...'}
-                      style={{ flex: 1, padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1' }}
-                    />
-                    <button
-                      type="submit"
-                      className="wm-out-btn-save"
-                      disabled={heroSlideSaving || !newSlideUrl.trim()}
-                      style={{ whiteSpace: 'nowrap' }}
-                    >
-                      {heroSlideSaving ? <FaSpinner className="wm-spin" /> : <FaPlus />} Add Slide
-                    </button>
-                  </form>
+                  {/* 2. Right Half: Video or Image */}
+                  <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '10px', padding: '14px', marginBottom: '16px' }}>
+                    <h4 style={{ margin: '0 0 12px 0', fontSize: '13px', color: '#0d2f57', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaVideo style={{ color: '#0077b6' }} /> 2. Right Half: Video or Image Media
+                    </h4>
+                    <div className="wm-hero-type-selector" style={{ display: 'flex', gap: '12px', marginBottom: '14px' }}>
+                      <button
+                        type="button"
+                        className={`wm-hero-type-btn ${newSlideType === 'video' ? 'active' : ''}`}
+                        onClick={() => setNewSlideType('video')}
+                        style={{
+                          flex: 1,
+                          padding: '10px 16px',
+                          borderRadius: '8px',
+                          border: newSlideType === 'video' ? '2px solid #0077b6' : '1px solid #cbd5e1',
+                          background: newSlideType === 'video' ? '#e0f2fe' : '#f8fafc',
+                          color: newSlideType === 'video' ? '#0077b6' : '#64748b',
+                          fontWeight: '700',
+                          cursor: 'pointer',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '8px'
+                        }}
+                      >
+                        <FaVideo /> Video Slide
+                      </button>
+                      <button
+                        type="button"
+                        className={`wm-hero-type-btn ${newSlideType === 'image' ? 'active' : ''}`}
+                        onClick={() => setNewSlideType('image')}
+                        style={{
+                          flex: 1,
+                          padding: '10px 16px',
+                          borderRadius: '8px',
+                          border: newSlideType === 'image' ? '2px solid #0077b6' : '1px solid #cbd5e1',
+                          background: newSlideType === 'image' ? '#e0f2fe' : '#f8fafc',
+                          color: newSlideType === 'image' ? '#0077b6' : '#64748b',
+                          fontWeight: '700',
+                          cursor: 'pointer',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '8px'
+                        }}
+                      >
+                        <FaImage /> Image Slide
+                      </button>
+                    </div>
+
+                    {/* Method A: File Upload Dropzone */}
+                    <label className="wm-out-file-dropzone wm-hero-vid-dropzone" style={{ marginBottom: '14px' }}>
+                      <input
+                        type="file"
+                        accept={newSlideType === 'video' ? 'video/mp4,video/webm,video/ogg,video/quicktime,video/x-matroska,video/avi' : 'image/*'}
+                        onChange={handleUploadHeroSlideFile}
+                        disabled={heroSlideUploading}
+                      />
+                      <div className="wm-out-dropzone-inner">
+                        {heroSlideUploading ? (
+                          <>
+                            <FaSpinner className="wm-spin wm-upload-spin-icon" />
+                            <strong>Uploading {newSlideType === 'video' ? 'Video' : 'Image'} Slide...</strong>
+                            <small>Please wait while the media file is uploading to the server...</small>
+                          </>
+                        ) : (
+                          <>
+                            {newSlideType === 'video' ? <FaVideo className="wm-upload-cloud-icon" /> : <FaImage className="wm-upload-cloud-icon" />}
+                            <strong>Click or Drag & Drop {newSlideType === 'video' ? 'Video' : 'Image'} File</strong>
+                            <small>{newSlideType === 'video' ? 'Supports MP4, WebM, MOV (Max 250MB)' : 'Supports JPG, PNG, WebP, SVG (Max 20MB)'}</small>
+                          </>
+                        )}
+                      </div>
+                    </label>
+
+                    {/* Method B: Or Enter Direct URL */}
+                    <div style={{ position: 'relative', textAlign: 'center', margin: '12px 0' }}>
+                      <span style={{ background: '#f8fafc', padding: '0 10px', color: '#94a3b8', fontSize: '11px', fontWeight: '600' }}>OR ENTER DIRECT MEDIA URL</span>
+                      <hr style={{ border: 'none', borderTop: '1px solid #e2e8f0', margin: '-8px 0 0', position: 'relative', zIndex: -1 }} />
+                    </div>
+
+                    <form onSubmit={handleAddHeroSlideUrl} style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                      <input
+                        type="text"
+                        value={newSlideUrl}
+                        onChange={(e) => setNewSlideUrl(e.target.value)}
+                        placeholder={newSlideType === 'video' ? 'e.g. /Home-Hero.mp4 or https://...' : 'e.g. https://images.unsplash.com/... or /uploads/...'}
+                        style={{ flex: 1, minWidth: '200px', padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                      />
+                      <button
+                        type="submit"
+                        className="wm-out-btn-save"
+                        disabled={heroSlideSaving || !newSlideUrl.trim()}
+                        style={{ whiteSpace: 'nowrap' }}
+                      >
+                        {heroSlideSaving ? <FaSpinner className="wm-spin" /> : <FaPlus />} Save & Add Slide
+                      </button>
+                    </form>
+                  </div>
                 </div>
 
                 {/* Card 2: Current Hero Slides List */}
@@ -3909,7 +4118,7 @@ const AdminDashboard = () => {
 
                           {/* Details */}
                           <div style={{ flex: 1, minWidth: 0 }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px', flexWrap: 'wrap' }}>
                               <span
                                 style={{
                                   fontSize: '10.5px',
@@ -3923,17 +4132,49 @@ const AdminDashboard = () => {
                               >
                                 {slide.mediaType}
                               </span>
-                              <strong style={{ fontSize: '14px', color: '#0d2f57', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                                {slide.title || `Slide #${idx + 1}`}
+                              {slide.badge && (
+                                <span style={{ fontSize: '11px', background: '#fef3c7', color: '#b45309', padding: '1px 7px', borderRadius: '10px', fontWeight: '600' }}>
+                                  {slide.badge}
+                                </span>
+                              )}
+                              <strong style={{ fontSize: '14px', color: '#0d2f57' }}>
+                                {slide.heading || slide.title || `Slide #${idx + 1}`}
                               </strong>
                             </div>
-                            <div style={{ fontSize: '12px', color: '#64748b', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                            {slide.description && (
+                              <div style={{ fontSize: '12px', color: '#475569', marginBottom: '3px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                {slide.description}
+                              </div>
+                            )}
+                            <div style={{ fontSize: '11.5px', color: '#64748b', display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
+                              {slide.primaryBtnText && <span style={{ color: '#0284c7' }}>● {slide.primaryBtnText}</span>}
+                              {slide.secondaryBtnText && <span style={{ color: '#16a34a' }}>● {slide.secondaryBtnText}</span>}
                               <code>{slide.mediaUrl}</code>
                             </div>
                           </div>
 
                           {/* Actions */}
                           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <button
+                              type="button"
+                              onClick={() => handleOpenEditHeroSlide(slide)}
+                              style={{
+                                padding: '6px 12px',
+                                fontSize: '12px',
+                                fontWeight: '700',
+                                borderRadius: '6px',
+                                border: 'none',
+                                cursor: 'pointer',
+                                background: '#e0f2fe',
+                                color: '#0369a1',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '5px'
+                              }}
+                              title="Edit Slide Content & Media"
+                            >
+                              <FaEdit /> Edit
+                            </button>
                             <button
                               type="button"
                               onClick={() => handleToggleHeroSlideActive(slide)}
@@ -4023,38 +4264,99 @@ const AdminDashboard = () => {
                       <div className="wm-browser-url-bar">https://webmok.in</div>
                     </div>
 
-                    <div className="wm-hero-preview-video-container" style={{ position: 'relative', minHeight: '220px', background: '#000' }}>
-                      {heroSlides.filter(s => s.isActive).length > 0 ? (
-                        heroSlides.filter(s => s.isActive)[0].mediaType === 'video' ? (
-                          <video
-                            key={heroSlides.filter(s => s.isActive)[0].mediaUrl}
-                            src={getMediaUrl(heroSlides.filter(s => s.isActive)[0].mediaUrl)}
-                            controls
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="wm-hero-preview-video-element"
-                          />
-                        ) : (
-                          <img
-                            src={getMediaUrl(heroSlides.filter(s => s.isActive)[0].mediaUrl)}
-                            alt="Hero preview"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                          />
-                        )
-                      ) : (
-                        <video
-                          key={heroVideoData.videoUrl}
-                          src={getMediaUrl(heroVideoData.videoUrl)}
-                          controls
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          className="wm-hero-preview-video-element"
-                        />
-                      )}
+                    <div className="wm-hero-preview-video-container" style={{ position: 'relative', minHeight: '260px', background: '#0a0f1d' }}>
+                      {(() => {
+                        const activeList = heroSlides.filter(s => s.isActive);
+                        const topSlide = activeList[0];
+                        if (!topSlide) {
+                          return (
+                            <video
+                              key={heroVideoData.videoUrl}
+                              src={getMediaUrl(heroVideoData.videoUrl)}
+                              controls
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="wm-hero-preview-video-element"
+                            />
+                          );
+                        }
+
+                        const hasContent = topSlide.badge || topSlide.heading || topSlide.description || topSlide.primaryBtnText;
+                        if (!hasContent) {
+                          return topSlide.mediaType === 'video' ? (
+                            <video
+                              key={topSlide.mediaUrl}
+                              src={getMediaUrl(topSlide.mediaUrl)}
+                              controls
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="wm-hero-preview-video-element"
+                            />
+                          ) : (
+                            <img
+                              src={getMediaUrl(topSlide.mediaUrl)}
+                              alt="Hero preview"
+                              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            />
+                          );
+                        }
+
+                        return (
+                          <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', height: '100%', minHeight: '260px' }}>
+                            {/* Left Content Half */}
+                            <div style={{ padding: '20px 18px', display: 'flex', flexDirection: 'column', justifyContent: 'center', background: 'linear-gradient(135deg, #071326 0%, #0d274c 100%)', color: '#fff' }}>
+                              {topSlide.badge && (
+                                <span style={{ display: 'inline-block', alignSelf: 'flex-start', fontSize: '10px', fontWeight: '700', padding: '2px 8px', borderRadius: '20px', background: 'rgba(0, 212, 255, 0.15)', color: '#00d4ff', border: '1px solid rgba(0, 212, 255, 0.3)', marginBottom: '8px' }}>
+                                  {topSlide.badge}
+                                </span>
+                              )}
+                              <h3 style={{ margin: '0 0 8px 0', fontSize: '15px', fontWeight: '800', lineHeight: 1.25, color: '#f8fafc' }}>
+                                {topSlide.heading || topSlide.title}
+                              </h3>
+                              {topSlide.description && (
+                                <p style={{ margin: '0 0 12px 0', fontSize: '11px', color: '#94a3b8', lineHeight: 1.4, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                                  {topSlide.description}
+                                </p>
+                              )}
+                              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                                {topSlide.primaryBtnText && (
+                                  <span style={{ fontSize: '10.5px', fontWeight: '700', padding: '5px 10px', borderRadius: '4px', background: '#00a8cc', color: '#fff' }}>
+                                    {topSlide.primaryBtnText}
+                                  </span>
+                                )}
+                                {topSlide.secondaryBtnText && (
+                                  <span style={{ fontSize: '10.5px', fontWeight: '700', padding: '5px 10px', borderRadius: '4px', background: 'rgba(255,255,255,0.1)', color: '#e2e8f0', border: '1px solid rgba(255,255,255,0.2)' }}>
+                                    {topSlide.secondaryBtnText}
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                            {/* Right Media Half */}
+                            <div style={{ background: '#000', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                              {topSlide.mediaType === 'video' ? (
+                                <video
+                                  src={getMediaUrl(topSlide.mediaUrl)}
+                                  autoPlay
+                                  loop
+                                  muted
+                                  playsInline
+                                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                />
+                              ) : (
+                                <img
+                                  src={getMediaUrl(topSlide.mediaUrl)}
+                                  alt="Preview"
+                                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                />
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })()}
                     </div>
 
                     <div className="wm-hero-preview-footer-note">
@@ -4065,6 +4367,191 @@ const AdminDashboard = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        )}
+
+        {/* POPUP MODAL: EDIT HERO SLIDE */}
+        {editingSlide && (
+          <div className="wm-inq-modal-overlay" onClick={() => setEditingSlide(null)}>
+            <div className="wm-inq-modal-dialog" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '720px' }}>
+              <div className="wm-inq-modal-header">
+                <div>
+                  <span className="wm-inq-modal-tag">Edit Hero Slide</span>
+                  <h3>Update Slide Content & Media</h3>
+                </div>
+                <button type="button" className="wm-inq-modal-close" onClick={() => setEditingSlide(null)}>
+                  <FaTimes />
+                </button>
+              </div>
+
+              <form onSubmit={handleSaveEditHeroSlide}>
+                <div className="wm-inq-modal-body" style={{ maxHeight: '72vh', overflowY: 'auto' }}>
+                  {/* Left Content fields */}
+                  <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '12px', marginBottom: '14px' }}>
+                    <h4 style={{ margin: '0 0 10px 0', fontSize: '13px', color: '#0d2f57' }}>Left Content (Text & CTAs)</h4>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '10px', marginBottom: '10px' }}>
+                      <div className="wm-csfield">
+                        <label>Badge / Tagline:</label>
+                        <input
+                          type="text"
+                          value={editSlideFormData.badge}
+                          onChange={(e) => setEditSlideFormData({ ...editSlideFormData, badge: e.target.value })}
+                          placeholder="e.g. ⚡ India's Leading Digital Agency"
+                        />
+                      </div>
+                      <div className="wm-csfield">
+                        <label>Main Headline / H1 Title:</label>
+                        <input
+                          type="text"
+                          value={editSlideFormData.heading}
+                          onChange={(e) => setEditSlideFormData({ ...editSlideFormData, heading: e.target.value, title: e.target.value })}
+                          placeholder="e.g. Engineered For Exponential Digital Growth"
+                        />
+                      </div>
+                    </div>
+                    <div className="wm-csfield" style={{ marginBottom: '10px' }}>
+                      <label>Description Paragraph:</label>
+                      <textarea
+                        rows={2}
+                        value={editSlideFormData.description}
+                        onChange={(e) => setEditSlideFormData({ ...editSlideFormData, description: e.target.value })}
+                        style={{ width: '100%', padding: '8px 12px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '13px' }}
+                      />
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
+                      <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '8px' }}>
+                        <span style={{ fontSize: '11px', fontWeight: '700', color: '#0077b6', display: 'block', marginBottom: '4px' }}>🔘 Primary Button</span>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                          <div className="wm-csfield" style={{ minWidth: 0 }}>
+                            <label>Text:</label>
+                            <input
+                              type="text"
+                              value={editSlideFormData.primaryBtnText}
+                              onChange={(e) => setEditSlideFormData({ ...editSlideFormData, primaryBtnText: e.target.value })}
+                              placeholder="Leave blank for none"
+                            />
+                          </div>
+                          <div className="wm-csfield" style={{ minWidth: 0 }}>
+                            <label>Link:</label>
+                            <input
+                              type="text"
+                              value={editSlideFormData.primaryBtnLink}
+                              onChange={(e) => setEditSlideFormData({ ...editSlideFormData, primaryBtnLink: e.target.value })}
+                              placeholder="#enquiry or /services"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '8px' }}>
+                        <span style={{ fontSize: '11px', fontWeight: '700', color: '#0077b6', display: 'block', marginBottom: '4px' }}>🔘 Secondary Button</span>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                          <div className="wm-csfield" style={{ minWidth: 0 }}>
+                            <label>Text:</label>
+                            <input
+                              type="text"
+                              value={editSlideFormData.secondaryBtnText}
+                              onChange={(e) => setEditSlideFormData({ ...editSlideFormData, secondaryBtnText: e.target.value })}
+                              placeholder="Leave blank for none"
+                            />
+                          </div>
+                          <div className="wm-csfield" style={{ minWidth: 0 }}>
+                            <label>Link:</label>
+                            <input
+                              type="text"
+                              value={editSlideFormData.secondaryBtnLink}
+                              onChange={(e) => setEditSlideFormData({ ...editSlideFormData, secondaryBtnLink: e.target.value })}
+                              placeholder="tel:8684031003"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Media fields */}
+                  <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '12px' }}>
+                    <h4 style={{ margin: '0 0 10px 0', fontSize: '13px', color: '#0d2f57' }}>Right Half Media (Video or Image)</h4>
+                    <div style={{ display: 'flex', gap: '10px', marginBottom: '10px' }}>
+                      <button
+                        type="button"
+                        onClick={() => setEditSlideFormData({ ...editSlideFormData, mediaType: 'video' })}
+                        style={{
+                          flex: 1,
+                          padding: '8px 12px',
+                          borderRadius: '6px',
+                          border: editSlideFormData.mediaType === 'video' ? '2px solid #0077b6' : '1px solid #cbd5e1',
+                          background: editSlideFormData.mediaType === 'video' ? '#e0f2fe' : '#fff',
+                          color: editSlideFormData.mediaType === 'video' ? '#0077b6' : '#64748b',
+                          fontWeight: '700',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        <FaVideo /> Video
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setEditSlideFormData({ ...editSlideFormData, mediaType: 'image' })}
+                        style={{
+                          flex: 1,
+                          padding: '8px 12px',
+                          borderRadius: '6px',
+                          border: editSlideFormData.mediaType === 'image' ? '2px solid #0077b6' : '1px solid #cbd5e1',
+                          background: editSlideFormData.mediaType === 'image' ? '#e0f2fe' : '#fff',
+                          color: editSlideFormData.mediaType === 'image' ? '#0077b6' : '#64748b',
+                          fontWeight: '700',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        <FaImage /> Image
+                      </button>
+                    </div>
+
+                    <div className="wm-csfield" style={{ marginBottom: '10px' }}>
+                      <label>Media URL:</label>
+                      <input
+                        type="text"
+                        value={editSlideFormData.mediaUrl}
+                        onChange={(e) => setEditSlideFormData({ ...editSlideFormData, mediaUrl: e.target.value })}
+                        placeholder="Media URL or upload replacement below"
+                      />
+                    </div>
+
+                    {/* Optional replace file upload */}
+                    <label className="wm-out-file-dropzone" style={{ padding: '12px' }}>
+                      <input
+                        type="file"
+                        accept={editSlideFormData.mediaType === 'video' ? 'video/*' : 'image/*'}
+                        onChange={handleUploadEditSlideMedia}
+                        disabled={editSlideUploading}
+                      />
+                      <div className="wm-out-dropzone-inner">
+                        {editSlideUploading ? (
+                          <>
+                            <FaSpinner className="wm-spin wm-upload-spin-icon" />
+                            <strong>Uploading replacement media...</strong>
+                          </>
+                        ) : (
+                          <>
+                            <FaUpload className="wm-upload-cloud-icon" />
+                            <strong>Upload New Replacement File (Optional)</strong>
+                          </>
+                        )}
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <div className="wm-inq-modal-footer" style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', padding: '14px' }}>
+                  <button type="button" className="wm-inq-btn-secondary" onClick={() => setEditingSlide(null)}>
+                    Cancel
+                  </button>
+                  <button type="submit" className="wm-inq-btn-primary" disabled={editSlideSaving}>
+                    {editSlideSaving ? <FaSpinner className="wm-spin" /> : <FaSave />} Save Changes
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         )}
@@ -5170,6 +5657,11 @@ const AdminDashboard = () => {
             TAB 18: SERVICE PRICING INQUIRIES (PAGE-SPECIFIC & CATEGORY FILTERED)
            ========================================================================= */}
         {activeTab === 'service-inquiries' && <AdminServiceInquiries />}
+
+        {/* =========================================================================
+            TAB 19: SERVICE PAGES CMS (MANAGE ALL 29 SERVICE PAGES & H1 HERO TITLES)
+           ========================================================================= */}
+        {activeTab === 'service-pages' && <AdminServicePages />}
 
         {/* =========================================================================
             POPUP MODAL: VIEW FULL INQUIRY / CONTACT DETAILS

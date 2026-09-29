@@ -1,3 +1,4 @@
+import useServicePageContent from '../../utils/useServicePageContent';
 import React, { useState } from 'react';
 import DiagnosticLeadForm from '../../components/DiagnosticLeadForm';
 import HeroLeadForm from '../../components/HeroLeadForm';
@@ -29,6 +30,8 @@ import {
 import './FacebookMarketingPage.css';
 
 const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInquiry }) => {
+  const dynamicContent = useServicePageContent('facebook-marketing-services-company');
+
   const [openFaq, setOpenFaq] = useState(0);
   const [auditUrl, setAuditUrl] = useState('');
 
@@ -198,45 +201,25 @@ const FacebookMarketingPage = ({ onOpenCallMe, onOpenEnquiry, onOpenServiceInqui
             <FaAward /> Meta Certified Partner Agency · #Wise Solutions
           </span>
           <h1 className="wm-sp-hero-title">
-            High-ROAS <span>Facebook & Meta Ads</span> Agency
+            {dynamicContent.heroTitle || (
+              <>High-ROAS <span>Facebook & Meta Ads</span> Agency</>
+            )}
           </h1>
 
           {/* Rating Scorecard Badge in Hero */}
           <div className="wm-dsm-rating-hero">
             <div className="wm-dsm-rating__score">
-              <span className="wm-dsm-rating__num">4.9</span>
+              <span className="wm-dsm-rating__num">{dynamicContent.ratingScore || '4.9'}</span>
               <span className="wm-dsm-rating__out">/5</span>
             </div>
             <div>
               <div className="wm-dsm-rating__stars" aria-hidden="true">★★★★★</div>
               <p className="wm-dsm-rating__meta">
-                Rated <strong>4.9 out of 5</strong> from <strong>350+ verified client reviews</strong> across Clutch, Google, AmbitionBox, and G2.
+                Rated <strong>{dynamicContent.ratingScore || '4.9'} out of 5</strong> from <strong>{dynamicContent.ratingCount || '350+ verified client reviews'}</strong> across Clutch, Google, AmbitionBox, and G2.
               </p>
             </div>
           </div>
 
-          <p className="wm-sp-hero-lead">
-            Scale your revenue with high-converting Meta and Facebook advertising campaigns featuring thumb-stopping video reels, AI lookalike audiences, and server-side Conversion API tracking.
-          </p>
-          <div className="wm-sp-hero-cta-group">
-            <button className="wm-sp-cta-primary" onClick={onOpenEnquiry}>
-              Get Free Custom Quote <FaArrowRight />
-            </button>
-            <button className="wm-sp-cta-secondary" onClick={onOpenCallMe}>
-              <FaPhoneAlt /> Call Me in 28 Seconds
-            </button>
-          </div>
-
-          {/* 4-Metric Performance Bar */}
-          <div className="wm-seost">
-            {stats.map((st, i) => (
-              <div key={i} className="wm-seost__i">
-                <p className="wm-seost__n">{st.num}</p>
-                <p className="wm-seost__l">{st.label}</p>
-              </div>
-            ))}
-          </div>
-        
             </div>
             <div className="wm-sp-hero-col-right">
               <HeroLeadForm
